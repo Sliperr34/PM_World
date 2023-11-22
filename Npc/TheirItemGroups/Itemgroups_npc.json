@@ -1,0 +1,368 @@
+[
+  {
+    "id": "Alpha_worn",
+    "type": "item_group",
+    "//": "My beloved",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie" },
+      { "item": "gloves_tactical" },
+      { "item": "socks" },
+      { "item": "boots_combat" },
+      { "item": "sheath" },
+	  { "item": "nylon_holster" },
+	  { "item": "skirt" },
+	  { "item": "alpha_coat" },
+		  { "item": "glasses_reading" }
+    ]
+  },
+  {
+    "id": "White_worn",
+    "type": "item_group",
+    "//": "My beloved",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie" },
+		  { "item": "sheath" },
+	  { "item": "nylon_holster" },
+      { "item": "gloves_medical" },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "lc_trouses" },
+	  { "item": "alpha_coat" },
+		  { "item": "glasses_reading" }
+    ]
+  },
+  {
+    "id": "Alpha_weapon",
+    "type": "item_group",
+    "//": "My beloved",
+    "subtype": "collection",
+	"ammo": 100,
+	"magazine": 100,
+    "entries": [
+      { "item": "m17" }
+    ]
+  },
+  {
+    "id": "Alpha_carry",
+    "type": "item_group",
+    "//": "My beloved",
+    "subtype": "collection",
+	"ammo": 100,
+    "entries": [
+      { "item": "lab_tknife", "count": 3 },
+	  { "item": "p320mag_17rd_9x19mm" },
+	  { "item": "9mmP2", "count": 10 },
+	  { "item": "id_science" },
+	  { "item": "bandages", "count": 50 },
+	  { "item": "disinfectant" }
+    ]
+  },
+  {
+    "id": "Walter_worn",
+    "type": "item_group",
+    "//": "Long coat Zwei",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt_yel" },
+	   { "item": "pm_tie_necktie" },
+      { "item": "pm_gloves" },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "pm_trouses" },
+	  { "item": "zw_coat" },
+	  { "item": "zw_spads" },
+	  { "item": "zw_epads" },
+	  { "item": "zw_armguard" }
+    ]
+  },
+  {
+    "id": "Julia_worn",
+    "type": "item_group",
+    "//": "Jacket Zwei",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt_yel" },
+	   { "item": "pm_tie_necktie" },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "pm_trouses" },
+	  { "item": "zw_jacket" },
+	  { "item": "zw_spads" },
+	  { "item": "zw_epads" },
+	  { "item": "zw_armguard" }
+    ]
+  },
+  {
+    "id": "Walter_weapon",
+    "type": "item_group",
+    "//": "Zwei leader",
+    "subtype": "collection",
+    "entries": [
+      { "item": "zw_zweihander" }
+    ]
+  },
+  {
+    "id": "Walter_carry",
+    "type": "item_group",
+    "//": "Zwei leader",
+    "subtype": "collection",
+    "entries": [
+	  { "item": "bandages", "count": 5 }
+    ]
+  },
+  {
+    "id": "Isadora_weapon",
+    "type": "item_group",
+    "//": "Zwei leader",
+    "subtype": "collection",
+    "entries": [
+      { "item": "zw_is_zweihander" }
+    ]
+  },
+  {
+    "id": "Zwei_worn",
+    "type": "item_group",
+    "//": "Generic Zwei",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt_yel","prob": 100 },
+	   { "item": "pm_tie_necktie", "prob": 75 },
+      { "item": "socks", "prob": 100 },
+      { "item": "pm_boots", "prob": 100 },
+	  { "item": "pm_trouses", "prob": 100 },
+	  { "item": "zw_spads", "prob": 80 },
+	  { "item": "zw_epads", "prob": 80 },
+	  { "item": "zw_armguard", "prob": 80 },
+	  { "distribution": [ {"item": "zw_jacket", "prob": 60}, {"item": "zw_coat", "prob": 40} ] }
+    ]
+  },
+  {
+    "id": "Zwei_weapon",
+    "type": "item_group",
+    "//": "Zwei generic",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "zw_zweihander", "prob": 15 },
+	  { "item": "zw_longsword", "prob": 25 },
+	  { "item": "zw_mace", "prob": 20 }
+    ]
+  },
+  {
+    "id": "Rc_weapon",
+    "type": "item_group",
+    "//": "Rusted Chains",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "rc_chains", "prob": 100 }
+    ]
+  },
+  {
+    "id": "Rc_worn",
+    "type": "item_group",
+    "//": "Rusted Chains",
+    "subtype": "collection",
+    "entries": [
+      { "item": "tank_top","prob": 100 },
+	   { "item": "pm_tie_necktie", "prob": 75 },
+      { "item": "socks", "prob": 100 },
+      { "distribution": [ {"item": "sneakers_steel", "prob": 30}, 
+	  {"item": "sneakers", "prob": 50},
+	  {"item": "pm_boots", "prob": 10} ] },
+	  { "item": "pants_cargo", "prob": 100 }
+    ]
+  },
+  {
+    "id": "Kr_sayo_worn",
+    "type": "item_group",
+    "//": "Sayo",
+    "subtype": "collection",
+    "entries": [
+      { "item": "kr_yukata","prob": 100 },
+	   { "item": "geta", "prob": 100 }
+    ]
+  },
+  {
+    "id": "Zero_carry",
+    "type": "item_group",
+    "//": "Nothing Here",
+    "subtype": "collection",
+    "entries": [
+      { "item": "null"}
+    ]
+  },
+  {
+    "id": "Kr_weapon",
+    "type": "item_group",
+    "//": "Kurokumo weapon",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "kr_katana", "prob": 100 }
+    ]
+  },
+  {
+    "id": "Kr_yang_worn",
+    "type": "item_group",
+    "//": "Yang",
+    "subtype": "collection",
+    "entries": [
+      { "item": "kr_shirt","prob": 100 },
+	  { "item": "kr_trouses","prob": 100 },
+	  { "item": "leather_belt","prob": 100 },
+	  { "item": "socks", "prob": 100 },
+	   { "item": "pm_boots", "prob": 100 },
+	   { "item": "silver_watch", "prob": 100 } 
+    ]
+  },
+  {
+    "id": "Kr_gin_worn",
+    "type": "item_group",
+    "//": "Gin",
+    "subtype": "collection",
+    "entries": [
+      { "item": "kr_shirt","prob": 100 },
+	  { "item": "kr_suit","prob": 100 },
+	  { "item": "leather_belt","prob": 100 },
+	  { "item": "socks", "prob": 100 },
+	   { "item": "pm_boots", "prob": 100 },
+	   { "item": "silver_watch", "prob": 100 } 
+    ]
+  },
+  {
+    "id": "Kr_worn",
+    "type": "item_group",
+    "//": "Kurokumo",
+    "subtype": "collection",
+    "entries": [
+      { "item": "kr_shirt","prob": 100 },
+	  { "item": "kr_trouses","prob": 100 },
+	  { "item": "kr_blazer","prob": 40 },
+	  { "item": "leather_belt","prob": 100 },
+	  { "item": "socks", "prob": 100 },
+	   { "item": "pm_boots", "prob": 100 },
+	   { "item": "silver_watch", "prob": 35 } 
+    ]
+  },
+  {
+    "id": "Lc_sci_carry",
+    "type": "item_group",
+    "//": "Lob corp scientist items",
+    "subtype": "collection",
+    "entries": [
+	  { "item": "id_science" },
+	  { "item": "bandages", "count": 50 },
+	  { "item": "disinfectant" }
+    ]
+  },
+    {
+    "id": "Akihiro_worn",
+    "type": "item_group",
+    "//": "Akihiro",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie" },
+      { "item": "gloves_medical" },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "lc_trouses" },
+	  { "item": "lc_labcoat" },
+		  { "item": "glasses_reading" }
+    ]
+  },
+  {
+    "id": "Lc_sci_weapon",
+    "type": "item_group",
+    "//": "Lob corp scientist weapon",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "scalpel", "prob": 100 }
+    ]
+  },
+  {
+    "id": "Lc_sci_worn",
+    "type": "item_group",
+    "//": "Lob corp scientist wear",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie", "prob": 35 },
+      { "item": "gloves_medical", "prob": 25 },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "lc_trouses" },
+	  { "item": "lc_labcoat" },
+		  { "item": "glasses_reading", "prob": 40 }
+    ]
+  },
+  {
+    "id": "Lc_guard_worn",
+    "type": "item_group",
+    "//": "Lob corp guard wear",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie", "prob": 35 },
+      { "item": "pm_gloves", "prob": 65 },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "lc_trouses" },
+	  { "item": "police_belt" },
+	  { "item": "lc_vest" },
+		{ "distribution": [ {"item": "null", "prob": 66}, 
+	  {"item": "sunglasses", "prob": 15},
+	  {"item": "glasses_reading", "prob": 10} ] }
+    ]
+  },
+  {
+    "id": "Lc_isao_worn",
+    "type": "item_group",
+    "//": "Isao",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie" },
+      { "item": "pm_gloves" },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "lc_trouses" },
+	  { "item": "police_belt" },
+	  { "item": "lc_vest" }
+    ]
+  },
+  {
+    "id": "Lc_guard_weapon",
+    "type": "item_group",
+    "//": "Lob corp guards weapon",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "lab_bat", "prob": 100 }
+    ]
+  },
+  {
+    "id": "Lc_clerk_worn",
+    "type": "item_group",
+    "//": "Clerks clothing",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+		  { "item": "pm_tie_necktie" },
+      { "item": "socks" },
+      { "item": "pm_boots" },
+	  { "item": "lc_trouses" },
+	  { "item": "pm_blazer" }
+    ]
+  },
+  {
+    "id": "Lc_clerk_weapon",
+    "type": "item_group",
+    "//": "files files flies",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "file", "prob": 100 }
+    ]
+  }
+  ]

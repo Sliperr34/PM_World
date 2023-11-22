@@ -1,0 +1,31 @@
+[
+{
+    "type": "GENERIC",
+    "category": "currency",
+    "id": "pm_money",
+    "name": { "str": "100 000 Ahn" },
+    "description": "A credit bill of 100 000, usual currency in City. You can trade it at some merchants for goods.",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price_postapoc": "33USD",
+    "material": [ "paper" ],
+    "symbol": "$",
+    "color": "green",
+    "to_hit": -3,
+    "flags": [ "BANK_NOTE_SHAPED" ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "lc_documents",
+    "name": { "str": "L corp documents" },
+    "category": "books",
+    "description": "Several secret documents containing all kinds of information, graphs, and charts, kept together in a manila folder. You dont know why but you cannot percieve information drawn here, everything so blury and boring.",
+    "weight": "15 g",
+    "to_hit": -3,
+    "color": "white",
+    "symbol": ",",
+    "material": [ "paper" ],
+    "volume": "50 ml",
+    "flags": [ "TINDER" ]
+  }
+  ]

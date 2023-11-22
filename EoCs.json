@@ -1,0 +1,76 @@
+[
+{
+ "type": "effect_on_condition",
+ "id": "light_heal_eoc",
+ "condition": {"npc_has_effect": "bleed", "intensity": 10},
+ "effect": [ { "u_cast_spell": { "id": "light_heal", "min_level": 1, "max_level": 5 } } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "minor_rest_eoc",
+ "effect": [ { "u_cast_spell": { "id": "minor_rest", "min_level": 1, "max_level": 3 } } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "light_rest_eoc",
+ "effect": [ { "u_cast_spell": { "id": "light_rest", "min_level": 1, "max_level": 5 } } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "good_rest_eoc",
+ "effect": [ { "u_cast_spell": { "id": "light_rest", "min_level": 1, "max_level": 15 } } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "bleed_minor_eoc",
+ "effect": [ { "npc_add_effect": "bleed", "intensity": { "math": [ "rand(2)" ]}, "duration": 2 } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "bleed_small_eoc",
+ "effect": [ { "npc_add_effect": "bleed", "intensity": { "math": [ "rand(5)" ]}, "duration": 5 } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "bleed_mild_eoc",
+ "effect": [ { "npc_add_effect": "bleed", "intensity": { "math": [ "rand(10)" ]}, "duration": 10 } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "bleedrc_small_eoc",
+ "effect": [ { "u_add_effect": "bleed", "intensity": { "math": [ "rand(2)" ]}, "target_part": "hand_l", "duration": 2 },
+			{ "u_add_effect": "bleed", "intensity": { "math": [ "rand(2)" ]}, "target_part": "hand_r", "duration": 2 } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "self_harm_hands_eoc",
+ "effect": [ { "u_cast_spell": { "id": "self_harm_light_hands", "min_level": 1, "max_level": 3 } } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "bleed_medium_eoc",
+ "effect": [ { "npc_add_effect": "bleed", "intensity": { "math": [ "rand(15)" ]}, "duration": 15 } ]
+},
+{
+ "type": "effect_on_condition",
+ "id": "summon_npc1",
+"effect": [
+      { "u_spawn_npc": "kr_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 }  ]
+	},
+	{
+ "type": "effect_on_condition",
+ "id": "summon_npc2",
+"effect": [
+      { "u_spawn_npc": "zonya_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 },
+ { "u_spawn_npc": "lc_clerk_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 }	  ]
+	},
+	{
+	"type": "effect_on_condition",
+ "id": "summon_npc4",
+"effect": [
+      { "u_spawn_npc": "akihiro_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 },
+ { "u_spawn_npc": "lc_sci_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 },
+{ "u_spawn_npc": "isao_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 },
+{ "u_spawn_npc": "lc_guard_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 }]
+	}
+  ]

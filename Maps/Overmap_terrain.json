@@ -1,0 +1,102 @@
+[
+{
+	"id": "zwei_office0",
+	"type": "overmap_terrain",
+	"name": "Zwei main office",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office0_roof",
+	"type": "overmap_terrain",
+	"name": "Zwei office roof",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office1",
+	"type": "overmap_terrain",
+	"name": "Zwei main office",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office1_roof",
+	"type": "overmap_terrain",
+	"name": "Zwei office roof",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office2",
+	"type": "overmap_terrain",
+	"name": "Zwei dormitories",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office2_roof",
+	"type": "overmap_terrain",
+	"name": "Zwei office roof",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office3",
+	"type": "overmap_terrain",
+	"name": "Zwei rehab",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "zwei_office3_roof",
+	"type": "overmap_terrain",
+	"name": "Zwei office roof",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "faultyzwei",
+	"type": "overmap_terrain",
+	"name": "Zwei test office1",
+	"sym": "Z",
+	"color": "light_blue",
+	"see_cost": 10
+},
+{
+	"id": "kr_hideout",
+	"type": "overmap_terrain",
+	"name": "Kurokumo hideout",
+	"sym": "K",
+	"see_cost": 10
+},
+{
+	"id": "kr_hideout_roof",
+	"type": "overmap_terrain",
+	"name": "Kurokumo hideout roof",
+	"sym": "K",
+	"see_cost": 10
+},
+{
+	"id": "rc_hideout",
+	"type": "overmap_terrain",
+	"name": "Rusted Chains hideout",
+	"sym": "S",
+	"see_cost": 10
+},
+{
+	"id": "rc_hideout_roof",
+	"type": "overmap_terrain",
+	"name": "Rusted Chains hideout roof",
+	"sym": "S",
+	"see_cost": 10
+}
+]

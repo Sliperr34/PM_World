@@ -1,0 +1,15 @@
+[
+{
+    "type": "SPECIES",
+    "id": "PM_TEST",
+    "description": "test",
+    "footsteps": "uh oh",
+    "fear_triggers": [ "HURT", "FRIEND_ATTACKED" ],
+    "bleeds": "fd_blood"
+  },
+  {
+    "type": "SPECIES",
+    "id": "DISTORTIONS",
+    "description": "a distortion"
+  }
+  ]
