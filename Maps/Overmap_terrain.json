@@ -98,5 +98,12 @@
 	"name": "Rusted Chains hideout roof",
 	"sym": "S",
 	"see_cost": 10
+},
+{
+	"id": "lc_surface",
+	"type": "overmap_terrain",
+	"name": "Strange sctructure",
+	"sym": ".",
+	"see_cost": 10
 }
 ]
