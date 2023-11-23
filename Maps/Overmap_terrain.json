@@ -110,7 +110,63 @@
 	"id": "lc_mid",
 	"type": "overmap_terrain",
 	"name": "Midsection",
-	"sym": ".",
+	"sym": "^",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_rt",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_mt1",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_mt2",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_lt",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_rb",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_mb1",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_mb2",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
+	"see_cost": 10
+},
+{
+	"id": "lc_lab_lb",
+	"type": "overmap_terrain",
+	"name": "Lobotomy Main Lab",
+	"sym": "L",
 	"see_cost": 10
 }
 ]
