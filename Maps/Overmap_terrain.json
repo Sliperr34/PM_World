@@ -105,5 +105,12 @@
 	"name": "Strange sctructure",
 	"sym": ".",
 	"see_cost": 10
+},
+{
+	"id": "lc_mid",
+	"type": "overmap_terrain",
+	"name": "Midsection",
+	"sym": ".",
+	"see_cost": 10
 }
 ]
