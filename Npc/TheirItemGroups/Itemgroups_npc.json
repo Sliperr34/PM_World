@@ -253,8 +253,7 @@
     "subtype": "collection",
     "entries": [
 	  { "item": "id_science" },
-	  { "item": "bandages", "count": 50 },
-	  { "item": "disinfectant" }
+	  { "item": "bandages", "count": 50 }
     ]
   },
     {
