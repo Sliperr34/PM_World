@@ -1,0 +1,9 @@
+[
+  {
+    "name": "PECCA_GENERAL",
+    "type": "monstergroup",
+    "monsters": [ { "monster": "mon_irae", "weight": 500,"cost_multiplier": 2 }, { "monster": "mon_luxuriae", "weight": 500, "cost_multiplier": 2 },
+    { "monster": "mon_superbiae", "weight": 500, "cost_multiplier": 2 },{ "monster": "mon_gulae", "weight": 500, "cost_multiplier": 2 },
+    { "monster": "mon_morositatis", "weight": 500, "cost_multiplier": 2 },{ "monster": "mon_acediae", "weight": 500, "cost_multiplier": 2 } ]
+  } 
+]
