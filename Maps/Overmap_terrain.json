@@ -111,7 +111,7 @@
 	"id": "lc_surface_roof",
 	"type": "overmap_terrain",
 	"name": "Strange sctructure",
-	"color": "c_white",
+	"color": "light_blue",
 	"sym": "n",
 	"see_cost": 50
 },
