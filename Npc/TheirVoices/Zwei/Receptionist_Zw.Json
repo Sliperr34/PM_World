@@ -1,0 +1,33 @@
+[
+    [
+        [
+            {
+              "type": "talk_topic",
+              "id": "TALK_REC_ZW",
+              "\\": "she say hello",
+              "dynamic_line": {
+                "u_has_var": "u_met_Heyri",
+                "type": "general",
+                "context": "meeting",
+                "value": "yes",
+                "yes": [ "Hey!", "Nice to see you again!  What do you need?", "How can I help you today?" ],
+                "no": [ "Hello! First time here? *she smile at you gently*" ],
+              "responses": [
+                { "text": "Yes... Who are you?", "topic": "TALK_NONE",
+                "condition": { "not": { "u_has_var": "u_met_Heiry", "type": "general", "context": "meeting", "value": "yes" } },
+                "effect": { "u_add_var": "u_met_Heiry", "type": "general", "context": "meeting", "value": "yes" } },
+                { "text": "Just passing by *Leave*", "topic": "TALK_NONE",
+                "condition": { "not": { "u_has_var": "u_met_Heiry", "type": "general", "context": "meeting", "value": "yes" } }
+                 },
+                { "text": "Hello again. Tell me more about this place.", "topic": "TALK_NONE",
+                "condition": { "u_has_var": "u_met_Heiry", "type": "general", "context": "meeting", "value": "yes" } },
+                { "text": "Hey. What can I do for you?", "topic": "TALK_NONE", 
+                "condition": { "u_has_var": "u_met_Heiry", "type": "general", "context": "meeting", "value": "yes" } },
+                { "text": "Just come to say hello, thanks *Leave*", "topic": "TALK_NONE", 
+                "condition": { "u_has_var": "u_met_Heiry", "type": "general", "context": "meeting", "value": "yes" } }
+              ]
+            }
+            }
+        ]
+    ]
+]
