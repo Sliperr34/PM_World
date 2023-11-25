@@ -32,6 +32,8 @@
             "                        ",
             "                        "
             ],
+            "place_monster": [ {"group": "PECCA_GENERAL", "x":[21,23], "y":[5,12], "repeat": 3 },
+            {"group": "PECCA_GENERAL", "x": 9, "y":6, "repeat": 2 }],
             "terrain": {
                 "N": "t_wall_bulkhead",
                 "O": "t_window_enhanced_noglass",
@@ -115,6 +117,8 @@
             "                        ",
             "                        "
             ],
+            "place_monster": [ {"group": "PECCA_GENERAL", "x":8, "y":5, "repeat": 1 },
+            {"group": "PECCA_GENERAL", "x": 12, "y":5, "repeat": 1 }],
              "terrain": {
                  "N": "t_wall_bulkhead",
                  "O": "t_window_enhanced_noglass",
