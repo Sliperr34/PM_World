@@ -45,19 +45,19 @@
       { "point": [ 0, 0, 0 ], "overmap": "lc_surface_north" },
       { "point": [ 0, 0, 1 ], "overmap": "lc_surface_roof_north" },
       { "point": [ 0, 0, -1 ], "overmap": "lc_mid_north" },
-      { "point": [ -1, 0, -2 ], "overmap": "lc_lab_rt_north" },
+      { "point": [ 1, 0, -2 ], "overmap": "lc_lab_rt_north" },
       { "point": [ 0, 0, -2 ], "overmap": "lc_lab_mt1_north" },
-      { "point": [ 1, 0, -2 ], "overmap": "lc_lab_mt2_north" },
-      { "point": [ 2, 0, -2 ], "overmap": "lc_lab_lt_north" },
-      { "point": [ -1, -1, -2 ], "overmap": "lc_lab_rb_north" },
-      { "point": [ 0, -1, -2 ], "overmap": "lc_lab_mb1_north" },
-      { "point": [ 1, -1, -2 ], "overmap": "lc_lab_mb2_north" },
-      { "point": [ 2, 1, -2 ], "overmap": "lc_lab_lb_north" }
+      { "point": [ -1, 0, -2 ], "overmap": "lc_lab_mt2_north" },
+      { "point": [ -2, 0, -2 ], "overmap": "lc_lab_lt_north" },
+      { "point": [ 1, 1, -2 ], "overmap": "lc_lab_rb_north" },
+      { "point": [ 0, 1, -2 ], "overmap": "lc_lab_mb1_north" },
+      { "point": [ -1, 1, -2 ], "overmap": "lc_lab_mb2_north" },
+      { "point": [ -2, 1, -2 ], "overmap": "lc_lab_lb_north" }
     ],
       "locations": [ "wilderness" ],
     "city_distance": [ 6, 15 ],
     "city_sizes": [ 10, -1 ],
     "occurrences": [ 85, 100 ],
-    "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
+    "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE"]
   }
   ]
