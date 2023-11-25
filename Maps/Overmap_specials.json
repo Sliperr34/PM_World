@@ -37,5 +37,20 @@
     "city_sizes": [ 3, 6 ],
     "occurrences": [ 85, 100 ],
     "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "Lob_corp",
+    "overmaps":[
+      { "point": [ 0, 0, 0 ], "overmap": "lc_surface" },
+      { "point": [ 0, 0, 0 ], "overmap": "lc_surface_roof" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" }
+    ]
   }
   ]
