@@ -336,6 +336,18 @@
     "chat": "TALK_CIVILIAN_PANIC",
    "faction": "l_corp"
   },
+  {
+    "type": "npc",
+    "id": "lc_doc_npc",
+    "name_unique": "Terry",
+    "name_suffix": "doctor",
+    "gender": "female",
+    "class": "NC_LC_SCIENTIST",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_CIVILIAN_PANIC",
+   "faction": "l_corp"
+  },
    {
     "type": "npc",
     "id": "isao_npc",
@@ -360,6 +372,17 @@
     "type": "npc",
     "id": "lc_guard_npc",
     "name_suffix": "guard",
+    "class": "NC_LC_GUARD",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_CIVILIAN_PANIC",
+   "faction": "l_corp"
+  },
+  {
+    "type": "npc",
+    "id": "lc_rec_npc",
+    "name_unique": "Yuri",
+    "name_suffix": "receptionist",
     "class": "NC_LC_GUARD",
     "attitude": 0,
     "mission": 7,
@@ -398,10 +421,22 @@
   },
   {
     "type": "npc",
+    "id": "lc_cook_npc",
+    "name_unique": "Franchesko",
+    "name_suffix": "cook",
+    "gender": "male",
+    "class": "NC_LC_CLERK",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_CIVILIAN_PANIC",
+   "faction": "l_corp"
+  },
+  {
+    "type": "npc",
     "id": "bongbong_npc",
     "name_unique": "Bongbong",
     "name_suffix": "agent",
-    "gender": "male",
+    "gender": "female",
     "class": "NC_BONGBONG",
     "attitude": 0,
     "mission": 7,
