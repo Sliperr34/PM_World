@@ -138,9 +138,9 @@
             "     z`,`,`,`,`,`,`,`,`,]5..h555555555555.......z                                               ",
             "     zzzz]zzzzz]zzzzz]zzz5hhh555555565555.......z                                               ",
             "      z33333z33333z33333z5555555................z                                               ",
-            "      zB3433zB3433zB3433zzzzzzzzzzzzzzzzzzzzzzzzz                                               ",
-            "      zB33AhzB33hhzB33hhz                                                                       ",
-            "      zB333hzB33A3zB33A3z                                                                       ",
+            "      zB3439zB3433zB3433zzzzzzzzzzzzzzzzzzzzzzzzz                                               ",
+            "      zB33A9zB33hhzB33hhz                                                                       ",
+            "      zB3339zB33A3zB33A3z                                                                       ",
             "      zzzzzzzzzzzzzzzzzzz                                                                       ",
             "                                                                                                ",
             "                                                                                                ",
@@ -151,6 +151,28 @@
             "                                                                                                ",
             "                                                                                                "
             ],
+            "place_npcs": [
+          { "class": "alpha_npc", "x": 10, "y": 37 },
+          { "class": "white_npc", "x": 16, "y": 27 },
+          { "class": "akihiro_npc", "x": 88, "y": 6 },
+          { "class": "lc_sci_npc", "x": 74, "y": 3 },
+          { "class": "lc_sci_npc", "x": 78, "y": 13 },
+          { "class": "lc_sci_npc", "x": 86, "y": 20 },
+          { "class": "lc_sci_npc", "x": 92, "y": 13 },
+          { "class": "lc_doc_npc", "x": 57, "y": 9 },
+          { "class": "isao_npc", "x": 50, "y": 16 },
+          { "class": "lc_guard_npc", "x": 52, "y": 18 },
+          { "class": "lc_guard_npc", "x": 61, "y": 19 },
+          { "class": "lc_guard_npc", "x": 65, "y": 6 },
+          { "class": "lc_rec_npc", "x": 27, "y": 32 },
+          { "class": "zonya_npc", "x": 9, "y": 3 },
+          { "class": "lc_clerk_npc", "x": 14, "y": 11 },
+          { "class": "lc_clerk_npc", "x": 35, "y": 13 },
+          { "class": "lc_clerk_npc", "x": 25, "y": 3 },
+          { "class": "lc_clerk_npc", "x": 25, "y": 12 },
+          { "class": "bongbong_npc", "x": 16, "y": 38 },
+          { "class": "lc_cook_npc", "x": 44, "y": 12 }
+          ],
         "terrain": {
             "N": "t_wall_bulkhead",
             "L": "t_wall_metal",
@@ -200,7 +222,8 @@
       "*": "f_oven",
 		  "F": "f_fridge",
       "%": "f_workbench",
-      "J": "f_slab"
+      "J": "f_slab",
+      "9": "f_console"
 	}
      }
     }
