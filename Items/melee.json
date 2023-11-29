@@ -201,7 +201,7 @@
     "flags": [ "SHEATH_KNIFE", "ALLOWS_BODY_BLOCK", "FRAGILE_MELEE" ],
     "weapon_category": [ "KNIVES" ],
     "thrown_damage": [ { "damage_type": "stab", "amount": 23, "armor_penetration": 21 } ],
-    "melee_damage": { "bash": 1, "stab": 3, "armor_multiplier": 1.2 }
+    "melee_damage":  { "bash": 1, "stab": 3}
   },
   {
     "id": "kr_katana",
@@ -244,6 +244,7 @@
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": 30000,
     "price_postapoc": 750,
-    "melee_damage": { "bash": 9, "armor_multiplier": 0.65 }
+    "//": "Make a percentage of armor penetration, around 35%",
+    "melee_damage": { "bash": 11 }
   }
 ]
