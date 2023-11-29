@@ -85,7 +85,6 @@
 	"attack_vectors": [ "WEAPON" ],
 	"condition": { "npc_has_effect": "downed" },
 	"crit_tec": true, 
-	"powerful_knockback": true,
 	"knockback_dist": 2,
     "mult_bonuses": [ 
 	{ "stat": "damage", "type": "bash", "scale": 1.6 },
@@ -104,7 +103,6 @@
 	"messages": [ "With steel grip and mastery you shove %s away.", "With steel grip and mastery <npcname>s shove %s away." ],
     "skill_requirements": [ { "name": "melee", "level": 8 } ],
 	"attack_vectors": [ "WEAPON" ], 
-	"powerful_knockback": true,
 	"knockback_dist": 2,
 	"required_buffs_all": [ "zw_step" ],
     "mult_bonuses": [ 
@@ -124,7 +122,6 @@
 	"messages": [ "Like a hot knife through butter\n<color_red>*sound of broken bones and flesh tired apart*</color> ", " <npcname>s <color_red>like a hot knife through butter</color>" ],
     "skill_requirements": [ { "name": "melee", "level": 10 } ],
 	"attack_vectors": [ "WEAPON" ], 
-	"powerful_knockback": true,
 	"aoe": "wide",
 	"crit_tec": true, 
 	"knockback_dist": 4,
@@ -224,7 +221,6 @@
 			{ "npc_has_effect": "stunned" } ] },
 	"condition_desc": "*Only works on a <info> non flying and stuned</info> target. Also your <info>Str</info> must be at least 12",
 	"stun_dur": 1,
-	"powerful_knockback": true, 
 	"knockback_dist": 1,
 	"knockback_follow": true,
 	"down_dur": 3,
