@@ -88,7 +88,7 @@
 	"gender": "female",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_REC_ZW",
     "faction": "zwei_association"
   },
    {
