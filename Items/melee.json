@@ -68,8 +68,8 @@
   {
     "type": "GENERIC",
     "id": "zw_mace",
-    "name": { "str": "Zwei polymer mace" },
-    "description": "Long mace made of some black polymer, slick at touch. Has a massive knob\n\nYou see Zwei association emblem on It",
+    "name": { "str": "Zwei stun baton" },
+    "description": "Long stun baton made of some black polymer, slick at touch. Has a massive knob\n\nYou see Zwei association emblem on It",
     "weight": "1300 g",
     "color": "dark_gray",
     "symbol": "/",
@@ -234,6 +234,7 @@
     "description": "Used by lab security personal. Does little damage but quite light",
     "weight": "380 g",
     "color": "dark_gray",
+    "looks_like": "PR24-extended",
     "symbol": "/",
     "material": [ "l_steel", "b_polymer" ],
     "techniques": [ "WBLOCK_2", "RAPID", "PRECISE" ],
