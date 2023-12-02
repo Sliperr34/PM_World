@@ -28,8 +28,8 @@
     "class": "NC_ZW_WALTER",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 43,
+    "chat": "TALK_WALTER",
+	"age": 45,
 	"height": 188,
 	"personality": {
     "aggression": 0,
