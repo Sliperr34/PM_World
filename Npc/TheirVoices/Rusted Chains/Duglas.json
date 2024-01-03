@@ -1,0 +1,20 @@
+[
+    {
+    "type": "talk_topic",
+    "id": "TALK_ARSONIST_RC",
+    "dynamic_line": "What now?",
+    "responses": [
+      { "text": "reply 1", "topic": "TALK_DUGLAS_RC_2"},
+      {"text": "reply 2", "topic": "TALK_DONE"}
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_DUGLAS_RC_2",
+    "dynamic_line": "What now?",
+    "responses": [
+      { "text": "reply 1", "topic": "TALK_DUGLAS_RC_6"},
+      {"text": "reply 2", "topic": "TALK_DONE"}
+    ]
+  }
+]
