@@ -1,7 +1,7 @@
 [
     {
     "type": "talk_topic",
-    "id": "TALK_Duglas_RC",
+    "id": "TALK_DUGLAS_RC",
     "dynamic_line": "Hey bro, why the fuck are you hanging around here?",
     "responses": [
       { "text": "There's no need to be so rude. Are you always this unfriendly?", "topic": "TALK_DUGLAS_RC_2"},
