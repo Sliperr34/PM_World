@@ -14,7 +14,7 @@
     "dynamic_line": "What...? Hey, either say what you need or fuck off before your teeth fall out",
     "responses": [
       { "text": "I came for the adrenaline. Maybe you have some interesting suggestions?", "topic": "TALK_DUGLAS_RC_MISSION"},
-      { "test":"I want to buy myself something, do you have anything to offer?",  "topic": "TRADE_DUGLAS"},
+      { "text":"I want to buy myself something, do you have anything to offer?",  "topic": "TRADE_DUGLAS"},
       { "text": "Okay, I'm leaving", "topic": "TALK_DONE"}
     ]
   },
@@ -45,7 +45,7 @@
     "dynamic_line" : "Then why the hell are you bothering me? Get out of here!",
     "responses" :[
         {"text" : "Calm down. Why are you so nervous?", "topic" : "FIGHT_DUGLAS"},
-        {"text" : "Alright, i'm leaving", "topic" : "END_DIALOGE_DUGLAS"}
+        {"text" : "Alright, i'm leaving", "topic" : "TALK_DONE"}
 
 
         
