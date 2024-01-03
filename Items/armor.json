@@ -631,5 +631,40 @@
   "melee_damage": {
     "bash": 6
   }
+},
+{
+  "id": "cuirass_lightplate_test",
+  "type": "ARMOR",
+  "category": "armor",
+  "name": { "str": "cuirass test PM", "str_pl": "cuirasses" },
+  "description": "A steel breastplate, and a vital part of plate armor.  Even as full armor went into decline, cuirasses remained in use among cavalry in Europe.",
+  "weight": "4200 g",
+  "volume": "6 L",
+  "price": 20000,
+  "price_postapoc": 4000,
+  "to_hit": -1,
+  "material": [ "s_steel", "leather" ],
+  "symbol": "[",
+  "looks_like": "chestguard_hard",
+  "color": "light_gray",
+  "warmth": 20,
+  "longest_side": "60 cm",
+  "material_thickness": 4,
+  "flags": [ "VARSIZE", "OUTER", "STURDY" ],
+  "armor": [
+    { "encumbrance": 20, "coverage": 95, "covers": [ "torso" ] },
+    {
+      "encumbrance": 4,
+      "coverage": 95,
+      "covers": [ "arm_l", "arm_r" ],
+      "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+    },
+    {
+      "encumbrance": 4,
+      "coverage": 95,
+      "covers": [ "leg_l", "leg_r" ],
+      "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
+    }
+  ]
 }
 ]

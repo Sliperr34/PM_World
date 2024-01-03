@@ -19,8 +19,8 @@
                     },
                    { "text": "Hello, my name is %s", "topic": "TALK_ZW_HELP",
                    "condition": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" } },
-                   { "text": "Hey. What can I do for you?", "topic": "TALK_NONE", 
-                   "condition": { "u_has_var": "u_gained_trust", "type": "general", "context": "meeting", "value": "yes" } },
+                   { "text": "Hey. What can I do for you?", "topic": "TALK_MISSION_LIST", 
+                   "condition": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" } },
                    { "text": "Just come to say hello, thanks *Leave*", "topic": "TALK_DONE", 
                    "condition": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" } }
                  ]

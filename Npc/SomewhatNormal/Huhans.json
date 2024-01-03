@@ -37,6 +37,7 @@
     "collector":  0,
     "altruism":  0
   },
+  "mission_offered": "TEST_FIND_LC",
     "faction": "zwei_association"
   },
   {
@@ -91,6 +92,114 @@
     "chat": "TALK_REC_ZW",
     "faction": "zwei_association"
   },
+  {
+  "type": "npc",
+  "id": "zwei_train_npc",
+"name_unique": "Anatoly",
+  "name_suffix": "trainer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "male",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_office1_npc",
+"name_unique": "Lux",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "female",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_office2_npc",
+"name_unique": "Malkolm",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "male",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_office3_npc",
+"name_unique": "Lethitia \"Pie\"",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "female",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_game_npc",
+"name_unique": "Fill",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "male",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_sick_npc",
+"name_unique": "Morales",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "female",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_reader_npc",
+"name_unique": "Marshal",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "male",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_mariya_npc",
+"name_unique": "Mariya",
+  "name_suffix": "fixer of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "female",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
+{
+  "type": "npc",
+  "id": "zwei_newbie_npc",
+"name_unique": "Barry",
+  "name_suffix": "newbie of Zwei",
+  "class": "NC_ZW_FIXER",
+"gender": "male",
+  "attitude": 0,
+  "mission": 7,
+  "chat": "TALK_CIVILIAN_PANIC",
+  "faction": "zwei_association"
+},
    {
     "type": "npc",
     "id": "zwei_doc_npc",

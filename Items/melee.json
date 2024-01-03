@@ -247,5 +247,27 @@
     "price_postapoc": 750,
     "//": "Make a percentage of armor penetration, around 35%",
     "melee_damage": { "bash": 11 }
+  },
+  {
+    "id": "sl_2sword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "Karpid" },
+    "description": "A black incredibly heavy two-handed sword. The handle of which is 60 centimeters thick by 1 centimeter, has a mutually sharp blade with a length of 2 meters, a width of 25 centimeters, and a thickness of 1 centimeter. There are spots of burnt blood of the wearer on the blade of the sword",
+    "weight": "8000 g",
+    "volume": "8000 ml",
+    "longest_side": "260 cm",
+    "symbol": "/",
+    "color": "light_gray",
+    "looks_like": "zweihander",
+    "price": 240000,
+    "price_postapoc": 1,
+    "material": "s_steel",
+    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK" , "MESSY", "NONCONDUCTIVE", "POLEARM", "WHIP" ],
+    "techniques": [ "WBLOCK_2", "WIDE", "BRUTAL", "SWEEP", "RAPID" ],
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
+    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", -4 ] ],
+    "weapon_category": [ "GREAT_SWORDS" ],
+    "melee_damage": { "bash": 44, "cut": 28 }
   }
 ]

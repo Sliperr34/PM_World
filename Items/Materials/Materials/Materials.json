@@ -38,7 +38,7 @@
     "dmg_adj": [ "scratched", "cut", "shredded", "tattered" ],
     "bash_dmg_verb": "ripped",
     "cut_dmg_verb": "sliced",
-    "resist": { "bash": 2, "cut": 7, "acid": 4, "heat": 11, "bullet": 7 },
+    "resist": { "bash": 2, "cut": 7, "acid": 4, "heat": 50, "bullet": 7 },
     "repair_difficulty": 7
   },
   {
@@ -67,7 +67,7 @@
     "dmg_adj": [ "ripped", "torn", "shredded", "tattered" ],
     "bash_dmg_verb": "ripped",
     "cut_dmg_verb": "cut",
-    "resist": { "bash": 0, "cut": 1, "acid": 3, "heat": 7, "bullet": 5 },
+    "resist": { "bash": 0, "cut": 1, "acid": 3, "heat": 32, "bullet": 5 },
     "repair_difficulty": 5
   },
   {
@@ -213,5 +213,21 @@
     "burn_products": [ [ "scrap", 0.5 ] ],
     "resist": { "bash": 13, "cut": 13, "acid": 9, "heat": 4, "bullet": 11.5 },
     "repair_difficulty": 8
+  },
+  {
+    "type": "material",
+    "id": "s_steel",
+    "name": "Solomon steel",
+    "//": "heavy, blood infused",
+    "density": 100.0,
+    "specific_heat_liquid": 3.40,
+    "specific_heat_solid": 3.40,
+    "latent_heat": 0,
+    "chip_resist": 50,
+    "dmg_adj": [ "marked", "dented", "smashed", "shattered" ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched",
+    "resist": { "bash": 20, "cut": 20, "acid": 10, "heat": 50, "bullet": 21 },
+    "repair_difficulty": 0
   }
 ]
