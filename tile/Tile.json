@@ -11,7 +11,7 @@
 		"sprite_width": 56,
         "sprite_height": 42,
         "tiles": [
-          { "id": "mon_irae", "fg": 2, "rotates": false }
+          { "id": "mon_irae", "fg": 1, "rotates": false }
 			  
         ]
       }
