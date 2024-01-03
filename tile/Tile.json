@@ -9,7 +9,7 @@
       {
         "file": "tile/pecca.png",
 		"sprite_width": 56,
-        "sprite_height": 42,
+        "sprite_height": 56,
         "tiles": [
           { "id": "mon_irae", "fg": 1, "rotates": false }
 			  
