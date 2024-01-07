@@ -26,7 +26,7 @@
     "responses":[
      {"text" : "Then share what you think about", "topic": "QUEST_LIM"},
      {"text" : "Once you think about it, I won’t distract you", "topic":"TALK_DONE"},
-     {"text" : "Do you think where to get drugs?", "topic": "HISTORY_LIM_RC_2"}
+     {"text" : "Do you think where to get drugs?", "topic": "HISTORY_LIM_RC"}
     ]
 
 },
@@ -36,7 +36,7 @@
     "dynamic_line": "Lim wonders how much to take to sleep",
     "responses":[
      {"text" : "*Turn around and leave*", "topic": "TALK_DONE"},
-     {"text" : "Why take anything to sleep?", "topic":"HISTORY_LIM_RC_3"},
+     {"text" : "Why take anything to sleep?", "topic":"HISTORY_LIM_RC"},
      {"text" : "OK. Well then, shall I go?", "topic": "QUEST_LIM_CONTINUE"}
     ]
 
@@ -48,7 +48,7 @@
     "responses":[
      {"text" : "Let us suppose. I'm listening to you", "topic":"DETAILS_QUEST_LIM"},
      {"text" : "Fuck, leave me alone, you fucking junkie. Go find your own dose!", "topic": "EVENT_FIGHT_LIM"},
-     {"text" : "I don't really want to get involved with drugs...", "topic" :"HISTORY_LIM_RC_4"}
+     {"text" : "I don't really want to get involved with drugs...", "topic" :"HISTORY_LIM_RC"}
     ]
 
 },
@@ -58,7 +58,7 @@
     "dynamic_line": "Lim is very tired. Who needs drugs. Can you get it for me?",
     "responses":[
      {"text" : "Well, I'll try", "topic": "GRATITUDE_LIM"},
-     {"text" : "Is it possible without him? You might die so soon", "topic":"HISTORY_LIM_RC_5"},
+     {"text" : "Is it possible without him? You might die so soon", "topic":"HISTORY_LIM_RC"},
      {"text" : "Sorry, I don't want to do this", "topic": "TALK_DONE"}
     ]
 
@@ -102,7 +102,7 @@
      {"text" : "A very sad story. I went...", "topic": "TALK_DONE"},
      {"text" : "Maybe I can look for her?", "topic":"QUEST_LIM_DAUGHTER"},
      {"text" : "Okay, so what do you need?", "topic": "SEIZURE_LIM"},
-     {"text": "So you're not only a drug addict, but also a psycho...", "topic" :"HISTORY_CONTINUE_LIM_2"}
+     {"text": "So you're not only a drug addict, but also a psycho...", "topic" :"EVENT_FIGHT_LIM"}
     ]
 
 },
