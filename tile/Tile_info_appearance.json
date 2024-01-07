@@ -1,0 +1,32 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "MshockXottoplus"
+    ],
+  "tiles-new": [
+    {
+      "file": "tile/appearance.png",
+      "//": "range 1 to 15",
+      "sprite_width": 32,
+      "sprite_height": 32,
+      "sprite_offset_x": 0,
+      "sprite_offset_y": 0,
+      "tiles": [
+        { "id": "overlay_female_mutation_hair_bong_hair", "fg": 2 },
+        { "id": "jikan_hair", "fg": 3 },
+        { "id": "yang_hair", "fg": 5 },
+        { "id": "sayo_hair", "fg": 6 },
+        { "id": "zwei_hair", "fg": 7 },
+        { "id": "julia_hair", "fg": 1 },
+        { "id": "gin_hair", "fg": 8 },
+        { "id": "rodya_hair", "fg": 9 },
+        { "id": "isadora_hair", "fg": 10 },
+        { "id": "walter_hair", "fg": 11 },
+        { "id": "walter_npc_hair", "fg": 12 }
+      ]
+    }
+  ]
+}
+]
