@@ -304,6 +304,18 @@
   },
   {
     "type": "npc",
+    "id": "rc_lim",
+	"gender": "male",
+  "name_unique": "Lim",
+    "name_suffix": "member of Rusted Chains",
+    "class": "NC_RC",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_LIM_RC",
+    "faction": "rusted_chains"
+  },
+  {
+    "type": "npc",
     "id": "rc_npc",
 	"gender": "male",
     "name_suffix": "member of Rusted Chains",

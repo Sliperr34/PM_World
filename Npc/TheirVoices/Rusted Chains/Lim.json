@@ -2,17 +2,17 @@
     {
         "type": "talk_topic",
         "id": "TALK_LIM_RC",
-        "dynamic_line": "*Twitch convulsively and back away*",
+        "dynamic_line": "[Twitch convulsively and back away]",
         "responses": [
           { "text": "*…* ", "topic": "TALK_DONE"},
-          {"text": "Do you need help?", "topic": "TALK_LIM_RC"}
+          {"text": "Do you need help?", "topic": "TALK_LIM_RC1"}
         ]
       },
 
     {
     "type" : "talk_topic",
-    "id" :"TALK_LIM_RC",
-    "dynamic_line": "No, why do you think I need help? *right eye twitches*",
+    "id" :"TALK_LIM_RC1",
+    "dynamic_line": "No, why do you think I need help? [right eye twitches]",
     "responses":[
      {"text" : "I guess it seemed to me", "topic": "TALK_DONE"},
      {"text" : "I noticed that you were staring at me", "topic":"TALK_LIM_CONTINUE"},
@@ -22,7 +22,7 @@
 {
     "type" : "talk_topic",
     "id" :"TALK_LIM_CONTINUE",
-    "dynamic_line": "NO! It's you looking at me!!. Lim thinks (cracks his wrists)",
+    "dynamic_line": "NO! It's you looking at me!!. Lim thinks [cracks his wrists]",
     "responses":[
      {"text" : "Then share what you think about", "topic": "QUEST_LIM"},
      {"text" : "Once you think about it, I won’t distract you", "topic":"TALK_DONE"},
@@ -44,7 +44,7 @@
 {
     "type" : "talk_topic",
     "id" :"QUEST_LIM_CONTINUE",
-    "dynamic_line": "No wait!! He just needs help. Lim wants something to hit him hard *the corners of his lips tremble*",
+    "dynamic_line": "No wait!! He just needs help. Lim wants something to hit him hard [the corners of his lips tremble]",
     "responses":[
      {"text" : "Let us suppose. I'm listening to you", "topic":"DETAILS_QUEST_LIM"},
      {"text" : "Fuck, leave me alone, you fucking junkie. Go find your own dose!", "topic": "EVENT_FIGHT_LIM"},
@@ -55,7 +55,7 @@
 {
     "type" : "talk_topic",
     "id" :"DETAILS_QUEST_LIM",
-    "dynamic_line": "Lim is very tired. Who needs (name of the drug). Can you get it for me?",
+    "dynamic_line": "Lim is very tired. Who needs drugs. Can you get it for me?",
     "responses":[
      {"text" : "Well, I'll try", "topic": "GRATITUDE_LIM"},
      {"text" : "Is it possible without him? You might die so soon", "topic":"HISTORY_LIM_RC_5"},
@@ -85,7 +85,7 @@
 {
     "type" : "talk_topic",
     "id" :"HISTORY_LIM_RC",
-    "dynamic_line": "Lim cannot live without drugs. Lim lost his daughter. But the daughter was not lost, she was always nearby. Lim knows it's not her. Only when Lim accepts does she leave. (whispers) To be honest, he’s scared, she constantly says terrible things",
+    "dynamic_line": "Lim cannot live without drugs. Lim lost his daughter. But the daughter was not lost, she was always nearby. Lim knows it's not her. Only when Lim accepts does she leave. [whispers] To be honest, he’s scared, she constantly says terrible things",
     "responses":[
      {"text" : "How did it happen that you lost your daughter?", "topic": "HISTORY_CONTINUE_LIM"},
      {"text" : "I see... *move away slowly*", "topic":"TALK_DONE"},
@@ -109,7 +109,7 @@
 {
     "type" : "talk_topic",
     "id" :"QUEST_LIM_DAUGHTER",
-    "dynamic_line": "Will you really help Lim? *eyes become clearer* If you suddenly find my daughter, I will give everything I have!",
+    "dynamic_line": "Will you really help Lim? [eyes become clearer] If you suddenly find my daughter, I will give everything I have!",
     "responses":[
      {"text" : "Well, if I find out anything, I’ll definitely tell you.", "topic": "ACCEPT_QUEST_LIM_DAUGHTER"},
      {"text" : "Yes, she’s already dead anyway, why bother? And stop using drugs already, you won’t get her back.", "topic":"EVENT_FIGHT_LIM"},
@@ -132,7 +132,7 @@
 {
     "type" : "talk_topic",
     "id" :"SEIZURE_LIM",
-    "dynamic_line": "What is SHE saying!? She tells Lim that... No!! Lim won't do this No!! Stop it (starts banging his head on the table). LIM WILL NEVER DO THIS!!!",
+    "dynamic_line": "What is SHE saying!? She tells Lim that... No!! Lim won't do this No!! Stop it [starts banging his head on the table]. LIM WILL NEVER DO THIS!!!",
     "responses":[
      {"text" : "-*Stop him* STOP!! Stop it, calm down...", "topic": "TALK_LIM_RC"},
      {"text" : "Keep out", "topic":"DEAD_LIM"}
@@ -142,26 +142,11 @@
 {
     "type" : "talk_topic",
     "id" :"DEAD_LIM",
-    "dynamic_line": "With all his strength, he pierces his neck with the tip of a broken bottle, thereby tearing the carotid artery. He fell like a rag doll. Blood flows from the artery like a fountain and splashes you. After a short period of time, Lim dies",
+    "dynamic_line": "[With all his strength, he pierces his neck with the tip of a broken bottle, thereby tearing the carotid artery. He fell like a rag doll. Blood flows from the artery like a fountain and splashes you. After a short period of time, Lim dies]",
     "responses":[
-     {"text" : "Search your pockets while no one is looking", "topic": "THEFT_LIM"},
      {"text" : "Leave", "topic":"TALK_DONE"},
      {"text" : "Get out of here as soon as possible", "topic": "TALK_DONE"}
      
     ]
-
-},
-{
-    "type" : "talk_topic",
-    "id" :"THEFT_LIM",
-    "dynamic_line": "*In your chest pocket you can find a photo of your daughter. Also, continuing to rummage through your pockets, you discover (Loot))",
-    "responses":[
-     {"text" : "Take it all for yourself", "topic": "(TAKE_LOOT)"},
-     {"text" : "Leave everything with him", "topic":"TALK_DONE"}
-    ]
-
 }
-
-    
- 
 ]
