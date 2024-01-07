@@ -37,7 +37,7 @@
 		{ "class": "rc_npc_bartender", "x": 16, "y": 2 },
 		{ "class": "rc_npc_bouncer", "x": 20, "y": 12 },
 		{ "class": "rc_npc", "x": 7, "y": 7 },
-		{ "class": "rc_npc", "x": 14, "y": 4 },
+		{ "class": "rc_duglas", "x": 14, "y": 4 },
 		{ "class": "rc_npc", "x": 8, "y": 13 }
 		],
 			"terrain": {
