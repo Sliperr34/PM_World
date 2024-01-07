@@ -46,5 +46,6 @@
     "responses" :[
         {"text" : "Calm down. Why are you so nervous?", "topic" : "FIGHT_DUGLAS"},
         {"text" : "Alright, i'm leaving", "topic" : "TALK_DONE"}
+    ]
 }
 ]
