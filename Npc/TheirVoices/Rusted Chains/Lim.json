@@ -142,7 +142,7 @@
 {
     "type" : "talk_topic",
     "id" :"DEAD_LIM",
-    "dynamic_line": "With all his strength, he pierces his neck with the tip of a broken bottle, thereby tearing the carotid artery. He fell like a rag doll. Blood flows from the artery like a fountain and splashes you. After a short period of time, Lim dies",
+    "dynamic_line": "*With all his strength, he pierces his neck with the tip of a broken bottle, thereby tearing the carotid artery. He fell like a rag doll. Blood flows from the artery like a fountain and splashes you. After a short period of time, Lim dies*",
     "responses":[
      {"text" : "Search your pockets while no one is looking", "topic": "THEFT_LIM"},
      {"text" : "Leave", "topic":"TALK_DONE"},
