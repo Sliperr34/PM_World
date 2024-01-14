@@ -41,5 +41,40 @@
 		 { "distribution": [ {"item": "coke", "count-min":1,"count-max":3, "prob": 10}, {"item": "crack", "count-min":1,"count-max":5, "prob": 50},
 		 {"item": "meth", "count-min":1,"count-max":6, "prob": 55}, {"item": "pure_meth", "count-min":1,"count-max":3, "prob": 10}]},
  {"item": "pipe_glass","prob": 55}]
- }
+ },
+ {
+    "type": "item_group",
+    "id": "softdrinks_canned",
+    "subtype": "distribution",
+	"copy-from": "softdrinks_canned",
+	"extend": {
+    "entries": [
+      { "item": "wellcheers", "prob": 25 },
+      { "item": "cherry_wellcheers", "prob": 25 },
+      { "item": "grape_wellcheers", "prob": 25 }]}
+  },
+  {
+    "type": "item_group",
+    "id": "vending_drink_items",
+	"copy-from": "vending_drink_items",
+	"extend": {
+    "items": [
+      [ "wellcheers", 15 ],
+      [ "cherry_wellcheers", 15 ],
+      [ "grape_wellcheers", 15 ]
+    ]
+	}
+  },
+  {
+    "type": "item_group",
+    "id": "default_zombie_items_bags",
+    "subtype": "collection",
+	"copy-from": "default_zombie_items_bags",
+	"extend": {
+    "entries": [  
+		{"distribution": [
+      { "item": "wellcheers", "prob": 50 },
+      { "item": "cherry_wellcheers", "prob": 50},
+      { "item": "grape_wellcheers", "prob": 50 }]}]}
+	}
 ]

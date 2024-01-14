@@ -72,5 +72,90 @@
  { "u_spawn_npc": "lc_sci_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 },
 { "u_spawn_npc": "isao_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 },
 { "u_spawn_npc": "lc_guard_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 }]
-	}
+	},
+	{
+	"type": "effect_on_condition",
+ "id": "well_effect",
+"effect": [ { "u_add_morale": "morale_food_good", "bonus": 15,"max_bonus": 60,
+"duration": "5 minutes",
+"decay_start": "1 minutes" },
+{"u_message": "Your mood definetly improved!", "type": "good"} ]
+},
+{
+	"type": "effect_on_condition",
+ "id": "wellcherry_effect",
+"effect": [ { "u_cast_spell": { "id": "light_heal", "min_level": 3, "max_level": 10 } }, 
+{"u_message": "Your health definetly improved!","type": "good"} ]
+},
+{
+	"type": "effect_on_condition",
+ "id": "wellgrape_effect",
+"effect": [ { "u_cast_spell": { "id": "light_heal", "min_level": 1, "max_level": 4 } },
+{"u_add_morale": "morale_food_good", "bonus": 5,"max_bonus": 20,
+"duration": "5 minutes",
+"decay_start": "1 minutes" },
+{"u_message": "Your mood and health is slightly improved!","type": "good"} ]
+},
+{
+	"type": "effect_on_condition",
+ "id": "well_abduct",
+"effect": [ { "u_spawn_monster": "mon_wellcheers", "real_count": [ 2, 4 ],"min_radius": [ 5, 7 ],
+"max_radius": [ 11, 24 ]  },
+{"u_add_effect" : "sleep", "duration": "30 minutes" },
+{"u_message": "Ughhhhhh....","type": "bad", "popup": true} ]
+},
+{
+	"type": "effect_on_condition",
+	"id": "well_random",
+	"effect": {
+		"weighted_list_eocs": [
+			[ { "id": "well_hook_eff1", "effect": { "run_eocs": "well_effect" } }, { "const": 18 } ],
+			[
+			  {
+				"id": "well_hook_abd1",
+				"effect": [
+				  { "run_eocs": "well_abduct" }
+				]
+			  },
+			  { "const": 1 }
+			]
+			]
+  }
+},
+{
+	"type": "effect_on_condition",
+	"id": "wellcherry_random",
+	"effect": {
+		"weighted_list_eocs": [
+			[ { "id": "well_hook_eff2", "effect": { "run_eocs": "wellcherry_effect" } }, { "const": 18 } ],
+			[
+			  {
+				"id": "well_hook_abd2",
+				"effect": [
+				  { "run_eocs": "well_abduct" }
+				]
+			  },
+			  { "const": 1 }
+			]
+			]
+  }
+},
+{
+	"type": "effect_on_condition",
+	"id": "wellgrape_random",
+	"effect": {
+		"weighted_list_eocs": [
+			[ { "id": "well_hook_eff3", "effect": { "run_eocs": "wellgrape_effect" } }, { "const": 18 } ],
+			[
+			  {
+				"id": "well_hook_abd3",
+				"effect": [
+				  { "run_eocs": "well_abduct" }
+				]
+			  },
+			  { "const": 1 }
+			]
+			]
+  }
+}
   ]
