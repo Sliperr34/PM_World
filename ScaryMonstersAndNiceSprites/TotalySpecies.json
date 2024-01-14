@@ -11,5 +11,10 @@
     "type": "SPECIES",
     "id": "DISTORTIONS",
     "description": "a distortion"
+  },
+  {
+    "type": "SPECIES",
+    "id": "ABNO",
+    "description": "a abnormality"
   }
   ]

@@ -3,13 +3,13 @@
         "id": "mon_wellcheers",
         "type": "MONSTER",
         "name": { "str": "<color_green>Shrimp</color>" },
-        "description": "Peccatulum Irae is a dark scrawny figure whose entire body appears to be made up of rigid branch-like structures with glowing red cracks and flickering particles throughout. Two branches emerge from the front half of its body that split into what appear to be humanoid hands resting their fingertips on the ground. Its head has an elongated snout, almost like a beak, one large red eye, and two glowing antennae that twitch frequently.",
+        "description": "This grotesque creature has the shape of a human body but the head of a shrimp, the whole body is covered with orange chitin and approaching you it makes wave movements with its hands",
         "default_faction": "distortions",
         "bodytype": "human",
         "species": [ "DISTORTIONS" ],
         "volume": "58 L",
         "weight": "86 kg",
-        "hp": 325,
+        "hp": 348,
         "speed": 101,
         "material": [ "flesh", "chitin" ],
         "looks_like": "mon_zombie_fireman",
@@ -30,7 +30,7 @@
         "vision_night": 50,
         "harvest": "mutant_human",
         "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "PATH_AVOID_FIRE", "WARM", "ALWAYS_SEES_YOU", "CAN_OPEN_DOORS",
-                    "GRABS", "HAS_MIND", "SWIMS" ],
+                    "GRABS", "HAS_MIND", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
         "armor": { "electric": -3, "heat": -2, "bash": -2, "cut": 8, "stab": 2, "bullet": 0, "acid":10 }
       }
 ]
