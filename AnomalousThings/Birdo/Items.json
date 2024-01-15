@@ -1,3 +1,18 @@
 [
-    
+  {
+    "type": "GENERIC",
+    "id": "punishing_feather",
+    "symbol": "*",
+    "color": "white",
+    "name": { "str": "feather of Punishing Bird" },
+    "description": "A broken ceramic shard.  It is relatively heavy for its size and has a somewhat sharp edge, but it's too irregular to cut properly.",
+    "material": [ "cotton" ],
+    "flags": [ "TRADER_AVOID", "NO_SALVAGE" ],
+    "weight": "3 g",
+    "volume": "2 ml",
+    "longest_side": "8 cm",
+    "to_hit": { "grip": "bad", "length": "hand", "surface": "line", "balance": "clumsy" },
+    "melee_damage": { "stab": 2, "cut": 2 },
+    "weapon_category": [ "SHIVS" ]
+  }
 ]
