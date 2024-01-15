@@ -161,6 +161,6 @@
 	{
 		"type": "effect_on_condition",
 	 "id": "test_bird_spawn",
-	"effect": [ { "npc_spawn_monster": "mon_birb", "real_count": 1},{"u_message": "Worked","type": "bad", "popup": true} ]
+	"effect": [ { "u_spawn_monster": "mon_birb", "real_count": 1},{"u_message": "Worked","type": "bad", "popup": true} ]
 	}
   ]

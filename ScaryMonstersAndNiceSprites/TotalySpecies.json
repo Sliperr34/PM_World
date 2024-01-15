@@ -1,5 +1,5 @@
 [
-{
+  {
     "type": "SPECIES",
     "id": "PM_TEST",
     "description": "test",
@@ -14,7 +14,7 @@
   },
   {
     "type": "SPECIES",
-    "id": "ABNO",
+    "id": "ABNOS",
     "description": "a abnormality"
   }
-  ]
+]

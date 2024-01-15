@@ -1,3 +1,18 @@
 [
-    
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "execution_bird",
+    "cooldown": 1,
+    "move_cost": 120,
+    "damage_max_instance": [ { "damage_type": "stab", "amount": 999, "armor_multiplier": 0.0 } ],
+    "dodgeable": false,
+    "self_effects_onhit": [ { "id": "execution" } ],
+    "hit_dmg_u": "%1$s use his beak and pierce your %2$s, covering it in red liquid!",
+    "hit_dmg_npc": "%1$s use his beak and pierce <npcname>, covering them in red liquid!",
+    "miss_msg_u": "%1$s use his beak and tries to pierce at your %2$s, but you dodge!",
+    "miss_msg_npc": "%1$s use his beak and tries to pierce at <npcname>, but they dodge!",
+    "no_dmg_msg_u": "%1$s use his beak and try to pierce your %2$s, covering the armor in red liquid!",
+    "no_dmg_msg_npc": "%1$s use his beak and try to pierce <npcname>, covering their armor in red liquid!"
+  }
 ]

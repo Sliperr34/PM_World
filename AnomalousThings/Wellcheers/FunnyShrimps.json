@@ -24,6 +24,7 @@
         "melee_damage": [ { "damage_type": "bash", "amount": 6 } ],
         "special_attacks": [ { "id": "grab" } ],
         "dodge": 0,
+        "grab_strength": 4,
         "weakpoint_sets": [ "wps_humanoid_body" ],
         "families": [ "prof_wp_distortions0", "prof_wp_distortions1" ],
         "vision_day": 50,

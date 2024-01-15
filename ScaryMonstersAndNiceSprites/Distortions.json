@@ -29,7 +29,6 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "mutant_human",
-    "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_FALL", "BASHES", "PATH_AVOID_FIRE", "SWARMS", "WARM", "NO_BREATHE" ],
     "armor": { "electric": 3, "heat": 50, "bash": 7, "cut": 11, "stab": 15, "bullet": 21, "acid":3 }
   },
