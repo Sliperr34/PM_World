@@ -2,17 +2,38 @@
   {
     "type": "GENERIC",
     "id": "punishing_feather",
-    "symbol": "*",
+    "symbol": "|",
     "color": "white",
     "name": { "str": "feather of Punishing Bird" },
-    "description": "A broken ceramic shard.  It is relatively heavy for its size and has a somewhat sharp edge, but it's too irregular to cut properly.",
+    "description": "The feather of a Punishing Bird. It's small but quite sharp enough to cut yourself. Holding it in your hands, you feel the weight of your sins",
     "material": [ "cotton" ],
     "flags": [ "TRADER_AVOID", "NO_SALVAGE" ],
-    "weight": "3 g",
+    "weight": "666 g",
     "volume": "2 ml",
-    "longest_side": "8 cm",
-    "to_hit": { "grip": "bad", "length": "hand", "surface": "line", "balance": "clumsy" },
-    "melee_damage": { "stab": 2, "cut": 2 },
+    "longest_side": "6 cm",
+    "to_hit": { "grip": "none", "length": "hand", "surface": "line", "balance": "uneven" },
+    "melee_damage": { "stab": 2, "cut": 3 },
+    "thrown_damage": [ { "damage_type": "stab", "amount": 2 }, { "damage_type": "cut", "amount": 3 } ],
+    "weapon_category": [ "SHIVS" ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "punishing_red_feather",
+    "symbol": "|",
+    "color": "red",
+    "name": { "str": "feather of Punishing Bird" },
+    "description": "The red feather of a Punishing Bird. It's small but realy sharp enough to cut yourself. Holding it in your hands, you feel the weight of other people's sins",
+    "material": [ "cotton" ],
+    "flags": [ "TRADER_AVOID", "NO_SALVAGE" ],
+    "weight": "999 g",
+    "volume": "2 ml",
+    "longest_side": "6 cm",
+    "to_hit": { "grip": "none", "length": "hand", "surface": "line", "balance": "neutral" },
+    "melee_damage": { "stab": 2, "cut": 5 },
+    "thrown_damage": [
+      { "damage_type": "stab", "amount": 3, "armor_penetration": 3 },
+      { "damage_type": "cut", "amount": 6, "armor_penetration": 6 }
+    ],
     "weapon_category": [ "SHIVS" ]
   }
 ]
