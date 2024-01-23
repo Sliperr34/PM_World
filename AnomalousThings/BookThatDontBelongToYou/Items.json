@@ -1,0 +1,13 @@
+[
+  {
+    "abstract": "flesh_book",
+    "type": "BOOK",
+    "name": { "str": "Skin Prophecy" },
+    "description": "Pinkish book, which seems to be made from human remains, specially skin, bones and other tissues. The open book has bloody marks and contain runic symbols on the pages.",
+    "symbol": "?",
+    "looks_like": "story_book",
+    "material": [ "flesh" ],
+    "color": "red",
+    "use_action": [ { "type": "cast_spell", "spell_id": "light_heal", "no_fail": true, "level": 7, "need_wielding": true } ]
+  }
+]

@@ -1,5 +1,5 @@
 [
-{
+  {
     "id": "alpha_coat",
     "type": "ARMOR",
     "name": { "str": "Alpha lab coat" },
@@ -13,12 +13,12 @@
     "symbol": "[",
     "looks_like": "coat_lab",
     "color": "white",
-	"environmental_protection": 5,
+    "environmental_protection": 5,
     "armor": [
       { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 2, 6 ] },
       { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 95 },
-      { "covers": [ "arm_r" ], "coverage": 100, "encumbrance": [ 2,2 ]},
-		{ "covers": [ "arm_l" ], "coverage": 100, "encumbrance": [ 2, 3 ] }	
+      { "covers": [ "arm_r" ], "coverage": 100, "encumbrance": [ 2, 2 ] },
+      { "covers": [ "arm_l" ], "coverage": 100, "encumbrance": [ 2, 3 ] }
     ],
     "pocket_data": [
       {
@@ -26,7 +26,7 @@
         "max_contains_volume": "1600 ml",
         "max_contains_weight": "3 kg",
         "max_item_length": "21 cm",
-		"description": "Right side pocket",
+        "description": "Right side pocket",
         "moves": 80
       },
       {
@@ -34,15 +34,15 @@
         "max_contains_volume": "1600 ml",
         "max_contains_weight": "3 kg",
         "max_item_length": "21 cm",
-		"description": "Left side pocket",
+        "description": "Left side pocket",
         "moves": 80
       },
-	  {
+      {
         "pocket_type": "CONTAINER",
         "max_contains_volume": "1200 ml",
         "max_contains_weight": "1300 mg",
         "max_item_length": "11 cm",
-		"description": "Inner pocket",
+        "description": "Inner pocket",
         "moves": 100
       },
       {
@@ -50,15 +50,15 @@
         "max_contains_volume": "900 ml",
         "max_contains_weight": "1 kg",
         "max_item_length": "13 cm",
-		"description": "Pocket protector",
+        "description": "Pocket protector",
         "moves": 75
       },
-	  {
+      {
         "pocket_type": "CONTAINER",
         "max_contains_volume": "300 ml",
         "max_contains_weight": "150 g",
         "max_item_length": "8 cm",
-		"description": "Left upper sleeve pocket",
+        "description": "Left upper sleeve pocket",
         "moves": 90
       }
     ],
@@ -67,48 +67,48 @@
     "flags": [ "VARSIZE", "POCKETS", "OUTER" ]
   },
   {
-  "id": "zw_jacket",
-  "type": "ARMOR",
-  "name": { "str": "Blue jacket" },
-  "description": "Blue jacket with two yellow stripes at the bottom. Unusually durable.\n\nZwei Association is written on the inner part of jacket.",
-  "weight": "2850 g",
-  "volume": "3780 ml",
-  "price_postapoc": "250 USD",
-  "material": ["pm_leather"],
-  "symbol": "[",
-  "looks_like": "jacket_jean",
-  "to_hit": -2,
-  "armor": [
-	{"covers": ["torso"], "coverage": 100, "encumbrance": [7, 12] },
-    { "covers": ["arm_l", "arm_r"], "coverage": 100, "encumbrance": [7, 12] }
-  ],
-  "pocket_data": [
-    {
-      "pocket_type": "CONTAINER",
-      "max_contains_volume": "1500 ml",
-      "max_contains_weight": "3 kg",
-      "max_item_length": "14 cm",
-	  "description": "Side pocket",
-      "moves": 75
-    },
-	{
-      "pocket_type": "CONTAINER",
-      "max_contains_volume": "1500 ml",
-      "max_contains_weight": "3 kg",
-      "max_item_length": "14 cm",
-	  "description": "Side pocket",
-      "moves": 75
-    }
-  ],
-  "warmth": 18,
-  "environmental_protection": 4,
-  "material_thickness": 1.7,
-  "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY", "RAINPROOF" ]
-},
-{
+    "id": "zw_jacket",
+    "type": "ARMOR",
+    "name": { "str": "Zwei jacket" },
+    "description": "Blue jacket with two yellow stripes at the bottom. Unusually durable.\n\nZwei Association is written on the inner part of jacket.",
+    "weight": "2850 g",
+    "volume": "3780 ml",
+    "price_postapoc": "250 USD",
+    "material": [ "pm_leather" ],
+    "symbol": "[",
+    "looks_like": "jacket_jean",
+    "to_hit": -2,
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 7, 12 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 12 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "14 cm",
+        "description": "Side pocket",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "14 cm",
+        "description": "Side pocket",
+        "moves": 75
+      }
+    ],
+    "warmth": 18,
+    "environmental_protection": 4,
+    "material_thickness": 1.7,
+    "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY", "RAINPROOF" ]
+  },
+  {
     "id": "zw_coat",
     "type": "ARMOR",
-    "name": { "str": "Blue coat" },
+    "name": { "str": "Zwei coat" },
     "description": "A thick full-length coat. Unusually durable.\n\nZwei Association is written on the inner part of coat.",
     "weight": "3155 g",
     "volume": "7 L",
@@ -118,7 +118,7 @@
     "symbol": "[",
     "looks_like": "duster",
     "color": "brown",
-     "armor": [
+    "armor": [
       { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 9, 13 ] },
       { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 7 ] },
       {
@@ -140,7 +140,7 @@
         "max_contains_volume": "1500 ml",
         "max_contains_weight": "4 kg",
         "max_item_length": "22 cm",
-		"description": "Side pocket",
+        "description": "Side pocket",
         "moves": 85
       },
       {
@@ -148,7 +148,7 @@
         "max_contains_volume": "1500 ml",
         "max_contains_weight": "4 kg",
         "max_item_length": "22 cm",
-		"description": "Side pocket",
+        "description": "Side pocket",
         "moves": 85
       },
       {
@@ -156,7 +156,7 @@
         "max_contains_volume": "800 ml",
         "max_contains_weight": "1 kg",
         "max_item_length": "13 cm",
-		"description": "Inner pocket",
+        "description": "Inner pocket",
         "moves": 120
       }
     ],
@@ -180,7 +180,7 @@
     "looks_like": "armguard_hard",
     "color": "dark_gray",
     "material_thickness": 3,
-	"sided": true,
+    "sided": true,
     "flags": [ "WATER_FRIENDLY", "BELTED", "STURDY" ],
     "armor": [
       {
@@ -209,7 +209,7 @@
     "looks_like": "armguard_hard",
     "color": "dark_gray",
     "material_thickness": 1.5,
-	"sided": true,
+    "sided": true,
     "flags": [ "WATER_FRIENDLY", "BELTED", "STURDY" ],
     "armor": [
       {
@@ -238,7 +238,7 @@
     "looks_like": "armguard_hard",
     "color": "dark_gray",
     "material_thickness": 3.5,
-	"sided": true,
+    "sided": true,
     "flags": [ "WATER_FRIENDLY", "BELTED", "BLOCK_WHILE_WORN", "STURDY" ],
     "armor": [
       {
@@ -253,31 +253,33 @@
     ]
   },
   {
-	  "id": "pm_shirt_yel",
-	  "type": "ARMOR",
-	  "name": { "str": "yellow shirt", "str_pl": "yellow shirts" },
-	  "description": "A yellow button-down shirt with long sleeves.  Looks professional!",
-	  "copy-from": "dress_shirt",
-	  "material": [ "pm_cotton" ]
+    "id": "pm_shirt_yel",
+    "type": "ARMOR",
+    "name": { "str": "yellow shirt", "str_pl": "yellow shirts" },
+    "description": "A yellow button-down shirt with long sleeves.  Looks professional!",
+    "copy-from": "dress_shirt",
+    "looks_like": "pm_shirt_yel",
+    "material": [ "pm_cotton" ]
   },
-   {
-	  "id": "pm_shirt",
-	  "type": "ARMOR",
-	  "name": { "str": "white shirt", "str_pl": "white shirts" },
-	  "description": "A white button-down shirt with long sleeves.  Looks professional!",
-	  "copy-from": "dress_shirt",
-	  "material": [ "pm_cotton" ]
+  {
+    "id": "pm_shirt",
+    "type": "ARMOR",
+    "name": { "str": "white shirt", "str_pl": "white shirts" },
+    "description": "A white button-down shirt with long sleeves.  Looks professional!",
+    "copy-from": "dress_shirt",
+    "material": [ "pm_cotton" ]
   },
-   {
-	  "id": "kr_shirt",
-	  "type": "ARMOR",
-	  "name": { "str": "black silk shirt", "str_pl": "black silk shirts" },
-	  "description": "A black button-down silk shirt with long sleeves.  Looks so slick and presentable!",
-	  "copy-from": "dress_shirt",
-	  "price_postapoc": "350USD",
-	  "extend": { "flags": [ "SUPER_FANCY" ]},
-	  "delete": { "flags": [ "FANCY" ] },
-	  "material": [ "b_silk" ]
+  {
+    "id": "kr_shirt",
+    "type": "ARMOR",
+    "name": { "str": "black silk shirt", "str_pl": "black silk shirts" },
+    "description": "A black button-down silk shirt with long sleeves.  Looks so slick and presentable!",
+    "copy-from": "dress_shirt",
+    "looks_like": "kr_shirt",
+    "price_postapoc": "350USD",
+    "extend": { "flags": [ "SUPER_FANCY" ] },
+    "delete": { "flags": [ "FANCY" ] },
+    "material": [ "b_silk" ]
   },
   {
     "id": "kr_yukata",
@@ -310,16 +312,16 @@
     "flags": [ "VARSIZE", "SUPER_FANCY", "BULLET_IMMUNE" ]
   },
   {
-	  "id": "pm_gloves",
-	  "type": "ARMOR",
-	  "name": { "str": "pair of sturdy leather gloves", "str_pl": "pairs of sturdy leather gloves" },
-	  "description": "A thin pair of black leather gloves. Unusually sturdy.",
-	  "copy-from": "gloves_leather",
-	  "material": [ "pm_leather" ],
-	  "material_thickness": 0.7,
-	  "extend": { "flags": [ "STURDY" ]}
+    "id": "pm_gloves",
+    "type": "ARMOR",
+    "name": { "str": "pair of sturdy leather gloves", "str_pl": "pairs of sturdy leather gloves" },
+    "description": "A thin pair of black leather gloves. Unusually sturdy.",
+    "copy-from": "gloves_leather",
+    "material": [ "pm_leather" ],
+    "material_thickness": 0.7,
+    "extend": { "flags": [ "STURDY" ] }
   },
-    {
+  {
     "id": "pm_boots",
     "type": "ARMOR",
     "name": { "str": "pair of sturdy boots", "str_pl": "pairs of sturdy boots" },
@@ -365,306 +367,224 @@
     "melee_damage": { "bash": 2 }
   },
   {
-  "id": "pm_tie_necktie",
-  "type": "ARMOR",
-  "name": {
-    "str": "black necktie"
-  },
-  "description": "An ordinary black necktie.  Knowing how to properly tie it takes some practice, but it's an important skill to learn.  Clip-ons are for children.",
-  "weight": "15 g",
-  "volume": "25 ml",
-  "price": 1000,
-  "price_postapoc": 10,
-  "material": [
-    "pm_cotton"
-  ],
-  "symbol": "[",
-  "color": "black",
-  "flags": [
-    "FANCY"
-  ]
-},
-{
-  "id": "pm_trouses",
-  "type": "ARMOR",
-  "name": {
-    "str_sp": "black trouses"
-  },
-  "description": "A pair of black trouses. Looks professional!",
-  "weight": "421 g",
-  "volume": "2 L",
-  "price": 4900,
-  "price_postapoc": 100,
-  "to_hit": 1,
-  "material": [
-    "pm_cotton"
-  ],
-  "symbol": "[",
-  "looks_like": "pants",
-  "color": "black",
-  "pocket_data": [
-    {
-      "pocket_type": "CONTAINER",
-      "max_contains_volume": "750 ml",
-      "max_contains_weight": "2 kg",
-      "max_item_length": "11 cm",
-      "moves": 90
-    },
-    {
-      "pocket_type": "CONTAINER",
-      "max_contains_volume": "750 ml",
-      "max_contains_weight": "2 kg",
-      "max_item_length": "11 cm",
-      "moves": 90
-    }
-  ],
-  "warmth": 8,
-  "material_thickness": 0.2,
-  "flags": [
-    "VARSIZE",
-    "POCKETS",
-	"FANCY"
-  ],
-  "armor": [
-    {
-      "encumbrance": [
-        5,
-        7
-      ],
-      "coverage": 100,
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ]
-    }
-  ]
-},
-{
-  "id": "kr_trouses",
-  "type": "ARMOR",
-  "name": {
-    "str_sp": "black trouses"
-  },
-  "description": "A pair of black trouses. Looks professional! Unusualy sturdy",
-  "weight": "421 g",
-  "volume": "2 L",
-  "price": 4900,
-  "price_postapoc": 100,
-  "to_hit": 1,
-  "material": [
-    "b_silk"
-  ],
-  "symbol": "[",
-  "looks_like": "pants",
-  "color": "black",
-  "pocket_data": [
-    {
-      "pocket_type": "CONTAINER",
-      "max_contains_volume": "750 ml",
-      "max_contains_weight": "2 kg",
-      "max_item_length": "11 cm",
-      "moves": 90
-    },
-    {
-      "pocket_type": "CONTAINER",
-      "max_contains_volume": "750 ml",
-      "max_contains_weight": "2 kg",
-      "max_item_length": "11 cm",
-      "moves": 90
-    }
-  ],
-  "warmth": 8,
-  "material_thickness": 0.2,
-  "flags": [
-    "VARSIZE",
-    "POCKETS",
-	"STURDY",
-	"SUPER_FANCY"
-  ],
-  "armor": [
-    {
-      "encumbrance": [
-        5,
-        7
-      ],
-      "coverage": 100,
-      "covers": [
-        "leg_l",
-        "leg_r"
-      ]
-    }
-  ]
-},
-	{
-	  "id": "kr_suit",
-	  "type": "ARMOR",
-	  "name": { "str": "Black suit", "str_pl": "Black suits" },
-	  "description": "A full-body black cotton suit with silk padding. Looks impresive and expensive ",
-	  "copy-from": "suit",
-	  "looks_like": "suit",
-	  "price_postapoc": "1500 USD",
-	  "extend": { "flags": [ "SUPER_FANCY", "STURDY" ]},
-	  "delete": { "flags": [ "FANCY" ] },
-	  "material": [ "b_silk", "pm_cotton" ]
+    "id": "pm_tie_necktie",
+    "type": "ARMOR",
+    "name": { "str": "black necktie" },
+    "description": "An ordinary black necktie.  Knowing how to properly tie it takes some practice, but it's an important skill to learn.  Clip-ons are for children.",
+    "weight": "15 g",
+    "volume": "25 ml",
+    "price": 1000,
+    "price_postapoc": 10,
+    "material": [ "pm_cotton" ],
+    "symbol": "[",
+    "color": "black",
+    "flags": [ "FANCY" ]
   },
   {
-	  "id": "kr_blazer",
-	  "type": "ARMOR",
-	  "name": { "str": "Black blazer", "str_pl": "Black blazers" },
-	  "description": "A black blazer with silk padding. Looks impresive and expensive ",
-	  "copy-from": "blazer",
-	  "looks_like": "blazer",
-	  "price_postapoc": "350 USD",
-	  "extend": { "flags": [ "SUPER_FANCY", "STURDY" ]},
-	  "delete": { "flags": [ "FANCY" ] },
-	  "material": [ "b_silk", "pm_cotton" ]
+    "id": "pm_trouses",
+    "type": "ARMOR",
+    "name": { "str_sp": "black trouses" },
+    "description": "A pair of black trouses. Looks professional!",
+    "weight": "421 g",
+    "volume": "2 L",
+    "price": 4900,
+    "price_postapoc": 100,
+    "to_hit": 1,
+    "material": [ "pm_cotton" ],
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "black",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "11 cm",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "11 cm",
+        "moves": 90
+      }
+    ],
+    "warmth": 8,
+    "material_thickness": 0.2,
+    "flags": [ "VARSIZE", "POCKETS", "FANCY" ],
+    "armor": [ { "encumbrance": [ 5, 7 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
   {
-	  "id": "pm_blazer",
-	  "type": "ARMOR",
-	  "name": { "str": "blazer", "str_pl": "blazers" },
-	  "description": "A black cotton blazer. ",
-	  "copy-from": "blazer",
-	  "looks_like": "blazer",
-	  "price_postapoc": "10 USD",
-	  "material": [ "pm_cotton" ]
+    "id": "kr_trouses",
+    "type": "ARMOR",
+    "name": { "str_sp": "black trouses" },
+    "description": "A pair of black trouses. Looks professional! Unusualy sturdy",
+    "weight": "421 g",
+    "volume": "2 L",
+    "price": 4900,
+    "price_postapoc": 100,
+    "to_hit": 1,
+    "material": [ "b_silk" ],
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "black",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "11 cm",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "11 cm",
+        "moves": 90
+      }
+    ],
+    "warmth": 8,
+    "material_thickness": 0.2,
+    "flags": [ "VARSIZE", "POCKETS", "STURDY", "SUPER_FANCY" ],
+    "armor": [ { "encumbrance": [ 5, 7 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
   {
-	  "id": "pm_labcoat",
-	  "type": "ARMOR",
-	  "name": { "str": "lab coat", "str_pl": "lab coats" },
-	  "copy-from": "coat_lab",
-	  "looks_like": "coat_lab",
-	  "material": [ "pm_cotton" ]
+    "id": "kr_suit",
+    "type": "ARMOR",
+    "name": { "str": "Black suit", "str_pl": "Black suits" },
+    "description": "A full-body black cotton suit with silk padding. Looks impresive and expensive ",
+    "copy-from": "suit",
+    "looks_like": "suit",
+    "price_postapoc": "1500 USD",
+    "extend": { "flags": [ "SUPER_FANCY", "STURDY" ] },
+    "delete": { "flags": [ "FANCY" ] },
+    "material": [ "b_silk", "pm_cotton" ]
   },
   {
-	  "id": "lc_labcoat",
-	  "type": "ARMOR",
-	  "name": { "str": "lab coat", "str_pl": "lab coats" },
-	  "copy-from": "coat_lab",
-	  "looks_like": "coat_lab",
-	  "material": [ "l_cotton" ]
+    "id": "kr_blazer",
+    "type": "ARMOR",
+    "name": { "str": "Black blazer", "str_pl": "Black blazers" },
+    "description": "A black blazer with silk padding. Looks impresive and expensive ",
+    "copy-from": "blazer",
+    "looks_like": "blazer",
+    "price_postapoc": "350 USD",
+    "extend": { "flags": [ "SUPER_FANCY", "STURDY" ] },
+    "delete": { "flags": [ "FANCY" ] },
+    "material": [ "b_silk", "pm_cotton" ]
   },
   {
-	  "id": "lc_trouses",
-	  "type": "ARMOR",
-	  "name": { "str": "brown trouses", "str_pl": "brown trouses" },
-	  "description": "A pair of brown trouses. Looks professional!",
-	  "copy-from": "pm_trouses",
-	  "material": [ "l_cotton" ]
+    "id": "pm_blazer",
+    "type": "ARMOR",
+    "name": { "str": "blazer", "str_pl": "blazers" },
+    "description": "A black cotton blazer. ",
+    "copy-from": "blazer",
+    "looks_like": "blazer",
+    "price_postapoc": "10 USD",
+    "material": [ "pm_cotton" ]
   },
   {
-  "id": "lc_vest",
-  "type": "ARMOR",
-  "category": "armor",
-  "name": {
-    "str": "LC guard vest"
+    "id": "pm_labcoat",
+    "type": "ARMOR",
+    "name": { "str": "lab coat", "str_pl": "lab coats" },
+    "copy-from": "coat_lab",
+    "looks_like": "coat_lab",
+    "material": [ "pm_cotton" ]
   },
-  "description": "A lightweight polymer vest",
-  "weight": "3260 g",
-  "volume": "5 L",
-  "price": 35000,
-  "price_postapoc": 3250,
-  "to_hit": -3,
-  "material": [
-    "b_polymer",
-    "l_cotton"
-  ],
-  "symbol": "[",
-  "looks_like": "vest_leather",
-  "color": "light_gray",
-  "warmth": 15,
-  "material_thickness": 4,
-  "flags": [
-    "STURDY"
-  ],
-  "armor": [
-    {
-      "material": [
-        {
-          "type": "l_cotton",
-          "covered_by_mat": 100,
-          "thickness": 0.5
-        },
-        {
-          "type": "b_polymer",
-          "covered_by_mat": 95,
-          "thickness": 3.3,
-          "ignore_sheet_thickness": true
-        }
-      ],
-      "encumbrance": 3,
-      "coverage": 94,
-      "cover_vitals": 70,
-      "covers": [
-        "torso"
-      ],
-      "specifically_covers": [
-        "torso_upper"
-      ]
-    },
-    {
-      "material": [
-        {
-          "type": "l_cotton",
-          "covered_by_mat": 100,
-          "thickness": 0.5
-        },
-        {
-          "type": "b_polymer",
-          "covered_by_mat": 95,
-          "thickness": 3.3,
-          "ignore_sheet_thickness": true
-        }
-      ],
-      "encumbrance": 0,
-      "coverage": 85,
-      "cover_vitals": 60,
-      "covers": [
-        "torso"
-      ],
-      "specifically_covers": [
-        "torso_lower"
-      ]
-    }
-  ],
-  "melee_damage": {
-    "bash": 6
+  {
+    "id": "lc_labcoat",
+    "type": "ARMOR",
+    "name": { "str": "lab coat", "str_pl": "lab coats" },
+    "copy-from": "coat_lab",
+    "looks_like": "coat_lab",
+    "material": [ "l_cotton" ]
+  },
+  {
+    "id": "lc_trouses",
+    "type": "ARMOR",
+    "name": { "str": "brown trouses", "str_pl": "brown trouses" },
+    "description": "A pair of brown trouses. Looks professional!",
+    "copy-from": "pm_trouses",
+    "material": [ "l_cotton" ]
+  },
+  {
+    "id": "lc_vest",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "LC guard vest" },
+    "description": "A lightweight polymer vest",
+    "weight": "3260 g",
+    "volume": "5 L",
+    "price": 35000,
+    "price_postapoc": 3250,
+    "to_hit": -3,
+    "material": [ "b_polymer", "l_cotton" ],
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "light_gray",
+    "warmth": 15,
+    "material_thickness": 4,
+    "flags": [ "STURDY" ],
+    "armor": [
+      {
+        "material": [
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "b_polymer", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
+        ],
+        "encumbrance": 3,
+        "coverage": 94,
+        "cover_vitals": 70,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ]
+      },
+      {
+        "material": [
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "b_polymer", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
+        ],
+        "encumbrance": 0,
+        "coverage": 85,
+        "cover_vitals": 60,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ]
+      }
+    ],
+    "melee_damage": { "bash": 6 }
+  },
+  {
+    "id": "cuirass_lightplate_test",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "cuirass test PM", "str_pl": "cuirasses" },
+    "description": "A steel breastplate, and a vital part of plate armor.  Even as full armor went into decline, cuirasses remained in use among cavalry in Europe.",
+    "weight": "4200 g",
+    "volume": "6 L",
+    "price": 20000,
+    "price_postapoc": 4000,
+    "to_hit": -1,
+    "material": [ "s_steel", "leather" ],
+    "symbol": "[",
+    "looks_like": "chestguard_hard",
+    "color": "light_gray",
+    "warmth": 20,
+    "longest_side": "60 cm",
+    "material_thickness": 4,
+    "flags": [ "VARSIZE", "OUTER", "STURDY" ],
+    "armor": [
+      { "encumbrance": 20, "coverage": 95, "covers": [ "torso" ] },
+      {
+        "encumbrance": 4,
+        "coverage": 95,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+      },
+      {
+        "encumbrance": 4,
+        "coverage": 95,
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
+      }
+    ]
   }
-},
-{
-  "id": "cuirass_lightplate_test",
-  "type": "ARMOR",
-  "category": "armor",
-  "name": { "str": "cuirass test PM", "str_pl": "cuirasses" },
-  "description": "A steel breastplate, and a vital part of plate armor.  Even as full armor went into decline, cuirasses remained in use among cavalry in Europe.",
-  "weight": "4200 g",
-  "volume": "6 L",
-  "price": 20000,
-  "price_postapoc": 4000,
-  "to_hit": -1,
-  "material": [ "s_steel", "leather" ],
-  "symbol": "[",
-  "looks_like": "chestguard_hard",
-  "color": "light_gray",
-  "warmth": 20,
-  "longest_side": "60 cm",
-  "material_thickness": 4,
-  "flags": [ "VARSIZE", "OUTER", "STURDY" ],
-  "armor": [
-    { "encumbrance": 20, "coverage": 95, "covers": [ "torso" ] },
-    {
-      "encumbrance": 4,
-      "coverage": 95,
-      "covers": [ "arm_l", "arm_r" ],
-      "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
-    },
-    {
-      "encumbrance": 4,
-      "coverage": 95,
-      "covers": [ "leg_l", "leg_r" ],
-      "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
-    }
-  ]
-}
 ]

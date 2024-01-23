@@ -1,0 +1,23 @@
+Пророчество кожи
+    -Должен давать мораль
+        -Сделать это через заклинание, оно будет давать этот эффект ("condition": { "math": [ "u_val(morale)", "<", "-50" ] },)
+    -Через время мораль опускается. Возможно и повышатся она будет не сразу, если это возможно
+    -Если мораль достаточно низка происходит событие. В конце события призывается Пророк Кожи
+        -Стоит определить что за событие
+
+        Спел 
+            {
+        "id": "book_reavalation",
+        "effect": "effect_on_condition",
+        "effect_str": "druid_recurve"
+      }
+
+      ЕОК что подтягивается если игрок получил эффект
+         {
+        "type": "effect_on_condition",
+        "id": "EOC_YOU_GET_EFFECT_bleed",
+        "eoc_type": "EVENT",
+        "required_event": "character_gains_effect", 
+        "condition": { "compare_string": [ "bleed", { "context_val": "effect" } ] },
+        "effect": [ "your effect" ]
+        }

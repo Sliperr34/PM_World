@@ -1,9 +1,9 @@
 [
   {
-    "id": "mon_template_normal_human",
+    "id": "mon_test_pm",
     "type": "MONSTER",
     "name": { "str": "TEST PM" },
-    "description": "A long legs, longer arms, his two eyes fixed at you",
+    "description": "Something something. unimanagble",
     "looks_like": "mon_civilian_stationary",
     "default_faction": "human",
     "bodytype": "human",

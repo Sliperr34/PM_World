@@ -1,5 +1,5 @@
 [
- {
+  {
     "id": "zw_zweihander",
     "type": "TOOL",
     "category": "weapons",
@@ -43,7 +43,7 @@
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "bash": 31, "cut": 45 }
   },
- {
+  {
     "id": "zw_longsword",
     "type": "TOOL",
     "category": "weapons",
@@ -73,7 +73,7 @@
     "weight": "1300 g",
     "color": "dark_gray",
     "symbol": "/",
-	"looks_like": "PR24-extended",
+    "looks_like": "PR24-extended",
     "material": [ "b_polymer" ],
     "techniques": [ "WBLOCK_1", "SWEEP", "PRECISE" ],
     "flags": [ "DURABLE_MELEE", "NONCONDUCTIVE", "BELT_CLIP" ],
@@ -134,7 +134,7 @@
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 8 ] ],
     "melee_damage": { "bash": 2, "stab": 40 }
   },
-	  {
+  {
     "id": "bl_katana",
     "type": "TOOL",
     "category": "weapons",
@@ -152,17 +152,17 @@
     "flags": [ "DURABLE_MELEE" ],
     "techniques": [ "WBLOCK_2", "BRUTAL", "WIDE", "RAPID" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ],  [ "BUTCHER", 14 ]  ],
+    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 14 ] ],
     "weapon_category": [ "JAPANESE_SWORDS", "MEDIUM_SWORDS" ],
     "melee_damage": { "bash": 7, "cut": 52 }
-},
-{
+  },
+  {
     "type": "ARMOR",
     "id": "rc_chains",
     "symbol": "3",
     "color": "light_gray",
     "name": { "str": "hand chain", "str_pl": "hand chains" },
-    "looks_like": "knuckle_brass",
+    "looks_like": "chain",
     "description": "A lengty steel chain which you wraped around your fits. Quite encumbraing but those weighty punches will hit like a train",
     "material": [ "b_steel" ],
     "volume": "390 ml",
@@ -171,7 +171,7 @@
     "to_hit": { "grip": "weapon", "length": "hand", "surface": "any", "balance": "neutral" },
     "qualities": [ [ "HAMMER", 1 ] ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE" ],
-	"techniques": [ "WIDE", "BRUTAL" ],
+    "techniques": [ "WIDE", "BRUTAL" ],
     "material_thickness": 2,
     "armor": [
       {
@@ -196,19 +196,19 @@
     "material": [ "l_steel" ],
     "volume": "90 ml",
     "weight": "60 g",
-	"longest_side": "7 cm",
+    "longest_side": "7 cm",
     "to_hit": -3,
     "flags": [ "SHEATH_KNIFE", "ALLOWS_BODY_BLOCK", "FRAGILE_MELEE" ],
     "weapon_category": [ "KNIVES" ],
     "thrown_damage": [ { "damage_type": "stab", "amount": 23, "armor_penetration": 21 } ],
-    "melee_damage":  { "bash": 1, "stab": 3}
+    "melee_damage": { "bash": 1, "stab": 3 }
   },
   {
     "id": "kr_katana",
     "type": "TOOL",
     "category": "weapons",
     "name": { "str_sp": "Black katana" },
-    "description": "Light and thin katana. Througly black, but you can recognise white and gold clouds patern on it \n\n Ready to bloodshed and protection money colecting, one limb at time.",
+    "description": "Light and thin katana. Througly black. \n\n Ready to bloodshed and protection money colecting, one limb at time.",
     "weight": "973 g",
     "volume": "2 L",
     "longest_side": "86 cm",
@@ -225,6 +225,29 @@
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 21 ] ],
     "weapon_category": [ "JAPANESE_SWORDS", "MEDIUM_SWORDS" ],
     "melee_damage": { "bash": 5, "cut": 43 }
+  },
+  {
+    "id": "kr_cloud_katana",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str_sp": "Cloud katana" },
+    "description": "Light and thin katana. Througly black, but you can recognise white and gold clouds patern on it \n\n Ready to bloodshed and protection money colecting, one limb at time.",
+    "weight": "1073 g",
+    "volume": "2 L",
+    "longest_side": "86 cm",
+    "symbol": "/",
+    "ascii_picture": "katana",
+    "color": "light_gray",
+    "looks_like": "katana",
+    "price": 98000,
+    "price_postapoc": 4500,
+    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
+    "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
+    "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
+    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 21 ] ],
+    "weapon_category": [ "JAPANESE_SWORDS", "MEDIUM_SWORDS" ],
+    "melee_damage": { "bash": 5, "cut": 51 }
   },
   {
     "type": "GENERIC",
@@ -263,7 +286,7 @@
     "price": 240000,
     "price_postapoc": 1,
     "material": "s_steel",
-    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK" , "MESSY", "NONCONDUCTIVE", "POLEARM", "WHIP" ],
+    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK", "MESSY", "NONCONDUCTIVE", "POLEARM", "WHIP" ],
     "techniques": [ "WBLOCK_2", "WIDE", "BRUTAL", "SWEEP", "RAPID" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", -4 ] ],

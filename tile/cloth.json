@@ -1,0 +1,36 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [ "Chibi_Ultica", "MshockXottoplus" ],
+    "tiles-new": [
+      {
+        "file": "tile/cloth.png",
+        "//": "range 1 to 15",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "sprite_offset_x": 0,
+        "sprite_offset_y": 0,
+        "tiles": [
+          { "id": "alpha_coat", "fg": 1 },
+          { "id": "overlay_worn_alpha_coat", "fg": 12 },
+          { "id": "zw_jacket", "fg": 35 },
+          { "id": "overlay_worn_zw_jacket", "fg": 2 },
+          { "id": "zw_coat", "fg": 33 },
+          { "id": "overlay_worn_zw_coat", "fg": 34 },
+          { "id": "pm_shirt_yel", "fg": 5 },
+          { "id": "overlay_male_worn_pm_shirt_yel", "fg": 6 },
+          { "id": "overlay_female_worn_pm_shirt_yel", "fg": 7 },
+          { "id": "kr_shirt", "fg": 8 },
+          { "id": "overlay_male_worn_kr_shirt", "fg": 9 },
+          { "id": "overlay_female_worn_kr_shirt", "fg": 10 },
+          { "id": "kr_yukata", "fg": 3 },
+          { "id": "overlay_worn_kr_yukata", "fg": 4 },
+          { "id": "pm_tie_necktie", "fg": 21 },
+          { "id": "overlay_worn_pm_tie_necktie", "fg": 22 },
+          { "id": [ "pm_trouses", "kr_trouses" ], "fg": 17 },
+          { "id": [ "overlay_worn_pm_trouses", "overlay_worn_kr_trouses" ], "fg": 18 }
+        ]
+      }
+    ]
+  }
+]
