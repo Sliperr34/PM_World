@@ -1,0 +1,185 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "skin_book_eoc",
+    "condition": { "not": { "u_has_var": "prophecy", "type": "temp_var", "context": "skin_book_readed", "value": "yes" } },
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": 5,
+        "max_bonus": 500,
+        "duration": "12 hours",
+        "decay_start": "4 hours",
+        "capped": true
+      },
+      { "u_message": "So... thats true", "type": "bad" },
+      { "u_add_var": "prophecy", "type": "temp_var", "context": "skin_book_readed", "value": "yes" },
+      { "queue_eocs": "skin_up1", "time_in_future": "3 hours" }
+    ],
+    "false_effect": [
+      {
+        "u_message": "You can't focus your eyes on the letters, and when you try to look at them, strange and surreal images appear in your head and disappear as soon as you look away"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_up1",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": 25,
+        "max_bonus": 500,
+        "duration": "9 hours",
+        "decay_start": "3 hours",
+        "capped": true
+      },
+      { "u_message": "Knowledge about this can be useful...", "type": "good" },
+      { "queue_eocs": "skin_up2", "time_in_future": "3 hours" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_up2",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": 75,
+        "max_bonus": 500,
+        "duration": "6 hours",
+        "decay_start": "2 hours",
+        "capped": true
+      },
+      { "u_message": "I could change the world with this", "type": "good" },
+      { "queue_eocs": "skin_up3", "time_in_future": "3 hours" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_up3",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": 275,
+        "max_bonus": 500,
+        "duration": "3 hours",
+        "decay_start": "1 hours",
+        "capped": true
+      },
+      { "u_message": "I could correct all the mistakes that were made before me!", "type": "good" },
+      { "queue_eocs": "skin_down1", "time_in_future": "3 hours" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_down1",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": -5,
+        "max_bonus": 500,
+        "duration": "12 hours",
+        "decay_start": "4 hours",
+        "capped": true
+      },
+      { "u_message": "But this will require a lot of effort", "type": "bad" },
+      { "queue_eocs": "skin_down2", "time_in_future": "3 hours" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_down2",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": -35,
+        "max_bonus": 500,
+        "duration": "9 hours",
+        "decay_start": "3 hours",
+        "capped": true
+      },
+      { "u_message": "And some sacrifices will need to be made...", "type": "bad" },
+      { "queue_eocs": "skin_down3", "time_in_future": "3 hours" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_down3",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": -150,
+        "max_bonus": 500,
+        "duration": "6 hours",
+        "decay_start": "2 hours",
+        "capped": true
+      },
+      { "u_message": "I'm just an observer, and I feel like guilt is eating me up from inside", "type": "bad" },
+      { "queue_eocs": "skin_down4", "time_in_future": "3 hours" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_down4",
+    "effect": [
+      {
+        "u_add_morale": "morale_prophecy",
+        "bonus": -450,
+        "max_bonus": 1500,
+        "duration": "3 hours",
+        "decay_start": "1 minutes",
+        "capped": true
+      },
+      { "queue_eocs": "skin_summon", "time_in_future": "124 minutes" },
+      {
+        "u_message": "*thousands of thoughts fill your head, they clearly do not belong to you, you feel that someone who does not belong to this world has paid attention to you. His invisible pressence frightens you, you feel the cold of horror filling the insides of your bones*",
+        "type": "bad"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_summon",
+    "condition": { "math": [ "u_val('morale')", "<", "-1" ] },
+    "effect": [
+      {
+        "u_message": "A flash of red light blinds you. He has come and you feel his pressence. The prophecy came true",
+        "popup": true
+      },
+      { "u_spawn_monster": "mon_prophet", "real_count": 1, "min_radius": [ 5, 7 ], "max_radius": [ 11, 24 ] },
+      { "u_add_effect": "blind", "duration": "9 s" },
+      { "u_add_effect": "deaf", "duration": "9 s", "intensity": 3 },
+      { "u_add_effect": "marked", "duration": "20 h", "intensity": 1 },
+      { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
+    ],
+    "false_effect": [
+      {
+        "u_message": "You managed to calm down, and the one who sould not have come lost sight of you. You should be carefull...",
+        "popup": true
+      },
+      { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "p_mark_eff",
+    "effect": [
+      { "u_add_effect": "blind", "duration": "3 s" },
+      { "u_add_effect": "deaf", "duration": "3 s", "intensity": 3 },
+      { "u_add_effect": "marked", "duration": "20 h", "intensity": 1 },
+      { "npc_add_effect": "p_gaze", "duration": "20 h", "intensity": 1 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "candle_summon_lit",
+    "condition": { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
+    "effect": [ { "npc_spawn_monster": "mon_candle_lit", "real_count": 1, "min_radius": [ 0, 0 ], "max_radius": [ 0, 0 ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "candle_summon",
+    "condition": { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
+    "effect": [ { "npc_spawn_monster": "mon_candle", "real_count": 1, "min_radius": [ 0, 0 ], "max_radius": [ 0, 0 ] } ]
+  }
+]

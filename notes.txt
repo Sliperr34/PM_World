@@ -1,0 +1,26 @@
+        Спел 
+            {
+        "id": "book_reavalation",
+        "effect": "effect_on_condition",
+        "effect_str": "druid_recurve"
+      }
+
+      ЕОК что подтягивается если игрок получил эффект
+         {
+        "type": "effect_on_condition",
+        "id": "EOC_YOU_GET_EFFECT_bleed",
+        "eoc_type": "EVENT",
+        "required_event": "character_gains_effect", 
+        "condition": { "compare_string": [ "bleed", { "context_val": "effect" } ] },
+        "effect": [ "your effect" ]
+        }
+ 
+ проверка на мораль
+        "condition": { "math": [ "u_val(morale)", "<", "-50" ] },
+Запуск еока в еоке
+    "run_eocs": [ "EOC_DO_GOOD_THING" ]
+
+              Потеря вариабельной
+          { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
+
+ЕСЛИ ЗАКЛИНАНИЕ ВЫЗЫВАЕТ ЕОК ТО У ЗАКЛИНАНИЯ ДОЛЖЕН БЫТЬ РАДИУС АОЕ РАВЕН 0, ИНАЧЕ ОН ВЫЗЫВАЕТ ЕОК НА ВСЕ КЛЕТКИ В РАДИУСЕ АОЕ

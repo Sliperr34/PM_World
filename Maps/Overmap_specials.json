@@ -2,46 +2,58 @@
   {
     "type": "overmap_special",
     "id": "Zwei_main_office",
-    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "zwei_office0_north" },
-{ "point": [ -1, 0, 0 ], "overmap": "zwei_office1_north" },{ "point": [ 0, 1, 0 ], "overmap": "zwei_office2_north" },{ "point": [ -1, 1, 0 ], "overmap": "zwei_office3_north" },{ "point": [ 0, 0, 1 ], 
-"overmap": "zwei_office0_roof_north" },
-{ "point": [ -1, 0, 1 ], "overmap": "zwei_office1_roof_north" },{ "point": [ 0, 1, 1 ], "overmap": "zwei_office2_roof_north" },{ "point": [ -1, 1, 1 ], "overmap": "zwei_office3_roof_north" }	],
-    "connections": [
-      { "point": [ 0, -1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 0, 1, 0 ] } ],
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "zwei_office0_north" },
+      { "point": [ -1, 0, 0 ], "overmap": "zwei_office1_north" },
+      { "point": [ 0, 1, 0 ], "overmap": "zwei_office2_north" },
+      { "point": [ -1, 1, 0 ], "overmap": "zwei_office3_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "zwei_office0_roof_north" },
+      { "point": [ -1, 0, 1 ], "overmap": "zwei_office1_roof_north" },
+      { "point": [ 0, 1, 1 ], "overmap": "zwei_office2_roof_north" },
+      { "point": [ -1, 1, 1 ], "overmap": "zwei_office3_roof_north" }
+    ],
+    "connections": [ { "point": [ 0, -1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 0, 1, 0 ] } ],
     "locations": [ "forest" ],
     "city_distance": [ 6, 20 ],
     "city_sizes": [ 6, -1 ],
     "occurrences": [ 100, 100 ],
+    "priority": 1,
     "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
   },
-   {
+  {
     "type": "overmap_special",
     "id": "Kr_hideout",
-    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "kr_hideout_north" }, { "point": [ 0, 0, 1 ], "overmap": "kr_hideout_roof_north" }	],
-    "connections": [
-      { "point": [ 0, 1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 0, -1, 0 ] } ],
-    "locations": [ "forest" ],
-    "city_distance": [ 10, 20 ],
-    "city_sizes": [ 3, 10 ],
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "kr_hideout_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "kr_hideout_roof_north" }
+    ],
+    "connections": [ { "point": [ 0, 1, 0 ], "terrain": "road", "connection": "local_road", "existing": true, "from": [ 0, -1, 0 ] } ],
+    "locations": [ "land" ],
+    "city_distance": [ 3, 20 ],
+    "city_sizes": [ 3, -1 ],
     "occurrences": [ 100, 100 ],
+    "priority": 1,
     "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
     "id": "Rc_hideout",
-    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" }, { "point": [ 0, 0, 1 ], "overmap": "rc_hideout_roof_north" }	],
-    "connections": [
-      { "point": [ 0, 1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 0, -1, 0 ] } ],
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "rc_hideout_north" },
+      { "point": [ 0, 0, 1 ], "overmap": "rc_hideout_roof_north" }
+    ],
+    "connections": [ { "point": [ 0, 1, 0 ], "terrain": "road", "connection": "local_road", "from": [ 0, -1, 0 ] } ],
     "locations": [ "forest" ],
     "city_distance": [ 3, 8 ],
     "city_sizes": [ 3, 6 ],
+    "priority": 1,
     "occurrences": [ 100, 100 ],
     "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
   },
   {
     "type": "overmap_special",
     "id": "Lob_corp",
-    "overmaps":[
+    "overmaps": [
       { "point": [ 0, 0, 0 ], "overmap": "lc_surface_north" },
       { "point": [ 0, 0, 1 ], "overmap": "lc_surface_roof_north" },
       { "point": [ 0, 0, -1 ], "overmap": "lc_mid_north" },
@@ -54,10 +66,11 @@
       { "point": [ -1, 1, -2 ], "overmap": "lc_lab_mb2_north" },
       { "point": [ -2, 1, -2 ], "overmap": "lc_lab_lb_north" }
     ],
-      "locations": [ "wilderness" ],
+    "locations": [ "wilderness" ],
     "city_distance": [ 6, 15 ],
     "city_sizes": [ 10, -1 ],
     "occurrences": [ 100, 100 ],
-    "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE"]
+    "priority": 1,
+    "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
   }
-  ]
+]
