@@ -1,0 +1,24 @@
+[
+  {
+    "id": "prophet_heat",
+    "type": "damage_type",
+    "name": "Skin prophet heat",
+    "physical": false,
+    "material_required": false,
+    "magic_color": "red",
+    "mon_difficulty": true,
+    "derived_from": [ "heat", 1 ],
+    "immune_flags": { "character": [ "FIREFEATHER_MUT" ], "monster": [  ] }
+  },
+  {
+    "id": "prophet_heat",
+    "type": "damage_info_order",
+    "info_display": "detailed",
+    "ablative_info": { "order": 1067, "show_type": true },
+    "bionic_info": { "order": 1067, "show_type": true },
+    "melee_combat_info": { "order": 1067, "show_type": true },
+    "pet_prot_info": { "order": 1067, "show_type": true },
+    "protection_info": { "order": 1067, "show_type": true },
+    "//": "The numbers above are arbitrary, this is just so they don't conflict with any other order: 1000 damage_type "
+  }
+]
