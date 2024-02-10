@@ -137,31 +137,6 @@
     "armor": { "electric": 0, "heat": 100, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 }
   },
   {
-    "id": "fire_sphere_spell_1",
-    "type": "SPELL",
-    "name": { "str": "Fire sphere (first phase)" },
-    "description": "Summons a Fire sphere (phase 1) around the player",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground", "hostile" ],
-    "effect": "summon",
-    "effect_str": "mon_fire_sphere_1",
-    "shape": "blast",
-    "min_damage": 1,
-    "max_damage": 1,
-    "min_range": 60,
-    "max_range": 60,
-    "min_aoe": 1,
-    "max_aoe": 1,
-    "min_duration": 400,
-    "max_duration": 500,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_DURATION" ]
-  },
-  {
     "id": "mon_fire_sphere_1",
     "type": "MONSTER",
     "name": { "str": "Fire sphere" },
@@ -197,92 +172,8 @@
         "monster_message": ""
       }
     ],
-    "death_function": { "effect": { "id": "death_conflagration", "hit_self": true } },
-    "armor": { "electric": 0, "heat": 100, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 },
-    "//": "This monster instantly casts fire_sphere_1_explosion_spell , which runs the EOC that activates the explosion (death_fire_sphere_1) in 5 s",
-    "//2": "If the monster is killed it immediately casts the final explosion (death_fire_sphere_1) as death effect"
-  },
-  {
-    "id": "fire_sphere_1_explosion_spell",
-    "type": "SPELL",
-    "name": { "str": "Fire sphere (first phase) (Spell-to-EOC)" },
-    "description": "Spell intermediate that runs the EOC",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE", "NON_MAGICAL", "IGNORE_WALLS" ],
-    "valid_targets": [ "self" ],
-    "base_casting_time": 0,
-    "shape": "blast",
-    "range_increment": 2,
-    "effect": "effect_on_condition",
-    "effect_str": "fire_sphere_1_explosion_spell_eoc"
-  },
-  {
-    "id": "fire_sphere_1_explosion_spell_eoc",
-    "type": "effect_on_condition",
-    "effect": [
-      { "queue_eocs": [ "fire_sphere_1_explosion_spell_eoc_2" ], "time_in_future": "3 s" }
-    ]
-  },
-  {
-    "id": "fire_sphere_1_explosion_spell_eoc_2",
-    "type": "effect_on_condition",
-    "effect": [
-      { "u_cast_spell": { "id": "death_conflagration" } }
-    ]
-  },
-  {
-    "id": "death_conflagration",
-    "type": "SPELL",
-    "name": { "str": "Fire sphere (first phase) (explosion)" },
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "description": "Explosion for mon_fire_sphere_1 ",
-    "effect": "attack",
-    "min_aoe": 3,
-    "max_aoe": 4,
-    "min_damage": 12,
-    "max_damage": 16,
-    "damage_type": "heat",
-    "shape": "blast",
-    "flags": [ "IGNITE_FLAMMABLE", "RANDOM_AOE", "RANDOM_DAMAGE" ]
-  },
-  {
-    "id": "prophet_powerful_short_spell",
-    "type": "SPELL",
-    "name": "Powerful short spell",
-    "description": "Deals random, heavy damage around the prophet, hostiles (plus ground) only, random radius",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground", "hostile" ],
-    "effect": "attack",
-    "shape": "blast",
-    "damage_type": "heat",
-    "min_damage": 24,
-    "max_damage": 36,
-    "min_aoe": 4,
-    "max_aoe": 5,
-    "min_range": 4,
-    "max_range": 4,
-    "max_level": 1,
-    "difficulty": -12,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "IGNITE_FLAMMABLE", "NO_FAIL", "SOMATIC", "RANDOM_AOE", "RANDOM_DAMAGE" ]
-  },
-  {
-    "id": "death_prophet",
-    "type": "SPELL",
-    "name": { "str": "Prophet death" },
-    "description": "Death effect for mon_prophet , summons mon_prophet_2 ",
-    "effect": "summon",
-    "effect_str": "mon_prophet_2",
-    "valid_targets": [ "ground", "self" ],
-    "shape": "blast",
-    "message": "",
-    "damage_type": "pure",
-    "min_damage": 1,
-    "max_damage": 1,
-    "min_aoe": 6,
-    "max_aoe": 6,
-    "flags": [ "HOSTILE_SUMMON", "PERMANENT", "SILENT", "SPAWN_WITH_DEATH_DROPS" ]
+    "death_function": { "effect": { "id": "death_fire_sphere_1", "hit_self": true } },
+    "armor": { "electric": 0, "heat": 0, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 }
   },
   {
     "//note": "Copied from mon_prophet , except for its special_attacks and death_function ",
@@ -329,13 +220,6 @@
         "spell_data": { "id": "p_2_scatter_spell_v1", "min_level": 1 },
         "cooldown": 10,
         "monster_message": ""
-      },
-      {
-        "id": "prophet_2_attack_scatter_v2",
-        "type": "spell",
-        "spell_data": { "id": "p_2_scatter_spell_v2", "min_level": 1 },
-        "cooldown": 10,
-        "monster_message": ""
       }
     ],
     "dodge": 3,
@@ -364,25 +248,6 @@
     ],
     "death_function": { "corpse_type": "NORMAL", "message": "" },
     "armor": { "electric": 2, "heat": 100, "bash": 10, "cut": 8, "stab": 2, "bullet": 0, "acid": 10 }
-  },
-  {
-    "id": "p_2_light_attack",
-    "type": "SPELL",
-    "name": "Prophet light attack (second phase)",
-    "description": "Light attack for mon_prophet_2 , deals between p_light_attack and ( p_light_attack * 2 ) special dmg ",
-    "valid_targets": [ "hostile", "ground" ],
-    "effect": "attack",
-    "damage_type": "prophet_heat",
-    "min_damage": { "math": [ "( 2 + 2 * ( u_effect_intensity('p_gaze') ) )" ] },
-    "max_damage": { "math": [ "( 4 + 4 * ( u_effect_intensity('p_gaze') ) )" ] },
-    "damage_increment": 0,
-    "base_casting_time": 0,
-    "min_range": 10,
-    "max_range": 10,
-    "range_increment": 2,
-    "shape": "blast",
-    "flags": [ "IGNITE_FLAMMABLE", "NO_FAIL", "NON_MAGICAL", "RANDOM_DAMAGE" ],
-    "energy_source": "NONE"
   },
   {
     "id": "firefeather_item",
@@ -430,31 +295,6 @@
     "//": "This removes the protection granted by firefeather_item "
   },
   {
-    "id": "fire_sphere_spell_2",
-    "type": "SPELL",
-    "name": { "str": "Fire sphere (second phase)" },
-    "description": "Summons a Fire sphere (phase 2) around the player",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground", "hostile" ],
-    "effect": "summon",
-    "effect_str": "mon_fire_sphere_2",
-    "shape": "blast",
-    "min_damage": 1,
-    "max_damage": 1,
-    "min_range": 60,
-    "max_range": 60,
-    "min_aoe": 1,
-    "max_aoe": 1,
-    "min_duration": 100,
-    "max_duration": 100,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON" ]
-  },
-  {
     "//note": "Copied from mon_fire_sphere_1 , except for its special_attacks and death_function ",
     "id": "mon_fire_sphere_2",
     "type": "MONSTER",
@@ -491,57 +331,9 @@
         "monster_message": ""
       }
     ],
-    "death_function": { "effect": { "id": "death_conflagration", "hit_self": true } },
-    "armor": { "electric": 0, "heat": 100, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 },
+    "death_function": { "effect": { "id": "death_fire_sphere_2", "hit_self": true } },
+    "armor": { "electric": 0, "heat": 0, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 },
     "//": "This monster instantly casts death_fire_sphere_2 "
-  },
-  {
-    "id": "death_fire_sphere_2",
-    "type": "SPELL",
-    "name": { "str": "Fire sphere (second phase) (explosion)" },
-    "description": "Explosion for mon_fire_sphere_2 ",
-    "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile", "self" ],
-    "effect": "attack",
-    "shape": "blast",
-    "damage_type": "heat",
-    "min_damage": 16,
-    "max_damage": 24,
-    "min_pierce": 0,
-    "max_pierce": 0,
-    "min_aoe": 4,
-    "max_aoe": 6,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "IGNITE_FLAMMABLE", "NO_FAIL", "NO_PROJECTILE", "RANDOM_AOE", "RANDOM_DAMAGE" ]
-  },
-  {
-    "id": "p_2_scatter_spell_v1",
-    "type": "SPELL",
-    "name": { "str": "Scatter spell (v1, summons monster)" },
-    "description": "Scatter spell, version 1. This summons monsters that explode",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground", "hostile" ],
-    "effect": "summon",
-    "effect_str": "mon_scatter_v1",
-    "shape": "blast",
-    "min_damage": 7,
-    "max_damage": 11,
-    "min_range": 60,
-    "max_range": 60,
-    "min_aoe": 4,
-    "max_aoe": 4,
-    "min_duration": 500,
-    "max_duration": 500,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "HOSTILE_SUMMON" ]
   },
   {
     "id": "mon_scatter_v1",
@@ -579,76 +371,8 @@
         "monster_message": ""
       }
     ],
-    "death_function": { "effect": { "id": "death_conflagration", "hit_self": true } },
-    "armor": { "electric": 0, "heat": 100, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 },
+    "death_function": { "effect": { "id": "death_scatter_v1", "hit_self": true } },
+    "armor": { "electric": 0, "heat": 0, "bash": 0, "cut": 0, "stab": 0, "bullet": 0, "acid": 10 },
     "//": "This monster instantly casts death_scatter_v1 , it also casts it if it dies"
-  },
-  {
-    "id": "death_scatter_v1",
-    "type": "SPELL",
-    "name": { "str": "Scatter death (explosion)" },
-    "description": "Explosion for mon_scatter_v1 ",
-    "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile", "self" ],
-    "effect": "attack",
-    "shape": "blast",
-    "damage_type": "heat",
-    "min_damage": 16,
-    "max_damage": 24,
-    "min_aoe": 1,
-    "max_aoe": 2,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "IGNITE_FLAMMABLE", "NO_FAIL", "NO_PROJECTILE", "RANDOM_AOE", "RANDOM_DAMAGE" ]
-  },
-  {
-    "id": "p_2_scatter_spell_v2",
-    "type": "SPELL",
-    "name": { "str": "Scatter spell (v2, summons traps)" },
-    "description": "Scatter spell, version 2. This summons traps that explode",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground", "hostile" ],
-    "effect": "ter_transform",
-    "effect_str": "scatter_trap",
-    "shape": "blast",
-    "min_range": 60,
-    "max_range": 60,
-    "min_aoe": 8,
-    "max_aoe": 8,
-    "min_duration": 6000,
-    "max_duration": 6000,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ]
-  },
-  {
-    "id": "scatter_trap",
-    "type": "ter_furn_transform",
-    "trap": [
-      {
-        "valid_flags": [  ], 
-        "result": "tr_scatter_v2", 
-        "message": "" 
-      }
-    ]
-  },
-  {
-    "id": "tr_scatter_v2",
-    "type": "trap",
-    "name": "",
-    "symbol": "#",
-    "color": "red",
-    "visibility": 0,
-    "avoidance": 8,
-    "difficulty": 99,
-    "trap_radius": 1,
-    "action": "spell",
-    "spell_data": { "id": "death_scatter_v1_explosion" }
   }
 ]

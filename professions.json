@@ -12,8 +12,8 @@
       { "level": 1, "id": "p_2_light_attack" },
       { "level": 1, "id": "fire_sphere_spell_2" },
       { "level": 1, "id": "p_2_scatter_spell_v1" },
-      { "level": 1, "id": "p_2_scatter_spell_v2" },
-      { "level": 1, "id": "survivor_BLAST" }
+      { "level": 1, "id": "survivor_BLAST" },
+      { "level": 1, "id": "summon_prophet2" }
     ],
     "items": {
       "both": {
@@ -56,13 +56,34 @@
     "flags": [ "HOSTILE_SUMMON", "PERMANENT", "SILENT", "SPAWN_WITH_DEATH_DROPS" ]
   },
   {
+    "id": "summon_prophet2",
+    "type": "SPELL",
+    "name": { "str": "Summon: Prophet (second phase)" },
+    "description": "Summons a mon_prophet ",
+    "effect": "summon",
+    "effect_str": "mon_prophet_2",
+    "valid_targets": [ "ground", "self" ],
+    "shape": "blast",
+    "message": "",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 20,
+    "max_range": 20,
+    "max_level": 1,
+    "difficulty": -11,
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [ "NO_FAIL", "HOSTILE_SUMMON", "PERMANENT", "SILENT", "SPAWN_WITH_DEATH_DROPS" ]
+  },
+  {
     "id": "survivor_BLAST",
     "type": "SPELL",
     "name": { "str": "Suvivor BLAST" },
     "description": "BLASTS the target",
     "spell_class": "NONE",
     "valid_targets": [ "ally", "hostile" ],
-    "effect": "banishment",
+    "effect": "attack",
     "shape": "blast",
     "damage_type": "pure",
     "min_damage": 99,
@@ -103,7 +124,7 @@
     "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_zombie" ],
     "harvest": "zombie_humanoid",
     "grab_strength": 20,
-    "death_function": { "effect": { "id": "death_conflagration", "hit_self": true } },
+    "death_function": { "effect": { "id": "death_fire_sphere_1", "hit_self": true } },
     "death_drops": "default_zombie_death_drops",
     "burn_into": "mon_zombie_scorched",
     "fungalize_into": "mon_zombie_fungus",
@@ -122,6 +143,7 @@
       "PUSH_MON",
       "FILTHY"
     ],
-    "armor": { "electric": 1 }
+    "armor": { "electric": 1 },
+    "//": "The zombie IS spawning mon_fire_sphere_1 with death_fire_sphere_1 , but it is NOT proccing death_AAA "
   }
 ]
