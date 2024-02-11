@@ -181,5 +181,19 @@
     "id": "candle_summon",
     "condition": { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
     "effect": [ { "npc_spawn_monster": "mon_candle", "real_count": 1, "min_radius": [ 0, 0 ], "max_radius": [ 0, 0 ] } ]
+  },
+  {
+    "id": "fire_sphere_1_explosion_spell_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "queue_eocs": [ "fire_sphere_1_explosion_spell_eoc_2" ], "time_in_future": "3 s" }
+    ]
+  },
+  {
+    "id": "fire_sphere_1_explosion_spell_eoc_2",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_cast_spell": { "id": "death_fire_sphere_1" } }
+    ]
   }
 ]
