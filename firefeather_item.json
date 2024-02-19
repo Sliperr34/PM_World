@@ -2,46 +2,18 @@
   {
     "id": "firefeather_item",
     "type": "TOOL",
-    "name": { "str": "fire feather", "str_pl": "fire feathers" },
-    "description": "A fire feather.  This will protect you.",
+    "name": { "str": "<color_red>fire feather</color>", "str_pl": "fire feathers" },
+    "description": "A fire feather. Seems like Prophet used it to write in book. It's a little warm to the touch, but the tip burns you if you touch it.",
     "volume": "1 ml",
     "weight": "1 g",
-    "longest_side": "5 cm",
+    "longest_side": "16 cm",
     "price_postapoc": 25000,
     "to_hit": { "balance": "neutral", "grip": "bad", "length": "hand", "surface": "any" },
     "melee_damage": { "bash": 1 },
-    "material": [ "steel" ],
+    "material": [ "flesh" ],
     "symbol": "f",
     "looks_like": "feather",
     "color": "light_red",
-    "relic_data": { "passive_effects": [ { "has": "HELD", "condition": "ALWAYS", "mutations": [ "FIREFEATHER_MUT" ] } ] },
     "flags": [ "TRADER_AVOID" ]
-  },
-  {
-    "id": "FIREFEATHER_MUT",
-    "type": "mutation",
-    "name": "Fire feather protection",
-    "description": "",
-    "points": 0,
-    "profession": true,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": false
-  },
-  {
-    "id": "firefeather_check",
-    "type": "effect_on_condition",
-    "recurrence": "1 s",
-    "condition": {
-      "and": [
-        { "u_has_trait": "FIREFEATHER_MUT" },
-        { "not": { "u_has_item": "firefeather_item" } }
-      ]
-    },
-    "deactivate_condition": { "not": { "u_has_item": "firefeather_item" } },
-    "effect": [ 
-      { "u_lose_trait": "FIREFEATHER_MUT" }
-    ],
-    "//": "This removes the protection granted by firefeather_item "
   }
 ]

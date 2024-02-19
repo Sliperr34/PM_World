@@ -146,7 +146,8 @@
         "u_message": "A flash of red light blinds you. He has come and you feel his pressence. The prophecy came true",
         "popup": true
       },
-      { "u_spawn_monster": "mon_prophet", "real_count": 1, "min_radius": [ 5, 7 ], "max_radius": [ 11, 24 ] },
+      { "u_spawn_monster": "mon_prophet", "real_count": 1, "min_radius": 4, "max_radius": 30 },
+      { "u_spawn_monster": "mon_candle", "real_count": 4, "min_radius": 3, "max_radius": 30 },
       { "u_add_effect": "blind", "duration": "9 s" },
       { "u_add_effect": "deaf", "duration": "9 s", "intensity": 3 },
       { "u_add_effect": "marked", "duration": "20 h", "intensity": 1 },
@@ -173,27 +174,43 @@
   {
     "type": "effect_on_condition",
     "id": "candle_summon_lit",
-    "condition": { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
+    "condition": {
+      "or": [
+        { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
+        { "math": [ "n_monsters_nearby('mon_prophet_2', 'radius': 60)" ] }
+      ]
+    },
     "effect": [ { "npc_spawn_monster": "mon_candle_lit", "real_count": 1, "min_radius": [ 0, 0 ], "max_radius": [ 0, 0 ] } ]
   },
   {
     "type": "effect_on_condition",
     "id": "candle_summon",
-    "condition": { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
+    "condition": {
+      "or": [
+        { "math": [ "n_monsters_nearby('mon_prophet', 'radius': 60)" ] },
+        { "math": [ "n_monsters_nearby('mon_prophet_2', 'radius': 60)" ] }
+      ]
+    },
     "effect": [ { "npc_spawn_monster": "mon_candle", "real_count": 1, "min_radius": [ 0, 0 ], "max_radius": [ 0, 0 ] } ]
   },
   {
     "id": "fire_sphere_1_explosion_spell_eoc",
     "type": "effect_on_condition",
-    "effect": [
-      { "queue_eocs": [ "fire_sphere_1_explosion_spell_eoc_2" ], "time_in_future": "3 s" }
-    ]
+    "effect": [ { "queue_eocs": [ "fire_sphere_1_explosion_spell_eoc_2" ], "time_in_future": "3 s" } ]
+  },
+  {
+    "id": "fire_sphere_2_explosion_spell_eoc",
+    "type": "effect_on_condition",
+    "effect": [ { "queue_eocs": [ "fire_sphere_2_explosion_spell_eoc_2" ], "time_in_future": "5 s" } ]
+  },
+  {
+    "id": "fire_sphere_2_explosion_spell_eoc_2",
+    "type": "effect_on_condition",
+    "effect": [ { "u_cast_spell": { "id": "death_fire_sphere_2" } } ]
   },
   {
     "id": "fire_sphere_1_explosion_spell_eoc_2",
     "type": "effect_on_condition",
-    "effect": [
-      { "u_cast_spell": { "id": "death_fire_sphere_1" } }
-    ]
+    "effect": [ { "u_cast_spell": { "id": "death_fire_sphere_1" } } ]
   }
 ]

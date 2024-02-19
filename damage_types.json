@@ -7,8 +7,7 @@
     "material_required": false,
     "magic_color": "red",
     "mon_difficulty": true,
-    "derived_from": [ "heat", 1 ],
-    "immune_flags": { "character": [ "FIREFEATHER_MUT" ], "monster": [  ] }
+    "derived_from": [ "heat", 0.4 ]
   },
   {
     "id": "prophet_heat",
