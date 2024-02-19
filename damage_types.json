@@ -13,11 +13,11 @@
     "id": "prophet_heat",
     "type": "damage_info_order",
     "info_display": "detailed",
-    "ablative_info": { "order": 1067, "show_type": true },
-    "bionic_info": { "order": 1067, "show_type": true },
-    "melee_combat_info": { "order": 1067, "show_type": true },
-    "pet_prot_info": { "order": 1067, "show_type": true },
-    "protection_info": { "order": 1067, "show_type": true },
+    "ablative_info": { "order": 1067, "show_type": false },
+    "bionic_info": { "order": 1067, "show_type": false },
+    "melee_combat_info": { "order": 1067, "show_type": false },
+    "pet_prot_info": { "order": 1067, "show_type": false },
+    "protection_info": { "order": 1067, "show_type": false },
     "//": "The numbers above are arbitrary, this is just so they don't conflict with any other order: 1000 damage_type "
   }
 ]
