@@ -1,6 +1,6 @@
 [
     {
-        "id": "TEST_FIND_LC",
+        "id": "TEST_FIND_LC2",
         "type": "mission_definition",
         "name": { "str": "Investigate the Mysterious Bunker" },
         "goal": "MGOAL_KILL_MONSTER_TYPE",

@@ -188,7 +188,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_rt",
+    "id": "lab_ab_rt",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -196,7 +196,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_mt1",
+    "id": "lab_ab_mt1",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -204,7 +204,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_mt2",
+    "id": "lab_ab_mt2",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -212,7 +212,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_lt",
+    "id": "lab_ab_lt",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -220,7 +220,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_rb",
+    "id": "lab_ab_rb",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -228,7 +228,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_mb1",
+    "id": "lab_ab_mb1",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -236,7 +236,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_mb2",
+    "id": "lab_ab_mb2",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -244,7 +244,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab1_lb",
+    "id": "lab_ab_lb",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -252,7 +252,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_rt",
+    "id": "lab_ab_second_rt",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -260,7 +260,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_mt1",
+    "id": "lab_ab_second_mt1",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -268,7 +268,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_mt2",
+    "id": "lab_ab_second_mt2",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -276,7 +276,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_lt",
+    "id": "lab_ab_second_lt",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -284,7 +284,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_rb",
+    "id": "lab_ab_second_rb",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -292,7 +292,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_mb1",
+    "id": "lab_ab_second_mb1",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -300,7 +300,7 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_mb2",
+    "id": "lab_ab_second_mb2",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
@@ -308,11 +308,35 @@
     "see_cost": 10
   },
   {
-    "id": "lc_lab2_lb",
+    "id": "lab_ab_second_lb",
     "type": "overmap_terrain",
     "name": "Lobotomy Lab",
     "color": "c_yellow",
     "sym": "L",
+    "see_cost": 10
+  },
+  {
+    "id": "lab_ab_surface",
+    "type": "overmap_terrain",
+    "name": "Strange sctructure",
+    "color": "c_white",
+    "sym": "n",
+    "see_cost": 50
+  },
+  {
+    "id": "lab_ab_surface_roof",
+    "type": "overmap_terrain",
+    "name": "Strange sctructure",
+    "color": "light_blue",
+    "sym": "n",
+    "see_cost": 50
+  },
+  {
+    "id": "lab_ab_mid",
+    "type": "overmap_terrain",
+    "name": "Midsection",
+    "color": "light_blue",
+    "sym": "^",
     "see_cost": 10
   }
 ]
