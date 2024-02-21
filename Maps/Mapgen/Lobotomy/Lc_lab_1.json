@@ -259,7 +259,7 @@
     ],
     "weight": "500",
     "object": {
-      "fill_ter": "t_concrete",
+      "fill_ter": "t_metal_floor",
       "rows": [
         "                 NNNNNNNNNNNN       NNNNNNNNNNNNNNNNNNNN            NNNNNNNNNNNNNNN             ",
         "                 N///1.....qN       NNNNNNN^.NN.vNNNNNNN            N**066606660**N             ",
@@ -269,15 +269,15 @@
         "                 NNNNNNNNN TNNNNNNNNNNNNNNNNN==NNNNNNNNNNNNNNNNNNNN6N=============N             ",
         "                         N   ==0====0 ======== ========0====0====0T=T===1=====1===N             ",
         "                         N= ===000000==== === == ======000000=== 0T=T======**=====N             ",
-        "                 NNNNNNNNNN  NNNNNNNNNNNNNNNN =NNNNNNNNNNNNNNNN NNN6N=============N             ",
+        "                 NNNNNNNNNN  NNNNNNNNNNNNNNNN =NNNNNNNNNNNNNNNN NNN6N==== ========N             ",
         "                 N0//1....T=N               NT N                  NNN======*==== =N             ",
         "                 N///1....NNN                                       N== 1===*=1===N             ",
         "                 N///1.....qN                                       N=== =**======N             ",
         "                 N///1.....qN                                       N=====*=======N             ",
         "                 NNNNNNNNNNNN                                       N=**===*======N             ",
         "                                                                    N===1=====1===N             ",
-        "                                                                    N=============N             ",
-        "                                                                    N=============N             ",
+        "                                                                    N===== =======N             ",
+        "                                                                    N=====  ======N             ",
         "                                                                    N=============N             ",
         "                                                                    NNNNNNNNNNNNNNN             ",
         "                                                                                                ",
@@ -311,6 +311,7 @@
         "                                                                                                "
       ],
       "place_npcs": [  ],
+      "place_monster": [ { "monster": "mon_watchdog_initial", "x": 75, "y": 2 } ],
       "terrain": {
         "N": "t_wall_bulkhead",
         "L": "t_wall_metal",
