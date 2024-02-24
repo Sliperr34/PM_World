@@ -9,7 +9,7 @@
     "known_by_u": false,
     "size": 0,
     "power": 0,
-    "food_supply": 115200,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 75000000,
     "currency": "pm_money",
     "price_rules": [
@@ -28,7 +28,7 @@
     "known_by_u": false,
     "size": 80,
     "power": 100,
-    "food_supply": 115200,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 75000000,
     "currency": "pm_money",
     "price_rules": [
@@ -49,7 +49,7 @@
     "known_by_u": false,
     "size": 15,
     "power": 0,
-    "food_supply": 115200,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 75000000,
     "currency": "pm_money",
     "price_rules": [
@@ -69,7 +69,7 @@
     "known_by_u": false,
     "size": 50,
     "power": 0,
-    "food_supply": 115200,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 75000000,
     "currency": "pm_money",
     "price_rules": [
@@ -89,7 +89,7 @@
     "known_by_u": false,
     "size": 200,
     "power": 0,
-    "food_supply": 115200,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 75000000,
     "currency": "pm_money",
     "price_rules": [

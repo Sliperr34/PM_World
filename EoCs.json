@@ -127,8 +127,8 @@
     "id": "well_random",
     "effect": {
       "weighted_list_eocs": [
-        [ { "id": "well_hook_eff1", "effect": { "run_eocs": "well_effect" } }, { "const": 18 } ],
-        [ { "id": "well_hook_abd1", "effect": [ { "run_eocs": "well_abduct" } ] }, { "const": 1 } ]
+        [ { "id": "well_hook_eff1", "effect": { "run_eocs": "well_effect" } }, 18 ],
+        [ { "id": "well_hook_abd1", "effect": { "run_eocs": "well_abduct" } }, 1 ]
       ]
     }
   },
@@ -137,8 +137,8 @@
     "id": "wellcherry_random",
     "effect": {
       "weighted_list_eocs": [
-        [ { "id": "well_hook_eff2", "effect": { "run_eocs": "wellcherry_effect" } }, { "const": 18 } ],
-        [ { "id": "well_hook_abd2", "effect": [ { "run_eocs": "well_abduct" } ] }, { "const": 1 } ]
+        [ { "id": "well_hook_eff2", "effect": { "run_eocs": "wellcherry_effect" } }, 18 ],
+        [ { "id": "well_hook_abd2", "effect": { "run_eocs": "well_abduct" } }, 1 ]
       ]
     }
   },
@@ -147,8 +147,8 @@
     "id": "wellgrape_random",
     "effect": {
       "weighted_list_eocs": [
-        [ { "id": "well_hook_eff3", "effect": { "run_eocs": "wellgrape_effect" } }, { "const": 18 } ],
-        [ { "id": "well_hook_abd3", "effect": [ { "run_eocs": "well_abduct" } ] }, { "const": 1 } ]
+        [ { "id": "well_hook_eff3", "effect": { "run_eocs": "wellgrape_effect" } }, 18 ],
+        [ { "id": "well_hook_abd3", "effect": { "run_eocs": "well_abduct" } }, 1 ]
       ]
     }
   },
