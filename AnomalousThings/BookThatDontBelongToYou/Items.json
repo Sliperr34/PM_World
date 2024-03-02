@@ -12,5 +12,32 @@
     "material": [ "flesh" ],
     "color": "red",
     "use_action": { "type": "effect_on_conditions", "effect_on_conditions": [ { "id": "skin_book_eoc" } ] }
+  },
+  {
+    "id": "skin_prophecy_evoked",
+    "type": "GENERIC",
+    "name": { "str": "<color_blue>Skin Prophecy</color>" },
+    "description": "Pinkish book, which seems to be made from human remains, specially skin, bones and other tissues. The open book has bloody marks and contain runic symbols on the pages. Now it pulsating with energy.",
+    "symbol": "?",
+    "weight": "1780 g",
+    "volume": "650 ml",
+    "longest_side": "28 cm",
+    "looks_like": "story_book",
+    "material": [ "flesh" ],
+    "color": "red"
+  },
+  {
+    "type": "furniture",
+    "id": "f_flesh_pedestal",
+    "name": "flesh pedestal",
+    "symbol": "{",
+    "description": "Looks like construct of flesh and bones. Definetly ominous",
+    "color": "red",
+    "move_cost_mod": -1,
+    "coverage": 30,
+    "required_str": 3000,
+    "flags": [ "TRANSPARENT", "CONTAINER", "PLACE_ITEM", "ORGANIC", "BLOCKSDOOR" ],
+    "max_volume": "3 L",
+    "bash": { "str_min": 3000, "str_max": 3000, "sound": "crack!", "sound_fail": "tck." }
   }
 ]

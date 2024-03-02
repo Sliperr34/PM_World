@@ -159,6 +159,11 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "test_field_spawn",
+    "effect": [ { "u_set_field": "fd_blue_electricity", "radius": 10, "outdoor_only": false, "intensity": 6 } ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "test_location_finder_mission",
     "effect": [ { "assign_mission": "TEST_FIND" } ]
   }

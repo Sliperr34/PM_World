@@ -27,12 +27,12 @@
       { "damage_type": "cut", "amount": 6, "armor_penetration": 10 },
       { "damage_type": "blue_elec", "amount": 3, "armor_penetration": 0 }
     ],
-    "special_attacks": [  ],
+    "special_attacks": [ { "id": "dog_start", "type": "spell", "spell_data": { "id": "dog_fight_start", "min_level": 1 }, "cooldown": 15 } ],
     "dodge": 5,
     "families": [ "prof_wp_abnos0", "prof_wp_abnos1", "prof_wp_abnos2", "prof_wp_abnos3" ],
     "vision_day": 50,
     "vision_night": 50,
-    "death_function": { "corpse_type": "NO_CORPSE" },
+    "death_function": { "message": "You hear howl and electric crackle!", "corpse_type": "NO_CORPSE" },
     "flags": [
       "SEES",
       "HEARS",
@@ -86,7 +86,22 @@
       { "damage_type": "cut", "amount": 6, "armor_penetration": 10 },
       { "damage_type": "blue_elec", "amount": 3, "armor_penetration": 0 }
     ],
-    "special_attacks": [  ],
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "dog_cleave",
+        "cooldown": 25,
+        "damage_max_instance": [ { "damage_type": "cut", "amount": 28 } ]
+      },
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "dog_cleave",
+        "cooldown": 25,
+        "damage_max_instance": [ { "damage_type": "cut", "amount": 28 } ]
+      }
+    ],
     "dodge": 5,
     "families": [ "prof_wp_abnos0", "prof_wp_abnos1", "prof_wp_abnos2", "prof_wp_abnos3" ],
     "vision_day": 50,

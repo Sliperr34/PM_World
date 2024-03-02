@@ -42,7 +42,8 @@
       "NOGIB",
       "ELECTRIC",
       "PATH_AVOID_FALL",
-      "HIT_AND_RUN"
+      "HIT_AND_RUN",
+      "IMMOBILE"
     ],
     "armor": {
       "electric": 1000,

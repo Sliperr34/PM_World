@@ -1,3 +1,38 @@
 [
-  
+  {
+    "id": "dog_fight_start",
+    "type": "SPELL",
+    "name": { "str": "Dog agro" },
+    "description": "This trigger start of Alleyway Watchdog battle",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
+    "valid_targets": [ "ground", "hostile" ],
+    "max_level": 1,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 6,
+    "max_range": 6,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "difficulty": -20,
+    "base_casting_time": 1,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "death_eoc"
+  },
+  {
+    "id": "dog_first_phase",
+    "type": "SPELL",
+    "name": { "str": "Dog first phase" },
+    "description": "Death effect for Alleyway Watchdog , summons first phase version ",
+    "valid_targets": [ "ground", "self" ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "difficulty": -20,
+    "flags": [ "SILENT", "HOSTILE_SUMMON", "PERMANENT", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "summon",
+    "effect_str": "mon_watchdog",
+    "min_aoe": 0,
+    "max_aoe": 0
+  }
 ]

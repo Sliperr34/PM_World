@@ -54,7 +54,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "4" ] },
         "cooldown": 45,
-        "monster_message": "%1$s placed a fire sphere near you!"
+        "monster_message": "%1$s placed a fire symbol near you!"
       },
       {
         "id": "prophet_summon_fire_sphere_2",
@@ -62,7 +62,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "3" ] },
         "cooldown": 25,
-        "monster_message": "%1$s placed a fire sphere near you!"
+        "monster_message": "%1$s placed a fire symbol near you!"
       },
       {
         "id": "prophet_summon_fire_sphere_3",
@@ -70,7 +70,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "2" ] },
         "cooldown": 15,
-        "monster_message": "%1$s placed a fire sphere near you!"
+        "monster_message": "%1$s placed a fire symbol near you!"
       },
       {
         "id": "prophet_summon_fire_sphere_4",
@@ -78,7 +78,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "1" ] },
         "cooldown": 9,
-        "monster_message": "%1$s placed a fire sphere near you!"
+        "monster_message": "%1$s placed a fire symbol near you!"
       },
       {
         "id": "prophet_attack_powerful",
@@ -181,8 +181,8 @@
   {
     "id": "mon_fire_sphere_1",
     "type": "MONSTER",
-    "name": { "str": "Fire sphere" },
-    "description": "",
+    "name": { "str": "mysterious fiery symbol" },
+    "description": "Just a bunch of symbols. Seems like it doesnt make any sense... try to come closer to inspect!",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
@@ -257,7 +257,7 @@
         "type": "spell",
         "spell_data": { "id": "fire_sphere_spell_2", "min_level": 1 },
         "cooldown": 10,
-        "monster_message": "%1$s placed a huge fire sphere near you!"
+        "monster_message": "%1$s placed a huge fire symbol near you!"
       },
       {
         "id": "prophet_mark_attack2",
@@ -271,7 +271,7 @@
         "type": "spell",
         "spell_data": { "id": "p_2_scatter_spell_v1", "min_level": 1 },
         "cooldown": 35,
-        "monster_message": ""
+        "monster_message": "%1$s placed a few fire symbols near you!"
       }
     ],
     "dodge": 3,
@@ -306,8 +306,8 @@
     "//note": "Copied from mon_fire_sphere_1 , except for its special_attacks and death_function ",
     "id": "mon_fire_sphere_2",
     "type": "MONSTER",
-    "name": { "str": "big fire sphere" },
-    "description": "It will explode anytime!",
+    "name": { "str": "big mysterious fiery symbols" },
+    "description": "A whole script that will turn this place in to crematorium.",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
@@ -346,8 +346,8 @@
   {
     "id": "mon_scatter_v1",
     "type": "MONSTER",
-    "name": { "str": "Fire sphere" },
-    "description": "fire sphere",
+    "name": { "str": "mysterious fiery symbol" },
+    "description": "Air fluctate near this symbol. Maybe you shouldn't stay near? ",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
