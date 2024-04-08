@@ -36,7 +36,7 @@
     "price": 220000,
     "price_postapoc": 18900,
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 160 } ],
-    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK" ],
+    "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK", "SLOW_WIELD" ],
     "techniques": [ "WBLOCK_1", "WIDE", "BRUTAL", "SWEEP" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 2 ] ],
