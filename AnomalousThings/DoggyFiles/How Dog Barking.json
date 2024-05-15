@@ -100,6 +100,13 @@
         "id": "dog_cleave",
         "cooldown": 25,
         "damage_max_instance": [ { "damage_type": "cut", "amount": 28 } ]
+      },
+      {
+        "id": "dogo_howl",
+        "type": "spell",
+        "spell_data": { "id": "spell_howl", "min_level": 1 },
+        "cooldown": 5,
+        "monster_message": "The howl stuns you!"
       }
     ],
     "dodge": 5,
