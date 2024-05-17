@@ -10,7 +10,7 @@
         "sprite_height": 128,
         "sprite_offset_x": -80,
         "sprite_offset_y": -96,
-        "tiles": [ { "id": "mon_watchdog", "fg": 1 } ]
+        "tiles": [ { "id": "mon_watchdog", "fg": 1 }, { "id": "overlay_effect_blue_charge", "fg": 3 } ]
       }
     ]
   }

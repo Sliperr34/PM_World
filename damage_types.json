@@ -28,7 +28,8 @@
     "material_required": false,
     "magic_color": "blue",
     "mon_difficulty": true,
-    "derived_from": [ "electric", 0.9 ]
+    "derived_from": [ "electric", 0.9 ],
+    "ondamage_eocs": [ { "id": "eoc_elec_zapped", "effect": { "u_add_effect": "zapped", "duration": 2 } } ]
   },
   {
     "id": "blue_elec",
@@ -48,7 +49,8 @@
     "material_required": false,
     "magic_color": "blue",
     "mon_difficulty": true,
-    "derived_from": [ "electric", 0.6 ]
+    "derived_from": [ "electric", 0.6 ],
+    "ondamage_eocs": [ { "id": "eoc_elec_zapped2", "effect": { "u_add_effect": "zapped", "duration": 5 } } ]
   },
   {
     "id": "purple_elec",
@@ -68,7 +70,8 @@
     "material_required": false,
     "magic_color": "red",
     "mon_difficulty": true,
-    "derived_from": [ "electric", 0.1 ]
+    "derived_from": [ "electric", 0.1 ],
+    "ondamage_eocs": [ { "id": "eoc_elec_zapped3", "effect": { "u_add_effect": "zapped", "duration": 35 } } ]
   },
   {
     "id": "red_elec",

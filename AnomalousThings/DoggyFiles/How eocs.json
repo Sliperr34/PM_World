@@ -8,5 +8,21 @@
     "type": "effect_on_condition",
     "id": "death_eoc",
     "effect": [ "npc_die", { "u_spawn_monster": "mon_watchdog", "real_count": 1, "min_radius": 2, "max_radius": 4 } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "blue_charge",
+    "name": [ "Blue charge" ],
+    "desc": [ "You feel energized by some unknown force." ],
+    "max_intensity": 1,
+    "int_dur_factor": 60,
+    "max_duration": "24 h",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eoc_blue_charge",
+    "condition": { "math": [ "u_monsters_nearby('mon_telepole', 'radius': '30')", ">=", "2" ] },
+    "effect": [ { "u_add_effect": "blue_charge", "duration": "24 h" } ]
   }
 ]
