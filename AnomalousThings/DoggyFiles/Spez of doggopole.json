@@ -121,7 +121,7 @@
     "difficulty": 0,
     "effect": "effect_on_condition",
     "flags": [ "NON_MAGICAL", "SILENT" ],
-    "effect_str": "death_transfer_hp"
+    "effect_str": "EOC_dog_transition_ph1"
   },
   {
     "type": "SPELL",
