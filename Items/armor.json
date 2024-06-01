@@ -178,7 +178,7 @@
     "looks_like": "duster",
     "color": "brown",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 9, 13 ] },
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 9, 16 ] },
       { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 7 ] },
       {
         "covers": [ "leg_l", "leg_r" ],
@@ -348,7 +348,7 @@
     "id": "zw_spads",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "sturdy shoulder pad", "str_pl": "pairs of sturdy shoulderpads" },
+    "name": { "str": "sturdy shoulder pads", "str_pl": "pairs of sturdy shoulderpads" },
     "description": "A shoulder pad made of steel, unusualy sturdy.Two yellow lines painted on it.",
     "weight": "1510 g",
     "volume": "1450 ml",
@@ -422,7 +422,7 @@
     "armor": [
       {
         "covers": [ "arm_l", "arm_r" ],
-        "encumbrance": 3,
+        "encumbrance": 4,
         "coverage": 90,
         "cover_melee": 90,
         "cover_ranged": 95,
