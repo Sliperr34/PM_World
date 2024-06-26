@@ -11,7 +11,7 @@
     "looks_like": "story_book",
     "material": [ "flesh" ],
     "color": "red",
-    "use_action": { "type": "effect_on_conditions", "effect_on_conditions": [ { "id": "skin_book_eoc" } ] }
+    "use_action": { "type": "effect_on_conditions", "effect_on_conditions": [ "skin_book_eoc" ] }
   },
   {
     "id": "skin_prophecy_evoked",
