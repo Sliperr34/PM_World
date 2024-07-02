@@ -1,5 +1,5 @@
 [
-{
+  {
     "type": "npc",
     "id": "alpha_npc",
     "name_unique": "Alpha",
@@ -8,15 +8,10 @@
     "class": "NC_ALPHA",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 21,
-	"height": 183,
-	"personality": {
-    "aggression": -2,
-    "bravery":  8,
-    "collector":  -4,
-    "altruism":  -5
-  },
+    "chat": "TALK_BLANK",
+    "age": 21,
+    "height": 183,
+    "personality": { "aggression": -2, "bravery": 8, "collector": -4, "altruism": -5 },
     "faction": "l_corp"
   },
   {
@@ -29,15 +24,10 @@
     "attitude": 0,
     "mission": 7,
     "chat": "TALK_WALTER",
-	"age": 45,
-	"height": 188,
-	"personality": {
-    "aggression": 0,
-    "bravery":  40,
-    "collector":  0,
-    "altruism":  0
-  },
-  "mission_offered": "TEST_FIND_LC",
+    "age": 45,
+    "height": 188,
+    "personality": { "aggression": 0, "bravery": 40, "collector": 0, "altruism": 0 },
+    "mission_offered": "TEST_FIND_LC",
     "faction": "zwei_association"
   },
   {
@@ -49,15 +39,10 @@
     "class": "NC_ZW_ISADORA",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 22,
-	"height": 177,
-	"personality": {
-    "aggression": 1,
-    "bravery":  30,
-    "collector":  5,
-    "altruism":  5
-  },
+    "chat": "TALK_BLANK",
+    "age": 22,
+    "height": 177,
+    "personality": { "aggression": 1, "bravery": 30, "collector": 5, "altruism": 5 },
     "faction": "zwei_association"
   },
   {
@@ -69,171 +54,166 @@
     "class": "NC_ZW_JULIA",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 21,
-	"height": 172,
-	"personality": {
-    "aggression": -3,
-    "bravery":  15,
-    "collector":  -3,
-    "altruism":  8
-  },
+    "chat": "TALK_BLANK",
+    "age": 21,
+    "height": 172,
+    "personality": { "aggression": -3, "bravery": 15, "collector": -3, "altruism": 8 },
     "faction": "zwei_association"
   },
   {
     "type": "npc",
     "id": "zwei_rec_npc",
-	"name_unique": "Heyri",
+    "name_unique": "Heyri",
     "name_suffix": "receptionist of Zwei",
     "class": "NC_ZW_FIXER",
-	"gender": "female",
+    "gender": "female",
     "attitude": 0,
     "mission": 7,
     "chat": "TALK_REC_ZW",
     "faction": "zwei_association"
   },
   {
-  "type": "npc",
-  "id": "zwei_train_npc",
-"name_unique": "Anatoly",
-  "name_suffix": "trainer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "male",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_office1_npc",
-"name_unique": "Lux",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "female",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_office2_npc",
-"name_unique": "Malkolm",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "male",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_office3_npc",
-"name_unique": "Lethitia \"Pie\"",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "female",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_game_npc",
-"name_unique": "Fill",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "male",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_sick_npc",
-"name_unique": "Morales",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "female",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_reader_npc",
-"name_unique": "Marshal",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "male",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_mariya_npc",
-"name_unique": "Mariya",
-  "name_suffix": "fixer of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "female",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-{
-  "type": "npc",
-  "id": "zwei_newbie_npc",
-"name_unique": "Barry",
-  "name_suffix": "newbie of Zwei",
-  "class": "NC_ZW_FIXER",
-"gender": "male",
-  "attitude": 0,
-  "mission": 7,
-  "chat": "TALK_CIVILIAN_PANIC",
-  "faction": "zwei_association"
-},
-   {
     "type": "npc",
-    "id": "zwei_doc_npc",
-	"name_unique": "Heart",
-    "name_suffix": "doctor of Zwei",
+    "id": "zwei_train_npc",
+    "name_unique": "Anatoly",
+    "name_suffix": "trainer of Zwei",
     "class": "NC_ZW_FIXER",
-	"gender": "female",
+    "gender": "male",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_office1_npc",
+    "name_unique": "Lux",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "female",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_office2_npc",
+    "name_unique": "Malkolm",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "male",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_office3_npc",
+    "name_unique": "Lethitia \"Pie\"",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "female",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_game_npc",
+    "name_unique": "Fill",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "male",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_sick_npc",
+    "name_unique": "Morales",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "female",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_reader_npc",
+    "name_unique": "Marshal",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "male",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_mariya_npc",
+    "name_unique": "Mariya",
+    "name_suffix": "fixer of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "female",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_newbie_npc",
+    "name_unique": "Barry",
+    "name_suffix": "newbie of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "male",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "faction": "zwei_association"
+  },
+  {
+    "type": "npc",
+    "id": "zwei_doc_npc",
+    "name_unique": "Heart",
+    "name_suffix": "doctor of Zwei",
+    "class": "NC_ZW_FIXER",
+    "gender": "female",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
     "faction": "zwei_association"
   },
   {
     "type": "npc",
     "id": "zwei_food_npc",
-	"name_unique": "Maxvell",
+    "name_unique": "Maxvell",
     "name_suffix": "cook of Zwei",
-	"gender": "male",
-    "class": "NC_ZW_FIXER",
+    "gender": "male",
+    "class": "NC_ZW_FIXER_FOOD",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_ZWEI_FOOD",
     "faction": "zwei_association"
   },
   {
     "type": "npc",
     "id": "zwei_meet_npc",
-	"name_unique": "NGrer",
+    "name_unique": "NGrer",
     "name_suffix": "coordinator of Zwei",
     "class": "NC_ZW_FIXER",
-	"gender": "male",
+    "gender": "male",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "zwei_association"
   },
   {
@@ -243,7 +223,7 @@
     "class": "NC_ZW_FIXER",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "zwei_association"
   },
   {
@@ -255,46 +235,41 @@
     "class": "NC_RC_JIKAN",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 24,
-	"height": 182,
-	"personality": {
-    "aggression": 3,
-    "bravery":  15,
-    "collector":  3,
-    "altruism":  -10
-  },
+    "chat": "TALK_BLANK",
+    "age": 24,
+    "height": 182,
+    "personality": { "aggression": 3, "bravery": 15, "collector": 3, "altruism": -10 },
     "faction": "rusted_chains"
   },
   {
     "type": "npc",
     "id": "rc_npc_bouncer",
-	"name_unique": "Elizabeth",
-	"gender": "female",
+    "name_unique": "Elizabeth",
+    "gender": "female",
     "name_suffix": "bouncer of Rusted Chains",
     "class": "NC_RC",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "rusted_chains"
   },
   {
     "type": "npc",
     "id": "rc_npc_bartender",
-	"name_unique": "Horney",
-	"gender": "female",
+    "name_unique": "Horney",
+    "gender": "female",
     "name_suffix": "bartender of Rusted Chains",
     "class": "NC_RC",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "rusted_chains"
   },
   {
     "type": "npc",
     "id": "rc_duglas",
-	"gender": "male",
-  "name_unique": "Duglas",
+    "gender": "male",
+    "name_unique": "Duglas",
     "name_suffix": "member of Rusted Chains",
     "class": "NC_RC",
     "attitude": 0,
@@ -305,8 +280,8 @@
   {
     "type": "npc",
     "id": "rc_lim",
-	"gender": "male",
-  "name_unique": "Lim",
+    "gender": "male",
+    "name_unique": "Lim",
     "name_suffix": "member of Rusted Chains",
     "class": "NC_RC",
     "attitude": 0,
@@ -317,96 +292,81 @@
   {
     "type": "npc",
     "id": "rc_npc",
-	"gender": "male",
+    "gender": "male",
     "name_suffix": "member of Rusted Chains",
     "class": "NC_RC",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "rusted_chains"
   },
   {
     "type": "npc",
     "id": "sayo_npc",
-	"name_unique": "Sayo",
+    "name_unique": "Sayo",
     "name_suffix": "captain of Kurokumo",
     "class": "NC_KR_SAYO",
-	"gender": "female",
+    "gender": "female",
     "attitude": 0,
     "mission": 7,
-		"age": 22,
-	"height": 173,  
-  "str": 9,
-  "dex": 13,
-  "int": 9,
-  "per": 11,
-	"personality": {
-    "aggression": 3,
-    "bravery":  10,
-    "collector":  10,
-    "altruism":  -30
-  },
-    "chat": "TALK_CIVILIAN_PANIC",
+    "age": 22,
+    "height": 173,
+    "str": 9,
+    "dex": 13,
+    "int": 9,
+    "per": 11,
+    "personality": { "aggression": 3, "bravery": 10, "collector": 10, "altruism": -30 },
+    "chat": "TALK_BLANK",
     "faction": "kurokumo"
   },
   {
     "type": "npc",
     "id": "yang_npc",
-	"name_unique": "Yang",
+    "name_unique": "Yang",
     "name_suffix": "member of Kurokumo",
     "class": "NC_KR_YANG",
-	"gender": "male",
+    "gender": "male",
     "attitude": 0,
     "mission": 7,
-		"age": 29,
-	"height": 185,  
-  "str": 10,
-  "dex": 11,
-  "int": 8,
-  "per": 9,
-	"personality": {
-    "aggression": 4,
-    "bravery":  12,
-    "collector":  8,
-    "altruism":  -30
-  },
-    "chat": "TALK_CIVILIAN_PANIC",
+    "age": 29,
+    "height": 185,
+    "str": 10,
+    "dex": 11,
+    "int": 8,
+    "per": 9,
+    "personality": { "aggression": 4, "bravery": 12, "collector": 8, "altruism": -30 },
+    "chat": "TALK_BLANK",
     "faction": "kurokumo"
   },
   {
     "type": "npc",
     "id": "gin_npc",
-	"name_unique": "Gin",
+    "name_unique": "Gin",
     "name_suffix": "member of Kurokumo",
     "class": "NC_KR_GIN",
-	"gender": "male",
+    "gender": "male",
     "attitude": 0,
     "mission": 7,
-		"age": 32,
-	"height": 186,  
-  "str": 11,
-  "dex": 10,
-  "int": 10,
-  "per": 10,
-	"personality": {
-    "aggression": 0,
-    "bravery":  20,
-    "collector":  3,
-    "altruism":  -10
-  },
-    "chat": "TALK_CIVILIAN_PANIC",
+    "age": 32,
+    "height": 186,
+    "str": 11,
+    "dex": 10,
+    "int": 10,
+    "per": 10,
+    "personality": { "aggression": 0, "bravery": 20, "collector": 3, "altruism": -10 },
+    "chat": "TALK_BLANK",
     "faction": "kurokumo"
   },
   {
     "type": "npc",
     "id": "kr_cook_npc",
-	"name_unique": "Omori",
-	"gender": "female",
+    "name_unique": "Omori",
+    "gender": "female",
     "name_suffix": "cook of Kurokumo",
     "class": "NC_KR",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "kurokumo"
   },
   {
@@ -416,7 +376,7 @@
     "class": "NC_KR",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
+    "chat": "TALK_BLANK",
     "faction": "kurokumo"
   },
   {
@@ -428,16 +388,11 @@
     "class": "NC_WHITE",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 23,
-	"height": 183,
-	"personality": {
-    "aggression": -2,
-    "bravery":  8,
-    "collector":  -4,
-    "altruism":  -5
-  },
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "age": 23,
+    "height": 183,
+    "personality": { "aggression": -2, "bravery": 8, "collector": -4, "altruism": -5 },
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -448,26 +403,21 @@
     "class": "NC_AKIHIRO",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 21,
-	"height": 161,
-	"personality": {
-    "aggression": -2,
-    "bravery":  5,
-    "collector":  -4,
-    "altruism":  -5
+    "chat": "TALK_BLANK",
+    "age": 21,
+    "height": 161,
+    "personality": { "aggression": -2, "bravery": 5, "collector": -4, "altruism": -5 },
+    "faction": "l_corp"
   },
-   "faction": "l_corp"
-  },
-    {
+  {
     "type": "npc",
     "id": "lc_sci_npc",
     "name_suffix": "scientist",
     "class": "NC_LC_SCIENTIST",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -478,10 +428,10 @@
     "class": "NC_LC_SCIENTIST",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "faction": "l_corp"
   },
-   {
+  {
     "type": "npc",
     "id": "isao_npc",
     "name_unique": "Isao",
@@ -490,16 +440,11 @@
     "class": "NC_ISAO",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 26,
-	"height": 176,
-	"personality": {
-    "aggression": 1,
-    "bravery":  80,
-    "collector":  0,
-    "altruism":  0
-  },
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "age": 26,
+    "height": 176,
+    "personality": { "aggression": 1, "bravery": 80, "collector": 0, "altruism": 0 },
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -508,8 +453,8 @@
     "class": "NC_LC_GUARD",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -519,8 +464,8 @@
     "class": "NC_LC_GUARD",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -531,16 +476,11 @@
     "class": "NC_LC_ZONYA",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 19,
-	"height": 158,
-	"personality": {
-    "aggression": -10,
-    "bravery":  0,
-    "collector":  -2,
-    "altruism":  20
-  },
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "age": 19,
+    "height": 158,
+    "personality": { "aggression": -10, "bravery": 0, "collector": -2, "altruism": 20 },
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -549,8 +489,8 @@
     "class": "NC_LC_CLERK",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -561,8 +501,8 @@
     "class": "NC_LC_CLERK",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "faction": "l_corp"
   },
   {
     "type": "npc",
@@ -573,15 +513,10 @@
     "class": "NC_BONGBONG",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_CIVILIAN_PANIC",
-	"age": 20,
-	"height": 168,
-	"personality": {
-    "aggression": 0,
-    "bravery":  0,
-    "collector":  0,
-    "altruism":  0
-  },
-   "faction": "l_corp"
+    "chat": "TALK_BLANK",
+    "age": 20,
+    "height": 168,
+    "personality": { "aggression": 0, "bravery": 0, "collector": 0, "altruism": 0 },
+    "faction": "l_corp"
   }
 ]

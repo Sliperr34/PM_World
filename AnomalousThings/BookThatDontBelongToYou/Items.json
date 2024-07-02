@@ -36,7 +36,7 @@
     "move_cost_mod": -1,
     "coverage": 30,
     "required_str": 3000,
-    "flags": [ "TRANSPARENT", "CONTAINER", "PLACE_ITEM", "ORGANIC", "BLOCKSDOOR" ],
+    "flags": [ "TRANSPARENT", "PLACE_ITEM", "ORGANIC", "BLOCKSDOOR" ],
     "max_volume": "3 L",
     "bash": { "str_min": 3000, "str_max": 3000, "sound": "crack!", "sound_fail": "tck." }
   }
