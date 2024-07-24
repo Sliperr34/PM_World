@@ -1,37 +1,32 @@
 [
-    {
-        "id": "TEST_FIND_LC2",
-        "type": "mission_definition",
-        "name": { "str": "Investigate the Mysterious Bunker" },
-        "goal": "MGOAL_KILL_MONSTER_TYPE",
-        "start": {
-                "update_mapgen": {
-                  "place_monster": [
-                    { "group": "PECCA_GENERAL", "x": [ 12, 15 ], "y": [ 12, 15 ], "repeat": [ 21, 29 ] }
-                  ]
-                },
-          "assign_mission_target": {
-            "om_terrain": "lc_surface",
-            "om_special": "Lob_corp",
-            "reveal_radius": 1,
-            "random": false,
-            "search_range": 2400
-          }
-        },
-        "end": { "effect": [ { "u_add_var": "u_scouted_bunker", "type": "mission", "context": "completed", "value": "yes" } ] },
-        "difficulty": 2,
-        "value": 0,
-        "origins": [ "ORIGIN_SECONDARY" ],
-        "dialogue": {
-          "describe": "-",
-          "offer": "-",
-          "accepted": "-",
-          "rejected": "-",
-          "advice": "-",
-          "inquire": "What've ye scolted, then, o'the clunker?",
-          "success": "Aye and fine!  One for the paper-claim an' so.  An I'm ken, these'n's could be a right thorn.  For ol' Rubik's sake, let's hope they be'n't for to drive us out o' your otherlands.",
-          "success_lie": "Hm.  The escoltin' our way be less.  This'n'll yark at the Scythy mayhaps.",
-          "failure": "Fine an' fine.  Come back to this'n if you like to try again."
-        }
-      }
+  {
+    "id": "MISSION_KILL_MONSTERS_EXAMPLE",
+    "type": "mission_definition",
+    "name": "Exterminate the Vermin",
+    "description": "Clear out the infestation of rats in the abandoned warehouse.",
+    "goal": "MGOAL_KILL_MONSTERS",
+    "difficulty": 2,
+    "value": 5000,
+    "monster_type": "mon_rat",
+    "monster_kill_goal": 5,
+    "invisible_on_complete": false,
+    "start": {
+      "effect": [  ],
+      "assign_mission_target": { "om_terrain": "warehouse", "reveal_radius": 2 },
+      "update_mapgen": { "place_monster": [ { "monster": "mon_rat", "x": [ 12, 15 ], "y": [ 12, 15 ], "repeat": [ 5, 10 ] } ] }
+    },
+    "origins": [ "ORIGIN_ANY_NPC" ],
+    "followup": "MISSION_NONE",
+    "dialogue": {
+      "describe": "Those pesky rats are getting out of hand.  We need someone to deal with them.",
+      "offer": "There's an abandoned warehouse a couple blocks over that's become overrun with rats.  If you could clear out at least five of those vermin, we'd be much obliged.",
+      "accepted": "I'll get right on it.",
+      "rejected": "Sorry, I'm busy.",
+      "advice": "They're just rats, any blunt weapon should do the trick.",
+      "inquire": "How's the rat extermination going?",
+      "success": "You got rid of all those rats? You're a lifesaver!",
+      "success_lie": "Don't lie to me, I can still hear them squeaking!",
+      "failure": "Well, I guess those rats are our problem now..."
+    }
+  }
 ]
