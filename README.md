@@ -1,10 +1,10 @@
-**Greetings from the PM World mod team!**
+### Greetings from the PM World mod team!
 
 This mod adds a variety of content from the Project Moon games, namely from games such as Lobotom Corporation, Library of Ruin and Limbus Company.
-We strive to convey the experience of these in CDDA; in the mod you will be able to meet familiar characters, familiar places and mechanics. This mod created for experimental branch of CDDA!
+We strive to convey the experience of these in CDDA; in the mod you will be able to meet familiar characters, familiar places and mechanics. **This mod created for experimental branch of CDDA!**
 ***
 
-**Fight the manifestation of sin's!**
+### Fight the manifestation of sin's!
 
 The mod adds pekkatulums, they will appear on par with other zombies, but over time there will be more of them
 Each of them has their own special attack patterns and you will have to figure out how to deal with them.
@@ -12,7 +12,7 @@ Each of them has their own special attack patterns and you will have to figure o
 
 ***
 
-**Interact with the factions and choose the one you like!**
+### Interact with the factions and choose the one you like!
 
 Currently 4 factions have been added:
 
@@ -26,12 +26,12 @@ Currently 4 factions have been added:
 
 ***
 
-**3 martial arts styles and faction equipment!**
+### 3 martial arts styles and faction equipment!
 
 As you complete missions and increase your trust level, you will be able to purchase unique faction gear and learn their unique fighting style, further increasing your lethality with that faction's chosen weapon.
 ![image](https://github.com/user-attachments/assets/50cdc727-5953-4832-8863-d394eb276598)
 ***
-**Several unique anomalies!**
+### Several unique anomalies!
 
 Some have escaped, some are still waiting for their time. Each one will give you unique combat experience! You should not underestimate their level of danger, because you are still (for now) a ordinary person. In the future, you will have the opportunity to get E.G.O from defeated anomalies, but for now, adapt and gain combat experience
 
@@ -42,11 +42,11 @@ Some have escaped, some are still waiting for their time. Each one will give you
 (cutie)
 
 ***
-***ATTENTION!!!***
+### ATTENTION!!!
 
-***Please note that the mod may have unfinished features!***
+### ***Please note that the mod may have unfinished features!***
 ***
-**FAQ**
+### FAQ
 
 Q: *Will other factions, anomalies, items, etc. be added in the future?*
 
@@ -69,7 +69,7 @@ A: *Of course! It would help us a lot. For this, please contact me personally. Y
 
 ***
 
-**COPYRIGHT DISCLAIMER**
+### COPYRIGHT DISCLAIMER
 
 **This mod utilizes characters, settings, story elements, and other materials from the games "Lobotomy Corporation", "Library of Ruina", and "Limbus Company", which are the intellectual property of Project Moon. I do not own or claim any ownership over these materials.
 All rights to the content featured in this mod belong to Project Moon.**
