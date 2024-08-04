@@ -1,7 +1,7 @@
 **Greetings from the PM World mod team!**
 
 This mod adds a variety of content from the Project Moon games, namely from games such as Lobotom Corporation, Library of Ruin and Limbus Company.
-We strive to convey the experience of these in CDDA; in the mod you will be able to meet familiar characters, familiar places and mechanics.
+We strive to convey the experience of these in CDDA; in the mod you will be able to meet familiar characters, familiar places and mechanics. This mod created for experimental branch of CDDA!
 ***
 
 **Fight the manifestation of sin's!**
