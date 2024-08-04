@@ -67,4 +67,12 @@ Q: *I like your mod! Could I join your team?*
 
 A: *Of course! It would help us a lot. For this, please contact me personally. You need motivation and preferably knowledge of Json, and what you don't know, we will teach you.*
 
+***
 
+**COPYRIGHT DISCLAIMER**
+
+**This mod utilizes characters, settings, story elements, and other materials from the games "Lobotomy Corporation", "Library of Ruina", and "Limbus Company", which are the intellectual property of Project Moon. I do not own or claim any ownership over these materials.
+All rights to the content featured in this mod belong to Project Moon.
+
+
+This mod is created purely for non-commercial and entertainment purposes. It is distributed free of charge and is available for download by anyone.**
