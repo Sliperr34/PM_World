@@ -23,6 +23,36 @@
     "melee_damage": { "bash": 24, "cut": 37 }
   },
   {
+    "id": "zw_bscabbard",
+    "type": "ARMOR",
+    "name": { "str": "Zwei back scabbard" },
+    "description": "A leather scabbard, big enough for almost any sword.  Designed to be strapped to the back, it's very difficult to draw from without considerable practice.  Activate to sheath/draw a sword.",
+    "weight": "2290 g",
+    "volume": "2250 ml",
+    "price": "150 USD",
+    "price_postapoc": "30 USD 50 cent",
+    "material": [ "pm_leather", "b_polymer" ],
+    "symbol": "[",
+    "looks_like": "baldric",
+    "color": "brown",
+    "material_thickness": 1,
+    "pocket_data": [
+      {
+        "magazine_well": "2750 ml",
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "5 kg",
+        "max_item_length": "190 cm",
+        "holster": true,
+        "moves": 80,
+        "flag_restriction": [ "SHEATH_SWORD" ]
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Sheath sword", "holster_msg": "You sheath your %s" },
+    "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY", "TARDIS" ],
+    "armor": [ { "encumbrance": [ 6, 14 ], "coverage": 20, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ],
+    "melee_damage": { "bash": 4 }
+  },
+  {
     "id": "zw_is_zweihander",
     "type": "TOOL",
     "category": "weapons",
@@ -44,6 +74,36 @@
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 2 ] ],
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "bash": 31, "cut": 45 }
+  },
+  {
+    "id": "zw_bscabbard_iz",
+    "type": "ARMOR",
+    "name": { "str": "Zwei big back scabbard" },
+    "description": "A leather scabbard, big enough for *any* sword.  Designed to be strapped to the back, it's very difficult to draw from without considerable practice.  Activate to sheath/draw a sword.",
+    "weight": "2890 g",
+    "volume": "2250 ml",
+    "price": "290 USD",
+    "price_postapoc": "130 USD 50 cent",
+    "material": [ "pm_leather", "b_polymer" ],
+    "symbol": "[",
+    "looks_like": "baldric",
+    "color": "brown",
+    "material_thickness": 2,
+    "pocket_data": [
+      {
+        "magazine_well": "4250 ml",
+        "max_contains_volume": "5250 ml",
+        "max_contains_weight": "6 kg",
+        "max_item_length": "231 cm",
+        "holster": true,
+        "moves": 80,
+        "flag_restriction": [ "SHEATH_SWORD" ]
+      }
+    ],
+    "use_action": { "type": "holster", "holster_prompt": "Sheath sword", "holster_msg": "You sheath your %s" },
+    "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY", "TARDIS" ],
+    "armor": [ { "encumbrance": [ 6, 14 ], "coverage": 20, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ],
+    "melee_damage": { "bash": 4 }
   },
   {
     "id": "zw_longsword",
@@ -223,7 +283,7 @@
     "ascii_picture": "katana",
     "color": "light_gray",
     "looks_like": "katana",
-    "price": 98000,
+    "price": "400 USD",
     "price_postapoc": 4500,
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
     "repairs_with": [ "c_steel_item" ],
@@ -231,7 +291,7 @@
     "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 21 ] ],
-    "weapon_category": [ "JAPANESE_SWORDS", "MEDIUM_SWORDS" ],
+    "weapon_category": [ "MEDIUM_SWORDS" ],
     "melee_damage": { "bash": 5, "cut": 43 }
   },
   {
@@ -247,7 +307,7 @@
     "ascii_picture": "katana",
     "color": "light_gray",
     "looks_like": "katana",
-    "price": 98000,
+    "price": "800 USD",
     "price_postapoc": 4500,
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
     "repairs_with": [ "c_steel_item" ],
@@ -255,7 +315,7 @@
     "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 21 ] ],
-    "weapon_category": [ "JAPANESE_SWORDS", "MEDIUM_SWORDS" ],
+    "weapon_category": [ "MEDIUM_SWORDS" ],
     "melee_damage": { "bash": 5, "cut": 51 }
   },
   {

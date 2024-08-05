@@ -273,9 +273,9 @@
         "                 N///1....NNN       N`````N N..N,  , ,,N            N===6=====6==               ",
         "                 N0//1....  N       N```````NTTN ,,  ,,N          NNN=====***=====N             ",
         "                 NNNNNNNNN TNNNNNNNNNNNNNNNNN==NNNNNNNNNNNNNNNNNNNN6N=============N             ",
-        "                         N   ==0====0 ======== ========0====0====0 =T===1=====1===N             ",
-        "                         N= ===000000==== === == ======000000=== 0 =T======**=====N             ",
-        "                 NNNNNNNNNN  NNNNNNNNNNNNNNNN =NNNNNNNNNNNNNNNN NNN6N==== ========N             ",
+        "                         N   ==0====0 ======== ========0====0====08=T===1=====1===N             ",
+        "                         N= ===000000==== === == ======000000=== 08=T======**=====N             ",
+        "                 NNNNNNNNNN  NNNNNNNNNNNNNNNN =NNNNNNNNNNNNNNNN NN?6N==== ========N             ",
         "                 N0//1....T=N               NT N                  NNN======*==== =N             ",
         "                 N///1....NNN                                       N== 1===*=1===N             ",
         "                 N///1.....qN                                       N=== =**======N             ",
@@ -322,6 +322,7 @@
         "N": "t_wall_bulkhead",
         "L": "t_wall_metal",
         "l": "t_strconc_wall_w",
+        "?": "t_l_corp_card_reader_he",
         "W": "t_brick_wall",
         "z": "t_strconc_wall_r",
         "T": "t_door_metal_bulkhead_c",
@@ -343,7 +344,8 @@
         "4": "t_floor_olight",
         "5": "t_carpet_metal_red",
         "6": "t_current_trans",
-        "2": "t_marble_floor"
+        "2": "t_marble_floor",
+        "8": "t_concrete_wall_y"
       },
       "furniture": {
         "q": "f_locker",

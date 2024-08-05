@@ -13,7 +13,7 @@
     },
     "responses": [
       {
-        "text": "Hello, my name is %s. I'm here to do some work.",
+        "text": "Hello. I'm here to do some work.",
         "topic": "TALK_MISSION_LIST",
         "condition": { "not": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" } },
         "effect": { "u_add_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" }

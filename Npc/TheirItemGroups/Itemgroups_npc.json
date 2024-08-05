@@ -403,5 +403,110 @@
       { "item": "sandwich_cheese_grilled", "count-min": 1, "count-max": 5, "prob": 15 },
       { "item": "imperial_stout", "count-min": 2, "count-max": 8, "prob": 10 }
     ]
+  },
+  {
+    "id": "zw_pecca",
+    "type": "item_group",
+    "//": "mission",
+    "subtype": "collection",
+    "entries": [
+      { "item": "lc_documents", "count-min": 1, "count-max": 1 },
+      { "item": "pm_money_10", "count-min": 7, "count-max": 20 }
+    ]
+  },
+  {
+    "id": "zw_gear_shop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "zw_jacket", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_coat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_spads", "count-min": 1, "count-max": 4, "prob": 100 },
+      { "item": "zw_epads", "count-min": 1, "count-max": 4, "prob": 100 },
+      { "item": "zw_armguard", "count-min": 1, "count-max": 4, "prob": 100 },
+      { "item": "pm_shirt_yel", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_gloves", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_boots", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_tie_necktie", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_trouses", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_zweihander", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_is_zweihander", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_longsword", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_mace", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_bscabbard_iz", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "zw_bscabbard", "count-min": 1, "count-max": 1, "prob": 100 }
+    ]
+  },
+  {
+    "id": "kr_gear_shop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "kr_katana", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "kr_shirt", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "kr_yukata", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_boots", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "kr_eyepatch", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "kr_trouses", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "kr_suit", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "kr_blazer", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_tie_necktie", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_trouses", "count-min": 1, "count-max": 1, "prob": 100 }
+    ]
+  },
+  {
+    "id": "rc_gear_shop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "rc_chains", "count-min": 1, "count-max": 1, "prob": 100 } ]
+  },
+  {
+    "id": "lc_gear_shop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt_yel", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_blouse_green", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_shirt", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_shirt_brown", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_tie_necktie", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_trouses", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_trouses_brown", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_labcoat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lc_labcoat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lc_trouses", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lc_vest", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_brown_shoes", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lab_bat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lab_tknife", "count-min": 1, "count-max": 5, "prob": 100 },
+      { "item": "lc_zayin", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lc_teth", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "lc_he", "count-min": 1, "count-max": 1, "prob": 100 }
+    ]
+  },
+  {
+    "id": "other_gear_shop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "alpha_coat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "ayin_coat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "angela_coat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "carmen_coat", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_barette_angela", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_barette_ayin", "count-min": 1, "count-max": 1, "prob": 100 },
+      { "item": "pm_barette_carmen", "count-min": 1, "count-max": 1, "prob": 100 }
+    ]
+  },
+  {
+    "id": "ahn_shop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_money_10", "count-min": 20, "count-max": 75, "prob": 100 },
+      { "item": "pm_money_1", "count-min": 25, "count-max": 100, "prob": 100 },
+      { "item": "pm_money_100", "count-min": 10, "count-max": 25, "prob": 100 },
+      { "item": "pm_money", "count-min": 15, "count-max": 50, "prob": 100 }
+    ]
   }
 ]

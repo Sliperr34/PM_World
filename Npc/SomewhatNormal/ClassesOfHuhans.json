@@ -72,6 +72,9 @@
     "worn_override": "Alpha_worn",
     "carry_override": "Alpha_carry",
     "weapon_override": "Alpha_weapon",
+    "shopkeeper_item_group": [ { "group": "other_gear_shop", "trust": 0, "rigid": true } ],
+    "restock_interval": "5 days",
+    "shopkeeper_price_rules": [ { "markup": 5 } ],
     "traits": [
       { "group": "Hair_Gray_Alpha" },
       [ "SKIN_LIGHT", 100 ],
@@ -238,6 +241,9 @@
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
     ],
+    "shopkeeper_item_group": [ { "group": "zw_gear_shop", "trust": 50, "rigid": true } ],
+    "restock_interval": "5 days",
+    "shopkeeper_price_rules": [ { "markup": 3 } ],
     "bionics": [  ]
   },
   {
@@ -437,6 +443,9 @@
     "carry_override": "Walter_carry",
     "weapon_override": "Rc_weapon",
     "traits": [ [ "jikan_hair", 100 ], [ "SKIN_LIGHT", 100 ], { "group": "Eye_hazel" } ],
+    "shopkeeper_item_group": [ { "group": "rc_gear_shop", "trust": 0, "rigid": true } ],
+    "restock_interval": "5 days",
+    "shopkeeper_price_rules": [ { "markup": 3 } ],
     "bionics": [  ]
   },
   {
@@ -529,6 +538,9 @@
     "carry_override": "Zero_carry",
     "weapon_override": "Kr_weapon",
     "traits": [ [ "SKIN_LIGHT", 100 ], { "group": "Eye_brown" }, { "group": "ponytail_black" } ],
+    "shopkeeper_item_group": [ { "group": "kr_gear_shop", "trust": 0, "rigid": true } ],
+    "restock_interval": "5 days",
+    "shopkeeper_price_rules": [ { "markup": 3 } ],
     "bionics": [  ]
   },
   {
@@ -741,9 +753,11 @@
     ],
     "worn_override": "White_worn",
     "carry_override": "Alpha_carry",
+    "shopkeeper_item_group": [ { "group": "ahn_shop", "trust": 0, "rigid": true } ],
+    "restock_interval": "5 days",
+    "shopkeeper_price_rules": [ { "markup": 1 } ],
     "weapon_override": "Alpha_weapon",
     "traits": [
-      [ "hair_gray_short", 100 ],
       [ "SKIN_LIGHT", 100 ],
       [ "SPIRITUAL", 100 ],
       [ "PSYCHOPATH", 100 ],
@@ -752,6 +766,7 @@
       [ "INT_UP_2", 100 ],
       [ "MARTIAL_ARTS_KRAV", 100 ],
       { "group": "Eye_amber" },
+      { "group": "Hair_Gray" },
       { "trait": "IGNORE_SOUND" },
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
@@ -1225,14 +1240,17 @@
     "worn_override": "Lc_clerk_worn",
     "carry_override": "Lc_sci_carry",
     "weapon_override": "Lc_guard_weapon",
+    "shopkeeper_item_group": [ { "group": "lc_gear_shop", "trust": 0, "rigid": true } ],
+    "restock_interval": "5 days",
+    "shopkeeper_price_rules": [ { "markup": 5 } ],
     "traits": [
       [ "bongbong_hair", 100 ],
+      [ "eye_bong", 100 ],
       [ "SKIN_LIGHT", 100 ],
       [ "SPIRITUAL", 100 ],
       [ "PSYCHOPATH", 100 ],
       [ "BEAUTIFUL", 100 ],
       [ "FAST_REFLEXES", 100 ],
-      { "group": "Eye_gray" },
       { "trait": "IGNORE_SOUND" },
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
