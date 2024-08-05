@@ -6,7 +6,7 @@ We strive to convey the experience of these in CDDA; in the mod you will be able
 
 ### Fight the manifestation of sin's!
 
-The mod adds pekkatulums, they will appear on par with other zombies, but over time there will be more of them
+The mod adds peccatulums, they will appear on par with other zombies, but over time there will be more of them
 Each of them has their own special attack patterns and you will have to figure out how to deal with them.
 ![Peccatulums](https://github.com/user-attachments/assets/b88f0847-c0e9-4a87-bb55-ec1ddba71bc5)
 
