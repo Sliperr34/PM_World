@@ -1,32 +1,67 @@
 [
   {
-    "id": "MISSION_KILL_MONSTERS_EXAMPLE",
+    "id": "MISSION_KILL_PECCA_ZW",
     "type": "mission_definition",
-    "name": "Exterminate the Vermin",
-    "description": "Clear out the infestation of rats in the abandoned warehouse.",
-    "goal": "MGOAL_KILL_MONSTERS",
+    "name": "Population control",
+    "description": "Kill two peccatula",
+    "goal": "MGOAL_KILL_MONSTER_SPEC",
     "difficulty": 2,
     "value": 5000,
-    "monster_type": "mon_rat",
-    "monster_kill_goal": 5,
+    "monster_species": "PECCATULA",
+    "monster_kill_goal": 2,
     "invisible_on_complete": false,
     "start": {
-      "effect": [  ],
-      "assign_mission_target": { "om_terrain": "warehouse", "reveal_radius": 2 },
-      "update_mapgen": { "place_monster": [ { "monster": "mon_rat", "x": [ 12, 15 ], "y": [ 12, 15 ], "repeat": [ 5, 10 ] } ] }
+      "assign_mission_target": { "om_terrain": "field", "random": true, "search_range": 60, "min_distance": 8, "z": 0 },
+      "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 2, "target": true } ] }
     },
     "origins": [ "ORIGIN_ANY_NPC" ],
+    "followup": "MISSION_FIND_BOOK_GUIDE_ZW",
+    "dialogue": {
+      "describe": "We need you to eliminate the threat.",
+      "offer": "We've spotted a few peccatula, we need you to deal with them as they are threatening to disrupt our patrol routes. This is your first mission here, so don't expect payment in cash. Your reward is my trust.",
+      "accepted": "Good.",
+      "rejected": "Well, we'll have to assign our people to this now.",
+      "advice": "First time fighting them? I'd recommend some decent gear, since you're unlikely to get by with a kitchen knife or stick. Unless you're skilled enough... anything can happen.",
+      "inquire": "How's the threat extermination going?",
+      "success": "You got rid of all those peccatula? Well done.",
+      "success_lie": "Ugh... get out and get the job done.",
+      "failure": "Well, I guess those peccatula are our problem now..."
+    }
+  },
+  {
+    "id": "MISSION_FIND_BOOK_GUIDE_ZW",
+    "type": "mission_definition",
+    "name": "A guide to Cataclysm",
+    "description": "Find Zombie Survival Guide",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 5000,
+    "item": "ZSG",
+    "invisible_on_complete": false,
+    "start": {
+      "assign_mission_target": { "om_terrain": "s_bookstore", "random": true, "search_range": 120, "min_distance": 8, "z": 0 },
+      "update_mapgen": {
+        "place_monster": [
+          { "group": "PECCA_GENERAL", "x": [ 1, 18 ], "y": [ 1, 18 ], "repeat": [ 2, 7 ] },
+          { "group": "GROUP_ZOMBIE_UPGRADE", "x": [ 1, 18 ], "y": [ 1, 18 ], "repeat": [ 15, 48 ] }
+        ],
+        "om_terrain": "s_bookstore",
+        "place_item": [ { "item": "ZSG", "x": 3, "y": 10 } ]
+      }
+    },
+    "end": { "effect": [ { "u_sell_item": "ZSG" }, { "u_spawn_item": "pm_money_1", "count": 20 }, { "u_faction_rep": 100 } ] },
+    "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_NONE",
     "dialogue": {
-      "describe": "Those pesky rats are getting out of hand.  We need someone to deal with them.",
-      "offer": "There's an abandoned warehouse a couple blocks over that's become overrun with rats.  If you could clear out at least five of those vermin, we'd be much obliged.",
-      "accepted": "I'll get right on it.",
-      "rejected": "Sorry, I'm busy.",
-      "advice": "They're just rats, any blunt weapon should do the trick.",
-      "inquire": "How's the rat extermination going?",
-      "success": "You got rid of all those rats? You're a lifesaver!",
-      "success_lie": "Don't lie to me, I can still hear them squeaking!",
-      "failure": "Well, I guess those rats are our problem now..."
+      "describe": "I've heard from some people about a potentially useful book. Can you find it?",
+      "offer": "I heard that local bookstores sometimes sell a book about surviving a zombie apocalypse. It sounds ridiculous, because if people had information about this event so easily accessible, how did it come to this? But I think it's worth checking. I'll tell you which store I saw such a book in, all you have to do is bring it, or give them your copy if you have one.",
+      "accepted": "The right decision, the reward this time will be appropriate.",
+      "rejected": "Too bad. I think such knowledge would be useful to us, and the reward would allow you to increase your chances of survival.",
+      "advice": "I don't know what you might encounter there, but I don't think it's anything serious. Came, took, left. Like going to the store.",
+      "inquire": "Should I tell you how to get to the library? Do you need an invitation or something?",
+      "success": "Thank you. But the book seems useless in this situation. Well, here you go, it's a reward for your efforts.",
+      "success_lie": "Ugh... get out and get the job done.",
+      "failure": "You even cant bring a book from the bookstore"
     }
   }
 ]

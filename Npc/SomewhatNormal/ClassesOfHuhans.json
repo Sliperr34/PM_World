@@ -171,7 +171,6 @@
       [ "walter_npc_hair", 100 ],
       [ "SKIN_LIGHT", 100 ],
       [ "FAST_REFLEXES", 100 ],
-      [ "MARTIAL_ZWEI", 100 ],
       { "group": "Eye_blue_walter" },
       { "trait": "IGNORE_SOUND" },
       { "trait": "NO_BASH" },
@@ -234,7 +233,6 @@
     "traits": [
       [ "isadora_hair", 100 ],
       [ "SKIN_LIGHT", 100 ],
-      [ "MARTIAL_ZWEI", 100 ],
       { "group": "Eye_amber" },
       { "trait": "IGNORE_SOUND" },
       { "trait": "NO_BASH" },
@@ -288,7 +286,6 @@
     "traits": [
       [ "julia_hair", 100 ],
       [ "SKIN_LIGHT", 100 ],
-      [ "MARTIAL_ZWEI", 100 ],
       { "group": "Eye_blue" },
       { "trait": "IGNORE_SOUND" },
       { "trait": "NO_BASH" },
@@ -339,7 +336,7 @@
     "worn_override": "Zwei_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Zwei_weapon",
-    "traits": [ [ "MARTIAL_ZWEI", 100 ], { "group": "Appearance_demographics" } ],
+    "traits": [ { "group": "Appearance_demographics" } ],
     "bionics": [  ]
   },
   {
@@ -385,7 +382,7 @@
     "worn_override": "Zwei_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Zwei_weapon",
-    "traits": [ [ "MARTIAL_ZWEI", 100 ], { "group": "Appearance_demographics" } ],
+    "traits": [ { "group": "Appearance_demographics" } ],
     "bionics": [  ],
     "shopkeeper_item_group": [
       { "group": "zw_food_shop1", "rigid": true },
@@ -394,7 +391,7 @@
       { "group": "zw_food_shop4", "trust": 40, "rigid": true }
     ],
     "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "price": 500 } ]
+    "shopkeeper_price_rules": [ { "markup": 3 } ]
   },
   {
     "type": "npc_class",
@@ -439,7 +436,7 @@
     "worn_override": "Rc_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Rc_weapon",
-    "traits": [ [ "MARTIAL_RC", 100 ], [ "jikan_hair", 100 ], [ "SKIN_LIGHT", 100 ], { "group": "Eye_hazel" } ],
+    "traits": [ [ "jikan_hair", 100 ], [ "SKIN_LIGHT", 100 ], { "group": "Eye_hazel" } ],
     "bionics": [  ]
   },
   {
@@ -485,7 +482,7 @@
     "worn_override": "Rc_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Rc_weapon",
-    "traits": [ [ "MARTIAL_RC", 100 ], { "group": "Appearance_demographics" } ],
+    "traits": [ { "group": "Appearance_demographics" } ],
     "bionics": [  ]
   },
   {
@@ -531,7 +528,7 @@
     "worn_override": "Kr_sayo_worn",
     "carry_override": "Zero_carry",
     "weapon_override": "Kr_weapon",
-    "traits": [ [ "MARTIAL_KR", 100 ], [ "SKIN_LIGHT", 100 ], { "group": "Eye_brown" }, { "group": "ponytail_black" } ],
+    "traits": [ [ "SKIN_LIGHT", 100 ], { "group": "Eye_brown" }, { "group": "ponytail_black" } ],
     "bionics": [  ]
   },
   {
@@ -577,7 +574,7 @@
     "worn_override": "Kr_yang_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Kr_weapon",
-    "traits": [ [ "MARTIAL_KR", 100 ], [ "SKIN_LIGHT", 100 ], [ "yang_hair", 100 ], { "group": "Eye_brown" } ],
+    "traits": [ [ "SKIN_LIGHT", 100 ], [ "yang_hair", 100 ], { "group": "Eye_brown" } ],
     "bionics": [  ]
   },
   {
@@ -623,7 +620,7 @@
     "worn_override": "Kr_gin_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Kr_weapon",
-    "traits": [ [ "MARTIAL_KR", 100 ], [ "SKIN_LIGHT", 100 ], [ "gin_hair", 100 ], { "group": "Eye_brown" } ],
+    "traits": [ [ "SKIN_LIGHT", 100 ], [ "gin_hair", 100 ], { "group": "Eye_brown" } ],
     "bionics": [  ]
   },
   {
@@ -669,7 +666,7 @@
     "worn_override": "Kr_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Kr_weapon",
-    "traits": [ [ "MARTIAL_KR", 100 ], [ "SKIN_LIGHT", 100 ], { "group": "Appearance_demographics" }, { "group": "Hair_Any" } ],
+    "traits": [ [ "SKIN_LIGHT", 100 ], { "group": "Appearance_demographics" }, { "group": "Hair_Any" } ],
     "bionics": [  ]
   },
   {
