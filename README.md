@@ -48,22 +48,22 @@ Some have escaped, some are still waiting for their time. Each one will give you
 ***
 ### FAQ
 
-Q: *Will other factions, anomalies, items, etc. be added in the future?*
+Q: ***Will other factions, anomalies, items, etc. be added in the future?***
 
 A: *Of course! I'm a huge fan of what I'm working on, and I'd like to add as much as possible. But my priority is integrity and complexity. The development of the mod will be divided into "Cycles", each of which will focus on a specific large fragment of development, and at its end it will be decided what to add next. The decision will be made personally by me, but I will definitely ask and find out what the players would like!*
 
 
-Q: *I don't like X part of the mod, could I remove it from the game?*
+Q: ***I don't like X part of the mod, could I remove it from the game?***
 
 A: *When the mod is big enough I will make it modular, and you will be able to choose what to connect to it (factions, anomalies, mechanics)*
 
 
-Q: *I got acquainted with this mod earlier but its release time was too long, why?*
+Q: ***I got acquainted with this mod earlier but its release time was too long, why?***
 
 A: *The fact is that our team lives mainly in Ukraine, and due to military actions, missile attacks, power outages and other related problems, we could not maintain a stable development rhythm, which led to the current situation. We are very sorry and thank you for your understanding!*
 
 
-Q: *I like your mod! Could I join your team?*
+Q: ***I like your mod! Could I join your team?***
 
 A: *Of course! It would help us a lot. For this, please contact me personally. You need motivation and preferably knowledge of Json, and what you don't know, we will teach you.*
 
