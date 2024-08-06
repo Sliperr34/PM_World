@@ -45,6 +45,8 @@ Some have escaped, some are still waiting for their time. Each one will give you
 ### ATTENTION!!!
 
 ### ***Please note that the mod may have unfinished features!***
+![Enemies](https://github.com/user-attachments/assets/025f30cb-b058-46f3-846b-d9778cdfcd0a)
+
 ***
 ### FAQ
 
