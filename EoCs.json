@@ -185,19 +185,6 @@
       },
       { "text": "Press any key.", "topic": "COMP_REFUGEE_CENTER_MAIN" }
     ]
-  },
-  {
-    "id": "MISSION_REACH_ZWEI",
-    "type": "mission_definition",
-    "name": { "str": "Reach source of misterious broadcast" },
-    "goal": "MGOAL_GO_TO_TYPE",
-    "difficulty": 1,
-    "value": 0,
-    "start": {
-      "assign_mission_target": { "om_terrain": "zwei_office0", "om_special": "Zwei_main_office", "random": false, "search_range": 2400 }
-    },
-    "origins": [ "ORIGIN_COMPUTER" ],
-    "destination": "zwei_office0",
-    "end": { "effect": [ { "u_add_var": "found_zwei", "value": "yes" } ] }
   }
+  
 ]

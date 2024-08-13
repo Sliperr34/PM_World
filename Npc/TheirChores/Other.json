@@ -28,5 +28,19 @@
       "success_lie": "Hm.  The escoltin' our way be less.  This'n'll yark at the Scythy mayhaps.",
       "failure": "Fine an' fine.  Come back to this'n if you like to try again."
     }
+  },
+  {
+    "id": "MISSION_REACH_ZWEI",
+    "type": "mission_definition",
+    "name": { "str": "Reach the source of the mysterious broadcast" },
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "zwei_office0", "om_special": "Zwei_main_office", "random": false, "search_range": 2400 }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "zwei_office0",
+    "end": { "effect": [ { "u_add_var": "found_zwei", "value": "yes" } ] }
   }
 ]
