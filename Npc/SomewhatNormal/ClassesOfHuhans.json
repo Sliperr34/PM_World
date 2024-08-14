@@ -859,7 +859,7 @@
     "carry_override": "Lc_sci_carry",
     "weapon_override": "Lc_sci_weapon",
     "traits": [
-      [ "hair_black_medium", 100 ],
+      { "group": "Appearance_demographics" },
       [ "SKIN_LIGHT", 100 ],
       [ "PER_UP", 100 ],
       [ "FAST_REFLEXES", 100 ],
@@ -1002,7 +1002,7 @@
     "carry_override": "Lc_sci_carry",
     "weapon_override": "Lc_guard_weapon",
     "traits": [
-      [ "hair_red_long", 100 ],
+      { "group": "Appearance_demographics" },
       [ "SKIN_LIGHT", 100 ],
       [ "FAST_REFLEXES", 100 ],
       [ "MARTIAL_ARTS_KRAV", 100 ],
@@ -1118,7 +1118,7 @@
     "worn_override": "Lc_clerk_worn",
     "carry_override": "Lc_sci_carry",
     "weapon_override": "Lc_clerk_weapon",
-    "traits": [ { "group": "Eye_amber" }, [ "SKIN_PINK", 100 ], [ "hair_red_short", 100 ] ],
+    "traits": [ { "group": "Eye_amber" }, [ "SKIN_PINK", 100 ], { "group": "Appearance_demographics" } ],
     "bionics": [  ]
   },
   {

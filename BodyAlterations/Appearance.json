@@ -249,7 +249,7 @@
     "name": { "str": "Eyes of Bongbong" },
     "description": "Bongbong!",
     "points": 0,
-    "starting_trait": true,
+    "starting_trait": false,
     "valid": false,
     "player_display": true,
     "vanity": true,
