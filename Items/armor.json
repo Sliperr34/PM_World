@@ -525,7 +525,7 @@
     ],
     "warmth": 5,
     "material_thickness": 0.15,
-    "flags": [ "VARSIZE", "SUPER_FANCY"]
+    "flags": [ "VARSIZE", "SUPER_FANCY" ]
   },
   {
     "id": "pm_gloves",
@@ -627,7 +627,7 @@
     "weight": "421 g",
     "volume": "2 L",
     "price": 4900,
-   "price_postapoc": "70 USD",
+    "price_postapoc": "70 USD",
     "to_hit": 1,
     "material": [ "pm_cotton" ],
     "repairs_with": [ "pm_cotton_item" ],
@@ -899,7 +899,7 @@
     "weight": "50 g",
     "volume": "25 ml",
     "price": 40000,
-    "price_postapoc":"50 USD",
+    "price_postapoc": "50 USD",
     "material": [ "pm_cotton", "gold", "gemstone" ],
     "repairs_with": [ "pm_cotton_item" ],
     "symbol": "[",
@@ -935,6 +935,54 @@
     "symbol": "[",
     "color": "brown",
     "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
+  },
+  {
+    "type": "ARMOR",
+    "id": "ego_suit",
+    "name": { "str": "EGO Suit", "str_pl": "EGO Suits" },
+    "description": "A heavy suit of armor with plates protecting vital areas. Capable of contain EGO",
+    "weight": "15 kg",
+    "volume": "8 L",
+    "price": "12000 USD",
+    "material": [ "l_steel", "b_polymer", "l_cotton" ],
+    "symbol": "[",
+    "color": "white",
+    "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "ONLY_ONE", "NO_REPAIR" ],
+    "armor": [
+      {
+        "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
+        "encumbrance": 24,
+        "coverage": 100,
+        "material_thickness": 1,
+        "rigid_layer_only": true,
+        "layers": [ "NORMAL" ],
+        "specifically_covers": [
+          "torso_upper",
+          "torso_lower",
+          "arm_shoulder_l",
+          "arm_shoulder_r",
+          "arm_upper_l",
+          "arm_upper_r",
+          "arm_elbow_l",
+          "arm_elbow_r",
+          "arm_lower_l",
+          "arm_lower_r",
+          "leg_hip_l",
+          "leg_hip_r",
+          "leg_upper_l",
+          "leg_upper_r",
+          "leg_knee_l",
+          "leg_knee_r",
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "material": [
+          { "type": "b_polymer", "covered_by_mat": 30, "thickness": 3 },
+          { "type": "l_steel", "covered_by_mat": 40, "thickness": 4 },
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 2 }
+        ]
+      }
+    ]
   },
   {
     "id": "cuirass_lightplate_test",

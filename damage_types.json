@@ -6,7 +6,6 @@
     "physical": false,
     "material_required": false,
     "magic_color": "red",
-    "mon_difficulty": true,
     "derived_from": [ "heat", 0.4 ]
   },
   {
@@ -27,7 +26,6 @@
     "physical": false,
     "material_required": false,
     "magic_color": "blue",
-    "mon_difficulty": true,
     "derived_from": [ "electric", 0.9 ]
   },
   {
@@ -47,7 +45,6 @@
     "physical": false,
     "material_required": false,
     "magic_color": "blue",
-    "mon_difficulty": true,
     "derived_from": [ "electric", 0.6 ]
   },
   {
@@ -67,7 +64,6 @@
     "physical": false,
     "material_required": false,
     "magic_color": "red",
-    "mon_difficulty": true,
     "derived_from": [ "electric", 0.1 ]
   },
   {

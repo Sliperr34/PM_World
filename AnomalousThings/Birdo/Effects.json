@@ -43,5 +43,106 @@
     "name": [ "Execution" ],
     "desc": [ "You ded" ],
     "chance_kill": [ [ 100, 100 ] ]
+  },
+  {
+    "type": "enchantment",
+    "id": "feather_throwing_ench",
+    "has": "WIELD",
+    "condition": "ALWAYS",
+    "skills": [ { "value": "throw", "add": 2 } ],
+    "values": [
+      { "value": "THROW_STR", "add": { "math": [ "1 - u_vitamin('SIN') / 2" ] } },
+      { "value": "THROW_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } },
+      { "value": "MELEE_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "feather_red_throwing_ench",
+    "has": "WIELD",
+    "condition": "ALWAYS",
+    "skills": [ { "value": "throw", "add": 5 } ],
+    "values": [
+      { "value": "THROW_STR", "add": { "math": [ "3 - u_vitamin('SIN') " ] } },
+      { "value": "THROW_DAMAGE", "add": { "math": [ "0 + u_vitamin('SIN')" ] } },
+      { "value": "MELEE_DAMAGE", "add": { "math": [ "0 + u_vitamin('SIN') / 10" ] } },
+      { "value": "ARMOR_ALL", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } }
+    ]
+  },
+  {
+    "id": "SIN",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": "Sins",
+    "min": 0,
+    "max": 1000,
+    "rate": "86400 h",
+    "flags": [ "NO_DISPLAY" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "sin_on_npc_kill",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_character",
+    "effect": [ { "math": [ "u_vitamin('SIN')", "+=", "1" ] } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "beak_suit",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+      { "value": "DEXTERITY", "add": { "math": [ "-3 + u_vitamin('SIN') / 2 " ] } },
+      { "value": "SPEED", "add": { "math": [ " u_vitamin('SIN') * 1.5 " ] } },
+      { "value": "OVERKILL_DAMAGE", "multiply": { "math": [ "0 - u_vitamin('SIN') / 2 " ] } },
+      { "value": "STRENGTH", "add": { "math": [ "3 - u_vitamin('SIN') / 2 " ] } },
+      { "value": "KNOCKBACK_RESIST", "add": { "math": [ "100 - u_vitamin('SIN') * 10" ] } },
+      { "value": "KNOCKDOWN_RESIST", "add": { "math": [ "100 - u_vitamin('SIN') * 10" ] } },
+      { "value": "ARMOR_ALL", "multiply": { "math": [ " u_vitamin('SIN') / 20" ] } }
+    ],
+    "hit_me_effect": [ { "id": "sin_strike" } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "beak_pistol",
+    "has": "WIELD",
+    "condition": "ALWAYS",
+    "skills": [ { "value": "pistol", "add": 2 }, { "value": "gun", "add": 2 } ],
+    "values": [
+      { "value": "AVOID_FRIENDRY_FIRE", "add": { "math": [ "1 - u_vitamin('SIN') / 10 " ] } },
+      { "value": "OVERKILL_DAMAGE", "add": { "math": [ "0 - u_vitamin('SIN') * 5" ] } },
+      { "value": "RECOIL_MODIFIER", "add": { "math": [ "0 - u_vitamin('SIN') / 20" ] } },
+      { "value": "BLEED_STOP_BONUS", "add": { "math": [ "1 - u_vitamin('SIN')" ] } }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "beak_gift",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [
+      { "value": "SPEED", "add": { "math": [ "2 + u_vitamin('SIN') " ] } },
+      { "value": "ATTACK_SPEED", "multiply": { "math": [ "u_vitamin('SIN') / 30" ] } },
+      { "value": "CARRY_WEIGHT", "add": { "math": [ "0 - u_vitamin('SIN') * 1500" ] } }
+    ]
+  },
+  {
+    "id": "sin_strike",
+    "type": "SPELL",
+    "name": "Sin Strike",
+    "description": "Unleashes a blast of energy fueled by your inner sin.",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": { "math": [ "u_vitamin('SIN')" ] },
+    "max_damage": { "math": [ "u_vitamin('SIN')" ] },
+    "damage_increment": { "math": [ "u_vitamin('SIN')" ] },
+    "min_range": 3,
+    "max_range": 3,
+    "range_increment": 1,
+    "max_level": 10,
+    "difficulty": 0
   }
 ]

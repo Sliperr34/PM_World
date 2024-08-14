@@ -181,10 +181,20 @@
       {
         "text": "Make a note of the location.",
         "topic": "COMP_REFUGEE_CENTER_MAIN",
+        "condition": { "not": { "u_has_mission": "MISSION_REACH_ZWEI" } },
         "effect": [ { "assign_mission": "MISSION_REACH_ZWEI" } ]
       },
       { "text": "Press any key.", "topic": "COMP_REFUGEE_CENTER_MAIN" }
     ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "increase_sin",
+    "effect": [ { "math": [ "u_vitamin('SIN')", "+=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "decrease_sin",
+    "effect": [ { "math": [ "u_vitamin('SIN')", "-=", "1" ] } ]
   }
-  
 ]
