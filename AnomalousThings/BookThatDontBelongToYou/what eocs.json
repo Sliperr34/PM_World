@@ -12,13 +12,13 @@
         "decay_start": "4 hours",
         "capped": true
       },
-      { "u_message": "So... thats true", "type": "bad" },
+      { "u_message": "\"I have seen the truth...\"", "type": "bad" },
       { "u_add_var": "prophecy", "type": "temp_var", "context": "skin_book_readed", "value": "yes" },
       { "queue_eocs": "skin_up1", "time_in_future": "3 hours" }
     ],
     "false_effect": [
       {
-        "u_message": "You can't focus your eyes on the letters, and when you try to look at them, strange and surreal images appear in your head and disappear as soon as you look away"
+        "u_message": "Your eyes can't seem to focus on the text, and when you try to look at it, strange and surreal images appear in your head that disappears as soon as you look away"
       }
     ]
   },
@@ -34,7 +34,7 @@
         "decay_start": "3 hours",
         "capped": true
       },
-      { "u_message": "Knowledge about this can be useful...", "type": "good" },
+      { "u_message": "\"The truth of the world lies bare to me.\"", "type": "good" },
       { "queue_eocs": "skin_up2", "time_in_future": "3 hours" }
     ]
   },
@@ -50,7 +50,7 @@
         "decay_start": "2 hours",
         "capped": true
       },
-      { "u_message": "I could change the world with this", "type": "good" },
+      { "u_message": "\"With this... I could change the world!\"", "type": "good" },
       { "queue_eocs": "skin_up3", "time_in_future": "3 hours" }
     ]
   },
@@ -66,7 +66,7 @@
         "decay_start": "1 hours",
         "capped": true
       },
-      { "u_message": "I could correct all the mistakes that were made before me!", "type": "good" },
+      { "u_message": "\"No... I could save the world! I can fix everything!\"", "type": "good" },
       { "queue_eocs": "skin_down1", "time_in_future": "3 hours" }
     ]
   },
@@ -82,7 +82,7 @@
         "decay_start": "4 hours",
         "capped": true
       },
-      { "u_message": "But this will require a lot of effort", "type": "bad" },
+      { "u_message": "\"But... I shouldn't. No, I can't. The truth lies bare to me, and it can't change.\"", "type": "bad" },
       { "queue_eocs": "skin_down2", "time_in_future": "3 hours" }
     ]
   },
@@ -98,7 +98,7 @@
         "decay_start": "3 hours",
         "capped": true
       },
-      { "u_message": "And some sacrifices will need to be made...", "type": "bad" },
+      { "u_message": "\"Does... Does that mean the truth is meaningless? No, it can't be. It can't be all for nothing. Otherwise what would even be the point?\"", "type": "bad" },
       { "queue_eocs": "skin_down3", "time_in_future": "3 hours" }
     ]
   },
@@ -114,7 +114,7 @@
         "decay_start": "2 hours",
         "capped": true
       },
-      { "u_message": "I'm just an observer, and I feel like guilt is eating me up from inside", "type": "bad" },
+      { "u_message": "\"I REFUSE! I REFUSE THE TRUTH! IT CAN'T END LIKE THIS! I WON'T LET IT! I'LL MAKE MY OWN TRUTH! MY LIFE MUST HAVE MEANING!\"", "type": "bad" },
       { "queue_eocs": "skin_down4", "time_in_future": "3 hours" }
     ]
   },
@@ -132,7 +132,7 @@
       },
       { "queue_eocs": "skin_summon", "time_in_future": "124 minutes" },
       {
-        "u_message": "*thousands of thoughts fill your head, they clearly do not belong to you, you feel that someone who does not belong to this world has paid attention to you. His invisible pressence frightens you, you feel the cold of horror filling the insides of your bones*",
+        "u_message": "Thousands of foreign thoughts bombard your mind. You have caught the attention of Something that does not belong. The invisible presence sinks deep into your skin and fills you with terror.",
         "type": "bad"
       }
     ]
@@ -143,7 +143,7 @@
     "condition": { "math": [ "u_val('morale')", "<", "-1" ] },
     "effect": [
       {
-        "u_message": "A flash of red light blinds you. He has come and you feel his pressence. The prophecy came true",
+        "u_message": "A flash of red light blinds you. It has arrived and you suffocate under its presence. The Prophet of Skin has arrived.",
         "popup": true
       },
       { "u_spawn_monster": "mon_prophet", "real_count": 1, "min_radius": 4, "max_radius": 30 },
@@ -155,7 +155,7 @@
     ],
     "false_effect": [
       {
-        "u_message": "You managed to calm down, and the one who sould not have come lost sight of you. You should be carefull...",
+        "u_message": "You managed to calm down and push the Truth out of your mind. The presence has lost its sight on you. You should be more careful of what your read...",
         "popup": true
       },
       { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
