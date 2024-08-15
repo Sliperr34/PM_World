@@ -3,7 +3,7 @@
     "id": "mon_birb",
     "type": "MONSTER",
     "name": { "str": "<color_blue>Punishing Bird</color>" },
-    "description": "Small, white-feathered bird with small wings and a red mark on its chest.",
+    "description": "A small white-feathered bird with tiny wings and a red mark on its chest.",
     "default_faction": "abnormalities",
     "bodytype": "bird",
     "species": [ "ABNOS" ],
@@ -31,8 +31,8 @@
     "vision_night": 1,
     "anger_triggers": [ "STALK" ],
     "placate_triggers": [ "PLAYER_WEAK" ],
-    "death_function": { "effect": { "id": "enrage", "hit_self": true }, "message": "The %s enraged!", "corpse_type": "NO_CORPSE" },
-    "petfood": { "food": [ "BIRDFOOD" ], "feed": "The %s decided that you have no sins!", "pet": "The %s chirp." },
+    "death_function": { "effect": { "id": "enrage", "hit_self": true }, "message": "The %s is enraged!", "corpse_type": "NO_CORPSE" },
+    "petfood": { "food": [ "BIRDFOOD" ], "feed": "The %s has decided that you are sinless!", "pet": "The %s chirp." },
     "flags": [
       "SEES",
       "HEARS",
@@ -87,7 +87,7 @@
     "families": [ "prof_wp_abnos0", "prof_wp_abnos1", "prof_wp_abnos2" ],
     "vision_day": 50,
     "vision_night": 1,
-    "death_function": { "effect": { "id": "punished", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "The %s calms" },
+    "death_function": { "effect": { "id": "punished", "hit_self": true }, "corpse_type": "NO_CORPSE", "message": "The %s calms down" },
     "flags": [
       "SEES",
       "HEARS",
