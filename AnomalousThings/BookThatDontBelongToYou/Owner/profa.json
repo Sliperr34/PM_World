@@ -3,7 +3,7 @@
     "id": "mon_prophet",
     "type": "MONSTER",
     "name": { "str": "<color_blue>Skin Prophet</color>" },
-    "description": "The Skin Prophet is a maroon, emaciated humanoid with a bony body, a long spine, and a lumpy base instead of legs. It has three heads on long necks, each with a large, glowing orange eye with a red slit pupil. It has two arms holding a large book and a third arm with a fiery quill, constantly writing illegible glyphs described as future prophecies in the book.",
+    "description": "The Skin Prophet is a maroon, emaciated humanoid with a bony body, a long spine, and a lumpy base instead of legs. It has three heads on long necks, each with a large, glowing orange eye with a red slit pupil. It has two arms holding a large book and a third arm with a fiery quill, constantly writing illegible glyphs. You feel as if the Prophet is writing down the future.",
     "default_faction": "abnormalities",
     "bodytype": "human",
     "species": [ "ABNOS" ],
@@ -46,7 +46,7 @@
         "type": "spell",
         "spell_data": { "id": "p_marked", "min_level": 1 },
         "cooldown": 30,
-        "monster_message": "%1$s draw a symbol in air then you head ring!"
+        "monster_message": "%1$s draws a symbol in air that makes your head ring!"
       },
       {
         "id": "prophet_summon_fire_sphere_1",
@@ -54,7 +54,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "4" ] },
         "cooldown": 45,
-        "monster_message": "%1$s placed a fire symbol near you!"
+        "monster_message": "%1$s places a fire symbol near you!"
       },
       {
         "id": "prophet_summon_fire_sphere_2",
@@ -62,7 +62,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "3" ] },
         "cooldown": 25,
-        "monster_message": "%1$s placed a fire symbol near you!"
+        "monster_message": "%1$s places a fire symbol near you!"
       },
       {
         "id": "prophet_summon_fire_sphere_3",
@@ -70,7 +70,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "2" ] },
         "cooldown": 15,
-        "monster_message": "%1$s placed a fire symbol near you!"
+        "monster_message": "%1$s places a fire symbol near you!"
       },
       {
         "id": "prophet_summon_fire_sphere_4",
@@ -78,7 +78,7 @@
         "spell_data": { "id": "fire_sphere_spell_1", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", "==", "1" ] },
         "cooldown": 9,
-        "monster_message": "%1$s placed a fire symbol near you!"
+        "monster_message": "%1$s places a fire symbol near you!"
       },
       {
         "id": "prophet_attack_powerful",
@@ -86,7 +86,7 @@
         "spell_data": { "id": "prophet_powerful_short_spell", "min_level": 1 },
         "condition": { "math": [ "u_monsters_nearby('mon_candle', 'radius': 60)", ">=", "1" ] },
         "cooldown": 6,
-        "monster_message": "%1$s ignite air around you!"
+        "monster_message": "%1$s ignites the air around you!"
       }
     ],
     "dodge": 4,
@@ -123,7 +123,7 @@
     "id": "mon_candle",
     "type": "MONSTER",
     "name": { "str": "Candle" },
-    "description": "Candle of prophet",
+    "description": "The Candle of the Prophet. It is unlit, thanks to your efforts.",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
@@ -152,7 +152,7 @@
     "id": "mon_candle_lit",
     "type": "MONSTER",
     "name": { "str": "Lit Candle" },
-    "description": "Candle of prophet",
+    "description": "The Candle of the Prophet. It is lit, burning down the future.",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
@@ -182,7 +182,7 @@
     "id": "mon_fire_sphere_1",
     "type": "MONSTER",
     "name": { "str": "mysterious fiery symbol" },
-    "description": "Just a bunch of symbols. Seems like it doesnt make any sense... try to come closer to inspect!",
+    "description": "A bunch of odd glyphs. You can't understand it... maybe you should go closer to inspect it.",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
@@ -223,7 +223,7 @@
     "id": "mon_prophet_2",
     "type": "MONSTER",
     "name": { "str": "<color_blue>Skin Prophet</color>" },
-    "description": "The Skin Prophet is a maroon, emaciated humanoid with a bony body, a long spine, and a lumpy base instead of legs. It has three heads on long necks, each with a large, glowing orange eye with a red slit pupil. It has two arms holding a large book and a third arm with a fiery quill, constantly writing illegible glyphs described as future prophecies in the book.",
+    "description": "The Skin Prophet is a maroon, emaciated humanoid with a bony body, a long spine, and a lumpy base instead of legs. It has three heads on long necks, each with a large, glowing orange eye with a red slit pupil. It has two arms holding a large book and a third arm with a fiery quill, constantly writing illegible glyphs. You feel as if the Prophet is writing down the future.",
     "default_faction": "abnormalities",
     "bodytype": "human",
     "species": [ "ABNOS" ],
@@ -257,21 +257,21 @@
         "type": "spell",
         "spell_data": { "id": "fire_sphere_spell_2", "min_level": 1 },
         "cooldown": 10,
-        "monster_message": "%1$s placed a huge fire symbol near you!"
+        "monster_message": "%1$s places a huge fire symbol near you!"
       },
       {
         "id": "prophet_mark_attack2",
         "type": "spell",
         "spell_data": { "id": "p_marked", "min_level": 1 },
         "cooldown": 15,
-        "monster_message": "%1$s draw a symbol in air then you head ring!"
+        "monster_message": "%1$s draws a symbol in air that makes your head ring!"
       },
       {
         "id": "prophet_2_attack_scatter_v1",
         "type": "spell",
         "spell_data": { "id": "p_2_scatter_spell_v1", "min_level": 1 },
         "cooldown": 35,
-        "monster_message": "%1$s placed a few fire symbols near you!"
+        "monster_message": "%1$s places a few fire symbols near you!"
       }
     ],
     "dodge": 3,
@@ -307,7 +307,7 @@
     "id": "mon_fire_sphere_2",
     "type": "MONSTER",
     "name": { "str": "big mysterious fiery symbols" },
-    "description": "A whole script that will turn this place in to crematorium.",
+    "description": "A script made of unknown glyphs that will cremate the area around it.",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
@@ -347,7 +347,7 @@
     "id": "mon_scatter_v1",
     "type": "MONSTER",
     "name": { "str": "mysterious fiery symbol" },
-    "description": "Air fluctate near this symbol. Maybe you shouldn't stay near? ",
+    "description": "The air fluctates near this glyph. Maybe you shouldn't be near? ",
     "default_faction": "abnormalities",
     "bodytype": "blob",
     "species": [ "ABNOS" ],
