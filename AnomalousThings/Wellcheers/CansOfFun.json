@@ -14,7 +14,7 @@
     "quench": 20,
     "healthy": 3,
     "calories": 11,
-    "description": "Great and delicious Wellcheers! It quenches thirst wonderfully, is full of vitamins and is good for health! It never gets tired of drinking, and refreshes like a pleasant sea breeze. you can even hear the sound of waves when you drink this soda. There's definitely nothing to worry about.",
+    "description": "Experience the unrivaled refreshment of Wellcheers! Bursting with essential vitamins and crafted for ultimate hydration, this soda is your gateway to vitality. Each sip is like a cool ocean breeze, invigorating your senses with the sound of distant waves and the nostalgic scent of sea salt. It's pure, it's delightful, and there's absolutely nothing to worry about—just endless, refreshing pleasure in every can.",
     "price": 10000,
     "price_postapoc": 50,
     "material": [ "junk" ],
@@ -43,7 +43,7 @@
     "quench": 16,
     "healthy": 0,
     "calories": 32,
-    "description": "Great and delicious Wellcheers! It quenches thirst wonderfully, is full of vitamins and is good for health! It never gets tired of drinking, and refreshes like a pleasant sea breeze. you can even hear the sound of waves when you drink this soda. There's definitely nothing to worry about.",
+    "description": "Savor the tantalizing taste of Wellcheers Cherry, where the sweet and tangy essence of ripe cherries meets the legendary refreshment of Wellcheers. Packed with vitamins and bursting with flavor, it's more than just a drink—it's a juicy escape. With every sip, feel the thrill of cherry waves washing over you, leaving you rejuvenated and craving more. And don't worry, it's all perfectly safe... probably.",
     "price": 10000,
     "price_postapoc": 50,
     "material": [ "junk" ],
@@ -72,7 +72,7 @@
     "quench": 3,
     "healthy": 1,
     "calories": 121,
-    "description": "Great and delicious Wellcheers! It quenches thirst wonderfully, is full of vitamins and is good for health! It never gets tired of drinking, and refreshes like a pleasant sea breeze. you can even hear the sound of waves when you drink this soda. There's definitely nothing to worry about.",
+    "description": "Indulge in the rich, bold taste of Wellcheers Grape, a symphony of juicy grape goodness combined with the iconic refreshment of Wellcheers. Infused with vitamins and overflowing with robust flavor, this soda is your ticket to a grape-infused paradise. As you drink, the whispers of a vineyard breeze accompany each gulp, filling you with strength and delight. Relax, enjoy, and remember—there’s absolutely nothing suspicious about this extraordinary flavor.",
     "price": 10000,
     "price_postapoc": 50,
     "material": [ "junk" ],
@@ -91,7 +91,7 @@
     "type": "GENERIC",
     "category": "container",
     "name": { "str": "Wellcheers can" },
-    "description": "An aluminum can, like what soda comes in.",
+    "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers.",
     "looks_like": "can_drink",
     "weight": "13 g",
     "volume": "262 ml",
@@ -122,6 +122,7 @@
     "type": "GENERIC",
     "category": "container",
     "name": { "str": "Wellcheers can" },
+    "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in grape flavour.",
     "copy-from": "well_can"
   },
   {
@@ -129,6 +130,7 @@
     "type": "GENERIC",
     "category": "container",
     "name": { "str": "Wellcheers can" },
+    "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in cherry flavour.",
     "copy-from": "well_can"
   }
 ]
