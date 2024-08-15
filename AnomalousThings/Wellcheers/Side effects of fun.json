@@ -1,0 +1,129 @@
+[
+  {
+    "type": "enchantment",
+    "id": "tets_condition_ench",
+    "has": "WIELD",
+    "condition": { "math": [ "u_vitamin('SIN')", ">=", "1" ] },
+    "skills": [ { "value": "throw", "add": 9 } ],
+    "values": [
+      { "value": "THROW_STR", "add": { "math": [ "1 - u_vitamin('SIN') / 2" ] } },
+      { "value": "THROW_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } },
+      { "value": "MELEE_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } }
+    ]
+  },
+  {
+    "id": "test_book",
+    "type": "BOOK",
+    "category": "manuals",
+    "name": { "str": "TEST document", "str_pl": "TEST of O-02-56 document" },
+    "description": " ",
+    "weight": "230 g",
+    "volume": "250 ml",
+    "price": "4 USD 80 cent",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [ "paper" ],
+    "flags": [ "TRADER_AVOID" ],
+    "symbol": "?",
+    "relic_data": { "passive_effects": [ { "id": "tets_condition_ench" } ] },
+    "color": "red"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "sin_chose",
+    "effect": [
+      {
+        "run_eoc_selector": [ "aktivity_testing1", "aktivity_testing2" ],
+        "names": [ "Sin probably +", "Sin probably -" ],
+        "keys": [ "a", "b" ],
+        "title": "Грешим?",
+        "descriptions": [ "Increase sin or not", "Decrease sin or not" ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "test_weighted1",
+    "effect": { "weighted_list_eocs": [ [ "increase_sin", 5 ], [ "decrease_sin", 2 ] ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "test_weighted2",
+    "effect": { "weighted_list_eocs": [ [ "increase_sin", 2 ], [ "decrease_sin", 5 ] ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "aktivity_testing1",
+    "effect": { "u_assign_activity": "study_abno", "duration": "45 minutes" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "aktivity_testing2",
+    "effect": { "u_assign_activity": "study_abno2", "duration": "45 minutes" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "compare_string": [ "study_abno", { "context_val": "activity" } ] },
+    "effect": { "weighted_list_eocs": [ [ "increase_sin", 2 ], [ "decrease_sin", 5 ] ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete2",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "compare_string": [ "study_abno2", { "context_val": "activity" } ] },
+    "effect": { "weighted_list_eocs": [ [ "increase_sin", 5 ], [ "decrease_sin", 2 ] ] }
+  },
+  {
+    "id": "study_abno",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "studying",
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "id": "study_abno2",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "studying",
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "type": "recipe",
+    "category": "CC_PM",
+    "name": "test selector",
+    "id": "practice_pm_test_selector",
+    "description": "Lets fucking go",
+    "subcategory": "CSC_PM_EGO",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "activity_level": "NO_EXERCISE",
+    "time": "5 s",
+    "autolearn": true,
+    "components": [  ],
+    "result_eocs": [
+      {
+        "id": "sin_chose2",
+        "effect": [
+          {
+            "run_eoc_selector": [ "aktivity_testing1", "aktivity_testing2" ],
+            "names": [ "Sin probably +", "Sin probably -" ],
+            "keys": [ "a", "b" ],
+            "title": "Грешим?",
+            "descriptions": [ "Increase sin or not", "Decrease sin or not" ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -190,11 +190,11 @@
   {
     "type": "effect_on_condition",
     "id": "increase_sin",
-    "effect": [ { "math": [ "u_vitamin('SIN')", "+=", "1" ] } ]
+    "effect": [ { "math": [ "u_vitamin('SIN')", "+=", "1" ] }, { "u_message": "SINER!", "type": "bad" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "decrease_sin",
-    "effect": [ { "math": [ "u_vitamin('SIN')", "-=", "1" ] } ]
+    "effect": [ { "math": [ "u_vitamin('SIN')", "-=", "1" ] }, { "u_message": "UNSINER!", "type": "good" } ]
   }
 ]

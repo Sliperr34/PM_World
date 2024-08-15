@@ -294,7 +294,7 @@
   {
     "id": "skin_scar_face",
     "type": "mutation",
-    "name": { "str": "face scar" },
+    "name": { "str": "Face scar" },
     "description": "You have single scar at your face",
     "points": 0,
     "starting_trait": true,
@@ -306,7 +306,7 @@
   {
     "id": "skin_scar_hands",
     "type": "mutation",
-    "name": { "str": "hands scars" },
+    "name": { "str": "Hands scars" },
     "description": "You few scars at your hands",
     "points": 0,
     "starting_trait": true,
@@ -318,7 +318,7 @@
   {
     "id": "skin_scar_hands_face",
     "type": "mutation",
-    "name": { "str": "hands and face scars" },
+    "name": { "str": "Hands and face scars" },
     "description": "You few scars at your hands and face",
     "points": 0,
     "starting_trait": true,
@@ -330,7 +330,7 @@
   {
     "id": "skin_scars_face",
     "type": "mutation",
-    "name": { "str": "face scars" },
+    "name": { "str": "Face scars" },
     "description": "You few scars at your face",
     "points": 0,
     "starting_trait": true,
