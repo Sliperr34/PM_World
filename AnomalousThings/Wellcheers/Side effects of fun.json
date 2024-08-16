@@ -81,6 +81,8 @@
     "type": "activity_type",
     "activity_level": "NO_EXERCISE",
     "verb": "studying",
+    "interruptable": false,
+    "interruptable_with_kb": false,
     "refuel_fires": true,
     "auto_needs": true,
     "rooted": true,
@@ -124,6 +126,14 @@
           }
         ]
       }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "canceled_str_msg",
+    "effect": [
+      { "set_string_var": { "context_val": "canceled" }, "target_var": { "context_val": "canceled_str" } },
+      { "u_message": "Canceled value is: <context_val:canceled_str>" }
     ]
   }
 ]

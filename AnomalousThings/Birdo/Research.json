@@ -1,0 +1,508 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "beak_a_activity",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "beak_ego_a_1", "value": "true" } },
+        { "not": { "u_has_var": "beak_ego_a_2", "value": "true" } },
+        { "not": { "u_has_var": "beak_ego_a_3", "value": "true" } }
+      ]
+    },
+    "effect": { "u_assign_activity": "beak_study_armor", "duration": "4 h" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_w_activity",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "beak_ego_w_1", "value": "true" } },
+        { "not": { "u_has_var": "beak_ego_w_2", "value": "true" } },
+        { "not": { "u_has_var": "beak_ego_w_3", "value": "true" } }
+      ]
+    },
+    "effect": { "u_assign_activity": "beak_study_weapon", "duration": "4 h" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_g_activity",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "beak_ego_g_1", "value": "true" } },
+        { "not": { "u_has_var": "beak_ego_g_2", "value": "true" } },
+        { "not": { "u_has_var": "beak_ego_g_3", "value": "true" } }
+      ]
+    },
+    "effect": { "u_assign_activity": "beak_study_gift", "duration": "4 h" }
+  },
+  {
+    "id": "beak_study_armor",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "researching",
+    "interruptable": false,
+    "interruptable_with_kb": false,
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "id": "beak_study_weapon",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "researching",
+    "interruptable": false,
+    "interruptable_with_kb": false,
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "id": "beak_study_gift",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "researching",
+    "interruptable": false,
+    "interruptable_with_kb": false,
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete_beak_armor",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "and": [ { "compare_string": [ "beak_study_armor", { "context_val": "activity" } ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "ego_study_fail", 12 ],
+        [ "beak_ego_a_1_success", 1 ],
+        [ "beak_ego_a_2_success", 1 ],
+        [ "beak_ego_a_3_success", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete_beak_weapon",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "compare_string": [ "beak_study_weapon", { "context_val": "activity" } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "ego_study_fail", 12 ],
+        [ "beak_ego_w_1_success", 1 ],
+        [ "beak_ego_w_2_success", 1 ],
+        [ "beak_ego_w_3_success", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete_beak_gift",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "compare_string": [ "beak_study_gift", { "context_val": "activity" } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "ego_study_fail", 12 ],
+        [ "beak_ego_g_1_success", 1 ],
+        [ "beak_ego_g_2_success", 1 ],
+        [ "beak_ego_g_3_success", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "ego_study_fail",
+    "effect": [ { "message": "You didn't learn anything new", "popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_a_1_success",
+    "condition": { "not": { "u_has_var": "beak_ego_a_1", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_a_note_1" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_a_1", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_armor" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_a_2_success",
+    "condition": { "not": { "u_has_var": "beak_ego_a_2", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_a_note_2" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_a_2", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_armor" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_a_3_success",
+    "condition": { "not": { "u_has_var": "beak_ego_a_3", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_a_note_3" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_a_3", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_armor" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_w_1_success",
+    "condition": { "not": { "u_has_var": "beak_ego_w_1", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_w_note_1" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_w_1", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_weapon" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_w_2_success",
+    "condition": { "not": { "u_has_var": "beak_ego_w_2", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_w_note_2" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_w_2", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_weapon" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_w_3_success",
+    "condition": { "not": { "u_has_var": "beak_ego_w_3", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_w_note_3" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_w_3", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_weapon" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_g_1_success",
+    "condition": { "not": { "u_has_var": "beak_ego_g_1", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_g_note_1" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_g_1", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_gift" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_g_2_success",
+    "condition": { "not": { "u_has_var": "beak_ego_g_2", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_g_note_2" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_g_2", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_gift" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "beak_ego_g_3_success",
+    "condition": { "not": { "u_has_var": "beak_ego_g_3", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "beak_ego_g_note_3" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "beak_ego_g_3", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_gift" } ]
+  },
+  {
+    "id": "beak_ego_a_note_1",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak armor research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO armor",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_a_1",
+          "effect": [
+            { "u_add_var": "beak_ego_a_1_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive is lower dexterity but it increase with SIN and higher strenght wich lower with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_a_note_2",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak armor research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO armor",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_a_2",
+          "effect": [
+            { "u_add_var": "beak_ego_a_2_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. ( Better speed with SIN, better stamina wich lower with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_a_note_3",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak armor research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO armor",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_a_3",
+          "effect": [
+            { "u_add_var": "beak_ego_a_3_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is full resist to knockback and knockdown, but it lower with SIN, player will recieve slightly more damage with every SIN, and now this armor can retaliate to atacker, dmg scaling with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_w_note_1",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak weapon research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_w_1",
+          "effect": [
+            { "u_add_var": "beak_ego_w_1_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is that shots avoid friendly fire, but this chance decreased with SIN, and better Perception stat wich lower with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_w_note_2",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak weapon research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_w_2",
+          "effect": [
+            { "u_add_var": "beak_ego_w_2_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is recoil wich lower with every SIN, also bigger overkill damage, victims corpse is less intact, scaling with SIN) ",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_w_note_3",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak weapon research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_w_3",
+          "effect": [
+            { "u_add_var": "beak_ego_w_3_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is increased pistol and marsmanship skill, better pain resisntance wich decrease with SIN and bleed stop bonus when aply medicine)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_g_note_1",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak gift research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_g_1",
+          "effect": [
+            { "u_add_var": "beak_ego_g_1_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is increased speed scaling with SIN,also bigger carry weight limit wich decrease with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_g_note_2",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak gift research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO gift",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_g_2",
+          "effect": [
+            { "u_add_var": "beak_ego_g_2_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is scaling with SIN attack speed multiplier, also bigger carry weight limit wich decrease with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "beak_ego_g_note_3",
+    "type": "GENERIC",
+    "name": { "str": "O-02-56 EGO Beak gift research notes" },
+    "description": "These are your results of research O-02-56, it is written about the features of EGO gift",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_beak_g_3",
+          "effect": [
+            { "u_add_var": "beak_ego_g_3_unlocked", "value": "true" },
+            {
+              "message": "Description of unlocked EGO passive. (Pasive here is bonus dodge attempt scaling with SIN, also bigger carry weight limit wich decrease with SIN)",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "recipe",
+    "category": "CC_PM",
+    "name": "Research of Beak EGO",
+    "id": "beak_study_selector",
+    "description": "Conduct research of EGO Beak and its potential uses.",
+    "subcategory": "CSC_PM_EGO",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "activity_level": "NO_EXERCISE",
+    "time": "5 m",
+    "autolearn": true,
+    "tools": [
+      [ [ "pen", 20 ], [ "pencil", 20 ], [ "blue_pen", 20 ], [ "green_pen", 20 ], [ "black_pen", 20 ], [ "red_pen", 20 ] ],
+      [ [ "p_bird_book", -1 ] ]
+    ],
+    "components": [ [ [ "paper", 10 ] ] ],
+    "book_learn": [ [ "p_bird_book", 0 ] ],
+    "result_eocs": [
+      {
+        "id": "beak_choose",
+        "effect": [
+          {
+            "run_eoc_selector": [ "beak_a_activity", "beak_w_activity", "beak_g_activity" ],
+            "names": [ "EGO armor Beak", "EGO weapon Beak", "EGO gift Beak" ],
+            "keys": [ "a", "b", "c" ],
+            "hide_failing": true,
+            "allow_cancel": true,
+            "title": "Please select research topic:",
+            "descriptions": [
+              "Research the potential of the EGO armor.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
+              "Research the potential of the EGO weapon.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
+              "Research the potential of the EGO gift.\n!!!IMPOSSIBLE TO INTERRUPT!!!"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
