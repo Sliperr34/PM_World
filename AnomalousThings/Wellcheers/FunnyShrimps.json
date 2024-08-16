@@ -3,7 +3,7 @@
         "id": "mon_wellcheers",
         "type": "MONSTER",
         "name": { "str": "<color_green>Shrimp</color>" },
-        "description": "This grotesque creature has the shape of a human body but the head of a shrimp, the whole body is covered with orange chitin and approaching you it makes wave movements with its hands",
+        "description": "A grotesque fusion of man and shrimp, this creature's twisted form defies nature. Its human body is encased in orange chitin, with a shrimp-like head perched atop its shoulders. Dressed in a gray overall and yellow boots, it approaches you with eerie, wave-like motions of its arms.",
         "default_faction": "distortions",
         "bodytype": "human",
         "species": [ "DISTORTIONS" ],
