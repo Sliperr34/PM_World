@@ -13,7 +13,7 @@
     "type": "effect_type",
     "id": "blue_charge",
     "name": [ "Blue charge" ],
-    "desc": [ "You feel energized by some unknown force." ],
+    "desc": [ "You feel energized by an unknown force." ],
     "max_intensity": 1,
     "int_dur_factor": 60,
     "max_duration": "24 h",
