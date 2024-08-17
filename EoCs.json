@@ -56,7 +56,7 @@
   {
     "type": "effect_on_condition",
     "id": "summon_npc1",
-    "effect": [ { "u_spawn_npc": "kr_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 } ]
+    "effect": [ { "u_spawn_npc": "pm_test_npc", "real_count": 1, "min_radius": 1, "max_radius": 3 } ]
   },
   {
     "type": "effect_on_condition",

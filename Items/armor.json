@@ -951,11 +951,11 @@
     "armor": [
       {
         "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
-        "encumbrance": 24,
+        "encumbrance": 20,
         "coverage": 100,
-        "material_thickness": 1,
         "rigid_layer_only": true,
         "layers": [ "NORMAL" ],
+        "material_thickness": 1,
         "specifically_covers": [
           "torso_upper",
           "torso_lower",
@@ -973,6 +973,14 @@
           "leg_upper_r",
           "leg_knee_l",
           "leg_knee_r",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
           "leg_lower_l",
           "leg_lower_r"
         ],
@@ -981,6 +989,15 @@
           { "type": "l_steel", "covered_by_mat": 40, "thickness": 4 },
           { "type": "l_cotton", "covered_by_mat": 100, "thickness": 2 }
         ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "b_polymer", "covered_by_mat": 100, "thickness": 2.0 },
+          { "type": "l_steel", "covered_by_mat": 100, "thickness": 6.0 }
+        ],
+        "coverage": 100
       }
     ]
   },

@@ -84,8 +84,6 @@
           "foot_heel_l",
           "foot_arch_r",
           "foot_arch_l",
-          "foot_sole_r",
-          "foot_sole_l",
           "leg_lower_l",
           "leg_lower_r"
         ],
@@ -94,6 +92,15 @@
           { "type": "l_steel", "covered_by_mat": 40, "thickness": 4 },
           { "type": "l_cotton", "covered_by_mat": 100, "thickness": 2 }
         ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "b_polymer", "covered_by_mat": 100, "thickness": 2.0 },
+          { "type": "l_steel", "covered_by_mat": 100, "thickness": 6.0 }
+        ],
+        "coverage": 100
       }
     ]
   },

@@ -1,5 +1,13 @@
 [
   {
+    "id": "test_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "ego_suit_beak" }
+    ]
+  },
+  {
     "id": "Alpha_worn",
     "type": "item_group",
     "//": "My beloved",

@@ -1,6 +1,21 @@
 [
   {
     "type": "npc",
+    "id": "pm_test_npc",
+    "name_unique": "Testie",
+    "name_suffix": "dummy",
+    "gender": "male",
+    "class": "NC_TEST_PM",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "age": 21,
+    "height": 183,
+    "personality": { "aggression": -2, "bravery": 8, "collector": -4, "altruism": -5 },
+    "faction": "l_corp"
+  },
+  {
+    "type": "npc",
     "id": "alpha_npc",
     "name_unique": "Alpha",
     "name_suffix": "scientist",

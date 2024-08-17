@@ -1,6 +1,16 @@
 [
   {
     "type": "npc_class",
+    "id": "NC_TEST_PM",
+    "name": "Clerk",
+    "job_description": "Testing guy",
+    "sells_belongings": false,
+    "common": false,
+    "worn_override": "test_worn",
+    "traits": [ { "trait": "IGNORE_SOUND" }, { "trait": "NO_BASH" }, { "trait": "RETURN_TO_START_POS" } ]
+  },
+  {
+    "type": "npc_class",
     "id": "NC_ALPHA",
     "name": "Alpha",
     "job_description": "Who is that?",
