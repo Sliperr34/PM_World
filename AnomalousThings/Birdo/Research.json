@@ -227,7 +227,7 @@
     "id": "beak_ego_a_note_1",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak armor research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO armor",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO armor.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -242,7 +242,7 @@
           "effect": [
             { "u_add_var": "beak_ego_a_1_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive is lower dexterity but it increase with SIN and higher strenght wich lower with SIN)",
+              "message": "Unlocked EGO passive: Decreased dexterity, but positively scales with SIN. Strength is enhanced but negatively scales with SIN.",
               "popup": true
             }
           ]
@@ -254,7 +254,7 @@
     "id": "beak_ego_a_note_2",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak armor research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO armor",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO armor.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -269,7 +269,7 @@
           "effect": [
             { "u_add_var": "beak_ego_a_2_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. ( Better speed with SIN, better stamina wich lower with SIN)",
+              "message": "Unlocked EGO passive: Enhanced speed that positively scales with SIN, improved stamina that negatively scales with SIN.",
               "popup": true
             }
           ]
@@ -281,7 +281,7 @@
     "id": "beak_ego_a_note_3",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak armor research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO armor",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO armor.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -296,7 +296,7 @@
           "effect": [
             { "u_add_var": "beak_ego_a_3_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is full resist to knockback and knockdown, but it lower with SIN, player will recieve slightly more damage with every SIN, and now this armor can retaliate to atacker, dmg scaling with SIN)",
+              "message": "Unlocked EGO passive: Full resistance to knockback and knockdown, though this negatively scales with SIN. The wearer takes slightly more damage positively scaling with SIN, but the armor can now retaliate against attackers, with damage scaling based on having more SIN.",
               "popup": true
             }
           ]
@@ -308,7 +308,7 @@
     "id": "beak_ego_w_note_1",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak weapon research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO weapon.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -323,7 +323,7 @@
           "effect": [
             { "u_add_var": "beak_ego_w_1_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is that shots avoid friendly fire, but this chance decreased with SIN, and better Perception stat wich lower with SIN)",
+              "message": "Unlocked EGO passive: Shots avoid friendly fire, though this chance negatively scales with SIN. Enhanced Perception stat that negatively scales with SIN.",
               "popup": true
             }
           ]
@@ -335,7 +335,7 @@
     "id": "beak_ego_w_note_2",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak weapon research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO weapon.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -350,7 +350,7 @@
           "effect": [
             { "u_add_var": "beak_ego_w_2_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is recoil wich lower with every SIN, also bigger overkill damage, victims corpse is less intact, scaling with SIN) ",
+              "message": "Unlocked EGO passive: Recoil decreases with more SIN, and overkill damage increases. Your Victims' corpses become less intact, positively scaling with SIN.",
               "popup": true
             }
           ]
@@ -362,7 +362,7 @@
     "id": "beak_ego_w_note_3",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak weapon research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO weapon.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -377,7 +377,7 @@
           "effect": [
             { "u_add_var": "beak_ego_w_3_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is increased pistol and marsmanship skill, better pain resisntance wich decrease with SIN and bleed stop bonus when aply medicine)",
+              "message": "Unlocked EGO passive: Increased pistol and marksmanship skills, improved pain resistance that negatively scales with SIN, and a bonus to stopping bleeding when applying medicine.",
               "popup": true
             }
           ]
@@ -389,7 +389,7 @@
     "id": "beak_ego_g_note_1",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak gift research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO weapon",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO gift.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -404,7 +404,7 @@
           "effect": [
             { "u_add_var": "beak_ego_g_1_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is increased speed scaling with SIN,also bigger carry weight limit wich decrease with SIN)",
+              "message": "Unlocked EGO passive: Increased speed that positively scales with SIN, and a higher carry weight limit that negatively scales with SIN.",
               "popup": true
             }
           ]
@@ -416,7 +416,7 @@
     "id": "beak_ego_g_note_2",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak gift research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO gift",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO gift.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -431,7 +431,7 @@
           "effect": [
             { "u_add_var": "beak_ego_g_2_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is scaling with SIN attack speed multiplier, also bigger carry weight limit wich decrease with SIN)",
+              "message": "Unlocked EGO passive: Attack speed multiplier positively scales with SIN, and a higher carry weight limit that negatively scales with SIN.",
               "popup": true
             }
           ]
@@ -443,7 +443,7 @@
     "id": "beak_ego_g_note_3",
     "type": "GENERIC",
     "name": { "str": "O-02-56 EGO Beak gift research notes" },
-    "description": "These are your results of research O-02-56, it is written about the features of EGO gift",
+    "description": "These are the results of your research on O-02-56, detailing the features of the EGO gift.",
     "weight": "40 g",
     "volume": "50 ml",
     "looks_like": "file",
@@ -458,7 +458,7 @@
           "effect": [
             { "u_add_var": "beak_ego_g_3_unlocked", "value": "true" },
             {
-              "message": "Description of unlocked EGO passive. (Pasive here is bonus dodge attempt scaling with SIN, also bigger carry weight limit wich decrease with SIN)",
+              "message": "Unlocked EGO passive: Bonus dodge attempts that positively scales with SIN, and a higher carry weight limit that negatively scales with SIN.",
               "popup": true
             }
           ]
@@ -471,7 +471,7 @@
     "category": "CC_PM",
     "name": "Research of Beak EGO",
     "id": "beak_study_selector",
-    "description": "Conduct research of EGO Beak and its potential uses.",
+    "description": "Research the Extracted EGO \"Beak\" and explore its secrets and potential applications.",
     "subcategory": "CSC_PM_EGO",
     "skill_used": "fabrication",
     "difficulty": 0,
@@ -496,9 +496,9 @@
             "allow_cancel": true,
             "title": "Please select research topic:",
             "descriptions": [
-              "Research the potential of the EGO armor.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
-              "Research the potential of the EGO weapon.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
-              "Research the potential of the EGO gift.\n!!!IMPOSSIBLE TO INTERRUPT!!!"
+              "Research the EGO armor and unlock its potential.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
+              "Research the EGO weapon and unlock its potential.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
+              "Research the EGO gift and unlock its potential.\n!!!IMPOSSIBLE TO INTERRUPT!!!"
             ]
           }
         ]
