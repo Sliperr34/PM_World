@@ -213,7 +213,7 @@
 		"onkill_buffs": [{
 			"id": "kr_kill",
 			"name": "Heiyuhdao",
-			"description": "Under the blade's dance, \nIn death, solace shall bs found, \nYour Foes lost their chance. \n\nAll your actions are now 15% faster.",
+			"description": "Under the blade's dance, \nIn death, solace shall be found, \nYour Foes lost their chance. \n\nAll your actions are now 15% faster.",
 			"melee_allowed": true,
 			"buff_duration": 3,
 			"max_stacks": 1,
