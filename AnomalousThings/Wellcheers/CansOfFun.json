@@ -23,7 +23,7 @@
     "charges": 1,
     "phase": "liquid",
     "flags": [ "EATEN_COLD" ],
-    "vitamins": [ [ "vitC", 10 ], [ "calcium", 1 ] ],
+    "vitamins": [ [ "vitC", 10 ], [ "calcium", 1 ], [ "cheers", 1 ] ],
     "fun": 0,
     "monotony_penalty": 0,
     "consumption_effect_on_conditions": [ "well_random" ]
@@ -52,7 +52,7 @@
     "charges": 1,
     "phase": "liquid",
     "flags": [ "EATEN_COLD" ],
-    "vitamins": [ [ "vitC", 50 ], [ "calcium", 8 ] ],
+    "vitamins": [ [ "vitC", 50 ], [ "calcium", 8 ], [ "cheers", 1 ] ],
     "fun": 4,
     "monotony_penalty": 0,
     "consumption_effect_on_conditions": [ "wellcherry_random" ]
@@ -81,7 +81,7 @@
     "charges": 1,
     "phase": "liquid",
     "flags": [ "EATEN_COLD" ],
-    "vitamins": [ [ "vitC", 32 ], [ "calcium", 3 ] ],
+    "vitamins": [ [ "vitC", 32 ], [ "calcium", 3 ], [ "cheers", 1 ] ],
     "fun": 0,
     "monotony_penalty": 0,
     "consumption_effect_on_conditions": [ "wellgrape_random" ]

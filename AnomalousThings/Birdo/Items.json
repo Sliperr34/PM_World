@@ -117,7 +117,7 @@
     "barrel_length": "268 mm",
     "price": "0 USD",
     "material": [ "b_polymer", "l_steel" ],
-    "sight_dispersion": 3,
+    "sight_dispersion": 15,
     "symbol": "(",
     "handling": 3,
     "recoil": 0,

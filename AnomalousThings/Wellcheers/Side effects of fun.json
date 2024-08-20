@@ -1,139 +1,87 @@
 [
   {
+    "id": "cheers",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": "Cheers drinked",
+    "min": 0,
+    "max": 1000,
+    "rate": "86400 h",
+    "flags": [ "NO_DISPLAY" ]
+  },
+  {
     "type": "enchantment",
-    "id": "tets_condition_ench",
-    "has": "WIELD",
-    "condition": { "math": [ "u_vitamin('SIN')", ">=", "1" ] },
-    "skills": [ { "value": "throw", "add": 9 } ],
+    "id": "soda_suit_1",
+    "has": "WORN",
+    "condition": { "u_has_var": "soda_ego_a_1_unlocked", "value": "true" },
     "values": [
-      { "value": "THROW_STR", "add": { "math": [ "1 - u_vitamin('SIN') / 2" ] } },
-      { "value": "THROW_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } },
-      { "value": "MELEE_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } }
+      { "value": "SCENT_MASK", "add": { "math": [ "0 + u_vitamin('cheers') " ] } },
+      { "value": "STRENGTH", "add": { "math": [ "1 + u_vitamin('cheers') / 100 " ] } }
     ]
   },
   {
-    "id": "test_book",
-    "type": "BOOK",
-    "category": "manuals",
-    "name": { "str": "TEST document", "str_pl": "TEST of O-02-56 document" },
-    "description": " ",
-    "weight": "230 g",
-    "volume": "250 ml",
-    "price": "4 USD 80 cent",
-    "price_postapoc": "2 USD 50 cent",
-    "material": [ "paper" ],
-    "flags": [ "TRADER_AVOID" ],
-    "symbol": "?",
-    "relic_data": { "passive_effects": [ { "id": "tets_condition_ench" } ] },
-    "color": "red"
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "sin_chose",
-    "effect": [
-      {
-        "run_eoc_selector": [ "aktivity_testing1", "aktivity_testing2" ],
-        "names": [ "Sin probably +", "Sin probably -" ],
-        "keys": [ "a", "b" ],
-        "title": "Грешим?",
-        "descriptions": [ "Increase sin or not", "Decrease sin or not" ]
-      }
+    "type": "enchantment",
+    "id": "soda_suit_2",
+    "has": "WORN",
+    "condition": { "u_has_var": "soda_ego_a_2_unlocked", "value": "true" },
+    "values": [
+      { "value": "ARMOR_ELEC", "add": { "math": [ "0 - u_vitamin('cheers') / 25 " ] } },
+      { "value": "ARMOR_ACID", "add": { "math": [ "0 + u_vitamin('cheers') / 25 " ] } }
     ]
   },
   {
-    "type": "effect_on_condition",
-    "id": "test_weighted1",
-    "effect": { "weighted_list_eocs": [ [ "increase_sin", 5 ], [ "decrease_sin", 2 ] ] }
+    "type": "enchantment",
+    "id": "soda_suit_3",
+    "has": "WORN",
+    "condition": { "u_has_var": "soda_ego_a_3_unlocked", "value": "true" },
+    "values": [
+      { "value": "CARDIO_MULTIPLIER", "add": { "math": [ "0.25 * u_vitamin('cheers') / 5 " ] } },
+      { "value": "PERCEPTION", "add": { "math": [ "1 + u_vitamin('cheers') / 100" ] } }
+    ],
+    "hit_me_effect": [ { "id": "sin_strike" } ]
   },
   {
-    "type": "effect_on_condition",
-    "id": "test_weighted2",
-    "effect": { "weighted_list_eocs": [ [ "increase_sin", 2 ], [ "decrease_sin", 5 ] ] }
+    "type": "enchantment",
+    "id": "soda_pistol_1",
+    "has": "WIELD",
+    "condition": { "u_has_var": "soda_ego_w_1_unlocked", "value": "true" },
+    "values": [ { "value": "RECOIL_MODIFIER", "add": { "math": [ "0 - u_vitamin('cheers') " ] } } ]
   },
   {
-    "type": "effect_on_condition",
-    "id": "aktivity_testing1",
-    "effect": { "u_assign_activity": "study_abno", "duration": "45 minutes" }
+    "type": "enchantment",
+    "id": "soda_pistol_2",
+    "has": "WIELD",
+    "condition": { "u_has_var": "soda_ego_w_2_unlocked", "value": "true" },
+    "values": [ { "value": "WEAPON_DISPERSION", "add": { "math": [ "0 - u_vitamin('cheers')" ] } } ]
   },
   {
-    "type": "effect_on_condition",
-    "id": "aktivity_testing2",
-    "effect": { "u_assign_activity": "study_abno2", "duration": "45 minutes" }
+    "type": "enchantment",
+    "id": "soda_pistol_3",
+    "has": "WIELD",
+    "condition": { "u_has_var": "soda_ego_w_3_unlocked", "value": "true" },
+    "skills": [ { "value": "pistol", "add": 1 } ],
+    "values": [ { "value": "RANGE", "add": { "math": [ "0 + u_vitamin('cheers') / 50" ] } } ]
   },
   {
-    "type": "effect_on_condition",
-    "id": "EOC_on_activity_complete",
-    "eoc_type": "EVENT",
-    "required_event": "character_finished_activity",
-    "condition": { "compare_string": [ "study_abno", { "context_val": "activity" } ] },
-    "effect": { "weighted_list_eocs": [ [ "increase_sin", 2 ], [ "decrease_sin", 5 ] ] }
+    "type": "enchantment",
+    "id": "soda_gift_1",
+    "has": "WORN",
+    "condition": { "u_has_var": "soda_ego_g_1_unlocked", "value": "true" },
+    "values": [ { "value": "FAT_TO_MAX_HP", "multiply": { "math": [ "0 + u_vitamin('cheers') / 100" ] } } ]
   },
   {
-    "type": "effect_on_condition",
-    "id": "EOC_on_activity_complete2",
-    "eoc_type": "EVENT",
-    "required_event": "character_finished_activity",
-    "condition": { "compare_string": [ "study_abno2", { "context_val": "activity" } ] },
-    "effect": { "weighted_list_eocs": [ [ "increase_sin", 5 ], [ "decrease_sin", 2 ] ] }
+    "type": "enchantment",
+    "id": "soda_gift_2",
+    "has": "WORN",
+    "condition": { "u_has_var": "soda_ego_g_2_unlocked", "value": "true" },
+    "values": [ { "value": "KCAL", "multiply": { "math": [ " 0 + u_vitamin('cheers') / 1000" ] } } ]
   },
   {
-    "id": "study_abno",
-    "type": "activity_type",
-    "activity_level": "NO_EXERCISE",
-    "verb": "studying",
-    "interruptable": false,
-    "interruptable_with_kb": false,
-    "refuel_fires": true,
-    "auto_needs": true,
-    "rooted": true,
-    "based_on": "time",
-    "can_resume": false
-  },
-  {
-    "id": "study_abno2",
-    "type": "activity_type",
-    "activity_level": "NO_EXERCISE",
-    "verb": "studying",
-    "refuel_fires": true,
-    "auto_needs": true,
-    "rooted": true,
-    "based_on": "time",
-    "can_resume": false
-  },
-  {
-    "type": "recipe",
-    "category": "CC_PM",
-    "name": "test selector",
-    "id": "practice_pm_test_selector",
-    "description": "Lets fucking go",
-    "subcategory": "CSC_PM_EGO",
-    "skill_used": "fabrication",
-    "difficulty": 0,
-    "activity_level": "NO_EXERCISE",
-    "time": "5 s",
-    "autolearn": true,
-    "components": [  ],
-    "result_eocs": [
-      {
-        "id": "sin_chose2",
-        "effect": [
-          {
-            "run_eoc_selector": [ "aktivity_testing1", "aktivity_testing2" ],
-            "names": [ "Sin probably +", "Sin probably -" ],
-            "keys": [ "a", "b" ],
-            "title": "Грешим?",
-            "descriptions": [ "Increase sin or not", "Decrease sin or not" ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "canceled_str_msg",
-    "effect": [
-      { "set_string_var": { "context_val": "canceled" }, "target_var": { "context_val": "canceled_str" } },
-      { "u_message": "Canceled value is: <context_val:canceled_str>" }
-    ]
+    "type": "enchantment",
+    "id": "soda_gift_3",
+    "has": "WORN",
+    "condition": { "u_has_var": "soda_ego_g_3_unlocked", "value": "true" },
+    "mutations": [ "GOURMAND" ],
+    "values": [ { "value": "HUNGER", "multiply": { "math": [ " 0 + u_vitamin('cheers') / 500" ] } } ]
   }
 ]
