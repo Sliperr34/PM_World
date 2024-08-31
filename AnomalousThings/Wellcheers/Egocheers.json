@@ -241,13 +241,13 @@
     "price_postapoc": "25 cent",
     "material": [ { "type": "bone", "portion": 9 }, { "type": "l_steel" } ],
     "looks_like": "platinum_necklace",
-    "relic_data": { "passive_effects": [ { "id": "beak_gift_1" }, { "id": "beak_gift_2" }, { "id": "beak_gift_3" } ] },
+    "relic_data": { "passive_effects": [ { "id": "soda_gift_1" }, { "id": "soda_gift_2" }, { "id": "soda_gift_3" } ] },
     "symbol": "[",
     "color": "red",
     "flags": [ "FANCY", "NO_WEAR_EFFECT", "TRADER_AVOID" ]
   },
   {
-    "id": "p_soda_book",
+    "id": "soda_book",
     "type": "BOOK",
     "category": "manuals",
     "name": { "str": "F-05-52 Document", "str_pl": "copies of F-05-52 document" },
