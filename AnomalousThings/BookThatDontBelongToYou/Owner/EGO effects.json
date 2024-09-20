@@ -10,13 +10,15 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_fire_stamina_regen",
-    "recurrence": 5000,
+    "recurrence": [ 100, 200 ],
+    "condition": { "u_has_trait": "EGO_92_mutation_stage_3" },
+    "deactivate_condition": { "not": { "u_has_trait": "EGO_92_mutation_stage_3" } },
     "effect": [
-      { "u_location_variable": { "context_val": "test" }, "field": "fd_fire", "target_max_radius": 15 },
-      { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': test)" ] },
+      { "u_location_variable": { "context_val": "fire_place" }, "field": "fd_fire", "target_max_radius": 25 },
+      { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': fire_place)" ] },
       {
-        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "test" } },
-        "then": { "u_add_effect": "stamina_regen_boost_small", "duration": "1 s", "intensity": "u_fire_stamina_boost" }
+        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "fire_place" } },
+        "then": { "u_add_effect": "stamina_regen_boost_small", "duration": "2 s", "intensity": "u_fire_stamina_boost" }
       }
     ]
   },
@@ -27,6 +29,18 @@
     "desc": [ "You feel invigorated by the warmth." ],
     "rating": "good",
     "show_in_info": true,
-    "base_mods": { "stamina_amount": [ 20 ] }
+    "max_intensity": 10,
+    "base_mods": { "stamina_amount": [ 200, 2000 ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "clear_spell_92",
+    "effect": [
+      { "math": [ "u_spell_level('92_sword_weak_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_sword_normal_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_armor_normal_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_sword_empower_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_armor_empower_hook')", "=", "-1" ] }
+    ]
   }
 ]

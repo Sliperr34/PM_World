@@ -1,5 +1,5 @@
 [
-{
+  {
     "type": "effect_type",
     "id": "red_acid",
     "name": [ "Wrath" ],
@@ -13,8 +13,8 @@
     "scaling_mods": { "hurt_chance": [ 2 ] },
     "show_in_info": true
   },
-    {
-   "type": "effect_type",
+  {
+    "type": "effect_type",
     "id": "accel",
     "name": [ "accelerating" ],
     "desc": [ "You hit something and now regain your speed" ],
@@ -22,10 +22,21 @@
     "rating": "neutral",
     "max_duration": "10 s",
     "max_intensity": 10,
-	"int_decay_remove": true,
-	"int_decay_tick": 1,
+    "int_decay_remove": true,
+    "int_decay_tick": 1,
     "base_mods": { "speed_mod": [ 25 ], "dodge_mod": [ 3 ] },
-	"scaling_mods": { "speed_mod": [ -8 ], "dodge_mod": [ -0.7 ] },
+    "scaling_mods": { "speed_mod": [ -8 ], "dodge_mod": [ -0.7 ] },
     "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "EGO_CD",
+    "name": [ "Cool down of EGO" ],
+    "desc": [ "Your EGO is on cooldown!" ],
+    "max_intensity": 1,
+    "rating": "bad",
+    "show_in_info": true,
+    "base_mods": {  },
+    "scaling_mods": {  }
   }
-  ]
+]

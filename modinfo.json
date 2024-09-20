@@ -5,7 +5,6 @@
     "name": "<color_yellow>Project Moon World</color>",
     "authors": [ "Alpha//" ],
     "maintainers": [ "Sliperr34" ],
-    "loading_images": [  ],
     "description": "This mod add various items from Project Moon universe",
     "category": "content",
     "dependencies": [ "dda" ]
