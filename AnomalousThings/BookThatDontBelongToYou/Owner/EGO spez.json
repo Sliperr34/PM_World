@@ -2203,7 +2203,7 @@
     "show_in_info": true
   },
   {
-    "id": "92_ишп_summon",
+    "id": "92_big_summon",
     "type": "SPELL",
     "name": { "str": "EGO 9:2 - Draw big fire symbol" },
     "description": "Summon desc. Summon 1 big symbol",
