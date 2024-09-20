@@ -1389,7 +1389,17 @@
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "heat": 50, "cut": 15, "bash": 10, "prophet_heat": 25 },
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_3_ench1" }, { "id": "EGO_92_stage_3_ench2" } ] }
+    "relic_data": {
+      "passive_effects": [
+        { "id": "EGO_92_stage_3_ench1" },
+        { "id": "EGO_92_stage_3_ench2" },
+        { "id": "EGO_92_sword_spellbook_0" },
+        { "id": "EGO_92_sword_spellbook_1" },
+        { "id": "EGO_92_sword_spellbook_2" },
+        { "id": "EGO_92_sword_spellbook_3" },
+        { "id": "EGO_92_sword_spellbook_4" }
+      ]
+    }
   },
   {
     "type": "enchantment",
@@ -1435,7 +1445,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
+    "spells_learned": [ [ "92_small_summon", 1 ], [ "92_binding_flame", 1 ] ]
   },
   {
     "type": "mutation",
@@ -1446,7 +1456,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
+    "spells_learned": [ [ "92_line_strike", 1 ], [ "92_gaze_explode_hook", 1 ] ]
   },
   {
     "type": "mutation",
@@ -1457,7 +1467,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
+    "spells_learned": [ [ "92_medium_summon", 1 ], [ "92_flame_manifestation", 1 ] ]
   },
   {
     "type": "mutation",
@@ -1468,7 +1478,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
+    "spells_learned": [ [ "92_reignite", 1 ], [ "92_fluidity", 1 ] ]
   },
   {
     "type": "mutation",
@@ -1479,7 +1489,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
+    "spells_learned": [ [ "92_big_summon", 1 ], [ "92_evaporize", 1 ] ]
   },
   {
     "type": "enchantment",
