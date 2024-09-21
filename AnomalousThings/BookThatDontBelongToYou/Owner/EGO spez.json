@@ -33,7 +33,7 @@
     "energy_source": "STAMINA",
     "difficulty": 3,
     "max_level": 10,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -44,7 +44,7 @@
       {
         "u_cast_spell": { "id": "EGO_92_stage_1_succes", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_1')" ] } }
       },
-      { "u_mod_healthy": -5, "cap": -200 },
+      { "u_mod_healthy": -3, "cap": -200 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -10,
@@ -55,7 +55,7 @@
     ],
     "false_effect": [
       { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "u_mod_healthy": -5, "cap": -200 },
+      { "u_mod_healthy": -1, "cap": -200 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -6,
@@ -87,7 +87,7 @@
     "energy_source": "NONE",
     "difficulty": 3,
     "max_level": 10,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "id": "EGO_92_stage_1_aura",
@@ -107,8 +107,11 @@
     "id": "EGO_92_stage_1_ench",
     "has": "WORN",
     "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "92_strike_hook", "once_in": 3 } ],
-    "values": [ { "value": "ARMOR_HEAT", "add": { "math": [ "u_spell_level('EGO_92_stage_1') * 1.2" ] } } ]
+    "hit_you_effect": [ { "id": "92_strike_hook", "once_in": 2 } ],
+    "values": [
+      { "value": "ARMOR_HEAT", "add": { "math": [ "u_spell_level('EGO_92_stage_1') * 1.2" ] } },
+      { "value": "LUMINATION", "add": { "math": [ "u_spell_level('EGO_92_stage_1') * 2" ] } }
+    ]
   },
   {
     "id": "92_strike_hook",
@@ -154,7 +157,7 @@
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
     "max_level": 10,
     "min_damage": 1,
     "max_damage": 3,
@@ -198,7 +201,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 10,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -209,7 +212,7 @@
       {
         "u_cast_spell": { "id": "EGO_92_stage_2_succes", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_2')" ] } }
       },
-      { "u_mod_healthy": -35, "cap": -200 },
+      { "u_mod_healthy": -14, "cap": -200 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -40,
@@ -224,7 +227,7 @@
     ],
     "false_effect": [
       { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "u_mod_healthy": -15, "cap": -200 },
+      { "u_mod_healthy": -8, "cap": -200 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -22,
@@ -278,7 +281,10 @@
     "condition": "ALWAYS",
     "hit_you_effect": [ { "id": "92_strike_hook_2" } ],
     "mutations": [ "EGO_92_mutation_stage_2" ],
-    "values": [ { "value": "ARMOR_HEAT", "add": { "math": [ "12 + u_spell_level('EGO_92_stage_2') * 1.3" ] } } ]
+    "values": [
+      { "value": "LUMINATION", "add": { "math": [ "20 + u_spell_level('EGO_92_stage_1') * 2" ] } },
+      { "value": "ARMOR_HEAT", "add": { "math": [ "12 + u_spell_level('EGO_92_stage_2') * 1.3" ] } }
+    ]
   },
   {
     "type": "mutation",
@@ -314,7 +320,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -365,7 +371,7 @@
     "price_postapoc": 0,
     "material": [ { "type": "flesh", "portion": 1.1 }, { "type": "b_steel", "portion": 160 } ],
     "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK" ],
-    "techniques": [ "WBLOCK_1", "BRUTAL" ],
+    "techniques": [ "WBLOCK_1" ],
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "heat": 19, "cut": 6, "bash": 2 }
@@ -414,7 +420,7 @@
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX", "IGNITE_FLAMMABLE" ],
     "max_level": 10,
     "min_damage": 3,
     "max_damage": 6,
@@ -461,7 +467,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 10,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -472,7 +478,7 @@
       {
         "u_cast_spell": { "id": "EGO_92_stage_3_succes", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } }
       },
-      { "u_mod_healthy": -50, "cap": -400 },
+      { "u_mod_healthy": -20, "cap": -400 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -85,
@@ -487,7 +493,7 @@
     ],
     "false_effect": [
       { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "u_mod_healthy": -35, "cap": -400 },
+      { "u_mod_healthy": -15, "cap": -400 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -65,
@@ -541,7 +547,10 @@
     "condition": "ALWAYS",
     "hit_you_effect": [ { "id": "92_strike_hook_3" } ],
     "mutations": [ "EGO_92_mutation_stage_3" ],
-    "values": [ { "value": "ARMOR_HEAT", "add": { "math": [ "30 * u_spell_level('EGO_92_stage_3') " ] } } ]
+    "values": [
+      { "value": "ARMOR_HEAT", "add": { "math": [ "30 * u_spell_level('EGO_92_stage_3') " ] } },
+      { "value": "LUMINATION", "add": { "math": [ "40 + u_spell_level('EGO_92_stage_1') * 2" ] } }
+    ]
   },
   {
     "type": "mutation",
@@ -577,7 +586,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -656,7 +665,7 @@
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "IGNITE_FLAMMABLE", "NO_EXPLOSION_SFX" ],
     "max_level": 1,
     "min_damage": { "math": [ "u_effect_intensity('cinders') * 2" ] },
     "max_damage": { "math": [ "u_effect_intensity('cinders') * 2" ] },
@@ -698,7 +707,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS" ]
   },
   {
     "type": "effect_on_condition",
@@ -774,10 +783,10 @@
     "name": "9:2 retaliation",
     "description": "hit your enemy back by fire",
     "valid_targets": [ "hostile" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE", "IGNITE_FLAMMABLE", "NO_EXPLOSION_SFX" ],
     "effect": "attack",
     "shape": "blast",
-    "damage_type": "pure",
+    "damage_type": "heat",
     "min_damage": { "math": [ "u_effect_intensity('cinders') * 2" ] },
     "max_damage": { "math": [ "u_effect_intensity('cinders') * 2" ] },
     "damage_increment": { "math": [ "u_effect_intensity('cinders') * 2" ] },
@@ -818,10 +827,7 @@
   {
     "type": "effect_on_condition",
     "id": "92_hook_3",
-    "effect": [
-      { "u_cast_spell": { "id": "92_strong_strike", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } } },
-      { "message": "WShh!", "type": "bad" }
-    ]
+    "effect": [ { "u_cast_spell": { "id": "92_strong_strike", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } } } ]
   },
   {
     "id": "92_strong_strike",
@@ -831,7 +837,7 @@
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
     "max_level": 10,
     "min_damage": 3,
     "max_damage": 6,
@@ -878,7 +884,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 10,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -889,7 +895,7 @@
       {
         "u_cast_spell": { "id": "EGO_92_stage_4_succes", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } }
       },
-      { "u_mod_healthy": -20, "cap": -200 },
+      { "u_mod_healthy": -10, "cap": -200 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -20,
@@ -910,7 +916,7 @@
     ],
     "false_effect": [
       { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "u_mod_healthy": -10, "cap": -400 },
+      { "u_mod_healthy": -2, "cap": -400 },
       {
         "u_add_morale": "ego_morale",
         "bonus": -11,
@@ -964,7 +970,10 @@
     "condition": "ALWAYS",
     "hit_you_effect": [ { "id": "92_strike_hook_4" }, { "id": "cinder_stack", "hit_self": true, "once_in": 6 } ],
     "mutations": [ "EGO_92_mutation_stage_4" ],
-    "values": [ { "value": "ARMOR_HEAT", "add": { "math": [ "300 * u_spell_level('EGO_92_stage_4') " ] } } ]
+    "values": [
+      { "value": "LUMINATION", "add": { "math": [ "60 + u_spell_level('EGO_92_stage_1') * 5" ] } },
+      { "value": "ARMOR_HEAT", "add": { "math": [ "300 * u_spell_level('EGO_92_stage_4') " ] } }
+    ]
   },
   {
     "type": "enchantment",
@@ -996,7 +1005,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "id": "92_gaze",
@@ -1156,7 +1165,7 @@
     "difficulty": 0,
     "max_level": 1,
     "damage_type": "prophet_heat",
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ]
   },
   {
     "type": "effect_on_condition",
@@ -1216,7 +1225,7 @@
     "max_level": 15,
     "damage_type": "prophet_heat",
     "extra_effects": [ { "id": "92_flame_secondary_explosion" } ],
-    "flags": [ "LOUD" ]
+    "flags": [ "LOUD", "IGNITE_FLAMMABLE" ]
   },
   {
     "id": "92_flame_secondary_explosion",
@@ -1284,7 +1293,7 @@
     "difficulty": 0,
     "max_level": 15,
     "damage_type": "prophet_heat",
-    "flags": [ "LOUD" ]
+    "flags": [ "LOUD", "IGNITE_FLAMMABLE" ]
   },
   {
     "type": "effect_type",
@@ -1334,7 +1343,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_LEGS", "NO_FAIL" ]
   },
   {
     "type": "effect_on_condition",
@@ -1513,10 +1522,10 @@
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX", "IGNITE_FLAMMABLE" ],
     "max_level": 1,
-    "min_damage": { "math": [ "n_effect_intensity('cinders') * 3" ] },
-    "max_damage": { "math": [ "n_effect_intensity('cinders') * 3" ] },
+    "min_damage": { "math": [ "n_effect_intensity('cinders') * 2" ] },
+    "max_damage": { "math": [ "n_effect_intensity('cinders') * 2" ] },
     "min_range": 1,
     "max_range": 1,
     "range_increment": 0,
@@ -1634,7 +1643,7 @@
     "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
     "effect": "attack",
     "shape": "blast",
-    "damage_type": "pure",
+    "damage_type": "heat",
     "min_damage": { "math": [ "u_effect_intensity('cinders') * 7" ] },
     "max_damage": { "math": [ "u_effect_intensity('cinders') * 7" ] },
     "damage_increment": { "math": [ "u_effect_intensity('cinders') * 7" ] },
@@ -1688,11 +1697,11 @@
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
     "max_level": 10,
-    "min_damage": 5,
-    "max_damage": 20,
-    "damage_increment": 5,
+    "min_damage": 2,
+    "max_damage": 15,
+    "damage_increment": 2,
     "min_pierce": 5,
     "max_pierce": 20,
     "pierce_increment": 5,
@@ -1720,7 +1729,7 @@
     "effect_str": "cinders_apply",
     "shape": "blast",
     "valid_targets": [ "self" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
     "max_level": 1,
     "min_range": 1,
     "max_range": 1,
@@ -1766,7 +1775,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 10,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_ARMS", "NO_FAIL" ]
   },
   {
     "type": "effect_on_condition",
@@ -1888,7 +1897,7 @@
     "difficulty": 0,
     "max_level": 15,
     "damage_type": "heat",
-    "flags": [ "LOUD" ]
+    "flags": [ "LOUD", "IGNITE_FLAMMABLE" ]
   },
   {
     "type": "effect_on_condition",
@@ -1938,7 +1947,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 10,
-    "flags": [ "LOUD" ]
+    "flags": [ "LOUD", "NO_EXPLOSION_SFX" ]
   },
   {
     "id": "92_small_summon",
@@ -1960,8 +1969,8 @@
     "max_duration": 500,
     "max_level": 1,
     "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
+    "base_casting_time": { "math": [ "150 / u_spell_level('EGO_92_stage_4')" ] },
+    "base_energy_cost": { "math": [ "2500 - 150 * u_spell_level('EGO_92_stage_4')" ] },
     "energy_source": "STAMINA",
     "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_AOE", "RANDOM_DURATION" ]
   },
@@ -1980,7 +1989,7 @@
     "max_aoe": 0,
     "min_duration": 1000,
     "max_duration": 1000,
-    "base_casting_time": 200,
+    "base_casting_time": { "math": [ "200 / u_spell_level('EGO_92_stage_4')" ] },
     "final_casting_time": 50,
     "casting_time_increment": -15,
     "spell_class": "EGO_92",
@@ -1990,7 +1999,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL", "NO_ARMS" ]
   },
   {
     "type": "effect_type",
@@ -2016,7 +2025,7 @@
     "max_aoe": { "math": [ "1 + (u_monsters_nearby('mon_candle_allied', 'radius': 60) / 2)" ] },
     "min_damage": { "math": [ "9 * u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
     "max_damage": { "math": [ "9 * u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
-    "base_casting_time": 200,
+    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_stage_4')" ] },
     "final_casting_time": 50,
     "casting_time_increment": -15,
     "spell_class": "EGO_92",
@@ -2027,7 +2036,7 @@
     "difficulty": 4,
     "damage_type": "heat",
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_ARMS", "IGNITE_FLAMMABLE" ]
   },
   {
     "id": "92_gaze_explode_hook",
@@ -2040,7 +2049,7 @@
     "shape": "blast",
     "min_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
     "max_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
-    "base_casting_time": 200,
+    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_stage_4')" ] },
     "final_casting_time": 50,
     "casting_time_increment": -15,
     "spell_class": "EGO_92",
@@ -2051,7 +2060,7 @@
     "difficulty": 4,
     "damage_type": "heat",
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX", "NO_FAIL", "NO_ARMS", "IGNITE_FLAMMABLE" ]
   },
   {
     "type": "effect_on_condition",
@@ -2087,7 +2096,7 @@
     "difficulty": 4,
     "damage_type": "prophet_heat",
     "max_level": 1,
-    "flags": [ "SILENT", "RANDOM_DAMAGE", "RANDOM_AOE" ]
+    "flags": [ "SILENT", "RANDOM_DAMAGE", "RANDOM_AOE", "IGNITE_FLAMMABLE" ]
   },
   {
     "id": "92_medium_summon",
@@ -2109,8 +2118,8 @@
     "max_duration": 500,
     "max_level": 1,
     "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
+    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_stage_4')" ] },
+    "base_energy_cost": { "math": [ "3000 / u_spell_level('EGO_92_stage_4')" ] },
     "energy_source": "STAMINA",
     "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_AOE", "RANDOM_DURATION" ]
   },
@@ -2135,7 +2144,7 @@
     "base_energy_cost": 0,
     "extra_effects": [ { "id": "death_fire_sphere_2", "hit_self": true, "max_level": 1 } ],
     "energy_source": "STAMINA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "TARGET_TELEPORT" ]
+    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "TARGET_TELEPORT", "IGNITE_FLAMMABLE", "NO_FAIL" ]
   },
   {
     "id": "92_reignite",
@@ -2160,7 +2169,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_ARMS", "NO_EXPLOSION_SFX", "NO_FAIL" ]
   },
   {
     "type": "effect_on_condition",
@@ -2179,7 +2188,7 @@
     "shape": "blast",
     "min_range": 0,
     "max_range": 0,
-    "base_casting_time": 10,
+    "base_casting_time": { "math": [ "300 / u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
     "min_aoe": 0,
     "max_aoe": 0,
     "min_pierce": 100,
@@ -2195,7 +2204,7 @@
     "difficulty": 4,
     "damage_type": "true",
     "max_level": 1,
-    "flags": [ "SILENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_ARMS", "NO_EXPLOSION_SFX" ]
   },
   {
     "type": "effect_on_condition",
@@ -2232,8 +2241,8 @@
     "max_duration": 500,
     "max_level": 1,
     "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
+    "base_casting_time": { "math": [ "300 / u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
+    "base_energy_cost": { "math": [ "12000 / u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
     "energy_source": "STAMINA",
     "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_AOE", "RANDOM_DURATION" ]
   },
@@ -2258,8 +2267,8 @@
     "max_range": 3,
     "max_level": 1,
     "difficulty": -12,
-    "base_casting_time": 0,
-    "base_energy_cost": 5000,
+    "base_casting_time": { "math": [ "450 / u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
+    "base_energy_cost": { "math": [ "20000 / u_monsters_nearby('mon_candle_allied', 'radius': 60)" ] },
     "energy_source": "STAMINA",
     "flags": [ "IGNITE_FLAMMABLE", "NO_FAIL", "SOMATIC", "RANDOM_AOE", "RANDOM_DAMAGE" ]
   }

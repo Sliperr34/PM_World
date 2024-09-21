@@ -40,7 +40,20 @@
       { "math": [ "u_spell_level('92_sword_normal_hook')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_armor_normal_hook')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_sword_empower_hook')", "=", "-1" ] },
-      { "math": [ "u_spell_level('92_armor_empower_hook')", "=", "-1" ] }
+      { "math": [ "u_spell_level('92_armor_empower_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_sword_empower_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_small_summon')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_binding_flame')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_line_strike')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_medium_summon')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_flame_manifestation')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_reignite')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_fluidity')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_big_summon')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_evaporize')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_live_flame_togle')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_gaze_hook_4')", "=", "-1" ] }
     ]
   }
 ]
