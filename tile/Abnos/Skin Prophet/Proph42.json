@@ -19,15 +19,6 @@
             "bg": [ { "weight": 8, "sprite": 3 }, { "weight": 8, "sprite": 4 } ]
           }
         ]
-      },
-      {
-        "file": "tile/Abnos/Skin Prophet/test_two.png",
-        "//": "range 1 to 15",
-        "sprite_width": 32,
-        "sprite_height": 32,
-        "sprite_offset_x": 0,
-        "sprite_offset_y": 0,
-        "tiles": [ { "id": "sword_item_empower", "fg": 0 } ]
       }
     ]
   }
