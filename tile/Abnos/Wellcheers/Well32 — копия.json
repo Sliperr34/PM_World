@@ -4,13 +4,13 @@
     "compatibility": [ "Chibi_Ultica", "MshockXottoplus" ],
     "tiles-new": [
       {
-        "file": "tile/Abnos/Punishing Bird/Birbius32.png",
+        "file": "tile/Abnos/Wellcheers/soda_suit.png",
         "//": "range 1 to 15",
         "sprite_width": 32,
         "sprite_height": 32,
         "sprite_offset_x": 0,
-        "sprite_offset_y": -15,
-        "tiles": [ { "id": "mon_birb_enraged", "fg": 2, "bg": 8 }, { "id": "overlay_wielded_ego_weapon_beak", "fg": 3 } ]
+        "sprite_offset_y": 0,
+        "tiles": [ { "id": "overlay_worn_ego_suit_soda", "fg": 1 } ]
       }
     ]
   }

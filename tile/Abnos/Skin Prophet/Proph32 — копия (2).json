@@ -10,7 +10,7 @@
         "sprite_height": 52,
         "sprite_offset_x": -11,
         "sprite_offset_y": -20,
-        "tiles": [ { "id": "overlay_wielded_92_sword_item_empower", "fg": 1 }, { "id": "92_sword_item_empower", "fg": 1 } ]
+        "tiles": [ { "id": "overlay_wielded_92_sword_item_empower", "fg": 1 } ]
       }
     ]
   }
