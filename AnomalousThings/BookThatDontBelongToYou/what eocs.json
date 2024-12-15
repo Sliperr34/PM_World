@@ -2,7 +2,7 @@
   {
     "type": "effect_on_condition",
     "id": "skin_book_eoc",
-    "condition": { "not": { "u_has_var": "prophecy", "type": "temp_var", "context": "skin_book_readed", "value": "yes" } },
+    "condition": { "not": { "compare_string": [ "yes", { "u_val": "prophecy_temp_var_skin_book_readed" } ] } },
     "effect": [
       {
         "u_add_morale": "morale_prophecy",
@@ -13,8 +13,8 @@
         "capped": true
       },
       { "u_message": "\"I have seen the truth...\"", "type": "bad" },
-      { "u_add_var": "prophecy", "type": "temp_var", "context": "skin_book_readed", "value": "yes" },
-      { "queue_eocs": "skin_up1", "time_in_future": "3 hours" }
+      { "u_add_var": "prophecy_temp_var_skin_book_readed", "value": "yes" },
+      { "run_eocs": "skin_up1", "time_in_future": "3 hours" }
     ],
     "false_effect": [
       {
@@ -35,7 +35,7 @@
         "capped": true
       },
       { "u_message": "\"The truth of the world lies bare to me.\"", "type": "good" },
-      { "queue_eocs": "skin_up2", "time_in_future": "3 hours" }
+      { "run_eocs": "skin_up2", "time_in_future": "3 hours" }
     ]
   },
   {
@@ -51,7 +51,7 @@
         "capped": true
       },
       { "u_message": "\"With this... I could change the world!\"", "type": "good" },
-      { "queue_eocs": "skin_up3", "time_in_future": "3 hours" }
+      { "run_eocs": "skin_up3", "time_in_future": "3 hours" }
     ]
   },
   {
@@ -67,7 +67,7 @@
         "capped": true
       },
       { "u_message": "\"No... I could save the world! I can fix everything!\"", "type": "good" },
-      { "queue_eocs": "skin_down1", "time_in_future": "3 hours" }
+      { "run_eocs": "skin_down1", "time_in_future": "3 hours" }
     ]
   },
   {
@@ -86,7 +86,7 @@
         "u_message": "\"But... I shouldn't. No, I can't. The truth lies bare to me, and it can't change.\"",
         "type": "bad"
       },
-      { "queue_eocs": "skin_down2", "time_in_future": "3 hours" }
+      { "run_eocs": "skin_down2", "time_in_future": "3 hours" }
     ]
   },
   {
@@ -105,7 +105,7 @@
         "u_message": "\"Does... Does that mean the truth is meaningless? No, it can't be. It can't be all for nothing. Otherwise what would even be the point?\"",
         "type": "bad"
       },
-      { "queue_eocs": "skin_down3", "time_in_future": "3 hours" }
+      { "run_eocs": "skin_down3", "time_in_future": "3 hours" }
     ]
   },
   {
@@ -124,7 +124,7 @@
         "u_message": "\"I REFUSE! I REFUSE THE TRUTH! IT CAN'T END LIKE THIS! I WON'T LET IT! I'LL MAKE MY OWN TRUTH! MY LIFE MUST HAVE MEANING!\"",
         "type": "bad"
       },
-      { "queue_eocs": "skin_down4", "time_in_future": "3 hours" }
+      { "run_eocs": "skin_down4", "time_in_future": "3 hours" }
     ]
   },
   {
@@ -139,7 +139,7 @@
         "decay_start": "1 minutes",
         "capped": true
       },
-      { "queue_eocs": "skin_summon", "time_in_future": "124 minutes" },
+      { "run_eocs": "skin_summon", "time_in_future": "124 minutes" },
       {
         "u_message": "Thousands of foreign thoughts bombard your mind. You have caught the attention of Something that does not belong. The invisible presence sinks deep into your skin and fills you with terror.",
         "type": "bad"
@@ -160,14 +160,14 @@
       { "u_add_effect": "blind", "duration": "9 s" },
       { "u_add_effect": "deaf", "duration": "9 s", "intensity": 3 },
       { "u_add_effect": "marked", "duration": "20 h", "intensity": 1 },
-      { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
+      { "u_lose_var": "prophecy_temp_var_skin_book_readed" }
     ],
     "false_effect": [
       {
         "u_message": "You managed to calm down and push the Truth out of your mind. The presence has lost its sight on you. You should be more careful of what your read...",
         "popup": true
       },
-      { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
+      { "u_lose_var": "prophecy_temp_var_skin_book_readed" }
     ]
   },
   {
@@ -205,12 +205,12 @@
   {
     "id": "fire_sphere_1_explosion_spell_eoc",
     "type": "effect_on_condition",
-    "effect": [ { "queue_eocs": [ "fire_sphere_1_explosion_spell_eoc_2" ], "time_in_future": "3 s" } ]
+    "effect": [ { "run_eocs": [ "fire_sphere_1_explosion_spell_eoc_2" ], "time_in_future": "3 s" } ]
   },
   {
     "id": "fire_sphere_2_explosion_spell_eoc",
     "type": "effect_on_condition",
-    "effect": [ { "queue_eocs": [ "fire_sphere_2_explosion_spell_eoc_2" ], "time_in_future": "5 s" } ]
+    "effect": [ { "run_eocs": [ "fire_sphere_2_explosion_spell_eoc_2" ], "time_in_future": "5 s" } ]
   },
   {
     "id": "fire_sphere_2_explosion_spell_eoc_2",
@@ -479,7 +479,7 @@
       },
       { "u_message": "\"I have seen the truth...\"", "type": "bad" },
       { "u_add_var": "prophecy", "value": "yes" },
-      { "queue_eocs": "prophecy_clear", "time_in_future": "24 hours" }
+      { "run_eocs": "prophecy_clear", "time_in_future": "24 hours" }
     ],
     "false_effect": [
       {
@@ -490,7 +490,7 @@
   {
     "type": "effect_on_condition",
     "id": "prophecy_clear",
-    "effect": [ { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" } ]
+    "effect": [ { "u_lose_var": "prophecy_temp_var_skin_book_readed" } ]
   },
   {
     "type": "effect_on_condition",

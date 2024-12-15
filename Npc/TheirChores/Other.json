@@ -13,7 +13,7 @@
         "search_range": 2400
       }
     },
-    "end": { "effect": [ { "u_add_var": "u_scouted_bunker", "type": "mission", "context": "completed", "value": "yes" } ] },
+    "end": { "effect": [ { "u_add_var": "mission_completed_u_scouted_bunker", "value": "yes" } ] },
     "difficulty": 2,
     "value": 0,
     "origins": [ "ORIGIN_SECONDARY" ],

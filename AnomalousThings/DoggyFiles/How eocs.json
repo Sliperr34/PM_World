@@ -2,7 +2,7 @@
   {
     "type": "effect_on_condition",
     "id": "death_countdown",
-    "effect": [ { "queue_eocs": "death_eoc", "time_in_future": "4 s" } ]
+    "effect": [ { "run_eocs": "death_eoc", "time_in_future": "4 s" } ]
   },
   {
     "type": "effect_on_condition",

@@ -13,7 +13,7 @@
     "type": "enchantment",
     "id": "soda_suit_1",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_a_1_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_a_1_unlocked" } ] },
     "values": [
       { "value": "SCENT_MASK", "add": { "math": [ "0 + u_vitamin('cheers') " ] } },
       { "value": "STRENGTH", "add": { "math": [ "1 + u_vitamin('cheers') / 100 " ] } }
@@ -23,17 +23,17 @@
     "type": "enchantment",
     "id": "soda_suit_2",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_a_2_unlocked", "value": "true" },
-    "values": [
-      { "value": "ARMOR_ELEC", "add": { "math": [ "0 - u_vitamin('cheers') / 25 " ] } },
-      { "value": "ARMOR_ACID", "add": { "math": [ "0 + u_vitamin('cheers') / 25 " ] } }
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_a_2_unlocked" } ] },
+    "incoming_damage_mod": [
+      { "type": "electric", "add": { "math": [ "0 - u_vitamin('cheers') / 25 " ] } },
+      { "type": "acid", "add": { "math": [ "0 + u_vitamin('cheers') / 25 " ] } }
     ]
   },
   {
     "type": "enchantment",
     "id": "soda_suit_3",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_a_3_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_a_3_unlocked" } ] },
     "values": [
       { "value": "CARDIO_MULTIPLIER", "add": { "math": [ "0.25 * u_vitamin('cheers') / 5 " ] } },
       { "value": "PERCEPTION", "add": { "math": [ "1 + u_vitamin('cheers') / 100" ] } }
@@ -44,21 +44,21 @@
     "type": "enchantment",
     "id": "soda_pistol_1",
     "has": "WIELD",
-    "condition": { "u_has_var": "soda_ego_w_1_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_w_1_unlocked" } ] },
     "values": [ { "value": "RECOIL_MODIFIER", "add": { "math": [ "0 - u_vitamin('cheers') " ] } } ]
   },
   {
     "type": "enchantment",
     "id": "soda_pistol_2",
     "has": "WIELD",
-    "condition": { "u_has_var": "soda_ego_w_2_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_w_2_unlocked" } ] },
     "values": [ { "value": "WEAPON_DISPERSION", "add": { "math": [ "0 - u_vitamin('cheers')" ] } } ]
   },
   {
     "type": "enchantment",
     "id": "soda_pistol_3",
     "has": "WIELD",
-    "condition": { "u_has_var": "soda_ego_w_3_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_w_3_unlocked" } ] },
     "skills": [ { "value": "pistol", "add": 1 } ],
     "values": [ { "value": "RANGE", "add": { "math": [ "0 + u_vitamin('cheers') / 50" ] } } ]
   },
@@ -66,21 +66,21 @@
     "type": "enchantment",
     "id": "soda_gift_1",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_g_1_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_g_1_unlocked" } ] },
     "values": [ { "value": "FAT_TO_MAX_HP", "multiply": { "math": [ "0 + u_vitamin('cheers') / 100" ] } } ]
   },
   {
     "type": "enchantment",
     "id": "soda_gift_2",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_g_2_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_g_2_unlocked" } ] },
     "values": [ { "value": "KCAL", "multiply": { "math": [ " 0 + u_vitamin('cheers') / 1000" ] } } ]
   },
   {
     "type": "enchantment",
     "id": "soda_gift_3",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_g_3_unlocked", "value": "true" },
+    "condition": { "compare_string": [ "true", { "u_val": "soda_ego_g_3_unlocked" } ] },
     "mutations": [ "GOURMAND" ],
     "values": [ { "value": "HUNGER", "multiply": { "math": [ " 0 + u_vitamin('cheers') / 500" ] } } ]
   }
