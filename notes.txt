@@ -21,7 +21,7 @@
     "run_eocs": [ "EOC_DO_GOOD_THING" ]
 
               Потеря вариабельной
-          { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" }
+          { "u_lose_var": "prophecy_temp_var_skin_book_readed" }
 
 ЕСЛИ ЗАКЛИНАНИЕ ВЫЗЫВАЕТ ЕОК ТО У ЗАКЛИНАНИЯ ДОЛЖЕН БЫТЬ РАДИУС АОЕ РАВЕН 0, ИНАЧЕ ОН ВЫЗЫВАЕТ ЕОК НА ВСЕ КЛЕТКИ В РАДИУСЕ АОЕ
 

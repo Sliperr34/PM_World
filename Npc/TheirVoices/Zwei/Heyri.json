@@ -4,10 +4,7 @@
     "id": "TALK_REC_ZW",
     "//": "she say hello",
     "dynamic_line": {
-      "u_has_var": "u_met_Heyri",
-      "type": "general",
-      "context": "meeting",
-      "value": "yes",
+      "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ],
       "yes": [ "Hey!", "Nice to see you again!  What do you need?", "How can I help you today?" ],
       "no": "Hello! First time here? *she smile at you gently*"
     },
@@ -15,28 +12,28 @@
       {
         "text": "Yes... Where am I?",
         "topic": "TALK_ZW_HELP",
-        "condition": { "not": { "u_has_var": "u_met_Heyri", "type": "general", "context": "meeting", "value": "yes" } },
-        "effect": { "u_add_var": "u_met_Heyri", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ] } },
+        "effect": { "u_add_var": "u_met_Heyri_general_meeting", "value": "yes" }
       },
       {
         "text": "Just passing by *Leave*",
         "topic": "TALK_DONE",
-        "condition": { "not": { "u_has_var": "u_met_Heyri", "type": "general", "context": "meeting", "value": "yes" } }
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ] } }
       },
       {
         "text": "Hello again. Tell me more about this place.",
         "topic": "TALK_ZW_HELP",
-        "condition": { "u_has_var": "u_met_Heyri", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ] }
       },
       {
         "text": "Hey. What can I do for you?",
         "topic": "TALK_NONE",
-        "condition": { "u_has_var": "u_gained_trust", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "compare_string": [ "yes", { "u_val": "u_gained_trust_general_meeting" } ] }
       },
       {
         "text": "Just come to say hello, thanks *Leave*",
         "topic": "TALK_DONE",
-        "condition": { "u_has_var": "u_met_Heyri", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ] }
       }
     ]
   },
@@ -90,7 +87,7 @@
       {
         "text": "Can I live in dorm?",
         "topic": "TALK_ZW_HELP_DORM",
-        "condition": { "u_has_var": "u_gained_trust", "type": "general", "value": "yes" }
+        "condition": { "compare_string": [ "yes", { "u_val": "u_gained_trust_general_meeting" } ] }
       },
       { "text": "I also wanted ask about...", "topic": "TALK_ZW_HELP2" }
     ]

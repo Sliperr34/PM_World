@@ -4,9 +4,9 @@
     "id": "beak_a_activity",
     "condition": {
       "and": [
-        { "not": { "u_has_var": "beak_ego_a_1", "value": "true" } },
-        { "not": { "u_has_var": "beak_ego_a_2", "value": "true" } },
-        { "not": { "u_has_var": "beak_ego_a_3", "value": "true" } }
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_1" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_2" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_3" } ] } }
       ]
     },
     "effect": { "u_assign_activity": "beak_study_armor", "duration": "4 h" }
@@ -16,9 +16,9 @@
     "id": "beak_w_activity",
     "condition": {
       "and": [
-        { "not": { "u_has_var": "beak_ego_w_1", "value": "true" } },
-        { "not": { "u_has_var": "beak_ego_w_2", "value": "true" } },
-        { "not": { "u_has_var": "beak_ego_w_3", "value": "true" } }
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_1" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_2" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_3" } ] } }
       ]
     },
     "effect": { "u_assign_activity": "beak_study_weapon", "duration": "4 h" }
@@ -28,9 +28,9 @@
     "id": "beak_g_activity",
     "condition": {
       "and": [
-        { "not": { "u_has_var": "beak_ego_g_1", "value": "true" } },
-        { "not": { "u_has_var": "beak_ego_g_2", "value": "true" } },
-        { "not": { "u_has_var": "beak_ego_g_3", "value": "true" } }
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_1" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_2" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_3" } ] } }
       ]
     },
     "effect": { "u_assign_activity": "beak_study_gift", "duration": "4 h" }
@@ -127,7 +127,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_a_1_success",
-    "condition": { "not": { "u_has_var": "beak_ego_a_1", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_1" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_a_note_1" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -138,7 +138,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_a_2_success",
-    "condition": { "not": { "u_has_var": "beak_ego_a_2", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_2" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_a_note_2" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -149,7 +149,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_a_3_success",
-    "condition": { "not": { "u_has_var": "beak_ego_a_3", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_3" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_a_note_3" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -160,7 +160,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_w_1_success",
-    "condition": { "not": { "u_has_var": "beak_ego_w_1", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_1" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_w_note_1" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -171,7 +171,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_w_2_success",
-    "condition": { "not": { "u_has_var": "beak_ego_w_2", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_2" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_w_note_2" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -182,7 +182,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_w_3_success",
-    "condition": { "not": { "u_has_var": "beak_ego_w_3", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_3" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_w_note_3" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -193,7 +193,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_g_1_success",
-    "condition": { "not": { "u_has_var": "beak_ego_g_1", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_1" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_g_note_1" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -204,7 +204,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_g_2_success",
-    "condition": { "not": { "u_has_var": "beak_ego_g_2", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_2" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_g_note_2" },
       { "message": "<color_green>Success!</color>", "popup": true },
@@ -215,7 +215,7 @@
   {
     "type": "effect_on_condition",
     "id": "beak_ego_g_3_success",
-    "condition": { "not": { "u_has_var": "beak_ego_g_3", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_3" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_g_note_3" },
       { "message": "<color_green>Success!</color>", "popup": true },
