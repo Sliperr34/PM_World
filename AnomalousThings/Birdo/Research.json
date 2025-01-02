@@ -3,7 +3,7 @@
     "type": "effect_on_condition",
     "id": "beak_a_activity",
     "condition": {
-      "and": [
+      "or": [
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_1" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_2" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_3" } ] } }
@@ -15,7 +15,7 @@
     "type": "effect_on_condition",
     "id": "beak_w_activity",
     "condition": {
-      "and": [
+      "or": [
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_1" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_2" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_3" } ] } }
@@ -27,7 +27,7 @@
     "type": "effect_on_condition",
     "id": "beak_g_activity",
     "condition": {
-      "and": [
+      "or": [
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_1" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_2" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_3" } ] } }
@@ -118,11 +118,6 @@
         [ "beak_ego_g_3_success", 1 ]
       ]
     }
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "ego_study_fail",
-    "effect": [ { "message": "You didn't learn anything new", "popup": true } ]
   },
   {
     "type": "effect_on_condition",

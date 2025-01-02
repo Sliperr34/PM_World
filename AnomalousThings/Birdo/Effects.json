@@ -157,7 +157,7 @@
     "condition": { "compare_string": [ "true", { "u_val": "beak_ego_g_1_unlocked" } ] },
     "values": [
       { "value": "SPEED", "add": { "math": [ "4 + u_vitamin('SIN') " ] } },
-      { "value": "CARRY_WEIGHT", "add": { "math": [ "2000 - u_vitamin('SIN') * 1500" ] } }
+      { "value": "CARRY_WEIGHT", "add": { "math": [ "2000 - u_vitamin('SIN') * 150" ] } }
     ]
   },
   {
@@ -166,8 +166,8 @@
     "has": "WORN",
     "condition": { "compare_string": [ "true", { "u_val": "beak_ego_g_2_unlocked" } ] },
     "values": [
-      { "value": "ATTACK_SPEED", "multiply": { "math": [ "u_vitamin('SIN') / 30" ] } },
-      { "value": "CARRY_WEIGHT", "add": { "math": [ "2000 - u_vitamin('SIN') * 1500" ] } }
+      { "value": "ATTACK_SPEED", "multiply": { "math": [ "1 + u_vitamin('SIN') / 30" ] } },
+      { "value": "CARRY_WEIGHT", "add": { "math": [ "2000 - u_vitamin('SIN') * 150" ] } }
     ]
   },
   {
@@ -177,7 +177,7 @@
     "condition": { "compare_string": [ "true", { "u_val": "beak_ego_g_3_unlocked" } ] },
     "values": [
       { "value": "BONUS_DODGE", "add": { "math": [ "1 + u_vitamin('SIN') / 6" ] } },
-      { "value": "CARRY_WEIGHT", "add": { "math": [ "2000 - u_vitamin('SIN') * 1500" ] } }
+      { "value": "CARRY_WEIGHT", "add": { "math": [ "2000 - u_vitamin('SIN') * 150" ] } }
     ]
   },
   {
