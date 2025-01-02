@@ -226,7 +226,6 @@
     "type": "effect_on_condition",
     "id": "92_ego_evolve",
     "effect": [
-      { "u_consume_item": "skin_prophecy_evo_page", "count": 1 },
       {
         "if": {
           "and": [
@@ -239,8 +238,9 @@
         "then": [
           { "math": [ "u_spell_level('EGO_92_stage_1')", "+=", "1" ] },
           {
-            "u_message": "You feel a slight tickling somewhere in the back of your head, which gradually goes somewhere deeper into the brain"
-          }
+            "u_message": "You feel a slight tickling somewhere in the back of your head, which gradually goes somewhere deeper into the brain."
+          },
+		  { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
         ],
         "else": {
           "if": {
@@ -252,8 +252,9 @@
           },
           "then": [
             { "math": [ "u_spell_level('EGO_92_stage_2')", "+=", "1" ] },
-            { "u_message": "Your thoughts are clear but at the same time as if they don't belong to you" },
-            { "math": [ "u_spell_level('EGO_92_stage_1')", "=", "-1" ] }
+            { "u_message": "Your thoughts are clear but at the same time as if they don't belong to you." },
+            { "math": [ "u_spell_level('EGO_92_stage_1')", "=", "-1" ] },
+		    { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
           ],
           "else": {
             "if": {
@@ -265,14 +266,16 @@
             "then": [
               { "math": [ "u_spell_level('EGO_92_stage_3')", "+=", "1" ] },
               {
-                "u_message": "you feel the blood in your veins heating up and it almost hurts, but everything abruptly subsides, replaced by a cold inside your stomach"
+                "u_message": "you feel the blood in your veins heating up and it almost hurts, but everything abruptly subsides, replaced by a cold inside your stomach."
               },
-              { "math": [ "u_spell_level('EGO_92_stage_2')", "=", "-1" ] }
+              { "math": [ "u_spell_level('EGO_92_stage_2')", "=", "-1" ] },
+		      { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
             ],
             "else": [
               { "math": [ "u_spell_level('EGO_92_stage_4')", "+=", "1" ] },
               { "u_message": "You feel your understanding of EGO_92_stage_4 deepen! Its power grows." },
-              { "math": [ "u_spell_level('EGO_92_stage_3')", "=", "-1" ] }
+              { "math": [ "u_spell_level('EGO_92_stage_3')", "=", "-1" ] },
+		      { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
             ]
           }
         }
@@ -490,17 +493,19 @@
   {
     "type": "effect_on_condition",
     "id": "prophecy_clear",
-    "effect": [ { "u_lose_var": "prophecy_temp_var_skin_book_readed" } ]
+    "effect": [ { "u_lose_var": "prophecy_temp_var_skin_book_readed" },
+				{ "u_lose_var": "prophecy" }
+			]
   },
   {
     "type": "effect_on_condition",
     "id": "book_upgrade",
     "condition": { "and": [ { "u_has_item": "firefeather_item" }, { "u_has_item": "skin_prophecy" } ] },
     "effect": [
+	  { "u_spawn_item": "skin_prophecy_evoked" },
       { "u_remove_item_with": "firefeather_item" },
       { "u_remove_item_with": "skin_prophecy" },
-      { "u_spawn_item": "skin_prophecy_evoked" },
-      { "u_message": "You evoked Skin Prophecy" }
+      { "u_message": "You evoked the Skin Prophecy." }
     ],
     "false_effect": [ { "u_message": "You need Skin Prophecy for this" } ]
   }

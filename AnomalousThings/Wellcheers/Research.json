@@ -3,7 +3,7 @@
     "type": "effect_on_condition",
     "id": "soda_a_activity",
     "condition": {
-      "and": [
+      "or": [
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_1" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_2" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_3" } ] } }
@@ -15,7 +15,7 @@
     "type": "effect_on_condition",
     "id": "soda_w_activity",
     "condition": {
-      "and": [
+      "or": [
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_1" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_2" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_3" } ] } }
@@ -27,7 +27,7 @@
     "type": "effect_on_condition",
     "id": "soda_g_activity",
     "condition": {
-      "and": [
+      "or": [
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_1" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_2" } ] } },
         { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_3" } ] } }
@@ -397,7 +397,7 @@
           "id": "EOC_read_note_soda_g_1",
           "effect": [
             { "u_add_var": "soda_ego_g_1_unlocked", "value": "true" },
-            { "message": "Unlocked EGO passive: Increase max hp with nore cheers.", "popup": true }
+            { "message": "Unlocked EGO passive: Increase max hp with more cheers.", "popup": true }
           ]
         }
       ]
@@ -457,7 +457,7 @@
   {
     "type": "recipe",
     "category": "CC_PM",
-    "name": "Research of soda EGO",
+    "name": "Research of Soda EGO",
     "id": "soda_study_selector",
     "description": "Research the Extracted EGO \"soda\" and explore its secrets and potential applications.",
     "subcategory": "CSC_PM_EGO",
