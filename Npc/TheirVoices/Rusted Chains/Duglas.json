@@ -41,11 +41,19 @@
 },
 {
     "type" :"talk_topic",
+    "id" : "ACCEPT_MISSION_DUGLAS",
+    "dynamic_line" : "[Quest Currently unimplemented] You better come back with good news, or don't bother showing your face again.",
+    "responses" :[
+        {"text" : "Alright, alright, I'm leaving", "topic" : "TALK_DONE"}
+    ]
+},
+{
+    "type" :"talk_topic",
     "id" : "EVENT_FIGHT_DUGLAS",
     "dynamic_line" : "Then why the hell are you bothering me? Get out of here!",
     "responses" :[
         {"text" : "Calm down. Why are you so nervous?", "topic" : "FIGHT_DUGLAS"},
-        {"text" : "Alright, i'm leaving", "topic" : "TALK_DONE"}
+        {"text" : "Alright, I'm leaving", "topic" : "TALK_DONE"}
     ]
 }
 ]

@@ -125,7 +125,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_1" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_a_note_1" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "'People have been committing sins since long ago. Why do they commit sins, knowing it's wrong?' The small bird wondered.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_a_1", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_armor" } ]
@@ -136,7 +136,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_2" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_a_note_2" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "'It must be because there's no one to punish people for their misdeeds. If someone takes that role, then no foul act would happen in this world ever again!' With this in mind, the little bird left the forest it had been living in, and never went back.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_a_2", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_armor" } ]
@@ -147,7 +147,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_a_3" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_a_note_3" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "The Punishing Bird is a small and confident bird that punishes the evil, guilty, and all sorts of irreverent people.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_a_3", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_armor" } ]
@@ -158,7 +158,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_1" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_w_note_1" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Some employees have said that it is cute when the bird mightily flutters its tiny wings.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_w_1", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_weapon" } ]
@@ -169,7 +169,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_2" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_w_note_2" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "A majority of the time Punishing Bird acts like any other normal bird, flying here and there in the Containment Unit.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_w_2", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_weapon" } ]
@@ -180,7 +180,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_w_3" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_w_note_3" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Punishing Bird never cheeps or chirps. However, its stomach occasionally twitches.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_w_3", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_weapon" } ]
@@ -191,7 +191,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_1" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_g_note_1" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Not many know about Punishing Bird’s disgusting flesh, which splits apart into several sections.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_g_1", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_gift" } ]
@@ -202,7 +202,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_2" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_g_note_2" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "It is said the Punishing Bird was never alone in the forest, and was friends with two other birds.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_g_2", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_gift" } ]
@@ -213,7 +213,7 @@
     "condition": { "not": { "compare_string": [ "true", { "u_val": "beak_ego_g_3" } ] } },
     "effect": [
       { "u_spawn_item": "beak_ego_g_note_3" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "There are recommendations in bold red to never let anyone who the bird has seen commit crimes into the containment unit alone.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "beak_ego_g_3", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_beak_gift" } ]

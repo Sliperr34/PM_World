@@ -1,0 +1,40 @@
+[
+  {
+    "id": "rustedgear_item",
+    "type": "GENERIC",
+    "name": { "str": "rusted gear", "str_pl": "rusted gears" },
+    "description": "A rusted gear, though its hard to tell what metal its made from, lightweight and dark yet with a strength that's not easily moulded.",
+    "volume": "1 ml",
+    "weight": "1 g",
+    "longest_side": "16 cm",
+    "price_postapoc": 1500,
+    "to_hit": { "balance": "neutral", "grip": "bad", "length": "hand", "surface": "any" },
+    "melee_damage": { "bash": 1 },
+    "material": [ "l_steel" ],
+    "symbol": "g",
+    "looks_like": "steel",
+    "color": "black"
+  },
+  {
+    "id": "rustedlance_item",
+    "name": { "str": "rusted lance"},
+    "description": "A horribly rusted lance, not made to be held by human hands. There is an obvious bump near its haft where it used to be wielded by it's original owner, who has long since rusted away.",
+    "color": "black",
+	"type": "TOOL",
+    "category": "weapons",
+    "weight": "4216 g",
+    "volume": "5250 ml",
+    "longest_side": "217 cm",
+    "symbol": "/",
+    "looks_like": "spear",
+    "price": 120000,
+    "price_postapoc": 11900,
+    "material": [ { "type": "b_steel", "portion": 160 } ],
+    "repairs_with": [ "b_steel_item" ],
+    "flags": [ "SPEAR", "ALWAYS_TWOHAND", "DURABLE_MELEE", "REACH_ATTACK", "SLOW_WIELD" ],
+    "techniques": [ "WBLOCK_1", "DEF_DISARM", "BRUTAL" ],
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
+    "weapon_category": [ "POLEARMS", "SPEARS" ],
+    "melee_damage": { "bash": 4, "stab": 24 }
+  }
+]

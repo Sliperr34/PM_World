@@ -79,7 +79,7 @@
       { "math": [ "u_spell_level('92_fluidity')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_big_summon')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_evaporize')", "=", "-1" ] },
-      { "math": [ "u_spell_level('92_live_flame_togle')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_live_flame_toggle')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_gaze_hook_4')", "=", "-1" ] }
     ]
   },
