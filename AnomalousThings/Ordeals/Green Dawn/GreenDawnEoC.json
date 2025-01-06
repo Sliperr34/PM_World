@@ -32,7 +32,7 @@
       {
         "u_spawn_monster": "mon_doubts",
         "real_count": [
-          { "math": [ "2 + time_since('cataclysm', 'unit':'days') / 14" ] },
+          { "math": [ "1 + time_since('cataclysm', 'unit':'days') / 14" ] },
           { "math": [ "4 + time_since('cataclysm', 'unit':'days') / 14" ] }
         ],
         "min_radius": [ 7, 9 ],
