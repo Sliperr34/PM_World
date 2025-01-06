@@ -45,7 +45,7 @@
           { "group": "PECCA_GENERAL", "x": [ 1, 18 ], "y": [ 1, 18 ], "repeat": [ 2, 7 ] },
           { "group": "GROUP_ZOMBIE_UPGRADE", "x": [ 1, 18 ], "y": [ 1, 18 ], "repeat": [ 15, 48 ] }
         ],
-        "om_terrain": "s_bookstore",
+
         "place_item": [ { "item": "ZSG", "x": 3, "y": 10 } ]
       }
     },

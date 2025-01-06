@@ -1,0 +1,61 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_green_dawn",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+	"condition": { "and": [ { "math": ["time_since('cataclysm', 'unit':'days') >= 14"] }, { "not": { "compare_string": [ "true", { "u_val": "ordeal_lock" } ] } } ] },
+    "effect": [
+		{ "u_add_var": "ordeal_lock", "value": "true" },
+		{ "run_eocs": "EOC_green_dawn_wave" },
+		{ "run_eocs": "EOC_green_dawn_wave", "time_in_future": [ "5 minutes", "10 minutes" ] },
+		{ "run_eocs": "EOC_green_dawn_wave", "time_in_future": [ "10 minutes", "20 minutes" ] },
+		{ "run_eocs": "EOC_remove_ordeal_lock", "time_in_future": [ "14 days", "20 days" ] },
+		{ "run_eocs": "EOC_green_dawn_flavour", "time_in_future": [ "5 minutes", "10 minutes" ] },
+		{
+            "message": "<color_green>     The Dawn of Green\n\n          DOUBT\n\nTo live was a process full of pain.</color>",
+            "popup": true
+        }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_green_dawn_wave",
+    "effect": [
+		{
+            "message": "The world creaks like metal sheering away."
+        },
+		{ "u_spawn_monster": "mon_doubts", "real_count": [ { "math": [ "2 + time_since('cataclysm', 'unit':'days') / 14" ] }, { "math": [ "4 + time_since('cataclysm', 'unit':'days') / 14" ] } ], "min_radius": [ 7, 9 ], "max_radius": [ 14, 24 ] },
+		{ "run_eocs": "EOC_green_dawn_wave_repeat", "time_in_future": [ "1 minutes", "2 minutes" ] },
+		{ "run_eocs": "EOC_green_dawn_flavour", "time_in_future": [ "5 minutes", "10 minutes" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_green_dawn_wave_repeat",
+	"condition": { "x_in_y_chance": { "x": 1, "y": 10 } },
+    "effect": [
+		{
+            "message": "Reality ripples like a bubbling pot of stew."
+        },
+		{ "u_spawn_monster": "mon_doubts", "real_count": [ { "math": [ "2 + time_since('cataclysm', 'unit':'days') / 14" ] }, { "math": [ "4 + time_since('cataclysm', 'unit':'days') / 14" ] } ], "min_radius": [ 7, 9 ], "max_radius": [ 14, 24 ] },
+		{ "run_eocs": "EOC_green_dawn_wave_repeat", "time_in_future": [ "1 minutes", "2 minutes" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_remove_ordeal_lock",
+    "effect": [
+		{ "u_lose_var": "ordeal_lock" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_green_dawn_flavour",
+    "effect": [
+		{ "set_string_var": [ "Is there really any hope of surviving? Everyone dies eventually.", "TICK. TOCK. TICK. TOCK.", "The grinding of gears assaults your senses.", "This world is a clock that's already stopped.", "What about the next wound, will you survive?", "Are you just going to end up as a monster?", "You're already dead, and you know it.", "The sound of the dead is ever present.", "Just give in." ],
+          "target_var": { "u_val": "quote" } },
+		{ "message": "<u_val:quote>", "type": "mixed" }
+    ]
+  }
+]

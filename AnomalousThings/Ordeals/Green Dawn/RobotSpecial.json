@@ -1,0 +1,129 @@
+[
+  {
+    "id": "spell_robot_impale",
+    "type": "SPELL",
+    "name": "Impale",
+    "description": "Stabbed by a lance.",
+    "valid_targets": [ "hostile" ],
+	"flags": [ "RANDOM_DAMAGE", "NO_LEGS", "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
+    "effect": "attack",
+	"effect_str": "downed",
+    "shape": "blast",
+    "damage_type": "stab",
+    "min_damage": 5,
+    "max_damage": 30,
+    "damage_increment": 2,
+    "min_range": 1,
+    "max_range": 1,
+	"min_duration": 100,
+	"max_duration": 500,
+    "difficulty": 1,
+    "max_level": 10,
+	"base_casting_time": 75,
+    "final_casting_time": 30,
+    "casting_time_increment": -3,
+    "message": "The Doubt slams it's lance into you.",
+    "sound_type": "combat",
+	"extra_effects": [
+	  {
+	    "id": "spell_robot_impale_if_downed"
+      }
+    ]	
+  },
+  {
+    "id": "spell_robot_impale_if_downed",
+    "type": "SPELL",
+    "name": "Impale check.",
+    "description": "Checks if opponent is downed.",
+    "valid_targets": [ "hostile" ],
+	"flags": [ "NO_LEGS", "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "robot_hook",
+    "shape": "blast",
+    "max_level": 5,
+    "message": "Swoosh"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "robot_hook",
+	"condition": {  "u_has_effect": "downed"  },
+    "effect": [
+      { "message": "The Doubt takes advantage of having knocked you over, slamming its bloody lance into you again and again and again..", "type": "bad" }, 
+	  { "u_cast_spell": { "id": "spell_robot_overkill", "hit_self": true } }
+    ]
+  },
+  {
+    "id": "spell_robot_overkill",
+    "type": "SPELL",
+    "name": "Impale",
+    "description": "Repeated stabbing of a downed enemy by a lance.",
+    "valid_targets": [ "hostile", "self" ],
+	"flags": [ "WONDER", "NO_LEGS", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "stab",
+    "min_damage": 5,
+    "max_damage": 15,
+    "damage_increment": 5,
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 5,
+	"extra_effects": [
+	  {
+	    "id": "spell_robot_overkill_true"
+      }
+	]
+  },
+  {
+    "id": "spell_robot_overkill_true",
+    "type": "SPELL",
+    "name": "Impale",
+    "description": "Repeated stabbing of a downed enemy by a lance.",
+    "valid_targets": [ "hostile", "self" ],
+	"flags": [ "RANDOM_DAMAGE", "NO_LEGS", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "stab",
+    "min_damage": 10,
+    "max_damage": 20,
+    "damage_increment": 5,
+    "min_range": 1,
+    "max_range": 1,
+    "difficulty": 1,
+    "max_level": 5,
+    "message": "STAB!!",
+    "sound_type": "combat",
+	"min_pierce": 10,           
+    "max_pierce": 20,
+	"extra_effects": [
+	  {
+	    "id": "spell_robot_overkill_morale"
+      }
+	]
+  },
+  {
+    "id": "spell_robot_overkill_morale",
+    "type": "SPELL",
+    "name": "Initiates the morale check.",
+    "description": "Checks if opponent is downed.",
+    "valid_targets": [ "hostile" ],
+	"flags": [ "NO_LEGS", "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "robot_hook_morale",
+    "shape": "blast",
+    "max_level": 5
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "robot_hook_morale",
+    "effect": [
+      {
+        "u_add_morale": "impaled_morale",
+        "bonus": -10,
+        "max_bonus": -500,
+        "duration": "30 minutes",
+        "decay_start": "10 minutes"
+      }
+    ]
+  }
+]

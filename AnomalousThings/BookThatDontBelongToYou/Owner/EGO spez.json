@@ -13,7 +13,7 @@
     "id": "EGO_92_stage_1",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 stage 1 activation",
-    "description": "Activate your bond with EGO 9:2, this requires you to be in an emotional state.",
+    "description": "Activate your bond with EGO 9:2, strengthening you and wreathing you in flame.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "92_stage_1_activation",
@@ -33,7 +33,7 @@
     "energy_source": "STAMINA",
     "difficulty": 3,
     "max_level": 10,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "EMOTION_CASTING_LOW" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -186,7 +186,7 @@
     "id": "EGO_92_stage_2",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 stage 2 activation",
-    "description": "Your bond with EGO 9:2 has strengthened, and you may call upon it more deeply. This requires you to be in an emotional state.",
+    "description": "Your bond with EGO 9:2 has strengthened, and you may call upon it more deeply.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "92_stage_2_activation",
@@ -206,7 +206,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 10,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "EMOTION_CASTING_LOW" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -474,7 +474,7 @@
     "id": "EGO_92_stage_3",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 stage 3 activation",
-    "description": "Your bond with EGO 9:2 has grown deeper still, towards a vast depth of power. This requires you to be in an emotional state.",
+    "description": "Your bond with EGO 9:2 has grown deeper still, towards a vast depth of power.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "92_stage_3_activation",
@@ -494,7 +494,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 10,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "EMOTION_CASTING_LOW" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",
@@ -915,7 +915,7 @@
     "id": "EGO_92_stage_4",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 stage 4 activation",
-    "description": "Ignites your joint flame, granting great strength and resistance to fire for a short time. Requires you to be in the throws of emotion.",
+    "description": "Ignites your joint flame, granting great strength and resistance to fire for a short time.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "92_stage_4_activation",
@@ -935,7 +935,7 @@
     "energy_source": "STAMINA",
     "difficulty": 4,
     "max_level": 10,
-    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "EMOTION_CASTING_LOW" ]
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "type": "effect_on_condition",

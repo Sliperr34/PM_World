@@ -56,15 +56,6 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_characterfinishedactivity",
-    "eoc_type": "EVENT",
-    "required_event": "character_finished_activity",
-	"effect": [
-	  { "math": [ "u_vitamin('emotion') += 2" ] } 
-	  ]
-  },
-  {
-    "type": "effect_on_condition",
     "id": "emotion_charactermeleeattacksmonster",
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_monster",
@@ -105,7 +96,7 @@
     "eoc_type": "EVENT",
     "required_event": "character_takes_damage",
 	"effect": [
-	  { "math": [ "u_vitamin('emotion') += 8" ] }
+	  { "math": [ "u_vitamin('emotion') += 4" ] }
     ]
   }
   
