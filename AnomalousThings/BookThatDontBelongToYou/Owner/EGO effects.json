@@ -79,7 +79,7 @@
       { "math": [ "u_spell_level('92_fluidity')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_big_summon')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_evaporize')", "=", "-1" ] },
-      { "math": [ "u_spell_level('92_live_flame_togle')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_live_flame_toggle')", "=", "-1" ] },
       { "math": [ "u_spell_level('92_gaze_hook_4')", "=", "-1" ] }
     ]
   },
@@ -139,77 +139,105 @@
     "type": "effect_on_condition",
     "id": "EOC_spellbook_wield_test_0",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "required_event": "opens_spellbook",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_0_mutation" },
     "effect": [
-      {
-        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "0" ] },
-        "then": [
           { "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
           { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] }
-        ]
-      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_spellbook_wield_test_1",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "required_event": "opens_spellbook",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_1_mutation" },
     "effect": [
-      {
-        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "1" ] },
-        "then": [
-          { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
-          { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] }
-        ]
-      }
+	    { "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_spellbook_wield_test_2",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "required_event": "opens_spellbook",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_2_mutation" },
     "effect": [
-      {
-        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "2" ] },
-        "then": [
-          { "math": [ "u_spell_level('92_medium_summon')", "=", "1" ] },
-          { "math": [ "u_spell_level('92_flame_manifestation')", "=", "1" ] }
-        ]
-      }
+		{ "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_medium_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_flame_manifestation')", "=", "1" ] }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_spellbook_wield_test_3",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "required_event": "opens_spellbook",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_3_mutation" },
     "effect": [
-      {
-        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "3" ] },
-        "then": [ { "math": [ "u_spell_level('92_reignite')", "=", "1" ] }, { "math": [ "u_spell_level('92_fluidity')", "=", "1" ] } ]
-      }
+		{ "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_medium_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_flame_manifestation')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_reignite')", "=", "1" ] }, 
+		{ "math": [ "u_spell_level('92_fluidity')", "=", "1" ] }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_spellbook_wield_test_4",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "required_event": "opens_spellbook",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_4_mutation" },
     "effect": [
-      {
-        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "4" ] },
-        "then": [
-          { "math": [ "u_spell_level('92_big_summon')", "=", "1" ] },
-          { "math": [ "u_spell_level('92_evaporize')", "=", "1" ] }
-        ]
-      }
+		{ "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_medium_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_flame_manifestation')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_reignite')", "=", "1" ] }, 
+		{ "math": [ "u_spell_level('92_fluidity')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_big_summon')", "=", "1" ] },
+        { "math": [ "u_spell_level('92_evaporize')", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_emotion_casting_low",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+	"condition": { "math": ["u_vitamin('emotion') < 20"] },
+    "effect": [
+		{ "math": [ "u_spellcasting_adjustment('cost', 'flag_whitelist': 'EMOTION_CASTING_LOW') = 10000" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_emotion_casting_med",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+	"condition": { "math": ["u_vitamin('emotion') < 50"] },
+    "effect": [
+		{ "math": [ "u_spellcasting_adjustment('cost', 'flag_whitelist': 'EMOTION_CASTING_MEDIUM') = 10000" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_emotion_casting_high",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+	"condition": { "math": ["u_vitamin('emotion') < 80"] },
+    "effect": [
+		{ "math": [ "u_spellcasting_adjustment('cost', 'flag_whitelist': 'EMOTION_CASTING_HIGH') = 10000" ] }
     ]
   }
 ]

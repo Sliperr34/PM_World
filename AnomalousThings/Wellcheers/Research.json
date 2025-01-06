@@ -3,10 +3,10 @@
     "type": "effect_on_condition",
     "id": "soda_a_activity",
     "condition": {
-      "and": [
-        { "not": { "u_has_var": "soda_ego_a_1", "value": "true" } },
-        { "not": { "u_has_var": "soda_ego_a_2", "value": "true" } },
-        { "not": { "u_has_var": "soda_ego_a_3", "value": "true" } }
+      "or": [
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_1" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_2" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_3" } ] } }
       ]
     },
     "effect": { "u_assign_activity": "soda_study_armor", "duration": "2 h" }
@@ -15,10 +15,10 @@
     "type": "effect_on_condition",
     "id": "soda_w_activity",
     "condition": {
-      "and": [
-        { "not": { "u_has_var": "soda_ego_w_1", "value": "true" } },
-        { "not": { "u_has_var": "soda_ego_w_2", "value": "true" } },
-        { "not": { "u_has_var": "soda_ego_w_3", "value": "true" } }
+      "or": [
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_1" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_2" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_3" } ] } }
       ]
     },
     "effect": { "u_assign_activity": "soda_study_weapon", "duration": "2 h" }
@@ -27,10 +27,10 @@
     "type": "effect_on_condition",
     "id": "soda_g_activity",
     "condition": {
-      "and": [
-        { "not": { "u_has_var": "soda_ego_g_1", "value": "true" } },
-        { "not": { "u_has_var": "soda_ego_g_2", "value": "true" } },
-        { "not": { "u_has_var": "soda_ego_g_3", "value": "true" } }
+      "or": [
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_1" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_2" } ] } },
+        { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_3" } ] } }
       ]
     },
     "effect": { "u_assign_activity": "soda_study_gift", "duration": "2 h" }
@@ -127,10 +127,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_a_1_success",
-    "condition": { "not": { "u_has_var": "soda_ego_a_1", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_1" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_a_note_1" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "No-one really knows where these cans come from, although a vending machine has been found, it has never been restocked and yet never ran dry.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_a_1", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_armor" } ]
@@ -138,10 +138,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_a_2_success",
-    "condition": { "not": { "u_has_var": "soda_ego_a_2", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_2" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_a_note_2" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "It has been said the drinks are sometimes laced with sleeping pills, though that's an odd rumour.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_a_2", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_armor" } ]
@@ -149,10 +149,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_a_3_success",
-    "condition": { "not": { "u_has_var": "soda_ego_a_3", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_a_3" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_a_note_3" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Falling asleep after drinking Wellcheers is a sign of horrendous luck.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_a_3", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_armor" } ]
@@ -160,10 +160,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_w_1_success",
-    "condition": { "not": { "u_has_var": "soda_ego_w_1", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_1" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_w_note_1" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "The mascot for the drink is an offputtingly anthropomorphic shrimp that looks more like it wants to stab you than help.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_w_1", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_weapon" } ]
@@ -171,10 +171,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_w_2_success",
-    "condition": { "not": { "u_has_var": "soda_ego_w_2", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_2" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_w_note_2" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Despite being what appears to be a processed drink, Wellcheers is surprisingly good for your health.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_w_2", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_weapon" } ]
@@ -182,10 +182,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_w_3_success",
-    "condition": { "not": { "u_has_var": "soda_ego_w_3", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_w_3" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_w_note_3" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "There are a number of cases within the Anomalies document that mention staff going missing after drinking Wellcheers and falling asleep.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_w_3", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_weapon" } ]
@@ -193,10 +193,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_g_1_success",
-    "condition": { "not": { "u_has_var": "soda_ego_g_1", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_1" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_g_note_1" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Though the Cherry and normal varients of Wellcheers are good, staff reported feeling far more refreshed with the Grape flavour.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_g_1", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_gift" } ]
@@ -204,10 +204,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_g_2_success",
-    "condition": { "not": { "u_has_var": "soda_ego_g_2", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_2" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_g_note_2" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "There is allegedly a fourth flavour of Wellcheers, shrimp, said to be the best by far, and yet this flavour has never been found or dispensed.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_g_2", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_gift" } ]
@@ -215,10 +215,10 @@
   {
     "type": "effect_on_condition",
     "id": "soda_ego_g_3_success",
-    "condition": { "not": { "u_has_var": "soda_ego_g_3", "value": "true" } },
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "soda_ego_g_3" } ] } },
     "effect": [
       { "u_spawn_item": "soda_ego_g_note_3" },
-      { "message": "<color_green>Success!</color>", "popup": true },
+      { "message": "Strangely, despite it's anomalous status, Wellcheers had an advert marking it as publically available.\n\n<color_green>Success!</color>", "popup": true },
       { "u_add_var": "soda_ego_g_3", "value": "true" }
     ],
     "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_gift" } ]
@@ -397,7 +397,7 @@
           "id": "EOC_read_note_soda_g_1",
           "effect": [
             { "u_add_var": "soda_ego_g_1_unlocked", "value": "true" },
-            { "message": "Unlocked EGO passive: Increase max hp with nore cheers.", "popup": true }
+            { "message": "Unlocked EGO passive: Increase max hp with more cheers.", "popup": true }
           ]
         }
       ]
@@ -457,7 +457,7 @@
   {
     "type": "recipe",
     "category": "CC_PM",
-    "name": "Research of soda EGO",
+    "name": "Research of Soda EGO",
     "id": "soda_study_selector",
     "description": "Research the Extracted EGO \"soda\" and explore its secrets and potential applications.",
     "subcategory": "CSC_PM_EGO",

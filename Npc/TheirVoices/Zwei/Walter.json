@@ -4,10 +4,7 @@
     "id": "TALK_WALTER",
     "//": "He say hello",
     "dynamic_line": {
-      "u_has_var": "u_met_Walter",
-      "type": "general",
-      "context": "meeting",
-      "value": "yes",
+      "compare_string": [ "yes", { "u_val": "u_met_Walter_general_meeting" } ],
       "yes": [ "Speak.", "What's your busines?" ],
       "no": "Hmm... I don't remember your face"
     },
@@ -15,23 +12,23 @@
       {
         "text": "Hello. I'm here to do some work.",
         "topic": "TALK_MISSION_LIST",
-        "condition": { "not": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" } },
-        "effect": { "u_add_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_Walter_general_meeting" } ] } },
+        "effect": { "u_add_var": "u_met_Walter_general_meeting", "value": "yes" }
       },
       {
         "text": "Just passing by *Leave*",
         "topic": "TALK_DONE",
-        "condition": { "not": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" } }
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_Walter_general_meeting" } ] } }
       },
       {
         "text": "Hey. What can I do for you?",
         "topic": "TALK_MISSION_LIST",
-        "condition": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_Walter_general_meeting" } ] }
       },
       {
         "text": "Just come to say hello, thanks *Leave*",
         "topic": "TALK_DONE",
-        "condition": { "u_has_var": "u_met_Walter", "type": "general", "context": "meeting", "value": "yes" }
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_Walter_general_meeting" } ] }
       }
     ]
   }

@@ -1,0 +1,40 @@
+[
+    {
+        "id": "mon_doubts",
+        "type": "MONSTER",
+        "name": { "str": "<color_green>Doubt</color>" },
+        "description": "A creature made of dark metal and gears that buzz with a constant movement. Several red 'eyes' gleam out of it's faceplate, dead set on you, always on you. Each clack of movement a threat, and nothing says that more than the lance that takes the place of its only hand, gleaming with what appears to be fresh blood.",
+        "default_faction": "distortions",
+        "bodytype": "human",
+        "species": [ "DISTORTIONS" ],
+        "volume": "65 L",
+        "weight": "126 kg",
+        "hp": 348,
+        "speed": 60,
+        "material": [ "steel" ],
+        "looks_like": "mon_zombie_fireman",
+        "symbol": "D",
+        "color": "black",
+        "aggression": 100,
+        "morale": 100,
+        "aggro_character": true,
+        "melee_skill": 3,
+        "melee_dice": 1,
+        "melee_dice_sides": 8,
+        "melee_damage": [ { "damage_type": "stab", "amount": 6 } ],
+        "special_attacks": [ 
+			{ "id": "robot_impale", "type": "spell", "spell_data": { "id": "spell_robot_impale", "min_level": 1 }, "cooldown": 5, "monster_message": "The Doubt slams it's lance into you." } 
+			],
+        "dodge": 0,
+        "grab_strength": 4,
+        "weakpoint_sets": [ "wps_humanoid_body" ],
+        "families": [ "prof_wp_distortions0", "prof_wp_distortions1" ],
+        "vision_day": 55,
+        "vision_night": 55,
+        "harvest": "mutant_human",
+        "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "ALWAYS_SEES_YOU", "BASHES",
+                    "GRABS", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
+        "armor": { "electric": -3, "heat": 20, "bash": -2, "cut": 8, "stab": 8, "bullet": 5, "acid":10 },
+		"death_drops": [ { "item": "rustedgear_item", "prob": 20 }, { "item": "rustedlance_item", "prob": 4 } ]
+      }
+]

@@ -1,0 +1,103 @@
+[
+  {
+    "id": "emotion",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": { "str": "Emotion" },
+    "min": 0,
+    "max": 100,
+    "rate": "1 t",
+    "excess": "emotion",
+    "flags": [ "NO_DISPLAY" ],
+    "disease_excess": [ [ 20, 49 ], [ 50, 79 ], [ 80, 100 ] ]
+  },
+  {
+    "type": "effect_type",
+    "id": "emotion",
+    "name": [ "Stirred Emotions", "Growing Emotions", "Raging Emotions" ],
+    "desc": [
+      "You feel the spark of emotions rising within you."
+    ],
+    "apply_message": [
+      [ "Your heart beats a little faster.", "mixed" ],
+      [ "Emotions crash against the borders of your mind.", "mixed" ],
+      [ "Instinct and emotion consumes you.", "mixed" ]
+    ],
+    "remove_message": "You feel your emotions finally still.",
+    "max_intensity": 3
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_onkill",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+	"effect": [
+      { "math": [ "u_vitamin('emotion') += 8" ] } 
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_onkillchar",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_character",
+	"effect": [
+	  { "math": [ "u_vitamin('emotion') += 20" ] } 
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_onbrokenbone",
+    "eoc_type": "EVENT",
+    "required_event": "broken_bone",
+	"effect": [ 
+	  { "math": [ "u_vitamin('emotion') += 20" ] } 
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_charactermeleeattacksmonster",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+	"effect": [
+	  { "math": [ "u_vitamin('emotion') += 2" ] } 
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_characterrangedattacksmonster",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+	"effect": [
+	  { "math": [ "u_vitamin('emotion') += 2" ] } 
+	]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_charactermeleeattackscharacter",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_character",
+	"effect": [
+	  { "math": [ "u_vitamin('emotion') += 3" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_characterrangedattackscharacter",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+	"effect": [
+	  { "math": [ "u_vitamin('emotion') += 3" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "emotion_charactertakesdamage",
+    "eoc_type": "EVENT",
+    "required_event": "character_takes_damage",
+	"effect": [
+	  { "math": [ "u_vitamin('emotion') += 4" ] }
+    ]
+  }
+  
+]
