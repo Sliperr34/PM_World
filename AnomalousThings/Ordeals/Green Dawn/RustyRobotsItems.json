@@ -10,17 +10,33 @@
     "price_postapoc": 1500,
     "to_hit": { "balance": "neutral", "grip": "bad", "length": "hand", "surface": "any" },
     "melee_damage": { "bash": 1 },
-    "material": [ "l_steel" ],
+    "material": [ "b_steel" ],
+    "symbol": "g",
+    "looks_like": "steel",
+    "color": "black"
+  },
+  {
+    "id": "casepiece_item",
+    "type": "GENERIC",
+    "name": { "str": "piece of Doubt", "str_pl": "pieces of Doubt" },
+    "description": "Part of the Doubt distortion body, heavy and cold black metal. Seems rusted from blood.",
+    "volume": "72 ml",
+    "weight": "2180 g",
+    "longest_side": "16 cm",
+    "price_postapoc": 1500,
+    "to_hit": { "balance": "neutral", "grip": "bad", "length": "hand", "surface": "any" },
+    "melee_damage": { "bash": 3 },
+    "material": [ "b_steel" ],
     "symbol": "g",
     "looks_like": "steel",
     "color": "black"
   },
   {
     "id": "rustedlance_item",
-    "name": { "str": "rusted lance"},
+    "name": { "str": "rusted lance" },
     "description": "A horribly rusted lance, not made to be held by human hands. There is an obvious bump near its haft where it used to be wielded by it's original owner, who has long since rusted away.",
     "color": "black",
-	"type": "TOOL",
+    "type": "TOOL",
     "category": "weapons",
     "weight": "4216 g",
     "volume": "5250 ml",
@@ -36,5 +52,41 @@
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "weapon_category": [ "POLEARMS", "SPEARS" ],
     "melee_damage": { "bash": 4, "stab": 24 }
+  },
+  {
+    "id": "armor_doubt_chestplate",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "chestplate from strange black metal" },
+    "description": "A chestplate, 2 mm thick.  This one has been made with some strange black metal.",
+    "weight": "12 kg",
+    "volume": "17500 ml",
+    "price": "600 USD",
+    "price_postapoc": "120 USD",
+    "to_hit": { "grip": "none", "length": "short", "surface": "any", "balance": "clumsy" },
+    "material": [ "b_steel" ],
+    "symbol": "[",
+    "looks_like": "armor_larmor",
+    "color": "black",
+    "warmth": 0,
+    "longest_side": "60 cm",
+    "material_thickness": 3,
+    "flags": [ "OUTER", "STURDY", "CONDUCTIVE", "ONLY_ONE" ],
+    "armor": [
+      {
+        "material": [ { "type": "b_steel", "covered_by_mat": 100, "thickness": 1.8 } ],
+        "covers": [ "torso" ],
+        "coverage": 100,
+        "encumbrance": 22
+      },
+      {
+        "material": [ { "type": "b_steel", "covered_by_mat": 100, "thickness": 1.8 } ],
+        "covers": [ "leg_l", "leg_r", "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_r", "arm_shoulder_l", "leg_hip_l", "leg_hip_r" ],
+        "coverage": 100,
+        "encumbrance": 13
+      }
+    ],
+    "melee_damage": { "bash": 8 }
   }
 ]
