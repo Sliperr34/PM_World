@@ -216,7 +216,7 @@
         "switch": { "math": [ "u_vitamin('emotion')" ] },
         "cases": [
           {
-            "case": 20,
+            "case": 0,
             "effect": [
               { "math": [ "u_vitamin('emotion') -= 20" ] },
               {
@@ -511,7 +511,7 @@
         "switch": { "math": [ "u_vitamin('emotion')" ] },
         "cases": [
           {
-            "case": 20,
+            "case": 0,
             "effect": [
               { "math": [ "u_vitamin('emotion') -= 20" ] },
               {
@@ -958,7 +958,7 @@
         "switch": { "math": [ "u_vitamin('emotion')" ] },
         "cases": [
           {
-            "case": 20,
+            "case": 0,
             "effect": [
               { "math": [ "u_vitamin('emotion') -= 20" ] },
               {

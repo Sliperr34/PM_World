@@ -76,5 +76,65 @@
     "melee_combat_info": { "order": 1070, "show_type": false },
     "pet_prot_info": { "order": 1070, "show_type": false },
     "protection_info": { "order": 1070, "show_type": false }
+  },
+  {
+    "id": "gloom",
+    "type": "damage_type",
+    "name": "Gloom",
+    "physical": false,
+    "material_required": false,
+    "magic_color": "black",
+	"ondamage_eocs": [ "EOC_gloom_morale_damage" ]
+  },
+  {
+    "id": "gloom",
+    "type": "damage_info_order",
+    "info_display": "detailed",
+    "ablative_info": { "order": 1071, "show_type": true },
+    "bionic_info": { "order": 1071, "show_type": true },
+    "melee_combat_info": { "order": 1071, "show_type": true },
+    "pet_prot_info": { "order": 1071, "show_type": true },
+    "protection_info": { "order": 1071, "show_type": true }
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_gloom_res",
+    "name": [ "Gloom Resistance" ],
+    "desc": [ "" ],
+	"show_in_info": true,
+    "rating": "good",
+    "enchantments": [
+      {
+		  "condition": { "math": [ "u_val('morale') >= 0" ] },
+          "incoming_damage_mod": [
+          { "type": "gloom", "multiply": -1 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_gloom_morale_damage",
+    "effect": [
+		{
+			"npc_add_morale": "gloom_morale",
+			"bonus": { "math": [ "_damage_taken * -1" ] },
+			"max_bonus": -1000,
+			"duration": "12 minutes",
+			"decay_start": "5 minutes"
+        }
+	]
+  },
+  {
+    "id": "gloom_morale",
+    "type": "morale_type",
+    "text": "Why do we do anything and not let ourselves just rot away?"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_gloom_res_start",
+    "eoc_type": "EVENT",
+    "required_event": "game_begin",
+    "effect": [ { "u_add_effect": "effect_gloom_res", "duration": "PERMANENT" } ]
   }
 ]

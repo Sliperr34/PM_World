@@ -86,6 +86,34 @@
     "see_cost": "medium"
   },
   {
+    "id": "hhpp1",
+    "type": "overmap_terrain",
+    "name": "HamHamPangPang",
+    "sym": "H",
+    "see_cost": "medium"
+  },
+  {
+    "id": "hhpp1_roof",
+    "type": "overmap_terrain",
+    "name": "HamHamPangPang roof",
+    "sym": "H",
+    "see_cost": "medium"
+  },
+  {
+    "id": "hhpp2",
+    "type": "overmap_terrain",
+    "name": "HamHamPangPang",
+    "sym": "H",
+    "see_cost": "medium"
+  },
+  {
+    "id": "hhpp2_roof",
+    "type": "overmap_terrain",
+    "name": "HamHamPangPang roof",
+    "sym": "H",
+    "see_cost": "medium"
+  },
+  {
     "id": "rc_hideout",
     "type": "overmap_terrain",
     "name": "Rusted Chains hideout",
