@@ -90,8 +90,10 @@
       { "math": [ "u_spell_level('soda_can_weak_hook')", "=", "-1" ] },
       { "math": [ "u_spell_level('soda_can_normal_hook')", "=", "-1" ] },
       { "math": [ "u_spell_level('soda_armor_normal_hook')", "=", "-1" ] },
+	  { "math": [ "u_spell_level('soda_net_normal_hook')", "=", "-1" ] },
       { "math": [ "u_spell_level('soda_armor_empower_hook')", "=", "-1" ] },
-      { "math": [ "u_spell_level('soda_can_empower_hook')", "=", "-1" ] }
+      { "math": [ "u_spell_level('soda_can_empower_hook')", "=", "-1" ] },
+	  { "math": [ "u_spell_level('soda_net_empower_hook')", "=", "-1" ] }
     ]
   },
   {
