@@ -32,6 +32,7 @@
         "harvest": "mutant_human",
         "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "PATH_AVOID_FIRE", "WARM", "ALWAYS_SEES_YOU", "CAN_OPEN_DOORS",
                     "GRABS", "HAS_MIND", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
-        "armor": { "electric": -3, "heat": -2, "bash": -2, "cut": 8, "stab": 2, "bullet": 0, "acid":10 }
+        "armor": { "electric": -3, "heat": -2, "bash": -2, "cut": 8, "stab": 2, "bullet": 0, "acid":10 },
+		"death_drops": [ { "item": "prawn_wellcheers", "prob": 3 } ]
       }
 ]

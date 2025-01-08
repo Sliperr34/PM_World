@@ -87,6 +87,35 @@
     "consumption_effect_on_conditions": [ "wellgrape_random" ]
   },
   {
+    "type": "COMESTIBLE",
+    "id": "prawn_wellcheers",
+    "looks_like": "cranberry_juice",
+    "name": { "str": "prawn Wellcheers" },
+    "weight": "260 g",
+    "color": "magenta",
+    "stim": 5,
+    "sleepiness_mod": -22,
+    "container": "wellprawn_can",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 8,
+    "healthy": 2,
+    "calories": 321,
+    "description": "Indulge in the rich, bold taste of Wellcheers Grape, a symphony of juicy grape goodness combined with the iconic refreshment of Wellcheers. Infused with vitamins and overflowing with robust flavor, this soda is your ticket to a grape-infused paradise. As you drink, the whispers of a vineyard breeze accompany each gulp, filling you with strength and delight. Relax, enjoy, and remember—there’s absolutely nothing suspicious about this extraordinary flavor.",
+    "price": 20000,
+    "price_postapoc": 500,
+    "material": [ "junk" ],
+    "primary_material": "water",
+    "volume": "250 ml",
+    "charges": 1,
+    "phase": "liquid",
+    "flags": [ "EATEN_COLD" ],
+    "vitamins": [ [ "vitC", 43 ], [ "calcium", 6 ], [ "cheers", 4 ] ],
+    "fun": 0,
+    "monotony_penalty": 0,
+    "consumption_effect_on_conditions": [ "wellprawn_random" ]
+  },
+  {
     "id": "well_can",
     "type": "GENERIC",
     "category": "container",
@@ -131,6 +160,14 @@
     "category": "container",
     "name": { "str": "Wellcheers can" },
     "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in cherry flavour.",
+    "copy-from": "well_can"
+  },
+  {
+    "id": "wellprawn_can",
+    "type": "GENERIC",
+    "category": "container",
+    "name": { "str": "Wellcheers can" },
+    "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in prawn flavour.",
     "copy-from": "well_can"
   }
 ]
