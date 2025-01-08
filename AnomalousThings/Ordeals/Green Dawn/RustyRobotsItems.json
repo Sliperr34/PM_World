@@ -1,5 +1,21 @@
 [
   {
+    "type": "GENERIC",
+    "id": "broken_doubts",
+    "symbol": ",",
+    "color": "green",
+    "name": { "str": "broken doubt" },
+    "category": "other",
+    "description": "The doubt no longer looks as intimidating, now that it's metallic body and organs have been sheered.",
+    "price": "10 USD",
+    "material": [ "steel" ],
+    "weight": "126 kg",
+    "volume": "65 L",
+    "to_hit": -3,
+    "flags": [ "TRADER_AVOID", "NO_REPAIR" ],
+    "melee_damage": { "bash": 6, "cut": 6 }
+  },
+  {
     "id": "rustedgear_item",
     "type": "GENERIC",
     "name": { "str": "rusted gear", "str_pl": "rusted gears" },

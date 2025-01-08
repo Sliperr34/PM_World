@@ -37,7 +37,7 @@
     "families": [ "prof_wp_distortions0", "prof_wp_distortions1" ],
     "vision_day": 55,
     "vision_night": 55,
-    "harvest": "mutant_human",
+    "death_function": { "corpse_type": "BROKEN" },
     "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "ALWAYS_SEES_YOU", "BASHES", "GRABS", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
     "armor": { "electric": -5, "heat": 20, "bash": -6, "cut": 11, "stab": 14, "bullet": 20, "acid": 10 },
     "death_drops": [ { "item": "rustedgear_item", "prob": 20 }, { "item": "rustedlance_item", "prob": 4 } ]

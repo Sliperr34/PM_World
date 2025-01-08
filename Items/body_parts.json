@@ -1,0 +1,76 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "id": "tainted_distortion_organ",
+    "name": {
+      "str": "distorted organ"
+    },
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "red",
+    "parasites": 32,
+    "vitamins": [
+      [
+        "meat_allergen",
+        1
+      ],
+      [
+        "human_flesh_vitamin",
+        1
+      ]
+    ],
+    "flags": [
+      "RAW",
+      "ACID",
+      "HIDDEN_HALLU"
+    ],
+    "description": "An odd organ found within a distortion. It's almost silky to the touch, but leaks an odd fluid.",
+    "weight": "72 g",
+    "volume": "250 ml",
+    "price_postapoc": "20 USD",
+    "spoils_in": "128 hours",
+    "calories": 120,
+    "quench": 1,
+    "fun": -100
+  },
+  {
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "id": "corrupted_distortion_organ",
+    "name": {
+      "str": "corrupted organ"
+    },
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "%",
+    "color": "red",
+    "parasites": 32,
+    "vitamins": [
+      [
+        "meat_allergen",
+        1
+      ],
+      [
+        "human_flesh_vitamin",
+        1
+      ]
+    ],
+    "flags": [
+      "RAW",
+      "ACID",
+      "HIDDEN_HALLU"
+    ],
+    "description": "An odd organ found within a distortion, this one seems oddly alive despite having been removed.",
+    "weight": "72 g",
+    "volume": "250 ml",
+    "price_postapoc": "160 USD",
+    "spoils_in": "128 hours",
+    "calories": 120,
+    "quench": 1,
+    "fun": -100
+  }
+]
