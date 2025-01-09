@@ -80,12 +80,12 @@
     "name": "Impale",
     "description": "Repeated stabbing of a downed enemy by a lance.",
     "valid_targets": [ "hostile", "self" ],
-	"flags": [ "RANDOM_DAMAGE", "NO_LEGS", "NO_EXPLOSION_SFX" ],
+	  "flags": [ "RANDOM_DAMAGE", "NO_LEGS", "NO_EXPLOSION_SFX" ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "stab",
-    "min_damage": 10,
-    "max_damage": 20,
+    "min_damage": 4,
+    "max_damage": 10,
     "damage_increment": 5,
     "min_range": 1,
     "max_range": 1,
@@ -93,11 +93,11 @@
     "max_level": 5,
     "message": "STAB!!",
     "sound_type": "combat",
-	"min_pierce": 10,           
-    "max_pierce": 20,
-	"extra_effects": [
-	  {
-	    "id": "spell_robot_overkill_morale"
+	  "min_pierce": 4,           
+    "max_pierce": 10,
+	  "extra_effects": [
+	    {
+        "id": "spell_robot_overkill_morale"
       }
 	]
   },

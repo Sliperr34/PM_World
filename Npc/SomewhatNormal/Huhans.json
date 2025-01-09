@@ -290,7 +290,8 @@
     "attitude": 0,
     "mission": 7,
     "chat": "TALK_DUGLAS_RC",
-    "faction": "rusted_chains"
+    "faction": "rusted_chains",
+    "mission_offered": "MISSION_KILL_RYAN"
   },
   {
     "type": "npc",
@@ -533,5 +534,19 @@
     "height": 168,
     "personality": { "aggression": 0, "bravery": 0, "collector": 0, "altruism": 0 },
     "faction": "l_corp"
+  },
+  {
+    "type": "npc",
+    "id": "ryan_npc",
+    "name_unique": "Ryan",
+    "name_suffix": "gambler",
+    "gender": "male",
+    "class": "NC_KR",
+    "attitude": 0,
+    "mission": 0,
+    "age": 25,
+    "height": 148,
+    "chat": "TALK_RYAN",
+    "personality": { "aggression": 5, "bravery": 0, "collector": 0, "altruism": -10 }
   }
 ]

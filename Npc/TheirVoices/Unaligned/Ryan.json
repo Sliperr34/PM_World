@@ -1,0 +1,32 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_RYAN",
+    "dynamic_line": "Hey, who the hell are you? Shove off!",
+    "responses": [
+      { "text": "I'm here to collect the money you stole.", "topic": "TALK_RYAN_2"},
+      { "text": "Uh, never mind.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_RYAN_2",
+    "dynamic_line": "Money I stole? Don't know what you're talkin' about, get lost!",
+    "responses": [
+      { "text": "I'm coming away with that money, or with your head.", "topic": "EVENT_FIGHT_RYAN"},
+      { "text": "Well, you'd better find a way to pay up.",  "topic": "EVENT_FIGHT_RYAN"},
+      { "text": "Okay, whatever, I'm done with this.", "topic": "TALK_DONE"}
+    ]
+  },
+  {
+    "type" :"talk_topic",
+    "id" : "EVENT_FIGHT_RYAN",
+    "dynamic_line" : "Alright, that's it, you're gonna wish you hadn't asked!",
+    "speaker_effect": {
+      "effect": "hostile"
+    },
+    "responses": [
+        {"text" : "....", "topic" : "TALK_DONE"}
+    ]
+  }
+]

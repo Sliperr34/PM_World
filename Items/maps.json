@@ -1,0 +1,38 @@
+[
+  {
+    "type": "GENERIC",
+    "category": "books",
+    "id": "zweiflyer_item",
+    "symbol": ",",
+    "color": "red",
+    "name": {
+      "str": "zwei flyer"
+    },
+    "description": "A recruitment flyer emblazoned with every colour imaginable proclaiming the reader as the next peacekeeper of the City, if only they come and join. The usual recruitment speeches, though these are littered with unusual phrases, such as Distortions and Fixers.",
+    "price": "10 USD",
+    "price_postapoc": "1 USD 50 cent",
+    "material": [
+      "plastic"
+    ],
+    "weight": "5 g",
+    "volume": "5 ml",
+    "longest_side": "24 cm",
+    "to_hit": {
+      "grip": "bad",
+      "length": "hand",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "copy-from": "card_plastic_abstract",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "Activate to read the flyer's location",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_ZWEI_FLYER",
+          "effect": [ {"assign_mission": "MISSION_REACH_ZWEI"}, { "u_message": "You note down where to find the headquarters." } ]
+        }
+      ]
+    }
+  }
+]

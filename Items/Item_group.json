@@ -92,7 +92,8 @@
           "distribution": [
             { "item": "wellcheers", "prob": 50 },
             { "item": "cherry_wellcheers", "prob": 50 },
-            { "item": "grape_wellcheers", "prob": 50 }
+            { "item": "grape_wellcheers", "prob": 50 },
+            { "item": "zweiflyer_item", "prob": 10 }
           ]
         }
       ]
@@ -103,5 +104,29 @@
     "type": "item_group",
     "subtype": "collection",
     "entries": [ { "item": "skin_prophecy", "prob": 100 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "lab_bookshelves",
+    "copy-from": "lab_bookshelves",
+    "extend": {
+      "items": [
+        { "item": "resjournalrisk", "prob": 3 },
+        { "item": "resjournalego", "prob": 3 },
+        { "item": "resjournaldistortion", "prob": 3 },
+        { "item": "resjournalabnormality", "prob": 3 },
+        { "item": "resjournalenk", "prob": 5 }
+      ]
+    }
+  },
+  {
+    "id": "trash",
+    "type": "item_group",
+    "copy-from": "trash",
+    "extend": {
+      "items": [
+        { "item": "zweiflyer_item", "prob": 8 }
+      ]
+    }
   }
 ]
