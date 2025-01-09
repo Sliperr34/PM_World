@@ -27,7 +27,7 @@
         "id": "robot_impale",
         "type": "spell",
         "spell_data": { "id": "spell_robot_impale", "min_level": 1 },
-        "cooldown": 5,
+        "cooldown": 10,
         "monster_message": "The Doubt slams it's lance into you."
       }
     ],
@@ -37,9 +37,51 @@
     "families": [ "prof_wp_distortions0", "prof_wp_distortions1" ],
     "vision_day": 55,
     "vision_night": 55,
-    "harvest": "mutant_human",
+    "death_function": { "corpse_type": "BROKEN" },
     "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "ALWAYS_SEES_YOU", "BASHES", "GRABS", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
-    "armor": { "electric": -5, "heat": 20, "bash": -6, "cut": 11, "stab": 14, "bullet": 20, "acid": 10 },
-    "death_drops": [ { "item": "rustedgear_item", "prob": 20 }, { "item": "rustedlance_item", "prob": 4 } ]
+    "armor": { "electric": -5, "heat": 20, "bash": -6, "cut": 11, "stab": 14, "bullet": 20, "acid": 10 }
+  },
+  {
+    "id": "mon_doubts_elite",
+    "type": "MONSTER",
+    "name": { "str": "<color_green>True Doubt</color>" },
+    "description": "A creature made of dark metal and gears that buzz with constant and precise movement. Several red 'eyes' gleam out of it's faceplate, one of these eyes is more inlayed than the others, surrounded by cracks as if finally opening for the first time, forcing the metal aside. Indeed, this one, of all their eyes, looks almost human.",
+    "default_faction": "distortions",
+    "bodytype": "human",
+    "species": [ "DISTORTIONS" ],
+    "volume": "80 L",
+    "weight": "150 kg",
+    "hp": 300,
+    "speed": 90,
+    "material": [ "b_steel" ],
+    "looks_like": "mon_zombie_fireman",
+    "symbol": "D",
+    "color": "black",
+    "aggression": 100,
+    "morale": 100,
+    "aggro_character": true,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_damage": [ { "damage_type": "stab", "amount": 8 }, { "damage_type": "gloom", "amount": 2 } ],
+    "special_attacks": [
+      {
+        "id": "robot_impale",
+        "type": "spell",
+        "spell_data": { "id": "spell_robot_impale", "min_level": 3 },
+        "cooldown": 8,
+        "monster_message": "The True Doubt slams it's lance into you."
+      }
+    ],
+    "dodge": 0,
+    "grab_strength": 2,
+    "weakpoint_sets": [ "wps_doubt_body" ],
+    "families": [ "prof_wp_distortions0", "prof_wp_distortions1" ],
+    "vision_day": 55,
+    "vision_night": 70,
+    "death_function": { "corpse_type": "BROKEN" },
+    "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "ALWAYS_SEES_YOU", "BASHES", "GRABS", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
+    "armor": { "electric": 5, "heat": 30, "bash": 5, "cut": 34, "stab": 20, "bullet": 30, "acid": 20 },
+    "death_drops": [ { "item": "rustedlance_item", "prob": 4 } ]
   }
 ]

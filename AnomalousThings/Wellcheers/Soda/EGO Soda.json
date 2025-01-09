@@ -13,7 +13,7 @@
     "id": "EGO_soda_stage_1",
     "type": "SPELL",
     "name": "[ז] EGO Soda stage 1 activation",
-    "description": "Activate your bond with Soda, strengthening you and granting you the ability to give enemies the slip.",
+    "description": "Activate your bond with Soda, strengthening you and granting you the ability to give enemies the slip. However, any contact with an EGO takes a toll.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "soda_stage_1_activation",
@@ -70,7 +70,7 @@
   {
     "id": "EGO_soda_stage_1_success",
     "type": "SPELL",
-    "name": "[ז] EGO Soda stage 1 activation",
+    "name": "[ז] EGO Soda Invoke Bond - Stage 1",
     "description": "",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
@@ -95,7 +95,7 @@
     "id": "EGO_soda_stage_1_aura",
     "type": "ARMOR",
     "name": "[ז] EGO Soda Pale Aura",
-    "description": "desc",
+    "description": "You feel Soda's presence in your mind, alien, twisting and writhing, yet granting you power beyond any mere mortal. While the bond is active you sense you'll be slightly harder to knock down, better at dodging, and find it easier to throw items.",
     "weight": "0 g",
     "volume": "0 ml",
     "material": [ "wind" ],
@@ -130,8 +130,8 @@
   {
     "id": "EGO_soda_stage_2",
     "type": "SPELL",
-    "name": "[ז] EGO Soda stage 2 activation",
-    "description": "Your bond with Soda has strengthened, and you may call upon it more deeply.",
+    "name": "[ז] EGO Soda Invoke Bond - Stage 2",
+    "description": "Your bond with Soda has strengthened, and you may call upon it more deeply. However, any contact with an EGO takes a toll.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "soda_stage_2_activation",
@@ -242,7 +242,7 @@
     "id": "EGO_soda_stage_2_aura",
     "type": "ARMOR",
     "name": "[ז] EGO Soda Insubstantial Aura",
-    "description": "A formless aura emanates from you.",
+    "description": "You feel Soda's now familiar aura encase you, it's words more understandable, and sharing your mind less jarring. While the bond is active you sense you'll be harder to knock down, better at dodging, and find it easier to throw items.",
     "weight": "0 g",
     "volume": "0 ml",
     "material": [ "wind" ],
@@ -388,8 +388,8 @@
   {
     "id": "EGO_soda_stage_3",
     "type": "SPELL",
-    "name": "[ז] EGO Soda stage 3 activation",
-    "description": "Your bond with Soda has grown deeper still, towards a vast depth of power.",
+    "name": "[ז] EGO Soda Invoke Bond - Stage 3",
+    "description": "Your bond with Soda has grown deeper still, towards a vast depth of power. Call upon it, however, any contact with an EGO takes a toll.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "soda_stage_3_activation",
@@ -501,7 +501,7 @@
     "id": "EGO_soda_stage_3_aura",
     "type": "ARMOR",
     "name": "[ז] EGO Soda Vivid Aura",
-    "description": "A strong aura emanates from you, colours manifest even in dim light.",
+    "description": "You feel Soda moving alongside you, a familiar friend now, even as they share your own skin, manifesting arms and armour at your call. While the bond is active you sense you'll be much harder to knock down, better at dodging, and find it easier to throw items.",
     "weight": "0 g",
     "volume": "0 ml",
     "material": [ "wind" ],
@@ -520,7 +520,7 @@
       { "value": "THROW_STR", "add": { "math": [ "1 + u_spell_level('EGO_soda_stage_3') * 1.5" ] } },
       { "value": "SCENT_MASK", "add": 200 },
       { "value": "DODGE_CHANCE", "add": { "math": [ "2 + u_spell_level('EGO_soda_stage_3') / 2" ] } },
-	  { "value": "KNOCKDOWN_RESIST", "add": 20 }
+	    { "value": "KNOCKDOWN_RESIST", "add": 30 }
     ]
   },
   {
@@ -532,7 +532,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "soda_can_normal_hook", 1 ], [ "soda_armor_normal_hook", 1 ], [ "soda_net_empower_hook", 1 ] ]
+    "spells_learned": [ [ "soda_can_normal_hook", 1 ], [ "soda_armor_normal_hook", 1 ], [ "soda_net_empower_hook", 1 ], [ "soda_summon_wellcheers_hook", 1 ] ]
   },
   {
     "id": "soda_can_normal_hook",
@@ -784,7 +784,7 @@
     "id": "soda_armor_normal_item",
     "type": "ARMOR",
     "name": { "str": "<color_red>EGO Armor of Soda</color>" },
-    "description": "The waxy fabric of a dredger's overcoat and yet somehow stronger despite the thickness. something about it feels off whenever you look at it for too long, almost as if the waxiness is biological, moving, and shifting to better protect the wearer.",
+    "description": "The waxy fabric of a shrimper's overcoat and yet somehow stronger despite the thickness. something about it feels off whenever you look at it for too long, almost as if the waxiness is biological, moving, and shifting to better protect the wearer.",
     "weight": "3842 g",
     "volume": "500 ml",
     "price": "0 cent",
@@ -807,8 +807,8 @@
   {
     "id": "EGO_soda_stage_4",
     "type": "SPELL",
-    "name": "[ז] EGO Soda stage 4 activation",
-    "description": "Ignites your joint flame, granting great strength and resistance to fire for a short time.",
+    "name": "[ז] EGO Soda Invoke Bond - Stage 4",
+    "description": "Call your bond with Soda from the unfathomable depth of your entangling bond. However, any contact with an EGO takes a toll.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
     "effect_str": "soda_stage_4_activation",
@@ -935,7 +935,7 @@
     "id": "EGO_soda_stage_4_aura",
     "type": "ARMOR",
     "name": "[ז] EGO Soda Awakened Aura",
-    "description": "A strong aura emanates from you, a myriad of colours manifest even in dim light.",
+    "description": "You feel Soda's presence in your mind, alien, now that of a partner, you both act in a perfect synergy towards your aims. While the bond is active you sense you'll be significantly harder to knock down, better at dodging, and find it easier to throw items.",
     "weight": "0 g",
     "volume": "0 ml",
     "material": [ "wind" ],
@@ -954,8 +954,8 @@
       { "value": "THROW_STR", "add": { "math": [ "2 + u_spell_level('EGO_soda_stage_4') * 1.5" ] } },
       { "value": "SCENT_MASK", "add": 200 },
       { "value": "DODGE_CHANCE", "add": { "math": [ "4 + u_spell_level('EGO_soda_stage_4') / 2" ] } },
-	  { "value": "BONUS_DODGE", "add": 1 },
-	  { "value": "KNOCKDOWN_RESIST", "add": 20 }
+	    { "value": "BONUS_DODGE", "add": 1 },
+	    { "value": "KNOCKDOWN_RESIST", "add": 40 }
     ]
   },
   {
@@ -967,7 +967,7 @@
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "spells_learned": [ [ "soda_can_empower_hook", 1 ], [ "soda_armor_empower_hook", 1 ], [ "soda_net_empower_hook", 1 ] ]
+    "spells_learned": [ [ "soda_can_empower_hook", 1 ], [ "soda_armor_empower_hook", 1 ], [ "soda_net_empower_hook", 1 ], [ "soda_summon_wellcheers_hook", 1 ] ]
   },
   {
     "id": "soda_can_empower_hook",
@@ -1220,7 +1220,7 @@
     "id": "soda_armor_empowered_item",
     "type": "ARMOR",
     "name": { "str": "<color_red>EGO Armor of Soda</color>" },
-    "description": "The waxy fabric of a dredger's overcoat and yet somehow stronger despite the thickness. something about it feels off whenever you look at it for too long, almost as if the waxiness is biological, moving, and shifting to better protect the wearer.",
+    "description": "The waxy fabric of a shrimper's overcoat and yet somehow stronger despite the thickness. something about it feels off whenever you look at it for too long, almost as if the waxiness is biological, moving, and shifting to better protect the wearer.",
     "weight": "3842 g",
     "volume": "500 ml",
     "price": "0 cent",
@@ -1239,6 +1239,68 @@
         "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
       }
     ]
+  },
+  {
+    "id": "soda_summon_wellcheers_hook",
+    "type": "SPELL",
+    "name": "[ז] EGO Soda - Summon Can of WellCheers",
+    "description": "Manifest an actual can of WellCheers that doesn't, you know, explode. It is ephemeral however, and will not last long if not consumed. Manifesting such a thing from the aether is very taxing in the long term.",
+    "valid_targets": [ "self" ],
+    "effect": "effect_on_condition",
+    "effect_str": "soda_summon_wellcheers_eoc",
+    "shape": "blast",
+    "min_range": 0,
+    "max_range": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_duration": 20000,
+    "max_duration": 20000,
+    "base_casting_time": 200,
+    "final_casting_time": 200,
+    "spell_class": "EGO_Soda",
+    "base_energy_cost": 250,
+    "final_energy_cost": 250,
+    "energy_source": "STAMINA",
+    "difficulty": 4,
+    "max_level": 1,
+    "flags": [ "SILENT", "NO_LEGS", "NO_ARMS" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_summon_wellcheers_eoc",
+    "effect": [
+	  { "u_cast_spell": { "id": "soda_summon_wellcheers_true", "min_level": 1 } },
+	  { "math": [ "u_health() -= 5" ] },
+      {
+        "message": "A delightfully refreshing beverage materialises into your hand. You feel.. A little more weary from the effort.",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "id": "soda_summon_wellcheers_true",
+    "type": "SPELL",
+    "name": "[ז] EGO Soda - Summon Can of WellCheers",
+    "description": "Manifest an actual drink of WellCheers that doesn't, you know, explode. Just make sure you have a can or other bottle on you! Manifesting such a thing from the aether is very taxing in the long term.",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "wellcheers",
+    "shape": "blast",
+    "min_range": 0,
+    "max_range": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_duration": 1000,
+    "max_duration": 1000,
+    "base_casting_time": 200,
+    "final_casting_time": 200,
+    "spell_class": "EGO_Soda",
+    "base_energy_cost": 250,
+    "final_energy_cost": 250,
+    "energy_source": "STAMINA",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS" ]
   },
   {
     "type": "effect_on_condition",

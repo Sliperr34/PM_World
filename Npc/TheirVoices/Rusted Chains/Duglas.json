@@ -1,21 +1,27 @@
 [
-    {
+  {
     "type": "talk_topic",
     "id": "TALK_DUGLAS_RC",
-    "dynamic_line": "Hey bro, why the fuck are you hanging around here?",
+    "dynamic_line": {
+      "compare_string": [ "yes", { "u_val": "u_accepted_ryan_mission" } ],
+      "yes": [ "Back already?", "What is it?", "What ya needin'?" ],
+      "no": "Hey bro, why the fuck are you hanging around here?"
+    },
     "responses": [
-      { "text": "There's no need to be so rude. Are you always this unfriendly?", "topic": "TALK_DUGLAS_RC_2"},
-      {"text": "Never mind", "topic": "TALK_DONE"}
+      { "text": "There's no need to be so rude. Are you always this unfriendly?", "topic": "TALK_DUGLAS_RC_2", "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_accepted_ryan_mission" } ] } } },
+      { "text": "About Ryan..", "topic": "RYAN_MISSION_DUGLAS", "condition": { "and": [ { "compare_string": [ "yes", { "u_val": "u_accepted_ryan_mission" } ] }, { "not": { "compare_string": [ "yes", { "u_val": "u_ryan_rewarded" } ] } } ] } },
+      { "text": "I want to buy myself something, do you have anything to offer?",  "topic": "TRADE_DUGLAS", "condition": { "compare_string": [ "yes", { "u_val": "u_accepted_ryan_mission" } ] } },
+      { "text": "Never mind.", "topic": "TALK_DONE" }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_DUGLAS_RC_2",
-    "dynamic_line": "What...? Hey, either say what you need or fuck off before your teeth fall out",
+    "dynamic_line": "What...? Hey, either say what you need or fuck off before your teeth fall out.",
     "responses": [
-      { "text": "I came for the adrenaline. Maybe you have some interesting suggestions?", "topic": "TALK_DUGLAS_RC_MISSION"},
-      { "text":"I want to buy myself something, do you have anything to offer?",  "topic": "TRADE_DUGLAS"},
-      { "text": "Okay, I'm leaving", "topic": "TALK_DONE"}
+      { "text": "I came for the adrenaline. Maybe you have some interesting suggestions?", "topic": "TALK_DUGLAS_RC_MISSION", "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_accepted_ryan_mission" } ] } } },
+      { "text": "I want to buy myself something, do you have anything to offer?",  "topic": "TRADE_DUGLAS" },
+      { "text": "Okay, I'm leaving", "topic": "TALK_DONE" }
     ]
   },
   {
@@ -23,37 +29,102 @@
     "id": "TALK_DUGLAS_RC_MISSION",
     "dynamic_line": "Listen, I have something to do. Not complicated. One son of a whore needs to be killed.",
     "responses": [
-        { "text" : "Yes, I'm ready. Tell me the details", "topic" :"MISSION_DETAILS_DUGLAS_RC"},
-        { "text" :  "No, I changed my mind",   "topic" : "EVENT_FIGHT_DUGLAS"}
-    
-  
-]
-},
-{
+        { "text": "Yes, I'm ready. Tell me the details.", "topic" :"MISSION_DETAILS_DUGLAS_RC" },
+        { "text":  "No, I changed my mind.", "topic" : "EVENT_FIGHT_DUGLAS" }
+    ]
+  },
+  {
     "type": "talk_topic",
     "id": "MISSION_DETAILS_DUGLAS_RC",
-    "dynamic_line": "That's great. Some asshole stole my money. Find this fucking creature. I think I last saw him in *Place*, his name is Ryan. When you're done, come back.",
+    "dynamic_line": "That's great. Some asshole stole my money. Find this fucking creature. I think I last saw him in HamHamPangPang, his name is Ryan. When you're done, come back.",
     "responses": [
-      { "text": "Sounds interesting. I'm taking this on", "topic": "ACCEPT_MISSION_DUGLAS"},
-      { "text": "I changed my mind, I don't want to take on this matter", "topic": "EVENT_FIGHT_DUGLAS"}
+      { "text": "Sounds interesting. I'm taking this on.", "topic": "ACCEPT_MISSION_DUGLAS" },
+      { "text": "I changed my mind, I don't want to take on this matter.", "topic": "EVENT_FIGHT_DUGLAS" }
       
     ] 
-},
-{
+  },
+  {
     "type" :"talk_topic",
     "id" : "ACCEPT_MISSION_DUGLAS",
-    "dynamic_line" : "[Quest Currently unimplemented] You better come back with good news, or don't bother showing your face again.",
+    "speaker_effect": {
+      "effect": [ {"assign_mission": "MISSION_KILL_RYAN"}, { "u_add_var": "u_accepted_ryan_mission", "value": "yes" } ]
+    },
+    "dynamic_line" : "You better come back with good news, or don't bother showing your face again.",
     "responses" :[
-        {"text" : "Alright, alright, I'm leaving", "topic" : "TALK_DONE"}
+        {"text": "Alright, alright, I'm leaving.", "topic" : "TALK_DONE" }
     ]
-},
-{
+  },
+  {
     "type" :"talk_topic",
     "id" : "EVENT_FIGHT_DUGLAS",
     "dynamic_line" : "Then why the hell are you bothering me? Get out of here!",
     "responses" :[
-        {"text" : "Calm down. Why are you so nervous?", "topic" : "FIGHT_DUGLAS"},
-        {"text" : "Alright, I'm leaving", "topic" : "TALK_DONE"}
+        { "text": "Calm down. Why are you so nervous?", "topic" : "FIGHT_DUGLAS" },
+        { "text": "Alright, I'm leaving", "topic" : "TALK_DONE" }
     ]
-}
+  },
+  {
+    "type" :"talk_topic",
+    "id" : "FIGHT_DUGLAS",
+    "dynamic_line" : "Why? WHY!? You asked for it!!",
+    "speaker_effect": {
+      "effect": "hostile"
+    },
+    "responses" :[
+        { "text": "...", "topic" : "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "RYAN_MISSION_DUGLAS",
+    "dynamic_line": "Come back with good news? Or realised you can't keep up?",
+    "responses": [
+      { "text": "He hadn't any money on him, and now he won't be a bother any longer.", "topic": "RYAN_MISSION_DUGLAS_COMPLETED", "condition": { "compare_string": [ "yes", { "u_val": "u_ryan_killed" } ] } },
+      { "text": "Nevermind..", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "RYAN_MISSION_DUGLAS_COMPLETED",
+    "dynamic_line": "Huh. Maybe you aren't a waste of oxygen. Try these on, they might suit ya.",
+    "speaker_effect": {
+      "effect": [
+        { "u_add_var": "u_ryan_rewarded", "value": "yes" },
+        { "u_spawn_item": "rc_chains", "count": 2 },
+        { "u_spawn_item": "pm_money", "count": 2 }
+      ]
+    },
+    "responses": [
+      { "text": "Thanks.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "MISSION_KILL_RYAN",
+    "type": "mission_definition",
+    "name": { "str": "Find Ryan and make them pay." },
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 2,
+    "value": 60000,
+    "start": {
+      "assign_mission_target": { "om_terrain": "hhpp1", "om_special": "hhpp", "reveal_radius": 2, "search_range": 1200 },
+      "update_mapgen": { "place_npcs": [ { "class": "ryan_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] }
+    },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "dialogue": {
+      "describe": "Last I saw them, they were here, let me mark it.",
+      "offer": "They ain't much, don't worry. If you got skills, anyway.",
+      "accepted": "Good. Now scram.",
+      "rejected": "Ugh, get outta my sight.",
+      "advice": "The guy's not got any backup, what more advice do you need. Come back with the money, or one less idiot in th' world.",
+      "inquire": "What?",
+      "success": "Huh, I didn't think you'd actually manage. Here, these might suit y' better.",
+      "success_lie": "I knew it.  Good.",
+      "failure": "Pfah! Knew you couldn't handle it. Get lost."
+    },
+    "end": {
+      "effect": [
+        { "u_add_var": "u_ryan_killed", "value": "yes" }
+      ]
+    }
+  }
 ]
