@@ -1,0 +1,73 @@
+[
+  {
+    "type": "BOOK",
+    "id": "resjournal",
+    "category": "manuals",
+    "symbol": ",",
+    "color": "white",
+    "name": {
+      "str": "researcher's journal"
+    },
+    "description": "A small journal.  Something's written in it, scrawled in bad handwriting.",
+    "price": "0 cent",
+    "price_postapoc": "5 USD",
+    "material": [
+      "paper"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "weight": "108 mg",
+    "volume": "16 ml",
+    "required_level": 1,
+    "max_level": 2,
+    "intelligence": 7,
+    "time": "10 m"
+  },
+  {
+    "type": "GENERIC",
+    "id": "resjournalrisk",
+    "name": {
+      "str": "researcher's journal"
+    },
+    "description": "A well used journal in a battered leather binding, detailing the risk levels assigned to Abnormalities and Distortions.\n\n\"...ZAYIN is the lowest risk level assigned to Abnormalities and Distortions, this does not mean they aren't dangerous in their own right, but a well prepared human can often deal with such a threat and face no great issues. Any abilities displayed by those assigned ZAYIN tend to be minor, easily avoided, or beneficial in effect. TETH is a noticable step beyond that, and each should be treated with caution even if they appear benevolent. These should stay under armed guard. HE, then, are terrifying beings and we never recommend handling them alone or unprepared. I've never had the pleasure of meeting a WAW abnormality and can only speculate...\"",
+    "copy-from": "resjournal"
+  },
+  {
+    "type": "GENERIC",
+    "id": "resjournalego",
+    "name": {
+      "str": "researcher's journal"
+    },
+    "description": "A well used journal in a battered leather binding, detailing what are denoted as EGOs.\n\n\"...There is a common misunderstanding as to what makes an EGO, this is in part the fault of Lobotomy Corp, whose research denoted their cheap knockoffs as EGO equipment, and while similar, they are a different strain. Lob Corp's Egos were created from Abnormalities, manufactured and though contain some of the Abnormalities power, that is all. There is nothing deeper. They are still incredible items, transferring knowledge of the item's use, even to the untaught, and deadly beyond measure, but still, different. EGOs, real ones, are made by forming a connection with an Abnormality. These kind of EGOs are weak at first, but evolve as the user grows more syncronous with the Abnormality. They are, however, dangerous, as using them allows the Abnormalities Ego to try and override your own, the weak willed eventually Distorting. The final type of EGO is that of anyone who manifests the light...\"",
+    "copy-from": "resjournal"
+  },
+  {
+    "type": "GENERIC",
+    "id": "resjournaldistortion",
+    "name": {
+      "str": "researcher's journal"
+    },
+    "description": "A well used journal in a battered leather binding, detailing what are denoted as distortions.\n\n\"\"",
+    "copy-from": "resjournal"
+  },
+  {
+    "type": "GENERIC",
+    "id": "resjournalabnormality",
+    "name": {
+      "str": "researcher's journal"
+    },
+    "description": "A well used journal in a battered leather binding, detailing what are denoted as abnormalities.\n\n\"\"",
+    "copy-from": "resjournal"
+  },
+  {
+    "type": "BOOK",
+    "category": "manuals",
+    "id": "resjournalenk",
+    "name": {
+      "str": "researcher's journal"
+    },
+    "description": "A well used journal in a battered leather binding, detailing some chemical known as Enkephalin.\n\n\"\"",
+    "copy-from": "resjournal"
+  }
+]

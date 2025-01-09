@@ -115,6 +115,95 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "wellprawn_effect",
+    "effect": [
+      { "u_cast_spell": { "id": "light_heal", "min_level": 1, "max_level": 4 } },
+      {
+        "u_add_morale": "morale_food_good",
+        "bonus": 5,
+        "max_bonus": 20,
+        "duration": "5 minutes",
+        "decay_start": "1 minutes"
+      },
+      { "u_message": "Your mood and health is slightly improved!", "type": "good" },
+	  { "run_eocs": "soda_ego_evolve" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_evolve",
+    "effect": [
+      {
+		"if": {
+          "and": [
+            { "math": [ "u_spell_level('EGO_soda_stage_1')", "==", "-1" ] },
+            { "math": [ "u_spell_level('EGO_soda_stage_2')", "==", "-1" ] },
+            { "math": [ "u_spell_level('EGO_soda_stage_3')", "==", "-1" ] },
+            { "math": [ "u_spell_level('EGO_soda_stage_4')", "==", "-1" ] }
+          ]
+        },
+		"then": [
+			{ "math": [ "u_spell_level('EGO_soda_stage_1')", "=", "1" ] },
+			{
+			  "u_message": "You feel the drink connect to you.. Like really connect, an absolute understanding of prawn-based soda. An energy thrumming through your body, expanding, changing, an ego that's not entirely your own settling within the depths of your mind. You could call on it, if you really wished to. Somehow, in the flicker of your mind, you recognise that energy. Soda.",
+			  "popup": true
+			}
+		],
+		"else": {
+			"if": {
+			  "and": [
+				{ "math": [ "u_spell_level('EGO_soda_stage_1')", "<", "10" ] },
+				{ "math": [ "u_spell_level('EGO_soda_stage_2')", "==", "-1" ] },
+				{ "math": [ "u_spell_level('EGO_soda_stage_3')", "==", "-1" ] },
+				{ "math": [ "u_spell_level('EGO_soda_stage_4')", "==", "-1" ] }
+			  ]
+			},
+			"then": [
+			  { "math": [ "u_spell_level('EGO_soda_stage_1')", "+=", "1" ] },
+			  {
+				"u_message": "The delighful taste of shrimp floods you, burning a chorus of flavour in your mind. You feel your bond with Soda strengthening."
+			  }
+			],
+			"else": {
+			  "if": {
+				"and": [
+				  { "math": [ "u_spell_level('EGO_soda_stage_2')", "<", "10" ] },
+				  { "math": [ "u_spell_level('EGO_soda_stage_3')", "==", "-1" ] },
+				  { "math": [ "u_spell_level('EGO_soda_stage_4')", "==", "-1" ] }
+				]
+			  },
+			  "then": [
+				{ "math": [ "u_spell_level('EGO_soda_stage_2')", "+=", "1" ] },
+				{ "u_message": "You almost panic as the tidal wave of shrimp hits you, thoughts arising in your mind - more Soda's than yours." },
+				{ "math": [ "u_spell_level('EGO_soda_stage_1')", "=", "-1" ] }
+			  ],
+			  "else": {
+				"if": {
+				  "and": [
+					{ "math": [ "u_spell_level('EGO_soda_stage_3')", "<", "10" ] },
+					{ "math": [ "u_spell_level('EGO_soda_stage_4')", "==", "-1" ] }
+				  ]
+				},
+				"then": [
+				  { "math": [ "u_spell_level('EGO_soda_stage_3')", "+=", "1" ] },
+				  {
+					"u_message": "The thoughts of Soda ring in your head as the prawn dances across your tongue, a dangerous little dance."
+				  },
+				  { "math": [ "u_spell_level('EGO_soda_stage_2')", "=", "-1" ] }
+				],
+				"else": [
+				  { "math": [ "u_spell_level('EGO_soda_stage_4')", "+=", "1" ] },
+				  { "u_message": "You feel your understanding of Soda deepen into an unfathomable taste, something about the vastness feels.. Wrong." },
+				  { "math": [ "u_spell_level('EGO_soda_stage_3')", "=", "-1" ] }
+				]
+			  }
+			}
+		}
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "well_abduct",
     "effect": [
       { "u_spawn_monster": "mon_wellcheers", "real_count": [ 2, 4 ], "min_radius": [ 5, 7 ], "max_radius": [ 11, 24 ] },
@@ -149,6 +238,16 @@
       "weighted_list_eocs": [
         [ { "id": "well_hook_eff3", "effect": { "run_eocs": "wellgrape_effect" } }, 18 ],
         [ { "id": "well_hook_abd3", "effect": { "run_eocs": "well_abduct" } }, 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "wellprawn_random",
+    "effect": {
+      "weighted_list_eocs": [
+        [ { "id": "well_hook_eff4", "effect": { "run_eocs": "wellprawn_effect" } }, 12 ],
+        [ { "id": "well_hook_abd4", "effect": { "run_eocs": "well_abduct" } }, 3 ]
       ]
     }
   },

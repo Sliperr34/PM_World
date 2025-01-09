@@ -1,0 +1,67 @@
+[
+  {
+    "id": "distortion_zayin",
+    "type": "harvest",
+    "message": "",
+    "entries": [
+      { "drop": "tainted_distortion_organ", "type": "flesh", "mass_ratio": 0.0001 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.00035 },
+      { "drop": "blood", "type": "blood", "mass_ratio": 0.1 },
+      { "drop": "mutant_meat", "type": "flesh", "mass_ratio": 0.33 },
+      { "drop": "mutant_fat", "type": "flesh", "mass_ratio": 0.1 },
+      { "drop": "bone_human", "type": "flesh", "mass_ratio": 0.1 }
+    ]
+  },
+  {
+    "id": "distortion_teth",
+    "type": "harvest",
+    "message": "",
+    "entries": [
+      { "drop": "tainted_distortion_organ", "type": "flesh", "mass_ratio": 0.0002 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.00035 },
+      { "drop": "blood", "type": "blood", "mass_ratio": 0.1 },
+      { "drop": "mutant_meat", "type": "flesh", "mass_ratio": 0.33 },
+      { "drop": "mutant_fat", "type": "flesh", "mass_ratio": 0.1 },
+      { "drop": "bone_human", "type": "flesh", "mass_ratio": 0.1 }
+    ]
+  },
+  {
+    "id": "distortion_he",
+    "type": "harvest",
+    "message": "",
+    "entries": [
+      { "drop": "tainted_distortion_organ", "type": "flesh", "mass_ratio": 0.0004 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.00035 },
+      { "drop": "blood", "type": "blood", "mass_ratio": 0.1 },
+      { "drop": "mutant_meat", "type": "flesh", "mass_ratio": 0.33 },
+      { "drop": "mutant_fat", "type": "flesh", "mass_ratio": 0.1 },
+      { "drop": "bone_human", "type": "flesh", "mass_ratio": 0.1 }
+    ]
+  },
+  {
+    "id": "distortion_waw",
+    "type": "harvest",
+    "message": "",
+    "entries": [
+      { "drop": "corrupted_distortion_organ", "type": "flesh", "mass_ratio": 0.00001 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.00035 },
+      { "drop": "blood", "type": "blood", "mass_ratio": 0.1 },
+      { "drop": "mutant_meat", "type": "flesh", "mass_ratio": 0.33 },
+      { "drop": "mutant_fat", "type": "flesh", "mass_ratio": 0.1 },
+      { "drop": "bone_human", "type": "flesh", "mass_ratio": 0.1 }
+    ]
+  },
+  {
+    "id": "distortion_aleph",
+    "type": "harvest",
+    "message": "",
+    "entries": [
+      { "drop": "corrupted_distortion_organ", "type": "flesh", "mass_ratio": 0.00002 },
+      { "drop": "sinew", "type": "bone", "mass_ratio": 0.00035 },
+      { "drop": "blood", "type": "blood", "mass_ratio": 0.1 },
+      { "drop": "mutant_meat", "type": "flesh", "mass_ratio": 0.33 },
+      { "drop": "mutant_fat", "type": "flesh", "mass_ratio": 0.1 },
+      { "drop": "bone_human", "type": "flesh", "mass_ratio": 0.1 }
+    ]
+  }
+]
