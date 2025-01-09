@@ -1,0 +1,116 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "tainted_enk",
+    "name": {
+      "str_sp": "Tainted Enkephalin"
+    },
+    "category": "chems",
+    "weight": "5 g",
+    "color": "green",
+    "container": "enk_capsule",
+    "sealed": true,
+    "symbol": "~",
+    "description": "An odd light blue liquid that shimmers with a green light, something feels very, very wrong with it. The longer you look, the more you feel something crawl in the back of your head. It doesn't belong.",
+    "price_postapoc": 4000,
+    "volume": "25 ml",
+    "phase": "liquid",
+    "flags": [
+    ],
+    "comestible_type": "INVALID",
+	"charges": 5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "corrupted_enk",
+    "name": {
+      "str_sp": "Corrupted Enkephalin"
+    },
+    "category": "chems",
+    "weight": "1 g",
+    "color": "black",
+    "container": "enk_capsule",
+    "sealed": true,
+    "symbol": "~",
+    "description": "Even before you make it out, this liquid screams of wrongness, as it drips it evokes sounds of a thousand legs, chattering away. Skin peels and the world ruptures, this drips like blood. Even it's colour is impossible to determine, slipping away like sand.",
+    "price_postapoc": 400000,
+    "volume": "5 ml",
+    "phase": "liquid",
+    "flags": [
+    ],
+    "comestible_type": "INVALID",
+	"charges": 5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "enk",
+    "name": {
+      "str_sp": "Enkephalin"
+    },
+    "category": "chems",
+    "weight": "5 g",
+    "color": "light_green",
+    "container": "enk_capsule",
+    "sealed": true,
+    "symbol": "~",
+    "description": "This liquid has an almost greenish tinge, just looking at it makes your head start to grow fuzzy, probably best not to stare.",
+    "price_postapoc": 8000,
+    "volume": "25 ml",
+    "phase": "liquid",
+    "flags": [
+    ],
+    "comestible_type": "INVALID",
+	"charges": 5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "pure_enk",
+    "name": {
+      "str_sp": "Pure Enkephalin"
+    },
+    "category": "chems",
+    "weight": "1 g",
+    "color": "light_green",
+    "container": "enk_capsule",
+    "sealed": true,
+    "symbol": "~",
+    "description": "It's impossible to determine anything about this liquid, even looking at it causes hallucinations, some of which almost seem too real. More real than anyone. Anything.",
+    "price_postapoc": 800000,
+    "volume": "2 ml",
+    "phase": "liquid",
+    "flags": [
+    ],
+    "comestible_type": "INVALID",
+	"charges": 5
+  },
+  {
+    "id": "enk_capsule",
+    "type": "GENERIC",
+    "category": "container",
+    "name": { "str": "Enkephalin Capsule" },
+    "description": "A container that appears almost overengineered at first glance, made of a lightweight black alloy, with a glass panel to see what has been stored inside. The top can be opened with a latch, though remains secure even through rigorous bumps.",
+    "looks_like": "can_drink",
+    "weight": "12 g",
+    "volume": "350 ml",
+    "price": 0,
+    "price_postapoc": 0,
+    "to_hit": -3,
+    "material": [ "b_steel" ],
+    "symbol": ")",
+    "color": "light_red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "watertight": true,
+        "open_container": true,
+        "max_contains_volume": "250 ml",
+        "max_item_volume": "10 ml",
+        "max_contains_weight": "1 kg",
+        "sealed_data": { "spoil_multiplier": 0.0 }
+      }
+    ],
+    "flags": [ "COLLAPSE_CONTENTS" ],
+    "melee_damage": { "bash": 4 }
+  }
+]
