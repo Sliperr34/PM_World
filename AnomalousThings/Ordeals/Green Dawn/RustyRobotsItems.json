@@ -104,5 +104,190 @@
       }
     ],
     "melee_damage": { "bash": 8 }
+  },
+  {
+    "id": "doubt_legguard",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "pair of strange black metal greaves", "str_pl": "pairs of strange black metal greaves" },
+    "description": "A pair of strange black metal leg guards with usage of some strange robot pieces.",
+    "weight": "6860 g",
+    "volume": "5500 ml",
+    "price": "400 USD",
+    "price_postapoc": "10 USD",
+    "material": [ "b_steel" ],
+    "symbol": "[",
+    "looks_like": "legguard_lightplate",
+    "color": "light_gray",
+    "warmth": 3,
+    "material_thickness": 1.4,
+    "flags": [ "OUTER", "WATER_FRIENDLY" ],
+    "armor": [
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "encumbrance": 6,
+        "coverage": 95,
+        "cover_melee": 95,
+        "cover_ranged": 90,
+        "cover_vitals": 70,
+        "specifically_covers": [ "leg_lower_r", "leg_lower_l", "leg_knee_r", "leg_knee_l" ]
+      }
+    ]
+  },
+  {
+    "id": "doubt_armguard",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "pair of strange black metal arm guards", "str_pl": "pairs of strange black metal arm guards" },
+    "description": "A pair of strange black metal arm guards, quite heavy.",
+    "weight": "2110 g",
+    "volume": "3 L",
+    "price": "35 USD",
+    "price_postapoc": "10 USD",
+    "material": [ "b_steel" ],
+    "symbol": "[",
+    "looks_like": "arm_warmers",
+    "color": "dark_gray",
+    "warmth": 3,
+    "material_thickness": 1,
+    "environmental_protection": 1,
+    "flags": [ "OUTER", "WATER_FRIENDLY", "BLOCK_WHILE_WORN" ],
+    "armor": [
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "encumbrance": 7,
+        "specifically_covers": [ "arm_lower_r", "arm_lower_l" ],
+        "material": [ { "type": "b_steel", "covered_by_mat": 100, "thickness": 1 } ],
+        "coverage": 100,
+        "cover_vitals": 90
+      },
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_elbow_r", "arm_elbow_l" ],
+        "material": [ { "type": "b_steel", "covered_by_mat": 100, "thickness": 1 } ],
+        "coverage": 100,
+        "cover_vitals": 90
+      },
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_upper_l", "arm_upper_r" ],
+        "material": [ { "type": "b_steel", "covered_by_mat": 100, "thickness": 1 } ],
+        "coverage": 90,
+        "cover_vitals": 90
+      }
+    ]
+  },
+  {
+    "id": "doubt_sabaton",
+    "type": "ARMOR",
+    "name": { "str": "strange black metal sabaton" },
+    "description": "A flexible set of jointed lames that can be worn over footwear for additional protection, traditionally worn by mounted knights, this one was made of pieces of strange robots",
+    "weight": "1450 g",
+    "volume": "750 ml",
+    "price": "400 USD",
+    "price_postapoc": "30 USD",
+    "symbol": "[",
+    "looks_like": "boots_steel",
+    "material": [ "b_steel" ],
+    "color": "light_gray",
+    "warmth": 0,
+    "sided": true,
+    "environmental_protection": 1,
+    "flags": [ "STURDY", "OUTER" ],
+    "armor": [
+      {
+        "material": [ { "type": "b_steel", "covered_by_mat": 100, "thickness": 1.1 } ],
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_toes_r", "foot_toes_l", "foot_heel_r", "foot_heel_l", "foot_arch_r", "foot_arch_l" ],
+        "coverage": 100,
+        "encumbrance": 11,
+        "layers": [ "OUTER" ]
+      }
+    ],
+    "melee_damage": { "bash": 7 },
+    "copy-from": "lc_sabaton",
+    "replace_materials": { "lc_steel": "b_steel" }
+  },
+  {
+    "id": "doubt_helm",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "strange metal helm"
+    },
+    "description": "Looks like medieval helmet and provides excellent protection to the entire head, made of pieces of strange robot.",
+    "weight": "4175 g",
+    "volume": "2750 ml",
+    "price": "400 USD",
+    "price_postapoc": "50 USD",
+    "material": [
+      "b_steel"
+    ],
+    "symbol": "[",
+    "looks_like": "helmet_barbute",
+    "color": "light_gray",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 100,
+        "encumbrance_modifiers": [
+          "RESTRICTS_NECK",
+          "WELL_SUPPORTED"
+        ]
+      },
+      {
+        "covers": [
+          "mouth"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 100,
+        "encumbrance": 30
+      },
+      {
+        "covers": [
+          "eyes"
+        ],
+        "rigid_layer_only": true,
+        "coverage": 95,
+        "encumbrance": 20
+      }
+    ],
+    "warmth": 10,
+    "material_thickness": 3.5,
+    "environmental_protection": 1,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "STURDY"
+    ],
+    "to_hit": {
+      "grip": "none",
+      "length": "hand",
+      "surface": "any",
+      "balance": "clumsy"
+    },
+    "melee_damage": {
+      "bash": 3
+    }
+  },
+  {
+    "id": "doubt_mechanism_item",
+    "type": "GENERIC",
+    "name": { "str": "a hydraulic mechanism", "str_pl": "a hydraulic mechanisms" },
+    "description": "Several parts from the hydraulic system of an unknown type of robot. covered in rust in places, but seems to be durable.",
+    "volume": "5 l",
+    "weight": "1350 g",
+    "longest_side": "16 cm",
+    "price_postapoc": 1500,
+    "to_hit": { "balance": "neutral", "grip": "bad", "length": "hand", "surface": "any" },
+    "melee_damage": { "bash": 5 },
+    "material": [ "b_steel" ],
+    "symbol": "/",
+    "looks_like": "steel",
+    "color": "black"
   }
 ]
