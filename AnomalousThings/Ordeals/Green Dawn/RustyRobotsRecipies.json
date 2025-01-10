@@ -8,10 +8,24 @@
     "time": "12 m",
     "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WELD", "level": 1 } ],
     "components": [
-      [ [ "rustedgear_item", 4 ] ],
+      [ [ "scrapmetal_item", 12 ] ],
       [ [ "casepiece_item", 1 ] ],
-      [ [ "lc_wire", 8 ] ],
-      [ [ "qt_steel_lump", 2 ] ]
+      [ [ "blackmetalwire_item", 2 ] ]
+    ]
+  },
+  {
+    "result": "broken_doubts_elite",
+    "type": "uncraft",
+    "activity_level": "BRISK_EXERCISE",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "12 m",
+    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WELD", "level": 2 } ],
+    "components": [
+      [ [ "scrapmetal_item", 8 ] ],
+      [ [ "casepiece_item", 1 ] ],
+      [ [ "blackmetalwire_item", 6 ] ],
+      [ [ "filament_item", 2 ] ]
     ]
   }
 ]

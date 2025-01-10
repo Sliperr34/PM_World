@@ -520,7 +520,7 @@
       { "value": "THROW_STR", "add": { "math": [ "1 + u_spell_level('EGO_soda_stage_3') * 1.5" ] } },
       { "value": "SCENT_MASK", "add": 200 },
       { "value": "DODGE_CHANCE", "add": { "math": [ "2 + u_spell_level('EGO_soda_stage_3') / 2" ] } },
-	  { "value": "KNOCKDOWN_RESIST", "add": 20 }
+	    { "value": "KNOCKDOWN_RESIST", "add": 30 }
     ]
   },
   {
@@ -954,8 +954,8 @@
       { "value": "THROW_STR", "add": { "math": [ "2 + u_spell_level('EGO_soda_stage_4') * 1.5" ] } },
       { "value": "SCENT_MASK", "add": 200 },
       { "value": "DODGE_CHANCE", "add": { "math": [ "4 + u_spell_level('EGO_soda_stage_4') / 2" ] } },
-	  { "value": "BONUS_DODGE", "add": 1 },
-	  { "value": "KNOCKDOWN_RESIST", "add": 20 }
+	    { "value": "BONUS_DODGE", "add": 1 },
+	    { "value": "KNOCKDOWN_RESIST", "add": 40 }
     ]
   },
   {
@@ -1281,7 +1281,7 @@
     "id": "soda_summon_wellcheers_true",
     "type": "SPELL",
     "name": "[ז] EGO Soda - Summon Can of WellCheers",
-    "description": "Manifest an actual can of WellCheers that doesn't, you know, explode. It is ephemeral however, and will not last long if not consumed. Manifesting such a thing from the aether is very taxing in the long term.",
+    "description": "Manifest an actual drink of WellCheers that doesn't, you know, explode. Just make sure you have a can or other bottle on you! Manifesting such a thing from the aether is very taxing in the long term.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
     "effect_str": "wellcheers",
