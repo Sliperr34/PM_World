@@ -296,74 +296,35 @@
     "id": "doubt_helm",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-      "str": "strange metal helm"
-    },
+    "name": { "str": "strange metal helm" },
     "description": "Looks like medieval helmet and provides excellent protection to the entire head, made of pieces of strange robot.",
     "weight": "4175 g",
     "volume": "2750 ml",
     "price": "400 USD",
     "price_postapoc": "50 USD",
-    "material": [
-      "b_steel"
-    ],
+    "material": [ "b_steel" ],
     "symbol": "[",
     "looks_like": "helmet_barbute",
     "color": "light_gray",
     "armor": [
-      {
-        "covers": [
-          "head"
-        ],
-        "coverage": 100,
-        "encumbrance_modifiers": [
-          "RESTRICTS_NECK",
-          "WELL_SUPPORTED"
-        ]
-      },
-      {
-        "covers": [
-          "mouth"
-        ],
-        "rigid_layer_only": true,
-        "coverage": 100,
-        "encumbrance": 30
-      },
-      {
-        "covers": [
-          "eyes"
-        ],
-        "rigid_layer_only": true,
-        "coverage": 95,
-        "encumbrance": 20
-      }
+      { "covers": [ "head" ], "coverage": 100, "encumbrance_modifiers": [ "RESTRICTS_NECK", "WELL_SUPPORTED" ] },
+      { "covers": [ "mouth" ], "rigid_layer_only": true, "coverage": 100, "encumbrance": 30 },
+      { "covers": [ "eyes" ], "rigid_layer_only": true, "coverage": 95, "encumbrance": 20 }
     ],
     "warmth": 10,
     "material_thickness": 3.5,
     "environmental_protection": 1,
-    "techniques": [
-      "WBLOCK_1"
-    ],
-    "flags": [
-      "VARSIZE",
-      "STURDY"
-    ],
-    "to_hit": {
-      "grip": "none",
-      "length": "hand",
-      "surface": "any",
-      "balance": "clumsy"
-    },
-    "melee_damage": {
-      "bash": 3
-    }
+    "techniques": [ "WBLOCK_1" ],
+    "flags": [ "VARSIZE", "STURDY" ],
+    "to_hit": { "grip": "none", "length": "hand", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 3 }
   },
   {
     "id": "doubt_mechanism_item",
     "type": "GENERIC",
     "name": { "str": "a hydraulic mechanism", "str_pl": "a hydraulic mechanisms" },
     "description": "Several parts from the hydraulic system of an unknown type of robot. covered in rust in places, but seems to be durable.",
-    "volume": "5 l",
+    "volume": "5000 ml",
     "weight": "1350 g",
     "longest_side": "16 cm",
     "price_postapoc": 1500,
