@@ -226,60 +226,23 @@
     "type": "effect_on_condition",
     "id": "92_ego_evolve",
     "effect": [
-      {
-        "if": {
-          "and": [
-            { "math": [ "u_spell_level('EGO_92_stage_1')", "<", "10" ] },
-            { "math": [ "u_spell_level('EGO_92_stage_2')", "==", "-1" ] },
-            { "math": [ "u_spell_level('EGO_92_stage_3')", "==", "-1" ] },
-            { "math": [ "u_spell_level('EGO_92_stage_4')", "==", "-1" ] }
-          ]
-        },
+      { 
+        "if": { "math": [ "u_spell_level('EGO_92_invoke')", "==", "-1" ] },
         "then": [
-          { "math": [ "u_spell_level('EGO_92_stage_1')", "+=", "1" ] },
+          { "math": [ "u_spell_level('EGO_92_invoke')", "=", "1" ] },
           {
-            "u_message": "You feel a slight tickling somewhere in the back of your head, which gradually goes somewhere deeper into the brain."
-          },
-          { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
-        ],
-        "else": {
-          "if": {
-            "and": [
-              { "math": [ "u_spell_level('EGO_92_stage_2')", "<", "10" ] },
-              { "math": [ "u_spell_level('EGO_92_stage_3')", "==", "-1" ] },
-              { "math": [ "u_spell_level('EGO_92_stage_4')", "==", "-1" ] }
-            ]
-          },
-          "then": [
-            { "math": [ "u_spell_level('EGO_92_stage_2')", "+=", "1" ] },
-            { "u_message": "Your thoughts are clear but at the same time as if they don't belong to you." },
-            { "math": [ "u_spell_level('EGO_92_stage_1')", "=", "-1" ] },
-            { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
-          ],
-          "else": {
-            "if": {
-              "and": [
-                { "math": [ "u_spell_level('EGO_92_stage_3')", "<", "10" ] },
-                { "math": [ "u_spell_level('EGO_92_stage_4')", "==", "-1" ] }
-              ]
-            },
-            "then": [
-              { "math": [ "u_spell_level('EGO_92_stage_3')", "+=", "1" ] },
-              {
-                "u_message": "you feel the blood in your veins heating up and it almost hurts, but everything abruptly subsides, replaced by a cold inside your stomach."
-              },
-              { "math": [ "u_spell_level('EGO_92_stage_2')", "=", "-1" ] },
-              { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
-            ],
-            "else": [
-              { "math": [ "u_spell_level('EGO_92_stage_4')", "+=", "1" ] },
-              { "u_message": "You feel your understanding of EGO_92_stage_4 deepen! Its power grows." },
-              { "math": [ "u_spell_level('EGO_92_stage_3')", "=", "-1" ] },
-              { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
-            ]
+            "u_message": "The page burns its words into your soul, no longer are you simply a reader of the apocrypha, but the prophet themselves. The world will be consumed by a fire, the fire of your bond with the being you instinctively recognise now - 9:2.",
+            "popup": true
           }
-        }
-      }
+        ],
+        "else": [ 
+          { "math": [ "u_spell_level('EGO_92_invoke')", "+=", "1" ] },
+          {
+            "u_message": "you feel the blood in your veins heating up and it almost hurts, but everything abruptly subsides, replaced by a cold inside your stomach."
+          }
+        ]
+      },
+      { "u_consume_item": "skin_prophecy_evo_page", "count": 1 }
     ]
   },
   {

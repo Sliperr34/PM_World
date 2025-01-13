@@ -101,7 +101,7 @@
     "id": "effect_gloom_res",
     "name": [ "Gloom Resistance" ],
     "desc": [ "" ],
-	"show_in_info": true,
+    "show_in_info": false,
     "rating": "good",
     "enchantments": [
       {
