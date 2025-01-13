@@ -20,9 +20,8 @@
     "shape": "blast",
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 24000,
-    "duration_increment": 600,
+    "min_duration": { "math": ["600 + (400 * (u_spell_level('EGO_soda')^2))"] },
+    "duration_increment": 0,
     "base_casting_time": 200,
     "final_casting_time": 25,
     "casting_time_increment": -5,
@@ -40,7 +39,7 @@
     "id": "soda_activation",
     "condition": { "not": { "u_has_effect": "EGO_CD" } },
     "effect": [
-      { "u_add_effect": "EGO_CD", "duration": "5 minutes" },
+      { "u_add_effect": "EGO_CD", "duration": { "math": ["300 + (4 * (u_spell_level('EGO_soda')^2))"] } },
       { "math": [ "u_vitamin('emotion') -= 20" ] },
       {
         "u_cast_spell": { "id": "EGO_soda_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_soda')" ] } }
@@ -55,9 +54,9 @@
       },
       {
         "run_eocs": "clear_spells_soda",
-        "time_in_future": { "math": ["600 + 600 * u_spell_level('EGO_soda')"] }
+        "time_in_future": { "math": ["6 + (4 * (u_spell_level('EGO_soda')^2))"] }
       },
-      { "run_eocs": "soda_chat_stage_1" }
+      { "run_eocs": "soda_chat" }
     ],
     "false_effect": [
       { "u_message": "EGO on cooldown!", "type": "bad" },
@@ -82,9 +81,7 @@
     "shape": "blast",
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 18000,
-    "duration_increment": 600,
+    "min_duration": { "math": ["600 + (400 * (u_spell_level('EGO_soda')^2))"] },
     "base_casting_time": 0,
     "final_casting_time": 0,
     "spell_class": "EGO_Soda",
@@ -99,7 +96,7 @@
     "id": "EGO_soda_aura",
     "type": "ARMOR",
     "name": "[ז] EGO Soda Aura",
-    "description": "You feel Soda's presence in your mind, alien, twisting and writhing, yet granting you power beyond any mere mortal. While the bond is active you sense you'll be slightly harder to knock down, better at dodging, and find it easier to throw items.",
+    "description": "You feel Soda's presence in your mind, alien, twisting and writhing, yet granting you power beyond any mere mortal. While the bond is active you sense you'll be harder to knock down, better at dodging, and find it easier to throw items.",
     "weight": "0 g",
     "volume": "0 ml",
     "material": [ "wind" ],
@@ -602,7 +599,7 @@
     "base_energy_cost": 250,
     "final_energy_cost": 250,
     "energy_source": "STAMINA",
-    "difficulty": 4,
+    "difficulty": 3,
     "max_level": 1,
     "flags": [ "SILENT", "NO_LEGS", "NO_ARMS" ]
   },
@@ -614,7 +611,7 @@
 	  { "math": [ "u_health() -= 5" ] },
       {
         "message": "A delightfully refreshing beverage materialises into your hand. You feel.. A little more weary from the effort.",
-        "type": "good"
+        "type": "mixed"
       }
     ]
   },
@@ -645,93 +642,92 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "soda_chat_stage_1",
-    "recurrence": [ "5 turns", "40 turns" ],
-    "condition": { "u_has_trait": "EGO_soda_mutation_stage_1" },
-    "deactivate_condition": { "not": { "u_has_trait": "EGO_soda_mutation_stage_1" } },
-    "effect": [ {
-        "set_string_var": [
-          "Prawn.",
-          "Prawn, Prawn.",
-          "PRAWN, PRAWN. Prawn."
-        ],
-        "target_var": { "u_val": "quote" }
-      },
-      { "message": "<u_val:quote>", "type": "mixed" } 
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "soda_chat_stage_2",
+    "id": "soda_chat",
     "recurrence": [ "10 turns", "80 turns" ],
     "condition": { "u_has_trait": "EGO_soda_mutation_stage_2" },
     "deactivate_condition": { "not": { "u_has_trait": "EGO_soda_mutation_stage_2" } },
-    "effect": [ {
-        "set_string_var": [
-          "Prawn. Prawn.",
-          "The delicious taste of WellCheers!.",
-          "Some humans just get unlucky..",
-          "Our Mascot, Our Mascot!",
-          "Find the Cans, open them!"
-        ],
-        "target_var": { "u_val": "quote" }
+    "effect": [ 
+      { 
+        "switch": { "math": [ "u_spell_level('EGO_soda')" ] },
+        "cases": [
+          {
+            "case": 0,
+            "effect": [
+              {
+                "set_string_var": [
+                  "Prawn.",
+                  "Prawn, Prawn.",
+                  "PRAWN, PRAWN. Prawn."
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          },
+          {
+            "case": 10,
+            "effect": [ 
+              {
+                "set_string_var": [
+                  "Prawn. Prawn.",
+                  "The delicious taste of WellCheers!.",
+                  "Some humans just get unlucky..",
+                  "Our Mascot, Our Mascot!",
+                  "Find the Cans, open them!"
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          },
+          {
+            "case": 20,
+            "effect": [ 
+              {
+                "set_string_var": [
+                  "We should show the world our flavour!",
+                  "WellCheers, the taste you'll never forget!",
+                  "Everyone should know our name!",
+                  "Stinky zombies can't know the delight of WellCheers.",
+                  "You're squishy! Squishy, right?",
+                  "We should drag someone off, when they're asleep...",
+                  "Did you hear that?"
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          },
+          {
+            "case": 25,
+            "effect": [ 
+              {
+                "set_string_var": [
+                  "Prawn is the best flavour, you agree, right? Right?",
+                  "All our flavours, and we're the best!",
+                  "We should drag someone off, when they're asleep...",
+                  "We'll give you the strength to show the world how amazing we are!",
+                  "Hey, hey, listen...!",
+                  "Fizz goes the can, byebye goes the bad...~"
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          }
+        ]
       },
-      { "message": "<u_val:quote>", "type": "mixed" } 
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "soda_chat_stage_3",
-	"recurrence": [ "20 turns", "160 turns" ],
-    "condition": { "u_has_trait": "EGO_soda_mutation_stage_3" },
-	"deactivate_condition": { "not": { "u_has_trait": "EGO_soda_mutation_stage_3" } },
-    "effect": [ {
-        "set_string_var": [
-          "We should show the world our flavour!",
-          "WellCheers, the taste you'll never forget!",
-          "Everyone should know our name!",
-          "Stinky zombies can't know the delight of WellCheers.",
-          "You're squishy! Squishy, right?",
-          "We should drag someone off, when they're asleep...",
-          "Did you hear that?"
-        ],
-        "target_var": { "u_val": "quote" }
-      },
-      { "message": "<u_val:quote>", "type": "mixed" } 
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "soda_chat_stage_4",
-	"recurrence": [ "40 turns", "320 turns" ],
-    "condition": { "u_has_trait": "EGO_soda_mutation_stage_4" },
-	"deactivate_condition": { "not": { "u_has_trait": "EGO_soda_mutation_stage_4" } },
-    "effect": [ {
-        "set_string_var": [
-          "Prawn is the best flavour, you agree, right? Right?",
-          "All our flavours, and we're the best!",
-          "We should drag someone off, when they're asleep...",
-          "We'll give you the strength to show the world how amazing we are!",
-          "Hey, hey, listen...!",
-          "Fizz goes the can, byebye goes the bad...~"
-        ],
-        "target_var": { "u_val": "quote" }
-      },
-      { "message": "<u_val:quote>", "type": "mixed" } 
+      { "message": "<color_light_red>\"<u_val:quote>\"</color>", "type": "mixed" } 
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "clear_spells_soda",
     "effect": [
-      { "math": [ "u_spell_level('EGO_soda_summon_can_weak')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_can_normal')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_armour_normal')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_net_normal')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_wellcheers')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_can_empower')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_armour_empower')", "=", "-1" ] },
-      { "math": [ "u_spell_level('EGO_soda_summon_net_empower')", "=", "-1" ] }
+      { "math": [ "u_spell_level('EGO_soda_summon_can_weak') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_can_normal') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_armour_normal') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_net_normal') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_wellcheers') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_can_empower') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_armour_empower') = -1" ] },
+      { "math": [ "u_spell_level('EGO_soda_summon_net_empower') = -1" ] }
     ]
   }
 ]

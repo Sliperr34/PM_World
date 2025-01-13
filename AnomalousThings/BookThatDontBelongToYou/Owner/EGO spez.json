@@ -10,9 +10,9 @@
     "valid": false
   },
   {
-    "id": "EGO_92_stage_1",
+    "id": "EGO_92_invoke",
     "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 1 activation",
+    "name": "[ט] EGO 9:2 - Invoke Bond",
     "description": "Activate your bond with EGO 9:2, strengthening you and wreathing you in flame.",
     "valid_targets": [ "self" ],
     "effect": "effect_on_condition",
@@ -20,9 +20,8 @@
     "shape": "blast",
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
+    "min_duration": { "math": ["600 + (600 * (u_spell_level('EGO_92')^2))"] },
+    "duration_increment": 0,
     "base_casting_time": 200,
     "final_casting_time": 50,
     "casting_time_increment": -15,
@@ -32,7 +31,7 @@
     "energy_increment": -50,
     "energy_source": "STAMINA",
     "difficulty": 3,
-    "max_level": 10,
+    "max_level": 30,
     "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
@@ -40,10 +39,10 @@
     "id": "92_stage_1_activation",
     "condition": { "not": { "u_has_effect": "EGO_CD" } },
     "effect": [
-      { "u_add_effect": "EGO_CD", "duration": "5 minutes" },
+      { "u_add_effect": "EGO_CD", "duration":  { "math": ["300 + (6 * (u_spell_level('EGO_92_invoke')^2))"] } },
       { "math": [ "u_vitamin('emotion') -= 20" ] },
       {
-        "u_cast_spell": { "id": "EGO_92_stage_1_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_1')" ] } }
+        "u_cast_spell": { "id": "EGO_92_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_invoke')" ] } }
       },
       { "math": [ "u_health() -= 3" ] },
       {
@@ -52,6 +51,10 @@
         "max_bonus": -200,
         "duration": "15 minutes",
         "decay_start": "5 minutes"
+      },
+      {
+        "run_eocs": "clear_spell_92",
+        "time_in_future": { "math": ["6 + (6 * (u_spell_level('EGO_92_invoke')^2))"] }
       }
     ],
     "false_effect": [
@@ -67,7 +70,7 @@
     ]
   },
   {
-    "id": "EGO_92_stage_1_success",
+    "id": "EGO_92_success",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 stage 1 activation",
     "description": "Разжигает внутреннее пламя, на короткое время даруя силу и стойкость к огню.",
@@ -77,9 +80,8 @@
     "shape": "blast",
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
+    "min_duration": { "math": ["600 + (600 * (u_spell_level('EGO_92')^2))"] },
+    "duration_increment": 0,
     "base_casting_time": 0,
     "final_casting_time": 0,
     "spell_class": "EGO_92",
@@ -87,236 +89,108 @@
     "final_energy_cost": 0,
     "energy_source": "NONE",
     "difficulty": 3,
-    "max_level": 10,
+    "max_level": 30,
     "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
     "id": "EGO_92_stage_1_aura",
     "type": "ARMOR",
-    "name": "[ט] EGO 9:2 activated s1",
-    "description": "desc",
+    "name": "[ט] EGO 9:2 Aura",
+    "description": "A spiral of flame wreaths you, enhancing your capabilities beyond that of mortality. May your foes be burned as they strike at you, and warmth be your ally, not your foe.",
     "weight": "0 g",
     "volume": "0 ml",
     "material": [ "wind" ],
     "symbol": "0",
     "color": "white",
     "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_1_ench" } ] }
+    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_1_ench" }, { "id": "EGO_92_stage_2_ench" }, { "id": "EGO_92_stage_3_ench" }, { "id": "EGO_92_invoke_ench" }, { "id": "EGO_92_invoke_ench3" } ] }
   },
   {
     "type": "enchantment",
     "id": "EGO_92_stage_1_ench",
     "has": "WORN",
-    "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "92_strike_hook", "once_in": 2 } ],
+    "condition": { "math": [ "u_spell_level('EGO_92_invoke') < 10" ] },
+    "hit_you_effect": [ { "id": "92_weak_strike", "once_in": 2 } ],
+    "mutations": [ "EGO_92_mutation_stage_1" ],
     "values": [
-      { "value": "LUMINATION", "add": { "math": [ "u_spell_level('EGO_92_stage_1') * 2" ] } },
+      { "value": "LUMINATION", "add": { "math": [ "u_spell_level('EGO_92_invoke') * 2" ] } },
       { "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
       { "value": "CLIMATE_CONTROL_CHILL", "add": 10 }
     ],
-    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "u_spell_level('EGO_92_stage_1') * 1.2" ] } } ]
-  },
-  {
-    "id": "92_strike_hook",
-    "type": "SPELL",
-    "name": "9:2 strike hook",
-    "description": "Hook to use levels of 9:2 ego in strike",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_hook_1",
-    "shape": "blast",
-    "min_range": 1,
-    "max_range": 1,
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
-    "base_casting_time": 200,
-    "final_casting_time": 50,
-    "casting_time_increment": -15,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 3000,
-    "final_energy_cost": 500,
-    "energy_increment": -50,
-    "energy_source": "STAMINA",
-    "difficulty": 3,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_hook_1",
-    "effect": [
-      { "u_cast_spell": { "id": "92_weak_strike", "min_level": { "math": [ "u_spell_level('EGO_92_stage_1')" ] } } },
-      { "message": "Fush!", "type": "bad" }
-    ]
-  },
-  {
-    "id": "92_weak_strike",
-    "type": "SPELL",
-    "name": "9:2 strike stage 1",
-    "description": " desc",
-    "effect": "attack",
-    "shape": "blast",
-    "valid_targets": [ "ally", "hostile" ],
-    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
-    "max_level": 10,
-    "min_damage": 1,
-    "max_damage": 3,
-    "damage_increment": 0.2,
-    "min_range": 1,
-    "max_range": 1,
-    "range_increment": 0,
-    "difficulty": 0,
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "spell_class": "EGO_92",
-    "base_casting_time": 200,
-    "final_casting_time": 100,
-    "casting_time_increment": -5,
-    "base_energy_cost": 140,
-    "damage_type": "heat",
-    "sound_description": "fush",
-    "energy_source": "NONE"
-  },
-  {
-    "id": "EGO_92_stage_2",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 2 activation",
-    "description": "Your bond with EGO 9:2 has strengthened, and you may call upon it more deeply.",
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_stage_2_activation",
-    "shape": "blast",
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
-    "base_casting_time": 200,
-    "final_casting_time": 50,
-    "casting_time_increment": -15,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 5000,
-    "final_energy_cost": 500,
-    "energy_increment": -100,
-    "energy_source": "STAMINA",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_stage_2_activation",
-    "condition": { "not": { "u_has_effect": "EGO_CD" } },
-    "effect": [
-      { "u_add_effect": "EGO_CD", "duration": "8 minutes" },
-      {
-        "switch": { "math": [ "u_vitamin('emotion')" ] },
-        "cases": [
-          {
-            "case": 0,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 20" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_2_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_2')" ] } }
-              },
-              { "u_message": "Your emotion manifests, wreathing you in a glorious aura.", "type": "good" }
-            ]
-          },
-          {
-            "case": 50,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 50" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_2_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_2')" ] } }
-              },
-              { "run_eocs": [ "92_sword_hook_eoc_1" ] },
-              { "run_eocs": [ "92_armor_hook_eoc_1" ] },
-              {
-                "u_message": "Your strong emotions coalesce into an glorious aura, and the armaments of a prophet.",
-                "type": "good"
-              }
-            ]
-          }
-        ]
-      },
-      { "math": [ "u_health() -= 14" ] },
-      {
-        "u_add_morale": "ego_morale",
-        "bonus": -40,
-        "max_bonus": -200,
-        "duration": "22 minutes",
-        "decay_start": "8 minutes"
-      },
-      {
-        "run_eocs": "clear_spell_92",
-        "time_in_future": { "math": [ "60 + (12 * u_spell_level('EGO_92_stage_2'))" ] }
-      }
-    ],
-    "false_effect": [
-      { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "math": [ "u_health() -= 8" ] },
-      {
-        "u_add_morale": "ego_morale",
-        "bonus": -22,
-        "max_bonus": -200,
-        "duration": "22 minutes",
-        "decay_start": "8 minutes"
-      }
-    ]
-  },
-  {
-    "id": "EGO_92_stage_2_success",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 2 activation",
-    "description": "EGO spell activation desc stage 2",
-    "valid_targets": [ "self" ],
-    "effect": "spawn_item",
-    "effect_str": "EGO_92_stage_2_aura",
-    "shape": "blast",
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 6000,
-    "max_duration": 18000,
-    "duration_increment": 1200,
-    "base_casting_time": 0,
-    "final_casting_time": 0,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 0,
-    "final_energy_cost": 0,
-    "energy_source": "NONE",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "id": "EGO_92_stage_2_aura",
-    "type": "ARMOR",
-    "name": "[ט] EGO 9:2 activated s2",
-    "description": "desc",
-    "weight": "0 g",
-    "volume": "0 ml",
-    "material": [ "wind" ],
-    "symbol": "0",
-    "color": "white",
-    "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_2_ench" } ] }
+    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "u_spell_level('EGO_92_invoke') * -1.2" ] } } ]
   },
   {
     "type": "enchantment",
     "id": "EGO_92_stage_2_ench",
     "has": "WORN",
-    "condition": "ALWAYS",
+    "condition": { "and": [ { "math": [ "u_spell_level('EGO_92_invoke') >= 10" ] }, { "math": [ "u_spell_level('EGO_92_invoke') < 20" ] } ] },
     "hit_you_effect": [ { "id": "92_strike_hook_2" } ],
     "mutations": [ "EGO_92_mutation_stage_2" ],
     "values": [
-      { "value": "LUMINATION", "add": { "math": [ "20 + u_spell_level('EGO_92_stage_1') * 2" ] } },
+      { "value": "LUMINATION", "add": { "math": [ "20 + u_spell_level('EGO_92_invoke') * 2" ] } },
       { "value": "CLIMATE_CONTROL_HEAT", "add": 50 },
       { "value": "CLIMATE_CONTROL_CHILL", "add": 20 }
     ],
-    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "12 + u_spell_level('EGO_92_stage_2') * 1.3" ] } } ]
+    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "-12 + u_spell_level('EGO_92_invoke') * -1.3" ] } } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "EGO_92_stage_3_ench",
+    "has": "WORN",
+    "condition": { "and": [ { "math": [ "u_spell_level('EGO_92_invoke') >= 20" ] }, { "math": [ "u_spell_level('EGO_92_invoke') < 25" ] } ] },
+    "hit_you_effect": [ { "id": "92_strike_hook_3" } ],
+    "mutations": [ "EGO_92_mutation_stage_3" ],
+    "values": [
+      { "value": "LUMINATION", "add": { "math": [ "40 + u_spell_level('EGO_92_invoke') * 2" ] } },
+      { "value": "CLIMATE_CONTROL_HEAT", "add": 80 },
+      { "value": "CLIMATE_CONTROL_CHILL", "add": 60 }
+    ],
+    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "-30 * u_spell_level('EGO_92_invoke') " ] } } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "EGO_92_invoke_ench",
+    "has": "WORN",
+    "condition": { "math": [ "u_spell_level('EGO_92_invoke') >= 25" ] },
+    "hit_you_effect": [ { "id": "92_strike_hook_4" }, { "id": "cinder_stack", "hit_self": true, "once_in": 6 } ],
+    "mutations": [ "EGO_92_mutation_stage_4" ],
+    "values": [
+      { "value": "LUMINATION", "add": { "math": [ "60 + u_spell_level('EGO_92_invoke') * 5" ] } },
+      { "value": "CLIMATE_CONTROL_HEAT", "add": 500 },
+      { "value": "CLIMATE_CONTROL_CHILL", "add": 75 }
+    ],
+    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "-300 * u_spell_level('EGO_92_invoke')" ] } } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "EGO_92_invoke_ench1",
+    "has": "WIELD",
+    "condition": { "math": [ "u_spell_level('EGO_92_invoke') >= 25" ] },
+    "hit_you_effect": [ { "id": "92_sword_strike2" } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "EGO_92_invoke_ench2",
+    "has": "WIELD",
+    "condition": { "and": [ { "math": [ "u_spell_level('EGO_92_invoke') >= 25" ] }, { "not": { "u_has_effect": "cinders", "intensity": 10 } } ] },
+    "hit_you_effect": [ { "id": "cinder_stack", "hit_self": true, "once_in": 3 } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "EGO_92_invoke_ench3",
+    "has": "WORN",
+    "condition": { "and": [ { "math": [ "u_spell_level('EGO_92_invoke') >= 25" ] }, { "math": [ "u_spell_level('EGO_92_invoke') >= 25" ] } ] },
+    "hit_you_effect": [ { "id": "92_flame_hook_4", "once_in": 3 } ]
+  },
+  {
+    "type": "mutation",
+    "id": "EGO_92_mutation_stage_1",
+    "name": "[ט] Imperfect EGO 9:2 manifestation",
+    "points": 0,
+    "description": "EGO 9:2 mutation desc",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
   },
   {
     "type": "mutation",
@@ -330,62 +204,83 @@
     "spells_learned": [ [ "92_sword_weak_hook", 1 ] ]
   },
   {
+    "type": "mutation",
+    "id": "EGO_92_mutation_stage_3",
+    "name": "[ט] EGO 9:2 manifestation",
+    "points": 0,
+    "description": "EGO 9:2 mutation desc",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [ "PROPHET_RESIST", "HEAT_IMMUNE" ],
+    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
+  },
+  {
+    "type": "mutation",
+    "id": "EGO_92_mutation_stage_4",
+    "name": "[ט] EGO 9:2 manifestation",
+    "points": 0,
+    "description": "EGO 9:2 mutation desc",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "flags": [ "PROPHET_RESIST", "HEAT_IMMUNE", "CLIMATE_CONTROL" ],
+    "spells_learned": [ [ "92_sword_empower_hook", 1 ], [ "92_armor_empower_hook", 1 ] ]
+  },
+  {
+    "id": "92_weak_strike",
+    "type": "SPELL",
+    "name": "9:2 strike stage 1",
+    "description": " desc",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [ "ally", "hostile" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
+    "max_level": 1,
+    "min_damage": { "math": [ "1 + 0.2 * u_spell_level('EGO_92_invoke')" ] },
+    "max_damage": 3,
+    "min_range": 1,
+    "max_range": 1,
+    "range_increment": 0,
+    "difficulty": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "spell_class": "EGO_92",
+    "base_casting_time": { "math": [ "200 - 15 * u_spell_level('EGO_92_invoke')" ] },
+    "final_casting_time": 50,
+    "base_energy_cost": { "math": [ "3000 - 50 * u_spell_level('EGO_92_invoke')" ] },
+    "final_energy_cost": 500,
+    "energy_increment": -50,
+    "damage_type": "heat",
+    "sound_description": "fush",
+    "message": "Fush!",
+    "energy_source": "NONE"
+  },
+  {
     "id": "92_sword_weak_hook",
     "type": "SPELL",
     "name": "[ט] Imperfect EGO 9:2 - Summon sword ",
     "description": "Call forth the imperfect blade of a prophet.",
     "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_sword_hook_eoc",
+    "effect": "spawn_item",
+    "effect_str": "92_sword_weak_item",
     "shape": "blast",
     "min_range": 0,
     "max_range": 0,
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 200,
-    "max_duration": 200,
+    "min_duration": { "math": [ "2500 + 75 * u_spell_level('EGO_92_invoke')" ] },
+    "max_duration": 10000,
     "base_casting_time": 80,
     "final_casting_time": 80,
     "spell_class": "EGO_92",
     "base_energy_cost": 1000,
     "final_energy_cost": 1000,
     "energy_source": "STAMINA",
+    "message": "*A clot of flame appears in your hand, forms a sword and solidifies into a solid form*",
     "difficulty": 0,
     "max_level": 1,
     "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_sword_hook_eoc",
-    "effect": [
-      { "u_cast_spell": { "id": "92_sword_weak", "min_level": { "math": [ "u_spell_level('EGO_92_stage_2')" ] } } },
-      {
-        "message": "*A clot of flame appears in your hand, forms a sword and solidifies into a solid form*",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "id": "92_sword_weak",
-    "type": "SPELL",
-    "name": "9:2 weak sword summon true",
-    "description": " technical desc",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT" ],
-    "min_damage": 1,
-    "max_damage": 1,
-    "effect": "spawn_item",
-    "effect_str": "92_sword_weak_item",
-    "shape": "blast",
-    "energy_source": "NONE",
-    "spell_class": "EGO_92",
-    "difficulty": 0,
-    "max_level": 10,
-    "base_casting_time": 80,
-    "base_energy_cost": 0,
-    "min_duration": 2500,
-    "max_duration": 10000,
-    "duration_increment": 75
   },
   {
     "id": "92_sword_weak_item",
@@ -411,42 +306,6 @@
   {
     "id": "92_strike_hook_2",
     "type": "SPELL",
-    "name": "9:2 strike hook",
-    "description": "Hook to use levels of 9:2 ego in strike",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_hook_2",
-    "shape": "blast",
-    "min_range": 1,
-    "max_range": 1,
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 60000,
-    "max_duration": 600000,
-    "duration_increment": 60000,
-    "base_casting_time": 200,
-    "final_casting_time": 50,
-    "casting_time_increment": -15,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 3000,
-    "final_energy_cost": 500,
-    "energy_increment": -50,
-    "energy_source": "STAMINA",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_hook_2",
-    "effect": [
-      { "u_cast_spell": { "id": "92_strike", "min_level": { "math": [ "u_spell_level('EGO_92_stage_2')" ] } } },
-      { "message": "WShh!", "type": "bad" }
-    ]
-  },
-  {
-    "id": "92_strike",
-    "type": "SPELL",
     "name": "9:2 strike stage 2",
     "description": " desc",
     "effect": "attack",
@@ -454,12 +313,10 @@
     "valid_targets": [ "ally", "hostile" ],
     "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX", "IGNITE_FLAMMABLE" ],
     "max_level": 10,
-    "min_damage": 3,
+    "min_damage": { "math": [ "3 + 0.3 * u_spell_level('EGO_92_invoke')" ] },
     "max_damage": 6,
-    "damage_increment": 0.3,
-    "min_pierce": 0,
+    "min_pierce": { "math": [ "0.3 * u_spell_level('EGO_92_invoke')" ] },
     "max_pierce": 3,
-    "pierce_increment": 0.3,
     "min_range": 1,
     "max_range": 1,
     "range_increment": 0,
@@ -467,221 +324,37 @@
     "min_aoe": 0,
     "max_aoe": 0,
     "spell_class": "EGO_92",
-    "base_casting_time": 200,
+    "base_casting_time": { "math": [ "200 - 5 * u_spell_level('EGO_92_invoke')" ] },
     "final_casting_time": 100,
-    "casting_time_increment": -5,
     "base_energy_cost": 140,
     "damage_type": "heat",
     "sound_description": "fush",
+    "message": "Wshh!",
     "energy_source": "NONE"
-  },
-  {
-    "id": "EGO_92_stage_3",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 3 activation",
-    "description": "Your bond with EGO 9:2 has grown deeper still, towards a vast depth of power.",
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_stage_3_activation",
-    "shape": "blast",
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
-    "base_casting_time": 200,
-    "final_casting_time": 50,
-    "casting_time_increment": -15,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 5000,
-    "final_energy_cost": 500,
-    "energy_increment": -100,
-    "energy_source": "STAMINA",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_stage_3_activation",
-    "condition": { "not": { "u_has_effect": "EGO_CD" } },
-    "effect": [
-      { "u_add_effect": "EGO_CD", "duration": "15 minutes" },
-      {
-        "switch": { "math": [ "u_vitamin('emotion')" ] },
-        "cases": [
-          {
-            "case": 0,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 20" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_3_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } }
-              },
-              { "u_message": "Your emotion manifests, wreathing you in a glorious aura.", "type": "good" }
-            ]
-          },
-          {
-            "case": 50,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 50" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_3_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } }
-              },
-              { "run_eocs": [ "92_sword_hook_eoc_2" ] },
-              { "run_eocs": [ "92_armor_hook_eoc_2" ] },
-              {
-                "u_message": "Your strong emotions coalesce into an glorious aura, and the armaments of a prophet.",
-                "type": "good"
-              }
-            ]
-          }
-        ]
-      },
-      { "math": [ "u_health() -= 20" ] },
-      {
-        "u_add_morale": "ego_morale",
-        "bonus": -85,
-        "max_bonus": -400,
-        "duration": "39 minutes",
-        "decay_start": "15 minutes"
-      },
-      {
-        "run_eocs": "clear_spell_92",
-        "time_in_future": { "math": [ "18 + (58.2 * u_spell_level('EGO_92_stage_3'))" ] }
-      }
-    ],
-    "false_effect": [
-      { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "math": [ "u_health() -= 15" ] },
-      {
-        "u_add_morale": "ego_morale",
-        "bonus": -65,
-        "max_bonus": -400,
-        "duration": "39 minutes",
-        "decay_start": "15 minutes"
-      }
-    ]
-  },
-  {
-    "id": "EGO_92_stage_3_success",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 3 activation",
-    "description": "EGO spell activation desc stage 3",
-    "valid_targets": [ "self" ],
-    "effect": "spawn_item",
-    "effect_str": "EGO_92_stage_3_aura",
-    "shape": "blast",
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 1800,
-    "max_duration": 60000,
-    "duration_increment": 58200,
-    "base_casting_time": 0,
-    "final_casting_time": 0,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 0,
-    "final_energy_cost": 0,
-    "energy_source": "NONE",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "id": "EGO_92_stage_3_aura",
-    "type": "ARMOR",
-    "name": "[ט] EGO 9:2 activated s3",
-    "description": "desc",
-    "weight": "0 g",
-    "volume": "0 ml",
-    "material": [ "wind" ],
-    "symbol": "0",
-    "color": "white",
-    "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_3_ench" } ] }
-  },
-  {
-    "type": "enchantment",
-    "id": "EGO_92_stage_3_ench",
-    "has": "WORN",
-    "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "92_strike_hook_3" } ],
-    "mutations": [ "EGO_92_mutation_stage_3" ],
-    "values": [
-      { "value": "LUMINATION", "add": { "math": [ "40 + u_spell_level('EGO_92_stage_1') * 2" ] } },
-      { "value": "CLIMATE_CONTROL_HEAT", "add": 80 },
-      { "value": "CLIMATE_CONTROL_CHILL", "add": 60 }
-    ],
-    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "30 * u_spell_level('EGO_92_stage_3') " ] } } ]
-  },
-  {
-    "type": "mutation",
-    "id": "EGO_92_mutation_stage_3",
-    "name": "[ט] EGO 9:2 manifestation",
-    "points": 0,
-    "description": "EGO 9:2 mutation desc",
-    "starting_trait": false,
-    "purifiable": false,
-    "valid": false,
-    "flags": [ "PROPHET_RESIST", "HEAT_IMMUNE" ],
-    "spells_learned": [ [ "92_sword_normal_hook", 1 ], [ "92_armor_normal_hook", 1 ] ]
-  },
+  },  
   {
     "id": "92_sword_normal_hook",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 - Summon sword ",
-    "description": "Call forth the blade of a prophet.",
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_sword_hook_eoc_2",
-    "shape": "blast",
-    "min_range": 0,
-    "max_range": 0,
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 200,
-    "max_duration": 200,
-    "base_casting_time": 80,
-    "final_casting_time": 80,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 750,
-    "final_energy_cost": 750,
-    "energy_source": "STAMINA",
-    "difficulty": 0,
-    "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_sword_hook_eoc_2",
-    "effect": [
-      { "u_cast_spell": { "id": "92_sword_normal", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } } },
-      {
-        "message": "A clot of flame appears in your hand, forms a sword and solidifies into a solid form.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "id": "92_sword_normal",
     "type": "SPELL",
     "name": "9:2 sword summon true",
     "description": " technical desc",
     "valid_targets": [ "self" ],
-    "flags": [ "SILENT" ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
     "effect_str": "92_sword_item",
     "shape": "blast",
     "energy_source": "NONE",
-    "spell_class": "EGO_92",
     "difficulty": 0,
-    "max_level": 10,
+    "max_level": 1,
     "base_casting_time": 80,
-    "base_energy_cost": 0,
-    "min_duration": 1000,
+    "final_casting_time": 80,
+    "spell_class": "EGO_92",
+    "base_energy_cost": 750,
+    "final_energy_cost": 750,
+    "min_duration": { "math": [ "1000 + 2300 * u_spell_level('EGO_92_invoke')" ] },
     "max_duration": 24000,
-    "duration_increment": 2300
+    "message": "A clot of flame appears in your hand, forms a sword and solidifies into a solid form.",
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
   },
   {
     "id": "92_sword_item",
@@ -752,15 +425,15 @@
     "name": "[ט] EGO 9:2 - Summon armor",
     "description": "Call forth the armor of a prophet.",
     "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_armor_hook_eoc_2",
+    "effect": "spawn_item",
+    "effect_str": "92_armor_normal_item",
     "shape": "blast",
     "min_range": 0,
     "max_range": 0,
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 20000,
-    "max_duration": 20000,
+    "min_duration": { "math": [ "1000 + 2300 * u_spell_level('EGO_92_invoke')" ] },
+    "max_duration": 24000,
     "base_casting_time": 80,
     "final_casting_time": 80,
     "spell_class": "EGO_92",
@@ -769,40 +442,8 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
+    "message": "The flame enveloped you, but it does not burn, after which the armor of the Prophet materialized on you.",
     "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_armor_hook_eoc_2",
-    "effect": [
-      { "u_cast_spell": { "id": "92_armor_normal", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } } },
-      {
-        "message": "The flame enveloped you, but it does not burn, after which the armor of the Prophet materialized on you.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "id": "92_armor_normal",
-    "type": "SPELL",
-    "name": "9:2 armor summon true",
-    "description": " technical desc",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT" ],
-    "min_damage": 1,
-    "max_damage": 1,
-    "effect": "spawn_item",
-    "effect_str": "92_armor_normal_item",
-    "shape": "blast",
-    "energy_source": "NONE",
-    "spell_class": "EGO_92",
-    "difficulty": 0,
-    "max_level": 10,
-    "base_casting_time": 80,
-    "base_energy_cost": 0,
-    "min_duration": 1000,
-    "max_duration": 24000,
-    "duration_increment": 2300
   },
   {
     "id": "92_armor_normal_item",
@@ -862,52 +503,17 @@
   {
     "id": "92_strike_hook_3",
     "type": "SPELL",
-    "name": "9:2 strike hook",
-    "description": "Hook to use levels of 9:2 ego in strike",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_hook_3",
-    "shape": "blast",
-    "min_range": 1,
-    "max_range": 1,
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 60000,
-    "max_duration": 600000,
-    "duration_increment": 60000,
-    "base_casting_time": 200,
-    "final_casting_time": 50,
-    "casting_time_increment": -15,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 3000,
-    "final_energy_cost": 500,
-    "energy_increment": -50,
-    "energy_source": "STAMINA",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_hook_3",
-    "effect": [ { "u_cast_spell": { "id": "92_strong_strike", "min_level": { "math": [ "u_spell_level('EGO_92_stage_3')" ] } } } ]
-  },
-  {
-    "id": "92_strong_strike",
-    "type": "SPELL",
     "name": "9:2 strike stage 3",
     "description": " desc",
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile" ],
     "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
-    "max_level": 10,
-    "min_damage": 3,
+    "max_level": 1,
+    "min_damage": { "math": [ "3 + 0.3 * u_spell_level('EGO_92_invoke')" ] },
     "max_damage": 6,
-    "damage_increment": 0.3,
-    "min_pierce": 3,
+    "min_pierce": { "math": [ "3 + 0.3 * u_spell_level('EGO_92_invoke')" ] },
     "max_pierce": 6,
-    "pierce_increment": 0.3,
     "min_range": 1,
     "max_range": 1,
     "range_increment": 0,
@@ -915,120 +521,17 @@
     "min_aoe": 0,
     "max_aoe": 0,
     "spell_class": "EGO_92",
-    "base_casting_time": 200,
+    "base_casting_time": { "math": [ "100 - 5 * u_spell_level('EGO_92_invoke')" ] },
     "final_casting_time": 100,
     "casting_time_increment": -5,
-    "base_energy_cost": 140,
+    "base_energy_cost": { "math": [ "3000 - 50 * u_spell_level('EGO_92_invoke')" ] },
+    "final_energy_cost": 500,
     "damage_type": "heat",
     "sound_description": "fush",
-    "energy_source": "NONE"
+    "energy_source": "STAMINA"
   },
   {
-    "id": "EGO_92_stage_4",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 4 activation",
-    "description": "Ignites your joint flame, granting great strength and resistance to fire for a short time.",
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_stage_4_activation",
-    "shape": "blast",
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
-    "base_casting_time": 100,
-    "final_casting_time": 10,
-    "casting_time_increment": -10,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 100,
-    "final_energy_cost": 10,
-    "energy_increment": -10,
-    "energy_source": "STAMINA",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_stage_4_activation",
-    "condition": { "not": { "u_has_effect": "EGO_CD" } },
-    "effect": [
-      {
-        "switch": { "math": [ "u_vitamin('emotion')" ] },
-        "cases": [
-          {
-            "case": 0,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 20" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_4_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } }
-              },
-              { "u_message": "Your emotion manifests, wreathing you in a glorious aura.", "type": "good" }
-            ]
-          },
-          {
-            "case": 50,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 50" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_4_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } }
-              },
-              { "run_eocs": [ "92_sword_hook_eoc_3" ] },
-              { "run_eocs": [ "92_armor_hook_eoc_3" ] },
-              { "run_eocs": [ "candle_spawner" ] },
-              {
-                "u_message": "Your strong emotions coalesce into an glorious aura, and the armaments of a prophet.",
-                "type": "good"
-              }
-            ]
-          },
-          {
-            "case": 80,
-            "effect": [
-              { "math": [ "u_vitamin('emotion') -= 80" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_4_success", "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } }
-              },
-              { "run_eocs": [ "92_sword_hook_eoc_3" ] },
-              { "run_eocs": [ "92_armor_hook_eoc_3" ] },
-              {
-                "u_cast_spell": { "id": "EGO_92_stage_4_explosion", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } }
-              },
-              { "run_eocs": [ "candle_spawner" ] },
-              { "run_eocs": [ "candle_spawner" ] },
-              {
-                "u_message": "Your overflowing emotions explode outwards, causing brimstone flame as they manifest into incredible armaments.",
-                "type": "mixed"
-              }
-            ]
-          }
-        ]
-      },
-      { "u_add_effect": "EGO_CD", "duration": "15 minutes" },
-      { "math": [ "u_health() -= 10" ] },
-      {
-        "u_add_morale": "ego_morale",
-        "bonus": -50,
-        "max_bonus": -400,
-        "duration": "70 minutes",
-        "decay_start": "22 minutes"
-      }
-    ],
-    "false_effect": [
-      { "u_message": "EGO on cooldown!", "type": "bad" },
-      { "math": [ "u_health() -= 2" ] },
-      {
-        "u_add_morale": "ego_morale",
-        "bonus": -11,
-        "max_bonus": -400,
-        "duration": "70 minutes",
-        "decay_start": "22 minutes"
-      }
-    ]
-  },
-  {
-    "id": "EGO_92_stage_4_explosion",
+    "id": "EGO_92_invoke_explosion",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 Stage 4 Explosion",
     "description": "Erupt into flames like a glorious phoenix.",
@@ -1060,64 +563,6 @@
     "sound_description": "a crackle!"
   },
   {
-    "id": "EGO_92_stage_4_success",
-    "type": "SPELL",
-    "name": "[ט] EGO 9:2 stage 4 activation",
-    "description": "EGO spell activation desc stage 4",
-    "valid_targets": [ "self" ],
-    "effect": "spawn_item",
-    "effect_str": "EGO_92_stage_4_aura",
-    "shape": "blast",
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 12000,
-    "max_duration": 36000,
-    "duration_increment": 2400,
-    "base_casting_time": 0,
-    "final_casting_time": 0,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 0,
-    "final_energy_cost": 0,
-    "energy_source": "NONE",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "id": "EGO_92_stage_4_aura",
-    "type": "ARMOR",
-    "name": "[ט] EGO 9:2 activated s4",
-    "description": "desc",
-    "weight": "0 g",
-    "volume": "0 ml",
-    "material": [ "wind" ],
-    "symbol": "0",
-    "color": "white",
-    "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF", "PROPHET_RESIST" ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_4_ench" }, { "id": "EGO_92_stage_4_ench3" } ] }
-  },
-  {
-    "type": "enchantment",
-    "id": "EGO_92_stage_4_ench",
-    "has": "WORN",
-    "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "92_strike_hook_4" }, { "id": "cinder_stack", "hit_self": true, "once_in": 6 } ],
-    "mutations": [ "EGO_92_mutation_stage_4" ],
-    "values": [
-      { "value": "LUMINATION", "add": { "math": [ "60 + u_spell_level('EGO_92_stage_1') * 5" ] } },
-      { "value": "CLIMATE_CONTROL_HEAT", "add": 500 },
-      { "value": "CLIMATE_CONTROL_CHILL", "add": 75 }
-    ],
-    "incoming_damage_mod": [ { "type": "heat", "add": { "math": [ "300 * u_spell_level('EGO_92_stage_4') " ] } } ]
-  },
-  {
-    "type": "enchantment",
-    "id": "EGO_92_stage_4_ench3",
-    "has": "WORN",
-    "condition": { "compare_string": [ "yes", { "u_val": "living_flame_on" } ] },
-    "hit_you_effect": [ { "id": "92_flame_hook_4", "once_in": 3 } ]
-  },
-  {
     "id": "92_gaze_hook_4",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 - Gaze",
@@ -1126,8 +571,8 @@
     "effect": "effect_on_condition",
     "effect_str": "92_gaze_hook_eoc",
     "shape": "blast",
-    "min_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
-    "max_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
+    "min_range": { "math": [ "u_spell_level('EGO_92_invoke') * 3.5" ] },
+    "max_range": { "math": [ "u_spell_level('EGO_92_invoke') * 3.5" ] },
     "min_aoe": 0,
     "max_aoe": 0,
     "min_duration": 200,
@@ -1158,8 +603,8 @@
     "min_duration": 6000,
     "max_duration": 6000,
     "effect_str": "92_gaze_effect",
-    "min_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
-    "max_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
+    "min_range": { "math": [ "u_spell_level('EGO_92_invoke') * 3.5" ] },
+    "max_range": { "math": [ "u_spell_level('EGO_92_invoke') * 3.5" ] },
     "range_increment": 0,
     "difficulty": 0,
     "min_dot": 0,
@@ -1207,7 +652,7 @@
       {
         "u_cast_spell": {
           "id": "92_gaze",
-          "min_level": { "math": [ "(n_spell_level('EGO_92_stage_4') / 2) + n_effect_intensity('cinders')" ] }
+          "min_level": { "math": [ "(n_spell_level('EGO_92_invoke') / 2) + n_effect_intensity('cinders')" ] }
         }
       }
     ],
@@ -1323,7 +768,7 @@
           "id": "92_flame_explosion",
           "min_level": {
             "math": [
-              "1 + (n_spell_level('EGO_92_stage_4') / 5) + (n_effect_intensity('cinders') / 2) + (2 *(n_monsters_nearby('mon_candle_allied', 'radius': 60, 'attitude': 'friendly'))) "
+              "1 + (n_spell_level('EGO_92_invoke') / 5) + (n_effect_intensity('cinders') / 2) + (2 *(n_monsters_nearby('mon_candle_allied', 'radius': 60, 'attitude': 'friendly'))) "
             ]
           },
           "hit_self": true
@@ -1443,33 +888,22 @@
     "immune_flags": [ "PROPHET_RESIST", "PROPHET_MINION" ],
     "scaling_mods": {  }
   },
-  {
-    "type": "mutation",
-    "id": "EGO_92_mutation_stage_4",
-    "name": "[ט] EGO 9:2 manifestation",
-    "points": 0,
-    "description": "EGO 9:2 mutation desc",
-    "starting_trait": false,
-    "purifiable": false,
-    "valid": false,
-    "flags": [ "PROPHET_RESIST", "HEAT_IMMUNE", "CLIMATE_CONTROL" ],
-    "spells_learned": [ [ "92_sword_empower_hook", 1 ], [ "92_armor_empower_hook", 1 ] ]
-  },
+  
   {
     "id": "92_sword_empower_hook",
     "type": "SPELL",
     "name": "[ט] EGO 9:2 - Summon sword and grimoire",
     "description": "Call forth the blade and grimoire of a True Prophet.",
     "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_sword_hook_eoc_3",
+    "effect": "spawn_item",
+    "effect_str": "92_sword_item_empower",
     "shape": "blast",
     "min_range": 0,
     "max_range": 0,
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 200,
-    "max_duration": 200,
+    "min_duration": { "math": [ "6000 + 7200 * u_spell_level('EGO_92_invoke')" ] },
+    "max_duration": 78000,
     "base_casting_time": 35,
     "final_casting_time": 35,
     "spell_class": "EGO_92",
@@ -1478,40 +912,8 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
+    "message": "A clot of flame appears in your hand, forms a sword and solidifies into a solid form.",
     "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_LEGS", "NO_FAIL" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_sword_hook_eoc_3",
-    "effect": [
-      { "u_cast_spell": { "id": "92_sword_empower", "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } } },
-      {
-        "message": "A clot of flame appears in your hand, forms a sword and solidifies into a solid form.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "id": "92_sword_empower",
-    "type": "SPELL",
-    "name": "9:2 sword summon true",
-    "description": " technical desc",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT" ],
-    "min_damage": 1,
-    "max_damage": 1,
-    "effect": "spawn_item",
-    "effect_str": "92_sword_item_empower",
-    "shape": "blast",
-    "energy_source": "NONE",
-    "spell_class": "EGO_92",
-    "difficulty": 0,
-    "max_level": 10,
-    "base_casting_time": 80,
-    "base_energy_cost": 0,
-    "min_duration": 6000,
-    "max_duration": 78000,
-    "duration_increment": 7200
   },
   {
     "id": "92_sword_item_empower",
@@ -1636,20 +1038,6 @@
     "spells_learned": [ [ "92_big_summon", 1 ], [ "92_evaporize", 1 ] ]
   },
   {
-    "type": "enchantment",
-    "id": "EGO_92_stage_4_ench1",
-    "has": "WIELD",
-    "condition": "ALWAYS",
-    "hit_you_effect": [ { "id": "92_sword_strike2" } ]
-  },
-  {
-    "type": "enchantment",
-    "id": "EGO_92_stage_4_ench2",
-    "has": "WIELD",
-    "condition": { "not": { "u_has_effect": "cinders", "intensity": 10 } },
-    "hit_you_effect": [ { "id": "cinder_stack", "hit_self": true, "once_in": 3 } ]
-  },
-  {
     "id": "92_sword_strike2",
     "type": "SPELL",
     "name": "9:2 strike stage 4 sword",
@@ -1682,15 +1070,15 @@
     "name": "[ט] EGO 9:2 - Summon armor",
     "description": "Call forth the armor of a True Prophet.",
     "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_armor_hook_eoc_3",
+    "effect": "spawn_item",
+    "effect_str": "92_armor_empower_item",
     "shape": "blast",
     "min_range": 0,
     "max_range": 0,
     "min_aoe": 0,
     "max_aoe": 0,
-    "min_duration": 200,
-    "max_duration": 200,
+    "min_duration": { "math": [ "6000 + 7200 * u_spell_level('EGO_92_invoke')" ] },
+    "max_duration": 78000,
     "base_casting_time": 80,
     "final_casting_time": 80,
     "spell_class": "EGO_92",
@@ -1700,39 +1088,6 @@
     "difficulty": 0,
     "max_level": 1,
     "flags": [ "SILENT", "NO_ARMS", "NO_FAIL", "NO_HANDS" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_armor_hook_eoc_3",
-    "effect": [
-      { "u_cast_spell": { "id": "92_armor_empower", "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } } },
-      {
-        "message": "The flame envelopes you, but it does not burn, after which the armor of the Prophet materialized on you.",
-        "type": "bad"
-      }
-    ]
-  },
-  {
-    "id": "92_armor_empower",
-    "type": "SPELL",
-    "name": "9:2 armor summon true",
-    "description": " technical desc",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT" ],
-    "min_damage": 1,
-    "max_damage": 1,
-    "effect": "spawn_item",
-    "effect_str": "92_armor_empower_item",
-    "shape": "blast",
-    "energy_source": "NONE",
-    "spell_class": "EGO_92",
-    "difficulty": 0,
-    "max_level": 10,
-    "base_casting_time": 80,
-    "base_energy_cost": 0,
-    "min_duration": 6000,
-    "max_duration": 78000,
-    "duration_increment": 7200
   },
   {
     "id": "92_armor_empower_item",
@@ -1757,11 +1112,11 @@
         "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
       }
     ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_4_ench_armor" } ] }
+    "relic_data": { "passive_effects": [ { "id": "EGO_92_invoke_ench_armor" } ] }
   },
   {
     "type": "enchantment",
-    "id": "EGO_92_stage_4_ench_armor",
+    "id": "EGO_92_invoke_ench_armor",
     "has": "WORN",
     "condition": "ALWAYS",
     "values": [
@@ -1792,57 +1147,16 @@
   {
     "id": "92_strike_hook_4",
     "type": "SPELL",
-    "name": "9:2 strike hook",
-    "description": "Hook to use levels of 9:2 ego in strike",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "effect_on_condition",
-    "effect_str": "92_hook_4",
-    "shape": "blast",
-    "min_range": 1,
-    "max_range": 1,
-    "min_aoe": 0,
-    "max_aoe": 0,
-    "min_duration": 600,
-    "max_duration": 6000,
-    "duration_increment": 600,
-    "base_casting_time": 200,
-    "final_casting_time": 50,
-    "casting_time_increment": -15,
-    "spell_class": "EGO_92",
-    "base_energy_cost": 3000,
-    "final_energy_cost": 500,
-    "energy_increment": -50,
-    "energy_source": "STAMINA",
-    "difficulty": 4,
-    "max_level": 10,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "92_hook_4",
-    "effect": [
-      {
-        "u_cast_spell": { "id": "92_hyper_strike", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_4')" ] } }
-      },
-      { "message": "FFASHH", "type": "bad" }
-    ]
-  },
-  {
-    "id": "92_hyper_strike",
-    "type": "SPELL",
     "name": "[ט] EGO 9:2 strike stage 4",
     "description": " desc",
     "effect": "attack",
     "shape": "blast",
     "valid_targets": [ "ally", "hostile" ],
     "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS", "NO_EXPLOSION_SFX" ],
-    "max_level": 10,
-    "min_damage": 2,
+    "min_damage": { "math": [ "2 + 2 * u_spell_level('EGO_92_invoke')" ] },
     "max_damage": 15,
-    "damage_increment": 2,
-    "min_pierce": 5,
+    "min_pierce": { "math": [ "5 + 5 * u_spell_level('EGO_92_invoke')" ] },
     "max_pierce": 20,
-    "pierce_increment": 5,
     "min_range": 1,
     "max_range": 1,
     "range_increment": 0,
@@ -1850,12 +1164,12 @@
     "min_aoe": 1,
     "max_aoe": 1,
     "spell_class": "EGO_92",
-    "base_casting_time": 200,
+    "base_casting_time": { "math": [ "200 - 5 * u_spell_level('EGO_92_invoke')" ] },
     "final_casting_time": 100,
-    "casting_time_increment": -5,
     "base_energy_cost": 140,
     "damage_type": "heat",
     "sound_description": "fush",
+    "message": "FFASHH",
     "energy_source": "STAMINA"
   },
   {
@@ -2048,14 +1362,14 @@
   {
     "type": "effect_on_condition",
     "id": "92_longing_eoc",
-    "effect": [ { "u_cast_spell": { "id": "92_longing_explosion", "min_level": { "math": [ "n_spell_level('EGO_92_stage_4')" ] } } } ]
+    "effect": [ { "u_cast_spell": { "id": "92_longing_explosion", "min_level": { "math": [ "n_spell_level('EGO_92_invoke')" ] } } } ]
   },
   {
     "type": "effect_on_condition",
     "id": "92_knowledge_eoc",
     "condition": { "math": [ "u_effect_intensity('92_knowledge_effect')", "==", "3" ] },
     "effect": [
-      { "npc_cast_spell": { "id": "92_knowledge_spell", "min_level": { "math": [ "n_spell_level('EGO_92_stage_4')" ] } } },
+      { "npc_cast_spell": { "id": "92_knowledge_spell", "min_level": { "math": [ "n_spell_level('EGO_92_invoke')" ] } } },
       { "u_lose_effect": "92_knowledge_effect" }
     ],
     "false_effect": [ { "u_add_effect": "92_knowledge_effect", "duration": "1 minutes" } ]
@@ -2115,8 +1429,8 @@
     "max_duration": 500,
     "max_level": 1,
     "difficulty": -11,
-    "base_casting_time": { "math": [ "150 / u_spell_level('EGO_92_stage_4')" ] },
-    "base_energy_cost": { "math": [ "2500 - 150 * u_spell_level('EGO_92_stage_4')" ] },
+    "base_casting_time": { "math": [ "150 / u_spell_level('EGO_92_invoke')" ] },
+    "base_energy_cost": { "math": [ "2500 - 150 * u_spell_level('EGO_92_invoke')" ] },
     "energy_source": "STAMINA",
     "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_AOE", "RANDOM_DURATION" ]
   },
@@ -2135,7 +1449,7 @@
     "max_aoe": 0,
     "min_duration": 1000,
     "max_duration": 1000,
-    "base_casting_time": { "math": [ "200 / u_spell_level('EGO_92_stage_4')" ] },
+    "base_casting_time": { "math": [ "200 / u_spell_level('EGO_92_invoke')" ] },
     "final_casting_time": 50,
     "casting_time_increment": -15,
     "spell_class": "EGO_92",
@@ -2171,7 +1485,7 @@
     "max_aoe": { "math": [ "1 + (u_monsters_nearby('mon_candle_allied', 'radius': 60, 'attitude': 'friendly') / 2)" ] },
     "min_damage": { "math": [ "9 * u_monsters_nearby('mon_candle_allied', 'radius': 60, 'attitude': 'friendly')" ] },
     "max_damage": { "math": [ "9 * u_monsters_nearby('mon_candle_allied', 'radius': 60, 'attitude': 'friendly')" ] },
-    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_stage_4')" ] },
+    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_invoke')" ] },
     "final_casting_time": 50,
     "casting_time_increment": -15,
     "spell_class": "EGO_92",
@@ -2193,9 +1507,9 @@
     "effect": "effect_on_condition",
     "effect_str": "92_gaze_explode_eoc",
     "shape": "blast",
-    "min_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
-    "max_range": { "math": [ "u_spell_level('EGO_92_stage_4') * 3.5" ] },
-    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_stage_4')" ] },
+    "min_range": { "math": [ "u_spell_level('EGO_92_invoke') * 3.5" ] },
+    "max_range": { "math": [ "u_spell_level('EGO_92_invoke') * 3.5" ] },
+    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_invoke')" ] },
     "final_casting_time": 50,
     "casting_time_increment": -15,
     "spell_class": "EGO_92",
@@ -2264,8 +1578,8 @@
     "max_duration": 500,
     "max_level": 1,
     "difficulty": -11,
-    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_stage_4')" ] },
-    "base_energy_cost": { "math": [ "3000 / u_spell_level('EGO_92_stage_4')" ] },
+    "base_casting_time": { "math": [ "300 - 25 * u_spell_level('EGO_92_invoke')" ] },
+    "base_energy_cost": { "math": [ "3000 / u_spell_level('EGO_92_invoke')" ] },
     "energy_source": "STAMINA",
     "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_AOE", "RANDOM_DURATION" ]
   },
