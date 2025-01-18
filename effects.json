@@ -93,10 +93,6 @@
     "id": "EGO_CD",
     "name": [ "Cool down of EGO" ],
     "desc": [ "Your EGO is on cooldown!" ],
-    "max_intensity": 1,
-    "rating": "bad",
-    "show_in_info": true,
-    "base_mods": {  },
-    "scaling_mods": {  }
+    "flags": [ "EGO_COOLDOWN" ]
   }
 ]

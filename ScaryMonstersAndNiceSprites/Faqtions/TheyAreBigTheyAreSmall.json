@@ -108,5 +108,69 @@
     ],
     "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
     "description": "The main forces of L Corporation that survived the zero day. Despite all the adversities, they are well dressed and seem to be well-fed, nevertheless, in their eyes one can read despair and weariness from life.\n\nFace the fear\nBuild the future "
+  },
+  {
+    "type": "faction",
+    "id": "hhpp",
+    "name": "HamHamPangPang",
+    "likes_u": 0,
+    "respects_u": 0,
+    "trusts_u": 10,
+    "known_by_u": false,
+    "size": 200,
+    "power": 0,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "wealth": 5000,
+    "currency": "pm_money",
+    "price_rules": [
+      { "item": "pm_money", "fixed_adj": 0 },
+      { "item": "pm_money_10", "fixed_adj": 0 },
+      { "item": "pm_money_1", "fixed_adj": 0 },
+      { "item": "pm_money_100", "fixed_adj": 0 }
+    ],
+    "description": "A local restaraunt chain who's clientel is mostly fixers of various levels, their reknown lends them unusual strength for a sandwich place."
+  },
+  {
+    "type": "faction",
+    "id": "streetlight",
+    "name": "Streetlight Office",
+    "likes_u": 0,
+    "respects_u": 0,
+    "trusts_u": 5,
+    "known_by_u": false,
+    "size": 8,
+    "power": 0,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "wealth": 5000,
+    "currency": "pm_money",
+    "price_rules": [
+      { "item": "pm_money", "fixed_adj": 0 },
+      { "item": "pm_money_10", "fixed_adj": 0 },
+      { "item": "pm_money_1", "fixed_adj": 0 },
+      { "item": "pm_money_100", "fixed_adj": 0 }
+    ],
+    "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
+    "description": "A small fixer's office, known for taking on some lower ranking tasks and its positive outlook."
+  },
+  {
+    "type": "faction",
+    "id": "pierre",
+    "name": "Pierre's Bistro",
+    "likes_u": 0,
+    "respects_u": 0,
+    "trusts_u": 0,
+    "known_by_u": false,
+    "size": 4,
+    "power": 0,
+    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "wealth": 5000,
+    "currency": "pm_money",
+    "price_rules": [
+      { "item": "pm_money", "fixed_adj": 0 },
+      { "item": "pm_money_10", "fixed_adj": 0 },
+      { "item": "pm_money_1", "fixed_adj": 0 },
+      { "item": "pm_money_100", "fixed_adj": 0 }
+    ],
+    "description": "A bistro, known for operating in a sector of the city that frowns less on certain taboos while cooking. After all, food must come from somewhere, and if it's tasty enough, well.."
   }
 ]

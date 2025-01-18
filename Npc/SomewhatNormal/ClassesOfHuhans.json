@@ -688,7 +688,7 @@
     "worn_override": "Kr_worn",
     "carry_override": "Walter_carry",
     "weapon_override": "Kr_weapon",
-    "traits": [ [ "SKIN_LIGHT", 100 ], { "group": "Appearance_demographics" }, { "group": "Hair_Any" } ],
+    "traits": [ [ "SKIN_LIGHT", 100 ], { "group": "Appearance_demographics" }, { "group": "Hair_Any" }, { "trait": "RETURN_TO_START_POS" } ],
     "bionics": [  ]
   },
   {

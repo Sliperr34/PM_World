@@ -343,6 +343,12 @@
     "entries": [ { "item": "file", "prob": 100 } ]
   },
   {
+    "id": "unarmed",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [  ]
+  },
+  {
     "id": "zw_food_shop1",
     "type": "item_group",
     "//": "raw food",
@@ -526,6 +532,106 @@
       { "item": "pm_money_1", "count-min": 25, "count-max": 100, "prob": 100 },
       { "item": "pm_money_100", "count-min": 10, "count-max": 25, "prob": 100 },
       { "item": "pm_money", "count-min": 15, "count-max": 50, "prob": 100 }
+    ]
+  },
+  {
+    "id": "hhpp_employee",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+      { "item": "pm_tie_necktie" },
+      { "item": "socks" },
+      { "item": "pants" },
+      { "item": "pm_brown_shoes" }
+    ]
+  },
+  {
+    "id": "mars_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+      { "item": "pm_tie_necktie" },
+      { "item": "gloves_tactical" },
+      { "item": "socks" },
+      { "item": "kevlar" },
+      { "item": "pants" },
+      { "item": "pm_brown_shoes" }
+    ]
+  },
+  {
+    "id": "lulu_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "coat_fur" },
+      { "item": "turtleneck" },
+      { "item": "gloves_tactical" },
+      { "item": "socks" },
+      { "item": "boots_combat" },
+      { "item": "kevlar" },
+      { "item": "kr_trouses" }
+    ]
+  },
+  {
+    "id": "pierre_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+      { "item": "jacket_chef" },
+      { "item": "socks" },
+      { "item": "kevlar" },
+      { "item": "technician_pants_gray" },
+      { "item": "pm_brown_shoes" }
+    ]
+  },
+  {
+    "id": "jack_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+      { "item": "jacket_chef" },
+      { "item": "apron_leather" },
+      { "item": "socks" },
+      { "item": "kevlar" },
+      { "item": "technician_pants_gray" },
+      { "item": "gloves_leather" },
+      { "item": "boots_steel" }
+    ]
+  },
+  {
+    "id": "pierre_weapon",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "knife_large", "prob": 100 } ]
+  },
+  {
+    "id": "jack_weapon",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "knife_huge", "prob": 100 } ]
+  },
+  {
+    "id": "hhpp_food_shop",
+    "type": "item_group",
+    "//": "Food",
+    "subtype": "collection",
+    "entries": [
+      { "item": "zerocola", "count-min": 2, "count-max": 5, "prob": 80 },
+      { "item": "cola", "count-min": 2, "count-max": 6, "prob": 50 },
+      { "item": "sports_drink", "count-min": 2, "count-max": 6, "prob": 65 },
+      { "item": "cherry_wellcheers", "count-min": 1, "count-max": 3, "prob": 20 },
+      { "item": "grape_wellcheers", "count-min": 1, "count-max": 3, "prob": 20 },
+      { "item": "wellcheers", "count-min": 2, "count-max": 6, "prob": 35 },
+      { "item": "deluxe_fried_egg_sandwich", "count-min": 1, "count-max": 3, "prob": 50 },
+      { "item": "fish_sandwich", "count-min": 1, "count-max": 2, "prob": 50 },
+      { "item": "sandwich_deluxe", "count-min": 1, "count-max": 4, "prob": 100 },
+      { "item": "sandwich_sauce", "count-min": 1, "count-max": 6, "prob": 50 },
+      { "item": "choc_drink", "count-min": 2, "count-max": 8, "prob": 33 },
+      { "item": "fruit_pancakes", "count-min": 2, "count-max": 8, "prob": 5 }
     ]
   }
 ]

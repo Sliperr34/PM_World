@@ -79,7 +79,7 @@
     "type": "item_group",
     "id": "vending_drink_items",
     "copy-from": "vending_drink_items",
-    "extend": { "items": [ [ "wellcheers", 15 ], [ "cherry_wellcheers", 15 ], [ "grape_wellcheers", 15 ] ] }
+    "extend": { "items": [ [ "wellcheers", 25 ], [ "cherry_wellcheers", 25 ], [ "grape_wellcheers", 20 ] ] }
   },
   {
     "type": "item_group",
@@ -107,15 +107,15 @@
   },
   {
     "type": "item_group",
-    "id": "lab_bookshelves",
-    "copy-from": "lab_bookshelves",
+    "id": "manuals",
+    "copy-from": "manuals",
     "extend": {
       "items": [
-        { "item": "resjournalrisk", "prob": 3 },
-        { "item": "resjournalego", "prob": 3 },
-        { "item": "resjournaldistortion", "prob": 3 },
-        { "item": "resjournalabnormality", "prob": 3 },
-        { "item": "resjournalenk", "prob": 5 }
+        { "item": "resjournalrisk", "prob": 30 },
+        { "item": "resjournalego", "prob": 30 },
+        { "item": "resjournaldistortion", "prob": 30 },
+        { "item": "resjournalabnormality", "prob": 30 },
+        { "item": "resjournalenk", "prob": 50 }
       ]
     }
   },
@@ -130,5 +130,12 @@
     "type": "item_group",
     "subtype": "collection",
     "entries": [ { "item": "prawn_wellcheers", "count": [ 1, 1 ], "prob": 80 } ]
+  },
+  {
+    "id": "SUS_junk_drawer",
+    "type": "item_group",
+    "subtype": "collection",
+    "copy-from": "SUS_junk_drawer",
+    "extend": { "entries": [ { "item": "zweiflyer_item", "prob": 12 } ] }
   }
 ]
