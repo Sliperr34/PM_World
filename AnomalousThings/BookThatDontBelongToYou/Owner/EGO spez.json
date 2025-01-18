@@ -18,6 +18,7 @@
     "effect": "effect_on_condition",
     "effect_str": "92_stage_1_activation",
     "shape": "blast",
+    "magic_type": "EGO_Invocation",
     "min_aoe": 0,
     "max_aoe": 0,
     "min_duration": { "math": ["600 + (600 * (u_spell_level('EGO_92')^2))"] },
