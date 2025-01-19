@@ -10,9 +10,10 @@
     "mission": 7,
     "age": 24,
     "height": 173,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_MARS",
     "personality": { "aggression": 0, "bravery": 10, "collector": 0, "altruism": 5 },
-    "faction": "streetlight"
+    "faction": "streetlight",
+    "mission_offered": "MISSION_FIND_CAKE"
   },
   {
     "type": "npc",
@@ -25,7 +26,7 @@
     "mission": 7,
     "age": 24,
     "height": 154,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_LULU",
     "personality": { "aggression": 0, "bravery": 10, "collector": 0, "altruism": 10 },
     "faction": "streetlight"
   }

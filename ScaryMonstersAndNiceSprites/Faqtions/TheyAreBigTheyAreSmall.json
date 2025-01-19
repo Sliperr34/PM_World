@@ -149,7 +149,7 @@
       { "item": "pm_money_1", "fixed_adj": 0 },
       { "item": "pm_money_100", "fixed_adj": 0 }
     ],
-    "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
+    "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true }, "hhpp": { "watch your back": true, "guard your stuff": true } },
     "description": "A small fixer's office, known for taking on some lower ranking tasks and its positive outlook."
   },
   {
@@ -171,6 +171,7 @@
       { "item": "pm_money_1", "fixed_adj": 0 },
       { "item": "pm_money_100", "fixed_adj": 0 }
     ],
+    "relations": { "hhpp": { "watch your back": true, "guard your stuff": true } },
     "description": "A bistro, known for operating in a sector of the city that frowns less on certain taboos while cooking. After all, food must come from somewhere, and if it's tasty enough, well.."
   }
 ]

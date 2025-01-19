@@ -1,0 +1,115 @@
+[
+  {
+    "id": "MISSION_FIND_CAKE",
+    "type": "mission_definition",
+    "name": "Placating Lulu",
+    "description": "Find a cake to placate Mar's associate.",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 0,
+    "item": "cake2",
+    "count": 1,
+    "origins": [ "ORIGIN_ANY_NPC" ],
+    "followup": "MISSION_ASK_ZWEI",
+    "dialogue": {
+      "describe": "I really need that cake, or Lulu will never focus on work.",
+      "offer": "I know it's an odd request, but if you want to prove yourself, can you bring us a cake? Lulu won't shut up about me dropping one. Consider it training in diplomacy..",
+      "accepted": "Thanks, please make sure it's not rotten, I know how food is here lately.",
+      "rejected": "Yeah. Yeah, I wouldn't either.",
+      "advice": "Plenty of sugar shacks around here, one might have one, if you can't bake them.",
+      "inquire": "Not being the easiest to find?",
+      "success": "Oh, thank.. Honestly, thank you.",
+      "success_lie": "Thanks for trying… I guess.",
+      "failure": "Was finding a cake really that hard?"
+    },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 5 } ] }
+  },
+  {
+    "id": "MISSION_ASK_ZWEI",
+    "type": "mission_definition",
+    "name": { "str": "Ask Zwei about the current situation" },
+    "description": "Learn about the current situation from Zwei, and relay it to Mars.",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": { "compare_string": [ "yes", { "u_val": "u_learned_zwei" } ] },
+    "difficulty": 2,
+    "value": 5,
+    "start": {
+      "assign_mission_target": { "om_terrain": "zwei_office0", "om_special": "Zwei_main_office", "random": false },
+      "effect": [
+        { "u_add_var": "u_mars_zwei", "value": "yes" }
+      ]
+    },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 15 } ] },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_RECRUIT_FIXER",
+    "dialogue": {
+      "describe": "At the moment we don't have all the details of what's going on, we could really do with guidance from Zwei.",
+      "offer": "If you're free, this might be useful for you too. We could do with a run down of what's happening outside, the zombies and where they're coming from. If you could head to Zwei and ask them for a rundown, then we'd both benefit.",
+      "accepted": "Excellent, we'll be here when you get back.",
+      "rejected": "Fair enough, we'll sort it when we can.",
+      "advice": "You might want to speak to Heyri, she tends to be on top of these things.",
+      "inquire": "Have you asked them?",
+      "success": "Well, that's worrying, but I'm sure it's in hand. The higher level offices are terrifying in their own right.",
+      "success_lie": "Uh, what?",
+      "failure": "Okay, we'll check with them later."
+    }
+  },
+  {
+    "id": "MISSION_RECRUIT_FIXER",
+    "type": "mission_definition",
+    "name": { "str": "Recruit Fixer" },
+    "description": "Go to the cabin in the woods and recruit the down on their luck fixer.",
+    "goal": "MGOAL_RECRUIT_NPC",
+    "difficulty": 5,
+    "value": 70000,
+    "start": {
+      "assign_mission_target": { "om_terrain": "cabin", "om_special": "Cabin", "reveal_radius": 2 },
+      "effect": "follow",
+      "update_mapgen": { "place_npcs": [ { "class": "RANK_8_FIXER", "x": 11, "y": 11, "target": true } ] }
+    },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_100", "count": 2 } ] },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_KILL_PECCA_STREETLIGHT",
+    "dialogue": {
+      "describe": "You need someonw to watch your back.",
+      "offer": "Well, if you're this insistant in helping out fixers, I can't in good faith keep sending you out without someone to watch your back. I've a possible solution, I know a fixer that's been really down on their luck lately, maybe if you recruit them, then that'll at least put my worries at rest.",
+      "accepted": "Good luck out there!",
+      "rejected": "Alright, but I can't offer you anything else until I'm sure you'll not end up another corpse.",
+      "advice": "Not much I can advise here. Be nice?",
+      "inquire": "Found them yet?",
+      "success": "Great! One less thing to worry about.",
+      "success_lie": "I don't think so…",
+      "failure": "Really?"
+    }
+  },
+  {
+    "id": "MISSION_KILL_PECCA_STREETLIGHT",
+    "type": "mission_definition",
+    "name": "Helping Streetlight",
+    "description": "Find the monsters at the location, and kill them.",
+    "goal": "MGOAL_KILL_MONSTER_SPEC",
+    "difficulty": 2,
+    "value": 5000,
+    "monster_species": "PECCATULA",
+    "monster_kill_goal": 2,
+    "invisible_on_complete": false,
+    "start": {
+      "assign_mission_target": { "om_terrain": "forest", "random": true, "search_range": 60, "min_distance": 8, "z": 0 },
+      "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 6, "target": true } ] }
+    },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_100", "count": 2 } ] },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_KILL_PECCA_STREETLIGHT",
+    "dialogue": {
+      "describe": "We need you to eliminate the threat.",
+      "offer": "We've spotted some distortions in the forest, kill them and we'll pay you.",
+      "accepted": "Let us know the good news!",
+      "rejected": "No worries, come back when you're feeling ready.",
+      "advice": "I recommend making sure you have some decent gear, and a friend to watch your back. They aren't strong distortions, but they can kill the unprepared with ease.",
+      "inquire": "Managed to beat them yet?",
+      "success": "That's one less area to worry about, thanks. Here.",
+      "success_lie": "...",
+      "failure": "Well, we can sweep by that area later."
+    }
+  }
+]

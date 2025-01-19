@@ -1,0 +1,104 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_LULU",
+    "dynamic_line": {
+      "compare_string": [ "yes", { "u_val": "u_met_lulu" } ],
+      "yes": [ "Oh! Hey! Back already?", "Hi!" ],
+      "no": "You dropped my cake! And you're just gonna do nothing about it, just like.. Let me go without cake!"
+    },
+    "responses": [
+      {
+        "text": "Uh, am I interrupting?",
+        "topic": "TALK_LULU_EXPLAIN",
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_lulu" } ] } },
+        "effect": { "u_add_var": "u_met_lulu", "value": "yes" }
+      },
+      {
+        "text": "*Back away*",
+        "topic": "TALK_DONE",
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_lulu" } ] } },
+        "effect": { "u_add_var": "u_met_lulu", "value": "yes" }
+      },
+      {
+        "text": "I'll catch you around.",
+        "topic": "TALK_DONE",
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_lulu" } ] } 
+      },
+      { 
+        "text": "So you're part of a fixer's office?", 
+        "topic": "TALK_LULU_OFFICE", 
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_lulu" } ] } 
+      },
+      { 
+        "text": "Can I do anything for you?", 
+        "topic": "TALK_MISSION_LULU", 
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_lulu" } ] } 
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_LULU_EXPLAIN",
+    "dynamic_line": "You're not interrupting anything, other than a despot refusing to replace well earned cake!",
+    "responses": [
+      {
+        "text": "I see..",
+        "topic": "TALK_LULU"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MISSION_LULU",
+    "dynamic_line": "Ask Mars about that, he keeps on top of it. If you're willing to lend a hand though, I'm sure we can find something. Ever since San went missing we've been snowed under. Just hope he's still out there, y'know?",
+    "responses": [
+      {
+        "text": "Who's San?",
+        "topic": "TALK_LULU_SAN"
+      },
+      {
+        "text": "Sorry to hear that.",
+        "topic": "TALK_LULU"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_LULU_SAN",
+    "dynamic_line": "San was the founder of our office. Honestly, we wouldn't be in such a mess if he was still here. Mars is doing his best, but it's weighing on him picking up the slack. I'm just worried, San can take care of himself but it's been so long since we've seen him. Anything can happen in the city.. He was always our anchor. Kind of. Balanced the both of us out.",
+    "responses": [
+      {
+        "text": "Hope you find him soon.",
+        "topic": "TALK_LULU"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_LULU_OFFICE",
+    "dynamic_line": "Sure, it's not all glamour, but if you're trying to make your way in the backstreets, it's really either that, or joining a syndicate. We wanted to change our neighbourhood, though.. It's not easy, the things we have to do.. Anyway! Yeah we'll be taking on contracts soon again, hopefully we can raise our offices grade soon!",
+    "responses": [
+      {
+        "text": "Good luck with that!",
+        "topic": "TALK_LULU"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

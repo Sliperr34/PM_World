@@ -633,5 +633,16 @@
       { "item": "choc_drink", "count-min": 2, "count-max": 8, "prob": 33 },
       { "item": "fruit_pancakes", "count-min": 2, "count-max": 8, "prob": 5 }
     ]
+  },
+  {
+    "id": "jack_carry",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_money_10", "count-min": 4, "count-max": 8, "prob": 80 },
+      { "item": "pm_money_1", "count-min": 12, "count-max": 20, "prob": 80 },
+      { "item": "pm_money_100", "count-min": 1, "count-max": 2, "prob": 80 },
+      { "item": "pm_money", "count-min": 5, "count-max": 10, "prob": 80 }
+    ]
   }
 ]

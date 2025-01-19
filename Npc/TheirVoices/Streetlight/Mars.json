@@ -1,0 +1,99 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARS",
+    "dynamic_line": {
+      "compare_string": [ "yes", { "u_val": "u_met_mars" } ],
+      "yes": [ "Hey.", "What's up?" ],
+      "no": "Lulu I told you, we can just get anoth-- Oh, hey, you needing something?"
+    },
+    "responses": [
+      {
+        "text": "Just looking around, did I interrupt you?",
+        "topic": "TALK_MARS_EXPLAIN",
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } },
+        "effect": { "u_add_var": "u_met_mars", "value": "yes" }
+      },
+      {
+        "text": "Sorry, didn't mean to interrupt! I'll be going.",
+        "topic": "TALK_DONE",
+        "condition": { "not": { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } },
+        "effect": { "u_add_var": "u_met_mars", "value": "yes" }
+      },
+      {
+        "text": "I'll catch you around.",
+        "topic": "TALK_DONE",
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } 
+      },
+      { 
+        "text": "What's the Streetlight Office exactly?", 
+        "topic": "TALK_MARS_OFFICE", 
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } 
+      },
+      { 
+        "text": "Can I do anything for you?", 
+        "topic": "TALK_MISSION_LIST", 
+        "condition": { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } 
+      },
+      { 
+        "text": "About the mission…", 
+        "topic": "TALK_MISSION_INQUIRE", 
+        "condition": { "and": [ "has_assigned_mission",  { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } ] } 
+      },
+      {
+        "text": "About one of those missions…",
+        "topic": "TALK_MISSION_LIST_ASSIGNED",
+        "condition": { "and": [ "has_many_assigned_missions", { "compare_string": [ "yes", { "u_val": "u_met_mars" } ] } ] }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARS_EXPLAIN",
+    "dynamic_line": "No, no, it's nothing important. I'm Mars, a fixer from the Streetlight Office, and this angry one is Lulu, my associate. If you run into any problems, you can let our office know. At least, when we're off our lunch break.",
+    "responses": [
+      {
+        "text": "It's nice to meet you both.",
+        "topic": "TALK_MARS"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARS_OFFICE",
+    "dynamic_line": "Our office is named after a streetlight, because it's the thing that protects against the encroaching darkness. Well, that was the idea, cheesy, I know. Have you talked to Lulu? It was going to happen one way or another. Anyway, we're an office associated with the Zwei association and take on contracts to clear out distortions or threats most often. Though the current situation is a bit above our grade.",
+    "responses": [
+      {
+        "text": "Fair enough.",
+        "topic": "TALK_MARS"
+      },
+      {
+        "text": "How many of you are there?",
+        "topic": "TALK_MARS_NUMBER"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_MARS_NUMBER",
+    "dynamic_line": "In the Streetlight Office, there are only three of us. You find most low grade offices tend to have pretty low numbers. There's me, Lulu and San, though San's been missing for a while now. Said something about a library, but that's not really much to go on.",
+    "responses": [
+      {
+        "text": "That sounds bad.",
+        "topic": "TALK_MARS"
+      },
+      {
+        "text": "Catch you both later.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

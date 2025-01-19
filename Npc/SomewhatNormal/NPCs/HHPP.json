@@ -17,7 +17,7 @@
     "class": "HHPP_CASHIER",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_CASHIER",
     "personality": { "aggression": 0, "bravery": -3, "collector": 0, "altruism": 5 },
     "faction": "hhpp"
   }
