@@ -26,6 +26,12 @@
         "condition": { "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ] }
       },
       {
+        "text": "Mars sent me to get a rundown of the current 'situation'.",
+        "topic": "TALK_ZW_SITUATION",
+        "condition": { "and": [ { "compare_string": [ "yes", { "u_val": "u_met_Heyri_general_meeting" } ] }, { "compare_string": [ "yes", { "u_val": "u_mars_zwei" } ] } ] },
+        "effect": { "u_add_var": "u_learned_zwei", "value": "yes" }
+      },
+      {
         "text": "Hey. What can I do for you?",
         "topic": "TALK_NONE",
         "condition": { "compare_string": [ "yes", { "u_val": "u_gained_trust_general_meeting" } ] }
@@ -126,6 +132,49 @@
     "responses": [
       { "text": "Yeah, let me see.", "effect": "start_trade", "topic": "TALK_DONE" },
       { "text": "Nope.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ZW_SITUATION",
+    "type": "talk_topic",
+    "dynamic_line": "To get a rundown? Well, we don't usually share such information with someone who isn't a high rank fixer, however, Mars is right this time. Though even we don't have all the details currently. What we do know is that two Aleph-level threats have been unleashed, causing destruction on a massive scale. Even the world has been warped by the effects, even the colours have been mobilised to deal with them, though it appears subduing the threats is taking more time than expected.",
+    "responses": [
+      { "text": "What are these threats exactly?", "topic": "TALK_ZW_SITUATION_THREATS" }
+    ]
+  },
+  {
+    "id": "TALK_ZW_SITUATION_THREATS",
+    "type": "talk_topic",
+    "dynamic_line": "The two main threats that have been identified have been nicknamed 'The Blob', and 'The Rift', and between them there are a number of other threats that appear to have come around as a result of these both. Which do you want to know about?",
+    "responses": [
+      { "text": "The Blob.", "topic": "TALK_ZW_SITUATION_THREATS_BLOB" },
+      { "text": "The Rift.", "topic": "TALK_ZW_SITUATION_THREATS_RIFT" },
+      { "text": "When you say colours are dealing with this, how exactly?", "topic": "TALK_ZW_SITUATION_THREATS_COLOURS" },
+      { "text": "Nope, that's all, I'm good!", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "id": "TALK_ZW_SITUATION_THREATS_BLOB",
+    "type": "talk_topic",
+    "dynamic_line": "The Blob appears to be the biggest threat here, it's able to animate dead matter, creating a phenomena not dissimilar to zombies. Don't be fooled, though, they are not the same. The Blob constantly tries to adapt, improving the dead beyond sensibility and we've had reports of corpses being twisted into even hulks twice the size of humans and far more resilient, challenging for even Grade 5 fixers. There seems to be no end of this evolution, and some of our informants suspect the Blob might hold some measure of intelligence, adapting to better consume the world it has found itself in.",
+    "responses": [
+      { "text": "Back to the other topics..", "topic": "TALK_ZW_SITUATION_THREATS" }
+    ]
+  },
+  {
+    "id": "TALK_ZW_SITUATION_THREATS_RIFT",
+    "type": "talk_topic",
+    "dynamic_line": "This one is more problematic in the long run, the rift is simply another reality, one that appears to be encroaching on ours and letting its denizens run amock. Flaming eyes that disable people with just a look, eternally shifting creatures, they're not truly more dangerous than the monsters in the outskirts, the worry is that the frequency of their appearances may continue to increase if we don't stop it at the source.",
+    "responses": [
+      { "text": "Back to the other topics..", "topic": "TALK_ZW_SITUATION_THREATS" }
+    ]
+  },
+  {
+    "id": "TALK_ZW_SITUATION_THREATS_COLOURS",
+    "type": "talk_topic",
+    "dynamic_line": "The colours are fixers who have proven themselves far beyond even rank one fixers. They are all honestly monsters in their own right, capable of feats so far beyond imagining to any but the corps, or the head, really. As scary as the situation may seem, it's nothing compared to them. Sadly, we aren't at liberty to discuss their movements, nor do we really know them.",
+    "responses": [
+      { "text": "Back to the other topics..", "topic": "TALK_ZW_SITUATION_THREATS" }
     ]
   }
 ]

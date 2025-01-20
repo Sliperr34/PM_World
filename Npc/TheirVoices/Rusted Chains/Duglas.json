@@ -106,7 +106,7 @@
     "difficulty": 2,
     "value": 60000,
     "start": {
-      "assign_mission_target": { "om_terrain": "hhpp1", "om_special": "hhpp", "reveal_radius": 2, "search_range": 1200 },
+      "assign_mission_target": { "om_terrain": "hhpp1", "om_special": "hhpp", "reveal_radius": 2 },
       "update_mapgen": { "place_npcs": [ { "class": "ryan_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] }
     },
     "origins": [ "ORIGIN_SECONDARY" ],

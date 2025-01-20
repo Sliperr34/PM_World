@@ -1,0 +1,27 @@
+[
+  {
+    "id": "EGO_Invocation",
+    "type": "magic_type",
+    "energy_source": "STAMINA",
+    "cannot_cast_flags": [ "EGO_COOLDOWN" ],
+    "cannot_cast_message": "EGO is currently on cooldown!",
+    "get_level_formula_id": "ego_get_level",
+    "exp_for_level_formula_id": "ego_for_level"
+  },
+  {
+    "type": "jmath_function",
+    "id": "ego_get_level",
+    "num_args": 1,
+    "return": "log(_0 / 1000) / log(1.1)"
+  },
+  {
+    "type": "jmath_function",
+    "id": "ego_for_level",
+    "num_args": 1,
+    "return": "1000 * (1.1^_0)"
+  },
+  {
+    "id": "EGO_COOLDOWN",
+    "type": "json_flag"
+  }
+]

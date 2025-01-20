@@ -75,7 +75,7 @@
     "item": "lc_documents",
     "invisible_on_complete": false,
     "start": {
-      "assign_mission_target": { "om_terrain": "lc_surface", "om_special": "Lob_corp", "reveal_radius": 0, "random": false, "search_range": 2400 },
+      "assign_mission_target": { "om_terrain": "lc_surface", "om_special": "Lob_corp", "reveal_radius": 0, "random": false },
       "update_mapgen": {
         "place_monster": [
           { "group": "PECCA_GENERAL", "x": [ 5, 20 ], "y": [ 13, 21 ], "repeat": [ 12, 28 ] },

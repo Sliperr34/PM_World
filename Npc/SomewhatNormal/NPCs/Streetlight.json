@@ -1,0 +1,33 @@
+[
+  {
+    "type": "npc",
+    "id": "mars_npc",
+    "name_unique": "Mars",
+    "name_suffix": "Streetlight Office",
+    "gender": "male",
+    "class": "STREET_MARS",
+    "attitude": 0,
+    "mission": 7,
+    "age": 24,
+    "height": 173,
+    "chat": "TALK_MARS",
+    "personality": { "aggression": 0, "bravery": 10, "collector": 0, "altruism": 5 },
+    "faction": "streetlight",
+    "mission_offered": "MISSION_FIND_CAKE"
+  },
+  {
+    "type": "npc",
+    "id": "lulu_npc",
+    "name_unique": "Lulu",
+    "name_suffix": "Streetlight Office",
+    "gender": "female",
+    "class": "STREET_LULU",
+    "attitude": 0,
+    "mission": 7,
+    "age": 24,
+    "height": 154,
+    "chat": "TALK_LULU",
+    "personality": { "aggression": 0, "bravery": 10, "collector": 0, "altruism": 10 },
+    "faction": "streetlight"
+  }
+]

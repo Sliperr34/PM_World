@@ -1,0 +1,32 @@
+[
+  {
+    "type": "npc",
+    "id": "pierre_npc",
+    "name_unique": "Pierre",
+    "name_suffix": "Pierre's Bistro",
+    "gender": "female",
+    "class": "PIERRE_PIERRE",
+    "attitude": 0,
+    "mission": 7,
+    "age": 34,
+    "height": 168,
+    "chat": "TALK_BLANK",
+    "personality": { "aggression": 0, "bravery": 5, "collector": 0, "altruism": -5 },
+    "faction": "pierre"
+  },
+  {
+    "type": "npc",
+    "id": "jack_npc",
+    "name_unique": "Jack",
+    "name_suffix": "Pierre's Bistro",
+    "gender": "male",
+    "class": "PIERRE_JACK",
+    "attitude": 0,
+    "mission": 7,
+    "age": 32,
+    "height": 190,
+    "chat": "TALK_BLANK",
+    "personality": { "aggression": 5, "bravery": 5, "collector": 0, "altruism": -10 },
+    "faction": "pierre"
+  }
+]

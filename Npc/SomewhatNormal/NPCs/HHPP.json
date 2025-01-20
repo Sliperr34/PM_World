@@ -1,0 +1,24 @@
+[
+  {
+    "type": "npc",
+    "id": "hhpp_npc",
+    "name_suffix": "A HamHamPangPang Employee",
+    "class": "HHPP_STAFF",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "personality": { "aggression": 0, "bravery": -5, "collector": 0, "altruism": 5 },
+    "faction": "hhpp"
+  },
+  {
+    "type": "npc",
+    "id": "hhpp_cash_npc",
+    "name_suffix": "A HamHamPangPang Cashier",
+    "class": "HHPP_CASHIER",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_CASHIER",
+    "personality": { "aggression": 0, "bravery": -3, "collector": 0, "altruism": 5 },
+    "faction": "hhpp"
+  }
+]

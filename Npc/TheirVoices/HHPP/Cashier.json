@@ -1,0 +1,71 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_CASHIER",
+    "dynamic_line": "Welcome to HamHamPangPang! How can I help you today?",
+    "responses": [
+      {
+        "text": "Yes, can I get a...?",
+        "effect": "start_trade",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "What is this place?",
+        "topic": "HHPP_EXPLANATION"
+      },
+      {
+        "text": "There's zombies outside, and you're selling sandwiches?",
+        "topic": "HHPP_ZOMBIES"
+      },
+      {
+        "text": "Ah, nevermind!",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "HHPP_EXPLANATION",
+    "dynamic_line": "Ah, well, at HamHamPangPang we sell premium quality sandwiches and drinks to all of the district, we've had some amazing reviews since setting up shop! Usually during the lunch rush there's pretty high demand for our deluxe sandwiches, I do recommend trying one. It goes pretty well with Wellcheers. Just make sure the can is sealed, yeah?",
+    "responses": [
+      {
+        "text": "Oh, alright, could I order a..?",
+        "topic": "START_TRADE"
+      },
+      {
+        "text": "So about..",
+        "topic": "TALK_CASHIER"
+      },
+      {
+        "text": "Wellcheers? What do you mean sealed?",
+        "topic": "HHPP_WELLCHEERS"
+      },
+      {
+        "text": "I need to be heading off, but thanks.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "HHPP_WELLCHEERS",
+    "dynamic_line": "It's a bit of a rumour, you know? That if you find an opened can, then someone might have laced it with sleeping drugs. They say people disappear pretty commonly that way. I wouldn't believe it, or be spreading that rumour, but there's something pretty odd about the drink. It's normal by all accounts, but no one quite knows where it came from, none of the districts are owning up to it. Some people think an independant group is making them and staying low so the corps don't notice.",
+    "responses": [
+      {
+        "text": "Interesting.",
+        "topic": "TALK_CASHIER"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "HHPP_ZOMBIES",
+    "dynamic_line": "I can't say that's much different to usual, there's always something going on. If not zombies, then it's some distortion running rampant. I mean, have you heard of the Crying Children? Appeared one day and laid waste to part of a nest! At least here we tend to serve a lot of Fixers, so I'd argue this is one of the safest places to be.",
+    "responses": [
+      {
+        "text": "I suppose so.",
+        "topic": "TALK_CASHIER"
+      }
+    ]
+  }
+]

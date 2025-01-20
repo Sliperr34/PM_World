@@ -18,6 +18,7 @@
     "effect": "effect_on_condition",
     "effect_str": "soda_activation",
     "shape": "blast",
+    "magic_type": "EGO_Invocation",
     "min_aoe": 0,
     "max_aoe": 0,
     "min_duration": { "math": ["600 + (400 * (u_spell_level('EGO_soda')^2))"] },
@@ -29,7 +30,6 @@
     "base_energy_cost": 3000,
     "final_energy_cost": 500,
     "energy_increment": -100,
-    "energy_source": "STAMINA",
     "difficulty": 3,
     "max_level": 30,
     "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
@@ -59,7 +59,7 @@
       { "run_eocs": "soda_chat" }
     ],
     "false_effect": [
-      { "u_message": "EGO on cooldown!", "type": "bad" },
+      { "u_message": "EGO on cooldown!..", "type": "bad" },
       { "math": [ "u_health() -= 1" ] },
       {
         "u_add_morale": "ego_morale",
@@ -235,8 +235,8 @@
     "looks_like": "can_drink",
     "symbol": "w",
     "color": "light_gray",
-    "price": 0,
-    "price_postapoc": 0,
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "bash", "amount": 6 } ],
     "relic_data": { "passive_effects": [ { "id": "can_throwing_ench" } ] },
@@ -295,8 +295,8 @@
     "looks_like": "can_drink",
     "symbol": "w",
     "color": "light_gray",
-    "price": 0,
-    "price_postapoc": 0,
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "bash", "amount": 8 } ],
     "relic_data": { "passive_effects": [ { "id": "can_throwing_ench_2" } ] },
@@ -359,8 +359,8 @@
     "weight": "600 g",
     "volume": "1500 ml",
     "ammo_type": "thrown",
-    "price": 0,
-    "price_postapoc": 0,
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
     "flags": [
       "TANGLE"
     ],
@@ -453,8 +453,8 @@
     "looks_like": "can_drink",
     "symbol": "w",
     "color": "light_gray",
-    "price": 0,
-    "price_postapoc": 0,
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "cut", "amount": 10 } ],
     "relic_data": { "passive_effects": [ { "id": "can_throwing_ench_3" } ] },
@@ -518,8 +518,8 @@
     "weight": "600 g",
     "volume": "1500 ml",
     "ammo_type": "thrown",
-    "price": 0,
-    "price_postapoc": 0,
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
     "flags": [
       "TANGLE"
     ],
@@ -643,9 +643,9 @@
   {
     "type": "effect_on_condition",
     "id": "soda_chat",
-    "recurrence": [ "10 turns", "80 turns" ],
-    "condition": { "u_has_trait": "EGO_soda_mutation_stage_2" },
-    "deactivate_condition": { "not": { "u_has_trait": "EGO_soda_mutation_stage_2" } },
+    "recurrence": [ "40 turns", "160 turns" ],
+    "condition": { "u_is_wearing": "EGO_soda_aura" },
+    "deactivate_condition": { "not": { "u_is_wearing": "EGO_soda_aura" } },
     "effect": [ 
       { 
         "switch": { "math": [ "u_spell_level('EGO_soda')" ] },

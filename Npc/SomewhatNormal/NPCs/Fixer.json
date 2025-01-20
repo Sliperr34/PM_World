@@ -1,0 +1,12 @@
+[
+  {
+    "type": "npc",
+    "id": "rank_8_npc",
+    "name_suffix": "A Grade 8 Fixer",
+    "class": "RANK_8_FIXER",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_BLANK",
+    "personality": { "aggression": 0, "bravery": 5, "collector": 0, "altruism": 5 }
+  }
+]
