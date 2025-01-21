@@ -1,0 +1,153 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE",
+    "dynamic_line": [ "Hey, tired of the awful food here too?", "I got recommended this place, to see if it matched up, but honestly, I'm dissapointed. They're not even experimenting!", "This place offends even the idea of cooking. Last time someone convinces me to check out a place like this..", "Not that it's their fault.. The cooks, they can only make what's on the menu.." ],
+    "responses": [
+      {
+        "text": "Hey, why are you sculking around back here?",
+        "topic": "TALK_PIERRE_SCULK"
+      },
+      {
+        "text": "Are you a chef?",
+        "topic": "TALK_PIERRE_CHEF"
+      },
+      { 
+        "text": "Can I do anything for you?", 
+        "topic": "TALK_MISSION_LIST"
+      },
+      { 
+        "text": "About what you asked…", 
+        "topic": "TALK_MISSION_INQUIRE", 
+        "condition": "has_assigned_mission"
+      },
+      { 
+        "text": "Could I try some of your cooking?", 
+        "topic": "TALK_PIERRE_COOKING", 
+        "condition": { "and": [ { "compare_string": [ "yes", { "u_val": "u_pierre_pleased" } ] }, { "not": { "compare_string": [ "yes", { "u_val": "u_pierre_tried_cooking" } ] } } ] }
+      },
+      {
+        "text": "I'll catch you around.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_SCULK",
+    "dynamic_line": "Sculking? I'm pacing. I came here looking for inspiration for our latest and greatest dish, a lot of people recommended this place, but they only do sandwiches. There's nothing.. Experimental here, it's all the same as everything else, tame, unwilling to push boundaries, to crest new flavours and venture into the unknown! No dish becomes good without breaking a few eggs.",
+    "responses": [
+      {
+        "text": "Right, inspiration.",
+        "topic": "TALK_PIERRE"
+      },
+      {
+        "text": "And who are you?",
+        "topic": "TALK_PIERRE_CHEF"
+      },
+      {
+        "text": "I'll catch you around.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_CHEF",
+    "dynamic_line": "I run Pierre's Bistro with my sous-chef, we pride ourselves on the delectable experience of our dishes, they are all exquisite. Made with the best ingredients too, I assure you if you ever stop by. Only, even with the best dishes, people get used to them, and you always need more and more stimulating flavours! It's a never ending work, trying to create the perfect dish, the one that'll put all your other hard made creations to shame.",
+    "responses": [
+      {
+        "text": "Right, inspiration.",
+        "topic": "TALK_PIERRE"
+      },
+      {
+        "text": "I'll catch you around.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_COOKING",
+    "dynamic_line": "Well, you did help out, and I can't really say no to advertising my business.. Alright, prepare yourself for a culinary experience! It's not exactly one of our dishes per-se, more of a side or snack, I present to you..\n*The chef reaches into her pocket, pulling out a wrapper with cured jerky inside, a nice brown-red tint to it and the scent of lightly fried garlic and herbs along with a more gamey scent.*\nGo ahead, try one! Then when you get the chance you can always stop by the Bistro.",
+    "responses": [
+      {
+        "text": "*Try the jerky*",
+        "topic": "TALK_PIERRE_COOKING_TASTING"
+      },
+      {
+        "text": "On second thought, I'm good.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_COOKING_TASTING",
+    "dynamic_line": "*The flavour is a mix of strongly scented herbs with an almost honey undertone, no doubt the marinade for the jerky itself. Each bite has a not insignificant amount of crunch and a saltiness that balances out the sweet flavours, yet the meat tastes unusual, not what you'd expect from most gamier animals*\nHow is it? Human is a taste like no other, we wondered about trying monsters once, but that didn't work out. It's unique still! Nothing will ever quite replace the culinary perfection!",
+    "responses": [
+      {
+        "text": "*Spit out the uneaten mouthful* Wait, this is human meat!?",
+        "topic": "TALK_PIERRE_COOKING_DISLIKE",
+        "effect": [ { "u_add_var": "u_pierre_tried_cooking", "value": "yes" }, { "offer_mission": "MISSION_INGREDIENT" } ]
+      },
+      {
+        "text": "(Lie, stop eating) Oh, it's uh, great.",
+        "topic": "TALK_PIERRE_COOKING_LIE",
+        "effect": [ { "u_add_var": "u_pierre_tried_cooking", "value": "yes" }, { "offer_mission": "MISSION_INGREDIENT_HUNT" } ]
+      },
+      {
+        "text": "(Cannibal) This is.. Amazing!",
+        "topic": "TALK_PIERRE_COOKING_LIKE",
+        "effect": [ { "u_add_var": "u_pierre_tried_cooking", "value": "yes" }, { "run_eocs": "EOC_cannibal_granter" }, { "offer_mission": "MISSION_INGREDIENT_HUNT" } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_cannibal_granter",
+    "condition": { "not": "u_has_trait('CANNIBAL')" },
+    "effect": [ { "u_add_trait": "CANNIBAL" }, { "u_message": "You develop the Cannibal trait.", "popup": true } ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_COOKING_DISLIKE",
+    "dynamic_line": "*You almost swear you see a flash of anger in the chef's eyes, before her composure returns.*\nWell, it's not for everyone, and yes, that is human meat. It's not that much of a taboo in our district, I suggest you perhaps don't want to visit in that case. Still, that doesn't mean we can't do business, right?",
+    "responses": [
+      {
+        "text": "...Sure.",
+        "topic": "TALK_PIERRE"
+      },
+      {
+        "text": "Nope. Nope. Nope.",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_COOKING_LIE",
+    "dynamic_line": "I'm glad you see it, there are many wonders of taste that lie beyond what people think is taboo. Food can only be as good as the bloodstains it leaves on your blade and apron, after all. Well, if you like our cooking, I'll bring a couple more samples you can buy, we'll likely be here until the Bistro is renovated, after all. Speaking of the Bistro, though, if you feel up to it, I'd gladly pay you for hunting some 'ingredients' for us. Much as I like getting my hands dirty, we could always do with more.",
+    "responses": [
+      {
+        "text": "Um, thanks.",
+        "topic": "TALK_PIERRE"
+      },
+      {
+        "text": "Well, I'll see you around..",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_PIERRE_COOKING_LIKE",
+    "dynamic_line": "I'm glad you see it, there are many wonders of taste that lie beyond what people think is taboo. Food can only be as good as the bloodstains it leaves on your blade and apron, after all. Well, if you like our cooking, I'll bring a couple more samples you can buy, we'll likely be here until the Bistro is renovated, after all. Speaking of the Bistro, though, if you feel up to it, I'd gladly pay you for hunting some 'ingredients' for us. Much as I like getting my hands dirty, we could always do with more.",
+    "responses": [
+      {
+        "text": "Thank you, I'll see about dropping by.",
+        "topic": "TALK_PIERRE"
+      }
+    ]
+  }
+]

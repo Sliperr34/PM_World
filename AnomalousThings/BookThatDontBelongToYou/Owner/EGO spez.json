@@ -77,7 +77,7 @@
     "description": "Разжигает внутреннее пламя, на короткое время даруя силу и стойкость к огню.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
-    "effect_str": "EGO_92_stage_1_aura",
+    "effect_str": "EGO_92_aura",
     "shape": "blast",
     "min_aoe": 0,
     "max_aoe": 0,
@@ -94,7 +94,7 @@
     "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
-    "id": "EGO_92_stage_1_aura",
+    "id": "EGO_92_aura",
     "type": "ARMOR",
     "name": "[ט] EGO 9:2 Aura",
     "description": "A spiral of flame wreaths you, enhancing your capabilities beyond that of mortality. May your foes be burned as they strike at you, and warmth be your ally, not your foe.",
@@ -1732,5 +1732,79 @@
     "base_energy_cost": { "math": [ "20000 / u_monsters_nearby('mon_candle_allied', 'radius': 60, 'attitude': 'friendly')" ] },
     "energy_source": "STAMINA",
     "flags": [ "IGNITE_FLAMMABLE", "NO_FAIL", "SOMATIC", "RANDOM_AOE", "RANDOM_DAMAGE", "NO_HANDS" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "92_chat",
+    "recurrence": [ "40 turns", "160 turns" ],
+    "condition": { "u_is_wearing": "EGO_92_aura" },
+    "deactivate_condition": { "not": { "u_is_wearing": "EGO_92_aura" } },
+    "effect": [ 
+      { 
+        "switch": { "math": [ "u_spell_level('EGO_92_invoke')" ] },
+        "cases": [
+          {
+            "case": 0,
+            "effect": [
+              {
+                "set_string_var": [
+                  "They do not see.",
+                  "The world is laid bare.",
+                  "They shall all be shown the light."
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          },
+          {
+            "case": 10,
+            "effect": [ 
+              {
+                "set_string_var": [
+                  "These people walk in the darkness.",
+                  "We will ignite a guiding light in these lost souls.",
+                  "We shall cleanse the world of the corrupted.",
+                  "A candle for every lost soul.",
+                  "We shall alight the fuel that ends this apocalypse."
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          },
+          {
+            "case": 20,
+            "effect": [ 
+              {
+                "set_string_var": [
+                  "The people walking in darkness have seen a great light.",
+                  "On those living in the land of deep darkness a light has dawned.",
+                  "We must not linger in the darkness.",
+                  "You are a worthy prophet to hold my power.",
+                  "Together we shall bring the light, the fire.",
+                  "Even in this dark age, the darkness receeds as humans grow few."
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          },
+          {
+            "case": 25,
+            "effect": [ 
+              {
+                "set_string_var": [
+                  "You are the true prophet, the one whom brings the light.",
+                  "Leave not a wretch without the gift of our flames!",
+                  "All shall be shown the way, through you.",
+                  "And so we shall bring a light to the darkest of days.",
+                  "And the world is left ablaze."
+                ],
+                "target_var": { "u_val": "quote" }
+              }
+            ]
+          }
+        ]
+      },
+      { "message": "<color_light_red>\"<u_val:quote>\"</color>", "type": "mixed" } 
+    ]
   }
 ]

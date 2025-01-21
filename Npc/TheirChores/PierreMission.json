@@ -1,0 +1,87 @@
+[
+  {
+    "id": "MISSION_GET_DRINK",
+    "type": "mission_definition",
+    "name": "Get a drink for Pierre",
+    "description": "Pierre doesn't want to blow her cover to get a drink from HamHamPangPang, get her a Wellcheers?",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 0,
+    "item": "wellcheers",
+    "count": 1,
+    "origins": [ "ORIGIN_ANY_NPC" ],
+    "dialogue": {
+      "describe": "I really could do with a drink.. Wellcheers, specifically.",
+      "offer": "Look, I'd love to talk business, but I'm parched, and I can't exactly go and buy a drink from a competitor while out on research. That's hardly fair. Mind grabbing me a Wellcheers?",
+      "accepted": "Thanks.",
+      "rejected": "Fair enough.",
+      "advice": "HamHamPangPang stocks them pretty often.",
+      "inquire": "You got that drink yet?",
+      "success": "Oh, finally, it's been so long since I've had one of these! You know, I do have some of my cooking if you want to try some.",
+      "success_lie": "...",
+      "failure": "..."
+    },
+    "start": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 } ] },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 }, { "u_add_var": "u_pierre_pleased", "value": "yes" } ] }
+  },
+  
+  {
+    "id": "MISSION_INGREDIENT",
+    "type": "mission_definition",
+    "name": { "str": "Chat with Pierre's Sous Chef, Jack" },
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 2,
+    "value": 60000,
+    "start": {
+      "assign_mission_target": { "om_terrain": "cabin", "om_special": "cabin", "reveal_radius": 2 },
+      "update_mapgen": { "place_npcs": [ { "class": "jack_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] }
+    },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "dialogue": {
+      "describe": "Jack should be in this cabin, waiting for me to report back.",
+      "offer": "Alright, business. You might not like our food, but no reason to not be amicable, right? I was expecting my Sous-Chef Jack to meet me here, but he's already running a couple of hours late. Mind checking what's holding him up, he should still be at the cabin we were using as a base here.",
+      "accepted": "Good luck out there!",
+      "rejected": "Alright, alright. Let me know if you change your mind, I'll pay well.",
+      "advice": "As long as you can handle yourself out there against the zombies, you'll be fine.",
+      "inquire": "What?",
+      "success": "...",
+      "success_lie": "...",
+      "failure": "..."
+    },
+    "end": {
+      "effect": [
+        { "u_add_var": "u_jack_killed", "value": "yes" },
+        { "math": [ "faction_like('pierre') = -1000" ] }
+      ]
+    }
+  },
+  {
+    "id": "MISSION_INGREDIENT_HUNT",
+    "type": "mission_definition",
+    "name": "Hunt an 'ingredient' for Pierre",
+    "description": "Hunt down the marked individual and bring back at a good amount of butchered flesh (40)",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 0,
+    "item": "human_flesh",
+    "count": 40,
+    "origins": [ "ORIGIN_ANY_NPC" ],
+    "followup": "MISSION_INGREDIENT_HUNT",
+    "start": {
+      "assign_mission_target": { "om_terrain": "field", "reveal_radius": 2, "min_distance": 24 },
+      "update_mapgen": { "place_npcs": [ { "class": "rank_8_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] }
+    },
+    "dialogue": {
+      "describe": "Time to hunt me some ingredients?",
+      "offer": "I'm pretty sure Jack wouldn't mind a hand hunting some fresh ingredients, I've spotted a prime cut running around, if you want to take it on? Just bring me back their flesh.",
+      "accepted": "Perfect. You'll do wonderfully.",
+      "rejected": "Another time, then?",
+      "advice": "Just make sure you can defend yourself, and take a butcher's knife.",
+      "inquire": "Back already?",
+      "success": "Oh, now that is something. Breathe in that scent.. This'll make a fine dish. Here, your pay, don't spend it all at once! Unless it's on treats.",
+      "success_lie": "...",
+      "failure": "..."
+    },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_100", "count": 5 } ] }
+  }
+]

@@ -10,9 +10,10 @@
     "mission": 7,
     "age": 34,
     "height": 168,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_PIERRE",
     "personality": { "aggression": 0, "bravery": 5, "collector": 0, "altruism": -5 },
-    "faction": "pierre"
+    "faction": "pierre",
+    "mission_offered": "MISSION_GET_DRINK"
   },
   {
     "type": "npc",
@@ -22,11 +23,11 @@
     "gender": "male",
     "class": "PIERRE_JACK",
     "attitude": 0,
-    "mission": 7,
+    "mission": 1,
     "age": 32,
     "height": 190,
-    "chat": "TALK_BLANK",
-    "personality": { "aggression": 5, "bravery": 5, "collector": 0, "altruism": -10 },
+    "chat": "TALK_JACK",
+    "personality": { "aggression": 100, "bravery": 5, "collector": 0, "altruism": -10 },
     "faction": "pierre"
   }
 ]

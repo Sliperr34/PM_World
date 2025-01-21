@@ -1,0 +1,24 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_JACK",
+    "dynamic_line": "Ah, Pierre always sends me the most interesting ingredients. Time to carve you up!",
+    "speaker_effect": {
+      "effect": [ { "u_faction_rep": -1100 }, "hostile" ]
+    },
+    "responses": [
+      {
+        "text": "W-what?",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "That's what you think!",
+        "topic": "TALK_DONE"
+      },
+      { 
+        "text": "Please don't kill me?", 
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]
