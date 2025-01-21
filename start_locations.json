@@ -1,0 +1,8 @@
+[
+  {
+    "type": "start_location",
+    "id": "hhpp_start",
+    "name": "HamHamPangPang",
+    "terrain": [ "hhpp1" ]
+  }
+]
