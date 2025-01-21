@@ -6,12 +6,8 @@
     "skill_used": "fabrication",
     "difficulty": 3,
     "time": "12 m",
-    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WELD", "level": 1 } ],
-    "components": [
-      [ [ "scrapmetal_item", 12 ] ],
-      [ [ "casepiece_item", 1 ] ],
-      [ [ "blackmetalwire_item", 2 ] ]
-    ]
+    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WELD", "level": 1 }, { "id": "HACKSAW", "level": 1 } ],
+    "components": [ [ [ "scrapmetal_item", 4 ] ], [ [ "casepiece_item", 1 ] ], [ [ "blackmetalwire_item", 1 ] ] ]
   },
   {
     "result": "broken_doubts_elite",
@@ -20,12 +16,229 @@
     "skill_used": "fabrication",
     "difficulty": 3,
     "time": "12 m",
-    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WELD", "level": 2 } ],
+    "qualities": [ { "id": "SCREW", "level": 1 }, { "id": "WELD", "level": 2 }, { "id": "HACKSAW", "level": 1 } ],
+    "components": [
+      [ [ "scrapmetal_item", 7 ] ],
+      [ [ "casepiece_item", 1 ] ],
+      [ [ "blackmetalwire_item", 3 ] ],
+      [ [ "filament_item", 2 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "restoredrustedlance_item",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "description": "Restored and shortened lance, now more usable for human use, though, still uncomfortable.",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "time": "8 h",
+    "activity_level": "MODERATE_EXERCISE",
+    "autolearn": false,
+    "reversible": false,
+    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "O-02-56 EGO armor", "hidden": false } },
+    "components": [ [ [ "scrapmetal_item", 5 ] ], [ [ "casepiece_item", 1 ] ], [ [ "rustedlance_item", 1 ] ] ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "WELD", "level": 1 },
+      { "id": "HACKSAW", "level": 1 },
+      { "id": "HAMMER", "level": 2 }
+    ],
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "required": false, "skill_penalty": 2.0 },
+      {
+        "proficiency": "prof_wp_distortions1",
+        "required": false,
+        "time_multiplier": 7.0,
+        "skill_penalty": 1.9,
+        "learning_time_multiplier": 1.0,
+        "max_experience": "30 m"
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "armor_doubt_chestplate",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "description": "Reforge broken parts of Doubt into usable chestplate",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "12 h",
+    "activity_level": "ACTIVE_EXERCISE",
+    "autolearn": false,
+    "reversible": false,
+    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "O-02-56 EGO armor", "hidden": false } },
+    "components": [
+      [ [ "scrapmetal_item", 20 ] ],
+      [ [ "casepiece_item", 3 ] ],
+      [ [ "blackmetalwire_item", 5 ] ],
+      [ [ "filament_item", 3 ] ]
+    ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "WELD", "level": 1 },
+      { "id": "HACKSAW", "level": 1 },
+      { "id": "HAMMER", "level": 2 }
+    ],
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "required": false, "skill_penalty": 2.0 },
+      {
+        "proficiency": "prof_wp_distortions1",
+        "required": false,
+        "time_multiplier": 7.0,
+        "skill_penalty": 1.9,
+        "learning_time_multiplier": 1.0,
+        "max_experience": "30 m"
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "doubt_legguard",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "description": "Reforge broken parts of Doubt into usable pair of greaves",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "8 h",
+    "activity_level": "ACTIVE_EXERCISE",
+    "autolearn": false,
+    "reversible": false,
+    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "O-02-56 EGO armor", "hidden": false } },
+    "components": [
+      [ [ "scrapmetal_item", 11 ] ],
+      [ [ "casepiece_item", 2 ] ],
+      [ [ "blackmetalwire_item", 2 ] ],
+      [ [ "filament_item", 2 ] ]
+    ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "WELD", "level": 1 },
+      { "id": "HACKSAW", "level": 1 },
+      { "id": "HAMMER", "level": 2 }
+    ],
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "required": false, "skill_penalty": 2.0 },
+      {
+        "proficiency": "prof_wp_distortions1",
+        "required": false,
+        "time_multiplier": 7.0,
+        "skill_penalty": 1.9,
+        "learning_time_multiplier": 1.0,
+        "max_experience": "30 m"
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "doubt_armguard",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "description": "Reforge broken parts of Doubt into usable pair of armguards",
+    "skill_used": "fabrication",
+    "difficulty": 5,
+    "time": "6 h",
+    "activity_level": "ACTIVE_EXERCISE",
+    "autolearn": false,
+    "reversible": false,
+    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "O-02-56 EGO armor", "hidden": false } },
     "components": [
       [ [ "scrapmetal_item", 8 ] ],
-      [ [ "casepiece_item", 1 ] ],
-      [ [ "blackmetalwire_item", 6 ] ],
+      [ [ "casepiece_item", 2 ] ],
+      [ [ "blackmetalwire_item", 2 ] ],
       [ [ "filament_item", 2 ] ]
+    ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "WELD", "level": 1 },
+      { "id": "HACKSAW", "level": 1 },
+      { "id": "HAMMER", "level": 2 }
+    ],
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "required": false, "skill_penalty": 2.0 },
+      {
+        "proficiency": "prof_wp_distortions1",
+        "required": false,
+        "time_multiplier": 7.0,
+        "skill_penalty": 1.9,
+        "learning_time_multiplier": 1.0,
+        "max_experience": "30 m"
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "doubt_sabaton",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "description": "Reforge broken parts of Doubt into usable pair of sabatons",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "7 h",
+    "activity_level": "ACTIVE_EXERCISE",
+    "autolearn": false,
+    "reversible": false,
+    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "O-02-56 EGO armor", "hidden": false } },
+    "components": [
+      [ [ "scrapmetal_item", 14 ] ],
+      [ [ "casepiece_item", 3 ] ],
+      [ [ "blackmetalwire_item", 1 ] ],
+      [ [ "filament_item", 1 ] ]
+    ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "WELD", "level": 1 },
+      { "id": "HACKSAW", "level": 1 },
+      { "id": "HAMMER", "level": 2 }
+    ],
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "required": false, "skill_penalty": 2.0 },
+      {
+        "proficiency": "prof_wp_distortions1",
+        "required": false,
+        "time_multiplier": 7.0,
+        "skill_penalty": 1.9,
+        "learning_time_multiplier": 1.0,
+        "max_experience": "30 m"
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "doubt_helm",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "description": "Reforge broken parts of Doubt into usable helmet",
+    "skill_used": "fabrication",
+    "difficulty": 7,
+    "time": "10 h",
+    "activity_level": "ACTIVE_EXERCISE",
+    "autolearn": false,
+    "reversible": false,
+    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "O-02-56 EGO armor", "hidden": false } },
+    "components": [
+      [ [ "scrapmetal_item", 16 ] ],
+      [ [ "casepiece_item", 2 ] ],
+      [ [ "blackmetalwire_item", 1 ] ],
+      [ [ "filament_item", 2 ] ]
+    ],
+    "qualities": [
+      { "id": "SCREW", "level": 1 },
+      { "id": "WELD", "level": 1 },
+      { "id": "HACKSAW", "level": 1 },
+      { "id": "HAMMER", "level": 2 }
+    ],
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "required": false, "skill_penalty": 2.0 },
+      {
+        "proficiency": "prof_wp_distortions1",
+        "required": false,
+        "time_multiplier": 7.0,
+        "skill_penalty": 1.9,
+        "learning_time_multiplier": 1.0,
+        "max_experience": "30 m"
+      }
     ]
   }
 ]
