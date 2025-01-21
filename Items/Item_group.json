@@ -129,7 +129,13 @@
     "id": "shrimp_drop",
     "type": "item_group",
     "subtype": "collection",
-    "entries": [ { "item": "prawn_wellcheers", "count": [ 1, 1 ], "prob": 80 } ]
+    "entries": [ { "item": "prawn_wellcheers", "count": [ 1, 1 ], "prob": 10 } ]
+  },
+  {
+    "id": "doubt_drop",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "rustedlance_item", "count": [ 1, 1 ], "prob": 40 } ]
   },
   {
     "id": "SUS_junk_drawer",

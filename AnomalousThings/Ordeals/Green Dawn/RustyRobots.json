@@ -73,8 +73,8 @@
         "monster_message": "The True Doubt slams it's lance into you."
       }
     ],
-    "dodge": 0,
-    "grab_strength": 2,
+    "dodge": 2,
+    "grab_strength": 3,
     "weakpoint_sets": [ "wps_doubt_body" ],
     "families": [ "prof_wp_distortions0", "prof_wp_distortions1" ],
     "vision_day": 55,
@@ -82,6 +82,6 @@
     "death_function": { "corpse_type": "BROKEN" },
     "flags": [ "SEES", "HEARS", "PATH_AVOID_FALL", "ALWAYS_SEES_YOU", "BASHES", "GRABS", "SWIMS", "PUSH_MON", "GROUP_BASH" ],
     "armor": { "electric": 5, "heat": 30, "bash": 5, "cut": 34, "stab": 20, "bullet": 30, "acid": 20 },
-    "death_drops": [ { "item": "rustedlance_item", "prob": 4 } ]
+    "death_drops": "doubt_drop"
   }
 ]
