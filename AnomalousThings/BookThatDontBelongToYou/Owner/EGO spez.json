@@ -462,7 +462,7 @@
     "warmth": 20,
     "material_thickness": 2.2,
     "environmental_protection": 15,
-    "flags": [ "AURA", "WATER_FRIENDLY", "PROPHET_RESIST", "INTEGRATED" ],
+    "flags": [ "AURA", "WATER_FRIENDLY", "PROPHET_RESIST", "UNRESTRICTED" ],
     "armor": [
       {
         "coverage": 100,
@@ -1106,7 +1106,7 @@
     "looks_like": "ego_teth",
     "material_thickness": 4,
     "environmental_protection": 20,
-    "flags": [ "AURA", "WATER_FRIENDLY", "INTEGRATED" ],
+    "flags": [ "AURA", "WATER_FRIENDLY", "UNRESTRICTED" ],
     "armor": [
       {
         "coverage": 100,

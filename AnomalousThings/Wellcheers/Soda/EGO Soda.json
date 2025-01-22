@@ -411,7 +411,7 @@
     "warmth": 5,
     "material_thickness": 1.6,
     "environmental_protection": 5,
-    "flags": [ "AURA", "WATER_FRIENDLY", "INTEGRATED" ],
+    "flags": [ "AURA", "WATER_FRIENDLY", "UNRESTRICTED" ],
     "armor": [
       {
         "coverage": 100,
@@ -570,7 +570,7 @@
     "warmth": 5,
     "material_thickness": 2.1,
     "environmental_protection": 10,
-    "flags": [ "AURA", "WATER_FRIENDLY" ],
+    "flags": [ "AURA", "WATER_FRIENDLY", "UNRESTRICTED" ],
     "armor": [
       {
         "coverage": 100,
