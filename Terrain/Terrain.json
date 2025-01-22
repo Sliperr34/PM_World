@@ -1,0 +1,11 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_wall_train",
+    "name": "Test wall",
+    "looks_like": "t_wall",
+    "symbol": "T",
+    "description": "A testing wall for the train.",
+    "color": "light_red"
+  }
+]

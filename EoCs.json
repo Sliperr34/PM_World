@@ -172,7 +172,7 @@
       },
       { 
         "if": { "math": [ "u_spell_level('EGO_soda') > -1" ] },
-        "then": [ { "math": [ "u_spell_exp('EGO_soda') += 200" ] }, { "u_message": "You feel Soda resonate, dancing in your subconcious as you drink down more glorious WellCheers."} ]
+        "then": [ { "math": [ "u_spell_exp('EGO_soda') += 2" ] }, { "u_message": "You feel Soda resonate, dancing in your subconcious as you drink down more glorious WellCheers."} ]
       }
     ]
   },
@@ -188,7 +188,7 @@
       },
       { 
         "if": { "math": [ "u_spell_level('EGO_soda') > -1" ] },
-        "then": [ { "math": [ "u_spell_exp('EGO_soda') += 200" ] }, { "u_message": "You feel Soda resonate, dancing in your subconcious as you drink down more glorious WellCheers."} ]
+        "then": [ { "math": [ "u_spell_exp('EGO_soda') += 3" ] }, { "u_message": "You feel Soda resonate, dancing in your subconcious as you drink down more glorious WellCheers."} ]
       }
     ]
   },
@@ -204,7 +204,7 @@
       },
       { 
         "if": { "math": [ "u_spell_level('EGO_soda') > -1" ] },
-        "then": [ { "math": [ "u_spell_exp('EGO_soda') += 400" ] }, { "u_message": "You feel Soda resonate, dancing in your subconcious as you drink down more glorious WellCheers."} ]
+        "then": [ { "math": [ "u_spell_exp('EGO_soda') += 5" ] }, { "u_message": "You feel Soda resonate, dancing in your subconcious as you drink down more glorious WellCheers."} ]
       }
     ]
   },
