@@ -15,6 +15,7 @@
     "effect": [
       { "u_add_var": "u_ordeal_lock", "value": "yes" },
       { "run_eocs": "EOC_green_dawn_wave", "time_in_future": "10 seconds" },
+      { "run_eocs": "EOC_green_dawn_elite", "time_in_future": "15 seconds" },
       { "run_eocs": "EOC_green_dawn_wave", "time_in_future": [ "5 minutes", "10 minutes" ] },
       { "run_eocs": "EOC_green_dawn_wave", "time_in_future": [ "10 minutes", "20 minutes" ] },
       { "run_eocs": "EOC_remove_ordeal_lock", "time_in_future": [ "14 days", "20 days" ] },
@@ -41,6 +42,20 @@
       },
       { "run_eocs": "EOC_green_dawn_wave_repeat", "time_in_future": [ "1 minutes", "2 minutes" ] },
       { "run_eocs": "EOC_green_dawn_flavour", "time_in_future": [ "5 minutes", "10 minutes" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_green_dawn_elite",
+    "condition": { "math": [ "time_since('cataclysm', 'unit':'days') >= 24" ] },
+    "effect": [
+      { "message": "There's a rupture in the world.." },
+      {
+        "u_spawn_monster": "mon_doubts_elite",
+        "real_count": 1,
+        "min_radius": [ 7, 9 ],
+        "max_radius": [ 14, 24 ]
+      }
     ]
   },
   {

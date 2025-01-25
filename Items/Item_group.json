@@ -129,7 +129,7 @@
     "id": "shrimp_drop",
     "type": "item_group",
     "subtype": "collection",
-    "entries": [ { "item": "prawn_wellcheers", "count": [ 1, 1 ], "prob": 10 } ]
+    "entries": [ { "item": "prawn_wellcheers", "count": [ 1, 1 ], "prob": 20 } ]
   },
   {
     "id": "doubt_drop",

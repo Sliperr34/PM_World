@@ -633,6 +633,26 @@
       { "item": "choc_drink", "count-min": 2, "count-max": 8, "prob": 33 },
       { "item": "fruit_pancakes", "count-min": 2, "count-max": 8, "prob": 5 }
     ]
+  },{
+    "id": "special_food",
+    "type": "item_group",
+    "//": "Special Foods",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "s_and_s_sausage", "count-min": 1, "count-max": 1, "prob": 1 },
+      { "item": "spicy_fries", "count-min": 1, "count-max": 1, "prob": 1 },
+      { "item": "judgement_cones", "count-min": 1, "count-max": 1, "prob": 1 }
+    ]
+  },{
+    "id": "special_drink",
+    "type": "item_group",
+    "//": "Special Drinks",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "alpha_energy_drink", "count-min": 1, "count-max": 1, "prob": 1 },
+      { "item": "whitewood_pine_tea", "count-min": 1, "count-max": 1, "prob": 1 },
+      { "item": "flame_quasar_coffee", "count-min": 1, "count-max": 1, "prob": 1 }
+    ]
   },
   {
     "id": "jack_carry",
