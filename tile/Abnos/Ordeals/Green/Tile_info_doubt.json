@@ -9,7 +9,7 @@
         "sprite_width": 42,
         "sprite_height": 52,
         "sprite_offset_x": 0,
-        "sprite_offset_y": -20,
+        "sprite_offset_y": 0,
         "tiles": [ { "id": "mon_doubts", "fg": 1 }, { "id": "mon_doubts_elite", "fg": 2 } ]
       }
     ]

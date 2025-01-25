@@ -1,0 +1,25 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [ "Chibi_Ultica", "MshockXottoplus", "UNDEAD_PEOPLE", "UNDEAD_PEOPLE_BASE" ],
+    "tiles-new": [
+      {
+        "file": "tile/Items/armor doubt.png",
+        "//": "range 1 to 38 (skip 7)",
+        "sprite_width": 34,
+        "sprite_height": 34,
+        "sprite_offset_x": -1,
+        "sprite_offset_y": -1,
+        "tiles": [
+          { "id": "overlay_worn_armor_doubt_chestplate", "fg": 1 },
+          { "id": "overlay_worn_doubt_armguard", "fg": 2 },
+          { "id": "overlay_worn_doubt_legguard", "fg": 3 },
+          { "id": "overlay_worn_doubt_sabaton", "fg": 4 },
+          { "id": "overlay_worn_doubt_helm", "fg": 5 },
+          { "id": "overlay_wielded_rustedlance_item", "fg": 6 },
+          { "id": "overlay_wielded_restoredrustedlance_item", "fg": 7 }
+        ]
+      }
+    ]
+  }
+]
