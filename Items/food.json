@@ -1,0 +1,246 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "s_and_s_sausage",
+    "name": {
+      "str": "schweinhaxen and kielbasa sausage"
+    },
+    "weight": "292 g",
+    "color": "brown",
+    "spoils_in": "2 day 8 hours",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "S",
+    "quench": 1,
+    "calories": 1200,
+    "description": "A sausage and cooked hogs foot define this dish, roasted to a brown perfection and served alongside a platter of fries and garnishes to season it to perfection. A hearty meal that is ever more so on a colder day.",
+    "price": "24 USD",
+    "price_postapoc": "8 USD",
+    "material": [
+      "flesh",
+      "veggy"
+    ],
+    "primary_material": "processed_food",
+    "volume": "345 ml",
+    "fun": 14,
+    "healthy": 0,
+    "use_action": { "type": "cast_spell", "spell_id": "pm_s_and_s", "no_fail": true, "level": 1 },
+    "vitamins": [
+      [
+        "vitC",
+        26
+      ],
+      [
+        "calcium",
+        14
+      ],
+      [
+        "iron",
+        62
+      ],
+      [
+        "meat_allergen",
+        1
+      ],
+      [
+        "veggy_allergen",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "spicy_fries",
+    "name": {
+      "str": "curled fries in reaper sauce"
+    },
+    "weight": "292 g",
+    "color": "red",
+    "spoils_in": "2 day 8 hours",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "X",
+    "quench": 1,
+    "calories": 800,
+    "description": "A platter of fries that has taken the idea of making a tower of them quite literally. Each is dipped in a violently red sauce, warning of the spice contained within. That this will not be a simple meal, but a war of the senses.",
+    "price": "24 USD",
+    "price_postapoc": "8 USD",
+    "material": [
+      "veggy"
+    ],
+    "primary_material": "processed_food",
+    "volume": "345 ml",
+    "fun": 12,
+    "healthy": -1,
+    "vitamins": [
+      [
+        "vitC",
+        32
+      ],
+      [
+        "calcium",
+        18
+      ],
+      [
+        "veggy_allergen",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "judgement_cones",
+    "//": "Based on Chimney Cones",
+    "name": {
+      "str": "ice-cream cone of delectable sin"
+    },
+    "weight": "180 g",
+    "color": "red",
+    "spoils_in": "1 day 4 hours",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "i",
+    "quench": 1,
+    "calories": 1648,
+    "description": "An ice-cream cone barely defines this sinfully indulgent treat, ice-cream, pretzels and chocolate pieces are wrapped within a cinnamon dusted cone and drizzled finally with a sauce of caramel and chocolate. A single red feather sticks out of the cone, judging whoever might decide to consume such a monstrosity.",
+    "price": "18 USD",
+    "price_postapoc": "8 USD",
+    "material": [
+      "milk"
+    ],
+    "primary_material": "processed_food",
+    "volume": "345 ml",
+    "fun": 16,
+    "healthy": -10,
+    "vitamins": [
+      [
+        "calcium",
+        28
+      ],
+      [
+        "milk_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "EATEN_COLD",
+      "MELTS"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "alpha_energy_drink",
+    "looks_like": "water",
+    "name": {
+      "str_sp": "alpha energy drink"
+    },
+    "color": "yellow",
+    "weight": "253 g",
+    "addiction_type": "caffeine",
+    "sleepiness_mod": 140,
+    "stim": 30,
+    "container": "can_drink",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 40,
+    "healthy": -1,
+    "addiction_potential": 9,
+    "calories": 157,
+    "description": "A yellowy orange liquid that has a strong flavour of both pineapple and apple, alongside a familiar tang of an energy drink. It boasts the ability to keep a person awake all night, all day and then all night again, at least according to the label.",
+    "price": "15 USD",
+    "price_postapoc": "6 USD",
+    "material": [
+      "junk"
+    ],
+    "primary_material": "water",
+    "volume": "250 ml",
+    "charges": 1,
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "NO_AUTO_CONSUME"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        105
+      ],
+      [
+        "junk_allergen",
+        1
+      ]
+    ],
+    "fun": 8,
+    "copy-from": "energy_drink"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "whitewood_pine_tea",
+    "looks_like": "water",
+    "name": {
+      "str_sp": "whitewood pine tea with lemon"
+    },
+    "color": "yellow",
+    "weight": "253 g",
+    "sleepiness_mod": -10,
+    "comestible_type": "DRINK",
+    "container": "bottle_plastic",
+    "symbol": "~",
+    "quench": 50,
+    "healthy": 5,
+    "description": "A piney scent emanates from this tea, blended elegently with hints of citrus that lends a delightful tang to the otherwise lightly bitter drink. Drank hot, and the scent only grows stronger, adding to the palette.",
+    "price": "15 USD",
+    "price_postapoc": "6 USD",
+    "material": [
+      "veggy",
+      "water"
+    ],
+    "primary_material": "water",
+    "volume": "250 ml",
+    "charges": 1,
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "NO_AUTO_CONSUME"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        125
+      ]
+    ],
+    "fun": 12
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "flame_quasar_coffee",
+    "name": {
+      "str_sp": "flame-quasar ristretto coffee"
+    },
+    "weight": "250 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "sleepiness_mod": 62,
+    "stim": 24,
+    "container": "bottle_plastic",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 50,
+    "addiction_potential": 4,
+    "calories": 28,
+    "description": "The Flame Quasar combines dark chocolate, toasted nuts and subtle notes of spices imported from the farthest corners of the galaxy. The taste is a concentrated burst of energy, bittersweet, with a warming, almost scalding aftertaste.",
+    "price": "12 USD",
+    "price_postapoc": "6 USD",
+    "material": [
+      "water"
+    ],
+    "volume": "250 ml",
+    "charges": 1,
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "NO_AUTO_CONSUME"
+    ],
+    "fun": 16
+  }
+]

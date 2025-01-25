@@ -225,7 +225,7 @@
     "message": "Swiping your hand through the air, a cold metal touches your skin, the icy, refreshing touch of WellCheers.",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "PERMANENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "PERMANENT", "NO_HANDS" ]
   },
   {
     "id": "soda_can_weak_item_act",
@@ -285,7 +285,7 @@
     "message": "Swiping your hand through the air, a cold metal touches your skin, the icy, refreshing touch of WellCheers.",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "PERMANENT" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "PERMANENT", "NO_HANDS" ]
   },
   {
     "id": "soda_can_item_act",
@@ -345,7 +345,7 @@
     "message": "Woven cord patches itself together into your outstretched hand, until a pristine woven net is formed.",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_HANDS" ]
   },
   {
     "id": "soda_net_item",
@@ -371,7 +371,7 @@
   {
     "id": "EGO_soda_summon_armour_normal",
     "type": "SPELL",
-    "name": "[ז] EGO Soda - Summon armour",
+    "name": "[ז] EGO Soda - Summon Armour",
     "description": "Call forth the armour of a shrimp. The shrimp. WellCheers Shrimp.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
@@ -393,7 +393,7 @@
     "message": "The plating of a shrimp envelops you, though formed into the clothing of a shrimper.",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS", "NO_HANDS" ]
   },
   {
     "id": "soda_armor_normal_item",
@@ -411,7 +411,7 @@
     "warmth": 5,
     "material_thickness": 1.6,
     "environmental_protection": 5,
-    "flags": [ "AURA", "WATER_FRIENDLY" ],
+    "flags": [ "AURA", "WATER_FRIENDLY", "UNRESTRICTED" ],
     "armor": [
       {
         "coverage": 100,
@@ -443,7 +443,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_LEGS", "NO_FAIL", "PERMANENT" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_LEGS", "NO_FAIL", "PERMANENT", "NO_HANDS" ]
   },
   {
     "id": "soda_can_item_empower_act",
@@ -504,7 +504,7 @@
     "message": "Woven cord patches itself together into your outstretched hand, until a pristine woven net is formed.",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_HANDS" ]
   },
   {
     "id": "soda_net_empower_item",
@@ -530,7 +530,7 @@
   {
     "id": "EGO_soda_summon_armour_empower",
     "type": "SPELL",
-    "name": "[ז] EGO Soda - Summon armour",
+    "name": "[ז] EGO Soda - Summon Armour",
     "description": "Call forth the armour of a shrimp. The shrimp. WellCheers Shrimp.",
     "valid_targets": [ "self" ],
     "effect": "spawn_item",
@@ -552,7 +552,7 @@
     "message": "The plating of a shrimp envelops you, though formed into the clothing of a dredger.",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS", "NO_HANDS", "INTEGRATED" ]
   },
   {
     "id": "soda_armor_empowered_item",
@@ -570,7 +570,7 @@
     "warmth": 5,
     "material_thickness": 2.1,
     "environmental_protection": 10,
-    "flags": [ "AURA", "WATER_FRIENDLY" ],
+    "flags": [ "AURA", "WATER_FRIENDLY", "UNRESTRICTED" ],
     "armor": [
       {
         "coverage": 100,
@@ -601,7 +601,7 @@
     "energy_source": "STAMINA",
     "difficulty": 3,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_LEGS", "NO_ARMS" ]
+    "flags": [ "SILENT", "NO_LEGS", "NO_ARMS", "NO_HANDS" ]
   },
   {
     "type": "effect_on_condition",
@@ -638,7 +638,7 @@
     "energy_source": "STAMINA",
     "difficulty": 0,
     "max_level": 1,
-    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS" ]
+    "flags": [ "SILENT", "NO_FAIL", "NO_LEGS", "NO_ARMS", "NO_HANDS" ]
   },
   {
     "type": "effect_on_condition",
