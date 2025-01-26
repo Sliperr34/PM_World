@@ -565,13 +565,13 @@
     "type": "item_group",
     "subtype": "collection",
     "entries": [
-      { "item": "coat_fur" },
+      { "item": "lulu_jacket" },
       { "item": "turtleneck" },
       { "item": "gloves_tactical" },
       { "item": "socks" },
-      { "item": "boots_combat" },
+      { "item": "boots_combat" }, 
       { "item": "kevlar" },
-      { "item": "kr_trouses" }
+      { "item": "pm_trouses" }
     ]
   },
   {

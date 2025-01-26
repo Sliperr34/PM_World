@@ -1035,5 +1035,45 @@
         "specifically_covers": [ "leg_hip_l", "leg_hip_r" ]
       }
     ]
+  },
+  {
+    "id": "lulu_jacket",
+    "type": "ARMOR",
+    "name": { "str": "Lulu's jacket" },
+    "description": "Comfy and warm jacket. Previously belonged to Lulu from Streetlight office.",
+    "weight": "1050 g",
+    "volume": "3780 ml",
+    "price_postapoc": "250 USD",
+    "material": [ "pm_cotton" ],
+    "repairs_with": [ "pm_cotton_item" ],
+    "symbol": "[",
+    "looks_like": "jacket_jean",
+    "to_hit": -2,
+    "armor": [
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 2, 4 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 2, 4 ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "14 cm",
+        "description": "Side pocket",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "max_item_length": "14 cm",
+        "description": "Side pocket",
+        "moves": 75
+      }
+    ],
+    "warmth": 24,
+    "environmental_protection": 1,
+    "material_thickness": 1,
+    "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY"]
   }
 ]
