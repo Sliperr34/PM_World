@@ -1,0 +1,57 @@
+[
+  {
+    "id": "real_great_swords",
+    "type": "requirement",
+    "//copy-from": "real_great_swords",
+    "extend": {
+      "tools": [ 
+        [ [ "zw_zweihander", -1 ] ],
+        [ [ "zw_is_zweihander", -1 ] ],
+        [ [ "zw_longsword", -1 ] ] 
+      ]
+    }
+   },
+   {
+    "id": "real_long_swords",
+    "type": "requirement",
+    "extend": {
+      "tools": [ 
+        [ [ "zw_longsword", -1 ] ],
+        [ [ "mc_estoc", -1 ] ],
+        [ [ "bl_katana", -1 ] ],
+        [ [ "kr_katana", -1 ] ],
+        [ [ "kr_cloud_katana", -1 ] ]
+      ]
+    }
+   },
+   {
+    "id": "real_medium_swords",
+    "type": "requirement",
+    "extend": {
+      "tools": [ 
+        [ [ "bl_katana", -1 ] ],
+        [ [ "kr_katana", -1 ] ],
+        [ [ "kr_cloud_katana", -1 ] ]
+      ]
+    }
+   },
+   {
+    "id": "real_thrusting_swords",
+    "type": "requirement",
+    "extend": {
+      "tools": [ 
+        [ [ "sv_rapier", -1 ] ]
+      ]
+    }
+   },
+   {
+    "id": "real_batons",
+    "type": "requirement",
+    "extend": {
+      "tools": [ 
+        [ [ "lab_bat", -1 ] ],
+        [ [ "zw_mace", -1 ] ]
+      ]
+    }
+   }
+]

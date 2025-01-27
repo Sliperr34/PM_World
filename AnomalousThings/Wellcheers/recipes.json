@@ -205,5 +205,17 @@
         "max_experience": "30 m"
       }
     ]
+  },
+  {
+    "id": "nested_soda",
+    "type": "nested_category",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "name": "Wellcheers",
+    "description": "Recipes related to F-05-52 Wellcheers",
+    "skill_used": "fabrication",
+    "nested_category_data": [ "ego_suit_soda", "ego_weapon_soda", "soda_mag_medium", "soda_bullet", "soda_bullet_cherry", "soda_bullet_grape", "ego_soda_gift" ],
+    "difficulty": 5
   }
 ]

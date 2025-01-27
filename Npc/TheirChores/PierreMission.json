@@ -9,7 +9,7 @@
     "value": 0,
     "item": "wellcheers",
     "count": 1,
-    "origins": [ "ORIGIN_ANY_NPC" ],
+    "origins": [ "ORIGIN_SECONDARY" ],
     "dialogue": {
       "describe": "I really could do with a drink.. Wellcheers, specifically.",
       "offer": "Look, I'd love to talk business, but I'm parched, and I can't exactly go and buy a drink from a competitor while out on research. That's hardly fair. Mind grabbing me a Wellcheers?",

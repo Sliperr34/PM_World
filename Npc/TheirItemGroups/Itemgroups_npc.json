@@ -643,7 +643,8 @@
       { "item": "spicy_fries", "count-min": 1, "count-max": 1, "prob": 1 },
       { "item": "judgement_cones", "count-min": 1, "count-max": 1, "prob": 1 }
     ]
-  },{
+  },
+  {
     "id": "special_drink",
     "type": "item_group",
     "//": "Special Drinks",
@@ -663,6 +664,14 @@
       { "item": "pm_money_1", "count-min": 12, "count-max": 20, "prob": 80 },
       { "item": "pm_money_100", "count-min": 1, "count-max": 2, "prob": 80 },
       { "item": "pm_money", "count-min": 5, "count-max": 10, "prob": 80 }
+    ]
+  },
+  {
+    "id": "rc_alcohol",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "group": "bar_alcohol", "count-min": 8, "count-max": 15 }
     ]
   }
 ]

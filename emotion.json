@@ -24,7 +24,8 @@
       [ "Instinct and emotion consumes you.", "mixed" ]
     ],
     "remove_message": "You feel your emotions finally still.",
-    "max_intensity": 3
+    "max_intensity": 3,
+    "scaling_mods": { "speed_mod": [ 4 ], "sleepiness_amount": [ 1 ] }
   },
   
   {

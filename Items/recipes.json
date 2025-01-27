@@ -10,7 +10,7 @@
     "activity_level": "NO_EXERCISE",
     "category": "CC_PRACTICE",
     "subcategory": "CSC_PRACTICE_SOCIAL",
-    "name": "Study Abnormalities.",
+    "name": "study abnormalities",
     "description": "Read about abnormalities.",
     "skill_used": "speech",
     "time": "1 h",
@@ -55,6 +55,38 @@
     "book_learn": [ [ "p_bird_book", 0 ] ]
   },
   {
+    "id": "prac_dist",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_SOCIAL",
+    "name": "study distortions",
+    "description": "Read about distortions.",
+    "skill_used": "speech",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 0, "max_difficulty": 0, "skill_limit": 0 },
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions0", "time_multiplier": 1, "skill_penalty": 0 }
+    ],
+    "book_learn": [ [ "resjournaldistortion", 0 ], [ "resjournalrisk", 0 ] ]
+  },
+  {
+    "id": "prac_dist_zayin",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_SOCIAL",
+    "name": "ZAYIN distortions",
+    "description": "Read about ZAYIN distortions.",
+    "skill_used": "speech",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 0, "max_difficulty": 0, "skill_limit": 0 },
+    "proficiencies": [
+      { "proficiency": "prof_wp_distortions1", "time_multiplier": 1, "skill_penalty": 0 }
+    ],
+    "book_learn": [ [ "resjournaldistortion", 0 ] ]
+  },
+  {
     "type": "recipe",
     "activity_level": "NO_EXERCISE",
     "result": "tainted_enk",
@@ -65,6 +97,10 @@
     "book_learn": [
       [
         "resjournalenk",
+        1
+      ],
+      [
+        "resjournaldistortion",
         1
       ]
     ],

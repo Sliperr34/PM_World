@@ -28,7 +28,7 @@
     "type": "GENERIC",
     "id": "resjournalrisk",
     "name": {
-      "str": "researcher's journal"
+      "str": "researcher's journal: risk levels"
     },
     "description": "A well used journal in a battered leather binding, detailing the risk levels assigned to Abnormalities and Distortions.\n\n\"...ZAYIN is the lowest risk level assigned to Abnormalities and Distortions, this does not mean they aren't dangerous in their own right, but a well prepared human can often deal with such a threat and face no great issues. Any abilities displayed by those assigned ZAYIN tend to be minor, easily avoided, or beneficial in effect. TETH is a noticable step beyond that, and each should be treated with caution even if they appear benevolent. These should stay under armed guard. HE, then, are terrifying beings and we never recommend handling them alone or unprepared. I've never had the pleasure of meeting a WAW abnormality and can only speculate...\"",
     "copy-from": "resjournal"
@@ -37,7 +37,7 @@
     "type": "GENERIC",
     "id": "resjournalego",
     "name": {
-      "str": "researcher's journal"
+      "str": "researcher's journal: EGO"
     },
     "description": "A well used journal in a battered leather binding, detailing what are denoted as EGOs.\n\n\"...There is a common misunderstanding as to what makes an EGO, this is in part the fault of Lobotomy Corp, whose research denoted their cheap knockoffs as EGO equipment, and while similar, they are a different strain. Lob Corp's Egos were created from Abnormalities, manufactured and though contain some of the Abnormalities power, that is all. There is nothing deeper. They are still incredible items, transferring knowledge of the item's use, even to the untaught, and deadly beyond measure, but still, different. EGOs, real ones, are made by forming a connection with an Abnormality. These kind of EGOs are weak at first, but evolve as the user grows more syncronous with the Abnormality. They are, however, dangerous, as using them allows the Abnormalities Ego to try and override your own, the weak willed eventually Distorting. The final type of EGO is that of anyone who manifests the light...\"",
     "copy-from": "resjournal"
@@ -46,18 +46,18 @@
     "type": "GENERIC",
     "id": "resjournaldistortion",
     "name": {
-      "str": "researcher's journal"
+      "str": "researcher's journal: distortions"
     },
-    "description": "A well used journal in a battered leather binding, detailing what are denoted as distortions.\n\n\"\"",
+    "description": "A well used journal in a battered leather binding, detailing what are denoted as distortions.\n\n\"Distortions are a new phenomenon, humans twisted by their own desires. Though that is too simple an explanation. When a human has a dream, a dream they hold to with their very soul itself, only for it to be challenged, despair rises. If they aren't strong enough to shrug it off, they begin to distort, gaining great power, but being warped by the single objective that forms in the moment. It is said that some can be saved even after distorting, though the records are few and far between.\"",
     "copy-from": "resjournal"
   },
   {
     "type": "GENERIC",
     "id": "resjournalabnormality",
     "name": {
-      "str": "researcher's journal"
+      "str": "researcher's journal: abnormalities"
     },
-    "description": "A well used journal in a battered leather binding, detailing what are denoted as abnormalities.\n\n\"\"",
+    "description": "A well used journal in a battered leather binding, detailing what are denoted as abnormalities.\n\n\"Abnormalities are things without classification, and research on them has been restricted to only a few nests, up until now. Before whatever L-Corp did, they simply were not common enough to be known by most. So my notes here will be somewhat sparse. They are beings that defy the natural order, and can be 'subdued' to produce an unusual substance called Enkephalin. They also cannot be killed, reverting into a core upon 'death', from which they will rise again.\"",
     "copy-from": "resjournal"
   },
   {
@@ -65,9 +65,9 @@
     "category": "manuals",
     "id": "resjournalenk",
     "name": {
-      "str": "researcher's journal"
+      "str": "researcher's journal: enkephalin"
     },
-    "description": "A well used journal in a battered leather binding, detailing some chemical known as Enkephalin.\n\n\"\"",
+    "description": "A well used journal in a battered leather binding, detailing some chemical known as Enkephalin.\n\n\"Enkephalin is a substance that is little known about, and comes in various degrees of purity. All that is known truly is that it has some ability to impart an abnormalities defiance of reality if used in the correct way. Though you would perhaps need a lot. There is, however, a way to also extract it from certain glands of Distortions, and can be worth a fairly significant amount of Ahn.\"",
     "copy-from": "resjournal"
   }
 ]
