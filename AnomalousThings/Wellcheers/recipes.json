@@ -132,7 +132,7 @@
     "autolearn": false,
     "reversible": false,
     "charges": 10,
-    "book_learn": { "p_bird_book": { "skill_level": 3, "recipe_name": "F-05-52 EGO cherry ammo", "hidden": false } },
+    "book_learn": { "soda_book": { "skill_level": 3, "recipe_name": "F-05-52 EGO cherry ammo", "hidden": false } },
     "components": [ [ [ "wellcherry_can", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_wp_abnos0", "required": true, "skill_penalty": 2.0 },
@@ -159,7 +159,7 @@
     "autolearn": false,
     "reversible": false,
     "charges": 10,
-    "book_learn": { "p_bird_book": { "skill_level": 3, "recipe_name": "F-05-52 EGO grape ammo", "hidden": false } },
+    "book_learn": { "soda_book": { "skill_level": 3, "recipe_name": "F-05-52 EGO grape ammo", "hidden": false } },
     "components": [ [ [ "wellgrape_can", 1 ] ]],
     "proficiencies": [
       { "proficiency": "prof_wp_abnos0", "required": true, "skill_penalty": 2.0 },
@@ -185,7 +185,7 @@
     "activity_level": "MODERATE_EXERCISE",
     "autolearn": false,
     "reversible": false,
-    "book_learn": { "p_bird_book": { "skill_level": 6, "recipe_name": "F-05-52 EGO gift", "hidden": false } },
+    "book_learn": { "soda_book": { "skill_level": 6, "recipe_name": "F-05-52 EGO gift", "hidden": false } },
     "components": [
       [ [ "well_can", 9 ] ],
       [ [ "wellcherry_can", 12 ] ],
@@ -205,5 +205,17 @@
         "max_experience": "30 m"
       }
     ]
+  },
+  {
+    "id": "nested_soda",
+    "type": "nested_category",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_EGO",
+    "name": "Wellcheers",
+    "description": "Recipes related to F-05-52 Wellcheers",
+    "skill_used": "fabrication",
+    "nested_category_data": [ "ego_suit_soda", "ego_weapon_soda", "soda_mag_medium", "soda_bullet", "soda_bullet_cherry", "soda_bullet_grape", "ego_soda_gift" ],
+    "difficulty": 5
   }
 ]
