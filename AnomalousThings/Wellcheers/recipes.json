@@ -160,7 +160,7 @@
     "reversible": false,
     "charges": 10,
     "book_learn": { "soda_book": { "skill_level": 3, "recipe_name": "F-05-52 EGO grape ammo", "hidden": false } },
-    "components": [ [ [ "wellgrape_can", 1 ] ]],
+    "components": [ [ [ "wellgrape_can", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_wp_abnos0", "required": true, "skill_penalty": 2.0 },
       {
