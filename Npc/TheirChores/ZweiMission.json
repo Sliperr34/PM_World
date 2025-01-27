@@ -14,7 +14,7 @@
       "assign_mission_target": { "om_terrain": "field", "random": true, "search_range": 60, "min_distance": 8, "z": 0 },
       "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 2, "target": true } ] }
     },
-    "origins": [ "ORIGIN_ANY_NPC" ],
+    "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_FIND_BOOK_GUIDE_ZW",
     "dialogue": {
       "describe": "We need you to eliminate the threat.",
@@ -68,7 +68,7 @@
     "id": "MISSION_FIND_DOCUMENTS_ZW",
     "type": "mission_definition",
     "name": "Lost operative",
-    "description": "Find lost Zwei fixer and bring him back",
+    "description": "Find lost Zwei fixer and bring him back. If possible, otherwise the documents they have will do.",
     "goal": "MGOAL_FIND_ITEM",
     "difficulty": 2,
     "value": 5000,
@@ -89,7 +89,6 @@
         { "u_spawn_item": "pm_money", "count": 10 },
         { "u_faction_rep": 100 },
         { "u_learn_martial_art": "zwei_big" },
-        { "u_learn_martial_art": "chains_martial" },
         { "u_learn_martial_art": "kurokumo_martial" }
       ]
     },
@@ -99,7 +98,7 @@
       "offer": " The last we know is that he found interesting papers that could be useful to us. Your task is to get our fixer out of there or at least take the papers and bring them to me.",
       "accepted": "Great, here are the coordinates. You can head out now.",
       "rejected": "Well... Maybe you're not really suited for this job.",
-      "advice": "If our man failed there, then apparently its really dangerous. Gather a team or prepare the necessary equipment, anything could have happen",
+      "advice": "If our man failed there, then apparently it's really dangerous. Gather a team or prepare the necessary equipment, anything could have happened.",
       "inquire": "Still not on the case? Every minute may count.",
       "success": "I was briefed on what was going on there. I am impressed with your skills. I think you have earned this award, and now you have access to our equipment and training.",
       "success_lie": "Ugh... get out and get the job done.",

@@ -9,7 +9,7 @@
     "value": 0,
     "item": "cake2",
     "count": 1,
-    "origins": [ "ORIGIN_ANY_NPC" ],
+    "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_ASK_ZWEI",
     "dialogue": {
       "describe": "I really need that cake, or Lulu will never focus on work.",

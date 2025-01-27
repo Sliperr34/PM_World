@@ -1,0 +1,15 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_RC_GENERIC",
+    "dynamic_line": {
+      "compare_string": [ "yes", { "u_val": "rc_affiliation" } ],
+      "yes": [ "I've heard the Kuro's are getting a bit uppity lately. Somethin's happening.", "'Ey! Got the party this afternoon, y' comin'?", "Heard Lim's got some of that new stuff. Gonna see if they'll share.", "Crack any skulls lately?" ],
+      "no": "Why the fuck are you hanging around here? This is chains turf!"
+    },
+    "responses": [
+      { "text": "Just heading out.", "topic": "TALK_DONE"},
+      { "text": "...", "topic": "TALK_DONE" }
+    ]
+  }
+]

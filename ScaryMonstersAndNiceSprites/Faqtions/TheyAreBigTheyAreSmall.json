@@ -62,7 +62,7 @@
       { "item": "pm_money_1", "fixed_adj": 0 },
       { "item": "pm_money_100", "fixed_adj": 0 }
     ],
-    "relations": { "zwei_association": { "kill on sight": true } },
+    "relations": { "zwei_association": { "kill on sight": true }, "kurokumo": { "kill on sight": true } },
     "description": "The Rusty Chains are a group of bandits and simply desperate people who are ready to take on any job, and by “any” they mean beat someone and take their things. Rough, dangerous and difficult to control - they are dangerous enemies, but at the same time, an alliance with them can be quite useful."
   },
   {
@@ -84,7 +84,7 @@
       { "item": "pm_money_1", "fixed_adj": 0 },
       { "item": "pm_money_100", "fixed_adj": 0 }
     ],
-    "relations": { "zwei_association": { "kill on sight": true } },
+    "relations": { "zwei_association": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
     "description": "The Kurokumo clan, ruthless thugs who can take your life with one move. Similar to the Yakuza, they live by collecting protection money. Elegant appearance, not elegant methods of execution."
   },
   {

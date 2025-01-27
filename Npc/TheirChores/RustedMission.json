@@ -1,0 +1,94 @@
+[
+  {
+    "id": "MISSION_KILL_RYAN",
+    "type": "mission_definition",
+    "name": { "str": "Find Ryan and make them pay." },
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 2,
+    "value": 60000,
+    "start": {
+      "assign_mission_target": { "om_terrain": "hhpp1", "om_special": "hhpp", "reveal_radius": 2 },
+      "update_mapgen": { "place_npcs": [ { "class": "ryan_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true } ] },
+      "effect": [ { "u_add_var": "accepted_ryan_mission", "value": "yes" } ]
+    },
+    "followup": "MISSION_ACQUIRE_ENK",
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "dialogue": {
+      "describe": "Make Ryan pay.",
+      "offer": "Listen, I have something to do. Not complicated. One son of a whore needs to be killed.",
+      "accepted": "That's great. Some asshole, Ryan or sommat, stole my money. Find this fucking creature. I think I last saw him in HamHamPangPang, his name is Ryan. When you're done, come back.",
+      "rejected": "Ugh, get outta my sight.",
+      "advice": "The guy's not got any backup, what more advice do you need. Come back with the money, or one less idiot in th' world.",
+      "inquire": "What?",
+      "success": "Huh. Maybe you aren't a waste of oxygen. Try these on, they might suit ya.",
+      "success_lie": "I knew it.  Good.",
+      "failure": "Pfah! Knew you couldn't handle it. Get lost."
+    },
+    "end": {
+      "effect": [
+        { "u_add_var": "rc_affiliation", "value": "yes" },
+        { "math": [ "u_vitamin('rc_rank') += 1" ] },
+        { "u_spawn_item": "rc_chains", "count": 2 },
+        { "u_spawn_item": "pm_money", "count": 2 }
+      ]
+    }
+  },
+  {
+    "id": "MISSION_ACQUIRE_ENK",
+    "type": "mission_definition",
+    "name": "Pick up the drug drop",
+    "description": "The Chains had a drug drop out of their turf, they would like you to pick it up.",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 0,
+    "item": "tainted_enk",
+    "count": 3,
+    "start": {
+      "assign_mission_target": { "om_terrain": "road", "min_distance": 12, "reveal_radius": 2 },
+      "update_mapgen": { 
+        "place_npcs": [ { "class": "kr_npc_hostile", "x": 7, "y": 11, "target": true }, { "class": "kr_npc_hostile", "x": [ 12, 22 ], "y": [ 12, 22 ], "target": true } ],
+        "place_item": [ { "item": "tainted_enk", "x": 7, "y": 9 } ]      
+      }
+    },
+    "followup": "MISSION_FIGHT_KURO",
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "dialogue": {
+      "describe": "Drug pickup.",
+      "offer": "'Course there's work. Syndicates don't run themselves. Look, we made a fancy deal to get some of the new drugs on the street. The problem? The drop's in Kumo turf, no doubt they're watchin'. All you got to do? Grab the drugs and bring them back, don't need to bust any heads. Though, if you want to? Be our guest.",
+      "accepted": "Alright. See you back here. The drugs a weird one. Blue, liquid, take it and you'll party the night away. Don't do that. Don't want to break our new newbies skull, do we? Called Enke--Inki--Alki--.. You'll know when you see it, okay?",
+      "rejected": "Well, more of the share for us. You still need to prove your worth, though, rookie.",
+      "advice": "Get ready for a scrap. They Kuro will probably be watchin'.",
+      "inquire": "Brought it back yet?",
+      "success": "Now that's more like it! You really are promisin'. Hey, if you wanna learn how to throw a real punch, just ask, yeah? Boss is gonna be pleased with this.",
+      "success_lie": "The fuck you tryna pull!?",
+      "failure": "Rookie. Better not make another mistake."
+    },
+    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money", "count": 3 }, { "u_add_var": "teach_rc_style", "value": "yes" }, { "math": [ "faction_like('kurokumo') = -40" ] } ] }
+  },
+  {
+    "id": "MISSION_FIGHT_KURO",
+    "type": "mission_definition",
+    "name": "Backup the Rusted Chains",
+    "description": "Something has gone down, the Chains and Kuro are having a showdown.",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 2,
+    "value": 6000,
+    "start": {
+      "assign_mission_target": { "om_terrain": "forest", "min_distance": 14, "reveal_radius": 2 },
+      "update_mapgen": { "place_npcs": [ { "class": "kr_npc_hostile", "x": [ 1, 11 ], "y": [ 1, 11 ], "target": true }, { "class": "kr_npc_hostile", "x": [ 12, 22 ], "y": [ 12, 22 ], "target": true }, { "class": "kr_npc_hostile", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true }, { "class": "kr_npc_hostile", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true }, { "class": "kr_npc_hostile", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": true }, { "class": "rc_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": false }, { "class": "rc_npc", "x": [ 1, 22 ], "y": [ 1, 22 ], "target": false }  ] }
+    },
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "dialogue": {
+      "describe": "Skulls to crack.",
+      "offer": "This is a big one. Some of th' lads ran into Kumo scum, they need some back up. Get out there an' help 'em. Come back covered in blood, an' not a moment before.",
+      "accepted": "Like the enthusiasm, show 'em what we're made of!",
+      "rejected": "Don' wait too long.",
+      "advice": "The scum came in full force, make sure you're ready for a scrap.",
+      "inquire": "They dead yet?",
+      "success": "Look at ya'! Not the whimperin' pup you were first you came in 'ere. You've made something for yourself.",
+      "success_lie": "The fuck you tryna pull!?",
+      "failure": "..."
+    },
+    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money_100", "count": 2 }, { "math": [ "faction_like('kurokumo') = -80" ] } ] }
+  }
+]

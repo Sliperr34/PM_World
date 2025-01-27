@@ -1,0 +1,77 @@
+[
+  {
+    "type": "npc",
+    "id": "jikan_npc",
+    "name_unique": "Jikan",
+    "name_suffix": "Leader of Rusted Chains",
+    "gender": "male",
+    "class": "NC_RC_JIKAN",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_ZWEI_FOOD",
+    "age": 24,
+    "height": 182,
+    "personality": { "aggression": 3, "bravery": 15, "collector": 3, "altruism": -10 },
+    "faction": "rusted_chains"
+  },
+  {
+    "type": "npc",
+    "id": "rc_npc_bouncer",
+    "name_unique": "Elizabeth",
+    "gender": "female",
+    "name_suffix": "bouncer of Rusted Chains",
+    "class": "NC_RC",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_RC_GENERIC",
+    "faction": "rusted_chains"
+  },
+  {
+    "type": "npc",
+    "id": "rc_npc_bartender",
+    "name_unique": "Horney",
+    "gender": "female",
+    "name_suffix": "bartender of Rusted Chains",
+    "class": "NC_RC_BARTENDER",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_ZWEI_FOOD",
+    "faction": "rusted_chains"
+  },
+  {
+    "type": "npc",
+    "id": "rc_duglas",
+    "gender": "male",
+    "name_unique": "Duglas",
+    "name_suffix": "member of Rusted Chains",
+    "class": "NC_RC",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_DUGLAS_RC",
+    "faction": "rusted_chains",
+    "mission_offered": "MISSION_KILL_RYAN"
+  },
+  {
+    "type": "npc",
+    "id": "rc_lim",
+    "gender": "male",
+    "name_unique": "Lim",
+    "name_suffix": "member of Rusted Chains",
+    "class": "NC_RC",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_LIM_RC",
+    "faction": "rusted_chains"
+  },
+  {
+    "type": "npc",
+    "id": "rc_npc",
+    "gender": "male",
+    "name_suffix": "member of Rusted Chains",
+    "class": "NC_RC",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_RC_GENERIC",
+    "faction": "rusted_chains"
+  }
+]
