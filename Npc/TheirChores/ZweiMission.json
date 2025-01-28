@@ -86,7 +86,7 @@
     "end": {
       "effect": [
         { "u_sell_item": "lc_documents" },
-        { "u_spawn_item": "pm_money", "count": 10 },
+        { "u_spawn_item": "pm_money_100", "count": 2 },
         { "u_faction_rep": 100 },
         { "u_learn_martial_art": "zwei_big" },
         { "u_learn_martial_art": "kurokumo_martial" }

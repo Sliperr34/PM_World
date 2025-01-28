@@ -29,7 +29,7 @@
         { "u_add_var": "rc_affiliation", "value": "yes" },
         { "math": [ "u_vitamin('rc_rank') += 1" ] },
         { "u_spawn_item": "rc_chains", "count": 2 },
-        { "u_spawn_item": "pm_money", "count": 2 }
+        { "u_spawn_item": "pm_money_10", "count": 2 }
       ]
     }
   },
@@ -63,7 +63,7 @@
       "success_lie": "The fuck you tryna pull!?",
       "failure": "Rookie. Better not make another mistake."
     },
-    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money", "count": 3 }, { "u_add_var": "teach_rc_style", "value": "yes" }, { "math": [ "faction_like('kurokumo') = -40" ] } ] }
+    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money_10", "count": 3 }, { "u_add_var": "teach_rc_style", "value": "yes" }, { "math": [ "faction_like('kurokumo') = -40" ] } ] }
   },
   {
     "id": "MISSION_FIGHT_KURO",

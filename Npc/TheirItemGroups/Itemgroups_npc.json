@@ -530,8 +530,8 @@
     "entries": [
       { "item": "pm_money_10", "count-min": 20, "count-max": 75, "prob": 100 },
       { "item": "pm_money_1", "count-min": 25, "count-max": 100, "prob": 100 },
-      { "item": "pm_money_100", "count-min": 10, "count-max": 25, "prob": 100 },
-      { "item": "pm_money", "count-min": 15, "count-max": 50, "prob": 100 }
+      { "item": "pm_money_1000", "count-min": 10, "count-max": 25, "prob": 100 },
+      { "item": "pm_money_100", "count-min": 15, "count-max": 50, "prob": 100 }
     ]
   },
   {
@@ -662,8 +662,8 @@
     "entries": [
       { "item": "pm_money_10", "count-min": 4, "count-max": 8, "prob": 80 },
       { "item": "pm_money_1", "count-min": 12, "count-max": 20, "prob": 80 },
-      { "item": "pm_money_100", "count-min": 1, "count-max": 2, "prob": 80 },
-      { "item": "pm_money", "count-min": 5, "count-max": 10, "prob": 80 }
+      { "item": "pm_money_1000", "count-min": 1, "count-max": 2, "prob": 80 },
+      { "item": "pm_money_100", "count-min": 5, "count-max": 10, "prob": 80 }
     ]
   },
   {

@@ -33,6 +33,7 @@
 	"NJJJNNNN___*_*_*___NNNNN"
 	],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_rec_npc", "x": 2, "y": 9 },
 		{ "class": "zwei_food_npc", "x": 17, "y": 18 },
@@ -116,6 +117,7 @@
             "NNNNNNXNNNNNllllllllllll"
             ],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_meet_npc", "x": 17, "y": 2 },
 		{ "class": "walter_npc", "x": 13, "y": 13 },
@@ -204,6 +206,7 @@
             "NNNNNNNNNNNNNNNNNNNNNNNN"
             ],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_game_npc", "x": 19, "y": 11 }
 		],
@@ -286,6 +289,7 @@
             "NNNNNNNNNNNNNNNNNNNNNNNN"
             ],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_doc_npc", "x": 3, "y": 20 },
 		{ "class": "zwei_sick_npc", "x": 3, "y": 16 },
