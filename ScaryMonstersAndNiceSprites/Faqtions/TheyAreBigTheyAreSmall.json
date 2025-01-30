@@ -11,12 +11,11 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": {  },
     "description": " "
@@ -33,12 +32,12 @@
     "power": 100,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "markup": 1.4 },
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
     "description": "The Zwei Association, they take orders from ordinary people and carry them out, mainly specialize in protecting the client and accompanying him. Despite the fact that they are dressed in ordinary office clothes and are very good at wielding swords, sometimes the size of their swords is simply enormous, and they have no problem wielding them with dexterity and skill. The main sign is a blue jacket or raincoat with two yellow stripes at the bottom.\n\nZwei Association - your shield"
@@ -55,12 +54,12 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "markup": 1.1 },
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": { "zwei_association": { "kill on sight": true }, "kurokumo": { "kill on sight": true } },
     "description": "The Rusty Chains are a group of bandits and simply desperate people who are ready to take on any job, and by “any” they mean beat someone and take their things. Rough, dangerous and difficult to control - they are dangerous enemies, but at the same time, an alliance with them can be quite useful."
@@ -77,12 +76,12 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "markup": 1.2 },
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": { "zwei_association": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
     "description": "The Kurokumo clan, ruthless thugs who can take your life with one move. Similar to the Yakuza, they live by collecting protection money. Elegant appearance, not elegant methods of execution."
@@ -99,12 +98,12 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "markup": 1.5 },
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true } },
     "description": "The main forces of L Corporation that survived the zero day. Despite all the adversities, they are well dressed and seem to be well-fed, nevertheless, in their eyes one can read despair and weariness from life.\n\nFace the fear\nBuild the future "
@@ -121,14 +120,14 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "markup": 1.5 },
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
-    "description": "A local restaraunt chain who's clientel is mostly fixers of various levels, their reknown lends them unusual strength for a sandwich place."
+    "description": "A local restaraunt chain who's clientele is mostly fixers of various levels, their renown lends them unusual strength for a sandwich place."
   },
   {
     "type": "faction",
@@ -142,12 +141,11 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": { "hells_raiders": { "kill on sight": true }, "rusted_chains": { "kill on sight": true }, "hhpp": { "watch your back": true, "guard your stuff": true } },
     "description": "A small fixer's office, known for taking on some lower ranking tasks and its positive outlook."
@@ -164,12 +162,11 @@
     "power": 0,
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
-    "currency": "pm_money",
     "price_rules": [
-      { "item": "pm_money", "fixed_adj": 0 },
-      { "item": "pm_money_10", "fixed_adj": 0 },
-      { "item": "pm_money_1", "fixed_adj": 0 },
-      { "item": "pm_money_100", "fixed_adj": 0 }
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
     ],
     "relations": { "hhpp": { "watch your back": true, "guard your stuff": true } },
     "description": "A bistro, known for operating in a sector of the city that frowns less on certain taboos while cooking. After all, food must come from somewhere, and if it's tasty enough, well.."

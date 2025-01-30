@@ -15,7 +15,7 @@
     "int": 9,
     "per": 11,
     "personality": { "aggression": 3, "bravery": 10, "collector": 10, "altruism": -30 },
-    "chat": "TALK_ZWEI_FOOD",
+    "chat": "TALK_SAYO_KR",
     "faction": "kurokumo"
   },
   {
@@ -34,7 +34,7 @@
     "int": 8,
     "per": 9,
     "personality": { "aggression": 4, "bravery": 12, "collector": 8, "altruism": -30 },
-    "chat": "TALK_BLANK",
+    "chat": "TALK_KR_GENERIC",
     "faction": "kurokumo"
   },
   {
@@ -53,7 +53,8 @@
     "int": 10,
     "per": 10,
     "personality": { "aggression": 0, "bravery": 20, "collector": 3, "altruism": -10 },
-    "chat": "TALK_BLANK",
+    "mission_offered": "MISSION_FIND_HEROIN",
+    "chat": "TALK_GIN_KR",
     "faction": "kurokumo"
   },
   {
@@ -65,7 +66,7 @@
     "class": "NC_KR",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_KR_GENERIC",
     "faction": "kurokumo"
   },
   {
@@ -75,7 +76,7 @@
     "class": "NC_KR",
     "attitude": 0,
     "mission": 7,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_KR_GENERIC",
     "faction": "kurokumo"
   },
   {
@@ -85,7 +86,7 @@
     "class": "NC_KR",
     "attitude": 10,
     "mission": 7,
-    "chat": "TALK_BLANK",
+    "chat": "TALK_KR_GENERIC",
     "personality": { "aggression": 500, "bravery": 5, "collector": 3, "altruism": -10 },
     "faction": "kurokumo"
   }

@@ -35,6 +35,42 @@
     "max_intensity": 6,
     "effect_dur_scaling": [ { "effect_id": "bleed", "modifier": 0.95, "same_bp": false } ],
     "scaling_mods": { "pain_amount": [ -1 ], "pain_tick": [ 100 ] }
+  },
+  {
+    "id": "kr_rank",
+    "type": "vitamin",
+    "vit_type": "counter",
+    "name": { "str": "Kurokumo Rank" },
+    "min": 0,
+    "max": 12,
+    "rate": "0 h",
+    "excess": "kr_rank",
+    "flags": [ "NO_DISPLAY" ],
+    "disease_excess": [ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ], [ 7, 8 ], [ 9, 10 ], [ 11, 12 ] ]
+  },
+  {
+    "type": "effect_type",
+    "id": "kr_rank",
+    "name": [ "Lost Knife", "Dulled Blade", "Sharp Blade", "Blade Reforged", "Katana Born", "Eternal Blade" ],
+    "desc": [
+      "The Kurokumo have accepted you, at least in part.",
+      "They accepted you before, but now the Kurokumo know you are one of theirs.",
+      "You've made a name for yourself, beyond the rank and file, your skills are being recognised.",
+      "It's more than just a name now, you have a title, you're starting to give more orders than you take.",
+      "You've proven your place in the higher reaches of the Kurokumo, but you've began to see you're a small fish in a much larger pond.",
+      "You take your place, on the top of the clan's pecking order. They are yours, and yet, you find there are those above you still. Just not in the clan."
+    ],
+    "apply_message": [
+      [ "You feel your allegiance shift to the Kurokumo clan.", "mixed" ],
+      [ "You're theirs now, just another sword.", "mixed" ],
+      [ "You're starting to catch a glimmer of respect in some of your clan's eyes.", "mixed" ],
+      [ "You had their respect before, now you know you have their belief.", "mixed" ],
+      [ "The Kurokumo are starting to understand, the stronger raise to the top.", "mixed" ],
+      [ "There is an awe to the other members whenever they look towards you.", "mixed" ]
+    ],
+    "remove_message": "You've betrayed the Kurokumo. You are theirs no longer.",
+    "max_intensity": 6,
+    "scaling_mods": { "speed_mod": [ 2 ] }
   }
 
 

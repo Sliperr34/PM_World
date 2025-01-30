@@ -1,0 +1,63 @@
+[
+  {
+    "id": "MISSION_FIND_HEROIN",
+    "type": "mission_definition",
+    "//": "ZAYIN",
+    "name": "Prove your worth",
+    "description": "Find some Heroin.",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 0,
+    "item": "heroin",
+    "count": 5,
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "followup": "MISSION_FIND_LAB_STEEL",
+    "dialogue": {
+      "describe": "Prove yourself.",
+      "offer": "Well, lets go with something simple, yeah? Find us some heroin out there, and bring it back. A decent amount. Just show us you can actually handle yourself.",
+      "accepted": "Come back alive, yeah?",
+      "rejected": "If you ain't got the nerves, you don't belong here.",
+      "advice": "Hospitals are your best bet. Usually full of Zombs, though.",
+      "inquire": "Got it?",
+      "success": "Oh, and you're still in one piece.",
+      "success_lie": "...",
+      "failure": "..."
+    },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 }, { "math": [ "u_vitamin('kr_rank') += 1" ] } ] }
+  },
+  {
+    "id": "MISSION_FIND_LAB_STEEL",
+    "type": "mission_definition",
+    "//": "TETH",
+    "name": "Retrieve lost cargo",
+    "description": "Find the lost Laboratory made steel in the subway.",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 2,
+    "value": 0,
+    "item": "l_steel_item",
+    "count": 5,
+    "origins": [ "ORIGIN_SECONDARY" ],
+    "start": {
+      "assign_mission_target": { "om_terrain": "subway", "reveal_radius": 1, "min_distance": 5, "random": true, "z": -2 },
+      "update_mapgen": {
+        "place_monster": [
+          { "group": "PECCA_GENERAL", "x": [ 1, 20 ], "y": [ 1, 20 ], "repeat": [ 4, 7 ] },
+          { "group": "GROUP_ZOMBIE_UPGRADE", "x": [ 1, 20 ], "y": [ 1, 20 ], "repeat": [ 6, 8 ] } 
+        ],
+        "place_item": [ { "item": "b_polymer_item", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 3, 5 ] }, { "item": "l_steel_item", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 3, 5 ] }, { "item": "pm_money_10", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 8, 12 ] } ]
+      }
+    },
+    "dialogue": {
+      "describe": "Collect lost cargo.",
+      "offer": "Alright, you've proven yourself. Now something more interesting, and far more deadly. Turns out some of L-Corp are still kicking, one was ferrying some high cost items through the subway before they got overwhelmed by some sort of distortion. We're not paying you for this one, you get to keep what you find. We just want two pieces of lab-steel or whatever they call it. Need to get myself a new katana.",
+      "accepted": "Don't get eaten!",
+      "rejected": "Ah, sorry katana, you'll have to wait.",
+      "advice": "Subway's are nasty, in more ways than one, be careful.",
+      "inquire": "How's the raid going?",
+      "success": "Still alive, impressive. You know, if you'd like to learn how to use a sword properly, maybe I could teach you. You're not as bad as all the rookies we've had lately.",
+      "success_lie": "...",
+      "failure": "..."
+    },
+    "end": { "effect": [ { "math": [ "u_vitamin('kr_rank') += 1" ] }, { "u_add_var": "teach_kr_style", "value": "yes" } ] }
+  }
+]

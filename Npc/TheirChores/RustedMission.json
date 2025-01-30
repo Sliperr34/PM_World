@@ -2,6 +2,7 @@
   {
     "id": "MISSION_KILL_RYAN",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": { "str": "Find Ryan and make them pay." },
     "goal": "MGOAL_ASSASSINATE",
     "difficulty": 2,
@@ -29,13 +30,14 @@
         { "u_add_var": "rc_affiliation", "value": "yes" },
         { "math": [ "u_vitamin('rc_rank') += 1" ] },
         { "u_spawn_item": "rc_chains", "count": 2 },
-        { "u_spawn_item": "pm_money", "count": 2 }
+        { "u_spawn_item": "pm_money_1", "count": 5 }
       ]
     }
   },
   {
     "id": "MISSION_ACQUIRE_ENK",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Pick up the drug drop",
     "description": "The Chains had a drug drop out of their turf, they would like you to pick it up.",
     "goal": "MGOAL_FIND_ITEM",
@@ -63,11 +65,12 @@
       "success_lie": "The fuck you tryna pull!?",
       "failure": "Rookie. Better not make another mistake."
     },
-    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money", "count": 3 }, { "u_add_var": "teach_rc_style", "value": "yes" }, { "math": [ "faction_like('kurokumo') = -40" ] } ] }
+    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money_10", "count": 2 }, { "u_add_var": "teach_rc_style", "value": "yes" }, { "math": [ "faction_like('kurokumo') = -40" ] }, { "math": [ "u_vitamin('kr_rank') -= 1" ] } ] }
   },
   {
     "id": "MISSION_FIGHT_KURO",
     "type": "mission_definition",
+    "//": "TETH",
     "name": "Backup the Rusted Chains",
     "description": "Something has gone down, the Chains and Kuro are having a showdown.",
     "goal": "MGOAL_ASSASSINATE",
@@ -89,6 +92,6 @@
       "success_lie": "The fuck you tryna pull!?",
       "failure": "..."
     },
-    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money_100", "count": 2 }, { "math": [ "faction_like('kurokumo') = -80" ] } ] }
+    "end": { "effect": [ { "math": [ "u_vitamin('rc_rank') += 1" ] }, { "u_spawn_item": "pm_money_10", "count": 8 }, { "math": [ "faction_like('kurokumo') = -80" ] }, { "math": [ "u_vitamin('kr_rank') -= 2" ] } ] }
   }
 ]

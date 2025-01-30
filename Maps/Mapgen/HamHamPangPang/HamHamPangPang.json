@@ -32,6 +32,7 @@
             "      wwwwwwwwwwwwwww   "
 	  ],
 		"palettes": [ "zwei_palette" ],
+    "faction_owner": [ { "id": "hhpp", "x": [ 4, 23 ], "y": [ 8, 20 ] } ],
 		"items": {
       "T": { "item": "dishes_dining", "chance": 15 },
       "B": { "item": "magazines", "chance": 80, "repeat": [ 1, 5 ] },
@@ -40,6 +41,7 @@
 		},
 		"place_npcs": [
       { "class": "hhpp_cash_npc", "x": 10, "y": 17 },
+      { "class": "hhpp_npc", "x": 9, "y": 9 },
       { "class": "mars_npc", "x": 16, "y": 16 },
       { "class": "lulu_npc", "x": 17, "y": 16 },
       { "class": "rank_8_npc", "x": 21, "y": 19 }
@@ -119,6 +121,7 @@
             "      *           *     "
     ],
 		"palettes": [ "zwei_palette" ],
+    "faction_owner": [ { "id": "hhpp", "x": [ 0, 17 ], "y": [ 4, 20 ] } ],
 		"items": {
       "T": { "item": "dishes_dining", "chance": 15 },
       "f": { "item": "fridge", "chance": 80, "repeat": [ 1, 3 ] },

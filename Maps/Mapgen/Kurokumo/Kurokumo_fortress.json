@@ -6,7 +6,7 @@
     "object": {
       "fill_ter": "t_floor",
       "rows": [
-			"   *            *       ",
+            "   *            *       ",
             "          *      *      ",
             "  NNNNNNNNNNNNNNNNNNN   ",
             " *N~~~ff~...N.AtA...O   ",
@@ -32,20 +32,21 @@
             "       * *    www       "
 			],
 			"palettes": [ "zwei_palette" ],
+      "faction_owner": [ { "id": "kurokumo", "x": [ 2, 22 ], "y": [ 3, 21 ] } ],
 			"items": {
-	"T": { "item": "table_foyer", "chance": 35 },
-	"t": { "item": "drug_table", "chance": 75 }
+        "T": { "item": "table_foyer", "chance": 35 },
+        "t": { "item": "drug_table", "chance": 75 }
 			},
 			"place_npcs": [
-        { "class": "sayo_npc", "x": 19, "y": 5 },
-		{ "class": "yang_npc", "x": 14, "y": 3 },
-		{ "class": "gin_npc", "x": 16, "y": 3 },
-		{ "class": "kr_cook_npc", "x": 4, "y": 4 },
-		{ "class": "kr_npc", "x": 16, "y": 14 },
-		{ "class": "kr_npc", "x": 15, "y": 15 },
-		{ "class": "kr_npc", "x": 19, "y": 9 },
-		{ "class": "kr_npc", "x": 6, "y": 10 },
-		{ "class": "kr_npc", "x": 15, "y": 18 }
+       { "class": "sayo_npc", "x": 19, "y": 5 },
+       { "class": "yang_npc", "x": 14, "y": 3 },
+       { "class": "gin_npc", "x": 16, "y": 3 },
+       { "class": "kr_cook_npc", "x": 4, "y": 4 },
+       { "class": "kr_npc", "x": 16, "y": 14 },
+       { "class": "kr_npc", "x": 15, "y": 15 },
+       { "class": "kr_npc", "x": 19, "y": 9 },
+       { "class": "kr_npc", "x": 6, "y": 10 },
+       { "class": "kr_npc", "x": 15, "y": 18 }
 		],
 			"terrain": {
 		"N": "t_brick_wall",

@@ -2,6 +2,7 @@
   {
     "id": "MISSION_GET_DRINK",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Get a drink for Pierre",
     "description": "Pierre doesn't want to blow her cover to get a drink from HamHamPangPang, get her a Wellcheers?",
     "goal": "MGOAL_FIND_ITEM",
@@ -21,13 +22,14 @@
       "success_lie": "...",
       "failure": "..."
     },
-    "start": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 } ] },
-    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 }, { "u_add_var": "u_pierre_pleased", "value": "yes" } ] }
+    "start": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 1 } ] },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 1 }, { "u_add_var": "u_pierre_pleased", "value": "yes" } ] }
   },
   
   {
     "id": "MISSION_INGREDIENT",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": { "str": "Chat with Pierre's Sous Chef, Jack" },
     "goal": "MGOAL_ASSASSINATE",
     "difficulty": 2,
@@ -58,6 +60,7 @@
   {
     "id": "MISSION_INGREDIENT_HUNT",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Hunt an 'ingredient' for Pierre",
     "description": "Hunt down the marked individual and bring back at a good amount of butchered flesh (40)",
     "goal": "MGOAL_FIND_ITEM",
@@ -82,6 +85,6 @@
       "success_lie": "...",
       "failure": "..."
     },
-    "end": { "effect": [ { "u_spawn_item": "pm_money_100", "count": 5 } ] }
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 } ] }
   }
 ]

@@ -33,6 +33,7 @@
 	"NJJJNNNN___*_*_*___NNNNN"
 	],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_rec_npc", "x": 2, "y": 9 },
 		{ "class": "zwei_food_npc", "x": 17, "y": 18 },
@@ -116,10 +117,10 @@
             "NNNNNNXNNNNNllllllllllll"
             ],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_meet_npc", "x": 17, "y": 2 },
 		{ "class": "walter_npc", "x": 13, "y": 13 },
-		{ "class": "isadora_npc", "x": 13, "y": 17 },
 		{ "class": "julia_npc", "x": 13, "y": 21 },
 		{ "class": "zwei_train_npc", "x": 10, "y": 2 },
 		{ "class": "zwei_newbie_npc", "x": 2, "y": 5 }
@@ -178,12 +179,12 @@
 "object": {
 	"fill_ter": "t_floor",
 	 "rows": [
-            "_www___lllllllllllll___N",
-            "_www_~llBA...2     l___N",
-            "_www_~Gt...++l h  !ll__N",
-            "_www_~Gt...++lBnnl bl__N",
-            "_www_~llL...qllGll ll__N",
-            "_www___lllllll~~~lXl~__N",
+            "_www___lZZZlllllllll___N",
+            "_www_~_l`````2     l___N",
+            "_www_~ll``!``l h  !ll__N",
+            "_www_~llZZAZZZBnnl bl__N",
+            "_www_~llrrSrrZlGll ll__N",
+            "_www___lZZZZZZ~~~lXl~__N",
             "wwwwwwwwwwwwwwwwwwww~__N",
             "wwwwwwwwwwwwwwwwwwww~__N",
             "wwwwwwwwwwwwwwwwwlXl~__N",
@@ -204,8 +205,14 @@
             "NNNNNNNNNNNNNNNNNNNNNNNN"
             ],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
-        { "class": "zwei_game_npc", "x": 19, "y": 11 }
+        { "class": "zwei_game_npc", "x": 19, "y": 11 },
+        { "class": "isadora_npc", "x": 10, "y": 4 },
+        { "class": "zwei_train_npc", "x": 11, "y": 2 },
+        { "class": "zwei_train_npc", "x": 9, "y": 2 },
+        { "class": "zwei_train_npc", "x": 11, "y": 6 },
+        { "class": "zwei_train_npc", "x": 9, "y": 6 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",
@@ -221,6 +228,8 @@
 		"3": "t_door_gray_c",
 		"4": "t_door_c",
 		"2": "t_door_lab_c",
+    "Z": "t_ballistic_glass",
+    "A": "t_door_metal_locked",
 		"G": "t_reinforced_glass_shutter",
 		"~": "t_grass",
 		"*": [ ["t_tree", 10] , ["t_tree_apple", 8], ["t_tree_peach", 5], ["t_tree_cherry", 7] ],
@@ -236,7 +245,8 @@
 		"T": "f_table",
 		"t": "f_coffee_table",
 		"B": "f_bookcase",
-		"+":  "f_bed",
+    "r": "f_rack",
+		"+": "f_bed",
 		"q": "f_dresser",
 		"o": "f_oven",
 		",": "f_toilet",
@@ -286,6 +296,7 @@
             "NNNNNNNNNNNNNNNNNNNNNNNN"
             ],
 	"palettes": [ "zwei_palette" ],
+  "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
         { "class": "zwei_doc_npc", "x": 3, "y": 20 },
 		{ "class": "zwei_sick_npc", "x": 3, "y": 16 },

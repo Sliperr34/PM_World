@@ -2,6 +2,7 @@
   {
     "id": "MISSION_FIND_CAKE",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Placating Lulu",
     "description": "Find a cake to placate Mar's associate.",
     "goal": "MGOAL_FIND_ITEM",
@@ -12,7 +13,7 @@
     "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_ASK_ZWEI",
     "dialogue": {
-      "describe": "I really need that cake, or Lulu will never focus on work.",
+      "describe": "Get some cake for Lulu.",
       "offer": "I know it's an odd request, but if you want to prove yourself, can you bring us a cake? Lulu won't shut up about me dropping one. Consider it training in diplomacy..",
       "accepted": "Thanks, please make sure it's not rotten, I know how food is here lately.",
       "rejected": "Yeah. Yeah, I wouldn't either.",
@@ -22,11 +23,12 @@
       "success_lie": "Thanks for trying… I guess.",
       "failure": "Was finding a cake really that hard?"
     },
-    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 5 } ] }
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 } ] }
   },
   {
     "id": "MISSION_ASK_ZWEI",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": { "str": "Ask Zwei about the current situation" },
     "description": "Learn about the current situation from Zwei, and relay it to Mars.",
     "goal": "MGOAL_CONDITION",
@@ -39,7 +41,7 @@
         { "u_add_var": "u_mars_zwei", "value": "yes" }
       ]
     },
-    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 15 } ] },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_1", "count": 15 } ] },
     "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_RECRUIT_FIXER",
     "dialogue": {
@@ -57,6 +59,7 @@
   {
     "id": "MISSION_RECRUIT_FIXER",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": { "str": "Recruit Fixer" },
     "description": "Go to the cabin in the woods and recruit the down on their luck fixer.",
     "goal": "MGOAL_RECRUIT_NPC",
@@ -67,7 +70,7 @@
       "effect": "follow",
       "update_mapgen": { "place_npcs": [ { "class": "RANK_8_FIXER", "x": 11, "y": 11, "target": true } ] }
     },
-    "end": { "effect": [ { "u_spawn_item": "pm_money_100", "count": 2 } ] },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 2 } ] },
     "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_KILL_PECCA_STREETLIGHT",
     "dialogue": {
@@ -85,6 +88,7 @@
   {
     "id": "MISSION_KILL_PECCA_STREETLIGHT",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Helping Streetlight",
     "description": "Find the monsters at the location, and kill them.",
     "goal": "MGOAL_KILL_MONSTER_SPEC",
@@ -97,7 +101,7 @@
       "assign_mission_target": { "om_terrain": "forest", "random": true, "search_range": 60, "min_distance": 8, "z": 0 },
       "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 6, "target": true } ] }
     },
-    "end": { "effect": [ { "u_spawn_item": "pm_money_100", "count": 2 } ] },
+    "end": { "effect": [ { "u_spawn_item": "pm_money_10", "count": 4 } ] },
     "origins": [ "ORIGIN_SECONDARY" ],
     "followup": "MISSION_KILL_PECCA_STREETLIGHT",
     "dialogue": {

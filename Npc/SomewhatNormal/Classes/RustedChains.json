@@ -45,7 +45,6 @@
     "traits": [ [ "jikan_hair", 100 ], [ "SKIN_LIGHT", 100 ], { "group": "Eye_hazel" } ],
     "shopkeeper_item_group": [ { "group": "rc_gear_shop", "trust": 0, "rigid": true } ],
     "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "markup": 3 } ],
     "bionics": [  ]
   },
   {
