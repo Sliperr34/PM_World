@@ -1,0 +1,43 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_GIN_KR",
+    "dynamic_line": {
+      "math": [ "u_vitamin('kr_rank') > 0" ],
+      "yes": [ "Good to see you again." ],
+      "no": "Hey scag, looking to become part of something better? Bored of having the shit kicked out of ya?"
+    },
+    "responses": [
+      { "text": "Become part of something better?", "topic": "TALK_GIN_KR_JOIN", "condition": { "not": { "math": [ "u_vitamin('kr_rank') > 0" ] } } },
+      { "text": "Do you have any more work for me?",  "topic": "TALK_MISSION_LIST" },
+      { "text": "About the mission…", "topic": "TALK_MISSION_INQUIRE", "condition": "has_assigned_mission" },
+      { "text": "About one of those missions…", "topic": "TALK_MISSION_LIST_ASSIGNED", "condition": "has_many_assigned_missions" },
+      { "text": "Can you show me how you use a sword?",  "topic": "TALK_GIN_FIGHTING_STYLE", "condition": { "compare_string": [ "yes", { "u_val": "teach_kr_style" } ] } },
+      { "text": "Never mind.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_GIN_KR_JOIN",
+    "dynamic_line": "Sure. You've heard of us, right? The Kurokumo clan. Do a little dirty work for us, prove yourself worthy, and you won't have to worry about the usual City scum. None would dare touch you. Then you can help us.. Clear up shop. And get rich while doing it.",
+    "responses": [
+      { "text": "Well, that does sound interesting..", "topic": "TALK_GIN_KR" },
+      { "text": "Not my style.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_GIN_FIGHTING_STYLE",
+    "dynamic_line": "Ah, I do think you're finally ready to learn out art. Come, let us show you how to really use that sword.",
+    "speaker_effect": {
+      "effect": [
+        { "u_learn_martial_art": "kurokumo_martial" },
+        { "u_message": "You have been taught the Kurokumo's martial art." },
+        { "u_lose_var": "teach_kr_style" }
+      ]
+    },
+    "responses": [
+      { "text": "Nice.", "topic": "TALK_DONE" }
+    ]
+  }
+]

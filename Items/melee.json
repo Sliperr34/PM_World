@@ -12,7 +12,7 @@
     "color": "light_gray",
     "looks_like": "zweihander",
     "price": "2200 USD",
-    "price_postapoc": "189 USD",
+    "price_postapoc": "280 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 160 } ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK" ],
@@ -65,7 +65,7 @@
     "color": "light_gray",
     "looks_like": "zweihander",
     "price": "2200 USD",
-    "price_postapoc": "189 USD",
+    "price_postapoc": "300 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 160 } ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK", "SLOW_WIELD" ],
@@ -118,7 +118,7 @@
     "color": "light_gray",
     "looks_like": "longsword",
     "price": "1200 USD",
-    "price_postapoc": "80 USD",
+    "price_postapoc": "215 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 112 } ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "DURABLE_MELEE", "SHEATH_SWORD" ],
@@ -132,7 +132,7 @@
     "type": "GENERIC",
     "id": "zw_mace",
     "name": { "str": "Zwei stun baton" },
-    "description": "Long stun baton made of some black polymer, slick at touch. Has a massive knob\n\nYou see Zwei association emblem on It",
+    "description": "Long stun baton made of some black polymer, slick at touch.\n\nYou see Zwei association emblem on It",
     "weight": "1300 g",
     "color": "dark_gray",
     "symbol": "/",
@@ -147,7 +147,7 @@
     "//": "Same total damage and slightly higher weight than a morningstar - exchanged.",
     "to_hit": { "grip": "weapon", "length": "short", "surface": "any", "balance": "neutral" },
     "price": "1000 USD",
-    "price_postapoc": "80 USD",
+    "price_postapoc": "210 USD",
     "qualities": [ [ "HAMMER", 1 ] ],
     "category": "weapons",
     "melee_damage": { "bash": 37 }
@@ -165,7 +165,7 @@
     "color": "light_gray",
     "looks_like": "rapier",
     "price": "980 USD",
-    "price_postapoc": "25 USD",
+    "price_postapoc": "250 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "pm_steel", "portion": 112 } ],
     "repairs_with": [ "pm_steel_item" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
@@ -188,7 +188,7 @@
     "color": "light_gray",
     "looks_like": "estoc",
     "price": "1350 USD",
-    "price_postapoc": "50 USD",
+    "price_postapoc": "250 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "pm_steel", "portion": 112 } ],
     "repairs_with": [ "pm_steel_item" ],
     "techniques": [ "WBLOCK_2", "PRECISE", "WIDE" ],
@@ -211,7 +211,7 @@
     "color": "light_gray",
     "looks_like": "katana",
     "price": "150 USD",
-    "price_postapoc": "12 USD",
+    "price_postapoc": "140 USD",
     "material": [ { "type": "b_steel", "portion": 160 } ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "DURABLE_MELEE" ],
@@ -284,7 +284,7 @@
     "color": "light_gray",
     "looks_like": "katana",
     "price": "400 USD",
-    "price_postapoc": "45 USD",
+    "price_postapoc": "155 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
     "repairs_with": [ "c_steel_item" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
@@ -308,7 +308,7 @@
     "color": "light_gray",
     "looks_like": "katana",
     "price": "800 USD",
-    "price_postapoc": "45 USD",
+    "price_postapoc": "145 USD",
     "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
     "repairs_with": [ "c_steel_item" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
@@ -337,7 +337,7 @@
     "longest_side": "50 cm",
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": "300 USD",
-    "price_postapoc": "8 USD",
+    "price_postapoc": "20 USD",
     "//": "Make a percentage of armor penetration, around 35%",
     "melee_damage": { "bash": 11 }
   },
@@ -398,7 +398,7 @@
     "looks_like": "briefcase",
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": "300 USD",
-    "price_postapoc": "8 USD",
+    "price_postapoc": "10 USD",
     "melee_damage": { "bash": 8 }
   },
   {
@@ -418,7 +418,7 @@
     "looks_like": "briefcase",
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": "300 USD",
-    "price_postapoc": "8 USD",
+    "price_postapoc": "40 USD",
     "melee_damage": { "bash": 8 }
   },
   {
@@ -438,7 +438,7 @@
     "looks_like": "briefcase",
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": "300 USD",
-    "price_postapoc": "8 USD",
+    "price_postapoc": "160 USD",
     "melee_damage": { "bash": 8 }
   },
   {
@@ -458,7 +458,7 @@
     "looks_like": "briefcase",
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": "300 USD",
-    "price_postapoc": "8 USD",
+    "price_postapoc": "640 USD",
     "melee_damage": { "bash": 8 }
   },
   {
@@ -478,7 +478,7 @@
     "looks_like": "briefcase",
     "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
     "price": "300 USD",
-    "price_postapoc": "8 USD",
+    "price_postapoc": "1280 USD",
     "melee_damage": { "bash": 8 }
   },
   {

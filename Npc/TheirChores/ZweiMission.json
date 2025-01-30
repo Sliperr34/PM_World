@@ -2,6 +2,7 @@
   {
     "id": "MISSION_KILL_PECCA_ZW",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Population control",
     "description": "Kill two peccatula",
     "goal": "MGOAL_KILL_MONSTER_SPEC",
@@ -31,6 +32,7 @@
   {
     "id": "MISSION_FIND_BOOK_GUIDE_ZW",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "A guide to Cataclysm",
     "description": "Find Zombie Survival Guide",
     "goal": "MGOAL_FIND_ITEM",
@@ -67,6 +69,7 @@
   {
     "id": "MISSION_FIND_DOCUMENTS_ZW",
     "type": "mission_definition",
+    "//": "ZAYIN",
     "name": "Lost operative",
     "description": "Find lost Zwei fixer and bring him back. If possible, otherwise the documents they have will do.",
     "goal": "MGOAL_FIND_ITEM",
@@ -86,10 +89,9 @@
     "end": {
       "effect": [
         { "u_sell_item": "lc_documents" },
-        { "u_spawn_item": "pm_money_100", "count": 2 },
+        { "u_spawn_item": "pm_money_10", "count": 2 },
         { "u_faction_rep": 100 },
-        { "u_learn_martial_art": "zwei_big" },
-        { "u_learn_martial_art": "kurokumo_martial" }
+        { "u_learn_martial_art": "zwei_big" }
       ]
     },
     "origins": [ "ORIGIN_SECONDARY" ],

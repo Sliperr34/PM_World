@@ -1,0 +1,15 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_KR_GENERIC",
+    "dynamic_line": {
+      "math": [ "u_vitamin('kr_rank') > 0" ],
+      "yes": [ "Those Rusted Chains aren't leaving us alone. Not like we even want their business.", "Small fry, the lot of 'em.", "I heard the Thumb is moving soon..", "Care for a duel?" ],
+      "no": "What are you doing here? This is Kuro turf, do your business, or leave."
+    },
+    "responses": [
+      { "text": "Just heading out.", "topic": "TALK_DONE"},
+      { "text": "...", "topic": "TALK_DONE" }
+    ]
+  }
+]

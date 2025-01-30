@@ -84,7 +84,6 @@
     "weapon_override": "Alpha_weapon",
     "shopkeeper_item_group": [ { "group": "other_gear_shop", "trust": 0, "rigid": true } ],
     "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "markup": 5 } ],
     "traits": [
       { "group": "Hair_Gray_Alpha" },
       [ "SKIN_LIGHT", 100 ],
@@ -251,9 +250,8 @@
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
     ],
-    "shopkeeper_item_group": [ { "group": "zw_gear_shop", "trust": 50, "rigid": true } ],
+    "shopkeeper_item_group": [ { "group": "zw_gear_shop", "trust": 50, "rigid": true }, { "group": "small_ahn_shop", "trust": 0, "rigid": true } ],
     "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "markup": 3 } ],
     "bionics": [  ]
   },
   {
@@ -406,8 +404,7 @@
       { "group": "zw_food_shop3", "trust": 25, "rigid": true },
       { "group": "zw_food_shop4", "trust": 40, "rigid": true }
     ],
-    "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "markup": 3 } ]
+    "restock_interval": "5 days"
   },
   {
     "type": "npc_class",
@@ -481,9 +478,6 @@
     ],
     "worn_override": "White_worn",
     "carry_override": "Alpha_carry",
-    "shopkeeper_item_group": [ { "group": "ahn_shop", "trust": 0, "rigid": true } ],
-    "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "markup": 1 } ],
     "weapon_override": "Alpha_weapon",
     "traits": [
       [ "SKIN_LIGHT", 100 ],
@@ -968,9 +962,8 @@
     "worn_override": "Lc_clerk_worn",
     "carry_override": "Lc_sci_carry",
     "weapon_override": "Lc_guard_weapon",
-    "shopkeeper_item_group": [ { "group": "lc_gear_shop", "trust": 0, "rigid": true },{ "group": "lc_materials_shop", "trust": 0, "rigid": true } ],
+    "shopkeeper_item_group": [ { "group": "lc_gear_shop", "trust": 0, "rigid": true }, { "group": "lc_materials_shop", "trust": 0, "rigid": true }, { "group": "ahn_shop", "trust": 0, "rigid": true } ],
     "restock_interval": "5 days",
-    "shopkeeper_price_rules": [ { "markup": 5 } ],
     "traits": [
       [ "bongbong_hair", 100 ],
       [ "eye_bong", 100 ],

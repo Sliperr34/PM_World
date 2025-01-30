@@ -1,0 +1,16 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_SAYO_KR",
+    "dynamic_line": {
+      "math": [ "u_vitamin('kr_rank') > 0" ],
+      "yes": [ "If you're looking for work, ask Gin", "Need any new gear?" ],
+      "no": "Get out. Unless you have an appointment. Or want to buy some gear."
+    },
+    "responses": [
+      { "text": "Alright, see you around.", "topic": "TALK_DONE" },
+      { "text": "Yeah, let me see the gear.", "effect": "start_trade", "topic": "TALK_DONE" },
+      { "text": "Never mind.", "topic": "TALK_DONE" }
+    ]
+  }
+]

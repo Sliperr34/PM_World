@@ -33,6 +33,7 @@
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
     "price_rules": [
+      { "markup": 1.4 },
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
       { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
       { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
@@ -54,6 +55,7 @@
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
     "price_rules": [
+      { "markup": 1.1 },
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
       { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
       { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
@@ -75,6 +77,7 @@
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
     "price_rules": [
+      { "markup": 1.2 },
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
       { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
       { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
@@ -96,6 +99,7 @@
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
     "price_rules": [
+      { "markup": 1.5 },
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
       { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
       { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
@@ -117,6 +121,7 @@
     "fac_food_supply": { "calories": 115200, "vitamins": {  } },
     "wealth": 5000,
     "price_rules": [
+      { "markup": 1.5 },
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
       { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
       { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
