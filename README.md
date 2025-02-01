@@ -1,4 +1,4 @@
-Our Discord server: https://discord.gg/hrq5CnvH
+Our Discord server: https://discord.gg/KXdVpKKdY9
 
 ### Greetings from the PM World mod team!
 
