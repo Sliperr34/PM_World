@@ -13,14 +13,34 @@
     "looks_like": "zweihander",
     "price": "2200 USD",
     "price_postapoc": "280 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 160 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "b_steel",
+        "portion": 160
+      }
+    ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK" ],
     "techniques": [ "WBLOCK_1", "WIDE", "BRUTAL", "SWEEP" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 2 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 2 ]
+    ],
     "weapon_category": [ "GREAT_SWORDS" ],
-    "melee_damage": { "bash": 24, "cut": 37 }
+    "melee_damage": {
+      "bash": 24,
+      "cut": 37
+    }
   },
   {
     "id": "zw_bscabbard",
@@ -47,9 +67,20 @@
         "flag_restriction": [ "SHEATH_SWORD" ]
       }
     ],
-    "use_action": { "type": "holster", "holster_prompt": "Sheath sword", "holster_msg": "You sheath your %s" },
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "Sheath sword",
+      "holster_msg": "You sheath your %s"
+    },
     "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY", "TARDIS" ],
-    "armor": [ { "encumbrance": [ 6, 14 ], "coverage": 20, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ],
+    "armor": [
+      {
+        "encumbrance": [ 6, 14 ],
+        "coverage": 20,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_hanging_back" ]
+      }
+    ],
     "melee_damage": { "bash": 4 }
   },
   {
@@ -66,14 +97,34 @@
     "looks_like": "zweihander",
     "price": "2200 USD",
     "price_postapoc": "300 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 160 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "b_steel",
+        "portion": 160
+      }
+    ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK", "SLOW_WIELD" ],
     "techniques": [ "WBLOCK_1", "WIDE", "BRUTAL", "SWEEP" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 2 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 2 ]
+    ],
     "weapon_category": [ "GREAT_SWORDS" ],
-    "melee_damage": { "bash": 31, "cut": 45 }
+    "melee_damage": {
+      "bash": 31,
+      "cut": 45
+    }
   },
   {
     "id": "zw_bscabbard_iz",
@@ -100,9 +151,20 @@
         "flag_restriction": [ "SHEATH_SWORD" ]
       }
     ],
-    "use_action": { "type": "holster", "holster_prompt": "Sheath sword", "holster_msg": "You sheath your %s" },
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "Sheath sword",
+      "holster_msg": "You sheath your %s"
+    },
     "flags": [ "BELTED", "OVERSIZE", "WATER_FRIENDLY", "TARDIS" ],
-    "armor": [ { "encumbrance": [ 6, 14 ], "coverage": 20, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ],
+    "armor": [
+      {
+        "encumbrance": [ 6, 14 ],
+        "coverage": 20,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_hanging_back" ]
+      }
+    ],
     "melee_damage": { "bash": 4 }
   },
   {
@@ -119,14 +181,34 @@
     "looks_like": "longsword",
     "price": "1200 USD",
     "price_postapoc": "215 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "b_steel", "portion": 112 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "b_steel",
+        "portion": 112
+      }
+    ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "DURABLE_MELEE", "SHEATH_SWORD" ],
     "techniques": [ "WBLOCK_1", "BRUTAL", "RAPID" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 6 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 6 ]
+    ],
     "weapon_category": [ "LONG_SWORDS", "GREAT_SWORDS" ],
-    "melee_damage": { "bash": 11, "cut": 35 }
+    "melee_damage": {
+      "bash": 11,
+      "cut": 35
+    }
   },
   {
     "type": "GENERIC",
@@ -145,7 +227,12 @@
     "volume": "1350 ml",
     "longest_side": "80 cm",
     "//": "Same total damage and slightly higher weight than a morningstar - exchanged.",
-    "to_hit": { "grip": "weapon", "length": "short", "surface": "any", "balance": "neutral" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "any",
+      "balance": "neutral"
+    },
     "price": "1000 USD",
     "price_postapoc": "210 USD",
     "qualities": [ [ "HAMMER", 1 ] ],
@@ -166,14 +253,34 @@
     "looks_like": "rapier",
     "price": "980 USD",
     "price_postapoc": "250 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "pm_steel", "portion": 112 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "pm_steel",
+        "portion": 112
+      }
+    ],
     "repairs_with": [ "pm_steel_item" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
     "techniques": [ "RAPID", "WBLOCK_2", "PRECISE", "DEF_DISARM" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 6 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 6 ]
+    ],
     "weapon_category": [ "FENCING_WEAPONRY" ],
-    "melee_damage": { "bash": 1, "stab": 37 }
+    "melee_damage": {
+      "bash": 1,
+      "stab": 37
+    }
   },
   {
     "id": "mc_estoc",
@@ -189,14 +296,34 @@
     "looks_like": "estoc",
     "price": "1350 USD",
     "price_postapoc": "250 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "pm_steel", "portion": 112 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "pm_steel",
+        "portion": 112
+      }
+    ],
     "repairs_with": [ "pm_steel_item" ],
     "techniques": [ "WBLOCK_2", "PRECISE", "WIDE" ],
     "flags": [ "SHEATH_SWORD", "CONDUCTIVE", "DURABLE_MELEE" ],
     "weapon_category": [ "LONG_SWORDS", "FENCING_WEAPONRY" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "point", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 8 ] ],
-    "melee_damage": { "bash": 2, "stab": 40 }
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "point",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 8 ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "stab": 40
+    }
   },
   {
     "id": "bl_katana",
@@ -212,21 +339,40 @@
     "looks_like": "katana",
     "price": "150 USD",
     "price_postapoc": "140 USD",
-    "material": [ { "type": "b_steel", "portion": 160 } ],
+    "material": [
+      {
+        "type": "b_steel",
+        "portion": 160
+      }
+    ],
     "repairs_with": [ "b_steel_item" ],
     "flags": [ "DURABLE_MELEE" ],
     "techniques": [ "WBLOCK_2", "BRUTAL", "WIDE", "RAPID" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 14 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 14 ]
+    ],
     "weapon_category": [ "JAPANESE_SWORDS", "MEDIUM_SWORDS" ],
-    "melee_damage": { "bash": 7, "cut": 52 }
+    "melee_damage": {
+      "bash": 7,
+      "cut": 52
+    }
   },
   {
     "type": "ARMOR",
     "id": "rc_chains",
     "symbol": "3",
     "color": "light_gray",
-    "name": { "str": "hand chain", "str_pl": "hand chains" },
+    "name": {
+      "str": "hand chain",
+      "str_pl": "hand chains"
+    },
     "looks_like": "chain",
     "description": "A lengty steel chain which you wraped around your fits. Quite encumbraing but those weighty punches will hit like a train",
     "material": [ "b_steel" ],
@@ -234,7 +380,12 @@
     "volume": "390 ml",
     "weight": "340 g",
     "price_postapoc": "2 USD",
-    "to_hit": { "grip": "weapon", "length": "hand", "surface": "any", "balance": "neutral" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "hand",
+      "surface": "any",
+      "balance": "neutral"
+    },
     "qualities": [ [ "HAMMER", 1 ] ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE" ],
     "techniques": [ "WIDE", "BRUTAL" ],
@@ -247,7 +398,10 @@
         "specifically_covers": [ "hand_fingers_l", "hand_fingers_r" ]
       }
     ],
-    "melee_damage": { "bash": 8, "stab": 3 }
+    "melee_damage": {
+      "bash": 8,
+      "stab": 3
+    }
   },
   {
     "type": "GENERIC",
@@ -255,7 +409,10 @@
     "category": "weapons",
     "price": "52 USD",
     "price_postapoc": "8 USD",
-    "name": { "str": "laboratory throwing knife", "str_pl": "laboratory throwing knifes" },
+    "name": {
+      "str": "laboratory throwing knife",
+      "str_pl": "laboratory throwing knifes"
+    },
     "symbol": ";",
     "color": "light_gray",
     "description": "A extremely thin, flat knife made for throwing. Cold at touch and incredebly light. So sharp that it can even pierce armor, but because of its very small size and lack of a normal handle, it is very difficult to make the necessary effort to do at least something in close combat",
@@ -267,8 +424,17 @@
     "to_hit": -3,
     "flags": [ "SHEATH_KNIFE", "ALLOWS_BODY_BLOCK", "FRAGILE_MELEE" ],
     "weapon_category": [ "KNIVES" ],
-    "thrown_damage": [ { "damage_type": "stab", "amount": 23, "armor_penetration": 21 } ],
-    "melee_damage": { "bash": 1, "stab": 3 }
+    "thrown_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 23,
+        "armor_penetration": 21
+      }
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "stab": 3
+    }
   },
   {
     "id": "kr_katana",
@@ -285,14 +451,34 @@
     "looks_like": "katana",
     "price": "400 USD",
     "price_postapoc": "155 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "c_steel",
+        "portion": 96
+      }
+    ],
     "repairs_with": [ "c_steel_item" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
     "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 21 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 21 ]
+    ],
     "weapon_category": [ "MEDIUM_SWORDS" ],
-    "melee_damage": { "bash": 5, "cut": 43 }
+    "melee_damage": {
+      "bash": 5,
+      "cut": 43
+    }
   },
   {
     "id": "kr_cloud_katana",
@@ -309,20 +495,43 @@
     "looks_like": "katana",
     "price": "800 USD",
     "price_postapoc": "145 USD",
-    "material": [ { "type": "pm_leather", "portion": 1.1 }, { "type": "c_steel", "portion": 96 } ],
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "c_steel",
+        "portion": 96
+      }
+    ],
     "repairs_with": [ "c_steel_item" ],
     "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
     "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 21 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 21 ]
+    ],
     "weapon_category": [ "MEDIUM_SWORDS" ],
-    "melee_damage": { "bash": 5, "cut": 51 }
+    "melee_damage": {
+      "bash": 5,
+      "cut": 51
+    }
   },
   {
     "type": "GENERIC",
     "id": "lab_bat",
     "category": "weapons",
-    "name": { "str": "lab security baton", "str_pl": "lab security batons" },
+    "name": {
+      "str": "lab security baton",
+      "str_pl": "lab security batons"
+    },
     "description": "Used by lab security personal. Does little damage but quite light",
     "weight": "380 g",
     "color": "dark_gray",
@@ -335,7 +544,12 @@
     "weapon_category": [ "BATONS", "FENCING_WEAPONRY" ],
     "volume": "1 L",
     "longest_side": "50 cm",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "20 USD",
     "//": "Make a percentage of armor penetration, around 35%",
@@ -345,7 +559,10 @@
     "type": "GENERIC",
     "id": "ego_case",
     "category": "weapons",
-    "name": { "str": "EGO suitcase", "str_pl": "EGO suitcases" },
+    "name": {
+      "str": "EGO suitcase",
+      "str_pl": "EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO. That one without marking",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -356,7 +573,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "8 USD",
     "melee_damage": { "bash": 8 }
@@ -365,7 +587,10 @@
     "type": "GENERIC",
     "id": "ego_blank",
     "category": "weapons",
-    "name": { "str": "blank EGO suitcase", "str_pl": "blank EGO suitcases" },
+    "name": {
+      "str": "blank EGO suitcase",
+      "str_pl": "blank EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO. That one without marking. You even not sure if this realy an EGO",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -376,7 +601,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "8 USD",
     "melee_damage": { "bash": 8 }
@@ -385,7 +615,10 @@
     "type": "GENERIC",
     "id": "ego_zayin",
     "category": "weapons",
-    "name": { "str": "ZAYIN EGO suitcase", "str_pl": "ZAYIN EGO suitcases" },
+    "name": {
+      "str": "ZAYIN EGO suitcase",
+      "str_pl": "ZAYIN EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO.",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -396,7 +629,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "10 USD",
     "melee_damage": { "bash": 8 }
@@ -405,7 +643,10 @@
     "type": "GENERIC",
     "id": "ego_teth",
     "category": "weapons",
-    "name": { "str": "TETH EGO suitcase", "str_pl": "TETH EGO suitcases" },
+    "name": {
+      "str": "TETH EGO suitcase",
+      "str_pl": "TETH EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO.",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -416,7 +657,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "40 USD",
     "melee_damage": { "bash": 8 }
@@ -425,7 +671,10 @@
     "type": "GENERIC",
     "id": "ego_he",
     "category": "weapons",
-    "name": { "str": "HE EGO suitcase", "str_pl": "HE EGO suitcases" },
+    "name": {
+      "str": "HE EGO suitcase",
+      "str_pl": "HE EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO.",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -436,7 +685,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "160 USD",
     "melee_damage": { "bash": 8 }
@@ -445,7 +699,10 @@
     "type": "GENERIC",
     "id": "ego_waw",
     "category": "weapons",
-    "name": { "str": "WAW EGO suitcase", "str_pl": "WAW EGO suitcases" },
+    "name": {
+      "str": "WAW EGO suitcase",
+      "str_pl": "WAW EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO.",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -456,7 +713,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "640 USD",
     "melee_damage": { "bash": 8 }
@@ -465,7 +727,10 @@
     "type": "GENERIC",
     "id": "ego_aleph",
     "category": "weapons",
-    "name": { "str": "ALEPH EGO suitcase", "str_pl": "ALEPH EGO suitcases" },
+    "name": {
+      "str": "ALEPH EGO suitcase",
+      "str_pl": "ALEPH EGO suitcases"
+    },
     "description": "Suitcase for transporting EGO. Goddamn, how do you get this?",
     "weight": "3 kg",
     "color": "dark_gray",
@@ -476,7 +741,12 @@
     "volume": "5 L",
     "longest_side": "70 cm",
     "looks_like": "briefcase",
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "any", "balance": "good" },
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "any",
+      "balance": "good"
+    },
     "price": "300 USD",
     "price_postapoc": "1280 USD",
     "melee_damage": { "bash": 8 }
@@ -498,9 +768,341 @@
     "repairs_with": [ "pm_steel_item" ],
     "flags": [ "ALWAYS_TWOHAND", "DURABLE_MELEE", "SHEATH_SWORD", "REACH_ATTACK", "MESSY", "NONCONDUCTIVE", "POLEARM", "WHIP" ],
     "techniques": [ "WBLOCK_2", "WIDE", "BRUTAL", "SWEEP", "RAPID" ],
-    "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", -4 ] ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", -4 ]
+    ],
     "weapon_category": [ "GREAT_SWORDS" ],
-    "melee_damage": { "bash": 44, "cut": 28 }
+    "melee_damage": {
+      "bash": 44,
+      "cut": 28
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "w_l2_mace",
+    "name": { "str": "L2 cleanup agent shock baton" },
+    "description": "A one handed shock baton made of some black polymer. All of the power settings would be lethal to a human, unlike a normal stun baton. \n\nIt's branded in the markings of W Corp.",
+    "weight": "1300 g",
+    "color": "dark_gray",
+    "symbol": "/",
+    "looks_like": "PR24-extended",
+    "material": [ "b_polymer" ],
+    "repairs_with": [ "b_polymer_item" ],
+    "techniques": [ "WBLOCK_1", "SWEEP", "PRECISE" ],
+    "flags": [ "DURABLE_MELEE", "NONCONDUCTIVE", "BELT_CLIP" ],
+    "weapon_category": [ "MACES" ],
+    "volume": "1350 ml",
+    "longest_side": "80 cm",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "price": "1000 USD",
+    "price_postapoc": "210 USD",
+    "qualities": [ [ "HAMMER", 1 ] ],
+    "category": "weapons",
+    "melee_damage": { "bash": 37 }
+  },
+  {
+    "type": "GENERIC",
+    "id": "w_l2_hatchet",
+    "symbol": ";",
+    "looks_like": "hatchet",
+    "color": "light_gray",
+    "name": {
+      "str": "L2 cleanup agent hatchet"
+    },
+    "description": "A one-handed hatchet with a large blade head. The blade edge has a blue tint, and it appears like you might be able to turn it on. \n\nIt's branded in the markings of W Corp.",
+    "category": "tools",
+    "price": "1000 USD",
+    "price_postapoc": "210 USD",
+    "material": [
+      "pm_steel",
+      "b_polymer"
+    ],
+    "repairs_with": [ "pm_steel_item" ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "weight": "907 g",
+    "volume": "1 L",
+    "longest_side": "38 cm",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "line",
+      "balance": "neutral"
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP",
+      "CONDUCTIVE",
+      "SHEATH_AXE"
+    ],
+    "weapon_category": [
+      "HAND_AXES"
+    ],
+    "qualities": [
+      [
+        "AXE",
+        2
+      ],
+      [
+        "CUT",
+        1
+      ],
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        16
+      ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 30
+    }
+  },
+  {
+    "id": "w_l2_polearm",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "w_polearm"
+    },
+    "description": "A sturdy polearm with a blue tinted blade edge. It resembles a glaive somewhat. You think you might be able to turn it on. \n\nIt's branded in the markings of W Corp.",
+    "price": "500 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        -28
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "POLEARM",
+      "SHEATH_SPEAR",
+      "ALWAYS_TWOHAND"
+    ],
+    "weapon_category": [
+      "HOOKING_WEAPONRY",
+      "POLEARMS"
+    ],
+    "techniques": [
+      "WIDE",
+      "WBLOCK_1"
+    ],
+    "weight": "2100 g",
+    "volume": "2500 ml",
+    "longest_side": "180 cm",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "neutral"
+    },
+    "price_postapoc": "80 USD",
+    "melee_damage": {
+      "bash": 10,
+      "cut": 40
+    }
+  },
+  {
+    "id": "w_l3_katana",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str_sp": "L3 cleanup agent katana" },
+    "description": "A long katana with a blue blade edge. There's a number of power settings on the handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters. \n\nIt's branded in the markings of W Corp.",
+    "weight": "1073 g",
+    "volume": "2 L",
+    "longest_side": "86 cm",
+    "symbol": "/",
+    "ascii_picture": "katana",
+    "color": "light_gray",
+    "looks_like": "katana",
+    "price": "800 USD",
+    "price_postapoc": "145 USD",
+    "material": [
+      {
+        "type": "b_polymer",
+        "portion": 1.1
+      },
+      {
+        "type": "c_steel",
+        "portion": 96
+      }
+    ],
+    "repairs_with": [ "c_steel_item" ],
+    "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
+    "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 21 ]
+    ],
+    "weapon_category": [ "LONG_SWORDS" ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 51
+    }
+  },
+  {
+    "id": "w_l3_dual_blade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "L3 cleanup agent dual blades" },
+    "description": "A pair of one handed swords with blue blade edges. Both have a number of power settings on their handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters.  \n\nIt's branded in the markings of W Corp.",
+    "weight": "2104 g",
+    "volume": "2750 ml",
+    "longest_side": "150 cm",
+    "symbol": "/",
+    "color": "light_gray",
+    "looks_like": "longsword",
+    "price": "1200 USD",
+    "price_postapoc": "215 USD",
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "b_steel",
+        "portion": 112
+      }
+    ],
+    "repairs_with": [ "b_steel_item" ],
+    "flags": [ "DURABLE_MELEE", "SHEATH_SWORD" ],
+    "techniques": [ "WBLOCK_1", "BRUTAL", "RAPID" ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 6 ]
+    ],
+    "weapon_category": [ "MEDIUM_SWORDS" ],
+    "melee_damage": {
+      "bash": 11,
+      "cut": 35
+    }
+  },
+  {
+    "id": "w_l3_short_blade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "L3 cleanup agent short blade" },
+    "description": "A short one handed blade with a blue blade edge, it's about the size of a small machete overall. There's a number of power settings on the handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters. \n\nIt's branded in the markings of W Corp. ",
+    "weight": "750 g",
+    "volume": "1750 ml",
+    "longest_side": "50 cm",
+    "price": "120 USD",
+    "price_postapoc": "30 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "line",
+      "balance": "good"
+    },
+    "material": [
+      "bronze"
+    ],
+    "symbol": "/",
+    "color": "yellow",
+    "techniques": [
+      "WBLOCK_2",
+      "DEF_DISARM"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "weapon_category": [
+      "SHORT_SWORDS"
+    ],
+    "melee_damage": {
+      "bash": 9,
+      "cut": 35
+    }
+  },
+  {
+    "type": "ARMOR",
+    "id": "w_l3_gauntlet",
+    "symbol": "3",
+    "color": "light_gray",
+    "name": { "str": "L3 cleanup agent captain's gauntlets" },
+    "looks_like": "chain",
+    "description": "A pait of large gauntlets made for punching. A tablet is attached to the bottom of one of the gauntlets, displaying information on your current dimension and allowing you to select various power settings.\n\nIt's branded in the markings of W Corp.",
+    "material": [ "b_steel" ],
+    "repairs_with": [ "b_steel_item" ],
+    "volume": "390 ml",
+    "weight": "340 g",
+    "price_postapoc": "2 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "hand",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "qualities": [ [ "HAMMER", 1 ] ],
+    "flags": [ "DURABLE_MELEE", "CONDUCTIVE" ],
+    "techniques": [ "BRUTAL", "WBLOCK_2" ],
+    "material_thickness": 2,
+    "armor": [
+      {
+        "encumbrance": 9,
+        "coverage": 55,
+        "covers": [ "hand_l", "hand_r", "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "hand_back_l", "hand_back_r", "hand_wrist_l", "hand_wrist_r", "hand_fingers_l", "hand_fingers_r", "hand_palm_l", "hand_palm_r" ]
+      }
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "stab": 3
+    }
   }
 ]
