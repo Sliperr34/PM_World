@@ -502,5 +502,326 @@
     "qualities": [ [ "CUT", 1 ], [ "BUTCHER", -4 ] ],
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "bash": 44, "cut": 28 }
+  },
+  {
+    "type": "GENERIC",
+    "id": "w_l2_mace",
+    "name": { "str": "L2 cleanup agent shock baton" },
+    "description": "A one handed shock baton made of some black polymer. All of the power settings would be lethal to a human, unlike a normal stun baton. \n\nIt's branded in the markings of W Corp.",
+    "weight": "1300 g",
+    "color": "dark_gray",
+    "symbol": "/",
+    "looks_like": "PR24-extended",
+    "material": [ "b_polymer" ],
+    "repairs_with": [ "b_polymer_item" ],
+    "techniques": [ "WBLOCK_1", "SWEEP", "PRECISE" ],
+    "flags": [ "DURABLE_MELEE", "NONCONDUCTIVE", "BELT_CLIP" ],
+    "weapon_category": [ "MACES" ],
+    "volume": "1350 ml",
+    "longest_side": "80 cm",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "price": "1000 USD",
+    "price_postapoc": "210 USD",
+    "qualities": [ [ "HAMMER", 1 ] ],
+    "category": "weapons",
+    "melee_damage": { "bash": 37 }
+  },
+  {
+    "type": "GENERIC",
+    "id": "w_l2_hatchet",
+    "symbol": ";",
+    "looks_like": "hatchet",
+    "color": "light_gray",
+    "name": {
+      "str": "L2 cleanup agent hatchet"
+    },
+    "description": "A one-handed hatchet with a large blade head. The blade edge has a blue tint, and it appears like you might be able to turn it on. \n\nIt's branded in the markings of W Corp.",
+    "category": "tools",
+    "price": "1000 USD",
+    "price_postapoc": "210 USD",
+    "material": [
+      "pm_steel",
+      "b_polymer"
+    ],
+    "repairs_with": [ "pm_steel_item" ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "weight": "907 g",
+    "volume": "1 L",
+    "longest_side": "38 cm",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "line",
+      "balance": "neutral"
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP",
+      "CONDUCTIVE",
+      "SHEATH_AXE"
+    ],
+    "weapon_category": [
+      "HAND_AXES"
+    ],
+    "qualities": [
+      [
+        "AXE",
+        2
+      ],
+      [
+        "CUT",
+        1
+      ],
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        16
+      ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 30
+    }
+  },
+  {
+    "id": "w_l2_polearm",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "w_polearm"
+    },
+    "description": "A sturdy polearm with a blue tinted blade edge. It resembles a glaive somewhat. You think you might be able to turn it on. \n\nIt's branded in the markings of W Corp.",
+    "price": "500 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        -28
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "POLEARM",
+      "SHEATH_SPEAR",
+      "ALWAYS_TWOHAND"
+    ],
+    "weapon_category": [
+      "HOOKING_WEAPONRY",
+      "POLEARMS"
+    ],
+    "techniques": [
+      "WIDE",
+      "WBLOCK_1"
+    ],
+    "weight": "2100 g",
+    "volume": "2500 ml",
+    "longest_side": "180 cm",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "neutral"
+    },
+    "price_postapoc": "80 USD",
+    "melee_damage": {
+      "bash": 10,
+      "cut": 40
+    }
+  },
+  {
+    "id": "w_l3_katana",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str_sp": "L3 cleanup agent katana" },
+    "description": "A long katana with a blue blade edge. There's a number of power settings on the handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters. \n\nIt's branded in the markings of W Corp.",
+    "weight": "1073 g",
+    "volume": "2 L",
+    "longest_side": "86 cm",
+    "symbol": "/",
+    "ascii_picture": "katana",
+    "color": "light_gray",
+    "looks_like": "katana",
+    "price": "800 USD",
+    "price_postapoc": "145 USD",
+    "material": [
+      {
+        "type": "b_polymer",
+        "portion": 1.1
+      },
+      {
+        "type": "c_steel",
+        "portion": 96
+      }
+    ],
+    "repairs_with": [ "c_steel_item" ],
+    "flags": [ "DURABLE_MELEE", "CONDUCTIVE", "SHEATH_SWORD" ],
+    "techniques": [ "RAPID", "WBLOCK_2", "PRECISE" ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 21 ]
+    ],
+    "weapon_category": [ "LONG_SWORDS" ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 51
+    }
+  },
+  {
+    "id": "w_l3_dual_blade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "L3 cleanup agent dual blades" },
+    "description": "A pair of one handed swords with blue blade edges. Both have a number of power settings on their handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters.  \n\nIt's branded in the markings of W Corp.",
+    "weight": "2104 g",
+    "volume": "2750 ml",
+    "longest_side": "150 cm",
+    "symbol": "/",
+    "color": "light_gray",
+    "looks_like": "longsword",
+    "price": "1200 USD",
+    "price_postapoc": "215 USD",
+    "material": [
+      {
+        "type": "pm_leather",
+        "portion": 1.1
+      },
+      {
+        "type": "b_steel",
+        "portion": 112
+      }
+    ],
+    "repairs_with": [ "b_steel_item" ],
+    "flags": [ "DURABLE_MELEE", "SHEATH_SWORD" ],
+    "techniques": [ "WBLOCK_1", "BRUTAL", "RAPID" ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "line",
+      "balance": "good"
+    },
+    "qualities": [
+      [ "CUT", 1 ],
+      [ "BUTCHER", 6 ]
+    ],
+    "weapon_category": [ "MEDIUM_SWORDS" ],
+    "melee_damage": {
+      "bash": 11,
+      "cut": 35
+    }
+  },
+  {
+    "id": "w_l3_short_blade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": { "str": "L3 cleanup agent short blade" },
+    "description": "A short one handed blade with a blue blade edge, it's about the size of a small machete overall. There's a number of power settings on the handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters. \n\nIt's branded in the markings of W Corp. ",
+    "weight": "750 g",
+    "volume": "1750 ml",
+    "longest_side": "50 cm",
+    "price": "120 USD",
+    "price_postapoc": "30 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "short",
+      "surface": "line",
+      "balance": "good"
+    },
+    "material": [
+      "bronze"
+    ],
+    "symbol": "/",
+    "color": "yellow",
+    "techniques": [
+      "WBLOCK_2",
+      "DEF_DISARM"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "weapon_category": [
+      "SHORT_SWORDS"
+    ],
+    "melee_damage": {
+      "bash": 9,
+      "cut": 35
+    }
+  },
+  {
+    "type": "ARMOR",
+    "id": "w_l3_gauntlet",
+    "symbol": "3",
+    "color": "light_gray",
+    "name": { "str": "L3 cleanup agent captain's gauntlets" },
+    "looks_like": "chain",
+    "description": "A pait of large gauntlets made for punching. A tablet is attached to the bottom of one of the gauntlets, displaying information on your current dimension and allowing you to select various power settings.\n\nIt's branded in the markings of W Corp.",
+    "material": [ "b_steel" ],
+    "repairs_with": [ "b_steel_item" ],
+    "volume": "390 ml",
+    "weight": "340 g",
+    "price_postapoc": "2 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "hand",
+      "surface": "any",
+      "balance": "neutral"
+    },
+    "qualities": [ [ "HAMMER", 1 ] ],
+    "flags": [ "DURABLE_MELEE", "CONDUCTIVE" ],
+    "techniques": [ "BRUTAL", "WBLOCK_2" ],
+    "material_thickness": 2,
+    "armor": [
+      {
+        "encumbrance": 9,
+        "coverage": 55,
+        "covers": [ "hand_l", "hand_r", "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r", "hand_back_l", "hand_back_r", "hand_wrist_l", "hand_wrist_r", "hand_fingers_l", "hand_fingers_r", "hand_palm_l", "hand_palm_r" ]
+      }
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "stab": 3
+    }
   }
 ]

@@ -1075,5 +1075,421 @@
     "environmental_protection": 1,
     "material_thickness": 1,
     "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY"]
+  },
+  {
+    "id": "w_shirt",
+    "type": "ARMOR",
+    "name": { "str": "W Corp shirt" },
+    "description": "A dark formal shirt worn by employees of W Corp.",
+    "copy-from": "dress_shirt",
+    "price_postapoc": "10USD",
+    "looks_like": "pm_shirt_yel",
+    "material": [ "pm_cotton" ],
+    "repairs_with": [ "pm_cotton_item" ]
+  },
+  {
+    "id": "w_trousers",
+    "type": "ARMOR",
+    "name": { "str_sp": "W Corp trousers" },
+    "description": "A pair of dark blue trousers worn by employees of W Corp.",
+    "weight": "421 g",
+    "volume": "2 L",
+    "price": "12 USD",
+    "price_postapoc": "7 USD",
+    "to_hit": 1,
+    "material": [ "pm_cotton" ],
+    "repairs_with": [ "pm_cotton_item" ],
+    "symbol": "[",
+    "looks_like": "pants",
+    "color": "black",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "11 cm",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "max_item_length": "11 cm",
+        "moves": 90
+      }
+    ],
+    "warmth": 8,
+    "material_thickness": 0.2,
+    "flags": [ "VARSIZE", "POCKETS", "FANCY" ],
+    "armor": [
+      {
+        "encumbrance": [ 3, 5 ],
+        "coverage": 100,
+        "covers": [ "leg_l", "leg_r" ]
+      }
+    ]
+  },
+  {
+    "id": "w_cap",
+    "type": "ARMOR",
+    "name": {
+      "str": "W Corp cap"
+    },
+    "description": "A black cap with the logo of W corp embroidered on the front.",
+    "weight": "92 g",
+    "volume": "500 ml",
+    "price": "15 USD",
+    "price_postapoc": "80 cent",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "hat_ball",
+    "color": "dark_gray",
+    "warmth": 5,
+    "material_thickness": 0.3,
+    "environmental_protection": 1,
+    "flags": [
+      "VARSIZE",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance_modifiers": [
+          "NONE"
+        ],
+        "coverage": 100,
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown",
+          "head_forehead"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "w_l2_chestpiece",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "L2 cleanup agent chestpiece" },
+    "description": "A sturdy chestpiece worn by junior W Corp cleanup agents. Most agents will only wear this once before they quit or suffer an unfortunate workplace accident, and it seems you're the latest in that line. Designed to prioritise mobility and protect you from electric shocks.",
+    "weight": "3260 g",
+    "volume": "5 L",
+    "price": "350 USD",
+    "price_postapoc": "140 USD",
+    "to_hit": -3,
+    "material": [ "b_polymer", "l_cotton" ],
+    "repairs_with": [ "b_polymer_item" ],
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "light_gray",
+    "warmth": 15,
+    "material_thickness": 4,
+    "flags": [ "STURDY", "ELECTRIC_IMMUNE" ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "l_cotton",
+            "covered_by_mat": 100,
+            "thickness": 0.5
+          },
+          {
+            "type": "b_polymer",
+            "covered_by_mat": 95,
+            "thickness": 3.3,
+            "ignore_sheet_thickness": true
+          }
+        ],
+        "encumbrance": 3,
+        "coverage": 94,
+        "cover_vitals": 70,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ]
+      },
+      {
+        "material": [
+          {
+            "type": "l_cotton",
+            "covered_by_mat": 100,
+            "thickness": 0.5
+          },
+          {
+            "type": "b_polymer",
+            "covered_by_mat": 95,
+            "thickness": 3.3,
+            "ignore_sheet_thickness": true
+          }
+        ],
+        "encumbrance": 0,
+        "coverage": 85,
+        "cover_vitals": 60,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ]
+      }
+    ],
+    "melee_damage": { "bash": 6 }
+  },
+  {
+    "id": "w_l3_chestpiece",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": { "str": "L3 cleanup agent chestpiece" },
+    "description": "A sturdy chestpiece worn by senior W Corp cleanup agents. You hear a small crackling noise coming from within the armor, and the chestpiece itself is warm to the touch. Either way, it appears safe to wear, and doesn't impede your movements much. ",
+    "weight": "3260 g",
+    "volume": "5 L",
+    "price": "350 USD",
+    "price_postapoc": "140 USD",
+    "to_hit": -3,
+    "material": [ "b_polymer", "l_cotton" ],
+    "repairs_with": [ "b_polymer_item" ],
+    "symbol": "[",
+    "looks_like": "vest_leather",
+    "color": "light_gray",
+    "warmth": 15,
+    "material_thickness": 4,
+    "flags": [ "STURDY", "ELECTRIC_IMMUNE" ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "l_cotton",
+            "covered_by_mat": 100,
+            "thickness": 0.5
+          },
+          {
+            "type": "b_polymer",
+            "covered_by_mat": 95,
+            "thickness": 3.3,
+            "ignore_sheet_thickness": true
+          }
+        ],
+        "encumbrance": 3,
+        "coverage": 94,
+        "cover_vitals": 70,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_upper" ]
+      },
+      {
+        "material": [
+          {
+            "type": "l_cotton",
+            "covered_by_mat": 100,
+            "thickness": 0.5
+          },
+          {
+            "type": "b_polymer",
+            "covered_by_mat": 95,
+            "thickness": 3.3,
+            "ignore_sheet_thickness": true
+          }
+        ],
+        "encumbrance": 0,
+        "coverage": 85,
+        "cover_vitals": 60,
+        "covers": [ "torso" ],
+        "specifically_covers": [ "torso_lower" ]
+      }
+    ],
+    "melee_damage": { "bash": 6 }
+  },
+  {
+    "id": "w_bracers",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "Cleanup agent bracers",
+      "str_pl": "Pairs of cleanup agent bracers"
+    },
+    "description": "A pair of metalic bracers, used to protect your arms from harm. They're lighter than you expected.",
+    "weight": "1500 g",
+    "volume": "1850 ml",
+    "price_postapoc": "40 USD",
+    "to_hit": -1,
+    "material": [ "pm_steel" ],
+    "repairs_with": [ "pm_steel_item" ],
+    "symbol": "[",
+    "looks_like": "armguard_hard",
+    "color": "dark_gray",
+    "material_thickness": 3.5,
+    "sided": true,
+    "flags": [ "WATER_FRIENDLY", "BELTED", "BLOCK_WHILE_WORN", "STURDY" ],
+    "armor": [
+      {
+        "covers": [ "arm_l", "arm_r" ],
+        "encumbrance": 3,
+        "coverage": 90,
+        "cover_melee": 90,
+        "cover_ranged": 95,
+        "cover_vitals": 90,
+        "specifically_covers": [ "arm_lower_l", "arm_lower_r" ]
+      }
+    ]
+  },
+  {
+    "id": "w_gloves",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "Pair of cleanup agent gloves",
+      "str_pl": "Pairs of cleanup agent gloves"
+    },
+    "description": "A pair of cut resistant gloves worn by W Corp cleanup agents.'",
+    "weight": "220 g",
+    "volume": "500 ml",
+    "price": "52 USD",
+    "price_postapoc": "15 USD",
+    "material": [
+      "kevlar",
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "fire_gauntlets",
+    "color": "dark_gray",
+    "warmth": 20,
+    "material_thickness": 2,
+    "environmental_protection": 4,
+    "flags": [
+      "VARSIZE",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 100,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "w_boots",
+    "type": "ARMOR",
+    "name": {
+      "str": "Pair of cleanup agent boots",
+      "str_pl": "Pairs of cleanup agent boots"
+    },
+    "description": "A pair of surprisingly tough leather boots, designed to be easy to clean and wash in tandem with proprietary W Corp detergents.",
+    "weight": "1360 g",
+    "volume": "2645 ml",
+    "price": "100 USD",
+    "price_postapoc": "20 USD",
+    "to_hit": -1,
+    "symbol": "[",
+    "repairs_with": [ "pm_leather_item" ],
+    "looks_like": "dress_shoes",
+    "color": "dark_gray",
+    "warmth": 16,
+    "environmental_protection": 3,
+    "flags": [ "VARSIZE", "WATERPROOF" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "material": [
+          {
+            "type": "pm_leather",
+            "covered_by_mat": 100,
+            "thickness": 2.5
+          }
+        ],
+        "encumbrance": 12,
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          {
+            "type": "pm_leather",
+            "covered_by_mat": 100,
+            "thickness": 0.1
+          },
+          {
+            "type": "rubber",
+            "covered_by_mat": 100,
+            "thickness": 6.0
+          }
+        ],
+        "coverage": 100
+      }
+    ],
+    "melee_damage": { "bash": 2 }
+  },
+  {
+    "id": "w_advanced_boots",
+    "type": "ARMOR",
+    "name": {
+      "str": "Pair of advanced cleanup agent boots",
+      "str_pl": "Pairs of advanced cleanup agent boots"
+    },
+    "description": "A pair of tough metallic greaves that lead up to the ankle. When powered, they grant improve mobility and secure the user to the ground, even in areas of low gravity or poor dimensional stability. Worn exclusively by high ranking W Corp cleanup agents.",
+    "weight": "1360 g",
+    "volume": "2645 ml",
+    "price": "100 USD",
+    "price_postapoc": "20 USD",
+    "to_hit": -1,
+    "symbol": "[",
+    "repairs_with": [ "pm_steel" ],
+    "looks_like": "dress_shoes",
+    "color": "dark_gray",
+    "warmth": 16,
+    "environmental_protection": 3,
+    "flags": [ "VARSIZE", "WATERPROOF" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l"
+        ],
+        "material": [
+          {
+            "type": "pm_leather",
+            "covered_by_mat": 100,
+            "thickness": 2.5
+          }
+        ],
+        "encumbrance": 12,
+        "coverage": 100
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          {
+            "type": "pm_steel",
+            "covered_by_mat": 100,
+            "thickness": 0.1
+          },
+          {
+            "type": "rubber",
+            "covered_by_mat": 100,
+            "thickness": 6.0
+          }
+        ],
+        "coverage": 100
+      }
+    ],
+    "melee_damage": { "bash": 2 }
   }
 ]
