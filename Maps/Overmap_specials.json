@@ -120,5 +120,25 @@
     "occurrences": [ 100, 100 ],
     "priority": 1,
     "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "w_corp_station",
+    "overmaps": [
+      { "point": [ 1, 0, 0 ], "overmap": "w_station_rt_north" },
+      { "point": [ 0, 0, 0 ], "overmap": "w_station_mt1_north" },
+      { "point": [ -1, 0, 0 ], "overmap": "w_station_mt2_north" },
+      { "point": [ -2, 0, 0 ], "overmap": "w_station_lt_north" },
+      { "point": [ 1, 1, 0 ], "overmap": "w_station_rb_north" },
+      { "point": [ 0, 1, 0 ], "overmap": "w_station_mb1_north" },
+      { "point": [ -1, 1, 0 ], "overmap": "w_station_mb2_north" },
+      { "point": [ -2, 1, 0 ], "overmap": "w_station_lb_north" }
+    ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 6, 15 ],
+    "city_sizes": [ 10, -1 ],
+    "occurrences": [ 100, 100 ],
+    "priority": 1,
+    "flags": [ "CLASSIC", "MAN_MADE", "SAFE_AT_WORLDGEN", "GLOBALLY_UNIQUE" ]
   }
 ]

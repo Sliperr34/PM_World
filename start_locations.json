@@ -4,5 +4,11 @@
     "id": "hhpp_start",
     "name": "HamHamPangPang",
     "terrain": [ "hhpp1" ]
+  },
+  {
+    "type": "start_location",
+    "id": "w_corp_station_start",
+    "name": "Warp train station",
+    "terrain": [ "w_station_mb2" ]
   }
 ]

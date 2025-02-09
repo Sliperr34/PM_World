@@ -6,10 +6,17 @@
     "points": 0,
     "description": "You were just at HamHamPangPang, enjoying one of their deluxe sandwiches when the world erupted into chaos. Not the normal chaos either, the kind that hit your stomach with a lead weight and ruined what little time off you had managed to accrue. What was it this time?",
     "start_name": "HamHamPangPang",
-    "allowed_locs": [
-      "hhpp_start"
-    ],
-    "professions": [
-    ]
+    "allowed_locs": [ "hhpp_start" ],
+    "professions": [  ]
+  },
+  {
+    "type": "scenario",
+    "id": "w_station_scenario",
+    "name": "!!!W CORP STATION TEST!!!",
+    "points": 0,
+    "description": "Test for W station location",
+    "start_name": "W station",
+    "allowed_locs": [ "w_corp_station_start" ],
+    "professions": [  ]
   }
 ]
