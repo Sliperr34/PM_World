@@ -1,0 +1,7 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_internet_access",
+        "effect": [ { "open_dialogue": { "topic": "TALK_INTERNET_MENU_MAIN" } } ]
+    }   
+]

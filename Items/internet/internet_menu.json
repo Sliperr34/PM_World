@@ -1,0 +1,10 @@
+[
+    {
+        "type": "talk_topic",
+        "id": "TALK_INTERNET_MENU_MAIN",
+        "dynamic_line": "Welcome to The City's internet. What would you like to do?",
+        "responses" : [
+            { "text": "*…* ", "topic": "TALK_DONE"}
+        ]
+    }
+]

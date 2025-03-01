@@ -28,6 +28,11 @@
     "id": "PROPHET_RESIST"
   },
   {
+    "type": "json_flag",
+    "id": "INTERNET_ACCESS",
+    "info": "This device is connected to The City's internet."
+  },
+  {
     "type": "monster_flag",
     "id": "PROPHET_MINION"
   }
