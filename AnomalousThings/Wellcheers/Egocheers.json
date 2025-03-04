@@ -13,7 +13,8 @@
     "color": "blue",
     "repairs_with": "wellcherry_can",
     "relic_data": { "passive_effects": [ { "id": "soda_suit_1" }, { "id": "soda_suit_2" }, { "id": "soda_suit_3" } ] },
-    "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "ONLY_ONE", "TRADER_AVOID", "NO_SALVAGE" ],
+    "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "TRADER_AVOID", "NO_SALVAGE" ],
+    "max_worn": 1,
     "armor": [
       {
         "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],

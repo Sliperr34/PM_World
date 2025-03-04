@@ -947,7 +947,8 @@
     "material": [ "l_steel", "b_polymer", "l_cotton" ],
     "symbol": "[",
     "color": "white",
-    "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "ONLY_ONE", "NO_REPAIR" ],
+    "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "NO_REPAIR" ],
+    "max_worn": 1,
     "armor": [
       {
         "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
