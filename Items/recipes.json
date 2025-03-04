@@ -207,5 +207,57 @@
         ]
       ]
     ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "smart_phone_internet",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_OTHER",
+    "skill_used": "computer",
+    "difficulty": 1,
+    "time": "10 m",
+    "description": "Insert a SIM card into your smartphone, allowing it to access the internet.",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "smart_phone",
+          1
+        ]
+      ],
+      [
+        [
+          "internet_sim_card",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "laptop_internet",
+    "category": "CC_PM",
+    "subcategory": "CSC_PM_OTHER",
+    "skill_used": "computer",
+    "difficulty": 2,
+    "time": "15 m",
+    "description": "Insert a SIM card into your laptop, allowing it to access the internet.",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "laptop",
+          1
+        ]
+      ],
+      [
+        [
+          "internet_sim_card",
+          1
+        ]
+      ]
+    ]
   }
 ]
