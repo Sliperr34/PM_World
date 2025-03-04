@@ -238,7 +238,7 @@
     "relic_data": { "passive_effects": [ { "id": "beak_gift_1" }, { "id": "beak_gift_2" }, { "id": "beak_gift_3" } ] },
     "symbol": "[",
     "color": "red",
-    "flags": [ "FANCY", "NO_WEAR_EFFECT", "TRADER_AVOID" ]
+    "flags": [ "NO_WEAR_EFFECT", "TRADER_AVOID" ]
   },
   {
     "id": "p_bird_book",

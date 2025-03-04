@@ -247,7 +247,7 @@
     "relic_data": { "passive_effects": [ { "id": "soda_gift_1" }, { "id": "soda_gift_2" }, { "id": "soda_gift_3" } ] },
     "symbol": "[",
     "color": "red",
-    "flags": [ "FANCY", "NO_WEAR_EFFECT", "TRADER_AVOID" ]
+    "flags": [ "NO_WEAR_EFFECT", "TRADER_AVOID" ]
   },
   {
     "id": "soda_book",

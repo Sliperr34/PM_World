@@ -494,5 +494,37 @@
     "color": "c_yellow",
     "sym": "L",
     "see_cost": "medium"
+  },
+  {
+    "id": "blank2_rb",
+    "type": "overmap_terrain",
+    "name": "Lobotomy Lab",
+    "color": "c_yellow",
+    "sym": "L",
+    "see_cost": "medium"
+  },
+  {
+    "id": "blank2_lb",
+    "type": "overmap_terrain",
+    "name": "Lobotomy Lab",
+    "color": "c_yellow",
+    "sym": "L",
+    "see_cost": "medium"
+  },
+  {
+    "id": "blank2_lt",
+    "type": "overmap_terrain",
+    "name": "Lobotomy Lab",
+    "color": "c_yellow",
+    "sym": "L",
+    "see_cost": "medium"
+  },
+  {
+    "id": "blank2_rt",
+    "type": "overmap_terrain",
+    "name": "Lobotomy Lab",
+    "color": "c_yellow",
+    "sym": "L",
+    "see_cost": "medium"
   }
 ]

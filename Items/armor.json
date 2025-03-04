@@ -287,7 +287,7 @@
     "warmth": 30,
     "material_thickness": 1,
     "environmental_protection": 3,
-    "flags": [ "VARSIZE", "POCKETS", "OUTER", "SUPER_FANCY" ]
+    "flags": [ "VARSIZE", "POCKETS", "OUTER" ]
   },
   {
     "id": "carmen_coat",
@@ -348,7 +348,7 @@
     "warmth": 18,
     "material_thickness": 1,
     "environmental_protection": 3,
-    "flags": [ "VARSIZE", "POCKETS", "OUTER", "SUPER_FANCY" ]
+    "flags": [ "VARSIZE", "POCKETS", "OUTER" ]
   },
   {
     "id": "zw_spads",
@@ -491,8 +491,6 @@
     "copy-from": "dress_shirt",
     "looks_like": "kr_shirt",
     "price_postapoc": "40 USD",
-    "extend": { "flags": [ "SUPER_FANCY" ] },
-    "delete": { "flags": [ "FANCY" ] },
     "material": [ "b_silk" ],
     "repairs_with": [ "b_silk_item" ]
   },
@@ -525,7 +523,7 @@
     ],
     "warmth": 5,
     "material_thickness": 0.15,
-    "flags": [ "VARSIZE", "SUPER_FANCY" ]
+    "flags": [ "VARSIZE" ]
   },
   {
     "id": "pm_gloves",
@@ -598,7 +596,7 @@
     "repairs_with": [ "pm_cotton_item" ],
     "symbol": "[",
     "color": "black",
-    "flags": [ "FANCY" ]
+    "flags": [  ]
   },
   {
     "id": "kr_eyepatch",
@@ -616,7 +614,7 @@
     "looks_like": "glasses_safety",
     "color": "black",
     "material_thickness": 1,
-    "flags": [ "WATER_FRIENDLY", "SKINTIGHT", "FANCY" ],
+    "flags": [ "WATER_FRIENDLY", "SKINTIGHT" ],
     "armor": [ { "encumbrance": 10, "coverage": 50, "covers": [ "eyes" ], "rigid_layer_only": true } ]
   },
   {
@@ -652,7 +650,7 @@
     ],
     "warmth": 8,
     "material_thickness": 0.2,
-    "flags": [ "VARSIZE", "POCKETS", "FANCY" ],
+    "flags": [ "VARSIZE", "POCKETS" ],
     "armor": [ { "encumbrance": [ 5, 7 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
   {
@@ -724,7 +722,7 @@
     ],
     "warmth": 8,
     "material_thickness": 0.2,
-    "flags": [ "VARSIZE", "POCKETS", "STURDY", "SUPER_FANCY" ],
+    "flags": [ "VARSIZE", "POCKETS", "STURDY" ],
     "armor": [ { "encumbrance": [ 5, 7 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
   {
@@ -735,8 +733,7 @@
     "copy-from": "suit",
     "looks_like": "suit",
     "price_postapoc": "90 USD",
-    "extend": { "flags": [ "SUPER_FANCY", "STURDY" ] },
-    "delete": { "flags": [ "FANCY" ] },
+    "extend": { "flags": [ "STURDY" ] },
     "material": [ "b_silk", "pm_cotton" ],
     "repairs_with": [ "b_silk_item" ]
   },
@@ -748,8 +745,8 @@
     "copy-from": "blazer",
     "looks_like": "blazer",
     "price_postapoc": "80 USD",
-    "extend": { "flags": [ "SUPER_FANCY", "STURDY" ] },
-    "delete": { "flags": [ "FANCY" ] },
+    "extend": { "flags": [ "STURDY" ] },
+    "delete": { "flags": [  ] },
     "material": [ "b_silk", "pm_cotton" ],
     "repairs_with": [ "b_silk_item" ]
   },
@@ -851,7 +848,7 @@
     "id": "pm_brown_shoes",
     "type": "ARMOR",
     "name": { "str": "pair of brown shoes", "str_pl": "pairs of brown shoes" },
-    "description": "Fancy patent leather shoes.  Not designed for running. Do you wonder who they might belong to?",
+    "description": "Leather shoes.  Not designed for running. Do you wonder who they might belong to?",
     "weight": "870 g",
     "volume": "1500 ml",
     "price": "120 USD",
@@ -864,7 +861,7 @@
     "color": "brown",
     "warmth": 10,
     "material_thickness": 2.0,
-    "flags": [ "VARSIZE", "FANCY" ],
+    "flags": [ "VARSIZE" ],
     "armor": [
       {
         "covers": [ "foot_l", "foot_r" ],
@@ -904,7 +901,7 @@
     "repairs_with": [ "pm_cotton_item" ],
     "symbol": "[",
     "color": "blue",
-    "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
+    "flags": [ "NO_WEAR_EFFECT" ]
   },
   {
     "id": "pm_barette_ayin",
@@ -919,7 +916,7 @@
     "repairs_with": [ "pm_cotton_item" ],
     "symbol": "[",
     "color": "yellow",
-    "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
+    "flags": [ "NO_WEAR_EFFECT" ]
   },
   {
     "id": "pm_barette_carmen",
@@ -934,7 +931,7 @@
     "repairs_with": [ "pm_cotton_item" ],
     "symbol": "[",
     "color": "brown",
-    "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
+    "flags": [ "NO_WEAR_EFFECT" ]
   },
   {
     "type": "ARMOR",
@@ -1075,7 +1072,7 @@
     "warmth": 24,
     "environmental_protection": 1,
     "material_thickness": 1,
-    "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY"]
+    "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY" ]
   },
   {
     "id": "w_shirt",
@@ -1121,52 +1118,32 @@
     ],
     "warmth": 8,
     "material_thickness": 0.2,
-    "flags": [ "VARSIZE", "POCKETS", "FANCY" ],
-    "armor": [
-      {
-        "encumbrance": [ 3, 5 ],
-        "coverage": 100,
-        "covers": [ "leg_l", "leg_r" ]
-      }
-    ]
+    "flags": [ "VARSIZE", "POCKETS" ],
+    "armor": [ { "encumbrance": [ 3, 5 ], "coverage": 100, "covers": [ "leg_l", "leg_r" ] } ]
   },
   {
     "id": "w_cap",
     "type": "ARMOR",
-    "name": {
-      "str": "W Corp cap"
-    },
+    "name": { "str": "W Corp cap" },
     "description": "A black cap with the logo of W corp embroidered on the front.",
     "weight": "92 g",
     "volume": "500 ml",
     "price": "15 USD",
     "price_postapoc": "80 cent",
-    "material": [
-      "cotton"
-    ],
+    "material": [ "cotton" ],
     "symbol": "[",
     "looks_like": "hat_ball",
     "color": "dark_gray",
     "warmth": 5,
     "material_thickness": 0.3,
     "environmental_protection": 1,
-    "flags": [
-      "VARSIZE",
-      "SUN_GLASSES"
-    ],
+    "flags": [ "VARSIZE", "SUN_GLASSES" ],
     "armor": [
       {
-        "encumbrance_modifiers": [
-          "NONE"
-        ],
+        "encumbrance_modifiers": [ "NONE" ],
         "coverage": 100,
-        "covers": [
-          "head"
-        ],
-        "specifically_covers": [
-          "head_crown",
-          "head_forehead"
-        ]
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_crown", "head_forehead" ]
       }
     ]
   },
@@ -1192,17 +1169,8 @@
     "armor": [
       {
         "material": [
-          {
-            "type": "l_cotton",
-            "covered_by_mat": 100,
-            "thickness": 0.5
-          },
-          {
-            "type": "b_polymer",
-            "covered_by_mat": 95,
-            "thickness": 3.3,
-            "ignore_sheet_thickness": true
-          }
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "b_polymer", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
         ],
         "encumbrance": 3,
         "coverage": 94,
@@ -1212,17 +1180,8 @@
       },
       {
         "material": [
-          {
-            "type": "l_cotton",
-            "covered_by_mat": 100,
-            "thickness": 0.5
-          },
-          {
-            "type": "b_polymer",
-            "covered_by_mat": 95,
-            "thickness": 3.3,
-            "ignore_sheet_thickness": true
-          }
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "b_polymer", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
         ],
         "encumbrance": 0,
         "coverage": 85,
@@ -1255,17 +1214,8 @@
     "armor": [
       {
         "material": [
-          {
-            "type": "l_cotton",
-            "covered_by_mat": 100,
-            "thickness": 0.5
-          },
-          {
-            "type": "b_polymer",
-            "covered_by_mat": 95,
-            "thickness": 3.3,
-            "ignore_sheet_thickness": true
-          }
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "b_polymer", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
         ],
         "encumbrance": 3,
         "coverage": 94,
@@ -1275,17 +1225,8 @@
       },
       {
         "material": [
-          {
-            "type": "l_cotton",
-            "covered_by_mat": 100,
-            "thickness": 0.5
-          },
-          {
-            "type": "b_polymer",
-            "covered_by_mat": 95,
-            "thickness": 3.3,
-            "ignore_sheet_thickness": true
-          }
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 0.5 },
+          { "type": "b_polymer", "covered_by_mat": 95, "thickness": 3.3, "ignore_sheet_thickness": true }
         ],
         "encumbrance": 0,
         "coverage": 85,
@@ -1300,10 +1241,7 @@
     "id": "w_bracers",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-      "str": "Cleanup agent bracers",
-      "str_pl": "Pairs of cleanup agent bracers"
-    },
+    "name": { "str": "Cleanup agent bracers", "str_pl": "Pairs of cleanup agent bracers" },
     "description": "A pair of metalic bracers, used to protect your arms from harm. They're lighter than you expected.",
     "weight": "1500 g",
     "volume": "1850 ml",
@@ -1333,47 +1271,26 @@
     "id": "w_gloves",
     "type": "ARMOR",
     "category": "armor",
-    "name": {
-      "str": "Pair of cleanup agent gloves",
-      "str_pl": "Pairs of cleanup agent gloves"
-    },
+    "name": { "str": "Pair of cleanup agent gloves", "str_pl": "Pairs of cleanup agent gloves" },
     "description": "A pair of cut resistant gloves worn by W Corp cleanup agents.'",
     "weight": "220 g",
     "volume": "500 ml",
     "price": "52 USD",
     "price_postapoc": "15 USD",
-    "material": [
-      "kevlar",
-      "leather"
-    ],
+    "material": [ "kevlar", "leather" ],
     "symbol": "[",
     "looks_like": "fire_gauntlets",
     "color": "dark_gray",
     "warmth": 20,
     "material_thickness": 2,
     "environmental_protection": 4,
-    "flags": [
-      "VARSIZE",
-      "STURDY"
-    ],
-    "armor": [
-      {
-        "encumbrance": 6,
-        "coverage": 100,
-        "covers": [
-          "hand_l",
-          "hand_r"
-        ]
-      }
-    ]
+    "flags": [ "VARSIZE", "STURDY" ],
+    "armor": [ { "encumbrance": 6, "coverage": 100, "covers": [ "hand_l", "hand_r" ] } ]
   },
   {
     "id": "w_boots",
     "type": "ARMOR",
-    "name": {
-      "str": "Pair of cleanup agent boots",
-      "str_pl": "Pairs of cleanup agent boots"
-    },
+    "name": { "str": "Pair of cleanup agent boots", "str_pl": "Pairs of cleanup agent boots" },
     "description": "A pair of surprisingly tough leather boots, designed to be easy to clean and wash in tandem with proprietary W Corp detergents.",
     "weight": "1360 g",
     "volume": "2645 ml",
@@ -1400,13 +1317,7 @@
           "foot_arch_r",
           "foot_arch_l"
         ],
-        "material": [
-          {
-            "type": "pm_leather",
-            "covered_by_mat": 100,
-            "thickness": 2.5
-          }
-        ],
+        "material": [ { "type": "pm_leather", "covered_by_mat": 100, "thickness": 2.5 } ],
         "encumbrance": 12,
         "coverage": 100
       },
@@ -1414,16 +1325,8 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [
-          {
-            "type": "pm_leather",
-            "covered_by_mat": 100,
-            "thickness": 0.1
-          },
-          {
-            "type": "rubber",
-            "covered_by_mat": 100,
-            "thickness": 6.0
-          }
+          { "type": "pm_leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 6.0 }
         ],
         "coverage": 100
       }
@@ -1433,10 +1336,7 @@
   {
     "id": "w_advanced_boots",
     "type": "ARMOR",
-    "name": {
-      "str": "Pair of advanced cleanup agent boots",
-      "str_pl": "Pairs of advanced cleanup agent boots"
-    },
+    "name": { "str": "Pair of advanced cleanup agent boots", "str_pl": "Pairs of advanced cleanup agent boots" },
     "description": "A pair of tough metallic greaves that lead up to the ankle. When powered, they grant improve mobility and secure the user to the ground, even in areas of low gravity or poor dimensional stability. Worn exclusively by high ranking W Corp cleanup agents.",
     "weight": "1360 g",
     "volume": "2645 ml",
@@ -1463,13 +1363,7 @@
           "foot_arch_r",
           "foot_arch_l"
         ],
-        "material": [
-          {
-            "type": "pm_leather",
-            "covered_by_mat": 100,
-            "thickness": 2.5
-          }
-        ],
+        "material": [ { "type": "pm_leather", "covered_by_mat": 100, "thickness": 2.5 } ],
         "encumbrance": 12,
         "coverage": 100
       },
@@ -1477,16 +1371,8 @@
         "covers": [ "foot_l", "foot_r" ],
         "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
         "material": [
-          {
-            "type": "pm_steel",
-            "covered_by_mat": 100,
-            "thickness": 0.1
-          },
-          {
-            "type": "rubber",
-            "covered_by_mat": 100,
-            "thickness": 6.0
-          }
+          { "type": "pm_steel", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 6.0 }
         ],
         "coverage": 100
       }
