@@ -10,7 +10,7 @@
     "price_postapoc": "1 USD",
     "to_hit": -2,
     "material": [ "l_cotton" ],
-    "repairs_with": [ "l_cotton_item" ],
+    "repairs_with": [ "l_cotton" ],
     "symbol": "[",
     "looks_like": "coat_lab",
     "color": "white",
@@ -78,7 +78,7 @@
     "price_postapoc": "1 USD",
     "to_hit": -2,
     "material": [ "l_cotton" ],
-    "repairs_with": [ "l_cotton_item" ],
+    "repairs_with": [ "l_cotton" ],
     "symbol": "[",
     "looks_like": "coat_lab",
     "color": "white",
@@ -136,7 +136,7 @@
     "volume": "3780 ml",
     "price_postapoc": "120 USD",
     "material": [ "pm_leather" ],
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "symbol": "[",
     "looks_like": "jacket_jean",
     "to_hit": -2,
@@ -177,7 +177,7 @@
     "price_postapoc": "140 USD",
     "to_hit": -1,
     "material": [ "pm_leather" ],
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "symbol": "[",
     "looks_like": "duster",
     "color": "brown",
@@ -238,7 +238,7 @@
     "price_postapoc": "60 USD",
     "to_hit": -1,
     "material": [ "l_cotton" ],
-    "repairs_with": [ "l_cotton_item" ],
+    "repairs_with": [ "l_cotton" ],
     "symbol": "[",
     "looks_like": "duster",
     "color": "blue",
@@ -299,7 +299,7 @@
     "price_postapoc": "75 USD",
     "to_hit": -1,
     "material": [ "l_cotton" ],
-    "repairs_with": [ "l_cotton_item" ],
+    "repairs_with": [ "l_cotton" ],
     "symbol": "[",
     "looks_like": "duster",
     "color": "brown",
@@ -361,7 +361,7 @@
     "price_postapoc": "40 USD",
     "to_hit": 1,
     "material": [ "pm_steel" ],
-    "repairs_with": [ "pm_steel_item" ],
+    "repairs_with": [ "pm_steel" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "dark_gray",
@@ -391,7 +391,7 @@
     "price_postapoc": "40 USD",
     "to_hit": 1,
     "material": [ "pm_steel" ],
-    "repairs_with": [ "pm_steel_item" ],
+    "repairs_with": [ "pm_steel" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "dark_gray",
@@ -421,7 +421,7 @@
     "price_postapoc": "40 USD",
     "to_hit": -1,
     "material": [ "pm_steel" ],
-    "repairs_with": [ "pm_steel_item" ],
+    "repairs_with": [ "pm_steel" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "dark_gray",
@@ -449,7 +449,7 @@
     "price_postapoc": "10USD",
     "looks_like": "pm_shirt_yel",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ]
+    "repairs_with": [ "pm_cotton" ]
   },
   {
     "id": "pm_blouse_green",
@@ -460,7 +460,7 @@
     "price_postapoc": "10USD",
     "looks_like": "pm_blouse_green",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ]
+    "repairs_with": [ "pm_cotton" ]
   },
   {
     "id": "pm_shirt",
@@ -470,7 +470,7 @@
     "copy-from": "dress_shirt",
     "price_postapoc": "10USD",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ]
+    "repairs_with": [ "pm_cotton" ]
   },
   {
     "id": "pm_shirt_brown",
@@ -481,7 +481,7 @@
     "price_postapoc": "10USD",
     "looks_like": "pm_shirt_brown",
     "material": [ "l_cotton" ],
-    "repairs_with": [ "l_cotton_item" ]
+    "repairs_with": [ "l_cotton" ]
   },
   {
     "id": "kr_shirt",
@@ -494,7 +494,7 @@
     "extend": { "flags": [ "SUPER_FANCY" ] },
     "delete": { "flags": [ "FANCY" ] },
     "material": [ "b_silk" ],
-    "repairs_with": [ "b_silk_item" ]
+    "repairs_with": [ "b_silk" ]
   },
   {
     "id": "kr_yukata",
@@ -507,7 +507,7 @@
     "price_postapoc": "60 USD",
     "to_hit": -5,
     "material": [ "b_silk" ],
-    "repairs_with": [ "b_silk_item" ],
+    "repairs_with": [ "b_silk" ],
     "symbol": "[",
     "looks_like": "kimono",
     "color": "black",
@@ -535,7 +535,7 @@
     "copy-from": "gloves_leather",
     "material": [ "pm_leather" ],
     "price_postapoc": "20 USD",
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "material_thickness": 0.7,
     "extend": { "flags": [ "STURDY" ] }
   },
@@ -550,7 +550,7 @@
     "price_postapoc": "20 USD",
     "to_hit": -1,
     "symbol": "[",
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "looks_like": "dress_shoes",
     "color": "dark_gray",
     "warmth": 16,
@@ -595,7 +595,7 @@
     "price": "10 USD",
     "price_postapoc": "5 USD",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "color": "black",
     "flags": [ "FANCY" ]
@@ -611,7 +611,7 @@
     "price": "75 USD",
     "price_postapoc": "20 USD",
     "material": [ "pm_leather" ],
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "symbol": "o",
     "looks_like": "glasses_safety",
     "color": "black",
@@ -630,7 +630,7 @@
     "price_postapoc": "7 USD",
     "to_hit": 1,
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "looks_like": "pants",
     "color": "black",
@@ -666,7 +666,7 @@
     "price_postapoc": "7 USD",
     "to_hit": 1,
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "looks_like": "pants",
     "color": "brown",
@@ -702,7 +702,7 @@
     "price_postapoc": "12 USD",
     "to_hit": 1,
     "material": [ "b_silk" ],
-    "repairs_with": [ "b_silk_item" ],
+    "repairs_with": [ "b_silk" ],
     "symbol": "[",
     "looks_like": "pants",
     "color": "black",
@@ -738,7 +738,7 @@
     "extend": { "flags": [ "SUPER_FANCY", "STURDY" ] },
     "delete": { "flags": [ "FANCY" ] },
     "material": [ "b_silk", "pm_cotton" ],
-    "repairs_with": [ "b_silk_item" ]
+    "repairs_with": [ "b_silk" ]
   },
   {
     "id": "kr_blazer",
@@ -751,7 +751,7 @@
     "extend": { "flags": [ "SUPER_FANCY", "STURDY" ] },
     "delete": { "flags": [ "FANCY" ] },
     "material": [ "b_silk", "pm_cotton" ],
-    "repairs_with": [ "b_silk_item" ]
+    "repairs_with": [ "b_silk" ]
   },
   {
     "id": "pm_blazer",
@@ -762,7 +762,7 @@
     "looks_like": "blazer",
     "price_postapoc": "20 USD",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ]
+    "repairs_with": [ "pm_cotton" ]
   },
   {
     "id": "pm_labcoat",
@@ -771,7 +771,7 @@
     "copy-from": "coat_lab",
     "price_postapoc": "20 USD",
     "looks_like": "coat_lab",
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "material": [ "pm_cotton" ]
   },
   {
@@ -800,7 +800,7 @@
     "price_postapoc": "20 USD",
     "looks_like": "pants",
     "material": [ "l_cotton" ],
-    "repairs_with": [ "l_cotton_item" ]
+    "repairs_with": [ "l_cotton" ]
   },
   {
     "id": "lc_vest",
@@ -814,7 +814,7 @@
     "price_postapoc": "140 USD",
     "to_hit": -3,
     "material": [ "b_polymer", "l_cotton" ],
-    "repairs_with": [ "b_polymer_item" ],
+    "repairs_with": [ "b_polymer" ],
     "symbol": "[",
     "looks_like": "vest_leather",
     "color": "light_gray",
@@ -858,7 +858,7 @@
     "price_postapoc": "10 USD",
     "to_hit": 1,
     "material": [ "pm_leather" ],
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "symbol": "[",
     "looks_like": "dress_shoes",
     "color": "brown",
@@ -901,7 +901,7 @@
     "price": "400 USD",
     "price_postapoc": "22 USD",
     "material": [ "pm_cotton", "gold", "gemstone" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "color": "blue",
     "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
@@ -916,7 +916,7 @@
     "price": "400 USD",
     "price_postapoc": "22 USD",
     "material": [ "pm_cotton", "gold", "gemstone" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "color": "yellow",
     "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
@@ -931,7 +931,7 @@
     "price": "400 USD",
     "price_postapoc": "22 USD",
     "material": [ "pm_cotton", "gold", "gemstone" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "color": "brown",
     "flags": [ "SUPER_FANCY", "NO_WEAR_EFFECT" ]
@@ -1045,7 +1045,7 @@
     "volume": "3780 ml",
     "price_postapoc": "25 USD",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "looks_like": "jacket_jean",
     "to_hit": -2,
@@ -1085,7 +1085,7 @@
     "price_postapoc": "10USD",
     "looks_like": "pm_shirt_yel",
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ]
+    "repairs_with": [ "pm_cotton" ]
   },
   {
     "id": "w_trousers",
@@ -1098,7 +1098,7 @@
     "price_postapoc": "7 USD",
     "to_hit": 1,
     "material": [ "pm_cotton" ],
-    "repairs_with": [ "pm_cotton_item" ],
+    "repairs_with": [ "pm_cotton" ],
     "symbol": "[",
     "looks_like": "pants",
     "color": "black",
@@ -1181,7 +1181,7 @@
     "price_postapoc": "140 USD",
     "to_hit": -3,
     "material": [ "b_polymer", "l_cotton" ],
-    "repairs_with": [ "b_polymer_item" ],
+    "repairs_with": [ "b_polymer" ],
     "symbol": "[",
     "looks_like": "vest_leather",
     "color": "light_gray",
@@ -1244,7 +1244,7 @@
     "price_postapoc": "140 USD",
     "to_hit": -3,
     "material": [ "b_polymer", "l_cotton" ],
-    "repairs_with": [ "b_polymer_item" ],
+    "repairs_with": [ "b_polymer" ],
     "symbol": "[",
     "looks_like": "vest_leather",
     "color": "light_gray",
@@ -1309,7 +1309,7 @@
     "price_postapoc": "40 USD",
     "to_hit": -1,
     "material": [ "pm_steel" ],
-    "repairs_with": [ "pm_steel_item" ],
+    "repairs_with": [ "pm_steel" ],
     "symbol": "[",
     "looks_like": "armguard_hard",
     "color": "dark_gray",
@@ -1380,7 +1380,7 @@
     "price_postapoc": "20 USD",
     "to_hit": -1,
     "symbol": "[",
-    "repairs_with": [ "pm_leather_item" ],
+    "repairs_with": [ "pm_leather" ],
     "looks_like": "dress_shoes",
     "color": "dark_gray",
     "warmth": 16,

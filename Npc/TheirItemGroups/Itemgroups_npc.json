@@ -503,8 +503,8 @@
     "type": "item_group",
     "subtype": "collection",
     "entries": [
-      { "item": "l_steel_item", "count-min": 1, "count-max": 8, "prob": 100 },
-      { "item": "b_polymer_item", "count-min": 1, "count-max": 8, "prob": 100 },
+      { "item": "l_steel", "count-min": 1, "count-max": 8, "prob": 100 },
+      { "item": "b_polymer", "count-min": 1, "count-max": 8, "prob": 100 },
       { "item": "ego_zayin", "count-min": 1, "count-max": 1, "prob": 100 },
       { "item": "ego_teth", "count-min": 1, "count-max": 1, "prob": 100 }
     ]

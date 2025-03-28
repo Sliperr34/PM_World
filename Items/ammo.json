@@ -1,3 +1,147 @@
 [
-
-  ]
+  {
+    "id": "power_module",
+    "type": "MAGAZINE",
+    "category": "tool_magazine",
+    "name": {
+      "str": "power module"
+    },
+    "description": "A power module, made to store large amounts of power.",
+    "weight": "285 g",
+    "volume": "57 ml",
+    "longest_side": "165 mm",
+    "price_postapoc": "20 USD",
+    "material": [
+      {
+        "type": "steel",
+        "portion": 99
+      },
+      {
+        "type": "plastic",
+        "portion": 1
+      }
+    ],
+    "symbol": "=",
+    "color": "red",
+    "ammo_type": [
+      "battery"
+    ],
+    "looks_like": "battery",
+    "flags": [
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "RECHARGE",
+      "BATTERY_POWER_MODULE"
+    ],
+    "capacity": 4096,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 4096
+        }
+      }
+    ]
+  },
+  {
+    "id": "power_module_teth",
+    "type": "MAGAZINE",
+    "category": "tool_magazine",
+    "name": {
+      "str": "enhanced power module"
+    },
+    "description": "A power module, made to store huge amounts of power. This particular version is set a couple of marks above the ordinary kind, condensing incredible amounts of power into a portable form.",
+    "weight": "285 g",
+    "volume": "57 ml",
+    "longest_side": "165 mm",
+    "price_postapoc": "120 USD",
+    "material": [
+      {
+        "type": "steel",
+        "portion": 99
+      },
+      {
+        "type": "plastic",
+        "portion": 1
+      }
+    ],
+    "symbol": "=",
+    "color": "red",
+    "ammo_type": [
+      "battery"
+    ],
+    "looks_like": "battery",
+    "flags": [
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "RECHARGE",
+      "BATTERY_POWER_MODULE"
+    ],
+    "capacity": 16384,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 16384
+        }
+      }
+    ]
+  },
+  {
+    "id": "power_module_he",
+    "type": "MAGAZINE",
+    "category": "tool_magazine",
+    "name": {
+      "str": "prime power module"
+    },
+    "description": "A power module, made to store inconceivable amounts of power. This is a primed version, emblazoned with the mark of a workshop, there is very, very little better than this at storing energy.",
+    "weight": "285 g",
+    "volume": "57 ml",
+    "longest_side": "165 mm",
+    "price_postapoc": "290 USD",
+    "material": [
+      {
+        "type": "steel",
+        "portion": 99
+      },
+      {
+        "type": "plastic",
+        "portion": 1
+      }
+    ],
+    "symbol": "=",
+    "color": "red",
+    "ammo_type": [
+      "battery"
+    ],
+    "looks_like": "battery",
+    "flags": [
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "RECHARGE",
+      "BATTERY_POWER_MODULE"
+    ],
+    "capacity": 65536,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 65536
+        }
+      }
+    ]
+  },
+  {
+    "type": "json_flag", 
+    "id": "BATTERY_POWER_MODULE", 
+    "name": "power module", 
+    "info": "This will hook to a power module", 
+    "restriction": "Item must be a power module"
+  }
+]
