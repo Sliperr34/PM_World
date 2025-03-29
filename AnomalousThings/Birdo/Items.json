@@ -50,7 +50,7 @@
     "symbol": "[",
     "color": "white",
     "looks_like": "ego_teth",
-    "repairs_with": "punishing_feather",
+    "repairs_with": [ "l_steel" ],
     "relic_data": { "passive_effects": [ { "id": "beak_suit_1" }, { "id": "beak_suit_2" }, { "id": "beak_suit_3" } ] },
     "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "TRADER_AVOID", "NO_SALVAGE" ],
     "max_worn": 1,

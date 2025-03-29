@@ -34,7 +34,7 @@
     "goal": "MGOAL_FIND_ITEM",
     "difficulty": 2,
     "value": 0,
-    "item": "l_steel_item",
+    "item": "l_steel",
     "count": 5,
     "origins": [ "ORIGIN_SECONDARY" ],
     "start": {
@@ -44,7 +44,7 @@
           { "group": "PECCA_GENERAL", "x": [ 1, 20 ], "y": [ 1, 20 ], "repeat": [ 4, 7 ] },
           { "group": "GROUP_ZOMBIE_UPGRADE", "x": [ 1, 20 ], "y": [ 1, 20 ], "repeat": [ 6, 8 ] } 
         ],
-        "place_item": [ { "item": "b_polymer_item", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 3, 5 ] }, { "item": "l_steel_item", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 3, 5 ] }, { "item": "pm_money_10", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 8, 12 ] } ]
+        "place_item": [ { "item": "b_polymer", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 3, 5 ] }, { "item": "l_steel", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 3, 5 ] }, { "item": "pm_money_10", "x": [ 7, 17 ], "y": [ 7, 17 ], "repeat": [ 8, 12 ] } ]
       }
     },
     "dialogue": {

@@ -16,8 +16,8 @@
       [ [ "well_can", 18 ] ],
       [ [ "wellcherry_can", 15 ] ],
       [ [ "wellgrape_can", 12 ] ],
-      [ [ "l_steel_item", 2 ] ],
-      [ [ "b_polymer_item", 7 ] ],
+      [ [ "l_steel", 2 ] ],
+      [ [ "b_polymer", 7 ] ],
       [ [ "ego_zayin", 1 ] ]
     ],
     "proficiencies": [
@@ -50,8 +50,8 @@
       [ [ "well_can", 13 ] ],
       [ [ "wellcherry_can", 10 ] ],
       [ [ "wellgrape_can", 14 ] ],
-      [ [ "l_steel_item", 2 ] ],
-      [ [ "b_polymer_item", 3 ] ],
+      [ [ "l_steel", 2 ] ],
+      [ [ "b_polymer", 3 ] ],
       [ [ "ego_zayin", 1 ] ]
     ],
     "proficiencies": [
@@ -190,8 +190,8 @@
       [ [ "well_can", 9 ] ],
       [ [ "wellcherry_can", 12 ] ],
       [ [ "wellgrape_can", 22 ] ],
-      [ [ "l_steel_item", 1 ] ],
-      [ [ "b_polymer_item", 2 ] ],
+      [ [ "l_steel", 1 ] ],
+      [ [ "b_polymer", 2 ] ],
       [ [ "ego_zayin", 1 ] ]
     ],
     "proficiencies": [

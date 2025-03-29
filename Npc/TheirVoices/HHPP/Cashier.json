@@ -30,7 +30,8 @@
     "responses": [
       {
         "text": "Oh, alright, could I order a..?",
-        "topic": "START_TRADE"
+        "effect": "start_trade",
+        "topic": "TALK_DONE"
       },
       {
         "text": "So about..",

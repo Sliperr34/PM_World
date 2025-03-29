@@ -1,0 +1,86 @@
+[
+  {
+    "id": "enk_repair_tool",
+    "type": "TOOL",
+    "name": {
+      "str": "enkephalin former"
+    },
+    "description": "A high-quality tool created to maintain and repair workshop and EGO gear, using enkephalin as a substitute for various hard to come by materials.",
+    "weight": "100 g",
+    "volume": "500 ml",
+    "price_postapoc": "25 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "red",
+    "ammo": [
+      "enkephalin"
+    ],
+    "charges_per_use": 1,
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "CUT_FINE",
+        2
+      ],
+      [
+        "AXE",
+        1
+      ],
+      [
+        "SAW_W",
+        2
+      ],
+      [
+        "BUTCHER",
+        7
+      ],
+      [
+        "FABRIC_CUT",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "flag_restriction": [
+          "BATTERY_ENKEPH"
+        ]
+      }
+    ],
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "stigma_steel",
+          "stigma_leather",
+          "stigma_cotton",
+          "pm_leather",
+          "pm_cotton",
+          "b_silk",
+          "b_polymer",
+          "l_steel",
+          "l_cotton",
+          "b_steel",
+          "c_steel",
+          "pm_steel"
+        ],
+        "skill": "fabrication",
+        "tool_quality": 5,
+        "cost_scaling": 0.01,
+        "move_cost": 800
+      }
+    ],
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ]
+  }
+
+]

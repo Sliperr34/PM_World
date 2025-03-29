@@ -16,8 +16,8 @@
     "components": [
       [ [ "punishing_feather", 3 ] ],
       [ [ "punishing_red_feather", 1 ] ],
-      [ [ "l_steel_item", 3 ] ],
-      [ [ "b_polymer_item", 5 ] ],
+      [ [ "l_steel", 3 ] ],
+      [ [ "b_polymer", 5 ] ],
       [ [ "ego_teth", 1 ] ]
     ],
     "proficiencies": [
@@ -50,8 +50,8 @@
     "components": [
       [ [ "punishing_feather", 2 ] ],
       [ [ "punishing_red_feather", 1 ] ],
-      [ [ "l_steel_item", 2 ] ],
-      [ [ "b_polymer_item", 3 ] ],
+      [ [ "l_steel", 2 ] ],
+      [ [ "b_polymer", 3 ] ],
       [ [ "ego_teth", 1 ] ]
     ],
     "proficiencies": [
@@ -108,7 +108,7 @@
     "reversible": false,
     "charges": 30,
     "book_learn": { "p_bird_book": { "skill_level": 2, "recipe_name": "O-02-56 EGO ammo", "hidden": false } },
-    "components": [ [ [ "punishing_feather", 2 ] ], [ [ "b_polymer_item", 1 ] ] ],
+    "components": [ [ [ "punishing_feather", 2 ] ], [ [ "b_polymer", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_wp_abnos0", "required": true, "skill_penalty": 2.0 },
       { "proficiency": "prof_wp_abnos1", "required": true, "skill_penalty": 2.0 },
@@ -136,7 +136,7 @@
     "reversible": false,
     "charges": 15,
     "book_learn": { "p_bird_book": { "skill_level": 3, "recipe_name": "O-02-56 EGO red ammo", "hidden": false } },
-    "components": [ [ [ "punishing_red_feather", 1 ] ], [ [ "b_polymer_item", 1 ] ] ],
+    "components": [ [ [ "punishing_red_feather", 1 ] ], [ [ "b_polymer", 1 ] ] ],
     "proficiencies": [
       { "proficiency": "prof_wp_abnos0", "required": true, "skill_penalty": 2.0 },
       { "proficiency": "prof_wp_abnos1", "required": true, "skill_penalty": 2.0 },
@@ -166,8 +166,8 @@
     "components": [
       [ [ "punishing_feather", 2 ] ],
       [ [ "punishing_red_feather", 1 ] ],
-      [ [ "l_steel_item", 2 ] ],
-      [ [ "b_polymer_item", 3 ] ],
+      [ [ "l_steel", 2 ] ],
+      [ [ "b_polymer", 3 ] ],
       [ [ "ego_teth", 1 ] ]
     ],
     "proficiencies": [
