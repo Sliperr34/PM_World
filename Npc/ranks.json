@@ -94,15 +94,13 @@
       "You've attained grade seven, and proven yourself a survivor and a fighter.",
       "At grade six, you are above most fixers, with a proven track record of success.",
       "You've achived grade five, and with it are considered skilled in your own right, capable of taking on threats beyond most humans.",
-      "You're reaching the upper tiers of the fixer hierachy, a veteran that knows their stuff and their limits."
+      "You're reaching the upper tiers of the fixer hierachy, a veteran that knows their stuff and their limits.",
       "You've come to the understanding that limits can always be broken, to pave the way for growth.",
       "From here you can see the top, only a step away. Your skill is recognised, as is your impact in the organisation.",
       "You are one of the best, and stand shoulder to shoulder with the legends of the fixer world.",
-      "You've gone above and beyond all expectations, and been rewarded with a colour of your very own. All now recognise you.",
+      "You've gone above and beyond all expectations, and been rewarded with a colour of your very own. All now recognise you."
     ],
-    "apply_message": [
-      [ "Your Fixer rank is increased.", "mixed" ]
-    ],
+    "apply_message": [ [ "Your Fixer rank is increased.", "mixed" ] ],
     "remove_message": "You've been stripped of your fixer rank.",
     "max_intensity": 10,
     "scaling_mods": { "speed_mod": [ 1 ] }
