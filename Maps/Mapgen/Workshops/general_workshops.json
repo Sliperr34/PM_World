@@ -3,7 +3,7 @@
     "type": "mapgen",
     "method": "json",
     "om_terrain": [ [ "blank2_lt", "blank2_rt" ], [ "blank2_lb", "blank2_rb" ] ],
-    "weight": "500",
+    "weight": 500,
     "object": {
       "fill_ter": "t_concrete",
       "rows": [

@@ -15,7 +15,7 @@
     ],
     "symbol": ";",
     "color": "red",
-    "ammo": [
+    "tool_ammo": [
       "enkephalin"
     ],
     "charges_per_use": 1,

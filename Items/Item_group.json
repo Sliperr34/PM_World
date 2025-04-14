@@ -143,5 +143,26 @@
     "subtype": "collection",
     "copy-from": "SUS_junk_drawer",
     "extend": { "entries": [ { "item": "zweiflyer_item", "prob": 12 } ] }
+  },
+  {
+    "id": "SUS_office_desk",
+    "type": "item_group",
+    "subtype": "collection",
+    "copy-from": "SUS_office_desk",
+    "extend": { "entries": [ { "item": "internet_sim_card", "prob": 5 } ] }
+  },
+  {
+    "id": "SUS_science_personal_effects",
+    "type": "item_group",
+    "subtype": "collection",
+    "copy-from": "SUS_science_personal_effects",
+    "extend": { "entries": [ { "item": "internet_sim_card", "prob": 3 } ] }
+  },
+  {
+    "id": "supplies_electronics",
+    "type": "item_group",
+    "subtype": "collection",
+    "copy-from": "supplies_electronics",
+    "extend": { "entries": [ { "item": "internet_sim_card", "prob": 7 } ] }
   }
 ]

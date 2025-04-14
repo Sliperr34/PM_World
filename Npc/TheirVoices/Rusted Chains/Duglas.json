@@ -11,8 +11,8 @@
       { "text": "There's no need to be so rude. Are you always this unfriendly?", "topic": "TALK_DUGLAS_RC_2", "condition": { "not": { "compare_string": [ "yes", { "u_val": "accepted_ryan_mission" } ] } } },
       { "text": "I want to buy myself something, do you have anything to offer?",  "topic": "TRADE_DUGLAS", "condition": { "compare_string": [ "yes", { "u_val": "u_not_available" } ] } },
       { "text": "Do you have any more work for me?",  "topic": "TALK_MISSION_LIST", "condition": { "math": [ "u_vitamin('rc_rank') > 0" ] } },
-      { "text": "About the mission…", "topic": "TALK_MISSION_INQUIRE", "condition": { "and": [ "has_assigned_mission",  { "math": [ "u_vitamin('rc_rank') > 0" ] } ] } },
-      { "text": "About one of those missions…", "topic": "TALK_MISSION_LIST_ASSIGNED", "condition": { "and": [ "has_many_assigned_missions", { "math": [ "u_vitamin('rc_rank') > 0" ] } ] } },
+      { "text": "About the mission…", "topic": "TALK_MISSION_INQUIRE", "condition": "has_assigned_mission" },
+      { "text": "About one of those missions…", "topic": "TALK_MISSION_LIST_ASSIGNED", "condition": "has_many_assigned_missions" },
       { "text": "Can you teach me how to fight properly?",  "topic": "TALK_DUGLAS_FIGHTING_STYLE", "condition": { "compare_string": [ "yes", { "u_val": "teach_rc_style" } ] } },
       { "text": "Never mind.", "topic": "TALK_DONE" }
     ]
