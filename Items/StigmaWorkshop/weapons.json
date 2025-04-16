@@ -44,7 +44,7 @@
       "MACES"
     ],
     "charges_per_use": 1,
-    "ammo": [
+    "tool_ammo": [
       "battery"
     ],
     "flags": [
@@ -114,7 +114,7 @@
       "MACES"
     ],
     "charges_per_use": 1,
-    "ammo": [
+    "tool_ammo": [
       "battery"
     ],
     "flags": [
@@ -219,7 +219,7 @@
       "MEDIUM_SWORDS"
     ],
     "charges_per_use": 1,
-    "ammo": [
+    "tool_ammo": [
       "battery"
     ],
     "flags": [
@@ -301,7 +301,7 @@
       "MEDIUM_SWORDS"
     ],
     "charges_per_use": 1,
-    "ammo": [
+    "tool_ammo": [
       "battery"
     ],
     "flags": [
@@ -385,7 +385,7 @@
       "GREAT_AXES"
     ],
     "charges_per_use": 1,
-    "ammo": [
+    "tool_ammo": [
       "battery"
     ],
     "flags": [
@@ -465,7 +465,7 @@
       "GREAT_AXES"
     ],
     "charges_per_use": 1,
-    "ammo": [
+    "tool_ammo": [
       "battery"
     ],
     "flags": [

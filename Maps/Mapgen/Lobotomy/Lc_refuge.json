@@ -3,7 +3,7 @@
     "type": "mapgen",
     "method": "json",
     "om_terrain": [ "lc_surface" ],
-    "weight": "500",
+    "weight": 500,
     "object": {
       "fill_ter": "t_concrete",
       "rows": [
@@ -55,7 +55,7 @@
     "type": "mapgen",
     "method": "json",
     "om_terrain": [ "lc_surface_roof" ],
-    "weight": "500",
+    "weight": 500,
     "object": {
       "fill_ter": "t_concrete",
       "rows": [
@@ -91,7 +91,7 @@
     "type": "mapgen",
     "method": "json",
     "om_terrain": [ "lc_mid" ],
-    "weight": "500",
+    "weight": 500,
     "object": {
       "fill_ter": "t_concrete",
       "rows": [
@@ -142,7 +142,7 @@
     "type": "mapgen",
     "method": "json",
     "om_terrain": [ [ "lc_lab_lt", "lc_lab_mt2", "lc_lab_mt1", "lc_lab_rt" ], [ "lc_lab_lb", "lc_lab_mb2", "lc_lab_mb1", "lc_lab_rb" ] ],
-    "weight": "500",
+    "weight": 500,
     "object": {
       "fill_ter": "t_concrete",
       "rows": [
