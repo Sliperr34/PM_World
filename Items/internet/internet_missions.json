@@ -1,0 +1,93 @@
+[
+  {
+    "id": "MISSION_DIRECTIONS_ZWEI",
+    "type": "mission_definition",
+    "name": "The Zwei Association's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "zwei_office0", "om_special": "Zwei_main_office", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "zwei_office0"
+  },
+  {
+    "id": "MISSION_DIRECTIONS_HHPP",
+    "type": "mission_definition",
+    "name": "HamHamPangPang's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "hhpp1", "om_special": "hhpp", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "hhpp1"
+  },
+  {
+    "id": "MISSION_DIRECTIONS_LC",
+    "type": "mission_definition",
+    "name": "L-Corp Headquarter's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "lc_surface", "om_special": "Lob_corp", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "lc_surface"
+  },
+  {
+    "id": "MISSION_DIRECTIONS_LCRUINS",
+    "type": "mission_definition",
+    "name": "The old L-Corp Headquarter's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "lab_ab_surface", "om_special": "Lab_abbandoned", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "lab_ab_surface"
+  },
+  {
+    "id": "MISSION_DIRECTIONS_RC",
+    "type": "mission_definition",
+    "name": "The Rusted Chain's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "rc_hideout", "om_special": "Rc_hideout", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "rc_hideout"
+  },
+  {
+    "id": "MISSION_DIRECTIONS_KURO",
+    "type": "mission_definition",
+    "name": "The KuroKumo Clan's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "kr_hideout", "om_special": "Kr_hideout", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "kr_hideout"
+  },
+  {
+    "id": "MISSION_DIRECTIONS_WARP",
+    "type": "mission_definition",
+    "name": "The W-Corp Headquarter's Address",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "difficulty": 1,
+    "value": 0,
+    "start": {
+      "assign_mission_target": { "om_terrain": "w_station_mb1", "om_special": "w_corp_station", "random": false }
+    },
+    "origins": [ "ORIGIN_COMPUTER" ],
+    "destination": "w_station_mb1"
+  }
+]

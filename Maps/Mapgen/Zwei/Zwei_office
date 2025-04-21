@@ -3,7 +3,7 @@
 "type": "mapgen",
 "method": "json",
 "om_terrain": [ "zwei_office"] ,
-"weight": "100",
+"weight": 100,
 "object": {
 	"fill_ter": "t_grass",
 	"rows": [

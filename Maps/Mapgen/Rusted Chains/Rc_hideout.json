@@ -3,7 +3,7 @@
     "type": "mapgen",
     "method": "json",
     "om_terrain": [ "rc_hideout" ],
-	"weight": "500",
+	"weight": 500,
     "object": {
       "fill_ter": "t_floor",
       "rows": [
@@ -71,7 +71,7 @@
 "type": "mapgen",
 "method": "json",
 "om_terrain": [ "rc_hideout_roof"] ,
-"weight": "500",
+"weight": 500,
 "object": {
 	"fill_ter": "t_flat_roof",
 	 "rows": [

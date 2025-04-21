@@ -6,7 +6,7 @@
       [ "w_station_lt", "w_station_mt2", "w_station_mt1", "w_station_rt" ],
       [ "w_station_lb", "w_station_mb2", "w_station_mb1", "w_station_rb" ]
     ],
-    "weight": "500",
+    "weight": 500,
     "object": {
       "fill_ter": "t_concrete",
       "rows": [

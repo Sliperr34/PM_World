@@ -3,5 +3,15 @@
         "type": "effect_on_condition",
         "id": "EOC_internet_access",
         "effect": [ { "open_dialogue": { "topic": "TALK_INTERNET_MENU_MAIN" } } ]
-    }   
+    },
+    {
+      "type": "effect_on_condition",
+      "id": "EOC_SETUP_CREDIT",
+      "eoc_type": "EVENT",
+      "required_event": "game_begin",
+      "condition": { "not": { "math": [ "has_var(u_credit)" ] } },
+      "effect": [
+        { "math": [ "u_credit = 0" ] }
+      ]
+    }
 ]
