@@ -1,7 +1,8 @@
 [
   {
     "id": "stigma_bat_u",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "ignition bat (off)"
@@ -72,7 +73,8 @@
   },
   {
     "id": "stigma_bat_on",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "ignition bat (on)"
@@ -166,7 +168,8 @@
   },
   {
     "id": "stigma_shortsword_u",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "stigma ignition sword (off)"
@@ -248,7 +251,8 @@
   },
   {
     "id": "stigma_shortsword_on",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "stigma ignition sword (on)"
@@ -334,7 +338,8 @@
   },
   {
     "id": "stigma_axe_u",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "stigma ignition axe (off)"
@@ -414,7 +419,8 @@
   },
   {
     "id": "stigma_axe_on",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "stigma ignition axe (on)"

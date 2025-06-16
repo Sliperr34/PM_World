@@ -99,7 +99,7 @@
   {
     "type": "effect_type",
     "id": "effect_gloom_res",
-    "name": [ "Gloom Resistance" ],
+    "name": [ "" ],
     "desc": [ "" ],
     "show_in_info": false,
     "rating": "good",

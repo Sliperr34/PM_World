@@ -1,6 +1,7 @@
 [
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "category": "books",
     "id": "zweiflyer_item",
     "symbol": ",",

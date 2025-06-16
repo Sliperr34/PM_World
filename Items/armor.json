@@ -1,7 +1,8 @@
 [
   {
     "id": "alpha_coat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Alpha lab coat" },
     "description": "This is <color_yellow>Alpha's</color> lab coat. \n\nWho is this? No idea",
     "weight": "580 g",
@@ -69,7 +70,8 @@
   },
   {
     "id": "ayin_coat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Ayin lab coat" },
     "description": "Well made lab coat. \n\n<color_yellow>No matter how white it is, stains of many sins are felt on it.\nBut, well, you don't care.</color>",
     "weight": "580 g",
@@ -129,7 +131,8 @@
   },
   {
     "id": "zw_jacket",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Zwei jacket" },
     "description": "Blue jacket with two yellow stripes at the bottom. Unusually durable.\n\nZwei Association is written on the inner part of jacket.",
     "weight": "2850 g",
@@ -169,7 +172,8 @@
   },
   {
     "id": "zw_coat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Zwei coat" },
     "description": "A thick full-length coat. Unusually durable.\n\nZwei Association is written on the inner part of coat.",
     "weight": "3155 g",
@@ -230,7 +234,8 @@
   },
   {
     "id": "angela_coat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Angela coat" },
     "description": "A thick full-length blue coat.\n\n<color_cyan>All your regrets were in vain, you cannot atone your guilt. Even your freedom never belonged to you. And you just wanted to live a normal life...</color>",
     "weight": "2350 g",
@@ -291,7 +296,8 @@
   },
   {
     "id": "carmen_coat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Carmen coat" },
     "description": "A full-length brown coat.\n\n<color_red>Leading people to the Light is not easy. Therefore, sometimes they need to hear you, you set them on the right path.\nBut haven't you gone astray yourself?</color>",
     "weight": "2350 g",
@@ -352,7 +358,8 @@
   },
   {
     "id": "zw_spads",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "sturdy shoulder pads", "str_pl": "pairs of sturdy shoulderpads" },
     "description": "A shoulder pad made of steel, unusualy sturdy.Two yellow lines painted on it.",
@@ -382,7 +389,8 @@
   },
   {
     "id": "zw_epads",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "sturdy elbow pad", "str_pl": "pairs of sturdy elbow pads" },
     "description": "A elbow pad made of steel, unusualy sturdy.Two yellow lines painted on it.",
@@ -412,7 +420,8 @@
   },
   {
     "id": "zw_armguard",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "sturdy armguard", "str_pl": "pairs of sturdy armguards" },
     "description": "A armguard made of steel, unusualy sturdy.Two yellow lines painted on it.",
@@ -442,7 +451,8 @@
   },
   {
     "id": "pm_shirt_yel",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "yellow shirt", "str_pl": "yellow shirts" },
     "description": "A yellow button-down shirt with long sleeves.  Looks professional!",
     "copy-from": "dress_shirt",
@@ -453,7 +463,8 @@
   },
   {
     "id": "pm_blouse_green",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "green blouse", "str_pl": "green blouse's" },
     "description": "A green button-down blouse with long sleeves.  Looks professional!",
     "copy-from": "dress_shirt",
@@ -464,7 +475,8 @@
   },
   {
     "id": "pm_shirt",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "white shirt", "str_pl": "white shirts" },
     "description": "A white button-down shirt with long sleeves.  Looks professional!",
     "copy-from": "dress_shirt",
@@ -474,7 +486,8 @@
   },
   {
     "id": "pm_shirt_brown",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "brown shirt", "str_pl": "brown shirts" },
     "description": "A brown button-down shirt with long sleeves.  Looks professional!",
     "copy-from": "dress_shirt",
@@ -485,7 +498,8 @@
   },
   {
     "id": "kr_shirt",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "black silk shirt", "str_pl": "black silk shirts" },
     "description": "A black button-down silk shirt with long sleeves.  Looks so slick and presentable!",
     "copy-from": "dress_shirt",
@@ -496,7 +510,8 @@
   },
   {
     "id": "kr_yukata",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "black silk yukata" },
     "description": "This elegant yukata, crafted from luxurious black silk, features intricate patterns that dance across its surface. A timeless blend of style and sophistication.\n\nWho is Sayo? No idea",
     "weight": "120 g",
@@ -527,7 +542,8 @@
   },
   {
     "id": "pm_gloves",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "pair of sturdy leather gloves", "str_pl": "pairs of sturdy leather gloves" },
     "description": "A thin pair of black leather gloves. Unusually sturdy.",
     "copy-from": "gloves_leather",
@@ -539,7 +555,8 @@
   },
   {
     "id": "pm_boots",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "pair of sturdy boots", "str_pl": "pairs of sturdy boots" },
     "description": "Tough leather boots. Quite refined and well made.",
     "weight": "1360 g",
@@ -585,7 +602,8 @@
   },
   {
     "id": "pm_tie_necktie",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "black necktie" },
     "description": "An ordinary black necktie.  Knowing how to properly tie it takes some practice, but it's an important skill to learn.  Clip-ons are for children.",
     "weight": "15 g",
@@ -600,7 +618,8 @@
   },
   {
     "id": "kr_eyepatch",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "kurokumo eyepatch", "str_pl": "kurokumo eyepatches" },
     "description": "Stylish eyepatch. And, somehow, it almost doesn't interfere with vision!",
@@ -619,7 +638,8 @@
   },
   {
     "id": "pm_trouses",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str_sp": "black trouses" },
     "description": "A pair of black trouses. Looks professional!",
     "weight": "421 g",
@@ -655,7 +675,8 @@
   },
   {
     "id": "pm_trouses_brown",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str_sp": "brown trouses" },
     "description": "A pair of thick brown trouses.",
     "weight": "421 g",
@@ -691,7 +712,8 @@
   },
   {
     "id": "kr_trouses",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str_sp": "kurokumo black trouses" },
     "description": "A pair of kurokumo black trouses. Looks professional! Unusualy sturdy",
     "weight": "421 g",
@@ -727,7 +749,8 @@
   },
   {
     "id": "kr_suit",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Black suit", "str_pl": "Black suits" },
     "description": "A full-body black cotton suit with silk padding. Looks impresive and expensive ",
     "copy-from": "suit",
@@ -739,7 +762,8 @@
   },
   {
     "id": "kr_blazer",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Black blazer", "str_pl": "Black blazers" },
     "description": "A black blazer with silk padding. Looks impresive and expensive ",
     "copy-from": "blazer",
@@ -752,7 +776,8 @@
   },
   {
     "id": "pm_blazer",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "blazer", "str_pl": "blazers" },
     "description": "A black cotton blazer. ",
     "copy-from": "blazer",
@@ -763,7 +788,8 @@
   },
   {
     "id": "pm_labcoat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "fine lab coat", "str_pl": " fine lab coats" },
     "copy-from": "coat_lab",
     "price_postapoc": "20 USD",
@@ -773,7 +799,8 @@
   },
   {
     "id": "pm_test_clothes",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "PM test clothes" },
     "copy-from": "coat_lab",
     "looks_like": "coat_lab",
@@ -781,7 +808,8 @@
   },
   {
     "id": "lc_labcoat",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "L. lab coat", "str_pl": "L. lab coats" },
     "copy-from": "coat_lab",
     "price_postapoc": "30 USD",
@@ -790,7 +818,8 @@
   },
   {
     "id": "lc_trouses",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "L. brown trouses", "str_pl": "L. brown trouses" },
     "description": "A pair of brown trouses. Looks professional!",
     "copy-from": "pm_trouses",
@@ -801,7 +830,8 @@
   },
   {
     "id": "lc_vest",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "LC guard vest" },
     "description": "A lightweight polymer vest",
@@ -846,7 +876,8 @@
   },
   {
     "id": "pm_brown_shoes",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "pair of brown shoes", "str_pl": "pairs of brown shoes" },
     "description": "Leather shoes.  Not designed for running. Do you wonder who they might belong to?",
     "weight": "870 g",
@@ -890,7 +921,8 @@
   },
   {
     "id": "pm_barette_angela",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "blue barette" },
     "description": "A shiny gold barette with amethyst in it. You feel angelic energy from it, still quite artificial.",
     "weight": "50 g",
@@ -905,7 +937,8 @@
   },
   {
     "id": "pm_barette_ayin",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "yellow barette" },
     "description": "A shiny gold barette with topaz in it. Maybe your dream justifies the means?",
     "weight": "50 g",
@@ -920,7 +953,8 @@
   },
   {
     "id": "pm_barette_carmen",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "brown barette" },
     "description": "A shiny gold barette with ruby in it. If your dream was misunderstod, whose fault is it?",
     "weight": "50 g",
@@ -934,7 +968,8 @@
     "flags": [ "NO_WEAR_EFFECT" ]
   },
   {
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "id": "ego_suit",
     "name": { "str": "EGO Suit", "str_pl": "EGO Suits" },
     "description": "A heavy suit of armor with plates protecting vital areas. Capable of contain EGO",
@@ -1001,7 +1036,8 @@
   },
   {
     "id": "cuirass_lightplate_test",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "cuirass test PM", "str_pl": "cuirasses" },
     "description": "A steel breastplate, and a vital part of plate armor.  Even as full armor went into decline, cuirasses remained in use among cavalry in Europe.",
@@ -1036,7 +1072,8 @@
   },
   {
     "id": "lulu_jacket",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Lulu's jacket" },
     "description": "Comfy and warm jacket. Previously belonged to Lulu from Streetlight office.",
     "weight": "1050 g",
@@ -1076,7 +1113,8 @@
   },
   {
     "id": "w_shirt",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "W Corp shirt" },
     "description": "A dark formal shirt worn by employees of W Corp.",
     "copy-from": "dress_shirt",
@@ -1087,7 +1125,8 @@
   },
   {
     "id": "w_trousers",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str_sp": "W Corp trousers" },
     "description": "A pair of dark blue trousers worn by employees of W Corp.",
     "weight": "421 g",
@@ -1123,7 +1162,8 @@
   },
   {
     "id": "w_cap",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "W Corp cap" },
     "description": "A black cap with the logo of W corp embroidered on the front.",
     "weight": "92 g",
@@ -1149,7 +1189,8 @@
   },
   {
     "id": "w_l2_chestpiece",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "L2 cleanup agent chestpiece" },
     "description": "A sturdy chestpiece worn by junior W Corp cleanup agents. Most agents will only wear this once before they quit or suffer an unfortunate workplace accident, and it seems you're the latest in that line. Designed to prioritise mobility and protect you from electric shocks.",
@@ -1194,7 +1235,8 @@
   },
   {
     "id": "w_l3_chestpiece",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "L3 cleanup agent chestpiece" },
     "description": "A sturdy chestpiece worn by senior W Corp cleanup agents. You hear a small crackling noise coming from within the armor, and the chestpiece itself is warm to the touch. Either way, it appears safe to wear, and doesn't impede your movements much. ",
@@ -1239,7 +1281,8 @@
   },
   {
     "id": "w_bracers",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "Cleanup agent bracers", "str_pl": "Pairs of cleanup agent bracers" },
     "description": "A pair of metalic bracers, used to protect your arms from harm. They're lighter than you expected.",
@@ -1269,7 +1312,8 @@
   },
   {
     "id": "w_gloves",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "Pair of cleanup agent gloves", "str_pl": "Pairs of cleanup agent gloves" },
     "description": "A pair of cut resistant gloves worn by W Corp cleanup agents.'",
@@ -1289,7 +1333,8 @@
   },
   {
     "id": "w_boots",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Pair of cleanup agent boots", "str_pl": "Pairs of cleanup agent boots" },
     "description": "A pair of surprisingly tough leather boots, designed to be easy to clean and wash in tandem with proprietary W Corp detergents.",
     "weight": "1360 g",
@@ -1335,7 +1380,8 @@
   },
   {
     "id": "w_advanced_boots",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Pair of advanced cleanup agent boots", "str_pl": "Pairs of advanced cleanup agent boots" },
     "description": "A pair of tough metallic greaves that lead up to the ankle. When powered, they grant improve mobility and secure the user to the ground, even in areas of low gravity or poor dimensional stability. Worn exclusively by high ranking W Corp cleanup agents.",
     "weight": "1360 g",

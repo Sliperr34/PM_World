@@ -1,0 +1,10 @@
+[
+  {
+    "type": "region_overlay",
+    "regions": [ "all" ],
+    "overmap_feature_flag_settings": { "blacklist": [ "MILITARY", "SOURCE_GUN", "SOURCE_AMMO" ] },
+    "city": {
+      "shops": { "s_hunting": 3000, "s_gun_a": 3500, "s_gun_b": 4000, "mil_surplus": 2000, "mil_surplus_1": 2000, "mil_surplus_2": 2000 }
+    }
+  }
+]

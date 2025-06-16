@@ -225,7 +225,7 @@
   },
   {
     "id": "soda_ego_a_note_1",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda armor research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO armor.",
     "weight": "40 g",
@@ -252,7 +252,7 @@
   },
   {
     "id": "soda_ego_a_note_2",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda armor research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO armor.",
     "weight": "40 g",
@@ -279,7 +279,7 @@
   },
   {
     "id": "soda_ego_a_note_3",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda armor research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO armor.",
     "weight": "40 g",
@@ -306,7 +306,7 @@
   },
   {
     "id": "soda_ego_w_note_1",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda weapon research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO weapon.",
     "weight": "40 g",
@@ -330,7 +330,7 @@
   },
   {
     "id": "soda_ego_w_note_2",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda weapon research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO weapon.",
     "weight": "40 g",
@@ -354,7 +354,7 @@
   },
   {
     "id": "soda_ego_w_note_3",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda weapon research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO weapon.",
     "weight": "40 g",
@@ -381,7 +381,7 @@
   },
   {
     "id": "soda_ego_g_note_1",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda gift research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO gift.",
     "weight": "40 g",
@@ -405,7 +405,7 @@
   },
   {
     "id": "soda_ego_g_note_2",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda gift research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO gift.",
     "weight": "40 g",
@@ -432,7 +432,7 @@
   },
   {
     "id": "soda_ego_g_note_3",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "F-05-52 EGO soda gift research notes" },
     "description": "These are the results of your research on F-05-52, detailing the features of the EGO gift.",
     "weight": "40 g",

@@ -76,7 +76,7 @@
     "id": "fixer_rank",
     "type": "vitamin",
     "vit_type": "counter",
-    "name": { "str": "Ficer Rank" },
+    "name": { "str": "Fixer Rank" },
     "min": 0,
     "max": 20,
     "rate": "0 h",

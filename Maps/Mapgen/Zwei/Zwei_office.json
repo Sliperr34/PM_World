@@ -1,7 +1,7 @@
 [
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office0"] ,
 "weight": 2000,
 "object": {
@@ -85,7 +85,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office1"] ,
 "weight": 2000,
 "object": {
@@ -173,7 +173,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office2"] ,
 "weight": 2000,
 "object": {
@@ -264,7 +264,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office3"] ,
 "weight": 2000,
 "object": {
@@ -347,7 +347,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office0_roof"] ,
 "weight": 2000,
 "object": {
@@ -383,7 +383,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office1_roof"] ,
 "weight": 2000,
 "object": {
@@ -419,7 +419,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office2_roof"] ,
 "weight": 2000,
 "object": {
@@ -455,7 +455,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office3_roof"] ,
 "weight": 2000,
 "object": {

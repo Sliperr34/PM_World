@@ -94,5 +94,115 @@
     "phase": "plasma",
     "display_items": false,
     "display_field": true
+  },
+  {
+    "type": "field_type", 
+    "id": "fd_gloom", 
+    "priority": 4,
+    "intensity_levels": 
+    [
+      { 
+        "name": "patch of gloom",  
+        "sym": "#", 
+        "color":  "blue",
+        "transparent": true, 
+        "dangerous": true, 
+        "move_cost": 20,
+        "translucency": 15.0,
+        "effects": 
+        [
+          {
+            "effect_id": "eff_gloom",
+            "min_duration": "1 minutes",
+            "max_duration": "5 minutes",
+            "intensity": 1, 
+            "is_environmental": false, 
+            "immune_in_vehicle": false,
+            "immune_inside_vehicle": false, 
+            "immune_outside_vehicle": false,
+            "message": "Gloom creeps into your mind.",
+            "message_type": "bad"
+          }
+        ]
+      },
+      { 
+        "name": "puddle of gloom",  
+        "effects": 
+        [
+          {
+            "effect_id": "eff_gloom",
+            "min_duration": "1 minutes",
+            "max_duration": "5 minutes",
+            "intensity": 2, 
+            "is_environmental": false, 
+            "immune_in_vehicle": false,
+            "immune_inside_vehicle": false, 
+            "immune_outside_vehicle": false,
+            "message": "Gloom creeps into your mind.",
+            "message_type": "bad"
+          }
+        ]
+      },
+      { 
+        "name": "pool of gloom",  
+        "effects": 
+        [
+          {
+            "effect_id": "eff_gloom",
+            "min_duration": "1 minutes",
+            "max_duration": "5 minutes",
+            "intensity": 3, 
+            "is_environmental": false, 
+            "immune_in_vehicle": false,
+            "immune_inside_vehicle": false, 
+            "immune_outside_vehicle": false,
+            "message": "Gloom creeps into your mind.",
+            "message_type": "bad"
+          }
+        ]
+      },
+      { 
+        "name": "despair",  
+        "effects": 
+        [
+          {
+            "effect_id": "eff_gloom",
+            "min_duration": "1 minutes",
+            "max_duration": "5 minutes",
+            "intensity": 4, 
+            "is_environmental": false, 
+            "immune_in_vehicle": false,
+            "immune_inside_vehicle": false, 
+            "immune_outside_vehicle": false,
+            "message": "Gloom creeps into your mind.",
+            "message_type": "bad"
+          }
+        ]
+      },
+      { 
+        "name": "void",  
+        "effects": 
+        [
+          {
+            "effect_id": "eff_gloom",
+            "min_duration": "1 minutes",
+            "max_duration": "5 minutes",
+            "intensity": 5, 
+            "is_environmental": false, 
+            "immune_in_vehicle": false,
+            "immune_inside_vehicle": false, 
+            "immune_outside_vehicle": false,
+            "message": "Gloom creeps into your mind.",
+            "message_type": "bad"
+          }
+        ]
+      }
+    ],
+    "half_life": "3 minutes",
+    "phase": "plasma",
+    "display_field": true, 
+    "decrease_intensity_on_contact": true,
+    "mopsafe": false,
+    "indestructible": true
   }
 ]

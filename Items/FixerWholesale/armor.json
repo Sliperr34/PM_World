@@ -1,7 +1,8 @@
 [
   {
     "id": "fix_shirt",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "fixer shirt" },
     "description": "A professional looking black shirt that boasts a hard-wearing design and a surprising level of resilience against damage, enough it could be considered armour despite looking anything but.",
     "weight": "2850 g",
@@ -41,7 +42,8 @@
   },
   {
     "id": "fix_trousers",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str_sp": "fixer trousers" },
     "description": "A pair of black trousers that have been made of an interesting material that grows harder against impact, allowing them to be unencumbering, but also resistant to attack.",
     "weight": "421 g",
@@ -76,7 +78,8 @@
   },
   {
     "id": "fixer_skirt",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": {
       "str": "fixer skirt"
     },

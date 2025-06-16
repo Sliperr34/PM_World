@@ -1,7 +1,7 @@
 [
   {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ "lab_ab_surface" ],
     "weight": 500,
     "object": {
@@ -53,7 +53,7 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ "lab_ab_surface_roof" ],
     "weight": 500,
     "object": {
@@ -89,7 +89,7 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ "lab_ab_mid" ],
     "weight": 500,
     "object": {
@@ -140,7 +140,7 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ [ "lab_ab_lt", "lab_ab_mt2", "lab_ab_mt1", "lab_ab_rt" ], [ "lab_ab_lb", "lab_ab_mb2", "lab_ab_mb1", "lab_ab_rb" ] ],
     "weight": 500,
     "object": {
@@ -260,7 +260,7 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [
       [ "lab_ab_second_lt", "lab_ab_second_mt2", "lab_ab_second_mt1", "lab_ab_second_rt" ],
       [ "lab_ab_second_lb", "lab_ab_second_mb2", "lab_ab_second_mb1", "lab_ab_second_rb" ]

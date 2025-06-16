@@ -1,7 +1,8 @@
 [
   {
     "id": "skin_prophecy",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "<color_blue>Skin Prophecy</color>" },
     "description": "An ancient-looking religious book. Its numerous pages are written on old parchment.\n\nIts believers prayed that its sanctity would last forever by binding the tome in human skin.",
     "symbol": "?",
@@ -15,7 +16,8 @@
   },
   {
     "id": "skin_prophecy_evoked",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "<color_blue>Skin Prophecy</color>" },
     "description": "Those who open the book will be enlightened to unimaginable truths. The ones who have mastered the truths will be called by the prophets; this call cannot be denied.\n\nSave us now and forevermore. The truth shall set us free.",
     "symbol": "?",
@@ -29,7 +31,8 @@
   },
   {
     "id": "skin_prophecy_evo_page",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "<color_blue>charred page</color>" },
     "description": "One of a page from Skin Prophecy book, it's a charred flesh with some blood writing on it. You feel ominous power holding it.",
     "symbol": "?",

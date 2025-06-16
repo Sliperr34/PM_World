@@ -1,7 +1,8 @@
 [
   {
     "id": "fake_watergun",
-    "type": "GUN",
+    "type": "ITEM",
+    "subtypes": [ "GUN" ],
     "reload_noise_volume": 10,
     "name": { "str_sp": "Fake water gun" },
     "description": "Water jet gun for one of peccatulums",

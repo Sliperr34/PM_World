@@ -1,6 +1,7 @@
 [
   {
-    "type": "BOOK",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "id": "resjournal",
     "category": "manuals",
     "symbol": ",",
@@ -25,7 +26,8 @@
     "time": "10 m"
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "id": "resjournalrisk",
     "name": {
       "str": "researcher's journal: risk levels"
@@ -34,7 +36,8 @@
     "copy-from": "resjournal"
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "id": "resjournalego",
     "name": {
       "str": "researcher's journal: EGO"
@@ -43,7 +46,8 @@
     "copy-from": "resjournal"
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "id": "resjournaldistortion",
     "name": {
       "str": "researcher's journal: distortions"
@@ -52,7 +56,8 @@
     "copy-from": "resjournal"
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "id": "resjournalabnormality",
     "name": {
       "str": "researcher's journal: abnormalities"
@@ -61,7 +66,8 @@
     "copy-from": "resjournal"
   },
   {
-    "type": "BOOK",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "category": "manuals",
     "id": "resjournalenk",
     "name": {

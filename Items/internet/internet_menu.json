@@ -18,6 +18,7 @@
             { "text": "Purchase Weapons", "topic": "TALK_INTERNET_SHOPPING_WEAPONS" },
             { "text": "Purchase Armour", "topic": "TALK_INTERNET_SHOPPING_ARMOURS" },
             { "text": "Purchase Other", "topic": "TALK_INTERNET_SHOPPING_OTHER" },
+            { "text": "Purchase Augs", "topic": "TALK_INTERNET_SHOPPING_BIOTIC" },
             { "text": "Transactions", "topic": "TALK_INTERNET_TRANSACTIONS" },
             { "text": "*Go Back*", "topic": "TALK_INTERNET_MENU_MAIN" },
             { "text": "*Exit*", "topic": "TALK_DONE" }
@@ -205,6 +206,25 @@
             { "text": "*Exit*", "topic": "TALK_DONE" }
         ]
     },
+    {
+        "type": "talk_topic",
+        "id": "TALK_INTERNET_SHOPPING_BIOTIC",
+        "dynamic_line": "Your Credit currently is: <u_val:credit> Ahn",
+        "responses" : [
+            { 
+              "text": "Purchase Reject Rabbit Tattoo - 10,000 Ahn", 
+              "topic": "TALK_INTERNET_SHOPPING_PURCHASE_SCREEN", 
+              "effect": [ { "u_add_var": "purchase_item", "value": "bio_tattoo_rabbit_base" }, { "math": [ "_purchase_item_cost = 10000" ] } ] 
+            },
+            { 
+              "text": "Purchase Reject Hedgehog Tattoo - 10,000 Ahn", 
+              "topic": "TALK_INTERNET_SHOPPING_PURCHASE_SCREEN", 
+              "effect": [ { "u_add_var": "purchase_item", "value": "bio_tattoo_hedgehog_base" }, { "math": [ "_purchase_item_cost = 10000" ] } ] 
+            },
+            { "text": "*Go Back*", "topic": "TALK_INTERNET_SHOPPING" },
+            { "text": "*Exit*", "topic": "TALK_DONE" }
+        ]
+    },
     
     
     
@@ -265,7 +285,7 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_LOCATIONS_ZWEI",
-        "dynamic_line": "-Blurb-",
+        "dynamic_line": "Welcome to the Zwei Association, we oversee many Fixers who want to make this world a better place. If you've seen an incursion of Distortion activity, please contact us and we shall have it dealt with. If you would like to apply to become a Fixer yourself, come visit our headquarters, and we'll see if you have the mettle.",
         "responses" : [
             { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_ZWEI", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_ZWEI" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_ZWEI" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
@@ -275,7 +295,7 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_LOCATIONS_HHPP",
-        "dynamic_line": "-Blurb-",
+        "dynamic_line": "Need a sandwich? A really, really good sandwich? Well look no further than HamHamPangPang, where even Colours dine.",
         "responses" : [
             { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_HHPP", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_HHPP" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_HHPP" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
@@ -285,7 +305,7 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_LOCATIONS_LCORP",
-        "dynamic_line": "-Blurb-",
+        "dynamic_line": "W̴͊͜h̸̭͗ȃ̷͔t̶͍̉ ̵̙̓h̶͈͑a̷̓ͅś̶̩ ̷͕͠b̶͖̂ȩ̷͌e̶̩̒n̵͉͐ ̸̱͂ẅ̷̘i̶̹͆l̵̛͇l̵̥͗ ̴̭̔b̷̖͛ẻ̴̬ ̸̻́ḣ̴͜ä̴̩́ṡ̶̹ ̵̢͂b̷̡͋e̶̻͝e̴̘͆n̸͚̑ ̸̬̐á̶͎ḷ̷͑w̷̡̎a̵̰̐y̷̼͊s̴͍͋.̸͔̇ ̷̒ͅR̸̨̈e̶̳̾t̶̳͌u̸̎͜ȑ̸̖n̸̟͌ ̵̫̊n̴͓̕ĕ̴̱v̶̡͗é̵̜r̷̼͗,̶̙̄ ̴͔̒d̷̹͋i̵̧̕s̷̙̉t̸͜͝o̴̳̾r̴͖̋t̸͕̔",
         "responses" : [
             { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_LCORP", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_LC" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_LC" } },
             { "text": "*Note the Location of their old HQ*", "topic": "TALK_INTERNET_LOCATIONS_LCORP", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_LCRUINS" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_LCRUINS" } },
@@ -296,9 +316,9 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_LOCATIONS_WCORP",
-        "dynamic_line": "-Blurb-",
+        "dynamic_line": "Need to reach your destination in mere seconds? Just buy a ticket on the W-Train, and if you wish to ride in style, do we have the offer for you!",
         "responses" : [
-            { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_ZWEI", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_WARP" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_WARP" } },
+            { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_WCORP", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_WARP" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_WARP" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
             { "text": "*Exit*", "topic": "TALK_DONE" }
         ]
@@ -306,9 +326,9 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_LOCATIONS_RC",
-        "dynamic_line": "-Blurb-",
+        "dynamic_line": "-RC- STAY OUT O' OUR TURF. WE'LL CAVE YOUR DAMNED SKULL IN. -RC-",
         "responses" : [
-            { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_ZWEI", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_RC" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_RC" } },
+            { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_RC", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_RC" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_RC" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
             { "text": "*Exit*", "topic": "TALK_DONE" }
         ]
@@ -316,9 +336,9 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_LOCATIONS_KR",
-        "dynamic_line": "-Blurb-",
+        "dynamic_line": "There's nothing we can't get. But only if you can pay the price. Don't come if you're not planning to bring the Ahn.",
         "responses" : [
-            { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_ZWEI", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_KURO" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_KURO" } },
+            { "text": "*Note the Location*", "topic": "TALK_INTERNET_LOCATIONS_KR", "condition": { "not": { "u_has_mission": "MISSION_DIRECTIONS_KURO" } }, "effect": { "assign_mission": "MISSION_DIRECTIONS_KURO" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
             { "text": "*Exit*", "topic": "TALK_DONE" }
         ]
@@ -329,8 +349,11 @@
     {
         "type": "talk_topic",
         "id": "TALK_INTERNET_MISSIONS",
-        "dynamic_line": "-To be implemented-",
+        "dynamic_line": "An array of missions are on offer for those willing to take them on. Sweep missions are simple enough, go to a location and wipe out the spotted Peccatula.",
         "responses" : [
+            { "text": "*Take a Rank 9 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", "condition": { "not": { "u_has_mission": "MISSION_CLEAN_UP_9" } }, "effect": { "assign_mission": "MISSION_CLEAN_UP_9" } },
+            { "text": "*Take a Rank 8 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", "condition": { "not": { "u_has_mission": "MISSION_CLEAN_UP_8" } }, "effect": { "assign_mission": "MISSION_CLEAN_UP_8" } },
+            { "text": "*Take a Rank 7 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", "condition": { "not": { "u_has_mission": "MISSION_CLEAN_UP_7" } }, "effect": { "assign_mission": "MISSION_CLEAN_UP_7" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
             { "text": "*Exit*", "topic": "TALK_DONE" }
         ]

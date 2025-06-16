@@ -1,6 +1,7 @@
 [
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "s_and_s_sausage",
     "name": {
       "str": "schweinhaxen and kielbasa sausage"
@@ -49,7 +50,8 @@
     ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "spicy_fries",
     "name": {
       "str": "curled fries in reaper sauce"
@@ -88,7 +90,8 @@
     ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "judgement_cones",
     "//": "Based on Chimney Cones",
     "name": {
@@ -128,7 +131,8 @@
     ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "alpha_energy_drink",
     "looks_like": "water",
     "name": {
@@ -174,7 +178,8 @@
     "copy-from": "energy_drink"
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "whitewood_pine_tea",
     "looks_like": "water",
     "name": {
@@ -212,7 +217,8 @@
     "fun": 12
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "flame_quasar_coffee",
     "name": {
       "str_sp": "flame-quasar ristretto coffee"

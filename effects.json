@@ -31,7 +31,7 @@
   {
     "type": "effect_type",
     "id": "unnatural_str",
-    "name": [ "Unnatural Strenght" ],
+    "name": [ "Unnatural Strength" ],
     "desc": [ "You feel a new power, but for how long?" ],
     "apply_message": " ",
     "rating": "good",
@@ -94,5 +94,78 @@
     "name": [ "Cool down of EGO" ],
     "desc": [ "Your EGO is on cooldown!" ],
     "flags": [ "EGO_COOLDOWN" ]
+  },
+  {
+    "type": "effect_type",
+    "id": "eff_gloom",
+    "name": [ "Sinking" ],
+    "desc": [ "Is there even a reason to go on?" ],
+    "apply_message": "",
+    "rating": "bad",
+    "max_intensity": 10,
+    "int_decay_remove": true,
+    "int_decay_tick": 21600,
+    "show_in_info": true,
+    "enchantments": [ 
+      {
+        "intermittent_activation": {
+          "effects": [
+            {
+              "frequency": "7 turns",
+              "spell_effects": [
+                { "id": "sp_sinking", "min_level": 1 }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_sinking",
+    "type": "SPELL",
+    "name": "Sinking",
+    "description": "",
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+	  "flags": [ "NO_LEGS", "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SINKING",
+    "min_range": 1,
+    "max_range": 1,
+    "difficulty": 0,
+    "max_level": 1
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SINKING",
+    "effect": [ 
+      { "u_add_morale": "gloom_morale","bonus": { "math": [ "-6 * u_effect_intensity('eff_gloom')" ] },"max_bonus": -1000, "decay_start": 10000 },
+      {
+        "if": { "math": [ "u_val('morale') < 0" ] },
+        "then": { "u_cast_spell": { "id": "spell_sinking", "hit_self": true, "min_level": { "math": [ "2 * u_effect_intensity('eff_gloom')" ] } } }
+      },
+      { "u_message": "You feel your thoughts darkening, sinking." }
+    ]
+  },
+  {
+    "id": "spell_sinking",
+    "type": "SPELL",
+    "name": "Sinking",
+    "description": "",
+    "valid_targets": [ "self" ],
+	  "flags": [ "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_dot": 1,                                             
+    "max_dot": 5,
+    "dot_increment": 1,
+    "min_duration": 100,  
+    "min_range": 1,
+    "max_range": 1,
+    "difficulty": 0,
+    "max_level": 5,
+    "message": "Gloom starts to seep into your core."
   }
 ]

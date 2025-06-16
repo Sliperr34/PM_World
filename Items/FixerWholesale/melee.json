@@ -1,7 +1,8 @@
 [
   {
     "id": "fix_broadsword",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "fixer broadsword"
@@ -65,7 +66,8 @@
     }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "fix_throwing_knife",
     "category": "weapons",
     "price_postapoc": "10 USD",
@@ -109,7 +111,8 @@
   },
   {
     "id": "fix_estoc",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": {
       "str": "black steel estoc"
@@ -175,7 +178,8 @@
     }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "fix_bat_metal",
     "name": {
       "str": "black steel bat"
@@ -220,7 +224,8 @@
   },
   {
     "id": "fix_ax",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": {
       "str": "dark steel axe"
     },
@@ -289,6 +294,61 @@
     "melee_damage": {
       "bash": 18,
       "cut": 42
+    }
+  },
+  {
+    "id": "fix_chain",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "category": "weapons",
+    "name": {
+      "str": "fixer chain"
+    },
+    "description": "A length of chain forged from an unusual alloy, a portion nearing the middle has been coated in a dark rubber to prevent the wielder from hurting themselves on the various spikes that line the rest of the links towards each end.",
+    "weight": "1223 g",
+    "volume": "1750 ml",
+    "longest_side": "10 cm",
+    "symbol": "/",
+    "color": "light_gray",
+    "looks_like": "rc_chains",
+    "price_postapoc": "95 USD",
+    "material": [
+      {
+        "type": "rubber",
+        "portion": 1.1
+      },
+      {
+        "type": "b_steel",
+        "portion": 112
+      }
+    ],
+    "repairs_with": [
+      "b_steel"
+    ],
+    "flags": [
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "DURABLE_MELEE"
+    ],
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "point",
+      "balance": "neutral"
+    },
+    "weapon_category": [
+      "FLAILS"
+    ],
+    "melee_damage": {
+      "bash": 18,
+      "cut": 8
+    },
+    "copy-from": "rc_chains",
+    "replace_materials": {
+      "mc_steel": "b_steel"
     }
   }
 ]

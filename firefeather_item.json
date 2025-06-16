@@ -1,7 +1,8 @@
 [
   {
     "id": "firefeather_item",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "<color_red>fire feather</color>", "str_pl": "fire feathers" },
     "description": "A fire feather. Seems like Prophet used it to write in book. It's a little warm to the touch, but the tip burns you if you touch it.",
     "volume": "1 ml",

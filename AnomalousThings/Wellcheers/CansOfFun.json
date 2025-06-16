@@ -1,6 +1,7 @@
 [
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "wellcheers",
     "looks_like": "cranberry_juice",
     "name": { "str": "Wellcheers" },
@@ -29,7 +30,8 @@
     "consumption_effect_on_conditions": [ "well_random" ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "cherry_wellcheers",
     "looks_like": "cranberry_juice",
     "name": { "str": "cherry Wellcheers" },
@@ -58,7 +60,8 @@
     "consumption_effect_on_conditions": [ "wellcherry_random" ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "grape_wellcheers",
     "looks_like": "cranberry_juice",
     "name": { "str": "grape Wellcheers" },
@@ -87,7 +90,8 @@
     "consumption_effect_on_conditions": [ "wellgrape_random" ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "id": "prawn_wellcheers",
     "looks_like": "cranberry_juice",
     "name": { "str": "prawn Wellcheers" },
@@ -117,7 +121,8 @@
   },
   {
     "id": "well_can",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "CONTAINER" ],
     "category": "container",
     "name": { "str": "Wellcheers can" },
     "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers.",
@@ -148,7 +153,8 @@
   },
   {
     "id": "wellgrape_can",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "CONTAINER" ],
     "category": "container",
     "name": { "str": "Wellcheers can" },
     "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in grape flavour.",
@@ -156,7 +162,8 @@
   },
   {
     "id": "wellcherry_can",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "CONTAINER" ],
     "category": "container",
     "name": { "str": "Wellcheers can" },
     "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in cherry flavour.",
@@ -164,7 +171,8 @@
   },
   {
     "id": "wellprawn_can",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "CONTAINER" ],
     "category": "container",
     "name": { "str": "Wellcheers can" },
     "description": "An aluminum can, like what soda comes in. This one appears to be a can of WellCheers. Now comes in prawn flavour.",
