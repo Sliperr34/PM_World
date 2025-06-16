@@ -1,0 +1,188 @@
+[
+  {
+    "type": "MONSTER",
+    "id": "mon_anomaly_volt",
+    "name": { "str": "Alleyway Puppy" },
+    "description": " !!! ",
+    "hp": 180,
+    "volume": "60 L",
+    "weight": "5 kg",
+    "symbol": "ξ",
+    "color": "light_blue",
+    "default_faction": "ABNOS",
+    "bodytype": "dog",
+    "speed": 100,
+    "material": [ "flesh", "steel" ],
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "electric", "amount": 8 } ],
+    "dodge": 3,
+    "armor": { "bash": 2, "cut": 2, "bullet": 4, "stab": 1, "heat": 5, "electric": 25 },
+    "vision_day": 40,
+    "vision_night": 20,
+    "luminance": 3,
+    "flags": [ "SEES", "HEARS", "ELECTRIC", "NO_BREATHE", "FLIES" ],
+    "special_attacks": [
+      {
+        "id": "volt_strike_trigger",
+        "type": "spell",
+        "spell_data": { "id": "mon_anomaly_volt_strike", "min_level": 1 },
+        "cooldown": 5
+      },
+      {
+        "id": "volt_discharge_trigger",
+        "type": "spell",
+        "spell_data": { "id": "mon_anomaly_volt_discharge", "min_level": 1 },
+        "cooldown": 15
+      },
+      {
+        "id": "volt_infusion_trigger",
+        "type": "spell",
+        "spell_data": { "id": "mon_anomaly_volt_infusion_cast", "min_level": 1 },
+        "cooldown": 30
+      },
+      {
+        "id": "volt_aoe_strike_trigger",
+        "type": "spell",
+        "spell_data": { "id": "mon_anomaly_volt_aoe_strike", "min_level": 1 },
+        "cooldown": 8,
+        "condition": { "u_has_effect": "eff_volt_infusion" }
+      }
+    ],
+    "death_function": { "effect": { "id": "mon_anomaly_volt_death_burst", "hit_self": true } }
+  },
+  {
+    "id": "mon_anomaly_volt_strike",
+    "type": "SPELL",
+    "name": "Volt strike",
+    "description": "Trigger for delayed attack",
+    "spell_class": "NONE",
+    "valid_targets": [ "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_anomaly_volt_strike_warn_delay",
+    "shape": "blast",
+    "min_range": 20,
+    "max_range": 20,
+    "flags": [ "NO_PROJECTILE", "SILENT" ]
+  },
+  {
+    "id": "EOC_anomaly_volt_strike_warn_delay",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "set_string_var": { "mutator": "npc_loc_relative", "target": "(0,0,0)" },
+        "target_var": { "context_val": "target_pos" }
+      },
+      { "npc_message": "<color_yellow>Air crackles with static above you!</color>", "type": "warning" },
+      {
+        "run_eocs": "EOC_anomaly_volt_strike_damage",
+        "time_in_future": "1 s",
+        "beta_loc": { "context_val": "target_pos" }
+      }
+    ]
+  },
+  {
+    "id": "EOC_anomaly_volt_strike_damage",
+    "type": "effect_on_condition",
+    "effect": [ { "npc_explosion": { "power": 30, "distance_factor": 0, "fire": false }, "emp_blast": true } ]
+  },
+  {
+    "id": "mon_anomaly_volt_discharge",
+    "type": "SPELL",
+    "name": "Volt blast",
+    "description": "AOE damage, center is puppy",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "emit",
+    "effect_str": "emit_anomaly_volt_discharge",
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_PROJECTILE" ]
+  },
+  {
+    "id": "emit_anomaly_volt_discharge",
+    "type": "emit",
+    "field": "fd_electricity",
+    "intensity": 3,
+    "qty": 8,
+    "chance": 100
+  },
+  {
+    "id": "mon_anomaly_volt_infusion_cast",
+    "type": "SPELL",
+    "name": "AMP up",
+    "description": "Puppy empower self and can use empowered attacks",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "effect_str": "eff_volt_infusion",
+    "shape": "blast",
+    "min_duration": "20 s",
+    "max_duration": "20 s",
+    "flags": [ "SILENT", "NO_PROJECTILE" ]
+  },
+  {
+    "id": "eff_volt_infusion",
+    "type": "effect_type",
+    "name": [ "Hypercharged" ],
+    "desc": [ "Buff speed and unlock new attacks" ],
+    "rating": "good",
+    "max_intensity": 5,
+    "int_add_val": 0,
+    "int_dur_factor": 400,
+    "base_mods": { "speed_mod": [ 40 ] },
+    "scaling_mods": { "speed_mod": [ -15 ] }
+  },
+  {
+    "id": "mon_anomaly_volt_aoe_strike",
+    "type": "SPELL",
+    "name": "Volt surge",
+    "description": "Trigger for delayed upgraded version of volt strike",
+    "spell_class": "NONE",
+    "valid_targets": [ "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_anomaly_volt_aoe_strike_warn_delay",
+    "shape": "blast",
+    "min_range": 20,
+    "max_range": 20,
+    "flags": [ "NO_PROJECTILE", "SILENT" ]
+  },
+  {
+    "id": "EOC_anomaly_volt_aoe_strike_warn_delay",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "set_string_var": { "mutator": "npc_loc_relative", "target": "(0,0,0)" },
+        "target_var": { "context_val": "target_pos" }
+      },
+      { "npc_message": "<color_light_blue>Air above you is crackling and hums!</color>", "type": "warning" },
+      {
+        "run_eocs": "EOC_anomaly_volt_aoe_strike_damage",
+        "time_in_future": "2 s",
+        "beta_loc": { "context_val": "target_pos" }
+      }
+    ]
+  },
+  {
+    "id": "EOC_anomaly_volt_aoe_strike_damage",
+    "type": "effect_on_condition",
+    "effect": [ { "npc_explosion": { "power": 45, "distance_factor": 0.6, "fire": false }, "emp_blast": true } ]
+  },
+  {
+    "id": "mon_anomaly_volt_death_burst",
+    "type": "SPELL",
+    "name": "Electric explosion",
+    "description": "Small damage aoe on death",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "explosion",
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "min_damage": 15,
+    "max_damage": 15,
+    "flags": [ "NO_PROJECTILE", "LOUD" ]
+  }
+]
