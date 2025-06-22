@@ -154,12 +154,12 @@
         "                 NNNNNNNNNtHNNNNNNNNNNNNNNNNN==NNNNNNNNNNNNNNNNNTNNNNNNNNNN                     ",
         "                         N=====0====0========= ========0====0=====N                             ",
         "                         N=====000000==================000000=====N                             ",
-        "                 NNNNNNNNNzZNNNNNNNNWWWWWWWWW==WWWWWWWWWNNNNNNNNHtNNNNNNNNN                     ",
-        "                 N0//1....Z=N               W[ W               N=H....1//0N                     ",
-        "                 N///1....NNN                                  NNN....1/+/N                     ",
-        "                 N///1.....qN                                  Nq.....1///N                     ",
-        "                 N///1.....qN                                  Nq.....1///N                     ",
-        "                 NNNNNNNNNNNN                                  NNNNNNNNNNNN                     ",
+        "                 NNNNNNNNNzZNNNNNNNNNtHWWWWWW==WWWWWWWWWNNNNNNNNHtNNNNNNNNN                     ",
+        "                 N0//1....Z=N0//1....H=N    W[ W               N=H....1//0N                     ",
+        "                 N///1....NNN///1....NNN                       NNN....1/+/N                     ",
+        "                 N///1.....qN///1.....qN                       Nq.....1///N                     ",
+        "                 N///1.....qN///1.....qN                       Nq.....1///N                     ",
+        "                 NNNNNNNNNNNNNNNNNNNNNNN                       NNNNNNNNNNNN                     ",
         "                                                                                                ",
         "                                                                                                ",
         "                                                                                                ",
@@ -196,7 +196,10 @@
         "                                                                                                "
       ],
       "place_npcs": [  ],
-      "place_monster": [ { "monster": "mon_birb", "x": 19, "y": 2 } ],
+      "place_monster": [ 
+        { "monster": "mon_birb", "x": 19, "y": 2 },
+        { "monster": "mon_void_dream", "x": 30, "y": 10 } 
+      ],
       "place_item": [
         { "item": "p_bird_book", "x": 27, "y": 2, "amount": 1, "chance": 100 },
         { "item": "soda_book", "x": 27, "y": 12, "amount": 1, "chance": 100 }

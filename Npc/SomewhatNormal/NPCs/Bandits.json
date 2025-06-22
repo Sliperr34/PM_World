@@ -1,0 +1,28 @@
+[
+  {
+    "type": "npc",
+    "id": "bullet_leader_npc",
+    "name_unique": "Yasmin",
+    "name_suffix": "Phantom Bullet",
+    "gender": "female",
+    "class": "BULLET_LEADER",
+    "attitude": 10,
+    "mission": 7,
+    "age": 36,
+    "height": 163,
+    "chat": "TALK_DONE",
+    "faction": "phantom_bullet",
+    "personality": { "aggression": 100, "bravery": 100, "collector": 0, "altruism": -50 }
+  },
+  {
+    "type": "npc",
+    "id": "bullet_follower_npc",
+    "name_suffix": "Phantom Bullet",
+    "class": "BULLET_FOLLOWER",
+    "attitude": 10,
+    "mission": 7,
+    "chat": "TALK_DONE",
+    "faction": "phantom_bullet",
+    "personality": { "aggression": 100, "bravery": 100, "collector": 0, "altruism": -50 }
+  }
+]

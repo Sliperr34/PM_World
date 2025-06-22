@@ -31,6 +31,18 @@
     ]
   },
   {
+    "type": "effect_on_condition",
+    "id": "EOC_CHAIN_CURL_FINAL",
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_1" }, "loc": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_2" }, "loc": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_3" }, "loc": { "context_val": "loc" } }
+    ]
+  },
+  {
     "id": "chain_curl_1",
     "type": "SPELL",
     "name": { "str": "Chain Curl" },

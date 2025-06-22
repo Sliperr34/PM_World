@@ -130,6 +130,11 @@
               "effect": [ { "u_add_var": "purchase_item", "value": "fix_bat_metal" }, { "math": [ "_purchase_item_cost = 75000" ] } ] 
             },
             { 
+              "text": "Purchase Fixer Chain - 85,000 Ahn", 
+              "topic": "TALK_INTERNET_SHOPPING_PURCHASE_SCREEN", 
+              "effect": [ { "u_add_var": "purchase_item", "value": "fix_chain" }, { "math": [ "_purchase_item_cost = 85000" ] } ] 
+            },
+            { 
               "text": "Purchase Fixer Axe - 75,000 Ahn", 
               "topic": "TALK_INTERNET_SHOPPING_PURCHASE_SCREEN", 
               "effect": [ { "u_add_var": "purchase_item", "value": "fix_ax" }, { "math": [ "_purchase_item_cost = 75000" ] } ] 
@@ -237,7 +242,7 @@
               "text": "Purchase <item_name:<u_val:purchase_item>>", 
               "topic": "TALK_INTERNET_SHOPPING_PURCHASE_CONFIRMATION", 
               "condition": { "math": [ "u_credit >= _purchase_item_cost" ] },
-              "effect": [ { "u_spawn_item": { "u_val": "purchase_item" } }, { "math": [ "u_credit -= _purchase_item_cost" ] } ]
+              "effect": [ { "u_spawn_item": { "u_val": "purchase_item" }, "flags": [ "FIT" ] }, { "math": [ "u_credit -= _purchase_item_cost" ] } ]
             },
             { "text": "**Not Enough Ahn**", "topic": "TALK_NONE", "condition": { "math": [ "u_credit < _purchase_item_cost" ] } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
@@ -351,9 +356,21 @@
         "id": "TALK_INTERNET_MISSIONS",
         "dynamic_line": "An array of missions are on offer for those willing to take them on. Sweep missions are simple enough, go to a location and wipe out the spotted Peccatula.",
         "responses" : [
-            { "text": "*Take a Rank 9 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", "condition": { "not": { "u_has_mission": "MISSION_CLEAN_UP_9" } }, "effect": { "assign_mission": "MISSION_CLEAN_UP_9" } },
-            { "text": "*Take a Rank 8 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", "condition": { "not": { "u_has_mission": "MISSION_CLEAN_UP_8" } }, "effect": { "assign_mission": "MISSION_CLEAN_UP_8" } },
-            { "text": "*Take a Rank 7 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", "condition": { "not": { "u_has_mission": "MISSION_CLEAN_UP_7" } }, "effect": { "assign_mission": "MISSION_CLEAN_UP_7" } },
+            { "text": "*Take a Rank 9 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", 
+            "condition": { 
+              "and": [ { "not": { "u_has_mission": "MISSION_CLEAN_UP_9" } }, { "not": { "u_has_mission": "MISSION_CLEAN_UP_8" } }, { "not": { "u_has_mission": "MISSION_CLEAN_UP_7" } } ]
+            }, 
+            "effect": { "assign_mission": "MISSION_CLEAN_UP_9" } },
+            { "text": "*Take a Rank 8 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", 
+            "condition": { 
+              "and": [ { "not": { "u_has_mission": "MISSION_CLEAN_UP_9" } }, { "not": { "u_has_mission": "MISSION_CLEAN_UP_8" } }, { "not": { "u_has_mission": "MISSION_CLEAN_UP_7" } } ] 
+            }, 
+            "effect": { "assign_mission": "MISSION_CLEAN_UP_8" } },
+            { "text": "*Take a Rank 7 Sweep Mission*", "topic": "TALK_INTERNET_MISSIONS", 
+            "condition": { 
+              "and": [ { "not": { "u_has_mission": "MISSION_CLEAN_UP_9" } }, { "not": { "u_has_mission": "MISSION_CLEAN_UP_8" } }, { "not": { "u_has_mission": "MISSION_CLEAN_UP_7" } } ]
+            }, 
+            "effect": { "assign_mission": "MISSION_CLEAN_UP_7" } },
             { "text": "*Go Back*", "topic": "TALK_NONE" },
             { "text": "*Exit*", "topic": "TALK_DONE" }
         ]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "mon_void_dream",
+    "type": "MONSTER",
+    "name": { "str": "<color_blue>Void Dream</color>" },
+    "description": "The Void Dream looks like any fluffy little sheep, perfectly at peace as they snooze openly on the ground, not the slightest worry even registering or interrupting their slumber. The only thing marking them as anything other being their almost perfect dreamly visage, and the three multicoloured eyes that lock on to any movement around the area.",
+    "default_faction": "abnormalities",
+    "bodytype": "dog",
+    "species": [ "ABNOS" ],
+    "volume": "340 L",
+    "bleed_rate": 60,
+    "weight": "210 kg",
+    "hp": 5,
+    "speed": 60,
+    "material": [ "flesh" ],
+    "looks_like": "mon_sheep",
+    "symbol": "V",
+    "color": "blue",
+    "aggression": 100,
+    "morale": 100,
+    "luminance": 5,
+    "aggro_character": true,
+    "melee_skill": 0,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      { "damage_type": "bash", "amount": 2, "armor_penetration": 10 }
+    ],
+    "dodge": 0,
+    "weakpoint_sets": [ "wps_animal_quadruped" ],
+    "families": [ "prof_wp_abnos0", "prof_wp_abnos1", "prof_wp_abnos2" ],
+    "vision_day": 20,
+    "vision_night": 20,
+    "harvest": "mutant_human",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "HAS_MIND",
+      "IMMOBILE",
+      "SILENT_DISAPPEAR",
+      "ACIDPROOF"
+    ],
+    "death_function": {
+      "effect": { "id": "death_void", "hit_self": true },
+      "message": "Void Dream becomes a Nightmare!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      {
+        "id": "sleepy_cloud",
+        "type": "spell",
+        "spell_data": { "id": "spell_sweet_dreams", "min_level": 1 },
+        "cooldown": 3
+      }
+    ],
+    "armor": { "electric": 2, "bash": 20, "cut": 8, "stab": 4, "bullet": 10, "acid": 10 }
+  },
+  {
+    "id": "mon_void_dream_1",
+    "type": "MONSTER",
+    "name": { "str": "<color_blue>Void Dream 1</color>" },
+    "description": "The Void Dream looks like any fluffy little sheep, perfectly at peace as they snooze openly on the ground, not the slightest worry even registering or interrupting their slumber. The only thing marking them as anything other being their almost perfect dreamly visage, and the three multicoloured eyes that lock on to any movement around the area.",
+    "default_faction": "abnormalities",
+    "bodytype": "dog",
+    "species": [ "ABNOS" ],
+    "volume": "340 L",
+    "bleed_rate": 40,
+    "weight": "210 kg",
+    "hp": 350,
+    "speed": 120,
+    "material": [ "flesh" ],
+    "looks_like": "mon_sheep",
+    "symbol": "V",
+    "color": "blue",
+    "aggression": 100,
+    "morale": 100,
+    "luminance": 5,
+    "aggro_character": true,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      { "damage_type": "bash", "amount": 8, "armor_penetration": 10 }
+    ],
+    "dodge": 4,
+    "weakpoint_sets": [ "wps_animal_quadruped" ],
+    "families": [ "prof_wp_abnos0", "prof_wp_abnos1", "prof_wp_abnos2" ],
+    "vision_day": 20,
+    "vision_night": 20,
+    "harvest": "mutant_human",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "HAS_MIND",
+      "ACIDPROOF"
+    ],
+    "special_attacks": [
+      {
+        "id": "sleepy_cloud",
+        "type": "spell",
+        "spell_data": { "id": "spell_sweet_dreams", "min_level": 1 },
+        "cooldown": 2
+      }
+    ],
+    "armor": { "electric": 4, "bash": 30, "cut": 16, "stab": 8, "bullet": 15, "acid": 15 }
+  }
+]

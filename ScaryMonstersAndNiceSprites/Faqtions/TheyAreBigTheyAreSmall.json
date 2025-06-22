@@ -9,7 +9,7 @@
     "known_by_u": false,
     "size": 0,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
@@ -30,7 +30,7 @@
     "known_by_u": false,
     "size": 80,
     "power": 100,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "markup": 1.4 },
@@ -52,7 +52,7 @@
     "known_by_u": false,
     "size": 15,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "markup": 1.1 },
@@ -74,7 +74,7 @@
     "known_by_u": false,
     "size": 50,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "markup": 1.2 },
@@ -96,7 +96,7 @@
     "known_by_u": false,
     "size": 200,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "markup": 1.5 },
@@ -118,7 +118,7 @@
     "known_by_u": false,
     "size": 200,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "markup": 1.5 },
@@ -139,7 +139,7 @@
     "known_by_u": false,
     "size": 8,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
@@ -160,7 +160,7 @@
     "known_by_u": false,
     "size": 4,
     "power": 0,
-    "fac_food_supply": { "calories": 115200, "vitamins": {  } },
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
     "wealth": 5000,
     "price_rules": [
       { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
@@ -170,5 +170,26 @@
     ],
     "relations": { "hhpp": { "watch your back": true, "guard your stuff": true } },
     "description": "A bistro, known for operating in a sector of the city that frowns less on certain taboos while cooking. After all, food must come from somewhere, and if it's tasty enough, well.."
+  },
+  {
+    "type": "faction",
+    "id": "phantom_bullet",
+    "name": "The Phantom Bullet",
+    "likes_u": -1000,
+    "respects_u": -1000,
+    "trusts_u": -1000,
+    "known_by_u": false,
+    "size": 4,
+    "power": 2,
+    "fac_food_supply": [ [ 0, { "calories": 115200, "vitamins": {  } } ] ],
+    "wealth": 75000,
+    "price_rules": [
+      { "item": "pm_money_1", "price": 100, "fixed_adj": 0 },
+      { "item": "pm_money_10", "price": 1000, "fixed_adj": 0 },
+      { "item": "pm_money_100", "price": 10000, "fixed_adj": 0 },
+      { "item": "pm_money_1000", "price": 100000, "fixed_adj": 0 }
+    ],
+    "relations": { "rusted_chains": { "kill on sight": true }, "zwei_association": { "kill on sight": true }, "kurokumo": { "kill on sight": true }, "l_corp": { "kill on sight": true }, "no_faction": { "kill on sight": true }, "your_followers": { "kill on sight": true } },
+    "description": "A gang formated from a successful raid of old L-Corp property, managing to get away with some E.G.O equipment they otherwise shouldn't have. Now it's them that rules the streets around."
   }
 ]

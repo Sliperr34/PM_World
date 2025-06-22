@@ -143,7 +143,7 @@
     "monster_kill_goal": 9,
     "invisible_on_complete": false,
     "start": {
-      "assign_mission_target": { "om_terrain": "car_park", "random": true, "search_range": 80, "min_distance": 20, "z": 0 },
+      "assign_mission_target": { "om_terrain": "road_four_way", "random": true, "search_range": 800, "min_distance": 20, "z": 0 },
       "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 9, "target": true } ] }
     },
     "origins": [ "ORIGIN_COMPUTER" ],

@@ -209,10 +209,10 @@
 	"place_npcs": [
         { "class": "zwei_game_npc", "x": 19, "y": 11 },
         { "class": "isadora_npc", "x": 10, "y": 4 },
-        { "class": "zwei_train_npc", "x": 11, "y": 2 },
-        { "class": "zwei_train_npc", "x": 9, "y": 2 },
-        { "class": "zwei_train_npc", "x": 11, "y": 6 },
-        { "class": "zwei_train_npc", "x": 9, "y": 6 }
+        { "class": "zwei_npc", "x": 11, "y": 2 },
+        { "class": "zwei_npc", "x": 9, "y": 2 },
+        { "class": "zwei_npc", "x": 11, "y": 6 },
+        { "class": "zwei_npc", "x": 9, "y": 6 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",

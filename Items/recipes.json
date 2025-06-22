@@ -259,5 +259,248 @@
         ]
       ]
     ]
+  },
+  
+  
+  
+  {
+    "type": "recipe_category",
+    "id": "CC_PRACTICE",
+    "copy-from": "CC_PRACTICE",
+    "extend": { "recipe_subcategories": [ "CSC_PRACTICE_CONTROL" ] }
+  },
+  {
+    "id": "pm_control_practice",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_CONTROL",
+    "name": "self-control",
+    "description": "Recipes related to self-control.",
+    "skill_used": "self-control",
+    "nested_category_data": [
+      "prac_control_0",
+      "prac_control_1",
+      "prac_control_2",
+      "prac_control_3",
+      "prac_control_4",
+      "prac_control_5",
+      "prac_control_6",
+      "prac_control_7"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "prac_control_0",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "emotion control",
+    "description": "Practice bringing your emotions under control.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 0, "max_difficulty": 2, "skill_limit": 2 }
+  },
+  {
+    "id": "prac_control_1",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "focus thoughts",
+    "description": "Practice keeping your mind on your goals.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 2, "max_difficulty": 4, "skill_limit": 4 }
+  },
+  {
+    "id": "prac_control_2",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "meditation",
+    "description": "Practice meditation, and the ability to clear your head of distractions.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 4, "max_difficulty": 5, "skill_limit": 5 }
+  },
+  {
+    "id": "prac_control_3",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "deep meditation",
+    "description": "Practice falling deeper, focusing only on your goals.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 5, "max_difficulty": 6, "skill_limit": 6 }
+  },
+  {
+    "id": "prac_control_4",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "awake meditation",
+    "description": "Bring the skills together, learn to be meditative even when acting.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 6, "max_difficulty": 7, "skill_limit": 7 }
+  },
+  {
+    "id": "prac_control_5",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "trance state",
+    "description": "Practice being able to enter a medititative trance, even when dealing with the terrors of the city.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 7, "max_difficulty": 8, "skill_limit": 8 }
+  },
+  {
+    "id": "prac_control_6",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "natural trance",
+    "description": "It's time to learn to manage without even holding a trance.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 8, "max_difficulty": 9, "skill_limit": 9 }
+  },
+  {
+    "id": "prac_control_7",
+    "type": "practice",
+    "activity_level": "NO_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "pinnacle",
+    "description": "You barely need a trance any more, practice making it your natural state.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "practice_data": { "min_difficulty": 9, "max_difficulty": 10, "skill_limit": 10 }
+  },
+  
+  {
+    "type": "recipe_category",
+    "id": "CC_PRACTICE",
+    "copy-from": "CC_PRACTICE",
+    "extend": { "recipe_subcategories": [ "CSC_PRACTICE_SHIN" ] }
+  },
+  {
+    "id": "pm_shin_practice",
+    "type": "nested_category",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_PRACTICE",
+    "subcategory": "CSC_PRACTICE_SHIN",
+    "name": "shin",
+    "description": "Recipes related to shin.",
+    "skill_used": "self-control",
+    "nested_category_data": [
+      "prac_shin_0",
+      "prac_shin_1",
+      "prac_shin_2",
+      "prac_mang_0",
+      "prac_mang_1",
+      "prac_mang_2"
+    ],
+    "difficulty": 1
+  },
+  {
+    "id": "prac_shin_0",
+    "type": "practice",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "shin (basic)",
+    "description": "Try to influence the flow of Light around you.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_shin_0" }
+    ],
+    "practice_data": { "min_difficulty": 4, "max_difficulty": 6, "skill_limit": 6 }
+  },
+  {
+    "id": "prac_shin_1",
+    "type": "practice",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "shen (advanced)",
+    "description": "Practice coalescing Shin around yourself, like armour.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_shin_1" }
+    ],
+    "practice_data": { "min_difficulty": 7, "max_difficulty": 8, "skill_limit": 8 }
+  },
+  {
+    "id": "prac_shin_2",
+    "type": "practice",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "shen (mastery)",
+    "description": "Practice until manipulation of the light is second nature.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_shin_2" }
+    ],
+    "practice_data": { "min_difficulty": 9, "max_difficulty": 9, "skill_limit": 9 }
+  },
+  
+  {
+    "id": "prac_mang_0",
+    "type": "practice",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "mang (basic)",
+    "description": "Practice focusing the light around your attacks.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_mang_0" }
+    ],
+    "practice_data": { "min_difficulty": 5, "max_difficulty": 6, "skill_limit": 6 }
+  },
+  {
+    "id": "prac_mang_1",
+    "type": "practice",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "mang (advanced)",
+    "description": "Practice forming and holding multiple rings around a weapon.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_mang_1" }
+    ],
+    "practice_data": { "min_difficulty": 7, "max_difficulty": 9, "skill_limit": 9 }
+  },
+  {
+    "id": "prac_mang_2",
+    "type": "practice",
+    "activity_level": "MODERATE_EXERCISE",
+    "category": "CC_*",
+    "subcategory": "CSC_*_NESTED",
+    "name": "mang (mastery)",
+    "description": "Practice until manipulation of the light is second nature.",
+    "skill_used": "self-control",
+    "time": "1 h",
+    "proficiencies": [
+      { "proficiency": "prof_mang_2" }
+    ],
+    "practice_data": { "min_difficulty": 10, "max_difficulty": 10, "skill_limit": 10 }
   }
 ]

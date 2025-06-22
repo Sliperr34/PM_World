@@ -14,8 +14,8 @@
     "looks_like": "jacket_jean",
     "to_hit": -2,
     "armor": [
-      { "covers": [ "torso" ], "coverage": 90, "encumbrance": [ 3, 6 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 3, 6 ] }
+      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 3, 6 ] },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 90, "encumbrance": [ 3, 6 ] }
     ],
     "pocket_data": [
       {
@@ -38,7 +38,7 @@
     "warmth": 18,
     "environmental_protection": 4,
     "material_thickness": 0.8,
-    "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY", "RAINPROOF" ]
+    "flags": [ "VARSIZE", "POCKETS", "OUTER", "STURDY", "RAINPROOF", "SKINTIGHT" ]
   },
   {
     "id": "fix_trousers",

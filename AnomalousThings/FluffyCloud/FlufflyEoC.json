@@ -1,0 +1,124 @@
+[
+  {
+    "id": "death_void",
+    "type": "SPELL",
+    "name": { "str": "Void Nightmare" },
+    "description": "This trigger start of the Void Nightmare",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_PROJECTILE" ],
+    "valid_targets": [ "ground", "hostile" ],
+    "max_level": 1,
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 6,
+    "max_range": 6,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "difficulty": -20,
+    "base_casting_time": 1,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "void_death_eoc"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "void_death_eoc",
+    "effect": [ { "npc_spawn_monster": "mon_void_dream_1", "real_count": 1, "min_radius": 2, "max_radius": 4 }, "npc_die" ]
+  },
+  
+  
+  {
+    "id": "spell_sweet_dreams",
+    "type": "SPELL",
+    "name": "Sweet Dreams",
+    "description": "",
+    "valid_targets": [ "hostile", "self" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SWEET_DREAMS_1",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 100,
+    "min_range": 5,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "NO_FAIL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWEET_DREAMS_1",
+    "eoc_type": "ACTIVATION",
+    "condition": { "not": { "u_has_effect": "sleep" } },
+    "effect": [
+      { "u_message": "A drowsy feeling floods outwards from Void Dream, surely it wouldn't be so bad to just close your eyes for a moment...", "type": "bad" },
+      { "math": [ "_res = 100 + (u_skill('self-control') * 10) + (u_val('intelligence') * 2)" ] },
+      { "math": [ "_diff = rand(u_val('sleepiness') * 1.2)" ] },
+      {
+        "if": { "math": [ "_diff > _res" ] },
+        "then": [
+          { "u_message": "Yeah.. Just a quick nap..", "type": "bad" },
+          { "math": [ "u_val('sleepiness') += 100" ] },
+          { "u_add_effect": "sleep", "duration": 6000 },
+          {
+            "if": { "math": [ "u_void_addiction < 1" ] },
+            "then": [
+              { "u_message": "As you slip into sleep, you have the most wonderful dream, a world that is perfect, unblemished. Where nothing was lost, where the world is beautiful in every single detail. There is no fear, just a glimpse into a reality of complete perfection. As you wake, you're greeted only with imperfection.", "popup": true },
+              { "math": [ "u_vitamin('trauma') -= 6" ] }
+            ],
+            "else": [
+              { "u_message": "Once again the beautiful world embraces you like a warm hug. If only this could be the real world.. If only you could belong to it. There is only delight here, as much as you can drink and eat. Those you miss laugh with you, those you lost await your call. Even darker urges are easily satiated. Don't wake up. Don't wake up. Don't wake up. But morning always comes.", "popup": true },
+              { "math": [ "u_vitamin('trauma') += 1" ] },
+              {
+                "if": { "and": [ { "math": [ "u_vitamin('trauma') > 20" ] }, { "math": [ "u_void_addiction == 4" ] }, { "math": [ "(_diff - _res) > 50" ] } ] },
+                "then": [
+                  { "u_message": "But then, an idea comes to you. Maybe.. Maybe not waking up is easy after all. Something snaps, and into your new world you walk.", "popup": true },
+                  { "math": [ "u_hp('torso') -= 1000"] }
+                ]
+              }
+            ]
+          },
+          { "math": [ "u_void_addiction = 4" ] }
+        ]
+      },
+      { "math": [ "u_val('sleepiness') += 5" ] }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VOID_DREAM_WAKE",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": { 
+      "and": [ { "math": [ "u_void_addiction > 0" ] }, { "math": [ "u_monsters_nearby('mon_void_dream', 'radius': 30) == 0" ] }, { "math": [ "u_monsters_nearby('mon_void_dream_1', 'radius': 30) == 0" ] } ]
+    },
+    "effect": [
+      {
+        "switch": { "math": [ "u_magic_bullet" ] },
+        "cases": [
+          {
+            "case": 1,
+            "effect": { "message": "Why can't this world be perfect too..?", "popup": true }
+          },
+          {
+            "case": 2,
+            "effect": { "message": "VOID DREAM. VOID DREAM. VOID DREAM. VOID DREAM. VOID DREAM.", "popup": true }
+          },
+          {
+            "case": 3,
+            "effect": { "message": "How can you stand this? Everything is grey, dead. Dreams, life, it doesn't matter! Void Dream can help. Yeah. Should go see them.", "popup": true }
+          },
+          {
+            "case": 4,
+            "effect": { "message": "Why.. Why can't you see that world again? Even the best dream is a nightmare in comparison! You should go see Void Dream again..", "popup": true }
+          }
+        ]
+      },
+      { "math": [ "u_void_addiction -= 1" ] },
+      { "math": [ "u_vitamin('trauma') += 1" ] }
+    ]
+  }
+]

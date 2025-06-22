@@ -53,5 +53,14 @@
         [ [ "zw_mace", -1 ] ]
       ]
     }
-   }
+  },
+  {
+    "id": "real_whips",
+    "type": "requirement",
+    "extend": {
+      "tools": [ 
+        [ [ "fix_chain", -1 ] ]
+      ]
+    }
+  }
 ]

@@ -159,12 +159,150 @@
     "eoc_type": "EVENT",
     "required_event": "game_avatar_new",
     "effect": [
-      { "math": [ "u_vitamin('trauma') = 5" ] }
+      { "math": [ "u_vitamin('trauma') = 5" ] },
+      { "math": [ "u_mang = 0" ] }
     ]
   },
   {
     "id": "morale_trauma",
     "type": "morale_type",
     "text": "Trauma"
+  },
+  {
+    "id": "morale_self_control",
+    "type": "morale_type",
+    "text": "Self Control"
+  },
+  {
+    "id": "morale_self_control_1",
+    "type": "morale_type",
+    "text": "Self Control"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_self_control",
+    "eoc_type": "ACTIVATION",
+    "condition": "u_is_avatar",
+    "effect": [
+      { "u_lose_morale": "morale_self_control" },
+      { "u_lose_morale": "morale_self_control_1" },
+      { "math": [ "_zeroed = 0" ] },
+      {
+        "if": { "math": [ "u_val('morale') > 0" ] },
+        "then": { "math": [ "_pos = -1" ] },
+        "else": { "math": [ "_pos = 1" ] }
+      },
+      { "math": [ "_total_control = (12 * u_skill('self-control')) / (1 + (u_vitamin('emotion') / 50))" ] },
+      {
+        "if": { 
+          "or": [ 
+            { "and": [ { "math": [ "_pos == 1" ] }, { "math": [ "u_val('morale') > (-1 * _total_control)" ] } ] },
+            { "and": [ { "math": [ "_pos == -1" ] }, { "math": [ "u_val('morale') < _total_control" ] } ] }
+          ]
+        },
+        "then": [ { "math": [ "_morale_change = -1 * u_val('morale')" ] }, { "math": [ "_zeroed = 1" ] } ],
+        "else": { "math": [ "_morale_change = _pos * _total_control" ] }
+      },
+      { "u_add_morale": "morale_self_control", "bonus": { "math": [ "_morale_change"] }, "capped": true, "max_bonus": 100, "duration": "5 seconds" },
+      { 
+        "if": { "and": [ { "math": [ "_zeroed == 1" ] }, { "math": [ "u_val('morale') != 0" ] } ] },
+        "then": [ 
+          { "u_lose_morale": "morale_self_control" },
+          { "u_add_morale": "morale_self_control", "bonus": 1000, "max_bonus": 1000, "capped": true, "duration": "5 seconds" },
+          { "u_add_morale": "morale_self_control_1", "bonus": -1000, "max_bonus": -1000, "capped": true, "duration": "5 seconds" }
+        ]
+      },
+      { "run_eocs": [ "EOC_self_control_focus" ] },
+      {
+        "if": { "math": [ "_zeroed == 1" ] },
+        "then": { "run_eocs": [ "EOC_self_control_shin" ] },
+        "else": { "run_eocs": [ "EOC_remove_shin" ] } 
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_self_control_focus",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+       "x_in_y_chance": { "x": { "math": [ "11 - u_skill('self-control')" ] }, "y": { "math": [ "110 - u_val('focus')" ] } }
+    },
+    "effect": [
+      {  
+          "if": { "math": [ "u_val('focus') < 5" ] },
+          "then": [ { "u_lose_trait": "mut_self_control_on" }, { "u_add_trait": "mut_self_control_off" }, { "u_message": "Your focus wavers, emotions flooding free from your control." }, { "run_eocs": [ "EOC_remove_shen" ] } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_self_control_shin",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "and": [ { "math": [ "u_skill('self-control') > 4" ] }, { "math": [ "u_val('focus') > 20" ] }, { "math": [ "u_vitamin('trauma') > 10" ] }, { "u_has_proficiency": "prof_shin_0" } ]
+    },
+    "effect": [
+      { "u_cast_spell": { "id": "spell_shin", "hit_self": true } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_remove_shin",
+    "eoc_type": "ACTIVATION",
+    "condition": {
+      "u_has_item": "SHIN_aura"
+    },
+    "effect": [
+      { "u_consume_item": "SHIN_aura" }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "mut_self_control_on",
+    "name": "Self-Control",
+    "points": 0,
+    "description": "You are focusing on controlling your emotions.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "active": true,
+    "no_empathize_with": [ "HUMAN" ],
+    "time": 0,
+    "activated_eocs": [ "EOC_self_control_shen" ],
+    "processed_eocs": [ "EOC_self_control" ],
+    "deactivated_eocs": [ "EOC_remove_shin" ],
+    "transform": {
+      "target": "mut_self_control_off",                      
+      "msg_transform": "You let your emotions flare.", 
+      "active": false,
+      "moves": 0
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "mut_self_control_off",
+    "name": "Self-Control (Release)",
+    "points": 0,
+    "description": "You are not focusing on controlling your emotions.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "active": true,
+    "transform": {
+      "target": "mut_self_control_on",                      
+      "msg_transform": "You focus, breathing stills.", 
+      "active": true,
+      "moves": 0
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_self_control_initialize",
+    "eoc_type": "EVENT",
+    "required_event": "game_begin",
+    "condition": { "and": [ { "not": { "u_has_trait": "mut_self_control_off" } }, { "not": { "u_has_trait": "mut_self_control_on" } } ] },
+    "effect": [
+      { "u_add_trait": "mut_self_control_off" }
+    ]
   }
 ]

@@ -104,27 +104,6 @@
   },
   {
     "type": "EXTERNAL_OPTION",
-    "name": "SPAWN_CITY_HORDE_THRESHOLD",
-    "//": "Minimum city size to guarantee extra zombies are spawned in cities.  0 means all cities spawn extra zombies.  Negative values disable extra city zombies.",
-    "stype": "int",
-    "value": -1
-  },
-  {
-    "type": "EXTERNAL_OPTION",
-    "name": "SPAWN_CITY_HORDE_SMALL_CITY_CHANCE",
-    "//": "Probability of a city smaller than SPAWN_HORDE_THRESHOLD having city zombies spawned, express in 'one in x' fashion .",
-    "stype": "int",
-    "value": 100
-  },
-  {
-    "type": "EXTERNAL_OPTION",
-    "name": "SPAWN_CITY_HORDE_SCALAR",
-    "//": "A scaling factor that determines how many zombies are spawned in cites, multiplied by city size, when city hordes are indicated.",
-    "stype": "float",
-    "value": 1.0
-  },
-  {
-    "type": "EXTERNAL_OPTION",
     "name": "OVERMAP_MAXIMUM_URBANITY",
     "//": "How urban do we allow our megacities to go?  Mostly functions as a multiple of map settings city size.",
     "stype": "int",

@@ -2,9 +2,43 @@
   {
     "type": "region_overlay",
     "regions": [ "all" ],
+    "map_extras": {
+      "field": {
+        "chance": 8,
+        "extras": {
+          "mx_kk_rc": 12,
+          "mx_incident_fixer": 15,
+          "mx_incident_zwei": 15
+        }
+      },
+      "road": {
+        "chance": 12,
+        "extras": {
+          "mx_kk_rc": 6,
+          "mx_incident_fixer": 15,
+          "mx_incident_zwei": 15
+        }
+      },
+      "forest_thick": {
+        "chance": 2,
+        "extras": {
+          "mx_kk_rc": 15,
+          "mx_incident_fixer": 4,
+          "mx_incident_zwei": 4
+        }
+      },
+      "forest": {
+        "chance": 4,
+        "extras": {
+          "mx_kk_rc": 15,
+          "mx_incident_fixer": 8,
+          "mx_incident_zwei": 8
+        }
+      }
+    },
     "overmap_feature_flag_settings": { "blacklist": [ "MILITARY", "SOURCE_GUN", "SOURCE_AMMO" ] },
     "city": {
-      "shops": { "s_hunting": 3000, "s_gun_a": 3500, "s_gun_b": 4000, "mil_surplus": 2000, "mil_surplus_1": 2000, "mil_surplus_2": 2000 }
+      "shops": { "s_hunting": 0, "s_gun_a": 0, "s_gun_b": 0, "mil_surplus": 0, "mil_surplus_1": 0, "mil_surplus_2": 0 }
     }
   }
 ]
