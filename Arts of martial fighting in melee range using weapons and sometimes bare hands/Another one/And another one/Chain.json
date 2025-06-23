@@ -1,0 +1,127 @@
+[
+  {
+    "id": "chain_curl",
+    "type": "SPELL",
+    "name": { "str": "Chain Curl" },
+    "description": "Wrap an opponent in a chain, and then toss them away.",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "max_level": 1,
+    "min_damage": -3,
+    "max_damage": -3,
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 80,
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_CHAIN_CURL"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CHAIN_CURL",
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_1" }, "loc": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_2" }, "loc": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_3" }, "loc": { "context_val": "loc" } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_CHAIN_CURL_FINAL",
+    "effect": [
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_1" }, "loc": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_2" }, "loc": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "npc_cast_spell": { "id": "chain_curl_3" }, "loc": { "context_val": "loc" } }
+    ]
+  },
+  {
+    "id": "chain_curl_1",
+    "type": "SPELL",
+    "name": { "str": "Chain Curl" },
+    "description": "Wrap an opponent in a chain, and then toss them away.",
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "max_level": 1,
+    "min_damage": -3,
+    "max_damage": -3,
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 10,
+    "shape": "blast",
+    "effect": "directed_push"
+  },
+  {
+    "id": "chain_curl_2",
+    "type": "SPELL",
+    "name": { "str": "Chain Curl" },
+    "description": "Wrap an opponent in a chain, and then toss them away.",
+    "flags": [ "SILENT", "NON_MAGICAL", "RANDOM_DAMAGE", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 0.5" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 1.2" ] },
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "damage_type": "cut",
+    "base_casting_time": 10,
+    "shape": "blast",
+    "effect": "attack"
+  },
+  {
+    "id": "chain_curl_3",
+    "type": "SPELL",
+    "name": { "str": "Chain Curl" },
+    "description": "Wrap an opponent in a chain, and then toss them away.",
+    "flags": [ "SILENT", "NON_MAGICAL", "RANDOM_DAMAGE", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "max_level": 1,
+    "min_damage": 5,
+    "max_damage": 10,
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 1,
+    "shape": "blast",
+    "effect": "directed_push"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GET_WEAPON_DAMAGE",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "effect": [ 
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "wielded_only": true } ],
+        "true_eocs": [
+          {
+            "id": "EOC_STATS",
+            "effect": [
+              { "math": [ "u_weapon_damage = n_melee_damage('ALL')" ] }  
+            ]
+          }
+        ] 
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GET_WEAPON_DAMAGE_START",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "effect": [ { "math": [ "u_weapon_damage = 0" ] } ]
+  }
+]

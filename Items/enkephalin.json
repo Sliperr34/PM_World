@@ -1,6 +1,7 @@
 [
   {
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "ammo_type": "enkephalin",
     "id": "tainted_enk",
     "name": {
@@ -18,7 +19,8 @@
     "phase": "liquid"
   },
   {
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "ammo_type": "enkephalin",
     "id": "corrupted_enk",
     "name": {
@@ -36,7 +38,8 @@
     "phase": "liquid"
   },
   {
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "ammo_type": "enkephalin",
     "id": "enk",
     "name": {
@@ -54,7 +57,8 @@
     "phase": "liquid"
   },
   {
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "ammo_type": "enkephalin",
     "id": "pure_enk",
     "name": {
@@ -73,7 +77,8 @@
   },
   {
     "id": "enk_capsule",
-    "type": "MAGAZINE",
+    "type": "ITEM",
+    "subtypes": [ "MAGAZINE" ],
     "category": "tool_magazine",
     "name": { "str": "Enkephalin Capsule" },
     "description": "A container that appears almost overengineered at first glance, made of a lightweight black alloy, with a glass panel to see what has been stored inside. The top can be opened with a latch, though remains secure even through rigorous bumps.",

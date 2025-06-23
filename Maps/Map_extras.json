@@ -1,0 +1,32 @@
+[
+  {
+    "id": "mx_kk_rc",
+    "type": "map_extra",
+    "name": { "str": "Gang Fight" },
+    "description": "A gang butting heads.",
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_kk_rc" },
+    "sym": "G",
+    "color": "red",
+    "autonote": true
+  },
+  {
+    "id": "mx_incident_fixer",
+    "type": "map_extra",
+    "name": { "str": "Outbreak" },
+    "description": "A distortion outbreak.",
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_incident_fixer" },
+    "sym": "O",
+    "color": "blue",
+    "autonote": true
+  },
+  {
+    "id": "mx_incident_zwei",
+    "type": "map_extra",
+    "name": { "str": "Outbreak" },
+    "description": "A distortion outbreak.",
+    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_incident_zwei" },
+    "sym": "O",
+    "color": "blue",
+    "autonote": true
+  }
+]

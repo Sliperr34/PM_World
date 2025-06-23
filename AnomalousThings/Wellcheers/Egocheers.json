@@ -1,6 +1,7 @@
 [
   {
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
     "id": "ego_suit_soda",
     "name": { "str": "<color_green>EGO Suit Soda</color>", "str_pl": "<color_green>EGO Suits Soda</color>" },
     "description": "A suit of armor that feels like you're wearing aluminum. Its quite light for armor, so it is rather comfortable to wear.\n\nSome say it smells of sea-salt when worn for a long time.",
@@ -12,7 +13,7 @@
     "symbol": "[",
     "color": "blue",
     "repairs_with": [ "l_steel" ],
-    "relic_data": { "passive_effects": [ { "id": "soda_suit_1" }, { "id": "soda_suit_2" }, { "id": "soda_suit_3" } ] },
+    "passive_effects": [ { "id": "soda_suit_1" }, { "id": "soda_suit_2" }, { "id": "soda_suit_3" } ],
     "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "TRADER_AVOID", "NO_SALVAGE" ],
     "max_worn": 1,
     "armor": [
@@ -72,7 +73,8 @@
     "id": "ego_weapon_soda",
     "copy-from": "pistol_base",
     "looks_like": "glock_17",
-    "type": "GUN",
+    "type": "ITEM",
+    "subtypes": [ "GUN", "ARTIFACT" ],
     "name": { "str": "<color_green>EGO Weapon Soda</color>" },
     "description": "A pistol painted in a refreshing purple. Whenever this E.G.O. is used, a faint scent of grapes wafts through the air",
     "weight": "630 g",
@@ -95,14 +97,15 @@
     "min_cycle_recoil": 200,
     "flags": [ "ALLOWS_BODY_BLOCK", "TRADER_AVOID" ],
     "weapon_category": [ "AUTOMATIC_PISTOLS" ],
-    "relic_data": { "passive_effects": [ { "id": "soda_pistol_1" }, { "id": "soda_pistol_2" }, { "id": "soda_pistol_3" } ] },
+    "passive_effects": [ { "id": "soda_pistol_1" }, { "id": "soda_pistol_2" }, { "id": "soda_pistol_3" } ],
     "pocket_data": [ { "magazine_well": "250 ml", "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "soda_mag", "soda_mag_medium" ] } ],
     "melee_damage": { "bash": 5 }
   },
   {
     "id": "soda_mag",
     "looks_like": "glock17_17",
-    "type": "MAGAZINE",
+    "type": "ITEM",
+    "subtypes": [ "MAGAZINE" ],
     "name": { "str": "Soda magazine" },
     "description": "A light violet magazine containing special Soda EGO bullets. This one has a bullet capacity of 18 rounds.",
     "weight": "70 g",
@@ -120,7 +123,8 @@
   {
     "id": "soda_mag_medium",
     "looks_like": "glock17_17",
-    "type": "MAGAZINE",
+    "type": "ITEM",
+    "subtypes": [ "MAGAZINE" ],
     "name": { "str": "Soda magazine" },
     "description": "A light violet magazine containing special Soda EGO bullets. This one has a bullet capacity of 24 rounds.",
     "weight": "74 g",
@@ -137,7 +141,8 @@
   },
   {
     "id": "soda_bullet",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "name": { "str_sp": "Soda bullet" },
     "description": "general ammo for Soda EGO weapon.  ",
     "weight": "4 g",
@@ -159,7 +164,8 @@
   },
   {
     "id": "soda_bullet_cherry",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "name": { "str_sp": "cherry Soda bullet" },
     "description": "The bullet's surface is covered with numerous spikes resembling small fangs, so it can inflict quite a lot of pain when it penetrates an enemy.",
     "weight": "3 g",
@@ -181,7 +187,8 @@
   },
   {
     "id": "soda_bullet_grape",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
     "name": { "str_sp": "grape Soda bullet" },
     "description": "The bullet's surface is covered with numerous spikes resembling small fangs, so it can inflict quite a lot of pain when it penetrates an enemy.",
     "weight": "6 g",
@@ -235,7 +242,8 @@
   },
   {
     "id": "ego_soda_gift",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
     "name": { "str": "<color_green>EGO gift Soda</color>" },
     "description": "A string of small purple cans connected together by a charm bracelet. Given to those who earn the approval of Wellcheers itself, it grants the wearer increased abilities to eat and gain benefits from their lifestyle.",
     "weight": "333 g",
@@ -244,14 +252,15 @@
     "price_postapoc": "25 cent",
     "material": [ { "type": "bone", "portion": 9 }, { "type": "l_steel" } ],
     "looks_like": "platinum_necklace",
-    "relic_data": { "passive_effects": [ { "id": "soda_gift_1" }, { "id": "soda_gift_2" }, { "id": "soda_gift_3" } ] },
+    "passive_effects": [ { "id": "soda_gift_1" }, { "id": "soda_gift_2" }, { "id": "soda_gift_3" } ],
     "symbol": "[",
     "color": "red",
     "flags": [ "NO_WEAR_EFFECT", "TRADER_AVOID" ]
   },
   {
     "id": "soda_book",
-    "type": "BOOK",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
     "category": "manuals",
     "name": { "str": "F-05-52 Document", "str_pl": "copies of F-05-52 document" },
     "description": "This file documents an abnormality known as Wellcheers, talking about a vending machine that produces the beverage, and that drinking one may cause the drinker to fall asleep, only for prawns to try and drag them away. Terrifying.",

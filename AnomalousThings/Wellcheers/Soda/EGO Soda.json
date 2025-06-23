@@ -94,7 +94,8 @@
   },
   {
     "id": "EGO_soda_aura",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
     "name": "[ז] EGO Soda Aura",
     "description": "You feel Soda's presence in your mind, alien, twisting and writhing, yet granting you power beyond any mere mortal. While the bond is active you sense you'll be harder to knock down, better at dodging, and find it easier to throw items.",
     "weight": "0 g",
@@ -103,7 +104,7 @@
     "symbol": "0",
     "color": "white",
     "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_soda_stage_1" }, { "id": "EGO_soda_stage_2" }, { "id": "EGO_soda_stage_3" }, { "id": "EGO_soda_stage_4" } ] }
+    "passive_effects": [ { "id": "EGO_soda_stage_1" }, { "id": "EGO_soda_stage_2" }, { "id": "EGO_soda_stage_3" }, { "id": "EGO_soda_stage_4" } ]
   },
   {
     "type": "enchantment",
@@ -229,7 +230,8 @@
   },
   {
     "id": "soda_can_weak_item_act",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
     "name": { "str": "<color_red>Primed Can of WellCheers</color>" },
     "description": "A can of delightfully refreshing WellCheers, but one you know not to taste - it is primed for destruction, tab pulled, it'll explode soon.",
     "looks_like": "can_drink",
@@ -239,7 +241,7 @@
     "price_postapoc": "0 USD",
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "bash", "amount": 6 } ],
-    "relic_data": { "passive_effects": [ { "id": "can_throwing_ench" } ] },
+    "passive_effects": [ { "id": "can_throwing_ench" } ],
     "countdown_interval": "5 seconds",
     "flags": [
       "SPAWN_ACTIVE"
@@ -289,7 +291,8 @@
   },
   {
     "id": "soda_can_item_act",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
     "name": { "str": "<color_red>Primed Can of WellCheers</color>" },
     "description": "A can of delightfully refreshing WellCheers, but one you know not to taste - it is primed for destruction, tab pulled, it'll explode soon.",
     "looks_like": "can_drink",
@@ -299,7 +302,7 @@
     "price_postapoc": "0 USD",
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "bash", "amount": 8 } ],
-    "relic_data": { "passive_effects": [ { "id": "can_throwing_ench_2" } ] },
+    "passive_effects": [ { "id": "can_throwing_ench_2" } ],
     "countdown_interval": "5 seconds",
     "flags": [
       "SPAWN_ACTIVE"
@@ -349,7 +352,8 @@
   },
   {
     "id": "soda_net_item",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO", "ARTIFACT" ],
     "name": { "str": "<color_red>Shrimping Net</color>" },
     "description": "A woven tangle of cord forming an incredibly light net, yet you can sense its desire to cling, wrap and tangle.",
     "looks_like": "net",
@@ -366,7 +370,7 @@
     ],
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "bash", "amount": 12 } ],
-    "relic_data": { "passive_effects": [ { "id": "can_throwing_ench_2" } ] }
+    "passive_effects": [ { "id": "can_throwing_ench_2" } ]
   },
   {
     "id": "EGO_soda_summon_armour_normal",
@@ -397,7 +401,8 @@
   },
   {
     "id": "soda_armor_normal_item",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "<color_red>EGO Armor of Soda</color>" },
     "description": "The waxy fabric of a shrimper's overcoat and yet somehow stronger despite the thickness. something about it feels off whenever you look at it for too long, almost as if the waxiness is biological, moving, and shifting to better protect the wearer.",
     "weight": "3842 g",
@@ -447,7 +452,8 @@
   },
   {
     "id": "soda_can_item_empower_act",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
     "name": { "str": "<color_red>Primed Can of WellCheers</color>" },
     "description": "A can of delightfully refreshing WellCheers, but one you know not to taste - it is primed for destruction, tab pulled, it'll explode soon.",
     "looks_like": "can_drink",
@@ -457,7 +463,7 @@
     "price_postapoc": "0 USD",
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "cut", "amount": 10 } ],
-    "relic_data": { "passive_effects": [ { "id": "can_throwing_ench_3" } ] },
+    "passive_effects": [ { "id": "can_throwing_ench_3" } ],
     "countdown_interval": "5 seconds",
     "flags": [
       "SPAWN_ACTIVE"
@@ -508,7 +514,8 @@
   },
   {
     "id": "soda_net_empower_item",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": [ "AMMO", "ARTIFACT" ],
     "name": { "str": "<color_red>Shrimping Net</color>" },
     "description": "A woven tangle of cord forming an incredibly light net, yet you can sense its desire to cling, wrap and tangle.",
     "looks_like": "net",
@@ -525,7 +532,7 @@
     ],
     "melee_damage": { "bash": 2 },
     "thrown_damage": [ { "damage_type": "bash", "amount": 18 } ],
-    "relic_data": { "passive_effects": [ { "id": "can_throwing_ench_3" } ] }
+    "passive_effects": [ { "id": "can_throwing_ench_3" } ]
   },
   {
     "id": "EGO_soda_summon_armour_empower",
@@ -556,7 +563,8 @@
   },
   {
     "id": "soda_armor_empowered_item",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "<color_red>EGO Armor of Soda</color>" },
     "description": "The waxy fabric of a shrimper's overcoat and yet somehow stronger despite the thickness. something about it feels off whenever you look at it for too long, almost as if the waxiness is biological, moving, and shifting to better protect the wearer.",
     "weight": "3842 g",

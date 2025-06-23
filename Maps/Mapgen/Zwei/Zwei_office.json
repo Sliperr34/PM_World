@@ -1,7 +1,7 @@
 [
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office0"] ,
 "weight": 2000,
 "object": {
@@ -85,7 +85,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office1"] ,
 "weight": 2000,
 "object": {
@@ -173,7 +173,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office2"] ,
 "weight": 2000,
 "object": {
@@ -209,10 +209,10 @@
 	"place_npcs": [
         { "class": "zwei_game_npc", "x": 19, "y": 11 },
         { "class": "isadora_npc", "x": 10, "y": 4 },
-        { "class": "zwei_train_npc", "x": 11, "y": 2 },
-        { "class": "zwei_train_npc", "x": 9, "y": 2 },
-        { "class": "zwei_train_npc", "x": 11, "y": 6 },
-        { "class": "zwei_train_npc", "x": 9, "y": 6 }
+        { "class": "zwei_npc", "x": 11, "y": 2 },
+        { "class": "zwei_npc", "x": 9, "y": 2 },
+        { "class": "zwei_npc", "x": 11, "y": 6 },
+        { "class": "zwei_npc", "x": 9, "y": 6 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",
@@ -264,7 +264,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office3"] ,
 "weight": 2000,
 "object": {
@@ -347,7 +347,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office0_roof"] ,
 "weight": 2000,
 "object": {
@@ -383,7 +383,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office1_roof"] ,
 "weight": 2000,
 "object": {
@@ -419,7 +419,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office2_roof"] ,
 "weight": 2000,
 "object": {
@@ -455,7 +455,7 @@
 },
 {
 "type": "mapgen",
-"method": "json",
+
 "om_terrain": [ "zwei_office3_roof"] ,
 "weight": 2000,
 "object": {

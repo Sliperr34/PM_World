@@ -1,0 +1,306 @@
+[
+  {
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "id": "ego_suit_magic_bullet",
+    "name": { "str": "<color_yellow>EGO Suit Magic Bullet</color>", "str_pl": "<color_yellow>EGO Suits Magic Bullet</color>" },
+    "description": "A beautiful suit, black as ink bearing a cloak of blue trimmed with a gold outline. Its style practically bleeds outwards, a creeping danger shrouding the pristine fabric.",
+    "weight": "12 kg",
+    "volume": "8 L",
+    "price": "24000 USD",
+    "material": [ "l_steel", "b_polymer", "l_cotton" ],
+    "symbol": "[",
+    "color": "yellow",
+    "looks_like": "ego_he",
+    "repairs_with": [ "l_steel" ],
+    "flags": [ "NORMAL", "VARSIZE", "STURDY", "PADDED", "BLOCK_WHILE_WORN", "TRADER_AVOID", "NO_SALVAGE", "NPC_ACTIVATE" ],
+    "max_worn": 1,
+    "armor": [
+      {
+        "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
+        "encumbrance": 15,
+        "coverage": 100,
+        "rigid_layer_only": true,
+        "layers": [ "NORMAL" ],
+        "material_thickness": 2,
+        "specifically_covers": [
+          "torso_upper",
+          "torso_lower",
+          "arm_shoulder_l",
+          "arm_shoulder_r",
+          "arm_upper_l",
+          "arm_upper_r",
+          "arm_elbow_l",
+          "arm_elbow_r",
+          "arm_lower_l",
+          "arm_lower_r",
+          "leg_hip_l",
+          "leg_hip_r",
+          "leg_upper_l",
+          "leg_upper_r",
+          "leg_knee_l",
+          "leg_knee_r",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_r",
+          "foot_ankle_l",
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "leg_lower_l",
+          "leg_lower_r"
+        ],
+        "material": [
+          { "type": "b_polymer", "covered_by_mat": 70, "thickness": 2 },
+          { "type": "l_steel", "covered_by_mat": 90, "thickness": 2 },
+          { "type": "l_cotton", "covered_by_mat": 100, "thickness": 2 }
+        ]
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "b_polymer", "covered_by_mat": 100, "thickness": 2.0 },
+          { "type": "l_steel", "covered_by_mat": 100, "thickness": 2.0 }
+        ],
+        "coverage": 100
+      }
+    ]
+  },
+  
+  
+  {
+    "id": "ego_weapon_magic_bullet",
+    "name": "<color_yellow>EGO Weapon Magic Bullet</color>",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "GUN", "ARTIFACT" ],
+    "description": "A bolt action gun somewhat reminiscent of a Lee-Enfield rifle, though it appears too new, and made from materials that are far outside standard construction, boasting a black hue to the metal. Even the wood stock has an odd smokiness that oft has a copper tang.",
+    "weight": "2948 g",
+    "volume": "1748 ml",
+    "longest_side": "1152 mm",
+    "symbol": "=",
+    "color": "black",
+    "flags": [ "NONCONDUCTIVE", "MAGIC_FOCUS" ],
+    
+    "ammo": [ "pm_magic_bullets" ],
+    "loudness": 10,
+    "clip_size": 1,
+    "reload": 200,
+    "ammo_to_fire": 1,
+    "range": 12, 
+    "dispersion": 0,
+    "charges_per_use": 1,
+    "durability": 10, 
+    "handling": 10,
+    "modes": [ [ "DEFAULT", "semi-auto", 1 ] ],
+    "tool_ammo": [ "pm_magic_bullets" ],
+    "skill": "rifle",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": { "pm_magic_bullets": 7 }
+      }
+    ],
+    "use_action": { "type": "cast_spell", "spell_id": "spell_magic_bullet", "no_fail": true, "level": 1, "need_wielding": true }
+  },
+  {
+    "id": "pm_magic_bullet",
+    "type": "ITEM",
+    "subtypes": [ "AMMO" ],
+    "name": { "str_sp": "magic bullet" },
+    "description": "An infernal flame licks at this bullet, though it holds no heat.",
+    "symbol": "=",
+    "color": "black",
+    "weight": "15 g",
+    "volume": "50 ml",
+    "longest_side": "50 mm",
+    "ammo_type": "pm_magic_bullets",
+    "range": 14,
+    "damage": { "damage_type": "bullet", "amount": 5, "armor_penetration": 20 },
+    "dispersion": 0,
+    "recoil": 0
+  },
+  {
+    "type": "ammunition_type",
+    "id": "pm_magic_bullets",
+    "name": "magic bullet",
+    "default": "pm_magic_bullet"
+  },
+  
+  {
+    "id": "spell_magic_bullet",
+    "type": "SPELL",
+    "name": "Magic Bullet",
+    "description": "",
+    "valid_targets": [ "self" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_MAGIC_BULLET",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 100,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MAGIC_BULLET",
+    "eoc_type": "ACTIVATION",
+    "effect": [
+      { "math": [ "u_magic_bullet += 1" ] },
+      { "message": "The dark bullet flickers as it's chambered." },
+      {
+        "switch": { "math": [ "u_magic_bullet" ] },
+        "cases": [
+          {
+            "case": 1,
+            "effect": [ { "message": "A sigil casts around the barrel of the firearm, igniting as it's pierced by the bullet.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_1" }, "targeted": true } ]
+          },
+          {
+            "case": 2,
+            "effect": [ { "message": "Two sigils form around the barrel of the gun, the bullet splitting, both hitting dead on.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_1" }, "targeted": true }, { "u_cast_spell": { "id": "spell_magic_bullet_1" }, "targeted": true } ]
+          },
+          {
+            "case": 4,
+            "effect": [ { "message": "A sigil casts around the barrel of the firearm, igniting as it's pierced by the bullet and erupting into a blast.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_2" }, "targeted": true } ]
+          },
+          {
+            "case": 6,
+            "effect": [ { "message": "The sigils start to flicker, growing ready to claim their prize, at the cost of the wielder.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_3" }, "targeted": true } ]
+          },
+          {
+            "case": 7,
+            "effect": [ { "message": "As the trigger is pulled a sigil appears in the air, carrying the bullet right back to where it belongs - buried in the wielders chest, they whom they loved the most.", "type": "bad" }, { "u_cast_spell": { "id": "spell_magic_bullet_1", "hit_self": true } }, { "math": [ "u_magic_bullet = 0" ] } ]
+          }
+        ]
+      }
+    ]
+  },
+  
+  
+  
+  {
+    "id": "spell_magic_bullet_1",
+    "type": "SPELL",
+    "name": "Magic Bullet",
+    "description": "Fire a magic bullet towards your target, caring not for the chance to miss, for it will always find its foe.",
+    "valid_targets": [ "hostile", "self" ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_accuracy": 40,
+    "min_damage": { "math": [ "30 + (u_magic_bullet * 5)" ] },
+    "max_damage": { "math": [ "50 + (u_magic_bullet * 10)" ] }, 
+    "min_pierce": 1, 
+    "min_range": 9, 
+    "base_casting_time": 0,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "damage_type": "bullet", 
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "RANDOM_DAMAGE", "LOUD" ]
+  },
+  {
+    "id": "spell_magic_bullet_2",
+    "type": "SPELL",
+    "name": "Magic Bullet",
+    "description": "Fire a series of magic bullets at everyone within range, a hail of death to all those around you.",
+    "valid_targets": [ "hostile", "ground", "ally" ],
+    "effect": "attack",
+    "shape": "line",
+    "min_aoe": { "math": [ "u_magic_bullet" ] },
+    "max_aoe": { "math": [ "u_magic_bullet" ] },
+    "min_accuracy": 40,
+    "min_damage": { "math": [ "40 + (u_magic_bullet * 6)" ] },
+    "max_damage": { "math": [ "60 + (u_magic_bullet * 12)" ] }, 
+    "min_range": 9, 
+    "base_casting_time": 0,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "damage_type": "bullet", 
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "RANDOM_DAMAGE", "LOUD" ]
+  },
+  {
+    "id": "spell_magic_bullet_3",
+    "type": "SPELL",
+    "name": "Magic Bullet",
+    "description": "Fire a series of magic bullets at everyone within range, a hail of death to all those around you.",
+    "valid_targets": [ "hostile", "ground", "ally" ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_aoe": { "math": [ "u_magic_bullet" ] },
+    "max_aoe": { "math": [ "u_magic_bullet" ] },
+    "min_accuracy": 40,
+    "min_damage": { "math": [ "50 + (u_magic_bullet * 7)" ] },
+    "max_damage": { "math": [ "70 + (u_magic_bullet * 15)" ] }, 
+    "min_pierce": 1, 
+    "min_range": 9, 
+    "base_casting_time": 0,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "damage_type": "bullet", 
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "RANDOM_DAMAGE", "LOUD" ]
+  },
+  
+  
+  
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_bullet_ranged_attack_character",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+    "condition": {
+       "and": [ { "u_has_item": "ego_weapon_magic_bullet" }, "u_is_npc" ]
+    },
+    "effect": [
+      { "math": [ "u_magic_bullet += 1" ] },
+      { "message": "The dark bullet flickers as it's chambered." },
+      { "npc_location_variable": { "context_val": "loc" } },
+      {
+        "switch": { "math": [ "u_magic_bullet" ] },
+        "cases": [
+          {
+            "case": 1,
+            "effect": [ { "message": "A sigil casts around the barrel of the firearm, igniting as it's pierced by the bullet.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_1" }, "loc": { "context_val": "loc" } } ]
+          },
+          {
+            "case": 2,
+            "effect": [ { "message": "Two sigils form around the barrel of the gun, the bullet splitting, both hitting dead on.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_1" }, "loc": { "context_val": "loc" } }, { "u_cast_spell": { "id": "spell_magic_bullet_1" }, "loc": { "context_val": "loc" } } ]
+          },
+          {
+            "case": 4,
+            "effect": [ { "message": "A sigil casts around the barrel of the firearm, igniting as it's pierced by the bullet and erupting into a blast.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_2" }, "loc": { "context_val": "loc" } } ]
+          },
+          {
+            "case": 6,
+            "effect": [ { "message": "The sigils start to flicker, growing ready to claim their prize, at the cost of the wielder.", "type": "mixed" }, { "u_cast_spell": { "id": "spell_magic_bullet_3" }, "loc": { "context_val": "loc" } } ]
+          },
+          {
+            "case": 7,
+            "effect": [ { "message": "As the trigger is pulled a sigil appears in the air, carrying the bullet right back to where it belongs - buried in the wielders chest, they whom they loved the most.", "type": "bad" }, { "u_cast_spell": { "id": "spell_magic_bullet_1", "hit_self": true } }, { "math": [ "u_magic_bullet = 0" ] } ]
+          }
+        ]
+      }
+    ]
+  }
+]

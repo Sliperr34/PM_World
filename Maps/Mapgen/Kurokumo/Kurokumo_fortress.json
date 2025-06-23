@@ -1,7 +1,7 @@
 [
 {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ "kr_hideout" ],
     "object": {
       "fill_ter": "t_floor",
@@ -98,7 +98,7 @@
 },
 {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ "kr_hideout_roof" ],
     "object": {
       "fill_ter": "t_flat_roof",

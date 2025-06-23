@@ -1,0 +1,434 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_mang_ranged_attack_monster",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+    "condition": {
+       "u_has_item": "SHIN_aura"
+    },
+    "effect": [
+      { "u_cast_spell": { "id": "spell_mang", "hit_self": true } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_mang_ranged_attack_character",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+    "condition": {
+       "u_has_item": "SHIN_aura"
+    },
+    "effect": [
+      { "u_cast_spell": { "id": "spell_mang", "hit_self": true } }
+    ]
+  },
+  {
+    "id": "spell_shin",
+    "type": "SPELL",
+    "name": "Activate Shin",
+    "description": "",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "SHIN_aura",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_duration": { "math": ["600000"] },
+    "base_casting_time": 0,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
+  },
+  {
+    "id": "spell_mang",
+    "type": "SPELL",
+    "name": "Apply Mang",
+    "description": "",
+    "valid_targets": [ "self", "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_mang_spell",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
+  },
+  {
+    "id": "SHIN_aura",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
+    "name": "Shin Aura",
+    "description": "A golden flame that pulses with a calmness that does not match the beat of combat, like the calm within the eye of a storm.",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "material": [ "wind" ],
+    "symbol": "0",
+    "color": "yellow",
+    "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
+    "passive_effects": [ { "id": "SHIN_aura_1" }, { "id": "SHIN_aura_2" }, { "id": "SHIN_aura_3" } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "SHIN_aura_1",
+    "has": "WORN",
+    "condition": { "math": [ "u_val('morale') == 0" ] },
+    "hit_you_effect": [ { "id": "spell_mang", "hit_self": true } ],
+    "values": [
+      { "value": "PAIN", "add": -5 },
+      { "value": "KNOCKDOWN_RESIST", "add": 100 },
+      { "value": "KNOCKBACK_RESIST", "add": 100 },
+      { "value": "RANGED_DAMAGE", "multiply": { "math": [ "1 + (1.2 * u_mang)" ] } },
+      { "value": "THROW_DAMAGE", "multiply": { "math": [ "1 + (1.2 * u_mang)" ] } }
+    ],
+    "melee_damage_bonus": [ 
+        { "type": "bash", "add": { "math": [ "3" ] } },
+        { "type": "bash", "multiply": { "math": [ "1 + (1.2 * u_mang)" ] } },
+        { "type": "stab", "multiply": { "math": [ "1 + (1.2 * u_mang)" ] } },
+        { "type": "cut", "multiply": { "math": [ "1 + (1.2 * u_mang)" ] } }
+    ],
+    "incoming_damage_mod": [ 
+      { "type": "bash", "multiply": { "math": [ "-0.4 - (u_vitamin('trauma') / 200)" ] } },
+      { "type": "stab", "multiply": { "math": [ "-0.4 - (u_vitamin('trauma') / 200)" ] } },
+      { "type": "cut", "multiply": { "math": [ "-0.4 - (u_vitamin('trauma') / 200)" ] } },
+      { "type": "bullet", "multiply": { "math": [ "-0.4 - (u_vitamin('trauma') / 200)" ] } } 
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "SHIN_aura_2",
+    "has": "WORN",
+    "condition": { "u_has_proficiency": "prof_shen_1" },
+    "values": [
+      { "value": "PAIN", "add": -5 },
+      { "value": "BONUS_BLOCK", "add": 1 },
+      { "value": "BONUS_DODGE", "add": 1 },
+      { "value": "RANGE_DODGE", "add": { "math": [ "0.1 * (1 + (u_vitamin('trauma') / 20))" ] } }
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "SHIN_aura_3",
+    "has": "WORN",
+    "condition": { "u_has_proficiency": "prof_shen_2" },
+    "values": [
+      { "value": "PAIN", "add": -5 },
+      { "value": "DEXTERITY", "add": { "math": [ "1 * (1 + (u_vitamin('trauma') / 20))" ] } },
+      { "value": "STRENGTH", "add": { "math": [ "1 * (1 + (u_vitamin('trauma') / 20))" ] } },
+      { "value": "SPEED", "add": { "math": [ "10 * (1 + (u_vitamin('trauma') / 10))" ] } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_mang_spell",
+    "eoc_type": "ACTIVATION",
+    "condition": { "u_has_proficiency": "prof_mang_0" },
+    "effect": [
+      { 
+        "if": { "math": [ "u_mang > 0" ] },
+        "then": [
+          { "u_message": "In a blaze of power, <u_val:mang> Mang explode into a existance around your attack!", "type": "mixed" }
+        ]
+      },
+      { "math": [ "_max_mang = ( u_vitamin('trauma') - 10) / 15" ] },
+      { "if": { "math": [ "u_skill('self-control') > 8" ] }, "then": { "math": [ "_max_mang += 1" ] } },
+      { "if": { "and": [ { "not": { "u_has_proficiency": "prof_mang_1" } }, { "math": [ "_max_mang > 2" ] } ] }, "then": { "math": [ "_max_mang = 2" ] } },
+      { "if": { "and": [ { "not": { "u_has_proficiency": "prof_mang_2" } }, { "math": [ "_max_mang > 4" ] } ] }, "then": { "math": [ "_max_mang = 4" ] } },
+      { "math": [ "u_mang = rand( _max_mang )" ] }
+    ]
+  },
+  
+  
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_0",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [ 
+        { "math": [ "u_skill('self-control') < 2" ] }, 
+        { "not": { "u_know_recipe": "prac_control_0" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 4 } }, 
+        { "math": [ "u_vitamin('trauma') > 5" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_0" },
+      { "u_message": "You're feeling worse and worse day by day.. Maybe there's a way to bring your emotions back under control? Perhaps you could practice.", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_1",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [ 
+        { "math": [ "u_skill('self-control') > 0" ] }, 
+        { "u_know_recipe": "prac_control_0" },
+        { "not": { "u_know_recipe": "prac_control_1" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 4 } }, 
+        { "math": [ "u_vitamin('trauma') > 7" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_1" },
+      { "u_message": "Try as you might, you feel this world wearing away at you. Perhaps what you need is not calm, but to practice focus.", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_2",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [  
+        { "math": [ "u_skill('self-control') > 2" ] }, 
+        { "u_know_recipe": "prac_control_1" },
+        { "not": { "u_know_recipe": "prac_control_2" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 6 } }, 
+        { "math": [ "u_vitamin('trauma') > 10" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_2" },
+      { "u_message": "If- If you can just drown out the distractions.. Maybe you could actually focus. Surely?", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_3",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [  
+        { "math": [ "u_skill('self-control') > 4" ] }, 
+        { "u_know_recipe": "prac_control_2" },
+        { "not": { "u_know_recipe": "prac_control_3" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 6 } }, 
+        { "math": [ "u_vitamin('trauma') > 12" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_3" },
+      { "u_message": "Maybe you have a hang on it, the knowledge settling, but maybe your focus can go even deeper? Maybe you can just drown out the terrors?", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_4",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [  
+        { "math": [ "u_skill('self-control') > 5" ] }, 
+        { "u_know_recipe": "prac_control_3" },
+        { "not": { "u_know_recipe": "prac_control_4" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 10 } }, 
+        { "math": [ "u_vitamin('trauma') > 16" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_4" },
+      { "u_message": "That's it! You have it, it finally clicks in your mind, the next step - Simply be able to enter that moment of perfect focus, no matter what you're doing.", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_5",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [  
+        { "math": [ "u_skill('self-control') > 7" ] }, 
+        { "u_know_recipe": "prac_control_4" },
+        { "not": { "u_know_recipe": "prac_control_5" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 10 } }, 
+        { "math": [ "u_vitamin('trauma') > 20" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_5" },
+      { "u_message": "Finally, you feel in control. Properly this time. The horrors of the City are far away, even when they are close. But practice is always good.", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_6",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [  
+        { "math": [ "u_skill('self-control') > 8" ] }, 
+        { "u_know_recipe": "prac_control_5" },
+        { "not": { "u_know_recipe": "prac_control_6" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 12 } }, 
+        { "math": [ "u_vitamin('trauma') > 24" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_6" },
+      { "u_message": "Nothing bothers you any more, the terror, the awful things you have to do to survive. None of it matters. That is that, this is this.", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_control_wake_7",
+    "eoc_type": "EVENT",
+    "required_event": "character_wakes_up",
+    "condition": {
+      "and": [  
+        { "math": [ "u_skill('self-control') > 9" ] }, 
+        { "u_know_recipe": "prac_control_6" },
+        { "not": { "u_know_recipe": "prac_control_7" } }, 
+        { "x_in_y_chance": { "x": 1, "y": 12 } }, 
+        { "math": [ "u_vitamin('trauma') > 30" ] } 
+      ] 
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_control_7" },
+      { "u_message": "Soon, there will only be perfect focus. You can do anything you need to, even worries are merely things to be deflected, imperfections in your midst.", "popup": true }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_shin_learn_damage",
+    "eoc_type": "EVENT",
+    "required_event": "character_takes_damage",
+    "condition": {
+      "and": [ 
+        { "u_has_trait": "mut_self_control_on" },
+        { "not": { "u_know_recipe": "prac_shin_0" } },
+        { "math": [ "u_skill('self-control') > 3" ] },
+        { "math": [ "u_val('focus') > 80" ] },
+        { "x_in_y_chance": { "x": 1, "y": 64 } }
+      ]
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_shin_0" },
+      { "u_message": "The light just now? Did it ignite as you got hurt? It seems to be reacting to your control, maybe you can use this?", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_shin_learn_break",
+    "eoc_type": "EVENT",
+    "required_event": "broken_bone",
+    "condition": {
+      "and": [ 
+        { "u_has_item": "SHIN_aura" },
+        { "u_has_proficiency": "prac_shin_0" },
+        { "not": { "u_know_recipe": "prac_shin_1" } },
+        { "math": [ "u_skill('self-control') > 5" ] },
+        { "x_in_y_chance": { "x": 1, "y": 8 } }
+      ]
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_shin_1" },
+      { "u_message": "Agony races through you as your limb bends and snaps the wrong way, your Shin aura flickers, trying to aid and further soothe the pain like a cool ice. Maybe you're learning to use it better?", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_shin_learn_death",
+    "eoc_type": "PREVENT_DEATH",
+    "condition": {
+      "and": [ 
+        { "u_has_item": "SHIN_aura" },
+        { "u_has_proficiency": "prac_shin_1" },
+        { "not": { "u_know_recipe": "prac_shin_2" } },
+        { "math": [ "u_skill('self-control') > 7" ] },
+        { "x_in_y_chance": { "x": 1, "y": 2 } }
+      ]
+    },
+    "effect": [
+      "u_prevent_death",
+      { "run_eocs": [ "EOC_life_heal" ] },
+      { "u_learn_recipe": "prac_shin_2" },
+      { "u_message": "As the last gasp of life leaves you, your Shin flares, your body starts to restore, and you begin to understand. The cooling shimmer of the aura dances, growing with your understanding of your mortality, but it shall never save you again- Luck was simply on your side this one time.", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_life_heal",
+    "effect": [
+      { "math": [ "u_hp('ALL') = 999" ] },
+      { "math": [ "u_hp('ALL_MAJOR') = 45" ] },
+      { "math": [ "u_vitamin('redcells') = 0" ] },
+      { "math": [ "u_vitamin('bad_food') = 0" ] },
+      { "math": [ "u_vitamin('blood') = 0" ] },
+      { "math": [ "u_pain() = 0" ] },
+      { "math": [ "u_val('rad') = 0" ] },
+      { "u_lose_effect": "corroding" },
+      { "u_lose_effect": "onfire" },
+      { "u_lose_effect": "dazed" },
+      { "u_lose_effect": "stunned" },
+      { "u_lose_effect": "venom_blind" },
+      { "u_lose_effect": "formication" },
+      { "u_lose_effect": "blisters" },
+      { "u_lose_effect": "frostbite" },
+      { "u_lose_effect": "frostbite_recovery" },
+      { "u_lose_effect": "wet" },
+      { "u_lose_effect": "slimed" },
+      { "u_lose_effect": "migo_atmosphere" },
+      { "u_lose_effect": "fetid_goop" },
+      { "u_lose_effect": "sap" },
+      { "u_lose_effect": "nausea" },
+      { "u_lose_effect": "bleed" }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_mang_learn_attack",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_character",
+    "condition": {
+      "and": [ 
+        { "u_has_item": "SHIN_aura" },
+        { "not": { "u_know_recipe": "prac_mang_0" } },
+        { "math": [ "u_skill('self-control') > 4" ] },
+        { "math": [ "u_val('focus') > 65" ] },
+        { "math": [ "u_vitamin('emotion') > 60" ] },
+        { "x_in_y_chance": { "x": 1, "y": 64 } }
+      ]
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_mang_0" },
+      { "u_message": "As you strike a ring of light flickers around your attack. Can you perhaps use that to strengthen your strikes?", "popup": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_mang_learn_kill",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_character",
+    "condition": {
+      "and": [ 
+        { "u_has_item": "SHIN_aura" },
+        { "u_has_proficiency": "prac_mang_0" },
+        { "not": { "u_know_recipe": "prac_mang_1" } },
+        { "math": [ "u_skill('self-control') > 7" ] },
+        { "math": [ "u_val('focus') > 65" ] },
+        { "math": [ "u_vitamin('emotion') > 80" ] },
+        { "x_in_y_chance": { "x": 1, "y": 12 } }
+      ]
+    },
+    "effect": [
+      { "u_learn_recipe": "prac_mang_1" },
+      { "u_message": "One more blow comes down, this time it's not just a single Mang that radiates outwards- it's two. No, three. With a great crack, your opponent is no more.", "popup": true }
+    ]
+  }
+]

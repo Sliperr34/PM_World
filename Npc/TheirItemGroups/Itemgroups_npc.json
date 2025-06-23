@@ -680,5 +680,40 @@
     "entries": [
       { "group": "bar_alcohol", "count-min": 8, "count-max": 15 }
     ]
+  },
+  {
+    "id": "bullet_leader_worn",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "pm_shirt" },
+      { "item": "ego_suit_magic_bullet" },
+      { "item": "legrig" },
+      { "item": "runner_bag" }
+    ]
+  },
+  {
+    "id": "bullet_leader_weapon",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "ego_weapon_magic_bullet", "prob": 100 } ]
+  },
+  {
+    "id": "bullet_leader_carry",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "pm_magic_bullet", "count": 30, "prob": 100 } ]
+  },
+  {
+    "id": "fixer_weapons",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "fix_broadsword", "prob": 20 },
+      { "item": "fix_estoc", "prob": 20 },
+      { "item": "fix_bat_metal", "prob": 20 },
+      { "item": "fix_ax", "prob": 20 },
+      { "item": "fix_chain", "prob": 20 }
+    ]
   }
 ]

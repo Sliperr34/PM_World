@@ -1,0 +1,67 @@
+[
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "mx_incident_fixer",
+    "object": {
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
+      "place_nested": [ { "chunks": [ "mx_fixer_outbreak" ], "x": [ 2, 13 ], "y": [ 2, 13 ] } ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "mx_fixer_outbreak",
+    "object": {
+      "mapgensize": [ 9, 9 ],
+      "rows": [
+        "   --    ",
+        "  -    - ",
+        "      -- ",
+        " - -     ",
+        "-    -   ",
+        " -     - ",
+        "   - -  -",
+        "  -      ",
+        "-     -  "
+      ],
+      "monsters": {
+        "-": { "monster": "PECCA_GENERAL", "chance": 25 }
+      },
+      "place_npcs": [
+        { "class": "rank_8_npc", "x": 4, "y": 5 }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "mx_incident_zwei",
+    "object": {
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
+      "place_nested": [ { "chunks": [ "mx_zwei_outbreak" ], "x": [ 2, 13 ], "y": [ 2, 13 ] } ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "mx_zwei_outbreak",
+    "object": {
+      "mapgensize": [ 9, 9 ],
+      "rows": [
+        "   --    ",
+        "  -    - ",
+        "      -- ",
+        " - -     ",
+        "-    -   ",
+        " -     - ",
+        "   - -  -",
+        "  -      ",
+        "-     -  "
+      ],
+      "monsters": {
+        "-": { "monster": "PECCA_GENERAL", "chance": 65 }
+      },
+      "place_npcs": [
+        { "class": "zwei_npc", "x": 2, "y": 7 },
+        { "class": "zwei_npc", "x": 5, "y": 6 }
+      ]
+    }
+  }
+]

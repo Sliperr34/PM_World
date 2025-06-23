@@ -1,7 +1,8 @@
 [
   {
     "id": "power_module",
-    "type": "MAGAZINE",
+    "type": "ITEM",
+    "subtypes": [ "MAGAZINE" ],
     "category": "tool_magazine",
     "name": {
       "str": "power module"
@@ -47,7 +48,8 @@
   },
   {
     "id": "power_module_teth",
-    "type": "MAGAZINE",
+    "type": "ITEM",
+    "subtypes": [ "MAGAZINE" ],
     "category": "tool_magazine",
     "name": {
       "str": "enhanced power module"
@@ -93,7 +95,8 @@
   },
   {
     "id": "power_module_he",
-    "type": "MAGAZINE",
+    "type": "ITEM",
+    "subtypes": [ "MAGAZINE" ],
     "category": "tool_magazine",
     "name": {
       "str": "prime power module"

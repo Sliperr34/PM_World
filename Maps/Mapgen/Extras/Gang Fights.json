@@ -1,0 +1,36 @@
+[
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "mx_kk_rc",
+    "object": {
+      "flags": [ "ALLOW_TERRAIN_UNDER_OTHER_DATA" ],
+      "place_nested": [ { "chunks": [ "mx_kk_rc_1" ], "x": [ 2, 13 ], "y": [ 2, 13 ] } ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "nested_mapgen_id": "mx_kk_rc_1",
+    "object": {
+      "mapgensize": [ 9, 9 ],
+      "rows": [
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         ",
+        "         "
+      ],
+      "place_npcs": [
+        { "class": "kr_npc", "x": 2, "y": 7 },
+        { "class": "kr_npc", "x": 5, "y": 6 },
+        { "class": "rc_npc", "x": 8, "y": 3 },
+        { "class": "rc_npc", "x": 5, "y": 4 },
+        { "class": "rc_npc", "x": 5, "y": 2 },
+        { "class": "rc_npc", "x": 3, "y": 3 }
+      ]
+    }
+  }
+]

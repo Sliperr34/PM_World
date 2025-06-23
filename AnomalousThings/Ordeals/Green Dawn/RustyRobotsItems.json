@@ -1,6 +1,6 @@
 [
   {
-    "type": "GENERIC",
+    "type": "ITEM",
     "id": "broken_doubts",
     "symbol": ",",
     "color": "green",
@@ -16,7 +16,7 @@
     "melee_damage": { "bash": 6, "cut": 6 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
     "id": "broken_doubts_elite",
     "symbol": ",",
     "color": "green",
@@ -33,7 +33,7 @@
   },
   {
     "id": "rustedgear_item",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "rusted gear", "str_pl": "rusted gears" },
     "description": "A rusted gear, though its hard to tell what metal its made from, lightweight and dark yet with a strength that's not easily moulded.",
     "volume": "1 ml",
@@ -49,7 +49,7 @@
   },
   {
     "id": "scrapmetal_item",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "scrap metal" },
     "description": "A mangled piece of rusted metal, it's impossible to tell what it even was before the ravages of time turned its grizzled hand.",
     "volume": "5 L",
@@ -65,7 +65,7 @@
   },
   {
     "id": "blackmetalwire_item",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "black metal wire" },
     "description": "An unusual wire, though the metal is reminiscent of steel in many ways, this particular wire can be bent by hand as easily as copper can.",
     "volume": "4 ml",
@@ -80,7 +80,7 @@
   },
   {
     "id": "filament_item",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "strage filament" },
     "description": "A spindly, almost thread-like wire, gleaming with a strong polish. At the end it tapers before splitting open into five even smaller wires, and at the end of each of those, the same happens again. And again.",
     "volume": "2 ml",
@@ -95,7 +95,7 @@
   },
   {
     "id": "casepiece_item",
-    "type": "GENERIC",
+    "type": "ITEM",
     "name": { "str": "piece of Doubt", "str_pl": "pieces of Doubt" },
     "description": "Part of the Doubt distortion body, heavy and cold black metal. Seems rusted from blood.",
     "volume": "72 ml",
@@ -114,7 +114,8 @@
     "name": { "str": "rusted lance" },
     "description": "A horribly rusted lance, not made to be held by human hands. There is an obvious bump near its haft where it used to be wielded by it's original owner, who has long since rusted away.",
     "color": "black",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "weight": "3216 g",
     "volume": "5250 ml",
@@ -136,7 +137,8 @@
     "name": { "str": "black lance" },
     "description": "A seemingly ancient lance with a black lustre, an unusual gemstone is affixed near the pommel, that under the right light gleams as if an eye alive. The unnatural metal is dealthy sharp, and though only it's end is pointed to take advantage of that, the weapon remains ever dangerous.",
     "color": "black",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "weight": "2616 g",
     "volume": "4650 ml",
@@ -155,7 +157,8 @@
   },
   {
     "id": "armor_doubt_chestplate",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "chestplate from strange black metal" },
     "description": "A chestplate, 2 mm thick.  This one has been made with some strange black metal.",
@@ -192,7 +195,8 @@
   },
   {
     "id": "doubt_legguard",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "pair of strange black metal greaves", "str_pl": "pairs of strange black metal greaves" },
     "description": "A pair of strange black metal leg guards with usage of some strange robot pieces.",
@@ -221,7 +225,8 @@
   },
   {
     "id": "doubt_armguard",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "pair of strange black metal arm guards", "str_pl": "pairs of strange black metal arm guards" },
     "description": "A pair of strange black metal arm guards, quite heavy.",
@@ -264,7 +269,8 @@
   },
   {
     "id": "doubt_sabaton",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "strange black metal sabaton" },
     "description": "A flexible set of jointed lames that can be worn over footwear for additional protection, traditionally worn by mounted knights, this one was made of pieces of strange robots",
     "weight": "750 g",
@@ -295,7 +301,8 @@
   },
   {
     "id": "doubt_helm",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "category": "armor",
     "name": { "str": "strange metal helm" },
     "description": "Looks like medieval helmet and provides excellent protection to the entire head, made of pieces of strange robot.",
@@ -322,7 +329,8 @@
   },
   {
     "id": "doubt_mechanism_item",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "a hydraulic mechanism", "str_pl": "a hydraulic mechanisms" },
     "description": "Several parts from the hydraulic system of an unknown type of robot. covered in rust in places, but seems to be durable.",
     "volume": "5000 ml",

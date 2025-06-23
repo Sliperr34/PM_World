@@ -95,7 +95,8 @@
   },
   {
     "id": "EGO_92_aura",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
     "name": "[ט] EGO 9:2 Aura",
     "description": "A spiral of flame wreaths you, enhancing your capabilities beyond that of mortality. May your foes be burned as they strike at you, and warmth be your ally, not your foe.",
     "weight": "0 g",
@@ -104,7 +105,7 @@
     "symbol": "0",
     "color": "white",
     "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_1_ench" }, { "id": "EGO_92_stage_2_ench" }, { "id": "EGO_92_stage_3_ench" }, { "id": "EGO_92_invoke_ench" }, { "id": "EGO_92_invoke_ench3" } ] }
+    "passive_effects": [ { "id": "EGO_92_stage_1_ench" }, { "id": "EGO_92_stage_2_ench" }, { "id": "EGO_92_stage_3_ench" }, { "id": "EGO_92_invoke_ench" }, { "id": "EGO_92_invoke_ench3" } ]
   },
   {
     "type": "enchantment",
@@ -285,7 +286,8 @@
   },
   {
     "id": "92_sword_weak_item",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "<color_blue>Sword of Prophet</color>" },
     "description": "desc",
@@ -359,7 +361,8 @@
   },
   {
     "id": "92_sword_item",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
     "category": "weapons",
     "name": { "str": "<color_blue>Sword of Prophet</color>" },
     "description": "desc",
@@ -377,7 +380,7 @@
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "heat": 29, "cut": 6, "bash": 2, "prophet_heat": 15 },
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_3_ench1" }, { "id": "EGO_92_stage_3_ench2" } ] }
+    "passive_effects": [ { "id": "EGO_92_stage_3_ench1" }, { "id": "EGO_92_stage_3_ench2" } ]
   },
   {
     "type": "enchantment",
@@ -448,7 +451,8 @@
   },
   {
     "id": "92_armor_normal_item",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
     "name": { "str": "EGO Armor of 9:2" },
     "description": " desc of 9:2 coat",
     "weight": "3842 g",
@@ -469,7 +473,7 @@
         "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
       }
     ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_stage_3_ench_armor" } ] }
+    "passive_effects": [ { "id": "EGO_92_stage_3_ench_armor" } ]
   },
   {
     "type": "enchantment",
@@ -918,7 +922,8 @@
   },
   {
     "id": "92_sword_item_empower",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL", "ARTIFACT" ],
     "category": "weapons",
     "name": { "str": "<color_blue>Sword of Prophet</color>" },
     "description": "desc",
@@ -936,7 +941,6 @@
     "to_hit": { "grip": "weapon", "length": "long", "surface": "line", "balance": "good" },
     "weapon_category": [ "GREAT_SWORDS" ],
     "melee_damage": { "heat": 50, "cut": 15, "bash": 10, "prophet_heat": 25 },
-    "relic_data": {
       "passive_effects": [
         { "id": "EGO_92_stage_3_ench1" },
         { "id": "EGO_92_stage_3_ench2" },
@@ -946,7 +950,7 @@
         { "id": "EGO_92_sword_spellbook_3" },
         { "id": "EGO_92_sword_spellbook_4" }
       ]
-    }
+    
   },
   {
     "type": "enchantment",
@@ -1092,7 +1096,8 @@
   },
   {
     "id": "92_armor_empower_item",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR", "ARTIFACT" ],
     "name": { "str": "EGO Armor of 9:2" },
     "description": " desc of 9:2 coat",
     "weight": "3842 g",
@@ -1113,7 +1118,7 @@
         "covers": [ "head", "mouth", "eyes", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
       }
     ],
-    "relic_data": { "passive_effects": [ { "id": "EGO_92_invoke_ench_armor" } ] }
+    "passive_effects": [ { "id": "EGO_92_invoke_ench_armor" } ]
   },
   {
     "type": "enchantment",

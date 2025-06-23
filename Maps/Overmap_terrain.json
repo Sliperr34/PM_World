@@ -526,5 +526,103 @@
     "color": "c_yellow",
     "sym": "L",
     "see_cost": "medium"
+  },
+  
+  
+  {
+    "id": "ps_lt",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_mt",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_rt",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_lb",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_mb",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_rb",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_lt_r",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold Roof",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_mt_r",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold Roof",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_rt_r",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold Roof",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_lb_r",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold Roof",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_mb_r",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold Roof",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "ps_rb_r",
+    "type": "overmap_terrain",
+    "name": "Phantom Stronghold Roof",
+    "color": "c_yellow",
+    "sym": "S",
+    "see_cost": "medium"
   }
 ]

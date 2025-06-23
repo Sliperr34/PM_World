@@ -1,7 +1,7 @@
 [
   {
     "type": "mapgen",
-    "method": "json",
+    
     "om_terrain": [ [ "blank1_lt", "blank1_mt2", "blank1_mt1", "blank1_rt" ], [ "blank1_lb", "blank1_mb2", "blank1_mb1", "blank1_rb" ] ],
     "weight": 500,
     "object": {

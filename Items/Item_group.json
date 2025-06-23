@@ -161,7 +161,7 @@
   {
     "id": "supplies_electronics",
     "type": "item_group",
-    "subtype": "collection",
+    "subtype": "distribution",
     "copy-from": "supplies_electronics",
     "extend": { "entries": [ { "item": "internet_sim_card", "prob": 7 } ] }
   }

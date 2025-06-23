@@ -1,0 +1,80 @@
+[
+  {
+    "type": "proficiency_category",
+    "id": "prof_shin",
+    "name": "Understanding of Shin",
+    "description": "Your knowledge of controlling the Light via Shin and Mang."
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_shin_0",
+    "category": "prof_shin",
+    "name": { "str": "Basic Understanding of Shin" },
+    "description": "A rudimentary understanding of how to control your emotions well enough to cloak yourself in Shin.",
+    "can_learn": true,
+    "time_to_learn": "48 h",
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.3
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_shin_1",
+    "category": "prof_shin",
+    "name": { "str": "Advanced Understanding of Shin" },
+    "description": "An advanced understanding of how to control your emotions well enough to cloak yourself in Shin.",
+    "can_learn": true,
+    "time_to_learn": "96 h",
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.3,
+    "required_proficiencies": [ "prof_shin_0" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_shin_2",
+    "category": "prof_shin",
+    "name": { "str": "Mastery of Shin" },
+    "description": "A masterful understanding of how to control your emotions well enough to cloak yourself in Shin.",
+    "can_learn": true,
+    "time_to_learn": "192 h",
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.3,
+    "required_proficiencies": [ "prof_shin_1" ]
+  },
+  
+  {
+    "type": "proficiency",
+    "id": "prof_mang_0",
+    "category": "prof_shin",
+    "name": { "str": "Basic Understanding of Mang" },
+    "description": "A rudimentary understanding of how to control your emotions well enough to cloak a weapon in Mang.",
+    "can_learn": true,
+    "time_to_learn": "48 h",
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.3,
+    "required_proficiencies": [ "prof_shin_0" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_mang_1",
+    "category": "prof_shin",
+    "name": { "str": "Advanced Understanding of Mang" },
+    "description": "An advanced understanding of how to control your emotions well enough to cloak a weapon in Mang.",
+    "can_learn": true,
+    "time_to_learn": "96 h",
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.3,
+    "required_proficiencies": [ "prof_mang_0" ]
+  },
+  {
+    "type": "proficiency",
+    "id": "prof_mang_2",
+    "category": "prof_shin",
+    "name": { "str": "Mastery of Mang" },
+    "description": "A masterful understanding of how to control your emotions well enough to cloak a weapon in Mang.",
+    "can_learn": true,
+    "time_to_learn": "192 h",
+    "default_time_multiplier": 2,
+    "default_skill_penalty": 0.3,
+    "required_proficiencies": [ "prof_mang_1" ]
+  }
+]

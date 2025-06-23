@@ -1,0 +1,112 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_NH_start",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "effect": [ { "run_eocs": "EOC_difficultycheck" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_NH_load",
+    "eoc_type": "EVENT",
+    "required_event": "game_load",
+    "effect": [ { "run_eocs": "EOC_difficultycheck" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_difficultycheck",
+    "condition": { "math": [ "!has_var( PM_item_difficulty )" ] },
+    "effect": { "run_eocs": "EOC_PM_set_difficulty" },
+    "false_effect": [
+      {
+        "switch": { "math": [ "PM_item_difficulty" ] },
+        "cases": [
+          { "case": 0, "effect": { "run_eocs": "EOC_PM_item_difficulty_0" } },
+          { "case": 1, "effect": { "run_eocs": "EOC_PM_item_difficulty_1" } },
+          { "case": 2, "effect": { "run_eocs": "EOC_PM_item_difficulty_2" } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PM_set_difficulty",
+    "effect": [
+      {
+        "run_eoc_selector": [ "EOC_PM_set_item_difficulty_0", "EOC_PM_set_item_difficulty_1", "EOC_PM_set_item_difficulty_2" ],
+        "names": [ "Taboos are Ignored", "Taboos are Relaxed", "The Head Sees All" ],
+        "title": "Select a difficulty",
+        "keys": [ "1", "2", "3" ],
+        "descriptions": [
+          "No changes to the chance for firearms to spawn within the world.",
+          "Firearms can be found, but very rarely.",
+          "Firearms do not appear unless purchased."
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PM_set_item_difficulty_0",
+    "effect": [
+      { "math": [ "PM_item_difficulty = 0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PM_set_item_difficulty_1",
+    "effect": [
+      { "run_eocs": "EOC_PM_item_difficulty_1" },
+      { "math": [ "PM_item_difficulty = 1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PM_set_item_difficulty_2",
+    "effect": [
+      { "run_eocs": "EOC_PM_item_difficulty_2" },
+      { "math": [ "PM_item_difficulty = 2" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_P<_item_difficulty_1",
+    "effect": [
+      {
+        "set_item_category_spawn_rates": [
+          { "spawn_rate": 0.2, "id": "guns" },
+          { "spawn_rate": 0.2, "id": "magazines" },
+          { "spawn_rate": 0.1, "id": "ammo" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_PM_item_difficulty_2",
+    "effect": [
+      {
+        "set_item_category_spawn_rates": [
+          { "spawn_rate": 0.001, "id": "guns" },
+          { "spawn_rate": 0.001, "id": "magazines" },
+          { "spawn_rate": 0.001, "id": "ammo" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "EXTERNAL_OPTION",
+    "name": "NPC_SPAWNRATE",
+    "//": "Baseline average number of days between random NPC spawns. Higher Number means fewer NPCs. 0 to disable NPCs. Min: 0.01, Max: 100.0, Default: 4.0",
+    "stype": "float",
+    "value": 0.1
+  },
+  {
+    "type": "EXTERNAL_OPTION",
+    "name": "OVERMAP_MAXIMUM_URBANITY",
+    "//": "How urban do we allow our megacities to go?  Mostly functions as a multiple of map settings city size.",
+    "stype": "int",
+    "value": 85
+  }
+]

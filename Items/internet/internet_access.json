@@ -1,6 +1,6 @@
 [
   {
-    "type": "GENERIC",
+    "type": "ITEM",
     "id": "internet_sim_card",
     "looks_like": "mobile_memory_card",
     "ascii_picture": "memory_card",
@@ -16,7 +16,8 @@
     "volume": "1 ml"
   },
   {
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "smartphone (SIM)" },
     "material": [ { "type": "aluminum", "portion": 75 }, { "type": "plastic", "portion": 25 } ],
     "tool_ammo": [ "battery" ],
@@ -83,7 +84,8 @@
     ]
   },
   {
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "smartphone (SIM) - Flashlight", "str_pl": "smartphones (SIM) - Flashlight" },
     "material": [ { "type": "aluminum", "portion": 75 }, { "type": "plastic", "portion": 25 } ],
     "tool_ammo": [ "battery" ],
@@ -150,7 +152,8 @@
     "revert_to": "smart_phone"
   },
   {
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "laptop computer (SIM)" },
     "material": [ { "type": "aluminum", "portion": 75 }, { "type": "plastic", "portion": 25 } ],
     "tool_ammo": [ "battery" ],
@@ -204,7 +207,8 @@
     ]
   },
   {
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": { "str": "laptop computer (SIM) - lit screen", "str_pl": "laptop computers (SIM) - lit screen" },
     "material": [ { "type": "aluminum", "portion": 75 }, { "type": "plastic", "portion": 25 } ],
     "tool_ammo": [ "battery" ],

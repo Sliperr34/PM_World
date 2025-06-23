@@ -1,60 +1,177 @@
 [
-{
-  "type": "BIONIC_ITEM",
-  "category": "bionics",
-  "name": {
-    "str": "Infrared Vision CBM"
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Infrared Vision CBM"
+    },
+    "weight": "500 g",
+    "volume": "2500 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "60 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_infrared_inv",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "A bionic module that extends the user's range of vision into the infrared, allowing them to see warm-blooded creatures in the dark and through smoke.",
+    "price": "4500 USD",
+    "difficulty": 6
   },
-  "weight": "500 g",
-  "volume": "2500 ml",
-  "material": [
-    "steel",
-    "plastic"
-  ],
-  "symbol": ":",
-  "color": "yellow",
-  "price_postapoc": "60 USD",
-  "use_action": [
-    "install_bionic"
-  ],
-  "flags": [
-    "CBM"
-  ],
-  "is_upgrade": false,
-  "faults": [
-    "fault_bionic_salvaged"
-  ],
-  "melee_damage": {
-    "bash": 8
+  {
+    "id": "bio_infrared_inv",
+    "type": "bionic",
+    "name": {
+      "str": "Infrared Vision"
+    },
+    "description": "Your range of vision extends into the infrared, allowing you to see warm-blooded creatures in the dark or through smoke.",
+    "occupied_bodyparts": [
+      [
+        "eyes",
+        1
+      ]
+    ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ],
+    "active_flags": [
+      "INFRARED"
+    ],
+    "act_cost": "5 J",
+    "react_cost": "5 J",
+    "time": "1 s"
   },
-  "id": "bio_infrared_inv",
-  "copy-from": "bionic_general",
-  "looks_like": "bio_int_enhancer",
-  "description": "A bionic module that extends the user's range of vision into the infrared, allowing them to see warm-blooded creatures in the dark and through smoke.",
-  "price": "4500 USD",
-  "difficulty": 6
-},
-{
-  "id": "bio_infrared_inv",
-  "type": "bionic",
-  "name": {
-    "str": "Infrared Vision"
+  
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Base Rabbit Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "10 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_rabbit_base",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply the Rabbit tattoo. Admittedly, this one looks a little worse for wear, like it fell off the back of a truck.",
+    "price": "20 USD",
+    "difficulty": 0
   },
-  "description": "Your range of vision extends into the infrared, allowing you to see warm-blooded creatures in the dark or through smoke.",
-  "occupied_bodyparts": [
-    [
-      "eyes",
-      1
+  {
+    "id": "bio_tattoo_rabbit_base",
+    "type": "bionic",
+    "name": {
+      "str": "Rabbit Tattoo"
+    },
+    "description": "The tattoo of a rabbit dominates your right shoulder, the ink ever so slightly split. You feel more capable of dodging, but at the same time, less?",
+    "occupied_bodyparts": [
+      [
+        "arm_r",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "DODGE_CHANCE", "add": -10 },
+          { "value": "BONUS_DODGE", "add": 1 },
+          { "value": "SPEED", "add": 2 }
+        ]
+      }
     ]
-  ],
-  "flags": [
-    "BIONIC_TOGGLED"
-  ],
-  "active_flags": [
-    "INFRARED"
-  ],
-  "act_cost": "5 J",
-  "react_cost": "5 J",
-  "time": "1 s"
-}
+  },
+  
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Base Hedgehog Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "10 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_hedgehog_base",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply the Hedgehog tattoo. Admittedly, this one looks a little worse for wear, like it fell off the back of a truck.",
+    "price": "20 USD",
+    "difficulty": 0
+  },
+  {
+    "id": "bio_tattoo_hedgehog_base",
+    "type": "bionic",
+    "name": {
+      "str": "Hedgehog Tattoo"
+    },
+    "description": "The tattoo of a Hedgehog dominates your left shoulder, the ink ever so slightly split. You feel more capable of parrying, but might have a harder time striking in melee?",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MELEE_TO_HIT", "add": -1 },
+          { "value": "BONUS_BLOCK", "add": 1 }
+        ]
+      }
+    ]
+  }
 ]

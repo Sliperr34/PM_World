@@ -1,0 +1,10 @@
+[
+  {
+    "type": "skill",
+    "id": "self-control",
+    "name": { "str": "self-control" },
+    "display_category": "display_interaction",
+    "sort_rank": 30000,
+    "description": "Your ability to keep your emotions under control against adversity."
+  }
+]

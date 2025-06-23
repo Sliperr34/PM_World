@@ -1,7 +1,8 @@
 [
   {
     "id": "zw_zweihander",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "Zweihander of Zwei asssociation" },
     "description": "A huge two-handed sword.  It's blade made of some sort of black steel.\n\nFinely made, and looks realy sturdy. You see a Zwei asssociation emblem on it.",
@@ -24,7 +25,8 @@
   },
   {
     "id": "zw_bscabbard",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Zwei back scabbard" },
     "description": "A leather scabbard, big enough for almost any sword.  Designed to be strapped to the back, it's very difficult to draw from without considerable practice.  Activate to sheath/draw a sword.",
     "weight": "2290 g",
@@ -54,7 +56,8 @@
   },
   {
     "id": "zw_is_zweihander",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "Isadora Zweihander" },
     "description": "A huge two-handed sword.  It's blade made of some sort of black steel.\n\nFinely made, and looks realy sturdy. You see a Zwei asssociation emblem on it.",
@@ -77,7 +80,8 @@
   },
   {
     "id": "zw_bscabbard_iz",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "name": { "str": "Zwei big back scabbard" },
     "description": "A leather scabbard, big enough for *any* sword.  Designed to be strapped to the back, it's very difficult to draw from without considerable practice.  Activate to sheath/draw a sword.",
     "weight": "2890 g",
@@ -107,7 +111,8 @@
   },
   {
     "id": "zw_longsword",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "Zwei asssociation longsword" },
     "description": "Long sword made of black steel. Realy sturdy, but it weighs more than it's counterpart. \n\nWell made. You see Zwei association emblem on It",
@@ -129,7 +134,8 @@
     "melee_damage": { "bash": 11, "cut": 35 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "zw_mace",
     "name": { "str": "Zwei stun baton" },
     "description": "Long stun baton made of some black polymer, slick at touch.\n\nYou see Zwei association emblem on It",
@@ -154,7 +160,8 @@
   },
   {
     "id": "sv_rapier",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "rapier of Seven association" },
     "description": "A thin sword with an ornate hand guard.  It looks like the preferred weapon of gentlemen and swashbucklers.\n\nNicely made. You see Seven association emblem on it",
@@ -177,7 +184,8 @@
   },
   {
     "id": "mc_estoc",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "Seven association estoc" },
     "description": "A thin thrusting sword, a sort of predecessor to the rapier.  It requires a larger baldric or scabbard, compared to smaller swords.\n\nNicely made. You see Seven association emblem on it",
@@ -200,7 +208,8 @@
   },
   {
     "id": "bl_katana",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "Broad Katana" },
     "description": "A beautifully crafted katana with a wider blade than usual, designed for powerful strikes.\n\nIts blade is sharp and well-maintained, capable of delivering devastating blows to opponents.",
@@ -222,7 +231,8 @@
     "melee_damage": { "bash": 7, "cut": 52 }
   },
   {
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "id": "rc_chains",
     "symbol": "3",
     "color": "light_gray",
@@ -250,7 +260,8 @@
     "melee_damage": { "bash": 8, "stab": 3 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "lab_tknife",
     "category": "weapons",
     "price": "52 USD",
@@ -272,7 +283,8 @@
   },
   {
     "id": "kr_katana",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str_sp": "black katana" },
     "description": "Light and thin katana. Througly black. \n\n Ready to bloodshed and protection money colecting, one limb at time.",
@@ -296,7 +308,8 @@
   },
   {
     "id": "kr_cloud_katana",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str_sp": "cloud katana" },
     "description": "Light and thin katana. Througly black, but you can recognise white and gold clouds patern on it \n\n Ready to bloodshed and protection money colecting, one limb at time.",
@@ -319,7 +332,8 @@
     "melee_damage": { "bash": 5, "cut": 51 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "lab_bat",
     "category": "weapons",
     "name": { "str": "lab security baton", "str_pl": "lab security batons" },
@@ -342,7 +356,8 @@
     "melee_damage": { "bash": 11 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_case",
     "category": "weapons",
     "name": { "str": "EGO suitcase", "str_pl": "EGO suitcases" },
@@ -362,7 +377,8 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_blank",
     "category": "weapons",
     "name": { "str": "blank EGO suitcase", "str_pl": "blank EGO suitcases" },
@@ -382,7 +398,8 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_zayin",
     "category": "weapons",
     "name": { "str": "ZAYIN EGO suitcase", "str_pl": "ZAYIN EGO suitcases" },
@@ -402,7 +419,8 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_teth",
     "category": "weapons",
     "name": { "str": "TETH EGO suitcase", "str_pl": "TETH EGO suitcases" },
@@ -422,7 +440,8 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_he",
     "category": "weapons",
     "name": { "str": "HE EGO suitcase", "str_pl": "HE EGO suitcases" },
@@ -442,7 +461,8 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_waw",
     "category": "weapons",
     "name": { "str": "WAW EGO suitcase", "str_pl": "WAW EGO suitcases" },
@@ -462,7 +482,8 @@
     "melee_damage": { "bash": 8 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "ego_aleph",
     "category": "weapons",
     "name": { "str": "ALEPH EGO suitcase", "str_pl": "ALEPH EGO suitcases" },
@@ -483,7 +504,8 @@
   },
   {
     "id": "pm_test_weapon",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "PM test weapon" },
     "description": " ",
@@ -504,7 +526,8 @@
     "melee_damage": { "bash": 44, "cut": 28 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "w_l2_mace",
     "name": { "str": "L2 cleanup agent shock baton" },
     "description": "A one handed shock baton made of some black polymer. All of the power settings would be lethal to a human, unlike a normal stun baton. \n\nIt's branded in the markings of W Corp.",
@@ -532,7 +555,8 @@
     "melee_damage": { "bash": 37 }
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "id": "w_l2_hatchet",
     "symbol": ";",
     "looks_like": "hatchet",
@@ -600,7 +624,8 @@
   },
   {
     "id": "w_l2_polearm",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "symbol": "/",
     "color": "light_gray",
     "name": {
@@ -655,7 +680,8 @@
   },
   {
     "id": "w_l3_katana",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str_sp": "L3 cleanup agent katana" },
     "description": "A long katana with a blue blade edge. There's a number of power settings on the handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters. \n\nIt's branded in the markings of W Corp.",
@@ -699,7 +725,8 @@
   },
   {
     "id": "w_l3_dual_blade",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "L3 cleanup agent dual blades" },
     "description": "A pair of one handed swords with blue blade edges. Both have a number of power settings on their handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters.  \n\nIt's branded in the markings of W Corp.",
@@ -742,7 +769,8 @@
   },
   {
     "id": "w_l3_short_blade",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": { "str": "L3 cleanup agent short blade" },
     "description": "A short one handed blade with a blue blade edge, it's about the size of a small machete overall. There's a number of power settings on the handle, including one that reads 'DANGER, DISPLACES SPACE' in large red letters. \n\nIt's branded in the markings of W Corp. ",
@@ -789,7 +817,8 @@
     }
   },
   {
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
     "id": "w_l3_gauntlet",
     "symbol": "3",
     "color": "light_gray",

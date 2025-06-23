@@ -9,7 +9,7 @@
     "weight": "5 kg",
     "symbol": "ξ",
     "color": "light_blue",
-    "default_faction": "ABNOS",
+    "default_faction": "abnormalities",
     "bodytype": "dog",
     "speed": 100,
     "material": [ "flesh", "steel" ],
@@ -72,22 +72,19 @@
     "id": "EOC_anomaly_volt_strike_warn_delay",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "set_string_var": { "mutator": "npc_loc_relative", "target": "(0,0,0)" },
-        "target_var": { "context_val": "target_pos" }
-      },
-      { "npc_message": "<color_yellow>Air crackles with static above you!</color>", "type": "warning" },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "u_message": "<color_yellow>Air crackles with static above you!</color>", "type": "warning" },
       {
         "run_eocs": "EOC_anomaly_volt_strike_damage",
         "time_in_future": "1 s",
-        "beta_loc": { "context_val": "target_pos" }
+        "beta_loc": { "context_val": "loc" }
       }
     ]
   },
   {
     "id": "EOC_anomaly_volt_strike_damage",
     "type": "effect_on_condition",
-    "effect": [ { "npc_explosion": { "power": 30, "distance_factor": 0, "fire": false }, "emp_blast": true } ]
+    "effect": [ { "u_explosion": { "power": 30, "distance_factor": 0, "fire": false }, "emp_blast": true } ]
   },
   {
     "id": "mon_anomaly_volt_discharge",
@@ -119,8 +116,8 @@
     "effect": "attack",
     "effect_str": "eff_volt_infusion",
     "shape": "blast",
-    "min_duration": "20 s",
-    "max_duration": "20 s",
+    "min_duration": 1200,
+    "max_duration": 1200,
     "flags": [ "SILENT", "NO_PROJECTILE" ]
   },
   {
@@ -153,22 +150,19 @@
     "id": "EOC_anomaly_volt_aoe_strike_warn_delay",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "set_string_var": { "mutator": "npc_loc_relative", "target": "(0,0,0)" },
-        "target_var": { "context_val": "target_pos" }
-      },
-      { "npc_message": "<color_light_blue>Air above you is crackling and hums!</color>", "type": "warning" },
+      { "u_location_variable": { "context_val": "loc" } },
+      { "u_message": "<color_light_blue>Air above you is crackling and hums!</color>", "type": "warning" },
       {
         "run_eocs": "EOC_anomaly_volt_aoe_strike_damage",
         "time_in_future": "2 s",
-        "beta_loc": { "context_val": "target_pos" }
+        "beta_loc": { "context_val": "loc" }
       }
     ]
   },
   {
     "id": "EOC_anomaly_volt_aoe_strike_damage",
     "type": "effect_on_condition",
-    "effect": [ { "npc_explosion": { "power": 45, "distance_factor": 0.6, "fire": false }, "emp_blast": true } ]
+    "effect": [ { "u_explosion": { "power": 45, "distance_factor": 0.6, "fire": false }, "emp_blast": true } ]
   },
   {
     "id": "mon_anomaly_volt_death_burst",
