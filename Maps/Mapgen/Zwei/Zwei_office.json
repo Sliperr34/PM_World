@@ -78,7 +78,7 @@
         "n": { "item": "SUS_office_desk", "chance": 75 },
         "v": { "item": "SUS_office_filing_cabinet", "chance": 80 },
         "R": { "item": "office_supplies", "chance": 80, "repeat": [ 1, 2 ] },
-        "@": { "item": "trash", "chance": 60, "repeat": [ 1, 2 ] },
+        "@": { "item": "SUS_trash_trashcan", "chance": 60, "repeat": [ 1, 2 ] },
         "B": { "item": "novels", "chance": 80, "repeat": [ 4, 8 ] }
       }
 }
