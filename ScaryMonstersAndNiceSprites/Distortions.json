@@ -22,7 +22,7 @@
     "melee_dice": 1,
     "melee_dice_sides": 6,
     "melee_damage": [ { "damage_type": "stab", "amount": 6 }, { "damage_type": "heat", "amount": 6 } ],
-    "special_attacks": [ { "type": "monster_attack", "attack_type": "melee", "id": "irae" } ],
+    "special_attacks": [ { "type": "monster_attack", "attack_type": "melee", "id": "irae", "cooldown": 5 } ],
     "dodge": 3,
     "weakpoint_sets": [ "wps_irae_body" ],
     "families": [ "prof_wp_distortions0", "prof_wp_distortions1", "prof_wp_pecca" ],
@@ -55,7 +55,7 @@
     "melee_dice": 1,
     "melee_dice_sides": 8,
     "melee_damage": [ { "damage_type": "bash", "amount": 12 } ],
-    "special_attacks": [ { "type": "monster_attack", "attack_type": "melee", "id": "luxuriae" } ],
+    "special_attacks": [ { "type": "monster_attack", "attack_type": "melee", "id": "luxuriae", "cooldown": 5 } ],
     "dodge": 1,
     "weakpoint_sets": [ "wps_luxiae_body" ],
     "families": [ "prof_wp_distortions0", "prof_wp_distortions1", "prof_wp_pecca" ],
@@ -94,7 +94,8 @@
         "type": "monster_attack",
         "attack_type": "melee",
         "id": "superbiae",
-        "self_effects_onhit": [ { "id": "accel", "duration": 10, "intensity": 10 } ]
+        "self_effects_onhit": [ { "id": "accel", "duration": 10, "intensity": 10 } ],
+        "cooldown": 5
       }
     ],
     "dodge": 4,
@@ -281,7 +282,7 @@
     "melee_dice": 1,
     "melee_dice_sides": 8,
     "melee_damage": [ { "damage_type": "bash", "amount": 12 } ],
-    "special_attacks": [ { "type": "monster_attack", "attack_type": "melee", "id": "luxuriae" } ],
+    "special_attacks": [ { "type": "monster_attack", "attack_type": "melee", "id": "luxuriae", "cooldown": 5 } ],
     "dodge": 1,
     "weakpoint_sets": [ "wps_luxiae_body" ],
     "families": [ "prof_wp_distortions0", "prof_wp_distortions1", "prof_wp_pecca" ],
