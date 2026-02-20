@@ -29,6 +29,7 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_FALL", "BASHES", "PATH_AVOID_FIRE", "SWARMS", "WARM", "NO_BREATHE" ],
     "armor": { "electric": 3, "heat": 50, "bash": 7, "cut": 11, "stab": 15, "bullet": 21, "acid": 3 }
   },
@@ -62,6 +63,7 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_FALL", "BASHES", "PATH_AVOID_FIRE", "SWARMS", "WARM" ],
     "armor": { "electric": 2, "heat": 3, "bash": 19, "cut": 9, "stab": 13, "bullet": 21, "acid": 1 }
@@ -94,7 +96,7 @@
         "type": "monster_attack",
         "attack_type": "melee",
         "id": "superbiae",
-        "self_effects_onhit": [ { "id": "accel", "duration": 10, "intensity": 10 } ],
+        "self_effects_onhit": [ { "id": "accel", "duration": 10, "intensity": 10 } ], 
         "cooldown": 5
       }
     ],
@@ -104,6 +106,7 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [
       "SEES",
@@ -160,6 +163,7 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_FALL", "PATH_AVOID_FIRE", "SWARMS", "WARM" ],
     "armor": { "electric": 1, "heat": 0, "bash": 6, "cut": 0, "stab": 8, "bullet": 21, "acid": 5 }
@@ -209,6 +213,7 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [
       "SEES",
@@ -255,6 +260,7 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_FALL", "PATH_AVOID_FIRE", "SWARMS", "WARM", "NOHEAD", "NO_BREATHE" ],
     "armor": { "electric": 3, "heat": 5, "bash": 0, "cut": 8, "stab": 7, "bullet": 21, "acid": 5 }
@@ -289,9 +295,71 @@
     "vision_day": 35,
     "vision_night": 5,
     "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "minor_death_pay", "min_level": 1 } },
     "death_drops": "zw_pecca",
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
     "flags": [ "SEES", "HEARS", "SMELLS", "PATH_AVOID_FALL", "BASHES", "PATH_AVOID_FIRE", "SWARMS", "WARM" ],
     "armor": { "electric": 2, "heat": 3, "bash": 19, "cut": 9, "stab": 13, "bullet": 21, "acid": 1 }
+  },
+  {
+    "id": "mon_superbiae_c2",
+    "type": "MONSTER",
+    "name": { "str": "<color_yellow>Peccatulum Superbiae?</color>" },
+    "description": "Peccatulum Superbiae is a large blue wheel-shaped entity with spikes along its rim. Red and flesh-colored scraps are tied around its spokes. At the very center of the wheel is one dark blue eyeball. This one.. Has arms formed of solidified blood, extending from their veiny center.",
+    "default_faction": "distortions",
+    "bodytype": "blob",
+    "species": [ "DISTORTIONS", "PECCATULA" ],
+    "volume": "68 L",
+    "weight": "92 kg",
+    "hp": 220,
+    "speed": 200,
+    "material": [ "flesh", "steel" ],
+    "looks_like": "mon_blob",
+    "symbol": "O",
+    "color": "yellow",
+    "aggression": 100,
+    "morale": 100,
+    "aggro_character": true,
+    "melee_skill": 8,
+    "melee_dice": 4,
+    "melee_dice_sides": 12,
+    "melee_damage": [ { "damage_type": "cut", "amount": 24 } ],
+    "special_attacks": [
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "id": "superbiae",
+        "self_effects_onhit": [ { "id": "accel", "duration": 15, "intensity": 10 } ], 
+        "cooldown": 3
+      },
+      {
+        "id": "slam",
+        "min_mul": 2,
+        "max_mul": 3,
+        "cooldown": 5
+      }
+    ],
+    "dodge": 6,
+    "weakpoint_sets": [ "wps_superbiae_body" ],
+    "families": [ "prof_wp_distortions2", "prof_wp_pecca" ],
+    "vision_day": 35,
+    "vision_night": 5,
+    "harvest": "distortion_zayin",
+    "death_function": { "effect": { "id": "death_pay", "min_level": 1 } },
+    "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_WEAK" ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_FALL",
+      "PATH_AVOID_FIRE",
+      "SWARMS",
+      "WARM",
+      "HIT_AND_RUN",
+      "HARDTOSHOOT",
+      "NOHEAD",
+      "NO_BREATHE"
+    ],
+    "armor": { "electric": 10, "heat": 20, "bash": 12, "cut": 18, "stab": 20, "bullet": 32, "acid": 10 }
   }
 ]

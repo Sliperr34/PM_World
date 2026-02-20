@@ -76,6 +76,7 @@
     "type": "overmap_terrain",
     "name": "Kurokumo hideout",
     "sym": "K",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -83,6 +84,7 @@
     "type": "overmap_terrain",
     "name": "Kurokumo hideout roof",
     "sym": "K",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -90,6 +92,7 @@
     "type": "overmap_terrain",
     "name": "HamHamPangPang",
     "sym": "H",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -97,6 +100,7 @@
     "type": "overmap_terrain",
     "name": "HamHamPangPang roof",
     "sym": "H",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -104,6 +108,7 @@
     "type": "overmap_terrain",
     "name": "HamHamPangPang",
     "sym": "H",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -111,6 +116,7 @@
     "type": "overmap_terrain",
     "name": "HamHamPangPang roof",
     "sym": "H",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -118,6 +124,7 @@
     "type": "overmap_terrain",
     "name": "Rusted Chains hideout",
     "sym": "S",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -125,6 +132,7 @@
     "type": "overmap_terrain",
     "name": "Rusted Chains hideout roof",
     "sym": "S",
+	"color": "light_gray",
     "see_cost": "medium"
   },
   {
@@ -623,6 +631,22 @@
     "name": "Phantom Stronghold Roof",
     "color": "c_yellow",
     "sym": "S",
+    "see_cost": "medium"
+  },
+  {
+    "id": "w_station",
+    "type": "overmap_terrain",
+    "name": "Warp Station",
+    "color": "c_blue",
+    "sym": "W",
+    "see_cost": "medium"
+  },
+  {
+    "id": "w_station_r",
+    "type": "overmap_terrain",
+    "name": "Warp Station Roof",
+    "color": "c_blue",
+    "sym": "W",
     "see_cost": "medium"
   }
 ]

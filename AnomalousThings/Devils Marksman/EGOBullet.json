@@ -103,7 +103,26 @@
         "ammo_restriction": { "pm_magic_bullets": 7 }
       }
     ],
-    "use_action": { "type": "cast_spell", "spell_id": "spell_magic_bullet", "no_fail": true, "level": 1, "need_wielding": true }
+    "use_action": { "type": "cast_spell", "spell_id": "spell_magic_bullet", "no_fail": true, "level": 1, "need_wielding": true },
+    "passive_effects": [ { "id": "EGO_magic_bullet_ammo" } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "EGO_magic_bullet_ammo",
+    "has": "HELD",
+    "condition": { "math": [ "u_spell_level('EGO_soda') < 10" ] },
+    "mutations": [ "EGO_magic_bullet" ]
+  },
+  {
+    "type": "mutation",
+    "id": "EGO_magic_bullet",
+    "name": "Magic Bullet",
+    "points": 0,
+    "description": "Magic bullet mutation desc",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "spells_learned": [ [ "spell_conjure_magic_bullet", 1 ] ]
   },
   {
     "id": "pm_magic_bullet",
@@ -129,6 +148,25 @@
     "default": "pm_magic_bullet"
   },
   
+  {
+    "id": "spell_conjure_magic_bullet",
+    "type": "SPELL",
+    "name": "Summon Magic Bullets",
+    "description": "Call more magic bullets into existence at the mere cost of your wellbeing.",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "pm_magic_bullet",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 5,
+    "difficulty": 0,
+    "max_level": 1,
+    "energy_source": "HP",
+    "base_energy_cost": 5,
+    "min_duration": 0,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "PERMANENT" ]
+  },
   {
     "id": "spell_magic_bullet",
     "type": "SPELL",

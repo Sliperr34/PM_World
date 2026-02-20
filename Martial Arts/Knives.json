@@ -1,0 +1,341 @@
+[
+  {
+    "type": "mutation",
+    "id": "KNIFE_ARTS",
+    "name": "Knife Arts",
+    "points": 0,
+    "description": "",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "id": "ka_knife_toss",
+    "type": "SPELL",
+    "name": { "str": "Knife Toss" },
+    "description": "Throw a knife with deadly precision. All knife skills cause laceration on the target, increasing the damage further knife skills inflict.",
+    "flags": [ "RANDOM_DAMAGE", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "base_energy_cost": 10, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 1.5 * (0.5 + (0.1 * u_skill('throwing')))" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 2.0 * (0.5 + (0.1 * u_skill('throwing')))" ] },
+    "min_range": 4,
+    "max_range": 8,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 80,
+    "damage_type": "stab",
+    "effect": "attack",
+    "shape": "blast",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "KNIVES" }, { "u_has_wielded_with_weapon_category": "SHIVS" } ] },
+    "condition_fail_message": "You must have a knife equipped.",
+    "extra_effects": [
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "minor_laceration",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  {
+    "id": "ka_knife_flurry",
+    "type": "SPELL",
+    "name": { "str": "Knife Flurry" },
+    "description": "Throw several knives in a deadly arc. All knife skills cause laceration on the target, increasing the damage further knife skills inflict.",
+    "flags": [ "RANDOM_DAMAGE", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile", "ground" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "base_energy_cost": 25, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 1.2 * (0.5 + (0.1 * u_skill('throwing')))" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 1.6 * (0.5 + (0.1 * u_skill('throwing')))" ] },
+    "min_range": 3,
+    "max_range": 3,
+    "min_aoe": 35,
+    "max_aoe": 35,
+    "base_casting_time": 80,
+    "damage_type": "cut",
+    "effect": "attack",
+    "shape": "cone",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "KNIVES" }, { "u_has_wielded_with_weapon_category": "SHIVS" } ] },
+    "condition_fail_message": "You must have a knife equipped.",
+    "extra_effects": [
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "minor_laceration",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  {
+    "id": "ka_thousand_cuts",
+    "type": "SPELL",
+    "name": { "str": "Thousand Cuts" },
+    "description": "Slash your opponent with a flurry of strikes, harrying them. Inflicts a significant amount of laceration. All knife skills cause laceration on the target, increasing the damage further knife skills inflict.",
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "effect_str": "EOC_LACERATION", 
+    "base_energy_cost": 15, 
+    "max_level": 1,
+    "min_damage": 1,
+    "max_damage": 5,
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 80,
+    "damage_type": "cut",
+    "effect": "effect_on_condition",
+    "shape": "blast",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "KNIVES" }, { "u_has_wielded_with_weapon_category": "SHIVS" } ] },
+    "condition_fail_message": "You must have a knife equipped.",
+    "extra_effects": [
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  {
+    "id": "ka_serrated_dash",
+    "type": "SPELL",
+    "name": { "str": "Serrated Dash" },
+    "description": "Dash forwards in a line, striking anyone between you and the destination. All knife skills cause laceration on the target, increasing the damage further knife skills inflict.",
+    "flags": [ "RANDOM_DAMAGE", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "NO_PROJECTILE" ],
+    "valid_targets": [ "hostile", "ground" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "base_energy_cost": 15, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 1.5 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 2.0 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "min_range": { "math": [ "4 * (1 + (0.25 * u_skill('melee')))" ] },
+    "max_range": 8,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "base_casting_time": 80,
+    "damage_type": "cut",
+    "effect": "dash",
+    "shape": "line",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "KNIVES" }, { "u_has_wielded_with_weapon_category": "SHIVS" } ] },
+    "condition_fail_message": "You must have a knife equipped.",
+    "extra_effects": [
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "minor_laceration",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  {
+    "id": "ka_assassination",
+    "type": "SPELL",
+    "name": { "str": "Assassination" },
+    "description": "A deadly attack, three precise strikes aimed to make the most of any lasceration inflicted. Removes all stacks of lasceration for pure damage.",
+    "flags": [ "RANDOM_DAMAGE", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "EXTRA_EFFECTS_FIRST" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "base_energy_cost": 50, 
+    "max_level": 1,
+    "min_damage": 5,
+    "max_damage": 5,
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 80,
+    "damage_type": "cut",
+    "effect": "effect_on_condition",
+    "shape": "blast",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "KNIVES" }, { "u_has_wielded_with_weapon_category": "SHIVS" } ] },
+    "condition_fail_message": "You must have a knife equipped.",
+    "extra_effects": [
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "minor_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "minor_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "sp_laceration",
+        "hit_self": false,
+        "max_level": 1
+      },
+      {
+        "id": "minor_laceration",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  
+  
+  
+  {
+    "id": "dimensional_cut",
+    "type": "SPELL",
+    "name": { "str": "Dimensional Cut" },
+    "description": "Slash your opponent with a flurry of strikes, harrying them.",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "valid_targets": [ "self" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "effect_str": "EOC_DIMENSION_TWIST", 
+    "base_energy_cost": 0, 
+    "max_level": 1,
+    "min_range": 0,
+    "max_range": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 5,
+    "effect": "effect_on_condition",
+    "shape": "blast",
+    "condition": { "u_has_wielded_with_weapon_category": "KNIVES" },
+    "condition_fail_message": "You must have a knife equipped."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DIMENSION_TWIST",
+    "effect": [
+      {
+        "if": { "current_dimension": "unknown_dimension" },
+        "then": { "u_travel_to_dimension": "" },
+        "else": { "u_travel_to_dimension": "unknown_dimension", "region_type": "unknown_dimension" }
+      }
+    ]
+  },
+  
+  
+  
+  {
+    "id": "minor_laceration",
+    "type": "SPELL",
+    "name": { "str": "minor_laceration" },
+    "description": "",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "effect_str": "EOC_MINOR_LACERATION",
+    "max_level": 1,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 12,
+    "max_range": 12,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "damage_type": "cut",
+    "effect": "effect_on_condition",
+    "shape": "blast"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MINOR_LACERATION",
+    "effect": [
+      {
+        "if": { "u_has_effect": "laceration" },
+        "then": [ 
+          { "math": [ "_inten = u_effect_intensity('laceration')" ] }, 
+          { "u_lose_effect": "laceration" }, 
+          { "u_add_effect": "laceration", "duration": "20 seconds", "intensity": { "math": [ "_inten + 5" ] } }
+        ],
+        "else": [
+          { "u_add_effect": "laceration", "duration": "20 seconds", "intensity": { "math": [ "5" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LACERATION",
+    "effect": [
+      {
+        "if": { "u_has_effect": "laceration" },
+        "then": [ 
+          { "math": [ "_inten = u_effect_intensity('laceration')" ] }, 
+          { "u_lose_effect": "laceration" }, 
+          { "u_add_effect": "laceration", "duration": "20 seconds", "intensity": { "math": [ "_inten + 10 + rand(20)" ] } }
+        ],
+        "else": [
+          { "u_add_effect": "laceration", "duration": "20 seconds", "intensity": { "math": [ "15 + rand(30 * (0.75 + (0.05 * u_skill('slashing'))))" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_LACERATION_FINALE",
+    "effect": [
+      {
+        "if": { "u_has_effect": "laceration" },
+        "then": [ 
+          { "math": [ "_inten = u_effect_intensity('laceration')" ] }, 
+          { "u_lose_effect": "laceration" }, 
+          { "u_cast_spell": { "id": "ka_assassination_finale", "hit_self": true, "min_level": { "math": [ "_inten" ] } } }
+        ]
+      }
+    ]
+  },
+  
+  
+  {
+    "id": "ka_assassination_finale",
+    "type": "SPELL",
+    "name": { "str": "Finale of Assassination" },
+    "description": "",
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "KNIFE_ARTS",
+    "base_energy_cost": 10, 
+    "max_level": 100,
+    "min_damage": 1,
+    "max_damage": 101,
+    "damage_increment": 1,
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 80,
+    "damage_type": "pure",
+    "effect": "attack",
+    "shape": "blast"
+  }
+]

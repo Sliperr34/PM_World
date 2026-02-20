@@ -26,5 +26,61 @@
       "male": { "entries": [ { "item": "boxer_shorts" } ] },
       "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
     }
+  },
+  
+  
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "ma_ka",  
+    "name": "Arts (Knives)",
+    "description": "You've been professionally trained with knives in the City, and know some simple tricks.",
+    "points": 0,
+    "spells": [ { "id": "ka_knife_toss", "level": 1 }, { "id": "ka_knife_flurry", "level": 1 }, { "id": "ka_thousand_cuts", "level": 1 }, { "id": "ka_serrated_dash", "level": 1 }, { "id": "ka_assassination", "level": 1 } ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "ma_aa",  
+    "name": "Arts (Axes)",
+    "description": "You've been professionally trained with axes in the City, and know some simple tricks.",
+    "points": 0,
+    "spells": [ { "id": "aa_wild_swing", "level": 1 }, { "id": "aa_the_cutting_arc", "level": 1 }, { "id": "aa_skull_splitter", "level": 1 } ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "ma_ca",  
+    "name": "Arts (Chains)",
+    "description": "You've been professionally trained with chains in the City, and know some simple tricks.",
+    "points": 0,
+    "spells": [ { "id": "ca_chain_flurry", "level": 1 }, { "id": "ca_chain_crush", "level": 1 }, { "id": "ca_chain_curl", "level": 1 } ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "ma_ia",  
+    "name": "Arts (Impact)",
+    "description": "You've been professionally trained with staves and hammers in the City, and know some simple tricks.",
+    "points": 0,
+    "spells": [ { "id": "ia_earthshaker_swing", "level": 1 }, { "id": "ia_overhead_exploitation", "level": 1 }, { "id": "ia_stellar_crash", "level": 1 }]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "ma_pa",  
+    "name": "Arts (Piercing)",
+    "description": "You've been professionally trained with spears and thrusting swords in the City, and know some simple tricks.",
+    "points": 0,
+    "spells": [ { "id": "pa_piercing_strike", "level": 1 }, { "id": "pa_skypiercer", "level": 1 }, { "id": "pa_retreating_strike", "level": 1 } ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "ma_sa",  
+    "name": "Arts (Swords)",
+    "description": "You've been professionally trained with swords in the City, and know some simple tricks.",
+    "points": 0,
+    "spells": [ { "id": "sa_cleave", "level": 1 }, { "id": "sa_florish", "level": 1 }, { "id": "sa_majesty", "level": 1 } ]
   }
 ]

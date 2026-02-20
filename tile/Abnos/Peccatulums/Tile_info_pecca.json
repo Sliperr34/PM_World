@@ -16,7 +16,8 @@
           { "id": "mon_luxuriae", "fg": 6 },
           { "id": "mon_morositatis", "fg": 2 },
           { "id": "mon_acediae", "fg": 1 },
-          { "id": "mon_superbiae", "fg": 3 }
+          { "id": "mon_superbiae", "fg": 3 },
+          { "id": "mon_superbiae_c2", "fg": 7 }
         ]
       }
     ]

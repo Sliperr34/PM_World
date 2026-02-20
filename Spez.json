@@ -6,11 +6,11 @@
     "description": "Light heal, for test purposes and bypass eoc-heal",
     "valid_targets": [ "self"],
     "min_damage": -1,
-	"max_damage": -5,
+    "max_damage": -5,
     "damage_increment": -1.0,
     "effect": "attack",
     "shape": "blast",
-	"flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
     "energy_source": "NONE"
   },
   {
@@ -20,13 +20,13 @@
     "description": "Minor rest, for test purposes and bypass eoc-rest",
     "valid_targets": [ "self"],
     "min_damage": 10,
-	"max_damage": 25,
+    "max_damage": 25,
     "damage_increment": 5,
     "effect": "recover_energy",
     "shape": "blast",
-	"flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
     "energy_source": "NONE",
-	"effect_str": "STAMINA"
+    "effect_str": "STAMINA"
   },
   {
     "id": "light_rest",
@@ -35,13 +35,13 @@
     "description": "Light rest, for test purposes and bypass eoc-rest",
     "valid_targets": [ "self"],
     "min_damage": 50,
-	"max_damage": 550,
+    "max_damage": 550,
     "damage_increment": 100,
     "effect": "recover_energy",
     "shape": "blast",
-	"flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
     "energy_source": "NONE",
-	"effect_str": "STAMINA"
+    "effect_str": "STAMINA"
   },
   {
     "id": "good_rest",
@@ -50,14 +50,14 @@
     "description": "Good rest, for test purposes and bypass eoc-rest",
     "valid_targets": [ "self"],
     "min_damage": 250,
-	"max_damage": 3750,
+    "max_damage": 3750,
     "damage_increment": 250,
     "effect": "recover_energy",
     "shape": "blast",
-	"flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
     "energy_source": "NONE",
-	"effect_str": "STAMINA",
-	"message": "<color_yellow>Ahh...</color>"
+    "effect_str": "STAMINA",
+    "message": "<color_yellow>Ahh...</color>"
   },
   {
     "id": "self_harm_light_hands",
@@ -65,14 +65,14 @@
     "name": "Self Harm",
     "description": "You did something that hurt your arms",
     "valid_targets": [ "self"],
-	"affected_body_parts": [ "hand_r", "hand_l" ],
+    "affected_body_parts": [ "hand_r", "hand_l" ],
     "min_damage": 3,
-	"max_damage": 6,
+    "max_damage": 6,
     "damage_increment": 1.0,
     "effect": "attack",
-	"damage_type": "stab",
+    "damage_type": "stab",
     "shape": "blast",
-	"flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
     "energy_source": "NONE"
   },
   {
@@ -82,11 +82,63 @@
     "description": "Light heal, for test purposes and bypass eoc-heal",
     "valid_targets": [ "self"],
     "min_damage": -1,
-	"max_damage": -3,
+    "max_damage": -3,
     "damage_increment": -1.0,
     "effect": "attack",
     "shape": "blast",
-	"flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL" ],
     "energy_source": "NONE"
+  },
+  {
+    "id": "minor_death_pay",
+    "type": "SPELL",
+    "name": { "str": "Minor Death Pay" },
+    "description": { "str": "Payment after killing a weak distortion." },
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_DEATH_PAY_MINOR",
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_range": 5,
+    "max_range": 5
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DEATH_PAY_MINOR",
+    "condition": "u_is_avatar",
+    "effect": [
+      { "math": [ "u_credit += 5000" ] },
+      { "u_message": "Your account is credited with the reward for slaying a Distortion." }
+    ]
+  },
+  {
+    "id": "death_pay",
+    "type": "SPELL",
+    "name": { "str": "Death Pay" },
+    "description": { "str": "Payment after killing a distortion." },
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_DEATH_PAY",
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_duration": 0,
+    "max_duration": 0,
+    "min_range": 5,
+    "max_range": 5
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DEATH_PAY",
+    "condition": "u_is_avatar",
+    "effect": [
+      { "math": [ "u_credit += 25000" ] },
+      { "u_message": "Your account is credited with the reward for slaying a Distortion." }
+    ]
   }
-  ]
+]

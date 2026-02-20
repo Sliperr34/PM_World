@@ -1,0 +1,183 @@
+[
+  {
+    "type": "mutation",
+    "id": "IMPACT_ARTS",
+    "name": "Impact Arts",
+    "points": 0,
+    "description": "",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "id": "ia_earthshaker_swing",
+    "type": "SPELL",
+    "name": { "str": "Earthshaker Swing" },
+    "description": "Gather your strength and swing at your opponent, disorienting them.",
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "IMPACT_ARTS",
+    "base_energy_cost": 5, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 0.6 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 0.8 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 130,
+    "damage_type": "bash",
+    "effect": "attack",
+    "shape": "blast",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "GREAT_HAMMERS" }, { "u_has_wielded_with_weapon_category": "BATONS" }, { "u_has_wielded_with_weapon_category": "FLAILS" }, { "u_has_wielded_with_weapon_category": "MACES" }, { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] },
+    "condition_fail_message": "You must have an impact weapon equipped.",
+    "extra_effects": [
+      {
+        "id": "minor_disorient",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  {
+    "id": "ia_overhead_exploitation",
+    "type": "SPELL",
+    "name": { "str": "Overhead Exploitation" },
+    "description": "Take advantage of a reeling opponent, slamming your weapon straight down on them with the full force of your wroth. This will remove any disoriented stacks, and requires at least one.",
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "IMPACT_ARTS",
+    "base_energy_cost": 15, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 0.7 * (0.5 + (0.1 * u_skill('melee'))) * (1 + u_effect_intensity('disoriented') / 4)" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 1.1 * (0.5 + (0.1 * u_skill('melee'))) * (1 + u_effect_intensity('disoriented') / 2)" ] },
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 130,
+    "damage_type": "bash",
+    "effect": "attack",
+    "shape": "blast",
+    "condition": { "and": [ { "or": [ { "u_has_wielded_with_weapon_category": "GREAT_HAMMERS" }, { "u_has_wielded_with_weapon_category": "BATONS" }, { "u_has_wielded_with_weapon_category": "FLAILS" }, { "u_has_wielded_with_weapon_category": "MACES" }, { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] }, 
+    { "npc_has_effect": "disoriented" } 
+    ] },
+    "condition_fail_message": "You must have an impact weapon equipped, and the opponent must be disoriented.",
+    "extra_effects": [
+      {
+        "id": "remove_disorient",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  {
+    "id": "ia_stellar_crash",
+    "type": "SPELL",
+    "name": { "str": "Stellar Crash" },
+    "description": "With your opponent on their backfoot, swing hard and send them flying away! The distance and strength grows based on Disoriented stacks on that opponent.",
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "IMPACT_ARTS",
+    "base_energy_cost": 20, 
+    "max_level": 1,
+    "min_damage": { "math": [ "1 + (u_effect_intensity('disoriented') * 2)" ] },
+    "max_damage": { "math": [ "1 + (u_effect_intensity('disoriented') * 4)" ] },
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 130,
+    "damage_type": "bash",
+    "effect": "directed_push",
+    "shape": "blast",
+    "condition": { "and": [ { "or": [ { "u_has_wielded_with_weapon_category": "GREAT_HAMMERS" }, { "u_has_wielded_with_weapon_category": "BATONS" }, { "u_has_wielded_with_weapon_category": "FLAILS" }, { "u_has_wielded_with_weapon_category": "MACES" }, { "u_has_wielded_with_weapon_category": "QUARTERSTAVES" } ] }, 
+    { "npc_has_effect": "disoriented" } 
+    ] },
+    "condition_fail_message": "You must have an impact weapon equipped, and the opponent must be disoriented.",
+    "extra_effects": [
+      {
+        "id": "remove_disorient",
+        "hit_self": false,
+        "max_level": 1
+      }
+    ]
+  },
+  
+  
+  
+  {
+    "id": "minor_disorient",
+    "type": "SPELL",
+    "name": { "str": "Minor Disorient" },
+    "description": "",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "effect_str": "EOC_MINOR_DISORIENT",
+    "max_level": 1,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 12,
+    "max_range": 12,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "damage_type": "cut",
+    "effect": "effect_on_condition",
+    "shape": "blast"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MINOR_DISORIENT",
+    "effect": [
+      {
+        "if": { "u_has_effect": "disoriented" },
+        "then": [ 
+          { "math": [ "_inten = u_effect_intensity('disoriented')" ] }, 
+          { "u_lose_effect": "disoriented" }, 
+          { "u_add_effect": "disoriented", "duration": "20 seconds", "intensity": { "math": [ "_inten + 1" ] } }
+        ],
+        "else": [
+          { "u_add_effect": "disoriented", "duration": "20 seconds", "intensity": { "math": [ "1" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "remove_disorient",
+    "type": "SPELL",
+    "name": { "str": "Remove Disorient" },
+    "description": "",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "effect_str": "EOC_REMOVE_DISORIENT",
+    "max_level": 1,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 12,
+    "max_range": 12,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "damage_type": "cut",
+    "effect": "effect_on_condition",
+    "shape": "blast"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_REMOVE_DISORIENT",
+    "effect": [
+      {
+        "if": { "u_has_effect": "disoriented" },
+        "then": [ 
+          { "u_lose_effect": "disoriented" }
+        ]
+      }
+    ]
+  }
+]

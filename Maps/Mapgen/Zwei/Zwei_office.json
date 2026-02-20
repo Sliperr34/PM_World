@@ -35,11 +35,11 @@
 	"palettes": [ "zwei_palette" ],
   "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
-        { "class": "zwei_rec_npc", "x": 2, "y": 9 },
-		{ "class": "zwei_food_npc", "x": 17, "y": 18 },
-		{ "class": "zwei_office1_npc", "x": 2, "y": 13 },
-		{ "class": "zwei_office3_npc", "x": 12, "y": 17 },
-		{ "class": "zwei_office2_npc", "x": 13, "y": 8 }
+      { "class": "zwei_rec_npc", "x": 2, "y": 9 },
+      { "class": "zwei_food_npc", "x": 17, "y": 18 },
+      { "class": "zwei_office1_npc", "x": 2, "y": 13 },
+      { "class": "zwei_office3_npc", "x": 12, "y": 17 },
+      { "class": "zwei_office2_npc", "x": 13, "y": 8 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",
@@ -78,7 +78,6 @@
         "n": { "item": "SUS_office_desk", "chance": 75 },
         "v": { "item": "SUS_office_filing_cabinet", "chance": 80 },
         "R": { "item": "office_supplies", "chance": 80, "repeat": [ 1, 2 ] },
-        "@": { "item": "SUS_trash_trashcan", "chance": 60, "repeat": [ 1, 2 ] },
         "B": { "item": "novels", "chance": 80, "repeat": [ 4, 8 ] }
       }
 }
@@ -119,11 +118,11 @@
 	"palettes": [ "zwei_palette" ],
   "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
-        { "class": "zwei_meet_npc", "x": 17, "y": 2 },
-		{ "class": "walter_npc", "x": 13, "y": 13 },
-		{ "class": "julia_npc", "x": 13, "y": 21 },
-		{ "class": "zwei_train_npc", "x": 10, "y": 2 },
-		{ "class": "zwei_newbie_npc", "x": 2, "y": 5 }
+      { "class": "zwei_meet_npc", "x": 17, "y": 2 },
+      { "class": "walter_npc", "x": 13, "y": 13 },
+      { "class": "julia_npc", "x": 13, "y": 21 },
+      { "class": "zwei_train_npc", "x": 10, "y": 2 },
+      { "class": "zwei_newbie_npc", "x": 2, "y": 5 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",
@@ -184,7 +183,7 @@
             "_www_~ll``!``l h  !ll__N",
             "_www_~llZZAZZZBnnl bl__N",
             "_www_~llrrSrrZlGll ll__N",
-            "_www___lZZZZZZ~~~lXl~__N",
+            "_www__klZZZZZZ~~~lXl~__N",
             "wwwwwwwwwwwwwwwwwwww~__N",
             "wwwwwwwwwwwwwwwwwwww~__N",
             "wwwwwwwwwwwwwwwwwlXl~__N",
@@ -207,12 +206,12 @@
 	"palettes": [ "zwei_palette" ],
   "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
-        { "class": "zwei_game_npc", "x": 19, "y": 11 },
-        { "class": "isadora_npc", "x": 10, "y": 4 },
-        { "class": "zwei_npc", "x": 11, "y": 2 },
-        { "class": "zwei_npc", "x": 9, "y": 2 },
-        { "class": "zwei_npc", "x": 11, "y": 6 },
-        { "class": "zwei_npc", "x": 9, "y": 6 }
+      { "class": "zwei_game_npc", "x": 19, "y": 11 },
+      { "class": "isadora_npc", "x": 10, "y": 4 },
+      { "class": "zwei_npc", "x": 11, "y": 2 },
+      { "class": "zwei_npc", "x": 9, "y": 2 },
+      { "class": "zwei_npc", "x": 11, "y": 6 },
+      { "class": "zwei_npc", "x": 9, "y": 6 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",
@@ -254,7 +253,8 @@
 		"~": [ ["f_flower_tulip", 13], ["f_black_eyed_susan",5], [ "f_bluebell", 8] ],
 		"/": "f_rack_coat",
 		"A": "f_armchair",
-		"L": "f_foot_locker"
+		"L": "f_foot_locker",
+    "k": "f_internet_kiosk"
 		
 },
 "items": {
@@ -298,10 +298,10 @@
 	"palettes": [ "zwei_palette" ],
   "faction_owner": [ { "id": "zwei_association", "x": [ 0, 23 ], "y": [ 0, 23 ] } ],
 	"place_npcs": [
-        { "class": "zwei_doc_npc", "x": 3, "y": 20 },
-		{ "class": "zwei_sick_npc", "x": 3, "y": 16 },
-		{ "class": "zwei_reader_npc", "x": 12, "y": 12 },
-		{ "class": "zwei_mariya_npc", "x": 11, "y": 1 }
+      { "class": "zwei_doc_npc", "x": 3, "y": 20 },
+      { "class": "zwei_sick_npc", "x": 3, "y": 16 },
+      { "class": "zwei_reader_npc", "x": 12, "y": 12 },
+      { "class": "zwei_mariya_npc", "x": 11, "y": 1 }
 		],
 	"terrain": {
 		"N": "t_brick_wall",

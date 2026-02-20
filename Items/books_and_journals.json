@@ -75,5 +75,122 @@
     },
     "description": "A well used journal in a battered leather binding, detailing some chemical known as Enkephalin.\n\n\"Enkephalin is a substance that is little known about, and comes in various degrees of purity. All that is known truly is that it has some ability to impart an abnormalities defiance of reality if used in the correct way. Though you would perhaps need a lot. There is, however, a way to also extract it from certain glands of Distortions, and can be worth a fairly significant amount of Ahn.\"",
     "copy-from": "resjournal"
+  },
+  
+  
+  
+  {
+    "id": "axe_arts_beginner",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
+    "category": "manuals",
+    "name": { "str": "Cleaving the City", "str_pl": "copies of Cleaving the City" },
+    "description": "A thick book, detailing various basic axe techniques, and advising the training is only complete when you can slice through the whole book in a single blow. Which admittedly seems a low bar.",
+    "weight": "800 g",
+    "volume": "300 ml",
+    "price": "40 USD",
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "B",
+    "color": "red",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "aa_wild_swing", "aa_the_cutting_arc", "aa_skull_splitter" ]
+    }
+  },
+  {
+    "id": "chain_arts_beginner",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
+    "category": "manuals",
+    "name": { "str": "Threading the Web", "str_pl": "copies of Threading the Web" },
+    "description": "A leatherbound book, a rarity these days, that explains the basics of using a chain as a weapon, even daring to claim the Rusted Chains are mere imitators of the art.",
+    "weight": "800 g",
+    "volume": "300 ml",
+    "price": "40 USD",
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "B",
+    "color": "red",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "ca_chain_flurry", "ca_chain_crush", "ca_chain_curl" ]
+    }
+  },
+  {
+    "id": "impact_arts_beginner",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
+    "category": "manuals",
+    "name": { "str": "Crushing the Walls", "str_pl": "copies of Crushing the Walls" },
+    "description": "A book that appears to have seen better days, its pages left tattered with age. However it teaches the fundamental arts of using quarterstaves and hammers all the same.",
+    "weight": "800 g",
+    "volume": "300 ml",
+    "price": "40 USD",
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "B",
+    "color": "red",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "ia_earthshaker_swing", "ia_overhead_exploitation", "ia_stellar_crash" ]
+    }
+  },
+  {
+    "id": "knife_arts_beginner",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
+    "category": "manuals",
+    "name": { "str": "To Prepare a Reception", "str_pl": "copies of To Prepare a Reception" },
+    "description": "An unusual book, written by a maid, describing how to best recieve guests to a manor. The detail put into knifework and how to remove unwanted guests is both gruesome and mystifying. You could perhaps learn a lot about knives from this tome.",
+    "weight": "800 g",
+    "volume": "300 ml",
+    "price": "40 USD",
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "B",
+    "color": "red",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "ka_knife_toss", "ka_knife_flurry", "ka_thousand_cuts", "ka_serrated_dash", "ka_assassination" ]
+    }
+  },
+  {
+    "id": "piercing_arts_beginner",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
+    "category": "manuals",
+    "name": { "str": "Piercing the Great Lake", "str_pl": "copies of Piercing the Great Lake" },
+    "description": "An autobiography of a whaler training to pierce the hides of mermaids and other cretin of the Great Lake. Though a lot of it is mad ramblings over the various horrifying sights they saw on their single trip out there, enough of the book contains descriptions of techniques to gain a base level understanding of spear fighting and fencing.",
+    "weight": "800 g",
+    "volume": "300 ml",
+    "price": "40 USD",
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "B",
+    "color": "red",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "pa_piercing_strike", "pa_skypiercer", "pa_retreating_strike" ]
+    }
+  },
+  {
+    "id": "sword_arts_beginner",
+    "type": "ITEM",
+    "subtypes": [ "BOOK" ],
+    "category": "manuals",
+    "name": { "str": "Beautiful Swordplay", "str_pl": "copies of Beautiful Swordplay" },
+    "description": "An overly boring book. The author tries to describe a number of sword techniques they saw through their nomadic existance within the city, with most described fantastically and without understanding. A few, though, perhaps they saw the truth of just enough to learn.",
+    "weight": "800 g",
+    "volume": "300 ml",
+    "price": "40 USD",
+    "material": [ "paper" ],
+    "looks_like": "cookbook",
+    "symbol": "B",
+    "color": "red",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "sa_cleave", "sa_florish", "sa_majesty" ]
+    }
   }
 ]

@@ -109,7 +109,7 @@
       "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 3, "target": true } ] }
     },
     "origins": [ "ORIGIN_COMPUTER" ],
-    "end": { "effect": [ { "math": [ "u_credit += 4000" ] }, { "u_message": "Your account is credited with the reward." } ] }
+    "end": { "effect": [ { "math": [ "u_credit += 12000" ] }, { "u_message": "Your account is credited with the reward." } ] }
   },
   {
     "id": "MISSION_CLEAN_UP_8",
@@ -128,7 +128,7 @@
       "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 5, "target": true } ] }
     },
     "origins": [ "ORIGIN_COMPUTER" ],
-    "end": { "effect": [ { "math": [ "u_credit += 8000" ] }, { "u_message": "Your account is credited with the reward." } ] }
+    "end": { "effect": [ { "math": [ "u_credit += 24000" ] }, { "u_message": "Your account is credited with the reward." } ] }
   },
   {
     "id": "MISSION_CLEAN_UP_7",
@@ -143,10 +143,10 @@
     "monster_kill_goal": 9,
     "invisible_on_complete": false,
     "start": {
-      "assign_mission_target": { "om_terrain": "road_four_way", "random": true, "search_range": 800, "min_distance": 20, "z": 0 },
-      "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 9, "target": true } ] }
+      "assign_mission_target": { "om_terrain": "road", "random": true, "search_range": 800, "min_distance": 20, "z": 0 },
+      "update_mapgen": { "place_monster": [ { "group": "PECCA_GENERAL", "x": [ 10, 15 ], "y": [ 10, 15 ], "repeat": 2, "target": false }, { "monster": "mon_superbiae_c2", "x": [ 10, 15 ], "y": [ 10, 15 ], "target": true } ] }
     },
     "origins": [ "ORIGIN_COMPUTER" ],
-    "end": { "effect": [ { "math": [ "u_credit += 25000" ] }, { "u_message": "Your account is credited with the reward." } ] }
+    "end": { "effect": [ { "math": [ "u_credit += 45000" ] }, { "u_message": "Your account is credited with the reward." } ] }
   }
 ]

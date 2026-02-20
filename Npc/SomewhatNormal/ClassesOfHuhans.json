@@ -250,7 +250,7 @@
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
     ],
-    "shopkeeper_item_group": [ { "group": "zw_gear_shop", "trust": 50, "rigid": true }, { "group": "small_ahn_shop", "trust": 0, "rigid": true } ],
+    "shopkeeper_item_group": [ { "group": "zw_gear_shop", "trust": 50, "rigid": true }, { "group": "basic_augments", "trust": 10, "rigid": true }, { "group": "small_ahn_shop", "trust": 0, "rigid": true } ],
     "restock_interval": "5 days",
     "bionics": [  ]
   },
@@ -962,7 +962,7 @@
     "worn_override": "Lc_clerk_worn",
     "carry_override": "Lc_sci_carry",
     "weapon_override": "Lc_guard_weapon",
-    "shopkeeper_item_group": [ { "group": "lc_gear_shop", "trust": 0, "rigid": true }, { "group": "lc_materials_shop", "trust": 0, "rigid": true }, { "group": "ahn_shop", "trust": 0, "rigid": true } ],
+    "shopkeeper_item_group": [ { "group": "lc_gear_shop", "trust": 0, "rigid": true }, { "group": "basic_augments", "trust": 0, "rigid": true }, { "group": "lc_materials_shop", "trust": 0, "rigid": true }, { "group": "ahn_shop", "trust": 0, "rigid": true } ],
     "restock_interval": "5 days",
     "traits": [
       [ "bongbong_hair", 100 ],

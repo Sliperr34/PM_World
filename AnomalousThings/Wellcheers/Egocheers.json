@@ -71,7 +71,7 @@
   },
   {
     "id": "ego_weapon_soda",
-    "copy-from": "pistol_base",
+    "copy-from": "gun_base_handgun_manual",
     "looks_like": "glock_17",
     "type": "ITEM",
     "subtypes": [ "GUN", "ARTIFACT" ],

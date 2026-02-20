@@ -112,7 +112,7 @@
   },
   {
     "id": "ego_weapon_beak",
-    "copy-from": "pistol_base",
+    "copy-from": "gun_base_handgun_manual",
     "looks_like": "ego_teth",
     "type": "ITEM",
     "subtypes": [ "GUN", "ARTIFACT" ],

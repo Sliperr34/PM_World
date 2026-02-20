@@ -1,0 +1,29 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GET_WEAPON_DAMAGE",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "effect": [ 
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "wielded_only": true } ],
+        "true_eocs": [
+          {
+            "id": "EOC_STATS",
+            "effect": [
+              { "math": [ "u_weapon_damage = n_melee_damage('ALL')" ] }  
+            ]
+          }
+        ] 
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GET_WEAPON_DAMAGE_START",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "effect": [ { "math": [ "u_weapon_damage = 0" ] } ]
+  }
+]

@@ -64,14 +64,27 @@
   },
   {
     "type": "item_group",
-    "id": "softdrinks_canned",
+    "id": "vending_drink_items",
     "subtype": "distribution",
-    "copy-from": "softdrinks_canned",
+    "copy-from": "vending_drink_items",
     "extend": {
       "entries": [
         { "item": "wellcheers", "prob": 25 },
         { "item": "cherry_wellcheers", "prob": 25 },
         { "item": "grape_wellcheers", "prob": 25 }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "SUS_fridge",
+    "subtype": "distribution",
+    "copy-from": "SUS_fridge",
+    "extend": {
+      "entries": [
+        { "item": "wellcheers", "prob": 5 },
+        { "item": "cherry_wellcheers", "prob": 5 },
+        { "item": "grape_wellcheers", "prob": 5 }
       ]
     }
   },
@@ -120,18 +133,6 @@
     }
   },
   {
-    "id": "SUS_trash_trashcan",
-    "type": "item_group",
-    "copy-from": "SUS_trash_trashcan",
-    "extend": { "items": [ { "item": "zweiflyer_item", "prob": 12 } ] }
-  },
-  {
-    "id": "SUS_trash_floor",
-    "type": "item_group",
-    "copy-from": "SUS_trash_floor",
-    "extend": { "items": [ { "item": "zweiflyer_item", "prob": 12 } ] }
-  },
-  {
     "id": "shrimp_drop",
     "type": "item_group",
     "subtype": "collection",
@@ -158,6 +159,21 @@
     "extend": { "entries": [ { "item": "internet_sim_card", "prob": 5 } ] }
   },
   {
+    "id": "SUS_martial_bookcase",
+    "type": "item_group",
+    "subtype": "collection",
+    "copy-from": "SUS_martial_bookcase",
+    "extend": { "entries": [ 
+        { "item": "axe_arts_beginner", "prob": 3 },
+        { "item": "chain_arts_beginner", "prob": 3 }, 
+        { "item": "impact_arts_beginner", "prob": 3 }, 
+        { "item": "knife_arts_beginner", "prob": 3 }, 
+        { "item": "piercing_arts_beginner", "prob": 3 }, 
+        { "item": "sword_arts_beginner", "prob": 3 } 
+      ] 
+    }
+  },
+  {
     "id": "SUS_science_personal_effects",
     "type": "item_group",
     "subtype": "collection",
@@ -170,5 +186,26 @@
     "subtype": "distribution",
     "copy-from": "supplies_electronics",
     "extend": { "entries": [ { "item": "internet_sim_card", "prob": 7 } ] }
+  },
+  {
+    "id": "counterfeit_augments",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "bio_tattoo_rabbit_base" },
+      { "item": "bio_tattoo_hedgehog_base" }
+    ]
+  },
+  {
+    "id": "basic_augments",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      { "item": "bio_tattoo_throwing_basic" },
+      { "item": "bio_tattoo_melee_basic" },
+      { "item": "bio_tattoo_ranged_basic" },
+      { "item": "bio_tattoo_firearms_basic" },
+      { "item": "bio_tattoo_dodge_basic" }
+    ]
   }
 ]

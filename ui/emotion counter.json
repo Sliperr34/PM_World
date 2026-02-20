@@ -1,0 +1,182 @@
+[
+  {
+    "id": "emotion_counter_meter_block",
+    "type": "widget",
+    "style": "layout",
+    "label": "Emotion Descriptor",
+    "arrange": "minimum_columns",
+    "widgets": [ "emotion_counter_meter" ]
+  },
+  {
+    "id": "emotion_counter_graph_block",
+    "type": "widget",
+    "style": "layout",
+    "label": "Emotion Graph",
+    "arrange": "minimum_columns",
+    "widgets": [ "emotion_counter_graph" ]
+  },
+  {
+    "id": "spacebar_emotion_counter_block",
+    "type": "widget",
+    "style": "layout",
+    "label": "Emotion Descriptor",
+    "arrange": "minimum_columns",
+    "width": 58,
+    "widgets": [ "spacebar_separator_2", "emotion_counter_meter" ]
+  },
+  {
+    "id": "spacebar_emotion_graph_block",
+    "type": "widget",
+    "style": "layout",
+    "label": "Emotion Graph",
+    "arrange": "minimum_columns",
+    "width": 58,
+    "widgets": [ "spacebar_separator_2", "emotion_counter_spacebar_graph" ]
+  },
+  {
+    "id": "emotion_counter_meter",
+    "type": "widget",
+    "style": "text",
+    "label": "Emotion",
+    "flags": [ "W_DISABLED_WHEN_EMPTY" ],
+    "width": 56,
+    "clauses": [
+      {
+        "id": "out_of_emotion",
+        "text": "Settled",
+        "color": "c_pink",
+        "condition": { "math": [ "u_vitamin('emotion') == 0" ] }
+      },
+      {
+        "id": "emotion_level_1",
+        "text": "<color_blue>Calm</color>",
+        "condition": {
+          "and": [
+            { "math": [ "u_vitamin('emotion') >= 1" ] },
+            { "math": [ "u_vitamin('emotion') < 25" ] }
+          ]
+        }
+      },
+      {
+        "id": "emotion_level_2",
+        "text": "<color_light_blue>Lively</color>",
+        "condition": {
+          "and": [
+            { "math": [ "u_vitamin('emotion') >= 25" ] },
+            { "math": [ "u_vitamin('emotion') < 50" ] }
+          ]
+        }
+      },
+      {
+        "id": "emotion_level_3",
+        "text": "<color_yellow>Turbulent</color>",
+        "condition": {
+          "and": [
+            { "math": [ "u_vitamin('emotion') >= 50" ] },
+            { "math": [ "u_vitamin('emotion') < 75" ] }
+          ]
+        }
+      },
+      {
+        "id": "emotion_level_4",
+        "text": "<color_light_red>Turbulent</color>",
+        "condition": {
+          "and": [
+            { "math": [ "u_vitamin('emotion') >= 75" ] },
+            { "math": [ "u_vitamin('emotion') < 90" ] }
+          ]
+        }
+      },
+      {
+        "id": "emotion_level_5",
+        "text": "<color_red>Storming</color>",
+        "condition": {
+            "math": [ "u_vitamin('emotion') >= 90" ]
+        }
+      }
+    ],
+    "padding": 0
+  },
+  {
+    "id": "emotion_counter_spacebar_graph",
+    "type": "widget",
+    "label": "Emotion",
+    "var": "custom",
+    "custom_var": {
+      "value": { "math": [ "u_vitamin('emotion')" ] },
+      "range": [
+        0,
+        {
+          "math": [
+            "33"
+          ]
+        },
+        {
+          "math": [
+            "66"
+          ]
+        },
+        {
+          "math": [
+            "100"
+          ]
+        }
+      ]
+    },
+    "style": "graph",
+    "width": 56,
+    "symbols": ".-=",
+    "fill": "bucket",
+    "colors": [ "c_blue", "c_light_blue", "c_yellow", "c_light_red", "c_red" ],
+    "padding": 0
+  },
+  {
+    "id": "emotion_counter_graph",
+    "type": "widget",
+    "label": "Emotion",
+    "var": "custom",
+    "flags": [ "W_DISABLED_WHEN_EMPTY" ],
+    "custom_var": {
+      "value": { "math": [ "u_vitamin('emotion')" ] },
+      "range": [
+        0,
+        {
+          "math": [
+            "33"
+          ]
+        },
+        {
+          "math": [
+            "66"
+          ]
+        },
+        {
+          "math": [
+            "100"
+          ]
+        }
+      ]
+    },
+    "style": "graph",
+    "width": 40,
+    "symbols": ".-=",
+    "fill": "bucket",
+    "colors": [ "c_blue", "c_light_blue", "c_yellow", "c_light_red", "c_red" ],
+    "padding": 0
+  },
+  {
+    "id": "emotion_counter_numbers",
+    "type": "widget",
+    "style": "text",
+    "label": "Emotion",
+    "flags": [ "W_DISABLED_WHEN_EMPTY" ],
+    "clauses": [
+      {
+        "id": "emotion_numbers",
+        "text": "<color_red><u_val:emotion_number></color>",
+        "parse_tags": true
+      }
+    ],
+    "padding": 0
+  }
+]

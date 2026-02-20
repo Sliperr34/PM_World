@@ -101,12 +101,5 @@
     "//": "Baseline average number of days between random NPC spawns. Higher Number means fewer NPCs. 0 to disable NPCs. Min: 0.01, Max: 100.0, Default: 4.0",
     "stype": "float",
     "value": 0.1
-  },
-  {
-    "type": "EXTERNAL_OPTION",
-    "name": "OVERMAP_MAXIMUM_URBANITY",
-    "//": "How urban do we allow our megacities to go?  Mostly functions as a multiple of map settings city size.",
-    "stype": "int",
-    "value": 85
   }
 ]

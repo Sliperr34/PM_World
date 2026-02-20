@@ -91,9 +91,10 @@
   {
     "type": "effect_type",
     "id": "EGO_CD",
-    "name": [ "Cool down of EGO" ],
+    "rating": "bad",
+    "name": [ "Cooldown of EGO" ],
     "desc": [ "Your EGO is on cooldown!" ],
-    "flags": [ "EGO_COOLDOWN" ]
+    "flags": [ "NO_EGO" ]
   },
   {
     "type": "effect_type",
@@ -167,5 +168,105 @@
     "difficulty": 0,
     "max_level": 5,
     "message": "Gloom starts to seep into your core."
+  },
+  {
+    "type": "effect_type",
+    "id": "laceration",
+    "name": [ "Lacerations" ],
+    "desc": [ "Your body has been shredded!" ],
+    "apply_message": "Your body has been shredded!",
+    "rating": "bad",
+    "max_duration": "20 s",
+    "max_intensity": 100,
+    "show_in_info": true,
+    "enchantments": [ 
+      {
+        "intermittent_activation": {
+          "effects": [
+            {
+              "frequency": "4 s",
+              "spell_effects": [
+                { "id": "sp_laceration", "min_level": 1, "hit_self": true }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "sp_laceration",
+    "type": "SPELL",
+    "name": "Lacerated",
+    "description": "",
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS", "RANDOM_DAMAGE" ],
+    "valid_targets": [ "self", "hostile" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": { "math": [ "u_effect_intensity('laceration') / 4" ] },
+    "max_damage": { "math": [ "u_effect_intensity('laceration') / 2" ] },
+    "min_range": 12,
+    "max_range": 12,
+    "difficulty": 0,
+    "max_level": 1
+  },
+  {
+    "type": "effect_type",
+    "id": "opening",
+    "name": [ "Opening" ],
+    "desc": [ "" ],
+    "apply_message": "You show an opening!",
+    "rating": "bad",
+    "max_duration": "5 s",
+    "max_intensity": 1,
+    "show_in_info": true,
+    "enchantments": [ 
+      {
+        "values": [
+          { "value": "DODGE_CHANCE", "multiply": 0.5 },
+          { "value": "KNOCKDOWN_RESIST", "add": -10 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "flourish",
+    "name": [ "Flourish" ],
+    "desc": [ "You are prepared to strike, and strike well." ],
+    "apply_message": "You flourish your weapon, readying for your next strike.",
+    "rating": "good",
+    "max_duration": "2 s",
+    "max_intensity": 1,
+    "show_in_info": true,
+    "enchantments": [ 
+      {
+        "melee_damage_bonus": [
+          { "type": "bash", "multiply": 2.0 },
+          { "type": "cut", "multiply": 2.0 },
+          { "type": "stab", "multiply": 2.0 }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "disoriented",
+    "name": [ "Disoriented" ],
+    "desc": [ "" ],
+    "apply_message": "You can't quite seem to get stable.",
+    "rating": "bad",
+    "max_duration": "1200 s",
+    "max_intensity": 1,
+    "show_in_info": true,
+    "enchantments": [ 
+      {
+        "values": [
+          { "value": "DODGE_CHANCE", "multiply": 0.9 },
+          { "value": "KNOCKDOWN_RESIST", "add": -5 }
+        ]
+      }
+    ]
   }
 ]

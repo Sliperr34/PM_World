@@ -158,7 +158,7 @@
     "description": "The tattoo of a Hedgehog dominates your left shoulder, the ink ever so slightly split. You feel more capable of parrying, but might have a harder time striking in melee?",
     "occupied_bodyparts": [
       [
-        "arm_l",
+        "arm_r",
         2
       ]
     ],
@@ -170,6 +170,296 @@
         "values": [
           { "value": "MELEE_TO_HIT", "add": -1 },
           { "value": "BONUS_BLOCK", "add": 1 }
+        ]
+      }
+    ]
+  },
+  
+  
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Basic Throwing Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "100 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_throwing_basic",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply a tattoo.",
+    "price": "100 USD",
+    "difficulty": 0
+  },
+  {
+    "id": "bio_tattoo_throwing_basic",
+    "type": "bionic",
+    "name": {
+      "str": "Throwing Tattoo"
+    },
+    "description": "An augmentation tattoo based on tribal art. This one enhances the users proficiency with thrown weapons.",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+		  { "value": "THROW_DAMAGE", "add": { "math": [ "1 + (0.5 * u_skill('throwing'))" ] } },
+          { "value": "THROW_DAMAGE", "multiply": { "math": [ "1 + (0.02 * u_skill('throwing'))" ] } },
+		  { "value": "THROW_STR", "multiply": { "math": [ "1 + (0.02 * u_skill('throwing'))" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Basic Melee Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "100 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_melee_basic",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply a tattoo.",
+    "price": "100 USD",
+    "difficulty": 0
+  },
+  {
+    "id": "bio_tattoo_melee_basic",
+    "type": "bionic",
+    "name": {
+      "str": "Melee Tattoo"
+    },
+    "description": "An augmentation tattoo based on tribal art. This one enhances the users proficiency with melee weapons.",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MELEE_DAMAGE", "multiply": { "math": [ "1 + (0.02 * u_skill('melee'))" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Basic Ranged Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "100 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_ranged_basic",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply a tattoo.",
+    "price": "100 USD",
+    "difficulty": 0
+  },
+  {
+    "id": "bio_tattoo_ranged_basic",
+    "type": "bionic",
+    "name": {
+      "str": "Ranged Tattoo"
+    },
+    "description": "An augmentation tattoo based on tribal art. This one enhances the users proficiency with archery weapons.",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "RANGED_DAMAGE", "multiply": { "math": [ "1 + (0.02 * u_skill('archery'))" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Basic Firearms Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "100 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_firearms_basic",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply a tattoo.",
+    "price": "100 USD",
+    "difficulty": 0
+  },
+  {
+    "id": "bio_tattoo_firearms_basic",
+    "type": "bionic",
+    "name": {
+      "str": "Firearms Tattoo"
+    },
+    "description": "An augmentation tattoo based on tribal art. This one enhances the users proficiency with firearms.",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "RANGED_DAMAGE", "multiply": { "math": [ "1 + (0.02 * u_skill('firearms'))" ] } }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "category": "bionics",
+    "name": {
+      "str": "Base Dodge Tattoo Applier"
+    },
+    "weight": "500 g",
+    "volume": "2000 ml",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "yellow",
+    "price_postapoc": "100 USD",
+    "use_action": [
+      "install_bionic"
+    ],
+    "flags": [
+      "CBM"
+    ],
+    "is_upgrade": false,
+    "melee_damage": {
+      "bash": 8
+    },
+    "id": "bio_tattoo_dodge_basic",
+    "copy-from": "bionic_general",
+    "looks_like": "bio_int_enhancer",
+    "description": "An tattoo applier kit, everything someone needs to apply a tattoo.",
+    "price": "100 USD",
+    "difficulty": 0
+  },
+  {
+    "id": "bio_tattoo_dodge_basic",
+    "type": "bionic",
+    "name": {
+      "str": "Dodge Tattoo"
+    },
+    "description": "An augmentation tattoo based on tribal art. This one enhances the users proficiency with dodging attacks.",
+    "occupied_bodyparts": [
+      [
+        "arm_r",
+        2
+      ]
+    ],
+    "flags": [
+      "BIONIC_NPC_USABLE"
+    ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "RANGE_DODGE", "add": { "math": [ "0.01 * u_skill('dodge')" ] } },
+		  { "value": "BONUS_DODGE", "add": { "math": [ "0.1 * u_skill('dodge')" ] } }
         ]
       }
     ]

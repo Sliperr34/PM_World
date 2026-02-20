@@ -2,7 +2,7 @@
   {
     "type": "scenario",
     "id": "sandwich_scenario",
-    "name": "Caught during a sandwich",
+    "name": "Caught During a Sandwich",
     "points": 0,
     "description": "You were just at HamHamPangPang, enjoying one of their deluxe sandwiches when the world erupted into chaos. Not the normal chaos either, the kind that hit your stomach with a lead weight and ruined what little time off you had managed to accrue. What was it this time?",
     "start_name": "HamHamPangPang",

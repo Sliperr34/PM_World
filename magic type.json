@@ -3,10 +3,11 @@
     "id": "EGO_Invocation",
     "type": "magic_type",
     "energy_source": "STAMINA",
-    "cannot_cast_flags": [ "EGO_COOLDOWN" ],
+    "cannot_cast_flags": "NO_EGO",
     "cannot_cast_message": "EGO is currently on cooldown!",
     "get_level_formula_id": "ego_get_level",
-    "exp_for_level_formula_id": "ego_for_level"
+    "exp_for_level_formula_id": "ego_for_level",
+    "casting_xp_formula_id": "ego_experience_formula"
   },
   {
     "type": "jmath_function",
@@ -21,7 +22,82 @@
     "return": "1000 * (1.1^_0)"
   },
   {
-    "id": "EGO_COOLDOWN",
+    "type": "jmath_function",
+    "id": "ego_experience_formula",
+    "num_args": 0,
+    "return": "(u_effect_intensity('EGO_CD') < 1) ? 100 : 0"
+  },
+  {
+    "type": "jmath_function",
+    "id": "ego_effectiveness",
+    "num_args": 0,
+    "return": "0.75 + ( u_has_trait('mut_self_control_on') ? 0 : ( u_vitamin('emotion') / 200 ) ) * ( u_has_trait('ego_resonating') ? 1.2 : 1 ) * ( u_has_trait('ego_sync') ? 1.4 : 1 )"
+  },
+  {
+    "id": "NO_EGO",
     "type": "json_flag"
+  },
+  {
+    "type": "mutation",
+    "id": "ego_resonating",
+    "name": "Resonating EGO",
+    "points": 0,
+    "description": "You are resonating with your EGO.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "ego_sync",
+    "name": "Synced EGO",
+    "points": 0,
+    "description": "You are synced with your EGO.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EMOTION_BOOST",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+    "effect": [
+      { "math": [ "u_spellcasting_adjustment('caster_level', 'school': 'EGO') = -1 + (u_vitamin('emotion') / 20)" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_NO_EGO",
+    "eoc_type": "EVENT",
+    "required_event": "opens_spellbook",
+	"condition": { "u_has_effect": "EGO_CD" },
+    "effect": [
+      { "math": [ "u_spellcasting_adjustment('caster_level', 'school': 'EGO') = -100" ] }
+    ]
+  },
+  
+  
+  
+  
+  {
+    "id": "PM_MARTIAL_ARTS",
+    "type": "magic_type",
+    "energy_source": { 
+      "type": "VITAMIN",
+      "vitamin": "emotion",
+      "color": "c_red"
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "EGO",
+    "name": "EGO",
+    "points": 0,
+    "description": "",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
   }
 ]

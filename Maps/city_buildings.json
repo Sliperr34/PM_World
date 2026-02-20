@@ -1,0 +1,11 @@
+[
+  {
+    "type": "city_building",
+    "id": "w_corp_city_station",
+    "locations": [ "land" ],
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "w_station_south" },
+      { "point": [ 0, 0, 1 ], "overmap": "w_station_r_south" }
+    ]
+  }
+]

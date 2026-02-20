@@ -126,7 +126,7 @@
             }
           }
         ],
-        "e": { "item": "softdrinks_canned", "chance": 90, "repeat": [ 1, 5 ] },
+        "e": { "item": "vending_drink_items", "chance": 90, "repeat": [ 1, 5 ] },
         "r": [ { "item": "SUS_pantry", "chance": 25 }, { "item": "cannedfood", "chance": 20, "repeat": [ 1, 2 ] } ],
         ";": { "item": "home_display_case", "chance": 90, "repeat": [ 1, 5 ] },
         "f": { "item": "SUS_fridge", "chance": 80, "repeat": [ 1, 2 ] },

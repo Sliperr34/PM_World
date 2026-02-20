@@ -48,7 +48,6 @@
       { "trait": "CANNIBAL" },
       { "trait": "GOURMAND" },
       { "trait": "ADRENALINE" },
-      { "trait": "KILLER" },
       { "trait": "eye_color", "variant": "gray" },
       { "trait": "hair_long_over_eye", "variant": "white" },
       [ "SKIN_LIGHT", 100 ]
@@ -105,7 +104,6 @@
       { "trait": "CANNIBAL" },
       { "trait": "TOUGH2" },
       { "trait": "ADRENALINE" },
-      { "trait": "KILLER" },
       { "trait": "eye_color", "variant": "black" },
       { "trait": "hair_ponytail", "variant": "black" },
       [ "SKIN_MEDIUM", 100 ]

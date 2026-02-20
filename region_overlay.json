@@ -1,44 +1,29 @@
 [
   {
-    "type": "region_overlay",
-    "regions": [ "all" ],
-    "map_extras": {
-      "field": {
-        "chance": 8,
-        "extras": {
-          "mx_kk_rc": 12,
-          "mx_incident_fixer": 15,
-          "mx_incident_zwei": 15
-        }
-      },
-      "road": {
-        "chance": 12,
-        "extras": {
-          "mx_kk_rc": 6,
-          "mx_incident_fixer": 15,
-          "mx_incident_zwei": 15
-        }
-      },
-      "forest_thick": {
-        "chance": 2,
-        "extras": {
-          "mx_kk_rc": 15,
-          "mx_incident_fixer": 4,
-          "mx_incident_zwei": 4
-        }
-      },
-      "forest": {
-        "chance": 4,
-        "extras": {
-          "mx_kk_rc": 15,
-          "mx_incident_fixer": 8,
-          "mx_incident_zwei": 8
-        }
-      }
-    },
-    "overmap_feature_flag_settings": { "blacklist": [ "MILITARY", "SOURCE_GUN", "SOURCE_AMMO" ] },
-    "city": {
-      "shops": { "s_hunting": 0, "s_gun_a": 0, "s_gun_b": 0, "mil_surplus": 0, "mil_surplus_1": 0, "mil_surplus_2": 0 }
-    }
+    "type": "region_settings",
+    "id": "default_pm_world",
+    "cities": "default_pm_world_cities",
+    "map_extras": "default_pm_world_extras"
+  },
+  {
+    "type": "region_settings_map_extras",
+    "id": "default_pm_world_extras",
+    "copy-from": "default",
+    "extras": [
+      "extras_pm_world"
+    ]
+  },
+  {
+    "type": "map_extra_collection",
+    "id": "extras_pm_world",
+    "chance": 30,
+    "extras": [ [ "mx_kk_rc", 24 ], [ "mx_incident_fixer", 30 ], [ "mx_incident_zwei", 30 ] ]
+  },
+  
+  {
+    "type": "region_settings_city",
+    "id": "default_pm_world_cities",
+    "shops": [ [ "w_corp_city_station", 250 ] ],
+    "delete": { "shops": [ "s_hunting", "s_gun_a", "s_gun_b", "mil_surplus", "mil_surplus_1", "mil_surplus_2" ] }
   }
 ]

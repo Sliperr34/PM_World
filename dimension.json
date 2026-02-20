@@ -1,0 +1,200 @@
+[
+  {
+    "type": "region_settings",
+    "id": "unknown_dimension",
+    "copy-from": "default",
+    "cities": null,
+    "highways": null,
+    "rivers": null,
+    "lakes": null,
+    "ocean": null,
+    "ravines": null,
+    "forests": null,
+    "forest_trails": null,
+    "terrain_furniture": "dim_fr",
+    "map_extras": "dim_extras",
+    "max_urbanity": 0,
+    "neighbor_connections": false,
+    "place_roads": false,
+    "default_oter": [
+      "open_air",
+      "open_air",
+      "field",
+      "open_air",
+      "field",
+      "open_air",
+      "field",
+      "open_air",
+      "field",
+      "open_air",
+      "field",
+      "open_air",
+      "field",
+      "open_air",
+      "field",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "open_air",
+      "field"
+    ],
+    "default_groundcover": [ [ "t_region_groundcover", 1 ] ],
+    "feature_flag_settings": { "whitelist": [ "DIMENSION" ] }
+  },
+  {
+    "type": "region_settings_city",
+    "id": "dim_city",
+    "copy-from": "default",
+    "shop_radius": 60,
+    "shop_sigma": 50,
+    "park_radius": 60,
+    "park_sigma": 80
+  },
+  {
+    "type": "region_settings_map_extras",
+    "id": "dim_extras",
+    "extras": [
+      "field_pm_world"
+    ]
+  },
+  {
+    "type": "region_settings_terrain_furniture",
+    "id": "dim_fr",
+    "ter_furn": [
+      "dim_t_region_groundcover",
+      "dim_t_region_groundcover_urban",
+      "dim_t_region_groundcover_forest",
+      "dim_t_region_groundcover_swamp",
+      "dim_t_region_groundcover_barren",
+      "dim_t_region_grass",
+      "dim_t_region_soil",
+      "dim_t_region_shrub",
+      "dim_t_region_shrub_plains",
+      "dim_t_region_shrub_fruit",
+      "dim_t_region_shrub_decorative",
+      "dim_t_region_tree",
+      "dim_t_region_tree_fruit",
+      "dim_t_region_tree_nut",
+      "dim_t_region_tree_evergreen",
+      "dim_f_region_flower",
+      "dim_f_region_flower_decorative",
+      "dim_f_region_weed",
+      "dim_f_region_water_plant"
+    ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_groundcover",
+    "ter_id": "t_region_groundcover",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ], [ "t_nether_glass_floor", 2000 ], [ "t_nether_glass_floor", 5000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_groundcover_urban",
+    "ter_id": "t_region_groundcover_urban",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_groundcover_forest",
+    "ter_id": "t_region_groundcover_forest",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_groundcover_swamp",
+    "ter_id": "t_region_groundcover_swamp",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_groundcover_barren",
+    "ter_id": "t_region_groundcover_barren",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_grass",
+    "ter_id": "t_region_grass",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_soil",
+    "ter_id": "t_region_soil",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_shrub",
+    "ter_id": "t_region_shrub",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_shrub_plains",
+    "ter_id": "t_region_shrub_plains",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_shrub_fruit",
+    "ter_id": "t_region_shrub_fruit",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_shrub_decorative",
+    "ter_id": "t_region_shrub_decorative",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_tree",
+    "ter_id": "t_region_tree",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_tree_fruit",
+    "ter_id": "t_region_tree_fruit",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_tree_nut",
+    "ter_id": "t_region_tree_nut",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_t_region_tree_evergreen",
+    "ter_id": "t_region_tree_evergreen",
+    "replace_with_terrain": [ [ "t_nether_glass_floor", 32000 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_f_region_flower",
+    "furn_id": "f_region_flower",
+    "replace_with_furniture": [ [ "f_boulder_small", 128 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_f_region_flower_decorative",
+    "furn_id": "f_region_flower_decorative",
+    "replace_with_furniture": [ [ "f_boulder_small", 128 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_f_region_weed",
+    "furn_id": "f_region_weed",
+    "replace_with_furniture": [ [ "f_boulder_small", 128 ] ]
+  },
+  {
+    "type": "region_terrain_furniture",
+    "id": "dim_f_region_water_plant",
+    "furn_id": "f_region_water_plant",
+    "replace_with_furniture": [ [ "f_boulder_small", 128 ] ]
+  }
+]

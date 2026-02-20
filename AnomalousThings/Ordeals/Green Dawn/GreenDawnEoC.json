@@ -8,7 +8,7 @@
       "and": [
         { "math": [ "time_since('cataclysm', 'unit':'days') >= 18" ] },
         { "not": { "compare_string": [ "yes", { "u_val": "u_ordeal_lock" } ] } },
-        { "math": [ "time_since('cataclysm', 'unit':'days') <= 42" ] },
+        { "math": [ "time_since('cataclysm', 'unit':'days') <= 52" ] },
         "u_is_avatar" 
       ]
     },

@@ -1,0 +1,111 @@
+[
+  {
+    "type": "mutation",
+    "id": "SWORD_ARTS",
+    "name": "Sword Arts",
+    "points": 0,
+    "description": "",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "id": "sa_cleave",
+    "type": "SPELL",
+    "name": { "str": "Cleave" },
+    "description": "A simple, strong strike. Basic, but reliable, with a chance to reveal your opponent's openings. Zombies are full of the things.",
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "SWORD_ARTS",
+    "base_energy_cost": 10, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 0.8 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 1.2 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 80,
+    "damage_type": "cut",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SWORD_OPENING",
+    "shape": "blast",
+    "condition": { "or": [ { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" }, { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" }, { "u_has_wielded_with_weapon_category": "LONG_SWORDS" }, { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }, { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" } ] },
+    "condition_fail_message": "You must have a sword equipped."
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWORD_OPENING",
+    "effect": [
+      {
+        "if": { "math": [ "10 <= rand(12 + (0.5 * u_skill('melee')))" ] },
+        "then": { "u_add_effect": "opening", "duration": "4 seconds" }
+      }
+    ]
+  },
+  {
+    "id": "sa_florish",
+    "type": "SPELL",
+    "name": { "str": "Flourish" },
+    "description": "Prepare for a much stronger strike by taking advantage of an opponents opening.",
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "SWORD_ARTS",
+    "base_energy_cost": 5, 
+    "max_level": 1,
+    "min_damage": 0,
+    "max_damage": 0,
+    "min_range": 4,
+    "max_range": 4,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 20,
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_SWORD_FLOURISH",
+    "shape": "blast",
+    "condition": { "and": [ 
+        { "or": [ { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" }, { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" }, { "u_has_wielded_with_weapon_category": "LONG_SWORDS" }, { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }, { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" } ] }, 
+        { "npc_has_effect": "opening" }
+      ] 
+    },
+    "condition_fail_message": "You must have a sword equipped, and the opponent must be showing an opening!"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SWORD_FLOURISH",
+    "effect": [
+      { "npc_add_effect": "flourish", "duration": "1 second" }
+    ]
+  },
+  {
+    "id": "sa_majesty",
+    "type": "SPELL",
+    "name": { "str": "Majesty" },
+    "description": "A single, perfect, strike making the most of an opening and cleaving past armour like it was mere butter.",
+    "flags": [ "RANDOM_DAMAGE", "NON_MAGICAL", "NO_FAIL", "NO_HANDS" ],
+    "valid_targets": [ "hostile" ],
+    "magic_type": "PM_MARTIAL_ARTS",
+    "spell_class": "SWORD_ARTS",
+    "base_energy_cost": 20, 
+    "max_level": 1,
+    "min_damage": { "math": [ "u_weapon_damage * 1.2 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "max_damage": { "math": [ "u_weapon_damage * 1.4 * (0.5 + (0.1 * u_skill('melee')))" ] },
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_pierce": 1,
+    "base_casting_time": 80,
+    "damage_type": "cut",
+    "effect": "attack",
+    "shape": "blast",
+    "condition": { "and": [ 
+        { "or": [ { "u_has_wielded_with_weapon_category": "BIONIC_SWORDS" }, { "u_has_wielded_with_weapon_category": "SHORT_SWORDS" }, { "u_has_wielded_with_weapon_category": "LONG_SWORDS" }, { "u_has_wielded_with_weapon_category": "GREAT_SWORDS" }, { "u_has_wielded_with_weapon_category": "MEDIUM_SWORDS" } ] },
+        { "npc_has_effect": "opening" }
+      ] 
+    },
+    "condition_fail_message": "You must have a sword equipped, and the opponent must be showing an opening!"
+  }
+]

@@ -9,7 +9,7 @@
     "rate": "1 t",
     "excess": "emotion",
     "flags": [ "NO_DISPLAY" ],
-    "disease_excess": [ [ 20, 49 ], [ 50, 79 ], [ 80, 100 ] ]
+    "disease_excess": [ [ 20, 49 ], [ 50, 74 ], [ 75, 100 ] ]
   },
   {
     "type": "effect_type",
@@ -30,29 +30,43 @@
   
   {
     "type": "effect_on_condition",
-    "id": "emotion_onkill",
+    "id": "EOC_EMOTION_UI_UPDATER",
+    "recurrence": 1,
+    "effect": [
+      { "math": [ "u_emotion_number = u_vitamin('emotion')" ] }
+    ]
+  },
+  
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EMOTION_ON_KILL",
     "eoc_type": "EVENT",
     "required_event": "character_kills_monster",
+    "condition": { "not": { "u_has_trait": "mut_self_control_on" } },
     "effect": [
         { "math": [ "u_vitamin('emotion') += 8" ] } 
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_onkillchar",
+    "id": "EOC_EMOTION_ON_KILL_CHAR",
     "eoc_type": "EVENT",
     "required_event": "character_kills_character",
     "effect": [
-      { "math": [ "u_vitamin('emotion') += 20" ] },
+	  { 
+	    "if": { "u_has_trait": "mut_self_control_on" },
+      "then": { "math": [ "u_vitamin('emotion') += 4" ] },
+      "else": { "math": [ "u_vitamin('emotion') += 20" ] }
+	  },
       {
-        "if": { "not": { "or": [ { "u_has_trait": "uncaring" }, { "u_has_trait": "killer_drive" }, { "math": [ "u_vitamin('trauma') > 20" ] } ] } },
+        "if": { "not": { "or": [ { "u_has_trait": "uncaring" }, { "u_has_trait": "killer_drive" }, { "math": [ "u_vitamin('trauma') > 22" ] } ] } },
         "then": [ { "math": [ "u_vitamin('trauma') += 1" ] }  ]
       }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_onbrokenbone",
+    "id": "EOC_EMOTION_ON_BROKEN_BONE",
     "eoc_type": "EVENT",
     "required_event": "broken_bone",
     "effect": [ 
@@ -65,47 +79,55 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_charactermeleeattacksmonster",
+    "id": "EOC_EMOTION_ON_ATTACKING_MONSTER",
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_monster",
+    "condition": { "not": { "u_has_trait": "mut_self_control_on" } },
     "effect": [
       { "math": [ "u_vitamin('emotion') += 2" ] } 
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_characterrangedattacksmonster",
+    "id": "EOC_EMOTION_ON_ATTACKING_MONSTER_RANGED",
     "eoc_type": "EVENT",
     "required_event": "character_ranged_attacks_monster",
+    "condition": { "not": { "u_has_trait": "mut_self_control_on" } },
     "effect": [
       { "math": [ "u_vitamin('emotion') += 2" ] } 
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_charactermeleeattackscharacter",
+    "id": "EOC_EMOTION_ON_ATTACKING_CHARACTER",
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_character",
+    "condition": { "not": { "u_has_trait": "mut_self_control_on" } },
     "effect": [
-      { "math": [ "u_vitamin('emotion') += 3" ] }
+      { "math": [ "u_vitamin('emotion') += 4" ] }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_characterrangedattackscharacter",
+    "id": "EOC_EMOTION_ON_ATTACKING_CHARACTER_RANGED",
     "eoc_type": "EVENT",
     "required_event": "character_ranged_attacks_character",
+    "condition": { "not": { "u_has_trait": "mut_self_control_on" } },
     "effect": [
-      { "math": [ "u_vitamin('emotion') += 3" ] }
+      { "math": [ "u_vitamin('emotion') += 4" ] }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "emotion_charactertakesdamage",
+    "id": "EOC_EMOTION_ON_DAMAGE_TAKEN",
     "eoc_type": "EVENT",
     "required_event": "character_takes_damage",
     "effect": [
-      { "math": [ "u_vitamin('emotion') += 4" ] }
+      { 
+        "if": { "u_has_trait": "mut_self_control_on" },
+        "then": { "math": [ "u_vitamin('emotion') += 1" ] },
+        "else": { "math": [ "u_vitamin('emotion') += 4" ] }
+      }
     ]
   },
   
@@ -150,7 +172,7 @@
     },
     "effect": [
       { "u_lose_morale": "morale_trauma" },
-      { "u_add_morale": "morale_trauma", "bonus": { "math": [ "-1 * u_vitamin('trauma')" ] }, "max_bonus": -100 }
+      { "u_add_morale": "morale_trauma", "bonus": { "math": [ "-1 * u_vitamin('trauma')" ] }, "max_bonus": -200, "duration": "30 days" }
     ]
   },
   {
@@ -181,8 +203,6 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_self_control",
-    "eoc_type": "ACTIVATION",
-    "condition": "u_is_avatar",
     "effect": [
       { "u_lose_morale": "morale_self_control" },
       { "u_lose_morale": "morale_self_control_1" },
@@ -203,18 +223,17 @@
         "then": [ { "math": [ "_morale_change = -1 * u_val('morale')" ] }, { "math": [ "_zeroed = 1" ] } ],
         "else": { "math": [ "_morale_change = _pos * _total_control" ] }
       },
-      { "u_add_morale": "morale_self_control", "bonus": { "math": [ "_morale_change"] }, "capped": true, "max_bonus": 100, "duration": "5 seconds" },
+      { "u_add_morale": "morale_self_control", "bonus": { "math": [ "_morale_change"] }, "capped": true, "max_bonus": 100, "duration": "24 hours" },
       { 
         "if": { "and": [ { "math": [ "_zeroed == 1" ] }, { "math": [ "u_val('morale') != 0" ] } ] },
         "then": [ 
           { "u_lose_morale": "morale_self_control" },
-          { "u_add_morale": "morale_self_control", "bonus": 1000, "max_bonus": 1000, "capped": true, "duration": "5 seconds" },
-          { "u_add_morale": "morale_self_control_1", "bonus": -1000, "max_bonus": -1000, "capped": true, "duration": "5 seconds" }
+          { "u_add_morale": "morale_self_control", "bonus": 1000, "max_bonus": 1000, "capped": true, "duration": "24 hours" },
+          { "u_add_morale": "morale_self_control_1", "bonus": -1000, "max_bonus": -1000, "capped": true, "duration": "24 hours" }
         ]
       },
-      { "run_eocs": [ "EOC_self_control_focus" ] },
       {
-        "if": { "math": [ "_zeroed == 1" ] },
+        "if": { "math": [ "u_vitamin('emotion') <= 25" ] },
         "then": { "run_eocs": [ "EOC_self_control_shin" ] },
         "else": { "run_eocs": [ "EOC_remove_shin" ] } 
       }
@@ -222,24 +241,43 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_self_control_focus",
-    "eoc_type": "ACTIVATION",
-    "condition": {
-       "x_in_y_chance": { "x": { "math": [ "11 - u_skill('self-control')" ] }, "y": { "math": [ "110 - u_val('focus')" ] } }
-    },
+    "id": "EOC_self_control_refresh",
     "effect": [
-      {  
-          "if": { "math": [ "u_val('focus') < 5" ] },
-          "then": [ { "u_lose_trait": "mut_self_control_on" }, { "u_add_trait": "mut_self_control_off" }, { "u_message": "Your focus wavers, emotions flooding free from your control." }, { "run_eocs": [ "EOC_remove_shen" ] } ]
-      }
+      { "u_lose_var": "trance_locked" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_self_control_remove",
+    "condition": { "u_has_trait": "mut_self_control_on" },
+    "effect": [
+      { "u_lose_trait": "mut_self_control_on" }, 
+      { "u_add_trait": "mut_self_control_off" }, 
+      
+      { "u_message": "Your focus wavers, emotions flooding free from your control." }, 
+      { "run_eocs": [ "EOC_self_control_end" ] } 
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_self_control_start",
+    "condition": { "not": { "compare_string": [ "true", { "u_val": "trance_locked" } ] } },
+    "effect": [
+      { "u_add_var": "trance_locked", "value": "true" },
+      { "run_eocs": "EOC_self_control_refresh", "time_in_future": "22 hours" },
+      { "run_eocs": "EOC_self_control_remove", "time_in_future": { "math": [ "( 60 * 60 ) * u_skill('self-control')" ] } },
+      { "run_eocs": [ "EOC_self_control_shin" ] } 
+    ],
+    "false_effect": [
+      { "u_message": "You don't have the energy to discard your emotions just yet.", "type": "bad" },
+      { "run_eocs": [ "EOC_self_control_remove" ], "time_in_future": "2 seconds" }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_self_control_shin",
-    "eoc_type": "ACTIVATION",
     "condition": {
-      "and": [ { "math": [ "u_skill('self-control') > 4" ] }, { "math": [ "u_val('focus') > 20" ] }, { "math": [ "u_vitamin('trauma') > 10" ] }, { "u_has_proficiency": "prof_shin_0" } ]
+      "and": [ { "math": [ "u_skill('self-control') >= 3" ] }, { "math": [ "u_val('focus') > 20" ] }, { "math": [ "u_vitamin('trauma') > 10" ] }, { "u_has_proficiency": "prof_shin_0" } ]
     },
     "effect": [
       { "u_cast_spell": { "id": "spell_shin", "hit_self": true } }
@@ -247,12 +285,22 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_self_control_end",
+    "effect": [
+      { "u_lose_morale": "morale_self_control" },
+      { "u_lose_morale": "morale_self_control_1" },
+      { "run_eocs": [ "EOC_remove_shin" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_remove_shin",
-    "eoc_type": "ACTIVATION",
     "condition": {
       "u_has_item": "SHIN_aura"
     },
     "effect": [
+      { "u_lose_morale": "morale_self_control" },
+      { "u_lose_morale": "morale_self_control_1" },
       { "u_consume_item": "SHIN_aura" }
     ]
   },
@@ -268,9 +316,9 @@
     "active": true,
     "no_empathize_with": [ "HUMAN" ],
     "time": 0,
-    "activated_eocs": [ "EOC_self_control_shen" ],
+    "activated_eocs": [ "EOC_self_control_end" ],
     "processed_eocs": [ "EOC_self_control" ],
-    "deactivated_eocs": [ "EOC_remove_shin" ],
+    "deactivated_eocs": [ "EOC_self_control_end" ],
     "transform": {
       "target": "mut_self_control_off",                      
       "msg_transform": "You let your emotions flare.", 
@@ -288,6 +336,7 @@
     "purifiable": false,
     "valid": false,
     "active": true,
+    "activated_eocs": [ "EOC_self_control_start" ],
     "transform": {
       "target": "mut_self_control_on",                      
       "msg_transform": "You focus, breathing stills.", 

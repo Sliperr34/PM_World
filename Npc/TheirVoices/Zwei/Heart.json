@@ -1,0 +1,61 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_HEART",
+    "dynamic_line": "Welcome, what can I do for you?",
+    "responses": [
+      {
+        "text": "Hello, can you treat me?",
+        "topic": "TALK_HEART_HEAL"
+      },
+      {
+        "text": "Any chance you can install some augmentations on me?",
+        "topic": "TALK_HEART_WARE"
+      },
+      {
+        "text": "Just come to say hello, thanks. *Leave*",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_HEART_HEAL",
+    "dynamic_line": {
+      "math": [ "u_has_faction_trust > 75" ],
+      "yes": "Ah, <u_name>, of course, if you just want to take a seat over there. On the house, bet it's been busy out there lately.",
+      "no": "Of course, we tend to charge twelve thousand Ahn for a full checkup. Does that sound good? Sadly we do only take Credit currently, rather than notes."
+    },
+    "responses": [
+      {
+        "text": "Thanks, Heart! *get on the bed*",
+        "effect": "GIVE_AID",
+        "condition": { "math": [ "u_has_faction_trust > 75" ] }
+      },
+      {
+        "text": "*transfer the cash*",
+        "effect": [ "GIVE_AID", { "math": [ "u_credit -= 12000" ] } ],
+        "condition": { "math": [ "u_credit >= 12000" ]  }
+      },
+      {
+        "text": "I'll come back later. *Leave*",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_HEART_WARE",
+    "dynamic_line": "Hop on the bed, and we'll see what we can do.",
+    "responses": [
+      {
+        "text": "Thanks, Heart! *get on the bed*",
+        "effect": "BIONIC_INSTALL"
+      },
+      {
+        "text": "I'll come back later. *Leave*",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

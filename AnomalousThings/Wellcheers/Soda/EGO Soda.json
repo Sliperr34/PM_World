@@ -26,24 +26,32 @@
     "base_casting_time": 200,
     "final_casting_time": 25,
     "casting_time_increment": -5,
-    "spell_class": "EGO_Soda",
+    "spell_class": "EGO",
     "base_energy_cost": 3000,
     "final_energy_cost": 500,
     "energy_increment": -100,
     "difficulty": 3,
     "max_level": 30,
-    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
+    "flags": [ "SILENT", "CONCENTRATE", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ],
+    "condition": { "not": { "u_has_effect": "EGO_CD" } },
+    "condition_fail_message": "You must wait a while longer to use an EGO again!"
   },
   {
     "type": "effect_on_condition",
     "id": "soda_activation",
     "condition": { "not": { "u_has_effect": "EGO_CD" } },
     "effect": [
-      { "u_add_effect": "EGO_CD", "duration": { "math": ["300 + (4 * (u_spell_level('EGO_soda')^2))"] } },
+      { "u_add_effect": "EGO_CD", "intensity": 1, "duration": { "math": ["600 + (400 * (u_spell_level('EGO_soda')^2))"] } },
       { "math": [ "u_vitamin('emotion') -= 20" ] },
-      {
-        "u_cast_spell": { "id": "EGO_soda_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_soda')" ] } }
+      { 
+        "if": { "and": [ { "math": [ "u_spell_level('EGO_soda') >= 20 " ] }, { "math": [ "u_spell_level('EGO_soda') < 25 " ] }  ] },
+        "then": { "u_cast_spell": { "id": "EGO_soda_summon_armour_normal", "hit_self": true } }
       },
+      { 
+        "if": { "math": [ "u_spell_level('EGO_soda') >= 25 " ] },
+        "then": { "u_cast_spell": { "id": "EGO_soda_summon_armour_empower", "hit_self": true } }
+      },
+      { "run_eocs": "soda_selector" },
       { "math": [ "u_health() -= 3" ] },
       {
         "u_add_morale": "ego_morale",
@@ -54,7 +62,7 @@
       },
       {
         "run_eocs": "clear_spells_soda",
-        "time_in_future": { "math": ["6 + (4 * (u_spell_level('EGO_soda')^2))"] }
+        "time_in_future": { "math": ["600 + (400 * (u_spell_level('EGO_soda')^2))"] }
       },
       { "run_eocs": "soda_chat" }
     ],
@@ -67,6 +75,61 @@
         "max_bonus": -200,
         "duration": "15 minutes",
         "decay_start": "5 minutes"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_selector",
+    "effect": [
+      {
+        "run_eoc_selector": [ "soda_normal_summon", "soda_empowered_summon", "soda_sync_summon" ],
+        "names": [ "Soda", "Empowered Soda", "Soda Sync" ],
+        "keys": [ "a", "b", "c" ],
+        "hide_failing": true,
+        "allow_cancel": true,
+        "title": "Please select research topic:",
+        "descriptions": [
+          "Invoke your bond with Soda",
+          "Use Wellcheers, Cherry and Grape to empower Soda to new heights",
+          "Syncronize with Soda, using each flavour of Wellcheers\n!!!DO NOT USE ANYWHERE YOU DON'T WANT TO DAMAGE!!!"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_normal_summon",
+    "effect": [
+      {
+        "u_cast_spell": { "id": "EGO_soda_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_soda')" ] } }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_empowered_summon",
+    "condition": { "and": [ { "u_has_item": "wellcheers" }, { "u_has_item": "cherry_wellcheers" }, { "u_has_item": "grape_wellcheers" } ] },
+    "effect": [
+      { "u_consume_item": "wellcheers" },
+      { "u_consume_item": "cherry_wellcheers" },
+      { "u_consume_item": "grape_wellcheers" },
+      {
+        "u_cast_spell": { "id": "EGO_soda_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_soda')" ] } }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_sync_summon",
+    "condition": { "and": [ { "u_has_item": "wellcheers" }, { "u_has_item": "cherry_wellcheers" }, { "u_has_item": "grape_wellcheers" }, { "u_has_item": "prawn_wellcheers" } ] },
+    "effect": [
+      { "u_consume_item": "wellcheers" },
+      { "u_consume_item": "cherry_wellcheers" },
+      { "u_consume_item": "grape_wellcheers" },
+      { "u_consume_item": "prawn_wellcheers" },
+      {
+        "u_cast_spell": { "id": "EGO_soda_success", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_soda')" ] } }
       }
     ]
   },

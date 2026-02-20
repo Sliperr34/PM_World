@@ -1,0 +1,100 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_warp_terminal",
+    "name": "warp terminal",
+    "symbol": "w",
+    "description": "A terminal for accessing the various services of the Warp Train, namely booking travel from one warp station to the next.",
+    "required_str": 1000,
+    "color": "blue",
+    "looks_like": "t_atm",
+    "move_cost_mod": 3,
+    "coverage": 40,
+    "examine_action": "translocator",
+    "flags": [
+      "TRANSPARENT",
+      "TRANSLOCATOR"
+    ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_train_platform",
+    "name": "train platform",
+    "symbol": "w",
+    "description": "A set of staircases to descend to the warp train platform.",
+    "required_str": 1000,
+    "color": "red",
+    "looks_like": "t_stairs_down",
+    "move_cost_mod": 10,
+    "coverage": 0,
+    "examine_action": {
+        "type": "effect_on_condition",
+        "effect_on_conditions": [ "EOC_pay_boarding" ]
+    },
+    "flags": [
+      "TRANSPARENT"
+    ]
+  },
+  {
+    "id": "ACT_board_w_train",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "boarding",
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_pay_boarding",
+    "condition": { "math": [ "u_credit >= 1000" ] },
+    "effect": [
+      { "u_message": "The gates buzz as you pay admittance from your credit, and soon you are boarding one of the Warp Trains.", "type": "good" },
+      { "u_message": "Your credit is now: <u_val:credit> Ahn", "type": "mixed" },
+      { "math": [ "_t_delay = time('5 s')" ] },
+      { "u_assign_activity": "ACT_board_w_train", "duration": { "context_val": "t_delay" } },
+      { "u_cast_spell": { "id": "warp_train_travel", "hit_self": true } }
+    ],
+    "false_effect": [
+      { "u_message": "The gates buzz in annoyance, 'NOT ENOUGH CREDIT. 1000 PER JOURNEY'.", "type": "bad" }
+    ]
+  },
+  {
+    "id": "warp_train_travel",
+    "type": "SPELL",
+    "name": "Warp Train Travel",
+    "description": "",
+    "valid_targets": [ "self" ],
+    "effect": "translocate",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "base_casting_time": 0,
+    "min_range": 0,
+    "final_casting_time": 0,
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "energy_source": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "flags": [ "SILENT", "NON_MAGICAL", "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "NO_FAIL" ]
+  },
+  {
+    "type": "furniture",
+    "id": "f_internet_kiosk",
+    "name": "internet kiosk",
+    "symbol": "K",
+    "description": "A powered kiosk that can browse the internet and allow a user to deposit or withdrawn Ahn from their account.",
+    "required_str": 1000,
+    "color": "yellow",
+    "looks_like": "t_atm",
+    "move_cost_mod": 150,
+    "coverage": 0,
+    "examine_action": {
+        "type": "effect_on_condition",
+        "effect_on_conditions": [ "EOC_internet_access" ]
+    },
+    "flags": [
+      "TRANSPARENT"
+    ]
+  }
+]
