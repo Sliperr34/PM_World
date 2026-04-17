@@ -7,7 +7,7 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_kk_rc" },
     "sym": "G",
     "color": "red",
-    "autonote": true
+    "autonote_visibility": "always"
   },
   {
     "id": "mx_incident_fixer",
@@ -17,7 +17,7 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_incident_fixer" },
     "sym": "O",
     "color": "blue",
-    "autonote": true
+    "autonote_visibility": "always"
   },
   {
     "id": "mx_incident_zwei",
@@ -27,6 +27,6 @@
     "generator": { "generator_method": "update_mapgen", "generator_id": "mx_incident_zwei" },
     "sym": "O",
     "color": "blue",
-    "autonote": true
+    "autonote_visibility": "always"
   }
 ]
