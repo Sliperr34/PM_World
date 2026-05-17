@@ -141,7 +141,7 @@
       }
     ],
     "power_draw": "1560 W",
-    "transform_into": { "target": "stigma_bat_u" }
+    "revert_to": "stigma_bat_u"
   },
   {
     "type": "technique",
@@ -330,7 +330,7 @@
       }
     ],
     "power_draw": "500 kW",
-    "transform_into": { "target": "stigma_shortsword_u" }
+    "revert_to": "stigma_shortsword_u"
   },
   {
     "id": "stigma_axe_u",
@@ -493,6 +493,6 @@
       }
     ],
     "power_draw": "600 kW",
-    "transform_into": { "target": "stigma_axe_u" }
+    "revert_to": "stigma_axe_u"
   }
 ]
